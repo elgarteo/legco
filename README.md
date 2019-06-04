@@ -1,2 +1,2 @@
 # legco
-An R package to fetch data from the Hong Kong Legislative Council API. Still under development.
+An R package to fetch data from the Hong Kong Legislative Council API. Under development.
