@@ -17,10 +17,9 @@ But most of us understand LegCo matters in a different way. We are interested in
 
 This inherent difference means the public may have a hard time using the LegCo APIs.
 For example, the "Questions" data endpoint returns only the subject of the question 
-and its location in the hansard file.
-In order to fetch the question text put on the government by a certain LegCo member, 
+and its location in the hansard file. In order to fetch the question text, 
 one has to crawl through the hansard structure and make multiple API calls.
-This package solves that by providing functions to do exactly that.
+This package solves that by providing functions to eliminate the hassle.
 
 ---
 
