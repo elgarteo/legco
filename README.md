@@ -7,8 +7,8 @@ Under development.
 
 ## What it does
 This R package aims to:
-1. provide access to the LegCo open data APIs in R
-2. facilitate the use of the APIs
+1. Provide access to the LegCo open data APIs in R
+2. Facilitate the use of the APIs
 
 Point 1 is easy to understand. Point 2 essentially means an add-on improvement for the APIs.
 The LegCo hansard API is built upon the hansard PDF files. It works with the structure of the files 
@@ -23,4 +23,4 @@ This package solves that by providing functions to eliminate the hassle.
 
 ---
 
-This package is in no way officially related to or endorsed by the Legislative Council of Hong Kong.
+This package is not affiliated nor endorsed by the Legislative Council of Hong Kong.
