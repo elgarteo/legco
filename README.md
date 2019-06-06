@@ -7,7 +7,7 @@ Under development.
 
 ## What it does
 This R package aims:
-1. To provide easy access to the LegCo open data APIs
+1. To provide access to the LegCo open data APIs in R
 2. To facilitate the use of the APIs
 
 Point 1 is easy to understand. Point 2 essentially means an add-on improvement for the APIs.
