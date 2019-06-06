@@ -19,7 +19,7 @@
 #' @export
 
 speakers <- function(id = NULL, type = "all", extra_args = NULL, verbose = TRUE) {
-  baseurl <- paste0(hansard_base_url, "Speakers?$format=json")
+  query <- "Speakers?$format=json"
   
   filter_args <- {}
   
@@ -35,32 +35,34 @@ speakers <- function(id = NULL, type = "all", extra_args = NULL, verbose = TRUE)
   }
   
   if (!is.null(id)) {
-    baseurl <- paste0(baseurl, "&$filter=SpeakerID eq ", id)
+    query <- paste0(query, "&$filter=SpeakerID eq ", id)
   }
   
   if (type != "all") {
-    baseurl <- paste0(baseurl, "&$filter=Type eq \'", type, "\'")
+    query <- paste0(query, "&$filter=Type eq \'", type, "\'")
   }
   
   if (!is.null(extra_args)) {
-    baseurl <- paste0(baseurl, extra_args)
+    query <- paste0(query, extra_args)
   }
   
-  baseurl <- paste0(baseurl, "&$filter=", paste(filter_args, collapse = " and "))
+  query <- paste0(query, "&$filter=", paste(filter_args, collapse = " and "))
   
-  if (verbose) {
-    message("Connecting to API...")
+  legco_api("hansard", query, n = 1000, verbose)
+  
+#  if (verbose) {
+#    message("Connecting to API...")
+#  }
+#  
+#  baseurl <- utils::URLencode(baseurl)
+#  df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
+#  
+#  if (nrow(as.data.frame(df$value)) == 0) {
+#    message("The request did not return any data. Please check your parameters.")
+#  } else {
+#    df$value
+#  }
   }
-  
-  baseurl <- utils::URLencode(baseurl)
-  df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
-  
-  if (nrow(as.data.frame(df$value)) == 0) {
-    message("The request did not return any data. Please check your parameters.")
-  } else {
-    df$value
-  }
-}
 
 #' @rdname speakers
 #' @export
