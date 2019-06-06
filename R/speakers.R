@@ -24,22 +24,12 @@ speakers <- function(id = NULL, type = "all", extra_args = NULL, verbose = TRUE)
   filter_args <- {}
   
   if (!is.null(id)) {
-    id <- paste("SpeakerID eq ", id)
-    id <- paste(id, collapse = " or ")
-    filter_args <- c(filter_args, id)
+    filter_args <- c(filter_args, generate_filter(id))
   }
   
   type <- toupper(type)
   if (type != "ALL") {
     filter_args <- c(filter_args, paste0("Type eq \'", type, "\'"))
-  }
-  
-  if (!is.null(id)) {
-    query <- paste0(query, "&$filter=SpeakerID eq ", id)
-  }
-  
-  if (type != "all") {
-    query <- paste0(query, "&$filter=Type eq \'", type, "\'")
   }
   
   if (!is.null(extra_args)) {
@@ -49,19 +39,7 @@ speakers <- function(id = NULL, type = "all", extra_args = NULL, verbose = TRUE)
   query <- paste0(query, "&$filter=", paste(filter_args, collapse = " and "))
   
   legco_api("hansard", query, n = 1000, verbose)
-
-#  if (verbose) {
-#    message("Connecting to API...")
-#  }
-#  
-#  baseurl <- utils::URLencode(baseurl)
-#  df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
-#  
-#  if (nrow(as.data.frame(df$value)) == 0) {
-#    message("The request did not return any data. Please check your parameters.")
-#  } else {
-#    df$value
-#  }
+  
   }
 
 #' @rdname speakers
