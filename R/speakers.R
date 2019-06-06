@@ -49,7 +49,7 @@ speakers <- function(id = NULL, type = "all", extra_args = NULL, verbose = TRUE)
   query <- paste0(query, "&$filter=", paste(filter_args, collapse = " and "))
   
   legco_api("hansard", query, n = 1000, verbose)
-  
+
 #  if (verbose) {
 #    message("Connecting to API...")
 #  }
