@@ -20,4 +20,5 @@
 #' @name legco
 #' @importFrom jsonlite fromJSON
 #' @importFrom utils URLencode
+#' @importFrom stringr str_detect
 NULL

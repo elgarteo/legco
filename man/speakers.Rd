@@ -12,7 +12,7 @@ legco_speakers(id = NULL, type = "all", extra_args = NULL,
   verbose = TRUE)
 }
 \arguments{
-\item{id}{The id of a speaker at the Legislative Council. If `NULL`,
+\item{id}{The id of a speaker at the Legislative Council, or a vector of ids. If `NULL`,
 returns a list of all speakers. Defaults to `NULL`.}
 
 \item{type}{The position of a speaker. `'all'` returns all speakers.

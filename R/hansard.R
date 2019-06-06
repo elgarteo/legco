@@ -1,8 +1,8 @@
 #' Hansards of LegCo
 #' 
-#' Fetch metadata and URLs of hansards of LegCo..
+#' Fetch metadata and URLs of the hansard files of LegCo.
 #' 
-#' @param id The id of a hansard file. If `NULL`,
+#' @param id The id of a hansard file, or a vector of ids. If `NULL`,
 #' returns a list of all hansard files. Defaults to `NULL`.
 #' 
 #' @param lang The language of hansard. `'en'` returns the English version.
@@ -33,16 +33,16 @@
 #' @param verbose Defaults to `TRUE`.
 #' 
 #' @export
-
+#' 
 hansard <- function(id = NULL, lang = "en", from = '1900-01-01', to = Sys.Date(), floor = FALSE, 
                     n = 1000, extra_args = NULL, verbose = TRUE) {
-  baseurl <- paste0(hansard_base_url, "Hansard?$format=json&$inlinecount=allpages", 
-                    "&$select=HansardID,MeetingDate,AgendaDate,isCEQandA,isCEQT,HansardFileURL")
+  query <- paste0("Hansard?$format=json&$inlinecount=allpages", 
+                  "&$select=HansardID,MeetingDate,AgendaDate,isCEQandA,isCEQT,HansardFileURL")
   
   filter_args <- {}
   
   if (!is.null(id)) {
-    filter_args <- c(filter_args, paste0("HansardID eq ", id))
+    filter_args <- c(filter_args, generate_filter("HansardID", id)) # in utils-misc.R
   }
   
   lang <- tolower(lang)
@@ -59,48 +59,14 @@ hansard <- function(id = NULL, lang = "en", from = '1900-01-01', to = Sys.Date()
   filter_args <- c(filter_args, paste0("MeetingDate gt datetime\'", from, 
                     "\' and MeetingDate lt datetime\'", to, "\'"))
   
-  if (n < 1000) {
-    paste0(baseurl, "&$top=", n)
-  }
   
+  query <- paste0(query, "&$filter=", paste(filter_args, collapse = " and "))
+
   if (!is.null(extra_args)) {
-    baseurl <- paste0(baseurl, extra_args)
+    query <- paste0(query, extra_args)
   }
   
-  if (verbose) {
-    message("Connecting to API...")
-    message(paste0("Retrieving ", ifelse(n < 1000, n, 1000), " records..."))
-  }
-  
-  baseurl <- paste0(baseurl, "&$filter=", paste(filter_args, collapse = " and "))
-  
-  baseurl <- utils::URLencode(baseurl)
-  df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
-  
-  total <- as.numeric(df$odata.count)
-  
-  if (nrow(df$value) == 0) {
-    message("The request did not return any data. Please check your parameters.")
-  } else if (n <= 1000 | total < 1000) {
-    if (verbose) {
-      message(paste0("Retrieved ", nrow(df$value), " records. ",
-                     total, " records available in total."))
-    }
-    
-    df$value
-    
-  } else {
-    remaining <- ifelse(n > total, total - 1000, n - 1000)
-    df <- rbind(df$value, fetch_remaining(df$odata.nextLink, remaining, verbose)) # in utils-loop.R
-    
-    if (verbose) {
-      message(paste0("Retrieved ", nrow(df), " records. ",
-                     total, " records available in total."))
-    }
-    
-    df
-    
-  }
+  legco_api("hansard", query, n, verbose)
 }
 
 #' @rdname hansard

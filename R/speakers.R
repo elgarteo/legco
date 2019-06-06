@@ -3,7 +3,7 @@
 #' Fetch basic details of the speakers at LegCo, including LegCo members,
 #' government officials and Secretariat staff.
 #' 
-#' @param id The id of a speaker at the Legislative Council. If `NULL`,
+#' @param id The id of a speaker at the Legislative Council, or a vector of ids. If `NULL`,
 #' returns a list of all speakers. Defaults to `NULL`.
 #' 
 #' @param type The position of a speaker. `'all'` returns all speakers.
@@ -24,7 +24,9 @@ speakers <- function(id = NULL, type = "all", extra_args = NULL, verbose = TRUE)
   filter_args <- {}
   
   if (!is.null(id)) {
-    filter_args <- c(filter_args, paste0("SpeakerID eq ", id))
+    id <- paste("SpeakerID eq ", id)
+    id <- paste(id, collapse = " or ")
+    filter_args <- c(filter_args, id)
   }
   
   type <- toupper(type)
@@ -44,11 +46,11 @@ speakers <- function(id = NULL, type = "all", extra_args = NULL, verbose = TRUE)
     baseurl <- paste0(baseurl, extra_args)
   }
   
+  baseurl <- paste0(baseurl, "&$filter=", paste(filter_args, collapse = " and "))
+  
   if (verbose) {
     message("Connecting to API...")
   }
-  
-  baseurl <- paste0(baseurl, "&$filter=", paste(filter_args, collapse = " and "))
   
   baseurl <- utils::URLencode(baseurl)
   df <- jsonlite::fromJSON(baseurl, flatten = TRUE)

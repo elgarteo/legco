@@ -14,7 +14,7 @@ legco_hansard(id = NULL, lang = "en", from = "1900-01-01",
   verbose = TRUE)
 }
 \arguments{
-\item{id}{The id of a hansard file. If `NULL`,
+\item{id}{The id of a hansard file, or a vector of ids. If `NULL`,
 returns a list of all hansard files. Defaults to `NULL`.}
 
 \item{lang}{The language of hansard. `'en'` returns the English version.
@@ -45,5 +45,5 @@ Must start with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch metadata and URLs of hansards of LegCo..
+Fetch metadata and URLs of the hansard files of LegCo.
 }
