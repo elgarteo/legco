@@ -1,5 +1,7 @@
 # legco
-An R package to fetch data from the Hong Kong Legislative Council (LegCo) API. Inspired by [evanodell/hansard](https://github.com/evanodell/hansard).
+An R package to fetch data from the Hong Kong Legislative Council (LegCo) API. 
+
+Inspired by [evanodell/hansard](https://github.com/evanodell/hansard).
 
 Under development.
 
