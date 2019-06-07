@@ -27,9 +27,9 @@ without hassle.
 
 ## How it works
 This package utilises the following LegCo APIs:
-*[Hansard Database](https://www.legco.gov.hk/odata/english/hansard-db.html)
-*[Attendance Database](https://www.legco.gov.hk/odata/english/attendance-db.html)
-*[Bills Database](https://www.legco.gov.hk/odata/english/billsdb.html)
+* [Hansard Database](https://www.legco.gov.hk/odata/english/hansard-db.html)
+* [Attendance Database](https://www.legco.gov.hk/odata/english/attendance-db.html)
+* [Bills Database](https://www.legco.gov.hk/odata/english/billsdb.html)
 
 ## Disclaimer
 This package is not affiliated nor endorsed by the Legislative Council of Hong Kong.
