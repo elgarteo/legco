@@ -5,6 +5,12 @@ Inspired by [evanodell/hansard](https://github.com/evanodell/hansard).
 
 Under development.
 
+To install this package, run:
+```
+#install.pacakges("devtools")
+devtools::install_github("elgarteo/legco")
+```
+
 ## What it does
 This R package aims to:
 1. Fetch data from the LegCo open data APIs in R
