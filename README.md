@@ -1,4 +1,4 @@
-# legco: Accessting Hong Kong Legislative Council Data
+# legco: Accessing Hong Kong Legislative Council Data
 An R package to fetch data from the Hong Kong Legislative Council (LegCo) APIs. 
 
 Inspired by [evanodell/hansard](https://github.com/evanodell/hansard).
