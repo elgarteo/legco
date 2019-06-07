@@ -22,8 +22,7 @@ members only tells you in which hansard PDF file and in which section the questi
 To find out the question text and the answering body, you'd have to crawl through the hansard structure
 and make multiple API calls.
 
-This package solves just that by providing functions to retrieve more usable data from the API
-without hassle.
+This package solves just that by providing functions that return more usable result from the API.
 
 ## How it works
 This package utilises the following LegCo APIs:
