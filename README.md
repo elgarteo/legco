@@ -31,4 +31,4 @@ This package utilises the following LegCo APIs:
 * [Bills Database](https://www.legco.gov.hk/odata/english/billsdb.html)
 
 ## Disclaimer
-This package is not affiliated nor endorsed by the Legislative Council of Hong Kong.
+This package is not affiliated or endorsed by the Legislative Council of Hong Kong.
