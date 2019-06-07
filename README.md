@@ -16,8 +16,8 @@ This R package aims to:
 1. Fetch data from the LegCo open data APIs in R
 2. Produce meaningful and usable result from the APIs
 
-The LegCo APIs mainly work with hansard PDF files and rely on the file structure like 
-section headers and paragraphs to return data. For example, a query to fetch questions raised by LegCo
+The LegCo APIs mainly work with hansard PDF files and rely on the document structure like 
+section headers and paragraphs to locate data. For example, a query to fetch questions raised by LegCo
 members only tells you in which hansard PDF file and in which section the questions are located in.
 To find out the question text and the answering body, you'd have to crawl through the hansard structure
 and make multiple API calls.
