@@ -5,10 +5,10 @@
 \alias{legco_speakers}
 \title{Speakers at LegCo}
 \usage{
-speakers(id = NULL, type = "all", extra_args = NULL,
+speakers(id = NULL, type = "all", extra_param = NULL,
   verbose = TRUE)
 
-legco_speakers(id = NULL, type = "all", extra_args = NULL,
+legco_speakers(id = NULL, type = "all", extra_param = NULL,
   verbose = TRUE)
 }
 \arguments{
@@ -20,8 +20,8 @@ returns a list of all speakers. Defaults to `NULL`.}
 at LegCo, such as President, Chariman and clerk.`'MB'` returns LegCo members.
 Default to `'all'`.}
 
-\item{extra_args}{Additional query string options defined in LegCo API.
-Start with `'&'` then followed by the option.}
+\item{extra_param}{Additional query parameters defined in LegCo API.
+Must begin with `'&'`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

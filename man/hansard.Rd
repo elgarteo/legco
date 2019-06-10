@@ -6,41 +6,40 @@
 \title{Hansards of LegCo}
 \usage{
 hansard(id = NULL, lang = "en", from = "1900-01-01",
-  to = Sys.Date(), floor = FALSE, n = 1000, extra_args = NULL,
+  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
   verbose = TRUE)
 
 legco_hansard(id = NULL, lang = "en", from = "1900-01-01",
-  to = Sys.Date(), floor = FALSE, n = 1000, extra_args = NULL,
+  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
   verbose = TRUE)
 }
 \arguments{
-\item{id}{The id of a hansard file, or a vector of ids. If `NULL`,
-returns a list of all hansard files. Defaults to `NULL`.}
+\item{id}{The id of a hansard file, or a vector of ids. If `NULL`, returns a
+list of all hansard files. Defaults to `NULL`.}
 
-\item{lang}{The language of hansard. `'en'` returns the English version.
-`'zh'` returns the Traditional Chinese version. Defaults to `'en'`.}
+\item{lang}{The language of hansard files to search from. `'en'` returns the
+English version. `'zh'` returns the Traditional Chinese version. Defaults
+to `'en'`.}
 
-\item{from}{Only includes hansards of meetings on or after this date.
-Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or
-anything else that can be coerced to a date with `as.Date()`.
-Defaults to `'1900-01-01'`.}
+\item{from}{Only includes hansards of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only includes hansards of meetings on or before this date.
-Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or
-anything else that can be coerced to a date with `as.Date()`.
-Defaults to the current system date.}
+\item{to}{Only includes hansards of meetings on or before this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.}
 
-\item{floor}{Whether to fetch the floor version of the hansard files.
-The floor version is the first presented version of hansard file in the
-original language delivered by the speakers in LegCo. 
-If `'TRUE'`, the language option is ignored. Defaults to `FALSE`.}
+\item{floor}{Whether to fetch the floor version of the hansard files. The
+floor version is the first presented version of hansard file in the
+original language delivered by the speakers in LegCo. If `'TRUE'`, the
+language option is ignored. Defaults to `FALSE`.}
 
 \item{n}{The number of hansard files to request. Defaults to `1000`.}
 
-\item{extra_args}{Additional query string options defined in LegCo API.
-Must start with `'&'`.}
+\item{extra_param}{Additional query parameters defined in LegCo API. Must
+begin with `'&'`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

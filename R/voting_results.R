@@ -1,15 +1,20 @@
-#' Motions in LegCo
+#' Voting Results in LegCo Meetings
 #'
-#' Fetch motions presented in LegCo.
+#' Fetch voting results of motions in LegCo meetings from hansard files of
+#' LegCo.
+#'
+#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
+#'   returns voting results from all hansard files. Defaults to `NULL`.
 #'
 #' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
 #'   `NULL`.
 #'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns motions from all hansard files. Defaults to `NULL`.
-#'
 #' @param section_code The section code, or a vector of codes. Defaults to
 #'   `NULL`.
+#'
+#' @param result The voting result. `'passed'` returns motions that have been
+#'   passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
+#'   all motions that has been voted in LegCo. Defaults to `all`.
 #'
 #' @param lang The language of hansard files to search from. `'en'` returns the
 #'   English version. `'zh'` returns the Traditional Chinese version. Defaults
@@ -39,23 +44,30 @@
 #'
 #' @export
 #' 
-motions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
-                     lang = "en", from = '1900-01-01', to = Sys.Date(),
+voting_results <- function(hansard_id = NULL, rundown_id = NULL, section_code = NULL,
+                     result = "all", lang = "en", from = '1900-01-01', to = Sys.Date(),
                      floor = FALSE, n = 1000, extra_param = NULL, verbose = TRUE) {
-  query <- "Motions?$select=MeetingDate,Subject,Section,SectionCode,RundownID,HansardID,HansardFileURL"
+  query <- "VotingResults?$select=MeetingDate,Subject,VoteResult,SectionCode,RundownID,HansardID,HansardFileURL"
   
   filter_args <- {}
   
-  if (!is.null(rundown_id)) {
-    filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
-  }
-
   if (!is.null(hansard_id)) {
     filter_args <- c(filter_args, generate_filter("HansardID", hansard_id))
   }
   
+  if (!is.null(rundown_id)) {
+    filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
+  }
+  
   if (!is.null(section_code)) {
     filter_args <- c(filter_args, generate_filter("SectionCode", section_code))
+  }
+  
+  result <- tolower(result)
+  if (result == "passed") {
+    filter_args <- c(filter_args, paste0("VoteResults eq 'Passed'"))
+  } else if (result == "vetoed") {
+    filter_args <- c(filter_args, paste0("VoteResults eq 'Negatived'"))
   }
   
   lang <- tolower(lang)
@@ -82,6 +94,6 @@ motions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
   
 }
 
-#' @rdname motions
+#' @rdname voting_results
 #' @export
-legco_motions <- motions
+legco_voting_results <- voting_results

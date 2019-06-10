@@ -7,47 +7,46 @@
 \usage{
 bills(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
   lang = "en", from = "1900-01-01", to = Sys.Date(), floor = FALSE,
-  n = 1000, extra_args = NULL, verbose = TRUE)
+  n = 1000, extra_param = NULL, verbose = TRUE)
 
 legco_bills(rundown_id = NULL, hansard_id = NULL,
   section_code = NULL, lang = "en", from = "1900-01-01",
-  to = Sys.Date(), floor = FALSE, n = 1000, extra_args = NULL,
+  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
   verbose = TRUE)
 }
 \arguments{
-\item{rundown_id}{The id of a rundown, or a vector of ids.
-Defaults to `NULL`.}
+\item{rundown_id}{The id of a rundown, or a vector of ids. Defaults to
+`NULL`.}
 
 \item{hansard_id}{The id of a hansard file, or a vector of ids. If `NULL`,
-returns all subjects from all hansard files. Defaults to `NULL`.}
+returns bills from all hansard files. Defaults to `NULL`.}
 
-\item{section_code}{The section code, or a vector of codes.
-Defaults to `NULL`.}
+\item{section_code}{The section code, or a vector of codes. Defaults to
+`NULL`.}
 
-\item{lang}{The language. `'en'` returns the English version.
-`'zh'` returns the Traditional Chinese version. Defaults to `'en'`.}
+\item{lang}{The language of hansard files to search from. `'en'` returns the
+English version. `'zh'` returns the Traditional Chinese version. Defaults
+to `'en'`.}
 
-\item{from}{Only fetch results from hansards of meetings on or after this date.
-Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or
-anything else that can be coerced to a date with `as.Date()`.
-Defaults to `'1900-01-01'`.}
+\item{from}{Only fetch results from hansards of meetings on or after this
+date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
+class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
+coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch results from hansards of meetings on or before this date.
-Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or
-anything else that can be coerced to a date with `as.Date()`.
-Defaults to the current system date.}
+\item{to}{Only fetch results from hansards of meetings on or before this
+date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
+class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
+coerced to a date with `as.Date()`. Defaults to the current system date.}
 
-\item{floor}{Whether to fetch results from the floor version of the hansard files.
-The floor version is the first presented version of hansard file in the
-original language delivered by the speakers in LegCo. 
-If `'TRUE'`, the language option is ignored. Defaults to `FALSE`.}
+\item{floor}{Whether to fetch results from the floor version of the hansard
+files. The floor version is the first presented version of hansard file in
+the original language delivered by the speakers in LegCo. If `'TRUE'`, the
+language option is ignored. Defaults to `FALSE`.}
 
-\item{n}{The number of subjects to request. Defaults to `1000`.}
+\item{n}{The number of records to request. Defaults to `1000`.}
 
-\item{extra_args}{Additional query string options defined in LegCo API.
-Start with `'&'` then followed by the option.}
+\item{extra_param}{Additional query parameters defined in LegCo API. Must
+begin with `'&'`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

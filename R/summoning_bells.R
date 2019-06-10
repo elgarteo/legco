@@ -1,12 +1,13 @@
-#' Motions in LegCo
+#' Summong Bells in LegCo Meetings
 #'
-#' Fetch motions presented in LegCo.
+#' Fetch instances of summong bell being rung in LegCo meetings from hansard
+#' files of LegCo.
+#'
+#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
+#'   returns all instances from all hansard files. Defaults to `NULL`.
 #'
 #' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
 #'   `NULL`.
-#'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns motions from all hansard files. Defaults to `NULL`.
 #'
 #' @param section_code The section code, or a vector of codes. Defaults to
 #'   `NULL`.
@@ -39,19 +40,19 @@
 #'
 #' @export
 #' 
-motions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
-                     lang = "en", from = '1900-01-01', to = Sys.Date(),
-                     floor = FALSE, n = 1000, extra_param = NULL, verbose = TRUE) {
-  query <- "Motions?$select=MeetingDate,Subject,Section,SectionCode,RundownID,HansardID,HansardFileURL"
+summoning_bells <- function(hansard_id = NULL, rundown_id = NULL, section_code = NULL,
+                           lang = "en", from = '1900-01-01', to = Sys.Date(),
+                           floor = FALSE, n = 1000, extra_param = NULL, verbose = TRUE) {
+  query <- "SummoningBells?$select=MeetingDate,SectionCode,RundownID,HansardID,HansardFileURL"
   
   filter_args <- {}
   
-  if (!is.null(rundown_id)) {
-    filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
-  }
-
   if (!is.null(hansard_id)) {
     filter_args <- c(filter_args, generate_filter("HansardID", hansard_id))
+  }
+  
+  if (!is.null(rundown_id)) {
+    filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
   }
   
   if (!is.null(section_code)) {
@@ -82,6 +83,6 @@ motions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
   
 }
 
-#' @rdname motions
+#' @rdname summoning_bells
 #' @export
-legco_motions <- motions
+legco_summoning_bells <- summoning_bells

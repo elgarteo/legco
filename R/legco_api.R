@@ -1,20 +1,21 @@
 #' Generic LegCo API Function
-#' 
-#' A generic function to access LegCO APIs.
-#' 
-#' @param db The database you wish to access. `'hansard'` for the hansard database. 
-#' `'attn'` for the attendance database. `'bill'` for the bills database.
-#' Or the full path name for other database not listed here.
-#' 
-#' @param data The type of data you wish to receive. Attach your arguments as well if any.
-#' 
+#'
+#' A generic function to access LegCo APIs.
+#'
+#' @param db The database you wish to access. `'hansard'` for the hansard
+#'   database. `'attn'` for the attendance database. `'bill'` for the bills
+#'   database. Or the full path name for other database not listed here.
+#'
+#' @param query The query for retrieving data. Should include the data endpoint
+#'   and parameters if any.
+#'
 #' @param n The number of entry to fetch. Default to `1000`.
-#' 
+#'
 #' @param verbose Defaults to `TRUE`.
 #' 
 #' @export
 #' 
-legco_api <- function(db, data, n, verbose) {
+legco_api <- function(db, query, n, verbose) {
   db <- tolower(db)
   if (db == "hansard") {
     db <- "HansardDB"
@@ -24,9 +25,9 @@ legco_api <- function(db, data, n, verbose) {
     db <- "BillsDB"
   }
   
-  baseurl <- paste0("https://app.legco.gov.hk/OpenData/", db, "/", data)
+  baseurl <- paste0("https://app.legco.gov.hk/OpenData/", db, "/", query)
   
-  if(stringr::str_detect(baseurl, '/.*\\?\\$')) { # Check if any query attached to URL
+  if(stringr::str_detect(baseurl, '/.*\\?\\$')) { # Check if any parameter attached to query
     baseurl <- paste0(baseurl, "&$format=json&$inlinecount=allpages")
   } else {
     baseurl <- paste0(baseurl, "?$format=json&$inlinecount=allpages")
@@ -39,8 +40,7 @@ legco_api <- function(db, data, n, verbose) {
   baseurl <- utils::URLencode(baseurl)
   
   if (verbose) {
-    message("Connecting to API...")
-    message(paste0("Retrieving records..."))
+    message("Retrieving records...")
   }
   
   df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
@@ -59,11 +59,39 @@ legco_api <- function(db, data, n, verbose) {
     
   } else {
     remaining <- ifelse(n > total, total - 1000, n - 1000)
-    df <- rbind(df$value, fetch_remaining(df$odata.nextLink, remaining, verbose)) # in utils-misc.R
+    nexturl <- df$odata.nextLink
+    df <- df$value
     
     if (verbose) {
-      message(paste0("Retrieved ", nrow(df), " records. ",
-                     total, " records available in total."))
+      message(remaining, " record(s) remaining.")
+    }
+    
+    for (i in 1:ceiling(remaining / 1000)) {
+      if (remaining < 1000) {
+        nexturl <- paste0(nexturl, "&$top=", remaining)
+      }
+      
+      if (verbose) {
+        message("Retrieving ", ifelse(remaining < 1000, remaining, 1000), " records...")
+      }
+      
+      nexturl <- utils::URLencode(nexturl)
+      tmp <- jsonlite::fromJSON(nexturl, flatten = TRUE)
+      
+      df <- rbind(df, tmp$value)
+      
+      if (remaining > 1000) {
+        remaining <- remaining - 1000
+        if (verbose) {
+          message(remaining, " records remaining.")
+        }
+        nexturl <- tmp$odata.nextLink
+      }
+    }
+
+    if (verbose) {
+      message("Retrieved ", nrow(df), " records. ",
+                     total, " records available in total.")
     }
     
     df

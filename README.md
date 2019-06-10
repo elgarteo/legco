@@ -12,23 +12,17 @@ devtools::install_github("elgarteo/legco")
 ```
 
 ## What it does
-This R package aims to:
-1. Fetch data from the LegCo open data APIs in R
-2. Produce meaningful and usable result from the APIs
+This R package provides access to the LegCo open data APIs in R. The functions in this package 
+correspond to the data endpoints of the APIs.
 
-The LegCo APIs mainly work with hansard PDF files and rely on the document structure like 
-section headers and paragraphs to locate data. For example, a query to fetch questions raised by LegCo
-members only tells you in which hansard PDF file and in which section the questions are located in.
-To find out the question text and the answering body, you'd have to crawl through the hansard structure
-and make multiple API calls.
-
-This package solves just that by providing functions that return more usable result from the API.
+Because of the inherent structure of the LegCo database, results from the APIs may not be in 
+the most usable form for the general public. It is therefore recommended to also install an
+addon package [elgarteo/legcoplus]() which provides functions that generate more usable outputs.
 
 ## How it works
-This package utilises the following LegCo APIs:
+This package compiles the correct query and request data from the following LegCo APIs:
 * [Hansard Database](https://www.legco.gov.hk/odata/english/hansard-db.html)
 * [Attendance Database](https://www.legco.gov.hk/odata/english/attendance-db.html)
-* [Bills Database](https://www.legco.gov.hk/odata/english/billsdb.html)
 
 ## Disclaimer
 This package is not affiliated or endorsed by the Legislative Council of Hong Kong.

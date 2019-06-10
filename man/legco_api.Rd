@@ -4,19 +4,20 @@
 \alias{legco_api}
 \title{Generic LegCo API Function}
 \usage{
-legco_api(db, data, n, verbose)
+legco_api(db, query, n, verbose)
 }
 \arguments{
-\item{db}{The database you wish to access. `'hansard'` for the hansard database. 
-`'attn'` for the attendance database. `'bill'` for the bills database.
-Or the full path name for other database not listed here.}
+\item{db}{The database you wish to access. `'hansard'` for the hansard
+database. `'attn'` for the attendance database. `'bill'` for the bills
+database. Or the full path name for other database not listed here.}
 
-\item{data}{The type of data you wish to receive. Attach your arguments as well if any.}
+\item{query}{The query for retrieving data. Should include the data endpoint
+and parameters if any.}
 
 \item{n}{The number of entry to fetch. Default to `1000`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-A generic function to access LegCO APIs.
+A generic function to access LegCo APIs.
 }

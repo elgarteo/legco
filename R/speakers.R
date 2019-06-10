@@ -11,15 +11,15 @@
 #' at LegCo, such as President, Chariman and clerk.`'MB'` returns LegCo members.
 #' Default to `'all'`.
 #' 
-#' @param extra_args Additional query string options defined in LegCo API.
-#' Start with `'&'` then followed by the option.
+#' @param extra_param Additional query parameters defined in LegCo API.
+#' Must begin with `'&'`.
 #' 
 #' @param verbose Defaults to `TRUE`.
 #' 
 #' @export
 
-speakers <- function(id = NULL, type = "all", extra_args = NULL, verbose = TRUE) {
-  query <- "Speakers?$format=json"
+speakers <- function(id = NULL, type = "all", extra_param = NULL, verbose = TRUE) {
+  query <- "Speakers?"
   
   filter_args <- {}
   
@@ -32,11 +32,13 @@ speakers <- function(id = NULL, type = "all", extra_args = NULL, verbose = TRUE)
     filter_args <- c(filter_args, paste0("Type eq \'", type, "\'"))
   }
   
-  if (!is.null(extra_args)) {
-    query <- paste0(query, extra_args)
+  if (!is.null(filter_args)) {
+    query <- paste0(query, "&$filter=", paste(filter_args, collapse = " and "))
   }
   
-  query <- paste0(query, "&$filter=", paste(filter_args, collapse = " and "))
+  if (!is.null(extra_param)) {
+    query <- paste0(query, extra_param)
+  }
   
   legco_api("hansard", query, n = 1000, verbose)
   
