@@ -20,15 +20,15 @@
 #'   English version. `'zh'` returns the Traditional Chinese version. Defaults
 #'   to `'en'`.
 #'
-#' @param from Only fetch results from hansards of meetings on or after this
-#'   date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-#'   class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-#'   coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.
+#' @param from Only fetch results of meetings on or after this date. Accepts
+#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+#'   date with `as.Date()`. Defaults to `'1900-01-01'`.
 #'
-#' @param to Only fetch results from hansards of meetings on or before this
-#'   date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-#'   class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-#'   coerced to a date with `as.Date()`. Defaults to the current system date.
+#' @param to Only fetch results of meetings on or before this date. Accepts
+#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+#'   date with `as.Date()`. Defaults to the current system date.
 #'
 #' @param floor Whether to fetch results from the floor version of the hansard
 #'   files. The floor version is the first presented version of hansard file in

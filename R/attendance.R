@@ -10,9 +10,6 @@
 #'
 #' @param member_id The id of a member, or a vector of ids. Defaults to `NULL`.
 #'
-#' @param lang The language. `'en'` returns records in English. `'zh'` returns
-#'   results in Traditional Chinese. Defaults to `'en'`.
-#'
 #' @param attn The attendance. `'p'` returns members who were present. `'a'`
 #'   returns members who were absent. `'all'` returns all members. Defaults to
 #'   `'all'`.
@@ -37,13 +34,9 @@
 #' @export
 #' 
 attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL, 
-                       lang = "en", attn = "all", from = '1900-01-01', to = Sys.Date(), 
+                       attn = "all", from = '1900-01-01', to = Sys.Date(), 
                        n = 1000, extra_param = NULL, verbose = TRUE) {
-  if (lang == "en") {
-    query <- "TAttendance?$select=committee_id,meet_id,meeting_name_english,meeting_start_date_time,member_id,member_name_english,present_absent"
-  } else if (lang == "zh") {
-    query <- "TAttendance?$select=committee_id,meet_id,meeting_name_chinese,meeting_start_date_time,member_id,member_name_chinese,present_absent"
-  }
+  query <- "TAttendance?$select=committee_id,meet_id,meeting_name_english,meeting_name_chinese,meeting_start_date_time,member_id,member_name_english,member_name_chinese,present_absent"
   
   filter_args <- {}
   
@@ -84,10 +77,10 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   df <- legco_api("attn", query, n, verbose)
   
   # Rename column names
-  colnames(df) <- c("CommitteeID", "MeetID", "MeetingName", "MeetingDateTime", "MemberID", "MemberName", "Attendance")
+  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
   
   # Unify format of attendance
-  df$Attendance <- sapply(df$Attendance, function (x) {
+  df[, 9] <- sapply(df[, 9], function(x) {
     ifelse(x == "Absent" | x == "A", "A", "P")
   })
   

@@ -1,4 +1,4 @@
-#' Summong Bells in LegCo Meetings
+#' Summoning Bells in LegCo Meetings
 #'
 #' Fetch instances of summong bell being rung in LegCo meetings from hansard
 #' files of LegCo.

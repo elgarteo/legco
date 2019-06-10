@@ -33,7 +33,7 @@
 #'   begin with `'&'`.
 #'
 #' @param verbose Defaults to `TRUE`.
-#'
+#' 
 #' @export
 #' 
 addresses <- function(hansard_id = NULL, rundown_id = NULL,

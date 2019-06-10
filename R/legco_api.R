@@ -4,7 +4,9 @@
 #'
 #' @param db The database you wish to access. `'hansard'` for the hansard
 #'   database. `'attn'` for the attendance database. `'bill'` for the bills
-#'   database. Or the full path name for other database not listed here.
+#'   database. `'schedule'` for the schedule database. Or the path name for
+#'   databases not listed here (i.e. the string between the domain name and data
+#'   endpoints, e.g. `'OpenData/HansardDB'`).
 #'
 #' @param query The query for retrieving data. Should include the data endpoint
 #'   and parameters if any.
@@ -12,20 +14,22 @@
 #' @param n The number of entry to fetch. Default to `1000`.
 #'
 #' @param verbose Defaults to `TRUE`.
-#' 
+#'
 #' @export
 #' 
 legco_api <- function(db, query, n, verbose) {
   db <- tolower(db)
   if (db == "hansard") {
-    db <- "HansardDB"
+    db <- "OpenData/HansardDB"
   } else if (db == "attn") {
-    db <- "AttendanceDB"
+    db <- "OpenData/AttendanceDB"
   } else if (db == "bill") {
-    db <- "BillsDB"
+    db <- "BillsDB/odata"
+  } else if (db == "schedule") {
+    db <- "ScheduleDB/odata"
   }
   
-  baseurl <- paste0("https://app.legco.gov.hk/OpenData/", db, "/", query)
+  baseurl <- paste0("https://app.legco.gov.hk/", db, "/", query)
   
   # Check if any parameter attached to query
   if(stringr::str_detect(baseurl, '/.*\\?\\$')) { 

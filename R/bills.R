@@ -42,7 +42,7 @@
 bills <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
                      lang = "en", from = '1900-01-01', to = Sys.Date(),
                      floor = FALSE, n = 1000, extra_param = NULL, verbose = TRUE) {
-  query <- "Bills?&$select=MeetingDate,Subject,Section,SectionCode,RundownID,HansardID,HansardFileURL"
+  query <- "Bills?$select=MeetingDate,Subject,Section,SectionCode,RundownID,HansardID,HansardFileURL"
   
   filter_args <- {}
   

@@ -11,16 +11,17 @@ APIs and compile them into usable output.
 }
 \details{
 For more details please see the API documentation on
-\url{https://www.legco.gov.hk/odata/english/hansard-db.html}.
+\url{https://www.legco.gov.hk/odata/english/hansard-db.html} and
+\url{https://www.legco.gov.hk/odata/english/attendance-db.html}.
 
 In addition to the standard function names, each function in the `legco`
 package has a wrapper where the name is prefixed with `'legco_'`. For
 example, both `speakers()` and `legco_speakers()` will return the same
-result. This is because function names are taken from the specific API on
-\url{https://www.legco.gov.hk/odata/english/hansard-db.html}, but they are often
-not very informative and could clash with functions in other packages (e.g.
-`speakers()` is not a term unique to LegCo).
+result. This is because function names are taken from the data endpoints
+provided by the APIs on , which nonetheless are often not very informative
+and could clash with functions in other packages (e.g. `speakers()` is not a
+term unique to LegCo).
 
 This package is not officially related to or endorsed by the Legislative
-Council of Hong Kong.
+Council of Hong Kong. \link{addresses}
 }
