@@ -27,7 +27,8 @@ legco_api <- function(db, query, n, verbose) {
   
   baseurl <- paste0("https://app.legco.gov.hk/OpenData/", db, "/", query)
   
-  if(stringr::str_detect(baseurl, '/.*\\?\\$')) { # Check if any parameter attached to query
+  # Check if any parameter attached to query
+  if(stringr::str_detect(baseurl, '/.*\\?\\$')) { 
     baseurl <- paste0(baseurl, "&$format=json&$inlinecount=allpages")
   } else {
     baseurl <- paste0(baseurl, "?$format=json&$inlinecount=allpages")
