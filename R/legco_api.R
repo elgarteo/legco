@@ -49,11 +49,12 @@ legco_api <- function(db, query, n, verbose) {
   }
   
   df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
-  
+
   total <- as.numeric(df$odata.count)
   
-  if (nrow(df$value) == 0) {
+  if (df$odata.count == 0) {
     message("The request did not return any data. Please check your parameters.")
+    df <- NULL
   } else if (n <= 1000 | total < 1000) {
     if (verbose) {
       message(paste0("Retrieved ", nrow(df$value), " records. ",

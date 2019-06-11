@@ -42,10 +42,11 @@ term <- function(id = NULL, date = NULL, extra_param = NULL, verbose = TRUE) {
   
   df <- legco_api("schedule", query, 1000, verbose)
   
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-  
-  df
-  
+  if (!is.null(df)) {
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    
+    df
+  }
 }
 
 #' @rdname term

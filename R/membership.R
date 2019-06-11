@@ -71,10 +71,11 @@ membership <- function(id = NULL, member_id = NULL, committee_id = NULL, term_id
   
   df <- legco_api("schedule", query, n, verbose)
   
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  if (!is.null(df)) {
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
   
-  df
-  
+    df
+  }
 }
 
 #' @rdname membership

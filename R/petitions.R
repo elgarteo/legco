@@ -78,7 +78,7 @@ petitions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
   df <- legco_api("hansard", query, n, verbose)
   
   # Create vector if more than one petition sponsor
-  df$Speakers <- sapply(df$Speakers, function(x) unlist(strsplit(x, ",")))
+  df$Speakers <- sapply(df$Speakers, function(x) unlist(strsplit(x, ","), use.names = FALSE))
   
   df
   

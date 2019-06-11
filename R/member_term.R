@@ -1,6 +1,6 @@
 #' Terms of Members of LegCo
 #'
-#' Fetch the serving terms of LegCo members
+#' Fetch the serving terms in term ID of LegCo members
 #'
 #' @param id The id of a LegCo member, or a vector of ids. If `NULL`, returns
 #'   all LegCo members. Defaults to `NULL`.
@@ -31,19 +31,24 @@ member_term <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
   
   df <- legco_api("schedule", query, 1000, verbose)
   
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-  
-  # COMBINE 
-  # 1st Step:
-  #tmp <- sapply(1:sum(duplicated(test$MemberId)), function(x) {
-  #paste(test$TermId[test$MemberId %in% test$MemberId[duplicated(test$MemberId)] & !duplicated(test$MemberId)][x], 
-  #      test$TermId[duplicated(test$MemberId)][x])
-  #})
-  #2nd Step:
-  #...
-  
-  df
-  
+  if (!is.null(df)) {
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    
+    # Combine duplicated entries of members who have served more than one term
+    df$TermId[df$MemberId %in% df$MemberId[duplicated(df$MemberId)] & !duplicated(df$MemberId)] <- 
+      sapply(1:sum(duplicated(df$MemberId)), function(x) { 
+        # Combine multiple TermID of the same member into a single string
+        paste(df$TermId[df$MemberId %in% df$MemberId[duplicated(df$MemberId)] & !duplicated(df$MemberId)][x], 
+              df$TermId[duplicated(df$MemberId)][x])
+      })
+    df <- df[!duplicated(df$MemberId), ]
+    rownames(df) <- c(1:nrow(df))
+    # Convert string containing multiple TermIDs into vectors
+    df$TermId <- sapply(df$TermId, function(x) strsplit(x, " "))
+    df$TermId <- sapply(df$TermId, function(x) unname(x))
+    
+    df
+  }
 }
 
 #' @rdname member
