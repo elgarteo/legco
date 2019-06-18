@@ -11,13 +11,13 @@
 #' @param query The query for retrieving data. Should include the data endpoint
 #'   and parameters if any.
 #'
-#' @param n The number of entry to fetch. Default to `1000`.
+#' @param n The number of entry to fetch. Defaults to `1000`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
 #' @export
 #' 
-legco_api <- function(db, query, n, verbose) {
+legco_api <- function(db, query, n = 1000, verbose = TRUE) {
   db <- tolower(db)
   if (db == "hansard") {
     db <- "OpenData/HansardDB"

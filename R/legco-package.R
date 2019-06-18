@@ -1,7 +1,7 @@
 #' legco: Provides Access to the Hong Kong Legislative Council APIs
 #'
 #' Provides functions to request data from the Hong Kong Legislative Council
-#' APIs and compile them into usable output.
+#' APIs.
 #'
 #' For more details please see the API documentation on
 #' \url{https://www.legco.gov.hk/odata/english/hansard-db.html} and
