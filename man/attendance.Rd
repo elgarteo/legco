@@ -6,11 +6,11 @@
 \title{Attendance of LegCo Members}
 \usage{
 attendance(committee_id = NULL, meet_id = NULL, member_id = NULL,
-  lang = "en", attn = "all", from = "1900-01-01", to = Sys.Date(),
-  n = 1000, extra_param = NULL, verbose = TRUE)
+  attn = "all", from = "1900-01-01", to = Sys.Date(), n = 1000,
+  extra_param = NULL, verbose = TRUE)
 
 legco_attendance(committee_id = NULL, meet_id = NULL,
-  member_id = NULL, lang = "en", attn = "all", from = "1900-01-01",
+  member_id = NULL, attn = "all", from = "1900-01-01",
   to = Sys.Date(), n = 1000, extra_param = NULL, verbose = TRUE)
 }
 \arguments{
@@ -21,9 +21,6 @@ returns records of meetings from all committee. Defaults to `NULL`.}
 records of all meetings. Defaults to `NULL`.}
 
 \item{member_id}{The id of a member, or a vector of ids. Defaults to `NULL`.}
-
-\item{lang}{The language. `'en'` returns records in English. `'zh'` returns
-results in Traditional Chinese. Defaults to `'en'`.}
 
 \item{attn}{The attendance. `'p'` returns members who were present. `'a'`
 returns members who were absent. `'all'` returns all members. Defaults to

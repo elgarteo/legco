@@ -23,5 +23,5 @@ and could clash with functions in other packages (e.g. `speakers()` is not a
 term unique to LegCo).
 
 This package is not officially related to or endorsed by the Legislative
-Council of Hong Kong. \link{addresses}
+Council of Hong Kong.
 }
