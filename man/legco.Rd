@@ -7,7 +7,7 @@
 \title{legco: Provides Access to the Hong Kong Legislative Council APIs}
 \description{
 Provides functions to request data from the Hong Kong Legislative Council
-APIs and compile them into usable output.
+APIs.
 }
 \details{
 For more details please see the API documentation on
