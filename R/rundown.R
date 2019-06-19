@@ -76,7 +76,7 @@ rundown <- function(id = NULL, hansard_id = NULL, speaker_id = NULL,
   if (!is.null(extra_param)) {
     query <- paste0(query, extra_param)
   }
-  
+  print(query)
   legco_api("hansard", query, n, verbose)
   
 }
