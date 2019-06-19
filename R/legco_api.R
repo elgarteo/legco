@@ -21,24 +21,30 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
   db <- tolower(db)
   if (db == "hansard") {
     db <- "OpenData/HansardDB"
+    maximum <- 1000
   } else if (db == "attn") {
     db <- "OpenData/AttendanceDB"
+    maximum <- 1000
   } else if (db == "bill") {
     db <- "BillsDB/odata"
+    maximum <- 10000
   } else if (db == "schedule") {
     db <- "ScheduleDB/odata"
+    maximum <- 10000
+  } else {
+    maximum <- 1000
   }
   
   baseurl <- paste0("https://app.legco.gov.hk/", db, "/", query)
   
-  # Check if any parameter attached to query
+  # Check if any parameter already attached to query
   if(stringr::str_detect(baseurl, '/.*\\?\\$')) { 
     baseurl <- paste0(baseurl, "&$format=json&$inlinecount=allpages")
   } else {
     baseurl <- paste0(baseurl, "?$format=json&$inlinecount=allpages")
   }
   
-  if (n < 1000) {
+  if (n < maximum) {
     baseurl <- paste0(baseurl, "&$top=", n)
   }
   
@@ -53,9 +59,11 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
   total <- as.numeric(df$odata.count)
   
   if (df$odata.count == 0) {
+    # No data retrieved
     message("The request did not return any data. Please check your parameters.")
     df <- NULL
-  } else if (n <= 1000 | total < 1000) {
+  } else if (n <= maximum | total < maximum) {
+    # All data retrieved
     if (verbose) {
       message(paste0("Retrieved ", nrow(df$value), " records. ",
                      total, " records available in total."))
@@ -64,7 +72,8 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
     df$value
     
   } else {
-    remaining <- ifelse(n > total, total - 1000, n - 1000)
+    # Only partial data retrieved.
+    remaining <- ifelse(n > total, total - maximum, n - maximum)
     nexturl <- df$odata.nextLink
     df <- df$value
     
@@ -72,13 +81,13 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
       message(remaining, " record(s) remaining.")
     }
     
-    for (i in 1:ceiling(remaining / 1000)) {
-      if (remaining < 1000) {
+    for (i in 1:ceiling(remaining / maximum)) {
+      if (remaining < maximum) {
         nexturl <- paste0(nexturl, "&$top=", remaining)
       }
       
       if (verbose) {
-        message("Retrieving ", ifelse(remaining < 1000, remaining, 1000), " records...")
+        message("Retrieving ", ifelse(remaining < maximum, remaining, maximum), " records...")
       }
       
       nexturl <- utils::URLencode(nexturl)
@@ -86,8 +95,8 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
       
       df <- rbind(df, tmp$value)
       
-      if (remaining > 1000) {
-        remaining <- remaining - 1000
+      if (remaining > maximum) {
+        remaining <- remaining - maximum
         if (verbose) {
           message(remaining, " records remaining.")
         }
