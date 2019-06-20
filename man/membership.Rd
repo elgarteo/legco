@@ -6,11 +6,11 @@
 \title{Membership of committees of LegCo}
 \usage{
 membership(id = NULL, member_id = NULL, committee_id = NULL,
-  term_id = NULL, post = NULL, n = 1000, extra_param = NULL,
+  term_id = NULL, post = NULL, n = 10000, extra_param = NULL,
   verbose = TRUE)
 
 legco_membership(id = NULL, member_id = NULL, committee_id = NULL,
-  term_id = NULL, post = NULL, n = 1000, extra_param = NULL,
+  term_id = NULL, post = NULL, n = 10000, extra_param = NULL,
   verbose = TRUE)
 }
 \arguments{
@@ -31,7 +31,7 @@ membership of committees of all terms.}
 `'Convenor'` return members of the respective post. If `NULL`, returns
 members of all posts. Defaults to `NULL`.}
 
-\item{n}{The number of records to request. Defaults to `1000`.}
+\item{n}{The number of records to request. Defaults to `10000`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}

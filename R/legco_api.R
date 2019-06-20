@@ -32,7 +32,7 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
     db <- "ScheduleDB/odata"
     maximum <- 10000
   } else {
-    maximum <- 1000
+    maximum <- 10000
   }
   
   baseurl <- paste0("https://app.legco.gov.hk/", db, "/", query)
