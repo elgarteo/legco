@@ -55,9 +55,9 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   
   attn <- tolower(attn)
   if (attn == "p") {
-    filter_args <- c(filter_args, "present_absent eq 'P' or present_absent eq 'Present'")
+    filter_args <- c(filter_args, "present_absent eq 'Present'")
   } else if (attn == "a") {
-    filter_args <- c(filter_args, "present_absent eq 'A' or present_absent eq 'Absent'")
+    filter_args <- c(filter_args, "present_absent eq 'Absent'")
   }
   
   
@@ -78,11 +78,6 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   
   # Rename column names
   colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-  
-  # Unify format of attendance
-  df[, 9] <- sapply(df[, 9], function(x) {
-    ifelse(x == "Absent" | x == "A", "A", "P")
-  })
   
   df
   

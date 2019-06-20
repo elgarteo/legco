@@ -19,7 +19,7 @@
 #' @export
 
 speakers <- function(id = NULL, type = "all", extra_param = NULL, verbose = TRUE) {
-  query <- "Speakers?$select=SpeakerID,NameChi,NameEng,Type,Initial,FirstName,LastName"
+  query <- "Speakers?"
   
   filter_args <- {}
   
@@ -33,7 +33,7 @@ speakers <- function(id = NULL, type = "all", extra_param = NULL, verbose = TRUE
   }
   
   if (!is.null(filter_args)) {
-    query <- paste0(query, "&$filter=", paste(filter_args, collapse = " and "))
+    query <- paste0(query, "$filter=", paste(filter_args, collapse = " and "))
   }
   
   if (!is.null(extra_param)) {

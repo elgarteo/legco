@@ -19,7 +19,7 @@
 #'   `'Convenor'` return members of the respective post. If `NULL`, returns
 #'   members of all posts. Defaults to `NULL`.
 #'
-#' @param n The number of records to request. Defaults to `1000`.
+#' @param n The number of records to request. Defaults to `10000`.
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
@@ -29,7 +29,7 @@
 #' @export
 #' 
 membership <- function(id = NULL, member_id = NULL, committee_id = NULL, term_id = NULL,
-                       post = NULL, n = 1000, extra_param = NULL, verbose = TRUE) {
+                       post = NULL, n = 10000, extra_param = NULL, verbose = TRUE) {
   query <- "Tmembership?$select=membership_id,member_id,committee_id,post_eng,post_chi,post_start_date,post_end_date,term_id"
   
   filter_args <- {}

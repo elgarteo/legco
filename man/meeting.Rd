@@ -6,11 +6,11 @@
 \title{Meetings of LegCo Committees}
 \usage{
 meeting(id = NULL, from = "1900-01-01", to = Sys.Date(),
-  type = "all", term_id = NULL, n = 1000, extra_param = NULL,
+  type = "all", term_id = NULL, n = 10000, extra_param = NULL,
   verbose = TRUE)
 
 legco_meeting(id = NULL, from = "1900-01-01", to = Sys.Date(),
-  type = "all", term_id = NULL, n = 1000, extra_param = NULL,
+  type = "all", term_id = NULL, n = 10000, extra_param = NULL,
   verbose = TRUE)
 }
 \arguments{
@@ -34,7 +34,7 @@ of all terms.}
 open meetings. If `'closed'`, returns closed meetings. If `'all'`, returns
 all meetings. Defaults to `'all'`.}
 
-\item{n}{The number of records to request. Defaults to `1000`.}
+\item{n}{The number of records to request. Defaults to `10000`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}

@@ -22,7 +22,7 @@
 #'   open meetings. If `'closed'`, returns closed meetings. If `'all'`, returns
 #'   all meetings. Defaults to `'all'`.
 #'
-#' @param n The number of records to request. Defaults to `1000`.
+#' @param n The number of records to request. Defaults to `10000`.
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
@@ -32,7 +32,7 @@
 #' @export
 #' 
 meeting <- function(id = NULL, from = '1900-01-01', to = Sys.Date(), type = "all", 
-                    term_id = NULL, n = 1000, extra_param = NULL, verbose = TRUE) {
+                    term_id = NULL, n = 10000, extra_param = NULL, verbose = TRUE) {
   query <- "Tmeeting?$select=meet_id,subject_eng,subject_chi,start_date_time,meeting_type_eng,meeting_type_chi,venue_code,venue_name_eng,venue_name_chi,term_id,agenda_url_eng,agenda_url_chi"
   
   filter_args <- {}
