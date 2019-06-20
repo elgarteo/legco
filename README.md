@@ -16,8 +16,9 @@ This R package provides access to the LegCo open data APIs in R. The functions i
 correspond to the data endpoints of the APIs.
 
 Because of the inherent structure of the LegCo database, results from the APIs may not be in 
-the most usable form for the general public. ~~It is therefore recommended to also install an
-addon package [elgarteo/legcoplus]() which provides functions that generate more usable outputs.~~
+the most usable form for the general public. It is therefore recommended to also install an
+addon package [elgarteo/legcoplus](https://github.com/elgarteo/legocplus) which provides functions
+that generate more usable outputs.
 
 ## How it works
 This package compiles the correct query and request data from the following LegCo APIs:
