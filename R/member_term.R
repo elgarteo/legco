@@ -35,19 +35,17 @@ member_term <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
     colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
     
     # Combine duplicated entries of members who have served more than one term
-    df$TermId[df$MemberId %in% df$MemberId[duplicated(df$MemberId)] & !duplicated(df$MemberId)] <- 
-      sapply(1:sum(duplicated(df$MemberId)), function(x) { 
+    df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)] <- 
+      sapply(1:sum(duplicated(df$MemberID)), function(x) { 
         # Combine multiple TermID of the same member into a single string
-        paste(df$TermId[df$MemberId %in% df$MemberId[duplicated(df$MemberId)] & !duplicated(df$MemberId)][x], 
-              df$TermId[duplicated(df$MemberId)][x])
+        list(c(df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)][x], 
+              df$TermID[duplicated(df$MemberID)][x]))
       })
-    df <- df[!duplicated(df$MemberId), ]
-    rownames(df) <- c(1:nrow(df))
-    # Convert string containing multiple TermIDs into vectors
-    df$TermId <- sapply(df$TermId, function(x) strsplit(x, " "))
-    df$TermId <- sapply(df$TermId, function(x) unname(x))
+    df <- df[!duplicated(df$MemberID), ]
+    rownames(df) <- 1:nrow(df)
     
     df
+    
   }
 }
 
