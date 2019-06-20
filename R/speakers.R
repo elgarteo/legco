@@ -19,12 +19,12 @@
 #' @export
 
 speakers <- function(id = NULL, type = "all", extra_param = NULL, verbose = TRUE) {
-  query <- "Speakers?"
+  query <- "Speakers?$select=SpeakerID,NameChi,NameEng,Type,Initial,FirstName,LastName"
   
   filter_args <- {}
   
   if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter(id))
+    filter_args <- c(filter_args, generate_filter("SpeakerID", id))
   }
   
   type <- toupper(type)
