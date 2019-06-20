@@ -70,7 +70,14 @@ voting_record <- function(committee = NULL, result = "all", name_ch = NULL,
     query <- paste0(query, extra_param)
   }
   
-  legco_api("vrdb/odata", query, n, verbose)
+  df <- legco_api("vrdb/odata", query, n, verbose)
+  
+  # Rename column names
+  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  names(df)[names(df) == "TermNo"] <- "TermID"
+  names(df)[names(df) == "Type"] <- "Committee"
+  
+  df
   
 }
 
