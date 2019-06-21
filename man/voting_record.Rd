@@ -44,6 +44,6 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch voting record from LegCo Council, the Finance Committee and its
+Fetch voting records of LegCo council, the Finance Committee and its
 subcommittees and the House Committee meetings.
 }

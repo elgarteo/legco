@@ -1,6 +1,6 @@
-#' Hansards of LegCo
+#' Hansard of LegCo
 #'
-#' Fetch metadata and URLs of the hansard files of LegCo.
+#' Fetch metadata and URLs of the hansard files of LegCo council meetings.
 #'
 #' @param id The id of a hansard file, or a vector of ids. If `NULL`, returns a
 #'   list of all hansard files. Defaults to `NULL`.
@@ -65,7 +65,6 @@ hansard <- function(id = NULL, lang = "en", from = '1900-01-01', to = Sys.Date()
   }
   
   legco_api("hansard", query, n, verbose)
-  
 }
 
 #' @rdname hansard

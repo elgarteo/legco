@@ -1,6 +1,6 @@
 #' Speakers at LegCo
 #' 
-#' Fetch basic details of the speakers at LegCo, including LegCo members,
+#' Fetch the basic information of speakers in LegCo council meetings, including LegCo members,
 #' government officials and Secretariat staff.
 #' 
 #' @param id The id of a speaker at the Legislative Council, or a vector of ids. If `NULL`,
@@ -17,7 +17,7 @@
 #' @param verbose Defaults to `TRUE`.
 #' 
 #' @export
-
+#' 
 speakers <- function(id = NULL, type = "all", extra_param = NULL, verbose = TRUE) {
   query <- "Speakers?"
   
@@ -41,7 +41,6 @@ speakers <- function(id = NULL, type = "all", extra_param = NULL, verbose = TRUE
   }
   
   legco_api("hansard", query, n = 1000, verbose)
-  
   }
 
 #' @rdname speakers

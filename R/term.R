@@ -1,6 +1,6 @@
-#' Terms of LegCo
+#' Term of LegCo
 #'
-#' Fetch the number and duration of LegCo terms.
+#' Fetch the basic information of LegCo terms.
 #'
 #' @param id The id of a term, or a vector of ids. If `NULL`, returns terms.
 #'   Defaults to `NULL`.

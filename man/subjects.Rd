@@ -3,7 +3,7 @@
 \name{subjects}
 \alias{subjects}
 \alias{legco_subjects}
-\title{Subjects from LegCo Hansards}
+\title{Subjects from LegCo Hansard}
 \usage{
 subjects(hansard_id = NULL, rundown_id = NULL, section_code = NULL,
   lang = "en", from = "1900-01-01", to = Sys.Date(), floor = FALSE,
@@ -51,5 +51,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch the subjects from hansard files of LegCo.
+Fetch the subjects from hansard files of LegCo council meetings.
 }

@@ -1,6 +1,6 @@
 #' Terms of Members of LegCo
 #'
-#' Fetch the serving terms in term ID of LegCo members
+#' Fetch the serving terms in Term ID of LegCo members
 #'
 #' @param id The id of a LegCo member, or a vector of ids. If `NULL`, returns
 #'   all LegCo members. Defaults to `NULL`.
@@ -45,7 +45,6 @@ member_term <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
     rownames(df) <- 1:nrow(df)
     
     df
-    
   }
 }
 

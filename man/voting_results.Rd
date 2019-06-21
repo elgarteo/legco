@@ -56,6 +56,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch voting results of motions in LegCo meetings from hansard files of
-LegCo.
+Fetch result of votes made in LegCo council meetings.
 }

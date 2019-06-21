@@ -1,12 +1,13 @@
-#' Committee of Mettings in LegCo
+#' Committee of Meetings in LegCo
 #'
-#' Fetch the committee in committee ID by using meet ID
+#' Fetch the corresponding committee of meetings in LegCo, or vice versa.
+#' Essentially a function to match Committee ID and Meet ID.
 #'
-#' @param meet_id The id of a LegCo committee meeting, or a vector of ids. If `NULL`, returns
-#'   all meetings. Defaults to `NULL`.
-#'   
-#' @param committee_id The id of a LegCo committee, or a vector of ids. If `NULL`, returns
-#'   committees. Defaults to `NULL`.
+#' @param meet_id The id of a LegCo committee meeting, or a vector of ids. If
+#'   `NULL`, returns all meetings. Defaults to `NULL`.
+#'
+#' @param committee_id The id of a LegCo committee, or a vector of ids. If
+#'   `NULL`, returns committees. Defaults to `NULL`.
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.

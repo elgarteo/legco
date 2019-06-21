@@ -1,6 +1,6 @@
 #' Bills in LegCo
 #'
-#' Fetch the bills presented in LegCo.
+#' Fetch bills presented in LegCo council meetings.
 #'
 #' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
 #'   `NULL`.
@@ -79,7 +79,6 @@ bills <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
   }
   
   legco_api("hansard", query, n, verbose)
-  
 }
 
 #' @rdname bills

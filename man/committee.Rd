@@ -30,5 +30,5 @@ begin with `'&'`.}
 result in Traditional Chinese. Defaults to `'en'`.}
 }
 \description{
-Fetch information of LegCo committees.
+Fetch basic information of LegCo committees.
 }

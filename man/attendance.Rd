@@ -44,5 +44,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch attendance records of LegCo meetings
+Fetch attendance record of LegCo committee meetings
 }

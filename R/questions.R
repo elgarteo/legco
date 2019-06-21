@@ -1,6 +1,6 @@
 #' Questions by LegCo Members
 #'
-#' Fetch the questions put to the government by LegCo members.
+#' Fetch questions put to the government by LegCo members in council meetings.
 #'
 #' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
 #'   `NULL`.
@@ -83,7 +83,6 @@ questions <- function(rundown_id = NULL, speaker_id = NULL, type = "all",
   }
   
   legco_api("hansard", query, n, verbose)
-  
 }
 
 #' @rdname questions

@@ -49,5 +49,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch the rundown from hansard files of LegCo.
+Fetch the rundown from hansard files of LegCo council meetings.
 }

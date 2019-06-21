@@ -3,7 +3,7 @@
 \name{session}
 \alias{session}
 \alias{legco_session}
-\title{Sessions of LegCo}
+\title{Session of LegCo}
 \usage{
 session(id = NULL, term_id = NULL, date = NULL, extra_param = NULL,
   verbose = TRUE)
@@ -29,5 +29,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch the number and duration of LegCo sessions.
+Fetch the basic information of LegCo sessions.
 }

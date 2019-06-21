@@ -3,7 +3,7 @@
 \name{addresses}
 \alias{addresses}
 \alias{legco_addresses}
-\title{Addresses by LegCo Members}
+\title{Addresses Delivered in LegCo}
 \usage{
 addresses(hansard_id = NULL, rundown_id = NULL, lang = "en",
   from = "1900-01-01", to = Sys.Date(), floor = FALSE, n = 1000,
@@ -47,5 +47,6 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch addresses by LegCo Members from hansard files of LegCo.
+Fetch addresses by LegCo members and government officials when tabling papers
+and reports in LegCo council meetings.
 }

@@ -3,7 +3,7 @@
 \name{membership}
 \alias{membership}
 \alias{legco_membership}
-\title{Membership of committees of LegCo}
+\title{Membership of LegCo Committees}
 \usage{
 membership(id = NULL, member_id = NULL, committee_id = NULL,
   term_id = NULL, post = NULL, n = 10000, extra_param = NULL,
@@ -39,5 +39,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch the membership of LegCo committees.
+Fetch the members of LegCo committees.
 }

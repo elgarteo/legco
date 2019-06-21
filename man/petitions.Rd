@@ -48,5 +48,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch the petitions presented in LegCo.
+Fetch petitions presented in LegCo council meetings.
 }

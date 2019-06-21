@@ -1,6 +1,6 @@
-#' Subjects from LegCo Hansards
+#' Subjects from LegCo Hansard
 #'
-#' Fetch the subjects from hansard files of LegCo.
+#' Fetch the subjects from hansard files of LegCo council meetings.
 #'
 #' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
 #'   returns all subjects from all hansard files. Defaults to `NULL`.

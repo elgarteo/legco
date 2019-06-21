@@ -1,6 +1,6 @@
 #' Meetings of LegCo Committees
 #'
-#' Fetch information of LegCo committee meetings.
+#' Fetch basic information of LegCo committee meetings.
 #'
 #' @param id The id of a meeting, or a vector of ids. If `NULL`, returns all
 #'   meetings. Defaults to `NULL`.

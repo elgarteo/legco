@@ -16,5 +16,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch the serving terms in term ID of LegCo members
+Fetch the serving terms in Term ID of LegCo members
 }

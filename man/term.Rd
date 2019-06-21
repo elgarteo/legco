@@ -3,7 +3,7 @@
 \name{term}
 \alias{term}
 \alias{legco_term}
-\title{Terms of LegCo}
+\title{Term of LegCo}
 \usage{
 term(id = NULL, date = NULL, extra_param = NULL, verbose = TRUE)
 
@@ -25,5 +25,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch the number and duration of LegCo terms.
+Fetch the basic information of LegCo terms.
 }

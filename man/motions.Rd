@@ -51,5 +51,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch motions presented in LegCo.
+Fetch motions presented in LegCo council meetings.
 }

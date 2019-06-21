@@ -1,6 +1,6 @@
-#' Sessions of LegCo
+#' Session of LegCo
 #'
-#' Fetch the number and duration of LegCo sessions.
+#' Fetch the basic information of LegCo sessions.
 #'
 #' @param id The id of a session, or a vector of ids. If `NULL`, returns terms.
 #'   Defaults to `NULL`.

@@ -3,7 +3,7 @@
 \name{hansard}
 \alias{hansard}
 \alias{legco_hansard}
-\title{Hansards of LegCo}
+\title{Hansard of LegCo}
 \usage{
 hansard(id = NULL, lang = "en", from = "1900-01-01",
   to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
@@ -44,5 +44,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch metadata and URLs of the hansard files of LegCo.
+Fetch metadata and URLs of the hansard files of LegCo council meetings.
 }

@@ -47,5 +47,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch statemetns by Public Officers from hansard files of LegCo.
+Fetch statemetns made by Public Officers in LegCo council meetings.
 }

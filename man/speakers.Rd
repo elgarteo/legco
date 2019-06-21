@@ -26,6 +26,6 @@ Must begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch basic details of the speakers at LegCo, including LegCo members,
+Fetch the basic information of speakers in LegCo council meetings, including LegCo members,
 government officials and Secretariat staff.
 }

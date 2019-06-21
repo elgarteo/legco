@@ -1,6 +1,6 @@
-#' Membership of committees of LegCo
+#' Membership of LegCo Committees
 #'
-#' Fetch the membership of LegCo committees.
+#' Fetch the members of LegCo committees.
 #'
 #' @param id The id of a committee membership, or a vector of ids. If `NULL`, returns
 #'   all committee membership. Defaults to `NULL`.

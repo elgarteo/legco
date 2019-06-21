@@ -1,6 +1,6 @@
 #' Voting Record in LegCo Meetings
 #'
-#' Fetch voting record from LegCo Council, the Finance Committee and its
+#' Fetch voting records of LegCo council, the Finance Committee and its
 #' subcommittees and the House Committee meetings.
 #'
 #' @param committee The name of the committee or subcommittee. Defaults to

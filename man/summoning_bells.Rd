@@ -3,7 +3,7 @@
 \name{summoning_bells}
 \alias{summoning_bells}
 \alias{legco_summoning_bells}
-\title{Summoning Bells in LegCo Meetings}
+\title{Summoning Bells in LegCo}
 \usage{
 summoning_bells(hansard_id = NULL, rundown_id = NULL,
   section_code = NULL, lang = "en", from = "1900-01-01",
@@ -52,6 +52,5 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch instances of summong bell being rung in LegCo meetings from hansard
-files of LegCo.
+Fetch instances of summoning bell being rung in LegCo council meetings
 }
