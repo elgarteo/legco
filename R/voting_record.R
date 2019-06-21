@@ -5,6 +5,8 @@
 #'
 #' @param committee The name of the committee or subcommittee. Defaults to
 #'   `NULL`.
+#'   
+#' @param term_id The ID of a term. Defaults to `NULL`.
 #'
 #' @param result The voting result. `'passed'` returns motions that have been
 #'   passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
@@ -32,9 +34,9 @@
 #'
 #' @export
 #' 
-voting_record <- function(committee = NULL, result = "all", name_ch = NULL,
-                           from = '1900-01-01', to = Sys.Date(), n = 10000,
-                           extra_param = NULL, verbose = TRUE) {
+voting_record <- function(committee = NULL, term_id = NULL, result = "all",
+                          name_ch = NULL, from = '1900-01-01', to = Sys.Date(),
+                          n = 10000, extra_param = NULL, verbose = TRUE) {
   query <- "vVotingResult?"
   
   filter_args <- {}
@@ -44,6 +46,10 @@ voting_record <- function(committee = NULL, result = "all", name_ch = NULL,
     committee <- paste0(toupper(substr(committee, 1, 1)), substr(committee, 2, nchar(committee)))
     committee <- paste(committee, collapse = " ")
     filter_args <- c(filter_args, paste0("type eq '", committee, "'"))
+  }
+  
+  if (!is.null(term_id)) {
+    filter_args <- c(filter_args, paste0("term_no eq ", term_id))
   }
   
   results <- tolower(result)
@@ -72,13 +78,14 @@ voting_record <- function(committee = NULL, result = "all", name_ch = NULL,
   
   df <- legco_api("vrdb/odata", query, n, verbose)
   
-  # Rename column names
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-  names(df)[names(df) == "TermNo"] <- "TermID"
-  names(df)[names(df) == "Type"] <- "Committee"
-  
-  df
-  
+  if (!is.null(df)) {
+    # Rename column names
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    names(df)[names(df) == "TermNo"] <- "TermID"
+    names(df)[names(df) == "Type"] <- "Committee"
+    
+    df
+  }
 }
 
 #' @rdname voting_record

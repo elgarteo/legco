@@ -40,7 +40,7 @@ meeting_committee <- function(meet_id = NULL, committee_id = NULL, extra_param =
   
   if (!is.null(df)) {
     colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-    colnames(df)[1] <- "MeetId"
+    colnames(df)[1] <- "MeetID"
     
     df
   }

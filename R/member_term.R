@@ -36,10 +36,10 @@ member_term <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
     
     # Combine duplicated entries of members who have served more than one term
     df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)] <- 
-      sapply(1:sum(duplicated(df$MemberID)), function(x) { 
+      lapply(1:sum(duplicated(df$MemberID)), function(x) { 
         # Combine multiple TermID of the same member into a single string
-        list(c(df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)][x], 
-              df$TermID[duplicated(df$MemberID)][x]))
+        c(df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)][x], 
+              df$TermID[duplicated(df$MemberID)][x])
       })
     df <- df[!duplicated(df$MemberID), ]
     rownames(df) <- 1:nrow(df)

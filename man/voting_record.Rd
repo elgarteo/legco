@@ -5,17 +5,19 @@
 \alias{legco_voting_record}
 \title{Voting Record in LegCo Meetings}
 \usage{
-voting_record(committee = NULL, result = "all", name_ch = NULL,
-  from = "1900-01-01", to = Sys.Date(), n = 10000,
+voting_record(committee = NULL, term_id = NULL, result = "all",
+  name_ch = NULL, from = "1900-01-01", to = Sys.Date(), n = 10000,
   extra_param = NULL, verbose = TRUE)
 
-legco_voting_record(committee = NULL, result = "all", name_ch = NULL,
-  from = "1900-01-01", to = Sys.Date(), n = 10000,
+legco_voting_record(committee = NULL, term_id = NULL, result = "all",
+  name_ch = NULL, from = "1900-01-01", to = Sys.Date(), n = 10000,
   extra_param = NULL, verbose = TRUE)
 }
 \arguments{
 \item{committee}{The name of the committee or subcommittee. Defaults to
 `NULL`.}
+
+\item{term_id}{The ID of a term. Defaults to `NULL`.}
 
 \item{result}{The voting result. `'passed'` returns motions that have been
 passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
