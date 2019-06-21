@@ -1,6 +1,6 @@
 #' Attendance of LegCo Members
 #'
-#' Fetch attendance records of LegCo meetings
+#' Fetch attendance record of LegCo committee meetings
 #'
 #' @param committee_id The id of a committee, or a vector of ids. If `NULL`,
 #'   returns records of meetings from all committee. Defaults to `NULL`.
@@ -76,11 +76,12 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   
   df <- legco_api("attn", query, n, verbose)
   
-  # Rename column names
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-  
-  df
-  
+  if (!is.null(df)) {
+    # Rename column names
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    
+    df
+  }
 }
 
 #' @rdname attendance

@@ -1,6 +1,7 @@
-#' Addresses by LegCo Members
+#' Addresses Delivered in LegCo
 #'
-#' Fetch addresses by LegCo Members from hansard files of LegCo.
+#' Fetch addresses by LegCo members and government officials when tabling papers
+#' and reports in LegCo council meetings.
 #'
 #' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
 #'   returns addresses from all hansard files. Defaults to `NULL`.
@@ -33,7 +34,7 @@
 #'   begin with `'&'`.
 #'
 #' @param verbose Defaults to `TRUE`.
-#' 
+#'
 #' @export
 #' 
 addresses <- function(hansard_id = NULL, rundown_id = NULL,
@@ -72,7 +73,6 @@ addresses <- function(hansard_id = NULL, rundown_id = NULL,
   }
   
   legco_api("hansard", query, n, verbose)
-  
 }
 
 #' @rdname addresses

@@ -1,7 +1,6 @@
-#' Summoning Bells in LegCo Meetings
+#' Summoning Bells in LegCo
 #'
-#' Fetch instances of summong bell being rung in LegCo meetings from hansard
-#' files of LegCo.
+#' Fetch instances of summoning bell being rung in LegCo council meetings
 #'
 #' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
 #'   returns all instances from all hansard files. Defaults to `NULL`.
@@ -80,7 +79,6 @@ summoning_bells <- function(hansard_id = NULL, rundown_id = NULL, section_code =
   }
   
   legco_api("hansard", query, n, verbose)
-  
 }
 
 #' @rdname summoning_bells

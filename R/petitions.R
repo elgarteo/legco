@@ -1,6 +1,6 @@
 #' Petitions in LegCo
 #'
-#' Fetch the petitions presented in LegCo.
+#' Fetch petitions presented in LegCo council meetings.
 #'
 #' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
 #'   `NULL`.
@@ -77,11 +77,12 @@ petitions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
   
   df <- legco_api("hansard", query, n, verbose)
   
-  # Create vector if more than one petition sponsor
-  df$Speakers <- sapply(df$Speakers, function(x) unlist(strsplit(x, ","), use.names = FALSE))
-  
-  df
-  
+  if(!is.null(df)) {
+    # Create vector if more than one petition sponsor
+    df$Speakers <- sapply(df$Speakers, function(x) unlist(strsplit(x, ","), use.names = FALSE))
+    
+    df
+  }
 }
 
 #' @rdname petitions

@@ -1,6 +1,6 @@
 #' Statements by Public Officers
 #'
-#' Fetch statemetns by Public Officers from hansard files of LegCo.
+#' Fetch statemetns made by Public Officers in LegCo council meetings.
 #'
 #' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
 #'   returns statements from all hansard files. Defaults to `NULL`.
@@ -72,7 +72,6 @@ statements <- function(hansard_id = NULL, rundown_id = NULL,
   }
   
   legco_api("hansard", query, n, verbose)
-  
 }
 
 #' @rdname statements

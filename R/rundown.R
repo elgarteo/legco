@@ -1,6 +1,6 @@
 #' Rundown from LegCo Hansards
 #'
-#' Fetch the rundown from hansard files of LegCo.
+#' Fetch the rundown from hansard files of LegCo council meetings.
 #'
 #' @param id The id of a rundown, or a vector of ids. Defaults to `NULL`.
 #'
@@ -78,7 +78,6 @@ rundown <- function(id = NULL, hansard_id = NULL, speaker_id = NULL,
   }
   
   legco_api("hansard", query, n, verbose)
-  
 }
 
 #' @rdname rundown

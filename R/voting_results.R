@@ -1,7 +1,6 @@
 #' Voting Results in LegCo Meetings
 #'
-#' Fetch voting results of motions in LegCo meetings from hansard files of
-#' LegCo.
+#' Fetch result of votes made in LegCo council meetings.
 #'
 #' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
 #'   returns voting results from all hansard files. Defaults to `NULL`.
@@ -91,7 +90,6 @@ voting_results <- function(hansard_id = NULL, rundown_id = NULL, section_code = 
   }
   
   legco_api("hansard", query, n, verbose)
-  
 }
 
 #' @rdname voting_results
