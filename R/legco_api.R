@@ -11,7 +11,7 @@
 #' @param query The query for retrieving data. Should include the data endpoint
 #'   and parameters if any.
 #'
-#' @param n The number of entry to fetch. Defaults to `1000`.
+#' @param n The number of record to fetch. Defaults to `1000`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
@@ -48,12 +48,11 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
     baseurl <- paste0(baseurl, "&$top=", n)
   }
   
-  baseurl <- utils::URLencode(baseurl)
-  
   if (verbose) {
     message("Retrieving records...")
   }
   
+  baseurl <- utils::URLencode(baseurl)
   df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
 
   total <- as.numeric(df$odata.count)

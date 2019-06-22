@@ -16,7 +16,7 @@ endpoints, e.g. `'OpenData/HansardDB'`).}
 \item{query}{The query for retrieving data. Should include the data endpoint
 and parameters if any.}
 
-\item{n}{The number of entry to fetch. Defaults to `1000`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

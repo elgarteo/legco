@@ -24,3 +24,16 @@ unify_colnames <- function(col_names) {
     x <- paste(paste0(toupper(substring(x, 1, 1)), substring(x, 2)), collapse = "")
   })
 }
+
+## Function to capitalise first letter of every word in a string except for prepositions
+capitalise <- function(string) {
+  string <- strsplit(string, " ")[[1]]
+  string <- sapply(string, function(x)
+    ifelse(tolower(x) %in% c("the", "of", "for", "to", "at", "on", "by"), 
+           tolower(x), 
+           paste0(toupper(substring(x, 1, 1)), substring(x, 2))))
+  string <- paste(string, collapse = " ")
+  string <- paste0(toupper(substring(string, 1, 1)), substring(string, 2))
+  
+  string
+}
