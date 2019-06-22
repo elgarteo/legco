@@ -11,7 +11,7 @@
 #' @param query The query for retrieving data. Should include the data endpoint
 #'   and parameters if any.
 #'
-#' @param n The number of entry to fetch. Defaults to `1000`.
+#' @param n The number of record to fetch. Defaults to `1000`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
