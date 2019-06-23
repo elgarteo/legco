@@ -1,0 +1,150 @@
+---
+title: "Introduction to legco"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+`legco` is an R package to fetch data from the Hong Kong Legislative Council (LegCo) APIs. It provides 
+easy access to LegCo's open data in an intergrated manner without having to dig deep into the structures 
+and parameters of the APIs. Each function corresponds to a data endpoint of the APIs. Data is retrieved 
+in json format and presented in a dataframe. ~~It is recommended to also install the package `legcoplus` 
+which provides functions to enhance the usability of the data retrieved from the LegCo APIs.~~
+
+## Installing legco
+
+### From GitHub
+
+```{r, eval = FALSE}
+install.packages("devtools")
+devtools::install_github("elgarteo/legco")
+```
+
+### Load legco
+
+```{r}
+library(legco)
+```
+
+## Using legco
+
+### Understanding the LegCo APIs
+
+The LegCo APIs consist of different databases with seperate structures and identifiers,
+and each database has its own API. The functions in this package correspond to the various data endpoints
+of these APIs. The databases supported by this package and the associating functions are as follow.
+
+1. **Hansard Database**
+
+   <https://www.legco.gov.hk/odata/english/hansard-db.html>
+   
+   This database contains information on matters discussed in LegCo Council meeting since the fifth term
+   of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks 
+   and section codes of the hansard files, the data endpoints retrieve data from the files directly. 
+   This database is accessible with the following functions:
+   
+   * `hansard()` fetches the information of the hansard files.
+   * `legco_section_type` contains all the section codes used in the hansard files, which are useful in
+   extracting information from the hansard files with the function `subjects()`.
+   * `subjects()` fetches the subjects in the hansard files, which represent the items in the meeting agenda.
+   * `speakers()` fetches the speakers in meetings, including members, government officials and secretariat 
+   staff.
+   * `rundown()` fetches the full text of the hansard files.
+   * `questions()` fetches the questions put on the government by the members during LegCo Council meetings.
+   * `bills()` fetches bills that have been debated in LegCo Council meetings. 
+   * `motions()` fetches motions that have been debated in LegCo Council meetings.
+   * `petitions()` fetches petitions initiated by members in LegCo Council meetings.
+   * `addresses()` fetches addresses made by members or government officials before tabling documents in LegCo 
+   Council meetings.
+   * `statements()` fetches statments made by government officials in LegCo Council meetings.
+   * `voting_results()` fetches the results of votes conducted in LegCo Council meetings.
+   * `summoning_bells()` fetches instances in which the summoning bell have been rung in LegCo Council meetings.
+   
+   When using in combination, these functions are essentially hansard files crawler.
+
+1. **Voting Results Database**
+
+   <https://www.legco.gov.hk/odata/english/vrdb.html>
+   
+   This database contains voting results of the LegCo Council, the House Committee and the Finance Committee
+   and its subcomittees starting from the 5th term of LegCo (2012).
+   This database is accessible with the following function:
+   
+   * `voting_record()` fetches the information of votes conducted in the meetings, including the voting 
+   record of each member.
+   
+   While `voting_results()` of the Hansard Database returns only the overall result of votes conducted in 
+   Council meetings, `voting_record()` returns much more detailed information of votes conducted in Council 
+   and other four committees and subcommittees meetings.
+   
+1. **Bills Database**
+
+   <https://www.legco.gov.hk/odata/english/billsdb.html>
+   
+   This database contains key information of all the bills debated in LegCo since 1906. 
+   This database is accessible with the following function:
+   
+   * `all_bills()` fetches the information of bulls that have gone through LegCo.
+   
+   Comapred to `bills()` of the Hansard Database, `all_bills()` provides much more comprehensive information 
+   of bills, including all key dates and the proposer.
+   
+1. **Meeting Schedule Database**
+
+   <https://www.legco.gov.hk/odata/english/schedule-db.html>
+   
+   This database contains the member list and the meeting schedule of the LegCo Council and every committee
+   since the fifth term of LegCo.
+   This database is accessible with the following functions:
+   
+   * `term()` fetches the terms in LegCo.
+   * `session()` fetches the sessions in LegCo.
+   * `committee()` fetches a list of LegCo committees. 
+   * `membership()` fetches the members of each committee in the form of Member ID.
+   * `member()` fetches the members in LegCo. 
+   * `member_term()` fetches the terms LegCo members have served in.
+   * `meeting()` fetches the meeting schedule of LegCo committees in the form of Meet ID.
+   * `meeting_committee()` fetches which committee holds a meeting.
+   
+   While the purpose of `member()` is similar to `speakers()` of the Hansard Database, `member()` returns only 
+   LegCo members. Their identifiers, i.e. Speaker ID and Member ID, are unique and not interchangeable.
+   
+1. **Attendance Database**
+
+   <https://www.legco.gov.hk/odata/english/attendance-db.html>
+   
+   This database contains the attendance record of LegCo Council and committee meetings since the sixth term.
+   This database is accessible with the following function:
+   
+   * `attendance()` fetches the attendance of members in LegCo Council and committee meetings.
+   
+A generic function `legco_api()` is available for access to other databases and endpoints of the LegCo APIs that 
+are not specified here.
+   
+All functions can also be accessed with the prefix `legco_`, e.g. `legco_speakers()` and `speakers()`
+return the same result.
+   
+### Examples
+
+The following code fetches all the LegCo Council meetings held from January 1, 2019 to March 31, 2019.
+
+```{r, echo = TRUE, message = TRUE}
+hansard(from = "2019-01-11", to = "2019-03-31")
+```
+
+To fetch the business handled during the meeting on February 21, 2019:
+
+```{r, echo = TRUE, message = TRUE}
+subjects(hansard_id = 2695)
+```
+
+The section codes indicate the type of the business. For example, to look up the type of business of
+_Motion on "Increasing transitional housing supply"_:
+
+```{r, echo = TRUE, message = TRUE}
+legco_section_type[ifelse("mbm" %in% sapply(legco_section_type$SectionCode,
+                                            function(x) unlist(x)), 1, 0), ]
+```
