@@ -2,17 +2,14 @@
 title: "Introduction to legco"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{introduction}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+vignette: |
+  %\VignetteIndexEntry{introduction} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
 ---
 
 `legco` is an R package to fetch data from the Hong Kong Legislative Council (LegCo) APIs. It provides 
 easy access to LegCo's open data in an intergrated manner without having to dig deep into the structures 
 and parameters of the APIs. Each function corresponds to a data endpoint of the APIs. Data is retrieved 
-in json format and presented in a dataframe. ~~It is recommended to also install the package `legcoplus` 
-which provides functions to enhance the usability of the data retrieved from the LegCo APIs.~~
+in json format and presented in a dataframe.
 
 ## Installing legco
 
@@ -44,12 +41,11 @@ of these APIs. The databases supported by this package and the associating funct
    This database contains information on matters discussed in LegCo Council meeting since the fifth term
    of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks 
    and section codes of the hansard files, the data endpoints retrieve data from the files directly. 
-   This database is accessible with the following functions:
+   This database is accessible with the following functions/data:
    
    * `hansard()` fetches the information of the hansard files.
-   * `legco_section_type` contains all the section codes used in the hansard files, which are useful in
-   extracting information from the hansard files with the function `subjects()`.
-   * `subjects()` fetches the subjects in the hansard files, which represent the items in the meeting agenda.
+   * `legco_section_type` is a data frame that explains that meaning of the section codes used in the hansard files,
+   * `subjects()` fetches the subjects in the hansard files, which are essentially items in the meeting agenda.
    * `speakers()` fetches the speakers in meetings, including members, government officials and secretariat 
    staff.
    * `rundown()` fetches the full text of the hansard files.
@@ -70,7 +66,7 @@ of these APIs. The databases supported by this package and the associating funct
    <https://www.legco.gov.hk/odata/english/vrdb.html>
    
    This database contains voting results of the LegCo Council, the House Committee and the Finance Committee
-   and its subcomittees starting from the 5th term of LegCo (2012).
+   and its subcomittees starting from the fifth term of LegCo.
    This database is accessible with the following function:
    
    * `voting_record()` fetches the information of votes conducted in the meetings, including the voting 
@@ -84,7 +80,7 @@ of these APIs. The databases supported by this package and the associating funct
 
    <https://www.legco.gov.hk/odata/english/billsdb.html>
    
-   This database contains key information of all the bills debated in LegCo since 1906. 
+   This database contains key information of all the bills that have been presented in LegCo since 1906. 
    This database is accessible with the following function:
    
    * `all_bills()` fetches the information of bulls that have gone through LegCo.
@@ -129,22 +125,73 @@ return the same result.
    
 ### Examples
 
-The following code fetches all the LegCo Council meetings held from January 1, 2019 to March 31, 2019.
+The following code shows all the LegCo Council meetings held from May 1, 2018 to May 31, 2018.
 
-```{r, echo = TRUE, message = TRUE}
-hansard(from = "2019-01-11", to = "2019-03-31")
+```{r echo=TRUE, message=FALSE}
+hansard(from = "2018-05-01", to = "2018-05-31")
 ```
 
-To fetch the business handled during the meeting on February 21, 2019:
+To fetch the items on the agenda of the meeting on May 23, 2018:
 
-```{r, echo = TRUE, message = TRUE}
-subjects(hansard_id = 2695)
+```{r, echo = TRUE, message = FALSE}
+subjects(hansard_id = 2451)
 ```
 
-The section codes indicate the type of the business. For example, to look up the type of business of
-_Motion on "Increasing transitional housing supply"_:
+The section codes indicate the type of the business. For exmaple, the section code "mbm" of the
+_Not forgetting the 4 June incident_ means that it is a member's motion:
+
+```{r, echo = TRUE, message = FALSE}
+legco_section_type[legco_section_type$SectionCode == "mbm", ]
+```
+
+The RundownID indicates the location of the first paragraph of the matter concerned in the hansard file. In other words, 
+paragraphs of RundownID between 828783 and 828826 (one RundownID prior to the next item on the agenda) are the records of the 
+matter the _Not forgetting the 4 june incident_ during the meeting.
+The full text of these paragraphs can be fetched by:
+
+```{r, echo = TRUE, message = FALSE}
+w <- rundown(id = 828783:828826)
+w <- w[order(w$RundownID), ] # Order by RundownID, i.e. chronological order
+rownames(w) <- 1:nrow(w)
+w$Content[41:42] # Some two paragraphs of the hansard relevant to the discussion of the motion
+```
+
+To check which members have spoken about the motion and to look up some of their names:
 
 ```{r, echo = TRUE, message = TRUE}
-legco_section_type[ifelse("mbm" %in% sapply(legco_section_type$SectionCode,
-                                            function(x) unlist(x)), 1, 0), ]
+x <- unique(w$SpeakerID[!is.na(w$SpeakerID)])
+speakers(id = x)
+```
+
+Note that there is a limit on the length of the parameters, which is at most 100 nodes as defined in the the Open Data Protocol,
+or approximately 19 filtering conditions. The code above produces 27 filtering conditions which are too long.
+If you need have parameters longer than that, break them down into multiple requests:
+
+```{r echo=TRUE, message=FALSE}
+y1 <- speakers(id = x[1:19])
+y2 <- speakers(id = x[20:27])
+y <- rbind(y1, y2)
+head(y[y$Type == "MB", ]) # Show members who have spoken about this motion
+```
+
+To find out the voting results of the motion:
+
+```{r, echo = TRUE, message = FALSE}
+v <- voting_results(from = w$MeetingDate[1], to = w$MeetingDate[1], section_code = "mbm")
+head(v[v$Subject == "Not forgetting the 4 June incident", ])
+```
+
+It is possible to fetch the detailed voting record of each member on this motion. To get a list of members who voted yes:
+
+```{r, echo = TRUE, message = FALSE}
+v <- voting_record(from = w$MeetingDate[1], to = w$MeetingDate[1])
+v[v$Vote == "Yes", 32:33]
+```
+
+To check the attendance of this meeting:
+
+```{r, echo = TRUE, message = FALSE}
+meeting(from = w$MeetingDate[1], to = w$MeetingDate[1]) # Find out MeetID of the Council meeting on May 23, 2018
+z <- attendance(meet_id = 126590)
+head(z)
 ```
