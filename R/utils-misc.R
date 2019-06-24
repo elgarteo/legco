@@ -2,7 +2,7 @@
 generate_filter <- function(var_name, var_values) {
   if (is.numeric(var_values)) {
     # Check if vector is sequential
-    if (sum(abs(diff(var_values))) == length(var_values) ) {
+    if (sum(abs(diff(var_values))) == (length(var_values) - 1) ) {
       filter_args <- paste0("(", var_name, " ge ", min(var_values), " and ",
                             var_name, " le ", max(var_values), ")")
     } else {
@@ -36,4 +36,18 @@ capitalise <- function(string) {
   string <- paste0(toupper(substring(string, 1, 1)), substring(string, 2))
   
   string
+}
+
+## Function to calculate node count of query
+node_count <- function(url) {
+  url <- gsub(".*\\$filter=|\\&\\$.*", "", url)
+  url <- strsplit(url, " and ")[[1]]
+  url <- strsplit(url, " or ")
+  n <- length(url) # 'and' count
+  for (i in 1:length(url)) {
+    n <- n + length(url[[i]]) # 'or' count
+    n <- n + length(url[[i]]) * 4 # individual condition count
+  }
+  
+  n
 }

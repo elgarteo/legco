@@ -52,62 +52,66 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
     message("Retrieving records...")
   }
   
-  baseurl <- utils::URLencode(baseurl)
-  df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
-
-  total <- as.numeric(df$odata.count)
-  
-  if (df$odata.count == 0) {
-    # No data retrieved
-    message("The request did not return any data. Please check your parameters.")
-    df <- NULL
-  } else if (n <= maximum | total < maximum) {
-    # All data retrieved
-    if (verbose) {
-      message(paste0("Retrieved ", nrow(df$value), " records. ",
-                     total, " records available in total."))
-    }
-    
-    df$value
-    
+  if (node_count(baseurl) > 100) { # in utils-misc.R
+      message("Error: Parameters too long. Please shorten your parameters and break down into multiple requests.")
   } else {
-    # Only partial data retrieved
-    remaining <- ifelse(n > total, total - maximum, n - maximum)
-    nexturl <- df$odata.nextLink
-    df <- df$value
+    baseurl <- utils::URLencode(baseurl)
+    df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
     
-    if (verbose) {
-      message(remaining, " record(s) remaining.")
-    }
+    total <- as.numeric(df$odata.count)
     
-    for (i in 1:ceiling(remaining / maximum)) {
-      if (remaining < maximum) {
-        nexturl <- paste0(nexturl, "&$top=", remaining)
+    if (df$odata.count == 0) {
+      # No data retrieved
+      message("The request did not return any data. Please check your parameters.")
+      df <- NULL
+    } else if (n <= maximum | total < maximum) {
+      # All data retrieved
+      if (verbose) {
+        message(paste0("Retrieved ", nrow(df$value), " records. ",
+                       total, " records available in total."))
+      }
+      
+      df$value
+      
+    } else {
+      # Only partial data retrieved
+      remaining <- ifelse(n > total, total - maximum, n - maximum)
+      nexturl <- df$odata.nextLink
+      df <- df$value
+      
+      if (verbose) {
+        message(remaining, " record(s) remaining.")
+      }
+      
+      for (i in 1:ceiling(remaining / maximum)) {
+        if (remaining < maximum) {
+          nexturl <- paste0(nexturl, "&$top=", remaining)
+        }
+        
+        if (verbose) {
+          message("Retrieving ", ifelse(remaining < maximum, remaining, maximum), " records...")
+        }
+        
+        nexturl <- utils::URLencode(nexturl)
+        tmp <- jsonlite::fromJSON(nexturl, flatten = TRUE)
+        
+        df <- rbind(df, tmp$value)
+        
+        if (remaining > maximum) {
+          remaining <- remaining - maximum
+          if (verbose) {
+            message(remaining, " records remaining.")
+          }
+          nexturl <- tmp$odata.nextLink
+        }
       }
       
       if (verbose) {
-        message("Retrieving ", ifelse(remaining < maximum, remaining, maximum), " records...")
+        message("Retrieved ", nrow(df), " records. ",
+                total, " records available in total.")
       }
       
-      nexturl <- utils::URLencode(nexturl)
-      tmp <- jsonlite::fromJSON(nexturl, flatten = TRUE)
-      
-      df <- rbind(df, tmp$value)
-      
-      if (remaining > maximum) {
-        remaining <- remaining - maximum
-        if (verbose) {
-          message(remaining, " records remaining.")
-        }
-        nexturl <- tmp$odata.nextLink
-      }
+      df
     }
-
-    if (verbose) {
-      message("Retrieved ", nrow(df), " records. ",
-                     total, " records available in total.")
-    }
-    
-    df
   }
 }

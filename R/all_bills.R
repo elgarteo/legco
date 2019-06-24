@@ -169,7 +169,13 @@ all_bills <- function(id = NULL, ordinance = NULL, title = NULL, proposer = NULL
     query <- paste0(query, extra_param)
   }
   
-  legco_api("bill", query, n, verbose)
+  df <- legco_api("bill", query, n, verbose)
+  
+  if (!is.null(df)) {
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    
+    df
+  }
 }
 
 #' @rdname all_bills
