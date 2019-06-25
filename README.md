@@ -9,6 +9,8 @@ To install this package, run:
 ```
 #install.pacakges("devtools")
 devtools::install_github("elgarteo/legco")
+# or
+install.packages("https://vps.elgarteo.ga/legco/legco_0.0.9999.tar.gz", repos = NULL, type="source")
 ```
 or
 ```
