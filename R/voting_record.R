@@ -5,7 +5,7 @@
 #'
 #' @param committee The name of the committee or subcommittee. Defaults to
 #'   `NULL`.
-#'   
+#'
 #' @param term_id The ID of a term. Defaults to `NULL`.
 #'
 #' @param result The voting result. `'passed'` returns motions that have been
@@ -15,15 +15,20 @@
 #' @param name_ch The name of a LegCo member, or a vector of names. If `NULL`,
 #'   returns voting records  of all members. Defaults to `NULL`.
 #'
-#' @param from Only fetch results of meetings on or after this date. Accepts
-#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-#'   date with `as.Date()`. Defaults to `'1900-01-01'`.
+#' @param seperate_mechanism Only fetch votes that were counted with the vote
+#'   seperate mechanism, i.e. requiring majority in both geographical and
+#'   functional constituencies to pass. If `NULL`, returns all votes regardless
+#'   of the vote counting mechanism used. Defaults to `NULL`.
 #'
-#' @param to Only fetch results of meetings on or before this date. Accepts
-#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+#' @param from Only fetch votes conducted at or after this time. Accepts
+#'   character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
+#'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
+#'   to a time with `as.POSIXlt()`. Defaults to `'1900-01-01T00:00:00'`.
+#'
+#' @param to Only fetch votes conducted at or before this time. Accepts character
+#'   values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class `Date`,
 #'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-#'   date with `as.Date()`. Defaults to the current system date.
+#'   time with `as.POSIXlt()`. Defaults to system time.
 #'
 #' @param n The number of records to request. Defaults to `10000`.
 #'
@@ -35,16 +40,15 @@
 #' @export
 #' 
 voting_record <- function(committee = NULL, term_id = NULL, result = "all",
-                          name_ch = NULL, from = '1900-01-01', to = Sys.Date(),
+                          name_ch = NULL, seperate_mechanism = NULL, 
+                          from = '1900-01-01T00:00:00', to = Sys.time(),
                           n = 10000, extra_param = NULL, verbose = TRUE) {
   query <- "vVotingResult?"
   
   filter_args <- {}
   
   if (!is.null(committee)) {
-    committee <- strsplit(committee, " ")[[1]]
-    committee <- paste0(toupper(substr(committee, 1, 1)), substr(committee, 2, nchar(committee)))
-    committee <- paste(committee, collapse = " ")
+    committee <- capitalise(committee)
     filter_args <- c(filter_args, paste0("type eq '", committee, "'"))
   }
   
@@ -63,10 +67,16 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
     filter_args <- c(filter_args, generate_filter("name_ch", name_ch))
   }
   
-  from <- as.Date(from)
-  from <- paste0(format(from, "%Y-%m-%d"), "T00:00:00")
-  to <- as.Date(to)
-  to <- paste0(format(to, "%Y-%m-%d"), "T23:59:59")
+  if (!is.null(seperate_mechanism)) {
+    if (seperate_mechanism) {
+      filter_args <- c(filter_args, paste0("vote_separate_mechanism eq 'Yes'"))
+    } else {
+      filter_args <- c(filter_args, paste0("vote_separate_mechanism eq 'No'"))
+    }
+  }
+  
+  from <- convert_time(from)
+  to <- convert_time(to)
   filter_args <- c(filter_args, paste0("vote_time ge datetime\'", from, 
                                        "\' and vote_time le datetime\'", to, "\'"))
   

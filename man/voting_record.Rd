@@ -6,11 +6,13 @@
 \title{Voting Record in LegCo Meetings}
 \usage{
 voting_record(committee = NULL, term_id = NULL, result = "all",
-  name_ch = NULL, from = "1900-01-01", to = Sys.Date(), n = 10000,
+  name_ch = NULL, seperate_mechanism = NULL,
+  from = "1900-01-01T00:00:00", to = Sys.time(), n = 10000,
   extra_param = NULL, verbose = TRUE)
 
 legco_voting_record(committee = NULL, term_id = NULL, result = "all",
-  name_ch = NULL, from = "1900-01-01", to = Sys.Date(), n = 10000,
+  name_ch = NULL, seperate_mechanism = NULL,
+  from = "1900-01-01T00:00:00", to = Sys.time(), n = 10000,
   extra_param = NULL, verbose = TRUE)
 }
 \arguments{
@@ -26,15 +28,20 @@ all motions that has been voted in LegCo. Defaults to `all`.}
 \item{name_ch}{The name of a LegCo member, or a vector of names. If `NULL`,
 returns voting records  of all members. Defaults to `NULL`.}
 
-\item{from}{Only fetch results of meetings on or after this date. Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{seperate_mechanism}{Only fetch votes that were counted with the vote
+seperate mechanism, i.e. requiring majority in both geographical and
+functional constituencies to pass. If `NULL`, returns all votes regardless
+of the vote counting mechanism used. Defaults to `NULL`.}
 
-\item{to}{Only fetch results of meetings on or before this date. Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+\item{from}{Only fetch votes conducted at or after this time. Accepts
+character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
+`Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
+to a time with `as.POSIXlt()`. Defaults to `'1900-01-01T00:00:00'`.}
+
+\item{to}{Only fetch votes conducted at or before this time. Accepts character
+values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class `Date`,
 `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to the current system date.}
+time with `as.POSIXlt()`. Defaults to system time.}
 
 \item{n}{The number of records to request. Defaults to `10000`.}
 
