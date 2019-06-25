@@ -10,6 +10,10 @@ To install this package, run:
 #install.pacakges("devtools")
 devtools::install_github("elgarteo/legco")
 ```
+or
+```
+install.packages("https://vps.elgarteo.ga/legco/legco_0.0.9999.tar.gz", repos = NULL, type="source")
+```
 
 ## What it does
 This R package provides access to the LegCo open data APIs in R. The functions in this package 
@@ -22,8 +26,11 @@ that generate more usable outputs.
 
 ## How it works
 This package compiles the correct query and request data from the following LegCo APIs:
-* [Hansard Database](https://www.legco.gov.hk/odata/english/hansard-db.html)
 * [Attendance Database](https://www.legco.gov.hk/odata/english/attendance-db.html)
+* [Bills Database](https://www.legco.gov.hk/odata/english/billsdb.html)
+* [Hansard Database](https://www.legco.gov.hk/odata/english/hansard-db.html)
+* [Schedule Database](https://www.legco.gov.hk/odata/english/schedule-db.html)
+* [Voting Result Database](https://www.legco.gov.hk/odata/english/vrdb.html)
 
 ## Disclaimer
 This package is not affiliated or endorsed by the Legislative Council of Hong Kong.
