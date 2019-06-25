@@ -123,7 +123,7 @@ are not specified here.
 All functions can also be accessed with the prefix `legco_`, e.g. `legco_speakers()` and `speakers()`
 return the same result.
    
-### Examples
+### Example
 
 The following code shows all the LegCo Council meetings held from May 1, 2018 to May 31, 2018.
 
@@ -136,6 +136,8 @@ To fetch the items on the agenda of the meeting on May 23, 2018:
 ```{r, echo = TRUE, message = FALSE}
 subjects(hansard_id = 2451)
 ```
+
+In this example, we will look into the motion _Not forgetting the 4 June incident_.
 
 The section codes indicate the type of the business. For exmaple, the section code "mbm" of the
 _Not forgetting the 4 June incident_ means that it is a member's motion:
@@ -178,7 +180,7 @@ To find out the voting results of the motion:
 
 ```{r, echo = TRUE, message = FALSE}
 v <- voting_results(from = w$MeetingDate[1], to = w$MeetingDate[1], section_code = "mbm")
-head(v[v$Subject == "Not forgetting the 4 June incident", ])
+v[v$Subject == "Not forgetting the 4 June incident", ]
 ```
 
 It is possible to fetch the detailed voting record of each member on this motion. To get a list of members who voted yes:
@@ -193,5 +195,5 @@ To check the attendance of this meeting:
 ```{r, echo = TRUE, message = FALSE}
 meeting(from = w$MeetingDate[1], to = w$MeetingDate[1]) # Find out MeetID of the Council meeting on May 23, 2018
 z <- attendance(meet_id = 126590)
-head(z)
+z[z$PresentAbsent == "Present", 7:9] # Show members who were present
 ```
