@@ -43,13 +43,15 @@ hansard <- function(id = NULL, lang = "en", from = '1900-01-01', to = Sys.Date()
     filter_args <- c(filter_args, generate_filter("HansardID", id)) # in utils-misc.R
   }
   
-  lang <- tolower(lang)
-  if (floor) {
-    filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
-  } else if (lang == "en") {
-    filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
-  } else if (lang == "zh") {
-    filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+  if(is.null(id)) {
+    lang <- tolower(lang)
+    if (floor) {
+      filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
+    } else if (lang == "en") {
+      filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
+    } else if (lang == "zh") {
+      filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+    } 
   }
   
   from <- as.Date(from)

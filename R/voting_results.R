@@ -69,13 +69,15 @@ voting_results <- function(hansard_id = NULL, rundown_id = NULL, section_code = 
     filter_args <- c(filter_args, paste0("VoteResults eq 'Negatived'"))
   }
   
-  lang <- tolower(lang)
-  if (floor) {
-    filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
-  } else if (lang == "en") {
-    filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
-  } else if (lang == "zh") {
-    filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+  if (is.null(hansard_id) & is.null(rundown_id)) {
+    lang <- tolower(lang)
+    if (floor) {
+      filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
+    } else if (lang == "en") {
+      filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
+    } else if (lang == "zh") {
+      filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+    }
   }
   
   from <- as.Date(from)

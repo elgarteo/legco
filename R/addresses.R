@@ -52,13 +52,15 @@ addresses <- function(hansard_id = NULL, rundown_id = NULL,
     filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
   }
   
-  lang <- tolower(lang)
-  if (floor) {
-    filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
-  } else if (lang == "en") {
-    filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
-  } else if (lang == "zh") {
-    filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+  if (is.null(hansard_id) & is.null(rundown_id)) {
+    lang <- tolower(lang)
+    if (floor) {
+      filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
+    } else if (lang == "en") {
+      filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
+    } else if (lang == "zh") {
+      filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+    } 
   }
   
   from <- as.Date(from)

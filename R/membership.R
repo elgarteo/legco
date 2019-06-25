@@ -39,7 +39,6 @@ membership <- function(id = NULL, member_id = NULL, committee_id = NULL, term_id
   }
   
   if (!is.null(member_id)) {
-    code <- toupper(code)
     filter_args <- c(filter_args, generate_filter("member_id", member_id))
   }
   

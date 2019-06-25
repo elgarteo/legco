@@ -2,9 +2,9 @@
 generate_filter <- function(var_name, var_values) {
   if (is.numeric(var_values)) {
     # Check if vector is sequential
-    if (sum(abs(diff(var_values))) == (length(var_values) - 1) ) {
-      filter_args <- paste0("(", var_name, " ge ", min(var_values), " and ",
-                            var_name, " le ", max(var_values), ")")
+    if (sum(abs(diff(var_values))) == (length(var_values) - 1) & length(var_values) > 1) {
+      filter_args <- paste0(var_name, " ge ", min(var_values), " and ",
+                            var_name, " le ", max(var_values))
     } else {
       filter_args <- paste0(var_name, " eq ", var_values)
     }

@@ -62,13 +62,15 @@ questions <- function(rundown_id = NULL, speaker_id = NULL, type = "all",
     filter_args <- c(filter_args, paste0("QuestionType eq 'Written'"))
   }
   
-  lang <- tolower(lang)
-  if (floor) {
-    filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
-  } else if (lang == "en") {
-    filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
-  } else if (lang == "zh") {
-    filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+  if (is.null(hansard_id) & is.null(rundown_id)) {
+    lang <- tolower(lang)
+    if (floor) {
+      filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
+    } else if (lang == "en") {
+      filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
+    } else if (lang == "zh") {
+      filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+    }
   }
   
   from <- as.Date(from)

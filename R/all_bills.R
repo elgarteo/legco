@@ -127,38 +127,62 @@ all_bills <- function(id = NULL, ordinance = NULL, title = NULL, proposer = NULL
   
   if (is.null(gazette_from) | is.null(gazette_to)) {
     filter_args <- c(filter_args, "bill_gazette_date eq null")
-  } else if (gazette_from != "all" | gazette_to != "all") {
+  } else if (gazette_from != "all" & gazette_to != "all") {
     gazette_from <- as.Date(gazette_from)
     gazette_to <- as.Date(gazette_to)
     filter_args <- c(filter_args, paste0("bill_gazette_date ge datetime\'", gazette_from, 
                                          "\' and bill_gazette_date le datetime\'", gazette_to, "\'"))
+  } else if (gazette_from != "all") {
+    gazette_from <- as.Date(gazette_from)
+    filter_args <- c(filter_args, paste0("bill_gazette_date ge datetime\'", gazette_from, "\'"))
+  } else if (gazette_to != "all") {
+    gazette_to <- as.Date(gazette_to)
+    filter_args <- c(filter_args, paste0("bill_gazette_date le datetime\'", gazette_to, "\'"))
   }
 
   if (is.null(first_from) | is.null(first_to)) {
     filter_args <- c(filter_args, "first_reading_date eq null")
-  } else if (first_from != "all" | first_to != "all") {
+  } else if (first_from != "all" & first_to != "all") {
     first_from <- as.Date(first_from)
     first_to <- as.Date(first_to)
     filter_args <- c(filter_args, paste0("first_reading_date ge datetime\'", first_from, 
                                          "\' and first_reading_date le datetime\'", first_to, "\'"))
+  } else if (first_from != "all") {
+    first_from <- as.Date(first_from)
+    filter_args <- c(filter_args, paste0("first_reading_date ge datetime\'", first_from, "\'"))
+  } else if (first_to != "all") {
+    first_to <- as.Date(first_to)
+    filter_args <- c(filter_args, paste0("first_reading_date le datetime\'", first_to, "\'"))
   }
   
   if (is.null(second_from) | is.null(second_to)) {
     filter_args <- c(filter_args, "second_reading_date eq null")
-  } else if (second_from != "all" | second_to != "all") {
+  } else if (second_from != "all" & second_to != "all") {
     second_from <- as.Date(second_from)
     second_to <- as.Date(second_to)
     filter_args <- c(filter_args, paste0("second_reading_date ge datetime\'", second_from, 
                                          "\' and second_reading_date le datetime\'", second_to, "\'"))
+  } else if (second_from != "all") {
+    second_from <- as.Date(second_from)
+    filter_args <- c(filter_args, paste0("second_reading_date ge datetime\'", second_from, "\'"))
+  } else if (second_to != "all") {
+    second_to <- as.Date(second_to)
+    filter_args <- c(filter_args, paste0("second_reading_date le datetime\'", second_to, "\'"))
   }
   
   if (is.null(third_from) | is.null(third_to)) {
     filter_args <- c(filter_args, "third_reading_date eq null")
-  } else if (third_from != "all" | third_to != "all") {
+  } else if (third_from != "all" & third_to != "all") {
     third_from <- as.Date(third_from)
     third_to <- as.Date(third_to)
     filter_args <- c(filter_args, paste0("third_reading_date ge datetime\'", third_from, 
                                          "\' and third_reading_date le datetime\'", third_to, "\'"))
+  } else if (third_from != "all") {
+    third_from <- as.Date(third_from)
+    filter_args <- c(filter_args, paste0("third_reading_date ge datetime\'", third_from, "\'"))
+  } else if (third_to != "all") {
+    third_to <- as.Date(third_to)
+    filter_args <- c(filter_args, paste0("third_reading_date le datetime\'", third_to, "\'"))
   }
   
   if (!is.null(filter_args)) {

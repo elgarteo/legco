@@ -41,7 +41,6 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   filter_args <- {}
   
   if (!is.null(committee_id)) {
-    committee_id <- sapply(committee_id, function(X) paste0("\"", x, "\""))
     filter_args <- c(filter_args, generate_filter("committee_id", hansard_id))
   }
   
