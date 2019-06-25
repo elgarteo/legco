@@ -67,8 +67,8 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
     } else if (n <= maximum | total < maximum) {
       # All data retrieved
       if (verbose) {
-        message(paste0("Retrieved ", nrow(df$value), " records. ",
-                       total, " records available in total."))
+        message(paste0("Retrieved ", nrow(df$value), " record(s). ",
+                       total, " record(s) available in total."))
       }
       
       df$value
