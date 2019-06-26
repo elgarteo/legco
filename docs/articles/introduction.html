@@ -86,13 +86,18 @@
 <div id="from-github" class="section level3">
 <h3 class="hasAnchor">
 <a href="#from-github" class="anchor"></a>From GitHub</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
-<a class="sourceLine" id="cb1-2" title="2">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"elgarteo/legco"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"elgarteo/legco"</span>)</span></code></pre></div>
+</div>
+<div id="from-web" class="section level3">
+<h3 class="hasAnchor">
+<a href="#from-web" class="anchor"></a>From web</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"https://elgarteo.ga/legco/legco_0.0.9999.tar.gz"</span>, <span class="dt">repos =</span> <span class="ot">NULL</span>, <span class="dt">type=</span><span class="st">"source"</span>)</span></code></pre></div>
 </div>
 <div id="load-legco" class="section level3">
 <h3 class="hasAnchor">
 <a href="#load-legco" class="anchor"></a>Load legco</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(legco)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(legco)</span></code></pre></div>
 </div>
 </div>
 <div id="using-legco" class="section level2">
@@ -198,7 +203,7 @@
 <h3 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h3>
 <p>The following code shows all the LegCo Council meetings held from May 1, 2018 to May 31, 2018.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</span></code></pre></div>
 <pre><code>##    HansardID         MeetingDate          AgendaDate isCEQandA isCEQT
 ## 1       2407 2018-05-02T00:00:00 2018-05-02T00:00:00         0      0
 ## 2       2526 2018-05-03T00:00:00 2018-05-02T00:00:00         0      0
@@ -226,7 +231,7 @@
 ## 11  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180530-translate-e.pdf
 ## 12  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180531-translate-e.pdf</code></pre>
 <p>To fetch the items on the agenda of the meeting on May 23, 2018:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2451</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2451</span>)</span></code></pre></div>
 <pre><code>##            MeetingDate
 ## 1  2018-05-23T00:00:00
 ## 2  2018-05-23T00:00:00
@@ -340,36 +345,39 @@
 ## 36           NA         som    828827      2451</code></pre>
 <p>In this example, we will look into the motion <em>Not forgetting the 4 June incident</em>.</p>
 <p>The section codes indicate the type of the business. For exmaple, the section code “mbm” of the <em>Not forgetting the 4 June incident</em> means that it is a member’s motion:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">legco_section_type[legco_section_type<span class="op">$</span>SectionCode <span class="op">==</span><span class="st"> "mbm"</span>, ]</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>legco_section_type[legco_section_type<span class="op">$</span>SectionCode <span class="op">==</span><span class="st"> "mbm"</span>, ]</span></code></pre></div>
 <pre><code>##    SectionCode          NameEng  NameChi
 ## 45         mbm Members' motions 議員議案</code></pre>
 <p>The RundownID indicates the location of the first paragraph of the matter concerned in the hansard file. In other words, paragraphs of RundownID between 828783 and 828826 (one RundownID prior to the next item on the agenda) are the records of the matter the <em>Not forgetting the 4 june incident</em> during the meeting. The full text of these paragraphs can be fetched by:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</a>
-<a class="sourceLine" id="cb9-2" title="2">w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(w<span class="op">$</span>RundownID), ] <span class="co"># Order by RundownID, i.e. chronological order</span></a>
-<a class="sourceLine" id="cb9-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(w)</a>
-<a class="sourceLine" id="cb9-4" title="4">w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>] <span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="co"># Order by RundownID, i.e. chronological order</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(w<span class="op">$</span>RundownID), ]</span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(w)</span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>]</span></code></pre></div>
 <pre><code>## [1] "PRESIDENT (in Cantonese): Will Members please proceed to vote."                                                  
 ## [2] "PRESIDENT (in Cantonese): Mr Abraham SHEK, do you wish to cast your vote?(Mr Abraham SHEK did not cast any vote)"</code></pre>
 <p>To check which members have spoken about the motion and to look up some of their names:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</span></code></pre></div>
 <pre><code>## Retrieving records...</code></pre>
 <pre><code>## Error: Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
 <p>Note that there is a limit on the length of the parameters, which is at most 100 nodes as defined in the the Open Data Protocol, or approximately 19 filtering conditions. The code above produces 27 filtering conditions which are too long. If you need have parameters longer than that, break them down into multiple requests:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</a>
-<a class="sourceLine" id="cb14-2" title="2">y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</a>
-<a class="sourceLine" id="cb14-3" title="3">y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">rbind</a></span>(y1, y2)</a>
-<a class="sourceLine" id="cb14-4" title="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(y[y<span class="op">$</span>Type <span class="op">==</span><span class="st"> "MB"</span>, ]) <span class="co"># Show members who have spoken about this motion</span></a></code></pre></div>
-<pre><code>##   SpeakerID      NameChi         NameEng Type Initial  FirstName LastName
-## 2       138       林卓廷  LAM CHEUK-TING   MB     LCT Cheuk-ting      LAM
-## 3       148 許智&lt;U+5CEF&gt;    HUI CHI-FUNG   MB     HCF   Chi-fung      HUI
-## 4       115       張超雄 FERNANDO CHEUNG   MB     CCH  Chiu-hung   CHEUNG
-## 5        99       胡志偉      WU CHI-WAI   MB     WCW    Chi-wai       WU
-## 6       141       邵家臻    SHIU KA-CHUN   MB     SKC    Ka-chun     SHIU
-## 7       109       梁繼昌   KENNETH LEUNG   MB      KL Kai-cheong    LEUNG</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span>
+<span id="cb15-2"><a href="#cb15-2"></a>y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</span>
+<span id="cb15-3"><a href="#cb15-3"></a>y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">rbind</a></span>(y1, y2)</span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="co"># Show members who have spoken about this motion</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(y[y<span class="op">$</span>Type <span class="op">==</span><span class="st"> "MB"</span>, ])</span></code></pre></div>
+<pre><code>##   SpeakerID NameChi         NameEng Type Initial  FirstName LastName
+## 2       138  林卓廷  LAM CHEUK-TING   MB     LCT Cheuk-ting      LAM
+## 3       148  許智峯    HUI CHI-FUNG   MB     HCF   Chi-fung      HUI
+## 4       115  張超雄 FERNANDO CHEUNG   MB     CCH  Chiu-hung   CHEUNG
+## 5        99  胡志偉      WU CHI-WAI   MB     WCW    Chi-wai       WU
+## 6       141  邵家臻    SHIU KA-CHUN   MB     SKC    Ka-chun     SHIU
+## 7       109  梁繼昌   KENNETH LEUNG   MB      KL Kai-cheong    LEUNG</code></pre>
 <p>To find out the voting results of the motion:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">section_code =</span> <span class="st">"mbm"</span>)</a>
-<a class="sourceLine" id="cb16-2" title="2">v[v<span class="op">$</span>Subject <span class="op">==</span><span class="st"> "Not forgetting the 4 June incident"</span>, ]</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">section_code =</span> <span class="st">"mbm"</span>)</span>
+<span id="cb17-2"><a href="#cb17-2"></a>v[v<span class="op">$</span>Subject <span class="op">==</span><span class="st"> "Not forgetting the 4 June incident"</span>, ]</span></code></pre></div>
 <pre><code>##           MeetingDate                            Subject VoteResult
 ## 3 2018-05-23T00:00:00 Not forgetting the 4 June incident  Negatived
 ##   SectionCode RundownID HansardID
@@ -377,11 +385,36 @@
 ##                                                                                                 HansardFileURL
 ## 3 https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00349</code></pre>
 <p>It is possible to fetch the detailed voting record of each member on this motion. To get a list of members who voted yes:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1">v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</a>
-<a class="sourceLine" id="cb18-2" title="2">v[v<span class="op">$</span>Vote <span class="op">==</span><span class="st"> "Yes"</span>, <span class="dv">32</span><span class="op">:</span><span class="dv">33</span>]</a></code></pre></div>
-<pre><code>## NULL</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span>
+<span id="cb19-2"><a href="#cb19-2"></a>v[v<span class="op">$</span>Vote <span class="op">==</span><span class="st"> "Yes"</span>, <span class="dv">32</span><span class="op">:</span><span class="dv">33</span>]</span></code></pre></div>
+<pre><code>##    NameCh             NameEn
+## 2  涂謹申           James TO
+## 3  梁耀忠    LEUNG Yiu-chung
+## 6  李國麟    Prof Joseph LEE
+## 16 毛孟靜         Claudia MO
+## 20 胡志偉         WU Chi-wai
+## 23 莫乃光  Charles Peter MOK
+## 24 陳志全     CHAN Chi-chuen
+## 27 梁繼昌      Kenneth LEUNG
+## 29 郭家麒      Dr KWOK Ka-ki
+## 31 郭榮鏗        Dennis KWOK
+## 33 張超雄 Dr Fernando CHEUNG
+## 34 黃碧雲     Dr Helena WONG
+## 35 葉建源        IP Kin-yuen
+## 42 楊岳橋        Alvin YEUNG
+## 43 尹兆堅         Andrew WAN
+## 44 朱凱廸       CHU Hoi-dick
+## 48 林卓廷     LAM Cheuk-ting
+## 51 邵家臻       SHIU Ka-chun
+## 56 陳淑莊         Tanya CHAN
+## 58 許智峯       HUI Chi-fung
+## 63 鄺俊宇      KWONG Chun-yu
+## 64 譚文豪         Jeremy TAM
+## 65 范國威           Gary FAN
+## 66 區諾軒         AU Nok-hin</code></pre>
 <p>To check the attendance of this meeting:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>]) <span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span></a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span></code></pre></div>
 <pre><code>##   MeetID
 ## 1 131473
 ## 2 126590
@@ -424,8 +457,9 @@
 ## 3          http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523q.htm
 ## 4         http://www.legco.gov.hk/yr17-18/chinese/fc/pwsc/agenda/pwsc20180523.htm
 ## 5 http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc58/agenda/sc5820180523.htm</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1">z &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">126590</span>)</a>
-<a class="sourceLine" id="cb22-2" title="2">z[z<span class="op">$</span>PresentAbsent <span class="op">==</span><span class="st"> "Present"</span>, <span class="dv">7</span><span class="op">:</span><span class="dv">9</span>] <span class="co"># Show members who were present</span></a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>z &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">126590</span>)</span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="co"># Show members who were present</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>z[z<span class="op">$</span>PresentAbsent <span class="op">==</span><span class="st"> "Present"</span>, <span class="dv">7</span><span class="op">:</span><span class="dv">9</span>] </span></code></pre></div>
 <pre><code>##                   MemberNameEnglish MemberNameChinese PresentAbsent
 ## 1                    Hon Tanya CHAN        陳淑莊議員       Present
 ## 2           Hon Tommy CHEUNG Yu-yan        張宇人議員       Present
@@ -439,7 +473,7 @@
 ## 10     Prof Hon Joseph LEE Kok-long        李國麟議員       Present
 ## 11      Hon Andrew LEUNG Kwan-yuen         梁君彥議員       Present
 ## 12              Hon WONG Ting-kwong        黃定光議員       Present
-## 13          Hon Starry LEE Wai-king  李慧&lt;U+743C&gt;議員       Present
+## 13          Hon Starry LEE Wai-king        李慧琼議員       Present
 ## 14                 Hon CHAN Hak-kan        陳克勤議員       Present
 ## 15                 Hon CHAN Kin-por        陳健波議員       Present
 ## 16   Dr Hon Priscilla LEUNG Mei-fun        梁美芬議員       Present
@@ -464,7 +498,7 @@
 ## 35                Hon Kenneth LEUNG        梁繼昌議員       Present
 ## 36            Ir Dr Hon LO Wai-kwok        盧偉國議員       Present
 ## 37           Hon Tony TSE Wai-chuen        謝偉銓議員       Present
-## 38               Hon KWOK Wai-keung  郭偉&lt;U+5F3A&gt;議員       Present
+## 38               Hon KWOK Wai-keung        郭偉强議員       Present
 ## 39                Hon POON Siu-ping        潘兆平議員       Present
 ## 40                  Hon YIU Si-wing        姚思榮議員       Present
 ## 41      Hon Martin LIAO Cheung-kong        廖長江議員       Present
@@ -473,13 +507,13 @@
 ## 44            Hon Charles Peter MOK        莫乃光議員       Present
 ## 45                  Hon Alvin YEUNG        楊岳橋議員       Present
 ## 46             Hon CHEUNG Kwok-kwan        張國鈞議員       Present
-## 47                 Hon HUI Chi-fung  許智&lt;U+5CEF&gt;議員       Present
+## 47                 Hon HUI Chi-fung        許智峯議員       Present
 ## 48        Hon Wilson OR Chong-shing        柯創盛議員       Present
 ## 49            Hon Jeremy TAM Man-ho        譚文豪議員       Present
 ## 50           Hon Andrew WAN Siu-kin        尹兆堅議員       Present
 ## 51           Dr Hon CHENG Chung-tai        鄭松泰議員       Present
 ## 52        Dr Hon Junius HO Kwan-yiu        何君堯議員       Present
-## 53                 Hon CHU Hoi-dick  朱凱&lt;U+5EF8&gt;議員       Present
+## 53                 Hon CHU Hoi-dick        朱凱廸議員       Present
 ## 54               Hon LAM Cheuk-ting        林卓廷議員       Present
 ## 55                 Hon YUNG Hoi-yan        容海恩議員       Present
 ## 56         Hon Kenneth LAU Ip-keung        劉業強議員       Present

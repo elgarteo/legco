@@ -20,6 +20,12 @@ install.packages("devtools")
 devtools::install_github("elgarteo/legco")
 ```
 
+### From web
+
+```{r, eval = FALSE}
+install.packages("https://elgarteo.ga/legco/legco_0.0.9999.tar.gz", repos = NULL, type="source")
+```
+
 ### Load legco
 
 ```{r}
@@ -153,9 +159,11 @@ The full text of these paragraphs can be fetched by:
 
 ```{r, echo = TRUE, message = FALSE}
 w <- rundown(id = 828783:828826)
-w <- w[order(w$RundownID), ] # Order by RundownID, i.e. chronological order
+# Order by RundownID, i.e. chronological order
+w <- w[order(w$RundownID), ]
 rownames(w) <- 1:nrow(w)
-w$Content[41:42] # Some two paragraphs of the hansard relevant to the discussion of the motion
+# Some two paragraphs of the hansard relevant to the discussion of the motion
+w$Content[41:42]
 ```
 
 To check which members have spoken about the motion and to look up some of their names:
@@ -173,7 +181,8 @@ If you need have parameters longer than that, break them down into multiple requ
 y1 <- speakers(id = x[1:19])
 y2 <- speakers(id = x[20:27])
 y <- rbind(y1, y2)
-head(y[y$Type == "MB", ]) # Show members who have spoken about this motion
+# Show members who have spoken about this motion
+head(y[y$Type == "MB", ])
 ```
 
 To find out the voting results of the motion:
@@ -193,7 +202,9 @@ v[v$Vote == "Yes", 32:33]
 To check the attendance of this meeting:
 
 ```{r, echo = TRUE, message = FALSE}
-meeting(from = w$MeetingDate[1], to = w$MeetingDate[1]) # Find out MeetID of the Council meeting on May 23, 2018
+# Find out MeetID of the Council meeting on May 23, 2018
+meeting(from = w$MeetingDate[1], to = w$MeetingDate[1])
 z <- attendance(meet_id = 126590)
-z[z$PresentAbsent == "Present", 7:9] # Show members who were present
+# Show members who were present
+z[z$PresentAbsent == "Present", 7:9] 
 ```
