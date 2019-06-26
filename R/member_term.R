@@ -48,6 +48,6 @@ member_term <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
   }
 }
 
-#' @rdname member
+#' @rdname member_term
 #' @export
-legco_member <- member
+legco_member_term <- member_term

@@ -62,7 +62,7 @@ questions <- function(rundown_id = NULL, speaker_id = NULL, type = "all",
     filter_args <- c(filter_args, paste0("QuestionType eq 'Written'"))
   }
   
-  if (is.null(hansard_id) & is.null(rundown_id)) {
+  if (is.null(rundown_id)) {
     lang <- tolower(lang)
     if (floor) {
       filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))

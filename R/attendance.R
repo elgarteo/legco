@@ -41,7 +41,7 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   filter_args <- {}
   
   if (!is.null(committee_id)) {
-    filter_args <- c(filter_args, generate_filter("committee_id", hansard_id))
+    filter_args <- c(filter_args, generate_filter("committee_id", committee_id))
   }
   
   if (!is.null(meet_id)) {
@@ -58,7 +58,6 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   } else if (attn == "a") {
     filter_args <- c(filter_args, "present_absent eq 'Absent'")
   }
-  
   
   from <- as.Date(from)
   from <- paste0(format(from, "%Y-%m-%d"), "T00:00:00")

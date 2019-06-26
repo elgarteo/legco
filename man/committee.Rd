@@ -25,9 +25,6 @@ committees of all terms.}
 begin with `'&'`.}
 
 \item{verbose}{Defaults to `TRUE`.}
-
-\item{lang}{The language. `'en'` returns result in English. `'zh'` returns
-result in Traditional Chinese. Defaults to `'en'`.}
 }
 \description{
 Fetch basic information of LegCo committees.

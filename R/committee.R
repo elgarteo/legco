@@ -11,9 +11,6 @@
 #' @param term_id The id of a term, or a vector of ids. If `NULL`, returns
 #'   committees of all terms.
 #'
-#' @param lang The language. `'en'` returns result in English. `'zh'` returns
-#'   result in Traditional Chinese. Defaults to `'en'`.
-#'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
 #'

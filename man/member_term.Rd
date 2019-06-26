@@ -2,9 +2,12 @@
 % Please edit documentation in R/member_term.R
 \name{member_term}
 \alias{member_term}
+\alias{legco_member_term}
 \title{Terms of Members of LegCo}
 \usage{
 member_term(id = NULL, extra_param = NULL, verbose = TRUE)
+
+legco_member_term(id = NULL, extra_param = NULL, verbose = TRUE)
 }
 \arguments{
 \item{id}{The id of a LegCo member, or a vector of ids. If `NULL`, returns

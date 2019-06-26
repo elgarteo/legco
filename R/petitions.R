@@ -36,9 +36,9 @@
 #'
 #' @export
 #' 
-petitions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
-                     lang = "en", from = '1900-01-01', to = Sys.Date(),
-                     floor = FALSE, n = 1000, extra_param = NULL, verbose = TRUE) {
+petitions <- function(rundown_id = NULL, hansard_id = NULL, lang = "en",
+                      from = '1900-01-01', to = Sys.Date(), floor = FALSE,
+                      n = 1000, extra_param = NULL, verbose = TRUE) {
   query <- "Petitions?$select=MeetingDate,Subject,Speakers,RundownID,HansardID,HansardFileURL"
   
   filter_args <- {}
@@ -50,11 +50,6 @@ petitions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
   if (!is.null(hansard_id)) {
     filter_args <- c(filter_args, generate_filter("HansardID", hansard_id))
   }
-  
-  if (!is.null(section_code)) {
-    filter_args <- c(filter_args, generate_filter("SectionCode", section_code))
-  }
-  
   
   if (is.null(hansard_id) & is.null(rundown_id)) {
     lang <- tolower(lang)

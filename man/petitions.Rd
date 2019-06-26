@@ -5,14 +5,13 @@
 \alias{legco_petitions}
 \title{Petitions in LegCo}
 \usage{
-petitions(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
-  lang = "en", from = "1900-01-01", to = Sys.Date(), floor = FALSE,
-  n = 1000, extra_param = NULL, verbose = TRUE)
+petitions(rundown_id = NULL, hansard_id = NULL, lang = "en",
+  from = "1900-01-01", to = Sys.Date(), floor = FALSE, n = 1000,
+  extra_param = NULL, verbose = TRUE)
 
-legco_petitions(rundown_id = NULL, hansard_id = NULL,
-  section_code = NULL, lang = "en", from = "1900-01-01",
-  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
-  verbose = TRUE)
+legco_petitions(rundown_id = NULL, hansard_id = NULL, lang = "en",
+  from = "1900-01-01", to = Sys.Date(), floor = FALSE, n = 1000,
+  extra_param = NULL, verbose = TRUE)
 }
 \arguments{
 \item{rundown_id}{The id of a rundown, or a vector of ids. Defaults to
