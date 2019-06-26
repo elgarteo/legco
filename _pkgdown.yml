@@ -1,3 +1,7 @@
+authors:
+  Elgar Teo:
+    href: https://elgarteo.ga
+
 navbar:
   left:
     - icon: fa-home fa-lg
@@ -6,6 +10,8 @@ navbar:
       href: reference/index.html
     - text: "Introduction"
       href: articles/introduction.html
+    - text: "Add-on: legcoplus"
+      href: ./legcoplus
 
   right:
     - icon: fa-github fa-lg
