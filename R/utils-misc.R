@@ -1,5 +1,6 @@
 ## Function to generate one single filter statement from multiple matching values for the LegCo API
 generate_filter <- function(var_name, var_values) {
+  var_values <- unlist(var_values)
   if (is.numeric(var_values)) {
     # Check if vector is sequential
     if (sum(abs(diff(var_values))) == (length(var_values) - 1) & length(var_values) > 1) {
