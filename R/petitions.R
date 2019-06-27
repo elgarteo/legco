@@ -24,7 +24,7 @@
 #'
 #' @param floor Whether to fetch results from the floor version of the hansard
 #'   files. The floor version is the first presented version of hansard file in
-#'   the original language delivered by the speakers in LegCo. If `'TRUE'`, the
+#'   the original language delivered by the speakers in LegCo. If `TRUE`, the
 #'   language option is ignored. Defaults to `FALSE`.
 #'
 #' @param n The number of records to request. Defaults to `1000`.

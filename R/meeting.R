@@ -48,7 +48,7 @@ meeting <- function(id = NULL, from = '1900-01-01', to = Sys.Date(), type = "all
   filter_args <- c(filter_args, paste0("start_date_time ge datetime\'", from, 
                                        "\' and start_date_time le datetime\'", to, "\'"))
   
-  type <- paste0(toupper(substring(type, 1, 1)), substring(type, 2))
+  type <- tolower(type)
   if (type == "open") {
     filter_args <- c(filter_args, "meeting_type_eng eq 'Open'")
   } else if (type == "closed") {

@@ -33,7 +33,7 @@ date with `as.Date()`. Defaults to the current system date.}
 
 \item{floor}{Whether to fetch the floor version of the hansard files. The
 floor version is the first presented version of hansard file in the
-original language delivered by the speakers in LegCo. If `'TRUE'`, the
+original language delivered by the speakers in LegCo. If `TRUE`, the
 language option is ignored. Defaults to `FALSE`.}
 
 \item{n}{The number of hansard files to request. Defaults to `1000`.}

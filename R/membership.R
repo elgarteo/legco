@@ -51,12 +51,7 @@ membership <- function(id = NULL, member_id = NULL, committee_id = NULL, term_id
   }
   
   if (!is.null(post)) {
-    # Capitalise the first letter of each word
-    post <- sapply(post, function(x) {
-      x <- tolower(x)
-      x <- unlist(strsplit(x, " "))
-      x <- paste0(toupper(substring(x, 1, 1)), substring(x, 2), collapse = " ")
-    })
+    post <- capitalise(post)
     filter_args <- c(filter_args, generate_filter("post_eng", post))
   }
   
