@@ -72,7 +72,6 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
       }
       
       df$value
-      
     } else {
       # Only partial data retrieved
       remaining <- ifelse(n > total, total - maximum, n - maximum)
