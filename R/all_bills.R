@@ -98,10 +98,10 @@
 #' @export
 #' 
 all_bills <- function(id = NULL, ordinance = NULL, title = NULL, proposer = NULL, 
-                  gazette_from = 'all', gazette_to = 'all', 
-                  first_from = 'all', first_to = 'all', second_from = 'all',
-                  second_to = 'all', third_from = 'all', third_to = 'all', 
-                  n = 10000, extra_param = NULL, verbose = TRUE) {
+                      gazette_from = 'all', gazette_to = 'all',
+                      first_from = 'all', first_to = 'all', second_from = 'all',
+                      second_to = 'all', third_from = 'all', third_to = 'all', 
+                      n = 10000, extra_param = NULL, verbose = TRUE) {
   query <- "Vbills?"
   
   filter_args <- {}

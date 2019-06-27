@@ -41,8 +41,8 @@
 #' @export
 #' 
 questions <- function(rundown_id = NULL, speaker_id = NULL, type = "all",
-                     lang = "en", from = '1900-01-01', to = Sys.Date(),
-                     floor = FALSE, n = 1000, extra_param = NULL, verbose = TRUE) {
+                      lang = "en", from = '1900-01-01', to = Sys.Date(),
+                      floor = FALSE, n = 1000, extra_param = NULL, verbose = TRUE) {
   query <- "Questions?$select=MeetingDate,QuestionType,Subject,Speaker,SpeakerID,RundownID,HansardFileURL"
   
   filter_args <- {}
