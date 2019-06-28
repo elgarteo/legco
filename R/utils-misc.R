@@ -20,15 +20,17 @@ generate_filter <- function(var_name, var_values) {
 ## Function to unify format of column names (e.g. from 'id_name' to 'IdName')
 unify_colnames <- function(col_names) {
   sapply(col_names, function(x) {
+    x <- gsub("^.*\\.", "", x)
     x <- gsub("id$", "ID", x)
     x <- unlist(strsplit(x, "_"))
-    x <- paste(paste0(toupper(substring(x, 1, 1)), substring(x, 2)), collapse = "")
+    x <- capitalise(x)
+    x <- gsub(" ", "", x)
   })
 }
 
 ## Function to capitalise first letter of every word in a string except for prepositions
 capitalise <- function(string) {
-  string <- strsplit(string, " ")[[1]]
+  string <- unlist(strsplit(string, " "))
   string <- sapply(string, function(x)
     ifelse(tolower(x) %in% c("the", "of", "for", "to", "at", "on", "by"), 
            tolower(x), 
