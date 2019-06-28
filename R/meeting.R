@@ -2,8 +2,8 @@
 #'
 #' Fetch basic information of LegCo committee meetings.
 #'
-#' @param id The id of a meeting, or a vector of ids. If `NULL`, returns all
-#'   meetings. Defaults to `NULL`.
+#' @param id The id of a meeting slot, or a vector of ids. If `NULL`, returns
+#'   all meetings. Defaults to `NULL`.
 #'
 #' @param from Only fetch meetings on or after this date. Accepts character
 #'   values in `'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`,
@@ -33,12 +33,12 @@
 #' 
 meeting <- function(id = NULL, from = '1900-01-01', to = Sys.Date(), type = "all", 
                     term_id = NULL, n = 10000, extra_param = NULL, verbose = TRUE) {
-  query <- "Tmeeting?$select=meet_id,subject_eng,subject_chi,start_date_time,meeting_type_eng,meeting_type_chi,venue_code,venue_name_eng,venue_name_chi,term_id,agenda_url_eng,agenda_url_chi"
+  query <- "Tmeeting?$select=slot_id,subject_eng,subject_chi,start_date_time,meeting_type_eng,meeting_type_chi,venue_code,venue_name_eng,venue_name_chi,term_id,agenda_url_eng,agenda_url_chi"
   
   filter_args <- {}
   
   if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("meet_id", id))
+    filter_args <- c(filter_args, generate_filter("slot_id", id))
   }
   
   from <- as.Date(from)

@@ -118,19 +118,19 @@ Essentially a function to match Committee ID and Meet ID.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>meeting_committee</span>(<span class='kw'>meet_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>committee_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'>meeting_committee</span>(<span class='kw'>slot_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>committee_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
-<span class='fu'>legco_meeting_committee</span>(<span class='kw'>meet_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>committee_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+<span class='fu'>legco_meeting_committee</span>(<span class='kw'>slot_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>committee_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>meet_id</th>
-      <td><p>The id of a LegCo committee meeting, or a vector of ids. If
-`NULL`, returns all meetings. Defaults to `NULL`.</p></td>
+      <th>slot_id</th>
+      <td><p>The id of a LegCo meeting slot, or a vector of ids. If `NULL`,
+returns all meetings. Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>committee_id</th>

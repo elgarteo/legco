@@ -14,8 +14,8 @@ legco_meeting(id = NULL, from = "1900-01-01", to = Sys.Date(),
   verbose = TRUE)
 }
 \arguments{
-\item{id}{The id of a meeting, or a vector of ids. If `NULL`, returns all
-meetings. Defaults to `NULL`.}
+\item{id}{The id of a meeting slot, or a vector of ids. If `NULL`, returns
+all meetings. Defaults to `NULL`.}
 
 \item{from}{Only fetch meetings on or after this date. Accepts character
 values in `'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`,
