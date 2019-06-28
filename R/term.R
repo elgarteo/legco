@@ -2,7 +2,7 @@
 #'
 #' Fetch the basic information of LegCo terms.
 #'
-#' @param id The id of a term, or a vector of ids. If `NULL`, returns terms.
+#' @param id The id of a term, or a vector of ids. If `NULL`, returns all terms.
 #'   Defaults to `NULL`.
 #'
 #' @param date Only fetch the term in which the specified date falls within.

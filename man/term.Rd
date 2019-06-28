@@ -11,7 +11,7 @@ legco_term(id = NULL, date = NULL, extra_param = NULL,
   verbose = TRUE)
 }
 \arguments{
-\item{id}{The id of a term, or a vector of ids. If `NULL`, returns terms.
+\item{id}{The id of a term, or a vector of ids. If `NULL`, returns all terms.
 Defaults to `NULL`.}
 
 \item{date}{Only fetch the term in which the specified date falls within.
