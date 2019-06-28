@@ -91,6 +91,7 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
           message("Retrieving ", ifelse(remaining < maximum, remaining, maximum), " records...")
         }
         
+        Sys.sleep(2) # Enhance stability by preventing back-to-back request
         nexturl <- utils::URLencode(nexturl)
         tmp <- jsonlite::fromJSON(nexturl, flatten = TRUE)
         
