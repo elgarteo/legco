@@ -24,6 +24,6 @@ begin with `'&'`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch the corresponding committee of meetings in LegCo, or vice versa.
-Essentially a function to match Committee ID and Meet ID.
+Fetch all the meeting slots of a given committee(s), or the committee of a
+given meeting slot(s).
 }

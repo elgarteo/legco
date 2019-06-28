@@ -30,7 +30,7 @@
 #' 
 membership <- function(id = NULL, member_id = NULL, committee_id = NULL, term_id = NULL,
                        post = NULL, n = 10000, extra_param = NULL, verbose = TRUE) {
-  query <- "Tmembership?$select=membership_id,member_id,committee_id,post_eng,post_chi,post_start_date,post_end_date,term_id"
+  query <- "Tmembership?$select=membership_id,member_id,committee_id,post_eng,post_chi,post_start_date,post_end_date,term_id,Tcommittee&$expand=Tcommittee"
   
   filter_args <- {}
   
@@ -67,6 +67,7 @@ membership <- function(id = NULL, member_id = NULL, committee_id = NULL, term_id
   
   if (!is.null(df)) {
     colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    df <- df[, c(1:3, 11:12, 4:8)]
   
     df
   }
