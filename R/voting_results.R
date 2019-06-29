@@ -64,19 +64,19 @@ voting_results <- function(hansard_id = NULL, rundown_id = NULL, section_code = 
   
   result <- tolower(result)
   if (result == "passed") {
-    filter_args <- c(filter_args, paste0("VoteResults eq 'Passed'"))
+    filter_args <- c(filter_args, "VoteResults eq 'Passed'")
   } else if (result == "vetoed") {
-    filter_args <- c(filter_args, paste0("VoteResults eq 'Negatived'"))
+    filter_args <- c(filter_args, "VoteResults eq 'Negatived'")
   }
   
   if (is.null(hansard_id) & is.null(rundown_id)) {
     lang <- tolower(lang)
     if (floor) {
-      filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
+      filter_args <- c(filter_args, "HansardType eq 'Floor'")
     } else if (lang == "en") {
-      filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
+      filter_args <- c(filter_args, "HansardType eq 'English'")
     } else if (lang == "zh") {
-      filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+      filter_args <- c(filter_args, "HansardType eq 'Chinese'")
     }
   }
   

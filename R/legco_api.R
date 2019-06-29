@@ -67,8 +67,8 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
     } else if (n <= maximum | total < maximum) {
       # All data retrieved
       if (verbose) {
-        message(paste0("Retrieved ", nrow(df$value), " record(s). ",
-                       total, " record(s) available in total."))
+        message("Retrieved ", nrow(df$value), " record(s). ",
+                       total, " record(s) available in total.")
       }
       
       df$value
@@ -79,7 +79,8 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
       df <- df$value
       
       if (verbose) {
-        message(remaining, " record(s) remaining.")
+        message("Retrieved ", nrow(df), " records. ",
+                remaining, " record(s) remaining.")
       }
       
       for (i in 1:ceiling(remaining / maximum)) {
@@ -100,7 +101,8 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
         if (remaining > maximum) {
           remaining <- remaining - maximum
           if (verbose) {
-            message(remaining, " records remaining.")
+            message("Retrieved ", nrow(df), " records. ",
+                    remaining, " record(s) remaining.")
           }
           nexturl <- tmp$odata.nextLink
         }

@@ -60,11 +60,11 @@ rundown <- function(id = NULL, hansard_id = NULL, speaker_id = NULL,
   if (is.null(id) & is.null(hansard_id)) {
     lang <- tolower(lang)
     if (floor) {
-      filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
+      filter_args <- c(filter_args, "HansardType eq 'Floor'")
     } else if (lang == "en") {
-      filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
+      filter_args <- c(filter_args, "HansardType eq 'English'")
     } else if (lang == "zh") {
-      filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+      filter_args <- c(filter_args, "HansardType eq 'Chinese'")
     } 
   }
   

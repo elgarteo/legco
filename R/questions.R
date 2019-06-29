@@ -57,19 +57,19 @@ questions <- function(rundown_id = NULL, speaker_id = NULL, type = "all",
   
   type <- tolower(type)
   if (type == "oral") {
-    filter_args <- c(filter_args, paste0("QuestionType eq 'Oral'"))
+    filter_args <- c(filter_args, "QuestionType eq 'Oral'")
   } else if (type == "written") {
-    filter_args <- c(filter_args, paste0("QuestionType eq 'Written'"))
+    filter_args <- c(filter_args, "QuestionType eq 'Written'")
   }
   
   if (is.null(rundown_id)) {
     lang <- tolower(lang)
     if (floor) {
-      filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
+      filter_args <- c(filter_args, "HansardType eq 'Floor'")
     } else if (lang == "en") {
-      filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
+      filter_args <- c(filter_args, "HansardType eq 'English'")
     } else if (lang == "zh") {
-      filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+      filter_args <- c(filter_args, "HansardType eq 'Chinese'")
     }
   }
   

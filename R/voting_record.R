@@ -13,22 +13,27 @@
 #'   all motions that has been voted in LegCo. Defaults to `all`.
 #'
 #' @param name_ch The name of a LegCo member, or a vector of names. If `NULL`,
-#'   returns voting records  of all members. Defaults to `NULL`.
+#'   returns voting records of all members. Defaults to `NULL`.
 #'
 #' @param seperate_mechanism Only fetch votes that were counted with the vote
 #'   seperate mechanism, i.e. requiring majority in both geographical and
 #'   functional constituencies to pass. If `NULL`, returns all votes regardless
 #'   of the vote counting mechanism used. Defaults to `NULL`.
 #'
+#' @param mover_type The type of motion being put on vote. If `'PO'`, returns
+#'   votes on government motions only. If `'MB'`, returns votes on members'
+#'   motions only. If `'all'`, returns votes on all motions. Defaults to
+#'   `'all'`.
+#'
 #' @param from Only fetch votes conducted at or after this time. Accepts
 #'   character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
 #'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 #'   to a time with `as.POSIXlt()`. Defaults to `'1900-01-01T00:00:00'`.
 #'
-#' @param to Only fetch votes conducted at or before this time. Accepts character
-#'   values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class `Date`,
-#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-#'   time with `as.POSIXlt()`. Defaults to system time.
+#' @param to Only fetch votes conducted at or before this time. Accepts
+#'   character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
+#'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
+#'   to a time with `as.POSIXlt()`. Defaults to system time.
 #'
 #' @param n The number of records to request. Defaults to `10000`.
 #'
@@ -40,9 +45,10 @@
 #' @export
 #' 
 voting_record <- function(committee = NULL, term_id = NULL, result = "all",
-                          name_ch = NULL, seperate_mechanism = NULL, 
-                          from = '1900-01-01T00:00:00', to = Sys.time(),
-                          n = 10000, extra_param = NULL, verbose = TRUE) {
+                          name_ch = NULL, seperate_mechanism = NULL,
+                          mover_type = "all", from = '1900-01-01T00:00:00',
+                          to = Sys.time(), n = 10000,
+                          extra_param = NULL, verbose = TRUE) {
   query <- "vVotingResult?"
   
   filter_args <- {}
@@ -53,14 +59,15 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
   }
   
   if (!is.null(term_id)) {
+    term_id <- convert_term_id(term_id)
     filter_args <- c(filter_args, paste0("term_no eq ", term_id))
   }
   
   results <- tolower(result)
   if (result == "passed") {
-    filter_args <- c(filter_args, paste0("VoteResults eq 'Passed'"))
+    filter_args <- c(filter_args, "VoteResults eq 'Passed'")
   } else if (result == "vetoed") {
-    filter_args <- c(filter_args, paste0("VoteResults eq 'Negatived'"))
+    filter_args <- c(filter_args, "VoteResults eq 'Negatived'")
   }
   
   if (!is.null(name_ch)) {
@@ -69,10 +76,17 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
   
   if (!is.null(seperate_mechanism)) {
     if (seperate_mechanism) {
-      filter_args <- c(filter_args, paste0("vote_separate_mechanism eq 'Yes'"))
+      filter_args <- c(filter_args, "vote_separate_mechanism eq 'Yes'")
     } else {
-      filter_args <- c(filter_args, paste0("vote_separate_mechanism eq 'No'"))
+      filter_args <- c(filter_args, "vote_separate_mechanism eq 'No'")
     }
+  }
+  
+  mover_type <- toupper(mover_type)
+  if (mover_type == "PO") {
+    filter_args <- c(filter_args, "mover_type eq 'Public Officer'")
+  } else if (mover_type == "MB") {
+    filter_args <- c(filter_args, "mover_type eq 'Member'")
   }
   
   from <- convert_time(from)
@@ -93,6 +107,7 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
     colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
     names(df)[names(df) == "TermNo"] <- "TermID"
     names(df)[names(df) == "Type"] <- "Committee"
+    df$TermID <- sapply(df$TermID, convert_term_no)
     
     df
   }

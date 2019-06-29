@@ -65,3 +65,13 @@ convert_time <- function(string) {
   
   string
 }
+
+## Function to convert TermNo into TermID
+convert_term_no <- function(term_no) {
+  term_no - 1
+}
+
+## Function to convert TermID into TermNo
+convert_term_id <- function(term_id) {
+  term_id + 1
+}

@@ -54,11 +54,11 @@ petitions <- function(rundown_id = NULL, hansard_id = NULL, lang = "en",
   if (is.null(hansard_id) & is.null(rundown_id)) {
     lang <- tolower(lang)
     if (floor) {
-      filter_args <- c(filter_args, paste0("HansardType eq 'Floor'"))
+      filter_args <- c(filter_args, "HansardType eq 'Floor'")
     } else if (lang == "en") {
-      filter_args <- c(filter_args, paste0("HansardType eq 'English'"))
+      filter_args <- c(filter_args, "HansardType eq 'English'")
     } else if (lang == "zh") {
-      filter_args <- c(filter_args, paste0("HansardType eq 'Chinese'"))
+      filter_args <- c(filter_args, "HansardType eq 'Chinese'")
     }
   }
   
@@ -77,7 +77,7 @@ petitions <- function(rundown_id = NULL, hansard_id = NULL, lang = "en",
   
   if(!is.null(df)) {
     # Create vector if more than one petition sponsor
-    df$Speakers <- sapply(df$Speakers, function(x) unlist(strsplit(x, ","), use.names = FALSE))
+    df$Speakers <- lapply(df$Speakers, function(x) unlist(strsplit(x, ", ")))
     
     df
   }
