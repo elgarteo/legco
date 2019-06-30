@@ -58,7 +58,7 @@ node_count <- function(url) {
 ## Function to convert time into .NET datetime string
 convert_time <- function(string) {
   tmp <- as.character(string)
-  tmp <- strsplit(tmp, "T")[[1]]
+  tmp <- unlist(strsplit(tmp, "T"))
   if (length(tmp) != 2) {
     string <- format(as.POSIXlt(string), "%Y-%m-%dT%H:%M:%S")
   }
