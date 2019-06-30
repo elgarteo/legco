@@ -42,6 +42,7 @@ meeting_committee <- function(slot_id = NULL, committee_id = NULL, extra_param =
   if (!is.null(df)) {
     colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
     colnames(df)[2] <- "SlotID"
+    df$CommitteeID <- sapply(df$CommitteeID, as.numeric)
     df <- df[, c(1:2, 4:5, 8, 12:13, 9:11, 14, 6:7)]
     
     df

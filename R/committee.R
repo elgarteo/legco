@@ -49,6 +49,7 @@ committee <- function(id = NULL, code = NULL, term_id = NULL,
   
   if (!is.null(df)) {
     colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    df$CommitteeID <- sapply(df$CommitteeID, as.numeric)
   
     df
   }
