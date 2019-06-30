@@ -6,12 +6,12 @@
 \title{Voting Record in LegCo Meetings}
 \usage{
 voting_record(committee = NULL, term_id = NULL, result = "all",
-  name_ch = NULL, seperate_mechanism = NULL,
+  name_ch = NULL, seperate_mechanism = NULL, mover_type = "all",
   from = "1900-01-01T00:00:00", to = Sys.time(), n = 10000,
   extra_param = NULL, verbose = TRUE)
 
 legco_voting_record(committee = NULL, term_id = NULL, result = "all",
-  name_ch = NULL, seperate_mechanism = NULL,
+  name_ch = NULL, seperate_mechanism = NULL, mover_type = "all",
   from = "1900-01-01T00:00:00", to = Sys.time(), n = 10000,
   extra_param = NULL, verbose = TRUE)
 }
@@ -26,22 +26,27 @@ passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
 all motions that has been voted in LegCo. Defaults to `all`.}
 
 \item{name_ch}{The name of a LegCo member, or a vector of names. If `NULL`,
-returns voting records  of all members. Defaults to `NULL`.}
+returns voting records of all members. Defaults to `NULL`.}
 
 \item{seperate_mechanism}{Only fetch votes that were counted with the vote
 seperate mechanism, i.e. requiring majority in both geographical and
 functional constituencies to pass. If `NULL`, returns all votes regardless
 of the vote counting mechanism used. Defaults to `NULL`.}
 
+\item{mover_type}{The type of motion being put on vote. If `'PO'`, returns
+votes on government motions only. If `'MB'`, returns votes on members'
+motions only. If `'all'`, returns votes on all motions. Defaults to
+`'all'`.}
+
 \item{from}{Only fetch votes conducted at or after this time. Accepts
 character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
 `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 to a time with `as.POSIXlt()`. Defaults to `'1900-01-01T00:00:00'`.}
 
-\item{to}{Only fetch votes conducted at or before this time. Accepts character
-values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-time with `as.POSIXlt()`. Defaults to system time.}
+\item{to}{Only fetch votes conducted at or before this time. Accepts
+character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
+`Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
+to a time with `as.POSIXlt()`. Defaults to system time.}
 
 \item{n}{The number of records to request. Defaults to `10000`.}
 

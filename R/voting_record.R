@@ -65,9 +65,9 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
   
   results <- tolower(result)
   if (result == "passed") {
-    filter_args <- c(filter_args, "VoteResults eq 'Passed'")
+    filter_args <- c(filter_args, "overall_result eq 'Passed'")
   } else if (result == "vetoed") {
-    filter_args <- c(filter_args, "VoteResults eq 'Negatived'")
+    filter_args <- c(filter_args, "overall_result eq 'Negatived'")
   }
   
   if (!is.null(name_ch)) {
