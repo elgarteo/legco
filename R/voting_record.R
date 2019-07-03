@@ -91,6 +91,9 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
   
   from <- convert_time(from)
   to <- convert_time(to)
+  if (from == to & grepl("T00:00:00", from) & grepl("T00:00:00", to)) {
+    to <- gsub("T.*", "T23:59:59", to)
+  }
   filter_args <- c(filter_args, paste0("vote_time ge datetime\'", from, 
                                        "\' and vote_time le datetime\'", to, "\'"))
   
