@@ -1,4 +1,4 @@
-#' Section Types of Legco Meetings
+#' Section Types of LegCo Meetings
 #' 
 #' A data frame of possible types of sections in LegCo meetings.
 #' For use to look up the meaning of a section code returned by the API.
