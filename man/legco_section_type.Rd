@@ -3,7 +3,7 @@
 \docType{data}
 \name{legco_section_type}
 \alias{legco_section_type}
-\title{Section Types of Legco Meetings}
+\title{Section Types of LegCo Meetings}
 \format{A dataframe with 35 rows and 3 variables:
 \describe{
   \item{SectionCode}{Unique code(s) for each section type}
