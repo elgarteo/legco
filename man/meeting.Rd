@@ -5,17 +5,21 @@
 \alias{legco_meeting}
 \title{Meetings of LegCo Committees}
 \usage{
-meeting(id = NULL, from = "1900-01-01", to = Sys.Date(),
-  type = "all", term_id = NULL, n = 10000, extra_param = NULL,
-  verbose = TRUE)
+meeting(id = NULL, meet_id = NULL, from = "1900-01-01",
+  to = Sys.Date(), type = "all", term_id = NULL, n = 10000,
+  extra_param = NULL, verbose = TRUE)
 
-legco_meeting(id = NULL, from = "1900-01-01", to = Sys.Date(),
-  type = "all", term_id = NULL, n = 10000, extra_param = NULL,
-  verbose = TRUE)
+legco_meeting(id = NULL, meet_id = NULL, from = "1900-01-01",
+  to = Sys.Date(), type = "all", term_id = NULL, n = 10000,
+  extra_param = NULL, verbose = TRUE)
 }
 \arguments{
 \item{id}{The id of a meeting slot, or a vector of ids. If `NULL`, returns
 all meetings. Defaults to `NULL`.}
+
+\item{meet_id}{The id of a meeting, or a vector of ids. If `NULL`, returns
+all meetings. Useful for matching meeting with records from the Attendance
+Database. Defaults to `NULL`.}
 
 \item{from}{Only fetch meetings on or after this date. Accepts character
 values in `'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`,

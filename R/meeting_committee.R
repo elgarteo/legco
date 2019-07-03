@@ -5,6 +5,10 @@
 #'
 #' @param slot_id The id of a LegCo meeting slot, or a vector of ids. If `NULL`,
 #'   returns all meetings. Defaults to `NULL`.
+#'   
+#' @param meet_id The id of a meeting, or a vector of ids. If `NULL`, returns
+#'   all meetings. Useful for matching meeting with records from the Attendance
+#'   Database. Defaults to `NULL`.
 #'
 #' @param committee_id The id of a LegCo committee, or a vector of ids. If
 #'   `NULL`, returns committees. Defaults to `NULL`.
@@ -16,8 +20,9 @@
 #'
 #' @export
 #' 
-meeting_committee <- function(slot_id = NULL, committee_id = NULL, extra_param = NULL, verbose = TRUE) {
-  query <- "Tmeeting_committee?$select=committee_id,slot_id,Tmeeting&$expand=Tmeeting"
+meeting_committee <- function(slot_id = NULL, meet_id = NULL,
+                              committee_id = NULL, extra_param = NULL, verbose = TRUE) {
+  query <- "Tmeeting_committee?$select=committee_id,meet_id,slot_id,Tmeeting&$expand=Tmeeting"
   
   filter_args <- {}
   
