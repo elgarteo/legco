@@ -21,10 +21,10 @@ generate_filter <- function(var_name, var_values) {
 unify_colnames <- function(col_names) {
   sapply(col_names, function(x) {
     x <- gsub("^.*\\.", "", x)
-    x <- gsub("id$", "ID", x)
     x <- unlist(strsplit(x, "_"))
     x <- capitalise(x)
     x <- gsub(" ", "", x)
+    x <- gsub("[Ii]{1}d$", "ID", x)
   })
 }
 
@@ -34,7 +34,7 @@ capitalise <- function(string) {
   string <- sapply(string, function(x)
     ifelse(tolower(x) %in% c("the", "of", "for", "to", "at", "on", "by"), 
            tolower(x), 
-           paste0(toupper(substring(x, 1, 1)), substring(x, 2))))
+           paste0(toupper(substring(x, 1, 1)), tolower(substring(x, 2)))))
   string <- paste(string, collapse = " ")
   string <- paste0(toupper(substring(string, 1, 1)), substring(string, 2))
   
