@@ -143,14 +143,14 @@ subcommittees and the House Committee meetings.</p>
     </div>
 
     <pre class="usage"><span class='fu'>voting_record</span>(<span class='kw'>committee</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>term_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>result</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.time</a></span>(), <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
-  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+  <span class='kw'>vote</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.time</a></span>(),
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
 <span class='fu'>legco_voting_record</span>(<span class='kw'>committee</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>term_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>result</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.time</a></span>(), <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
-  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+  <span class='kw'>vote</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.time</a></span>(),
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -166,9 +166,19 @@ subcommittees and the House Committee meetings.</p>
     </tr>
     <tr>
       <th>result</th>
-      <td><p>The voting result. `'passed'` returns motions that have been
-passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
-all motions that has been voted in LegCo. Defaults to `all`.</p></td>
+      <td><p>The voting result. If `'passed'`, returns motions that have
+been passed. If `'vetoed'`, returns motions that have been vetoed.If
+`'all'`, returns all motions that has been voted in LegCo. Defaults to
+`all`.</p></td>
+    </tr>
+    <tr>
+      <th>vote</th>
+      <td><p>The vote that casted. If `'yes'`, returns only members who casted
+affirmative votes. If `'no'`, returns only members who casted negative
+votes. If `'abstain'`, returns only members who abstained from voting. If
+`'absent'`, returns only members who were absent. If `'present'`, returns
+only members who were present and did not vote (e.g. President). If
+`'all'`, returns all votes. Defaults to `'all'`.</p></td>
     </tr>
     <tr>
       <th>name_ch</th>
