@@ -1,0 +1,129 @@
+---
+title: "Meeting Schedule Database"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: |
+  %\VignetteIndexEntry{schedule} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(message = FALSE)
+library(legco)
+```
+
+## Introduction
+
+This database contains the information of LegCo committees, namely the name of all LegCo committees established
+since the fifth term and their corresponding member lists and meeting schedule.
+
+For more details of the database, see <https://www.legco.gov.hk/odata/english/schedule-db.html>.
+
+### Key Identifiers
+
+Here are the key identifies that is useful for locating the neccessary data from the Meeting Schedule
+Database:
+
+* `CommitteeID` is the numerical ID of a LegCo committee.
+
+* `SlotID` is the numerical ID of a LegCo Council or committee meeting slot.
+
+* `MemberID` is the numerical ID of a LegCo member. Note that it is a seperate identifier from the `SpeakerID` 
+of the Hansard Database.
+
+* `TermID` is the numerical ID of a LegCo term. Note that the nominal number of a TermID is less than that
+of the term number by 1, i.e. the TermID of the fifth term is `4`.
+
+* `SessionID` is the numerical ID of a LegCo session. A LegCo session typically begins in October to September 
+next year. As a term is four years, there are four sessions in one term.
+
+* `MeetID` is the numerical ID of a LegCo Council or committee meeting. Although similar, it is a seperate 
+identifier from the `SlotID` and is only used to match with records from the Attendance Database.
+
+---
+
+This database is accessible with the following functions:
+
+## term()
+
+`term()` fetches the details of one or more LegCo term(s).
+
+```{r }
+# Fetch all LegCo terms
+term()
+```
+
+## session()
+
+`session()` fetches the details of one or more LegCo session(s).
+
+```{r }
+# Fetch all LegCo sessions of the fifth term
+session(term_id = 4)
+```
+
+## committee()
+
+`committee()` fetches the details of one or more LegCo committee(s).
+
+```{r }
+# Fetch all LegCo committees from the sixth term
+v <- committee(term_id = 5)
+head(v)
+```
+
+## membership()
+
+`membership()` fetches the membership of one or more LegCo member(s) or the members of one or more committee(s). 
+
+```{r }
+# Fetch members of the Subcommittee on Issues Relating to Bazaars
+v <- membership(committee_id = 2704)
+head(v)
+
+# Fetch the committee membership of Hon Wu Chi-wai
+v <- membership(member_id = 834)
+head(v)
+```
+
+## member()
+
+`member()` fetches the basic information of one or more LegCo members.
+
+```{r }
+# Fetch full list of members
+v <- member()
+head(v)
+```
+
+Note that `member()` only returns the latest term that the member has served as `LatestTermID`. To fetch all 
+the terms served by a member since the fifth term, use `member_term()` instead.
+
+## member_term()
+
+`member_term()` fetches the all the term served by one or more LegCo members.
+
+```{r }
+#Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
+member_term(id = c(273, 924))
+```
+
+## meeting()
+
+`meeting()` fetches the meeting schedule of LegCo Council or committees. Note that this function does 
+not take CommitteeID as a filtering parameter. Use `meeting_committee()` instead if needed.
+
+```{r }
+# Fetch all meeting conducted on 
+meeting(from = "2019-03-20", to = "2019-03-20")
+```
+
+## meeting_committee()
+
+`meeting_committee()` fetches the meeting schedule of LegCo Council or committees. Note that this function does 
+not support dates as filtering parameters. Use `meeting()` instead if needed.
+
+```{r }
+# Fetch all meetings of Subcommittee on Issues Relating to Bazaars
+v <- meeting_committee(committee_id = 2704)
+head(v)
+```

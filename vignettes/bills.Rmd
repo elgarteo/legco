@@ -1,0 +1,39 @@
+---
+title: "Bills Database"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: |
+  %\VignetteIndexEntry{bills} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(message = FALSE)
+library(legco)
+```
+
+## Introduction
+
+This database contains key information of all the bills that have been presented in LegCo since 1906.
+
+For more details of the database, see <https://www.legco.gov.hk/odata/english/billsdb.html>.
+
+### Key Identifiers
+
+This database has an `InternalKey` which has little value since there is only one data endpoint and 
+it is not interchangeable with other databases. To locate the bill in other databases, it is advisable
+to use the First, Second and Third Reading dates as the filter parameters (e.g. Hansard database) or 
+find the CommitteeID of the relevant bill committee using `legcoplus::search_committee()` from 
+the package [legcoplus](https://elgarteo.ga/legco/legcoplus) (e.g. Meeting Schedule Database).
+
+---
+
+This database is accessible with the following function:
+
+## all_bills()
+
+`all_bills()` fetches the information of bills that have gone through LegCo.
+
+```{r }
+# Fetch bills that passed thrid reading on February 20, 2019
+all_bills(third_from = "2019-02-20")
+```

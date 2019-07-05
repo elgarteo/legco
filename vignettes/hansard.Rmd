@@ -1,0 +1,192 @@
+---
+title: "Hansard Database"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: |
+  %\VignetteIndexEntry{introduction} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(message = FALSE)
+library(legco)
+```
+
+## Introduction
+
+This database contains information on matters discussed in LegCo Council meeting since the fifth term
+of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks 
+and section codes of the hansard files, the data endpoints retrieve data from the files directly. 
+
+For more details of the database, see <https://www.legco.gov.hk/odata/english/hansard-db.html>.
+
+### Key Identifiers
+
+Here are the key identifies that is useful for locating the neccessary data from the Hansard database:
+
+* `HansardID` is the numerical ID of a hansard file. A hansard file is the Record of Proceedings of
+a LegCo Council meeting. Since there are three versions of hansard---Floor, Chinese and English, 
+each Council meeting has three hansard files, meaning that there are three Hansard IDs corresponding 
+to the same meeting.
+
+* `RundownID` is the numerical ID of a rundown in the hansard file. In simple terms, rundowns can be understood 
+as individual paragraphs in the Record of Proceedings. 
+
+* `SectionCode` is the alphabetical code stipulating the type of business as indicated in the LegCo Rules of 
+Procedures 18(1) that a paragraph text is referring to in the hansard file. 
+
+* `SpeakerID` is the numerical ID stipulating the speaker of a paragraph text in the hansard file.
+
+These identifiers essentially indicate the *when* (HansardID), *where* (RundownID), *what* (SectionCode) 
+and *who* (SpeakerID) of a parapgraph text in the Record of Proceedings.
+
+---
+
+This database is accessible with the following functions/data:
+
+## hansard()
+
+`hansard()` fetches the information of the hansard files. 
+
+```{r }
+v <- hansard(from = "2019-02-20", to = "2019-02-20")
+v
+```
+
+If `isCEQandA` is `1`, the hansard file is the Record of Proceedings of a Chief Executive's Question
+and Answer Session. 
+
+If `isCEQT` is `1`, the hansard file is the Record of Proceedings of a Chief Executive's Question Time.
+
+
+## legco_section_type
+
+`legco_section_type` is a data frame containing the meaning of the section code.
+
+```{r }
+v <- legco_section_type
+head(v)
+```
+
+## subjects()
+
+`subjects()` fetches all subjects being discussed in a Council meeting. 
+
+```{r }
+# Fetch second reading of bills during the Council meeting on February 20, 2019.
+v <- subjects(hansard_id = 2714, section_code = "b2r")
+head(v)
+```
+
+The RundownID indicates the starting RundownID of the subject concerned. For instance, the starting 
+RundownID of *Smoking (Public Health) (Amendment) Bill 2019* is 899628, meaning that the paragraph text of this subject is from 899628 to 899649.
+
+If the business is a continuation of a previous meeting, the date of the previous meeting will be shown 
+in the field `ResumptionOf`.
+
+## rundown()
+
+`rundown()` fetches the paragraph text in hansard files. Note that the result is not in any specific order 
+so it is neccessary to reorder if needed.
+
+```{r }
+# Fetch records of proceedings of the second reading of Smoking (Public Health) (Amendment) Bill 2019
+v <- rundown(id = 899628:899649)
+v <- v[order(v$RundownID), ]
+rownames(v) <- 1:nrow(v)
+v[3:5, ]
+```
+
+## questions()
+
+`questions()` fetches the question put on the government by LegCo members. Note that this function does 
+not take HansardID as a filtering parameter.
+
+```{r }
+# Fetch questions being put on the government during the Council meeting on February 20, 2019.
+v <- questions(from = "2019-02-20", to = "2019-02-20")
+head(v)
+```
+
+Similar to the output of `subjects()`, RundownID here refers to the starting RundownID, which can be used 
+to determine the range of the full question text.
+
+## bills()
+
+`bills()` fetches bills being debated in LegCo Countil meetings.
+
+```{r }
+# Fetch bills debated during the Council meeting on February 20, 2019.
+v <- bills(hansard_id = 2714)
+head(v)
+```
+
+Note that the name of a bill may appear more than once like above, since the bill went through first 
+and second reading in the same meeting. To fetch more detailed information and key dates of
+a particular bill, use `all_bills()` instead.
+
+## motions()
+
+`motions()` fetches the motions discussed in LegCo Council meetings. 
+
+```{r }
+# Fetch motions discussed during the Council meeting on February 20, 2019.
+v <- motions(hansard_id = 2714)
+head(v)
+```
+
+Similar to the output of `subjects()` and `questions()`, RundownID here refers to the starting RundownID,
+which can be used to determine the range of the full question text.
+
+## petitions()
+
+`petitions()` fetches the petitions raised by LegCo members in Council meetings. 
+
+```{r }
+# Fetch petition laid during the Council meeting on January 19, 2018.
+v <- petitions(from = "2018-01-10")
+v
+```
+
+## addresses()
+
+`addresses()` fetches addresses made by members or government officials before tabling documents
+in LegCo Council meetings.
+
+```{r, eval = FALSE, echo = FALSE}
+# Bug in address endpoint
+addresses(hansard_id = 2714)
+```
+
+## statements()
+
+`statements()` fetches statments made by government officials in LegCo Council meetings.
+
+```{r }
+# Fetch statements made by government officials during the Council meeting on April 22, 2015.
+v <- statements(from = "2015-04-22")
+v
+```
+
+## voting_results()
+
+`voting_results()` fetches the results of votes conducted in LegCo Council meetings. 
+
+```{r }
+# Fetch results of votes conducted during the Council meeting on January 19, 2018.
+v <- voting_results(hansard_id = 2714)
+head(v)
+```
+
+`voting_results()` only returns the overall result of the vote. To fetch the voting record of 
+infividual members, use `voting_record()` instead.
+
+## summoning_bell()
+
+`summong_bells()` fetches instances in which the summoning bell have been rung in LegCo
+Council meetings.
+
+```{r }
+# Fetch instances of summoning bell during the Council meeting on January 19, 2018.
+v <- summoning_bells(hansard_id = 2714)
+head(v)
+```

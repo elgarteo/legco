@@ -6,14 +6,14 @@
 \title{Voting Record in LegCo Meetings}
 \usage{
 voting_record(committee = NULL, term_id = NULL, result = "all",
-  name_ch = NULL, seperate_mechanism = NULL, mover_type = "all",
-  from = "1900-01-01T00:00:00", to = Sys.time(), n = 10000,
-  extra_param = NULL, verbose = TRUE)
+  vote = "all", name_ch = NULL, seperate_mechanism = NULL,
+  mover_type = "all", from = "1900-01-01T00:00:00", to = Sys.time(),
+  n = 10000, extra_param = NULL, verbose = TRUE)
 
 legco_voting_record(committee = NULL, term_id = NULL, result = "all",
-  name_ch = NULL, seperate_mechanism = NULL, mover_type = "all",
-  from = "1900-01-01T00:00:00", to = Sys.time(), n = 10000,
-  extra_param = NULL, verbose = TRUE)
+  vote = "all", name_ch = NULL, seperate_mechanism = NULL,
+  mover_type = "all", from = "1900-01-01T00:00:00", to = Sys.time(),
+  n = 10000, extra_param = NULL, verbose = TRUE)
 }
 \arguments{
 \item{committee}{The name of the committee or subcommittee. Defaults to
@@ -21,9 +21,17 @@ legco_voting_record(committee = NULL, term_id = NULL, result = "all",
 
 \item{term_id}{The ID of a term. Defaults to `NULL`.}
 
-\item{result}{The voting result. `'passed'` returns motions that have been
-passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
-all motions that has been voted in LegCo. Defaults to `all`.}
+\item{result}{The voting result. If `'passed'`, returns motions that have
+been passed. If `'vetoed'`, returns motions that have been vetoed.If
+`'all'`, returns all motions that has been voted in LegCo. Defaults to
+`all`.}
+
+\item{vote}{The vote that casted. If `'yes'`, returns only members who casted
+affirmative votes. If `'no'`, returns only members who casted negative
+votes. If `'abstain'`, returns only members who abstained from voting. If
+`'absent'`, returns only members who were absent. If `'present'`, returns
+only members who were present and did not vote (e.g. President). If
+`'all'`, returns all votes. Defaults to `'all'`.}
 
 \item{name_ch}{The name of a LegCo member, or a vector of names. If `NULL`,
 returns voting records of all members. Defaults to `NULL`.}

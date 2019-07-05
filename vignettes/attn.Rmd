@@ -1,0 +1,51 @@
+---
+title: "Attendance Database"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: |
+  %\VignetteIndexEntry{attn} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(message = FALSE)
+library(legco)
+```
+
+## Introduction
+
+This database contains the attendance record of LegCo Council and committee open meetings
+since the sixth term.
+
+For more details of the database, see <https://www.legco.gov.hk/odata/english/attendance-db.html>.
+
+### Key Identifiers
+
+Here are the key identifies that is useful for locating the neccessary data from the Attendance 
+Database:
+
+* `CommitteeID` is the numerical ID of a LegCo committee. It is same as the one in the Meeting
+Schedule Database.
+
+* `MeetID` is the numerical ID of a LegCo Council or committee meeting. It is same as the one in the
+Meeting Schedule Database.
+
+* `MemberID` is the numerical ID of a LegCo member. It is same as the one in the Meeting Schedule
+Database. Note that it is a seperate identifier from the `SpeakerID` of the Hansard Database.
+
+---
+
+This database is accessible with the following function:
+
+## attendance()
+
+`attendance()` fetches the attendance record of one or more LegCo meeting(s), or the attendance record of 
+one of more LegCo member(s), or both.
+
+```{r }
+# Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017
+attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", attn = "a")
+
+# Fetch the meetings that Hon Chu Hoi-dick was absent from
+v <- attendance(member_id = 910, attn = "a")
+head(v)
+```

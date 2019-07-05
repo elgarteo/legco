@@ -1,0 +1,60 @@
+---
+title: "Voting Results Database"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: |
+  %\VignetteIndexEntry{voting} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(message = FALSE)
+library(legco)
+```
+
+## Introduction
+
+This database contains voting results of the LegCo Council, the House Committee and the Finance
+Committeeand its subcomittees starting from the fifth term of LegCo.
+
+For more details of the database, see <https://www.legco.gov.hk/odata/english/vrdb.html>.
+
+### Key Identifiers
+
+Here are the key identifies that is useful for locating the neccessary data from the Attendance 
+Database:
+
+* `VoteTime` is the date and time when a vote is conducted. The lack of a designated unique identifier
+means the `VoteTime` is the only unique identifier of each individual vote.
+
+* `TermID` is the numerical ID of a LegCo term. Note that the nominal number of a TermID is less than that
+of the term number by 1, i.e. the TermID of the fifth term is `4`.
+
+This database has an `ID` which has little value since there is only one data endpoint and 
+it is not interchangeable with other databases. To locate the bill in other databases, it is
+advisable to use the `VoteDate` as the filter parameter (e.g. Hansard database) or to find
+the CommitteeID of the relevant bill committee using `legcoplus::search_committee()` from 
+the package [legcoplus](https://elgarteo.ga/legco/legcoplus) (e.g. Meeting Schedule Database).
+
+---
+
+This database is accessible with the following function:
+
+## voting_record()
+
+`voting_record()` fetches the voting record of one or more LegCo Council, the House Committee
+and the Finance Committeeand its subcomittees meeting(s), or the attendance record of one or more 
+LegCo member(s) in these meetings. Note that this function takes none of `CommitteeID`, `SpeakerID`
+or `MemberID` as a filtering parameter. Instead, only the full English committee name and the full
+Chinese name of LegCo members can be used.
+
+```{r }
+# Fetch how members voted the motion on "Abolishing the MPF Offsetting Mechanism" on November 11, 2016
+v <- voting_record(committee = "Council Meeting",
+                   from = "2016-11-16T13:51:53",
+                   to = "2016-11-16T13:51:53")
+head(v)
+
+# Fetch the votes that Hon Abraham Shek were abstained from
+v <- voting_record(name_ch = "石禮謙", vote = "abstain")
+head(v)
+```
