@@ -13,7 +13,7 @@
 #' @export
 #' 
 member <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
-  query <- "Tmember?$select=member_id,title_eng,surname_eng,firstname_eng,english_name,honourable_eng,surname_chi,firstname_chi,title_chi,honourable_chi"
+  query <- "Tmember?$select=member_id,title_eng,surname_eng,firstname_eng,english_name,honourable_eng,surname_chi,firstname_chi,title_chi,honourable_chi,latest_term_id"
   
   filter_args <- {}
   

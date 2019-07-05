@@ -22,7 +22,7 @@
 #' 
 meeting_committee <- function(slot_id = NULL, meet_id = NULL,
                               committee_id = NULL, extra_param = NULL, verbose = TRUE) {
-  query <- "Tmeeting_committee?$select=committee_id,meet_id,slot_id,Tmeeting&$expand=Tmeeting"
+  query <- "Tmeeting_committee?$select=committee_id,slot_id,Tmeeting&$expand=Tmeeting"
   
   filter_args <- {}
   
