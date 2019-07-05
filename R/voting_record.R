@@ -8,9 +8,17 @@
 #'
 #' @param term_id The ID of a term. Defaults to `NULL`.
 #'
-#' @param result The voting result. `'passed'` returns motions that have been
-#'   passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
-#'   all motions that has been voted in LegCo. Defaults to `all`.
+#' @param result The voting result. If `'passed'`, returns motions that have
+#'   been passed. If `'vetoed'`, returns motions that have been vetoed.If
+#'   `'all'`, returns all motions that has been voted in LegCo. Defaults to
+#'   `all`.
+#'
+#' @param vote The vote that casted. If `'yes'`, returns only members who casted
+#'   affirmative votes. If `'no'`, returns only members who casted negative
+#'   votes. If `'abstain'`, returns only members who abstained from voting. If
+#'   `'absent'`, returns only members who were absent. If `'present'`, returns
+#'   only members who were present and did not vote (e.g. President). If
+#'   `'all'`, returns all votes. Defaults to `'all'`.
 #'
 #' @param name_ch The name of a LegCo member, or a vector of names. If `NULL`,
 #'   returns voting records of all members. Defaults to `NULL`.
@@ -45,7 +53,7 @@
 #' @export
 #' 
 voting_record <- function(committee = NULL, term_id = NULL, result = "all",
-                          name_ch = NULL, seperate_mechanism = NULL,
+                          vote = "all", name_ch = NULL, seperate_mechanism = NULL,
                           mover_type = "all", from = '1900-01-01T00:00:00',
                           to = Sys.time(), n = 10000,
                           extra_param = NULL, verbose = TRUE) {
@@ -68,6 +76,19 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
     filter_args <- c(filter_args, "overall_result eq 'Passed'")
   } else if (result == "vetoed") {
     filter_args <- c(filter_args, "overall_result eq 'Negatived'")
+  }
+  
+  vote <- tolower(vote)
+  if (vote == "yes") {
+    filter_args <- c(filter_args, "vote eq 'Yes'")
+  } else if (vote == "no") {
+    filter_args <- c(filter_args, "vote eq 'No'")
+  } else if (vote == "abstain") {
+    filter_args <- c(filter_args, "vote eq 'Abstain'")
+  } else if (vote == "absent") {
+    filter_args <- c(filter_args, "vote eq 'Absent'")
+  } else if (vote == "present") {
+    filter_args <- c(filter_args, "vote eq 'Present'")
   }
   
   if (!is.null(name_ch)) {
@@ -111,6 +132,7 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
     names(df)[names(df) == "TermNo"] <- "TermID"
     names(df)[names(df) == "Type"] <- "Committee"
     df$TermID <- sapply(df$TermID, convert_term_no)
+    df <- df[, c(1, 2:4, 6:36)]
     
     df
   }
