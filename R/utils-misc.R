@@ -13,11 +13,10 @@ generate_filter <- function(var_name, var_values) {
     filter_args <- paste0(var_name, " eq '", var_values, "'")
   }
   filter_args <- paste0("(", paste(filter_args, collapse = " or "), ")")
-  
   filter_args
 }
 
-## Function to unify format of column names (e.g. from 'id_name' to 'IdName')
+## Function to unify format of column names (e.g. from 'member_id' to 'MemberID')
 unify_colnames <- function(col_names) {
   sapply(col_names, function(x) {
     x <- gsub("^.*\\.", "", x)
@@ -37,7 +36,6 @@ capitalise <- function(string) {
            paste0(toupper(substring(x, 1, 1)), tolower(substring(x, 2)))))
   string <- paste(string, collapse = " ")
   string <- paste0(toupper(substring(string, 1, 1)), substring(string, 2))
-  
   string
 }
 
@@ -51,7 +49,6 @@ node_count <- function(url) {
     n <- n + length(url[[i]]) # 'or' count
     n <- n + length(url[[i]]) * 4 # individual condition count
   }
-  
   n
 }
 
@@ -62,7 +59,6 @@ convert_time <- function(string) {
   if (length(tmp) != 2) {
     string <- format(as.POSIXlt(string), "%Y-%m-%dT%H:%M:%S")
   }
-  
   string
 }
 
