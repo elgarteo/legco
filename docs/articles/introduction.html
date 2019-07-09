@@ -97,7 +97,7 @@
     <div class="page-header toc-ignore">
       <h1>Introduction to legco</h1>
             
-            <h4 class="date">2019-07-05</h4>
+            <h4 class="date">2019-07-09</h4>
       
       
       <div class="hidden name"><code>introduction.Rmd</code></div>
@@ -118,42 +118,42 @@
 <div id="from-web" class="section level3">
 <h3 class="hasAnchor">
 <a href="#from-web" class="anchor"></a>From web</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"https://elgarteo.ga/legco/legco_0.0.9999.tar.gz"</span>, <span class="dt">repos =</span> <span class="ot">NULL</span>, <span class="dt">type =</span> <span class="st">"source"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"https://elgarteo.ga/legco/legco_0.0.9999.tar.gz"</span>, <span class="dt">repos =</span> <span class="ot">NULL</span>, <span class="dt">type =</span> <span class="st">"source"</span>)</a></code></pre></div>
 </div>
 <div id="load-legco" class="section level3">
 <h3 class="hasAnchor">
 <a href="#load-legco" class="anchor"></a>Load legco</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(legco)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(legco)</a></code></pre></div>
 </div>
 </div>
 <div id="understanding-the-legco-apis" class="section level2">
 <h2 class="hasAnchor">
 <a href="#understanding-the-legco-apis" class="anchor"></a>Understanding the LegCo APIs</h2>
 <p>The LegCo APIs consist of different databases with seperate structures and identifiers, and each database has its own API. The functions in this package correspond to the various data endpoints of these APIs. The databases supported by this package and the associating functions are as follow.</p>
+<p> </p>
 <ol style="list-style-type: decimal">
 <li>
-<p><strong>Attendance Database</strong></p>
-<p><a href="https://www.legco.gov.hk/odata/english/attendance-db.html" class="uri">https://www.legco.gov.hk/odata/english/attendance-db.html</a></p>
+<p><a href="./attn.html"><strong>Attendance Database</strong></a></p>
 <p>This database contains the attendance record of LegCo Council and committee open meetings since the sixth term.</p>
 <p>This database is accessible with the following function:</p>
 <ul>
 <li>
 <code><a href="../reference/attendance.html">attendance()</a></code> fetches the attendance of members in LegCo Council and committee meetings.</li>
 </ul>
+<p> </p>
 </li>
 <li>
-<p><strong>Bills Database</strong></p>
-<p><a href="https://www.legco.gov.hk/odata/english/billsdb.html" class="uri">https://www.legco.gov.hk/odata/english/billsdb.html</a></p>
+<p><a href="./bills.html"><strong>Bills Database</strong></a></p>
 <p>This database contains key information of all the bills that have been presented in LegCo since 1906. This database is accessible with the following function:</p>
 <ul>
 <li>
 <code><a href="../reference/all_bills.html">all_bills()</a></code> fetches the information of bills that have gone through LegCo.</li>
 </ul>
 <p>Comapred to <code><a href="../reference/bills.html">bills()</a></code> of the Hansard Database, <code><a href="../reference/all_bills.html">all_bills()</a></code> provides much more comprehensive information of bills, including all key dates and the proposer.</p>
+<p> </p>
 </li>
 <li>
-<p><strong>Hansard Database</strong></p>
-<p><a href="https://www.legco.gov.hk/odata/english/hansard-db.html" class="uri">https://www.legco.gov.hk/odata/english/hansard-db.html</a></p>
+<p><a href="./hansard.html"><strong>Hansard Database</strong></a></p>
 <p>This database contains information on matters discussed in LegCo Council meeting since the fifth term of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks and section codes of the hansard files, the data endpoints retrieve data from the files directly. This database is accessible with the following functions/data:</p>
 <ul>
 <li>
@@ -184,10 +184,10 @@
 <code><a href="../reference/summoning_bells.html">summoning_bells()</a></code> fetches instances in which the summoning bell have been rung in LegCo Council meetings.</li>
 </ul>
 <p>When using in combination, these functions are essentially hansard files crawler.</p>
+<p> </p>
 </li>
 <li>
-<p><strong>Meeting Schedule Database</strong></p>
-<p><a href="https://www.legco.gov.hk/odata/english/schedule-db.html" class="uri">https://www.legco.gov.hk/odata/english/schedule-db.html</a></p>
+<p><a href="./schedule.html"><strong>Meeting Schedule Database</strong></a></p>
 <p>This database contains the member list and the meeting schedule of the LegCo Council and every committee since the fifth term of LegCo. This database is accessible with the following functions:</p>
 <ul>
 <li>
@@ -208,26 +208,27 @@
 <code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> fetches which committee holds a meeting.</li>
 </ul>
 <p>While the purpose of <code><a href="../reference/member.html">member()</a></code> is similar to <code><a href="../reference/speakers.html">speakers()</a></code> of the Hansard Database, <code><a href="../reference/member.html">member()</a></code> returns only LegCo members. Their identifiers, i.e. Speaker ID and Member ID, are unique and not interchangeable.</p>
+<p> </p>
 </li>
 <li>
-<p><strong>Voting Results Database</strong></p>
-<p><a href="https://www.legco.gov.hk/odata/english/vrdb.html" class="uri">https://www.legco.gov.hk/odata/english/vrdb.html</a></p>
+<p><a href="./voting.html"><strong>Voting Results Database</strong></a></p>
 <p>This database contains voting results of the LegCo Council, the House Committee and the Finance Committee and its subcomittees starting from the fifth term of LegCo. This database is accessible with the following function:</p>
 <ul>
 <li>
 <code><a href="../reference/voting_record.html">voting_record()</a></code> fetches the information of votes conducted in the meetings, including the voting record of each member.</li>
 </ul>
 <p>While <code><a href="../reference/voting_results.html">voting_results()</a></code> of the Hansard Database returns only the overall result of votes conducted in Council meetings, <code><a href="../reference/voting_record.html">voting_record()</a></code> returns much more detailed information of votes conducted in Council and other four committees and subcommittees meetings.</p>
+<p> </p>
 </li>
 </ol>
 <p>A generic function <code><a href="../reference/legco_api.html">legco_api()</a></code> is available for access to other databases and endpoints of the LegCo APIs that are not specified here.</p>
-<p>All functions can also be accessed with the prefix <code>legco_</code>, e.g. <code><a href="../reference/speakers.html">legco_speakers()</a></code> and <code><a href="../reference/speakers.html">speakers()</a></code> return the same result.</p>
+<p>All functions can also be accessed with the prefix <code>legco_</code>, e.g. <code><a href="../reference/speakers.html">legco_speakers()</a></code> and <code><a href="../reference/speakers.html">speakers()</a></code> return the same result.</p>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p>The following code shows all the LegCo Council meetings held from May 1, 2018 to May 31, 2018.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</a></code></pre></div>
 <pre><code>##    HansardID         MeetingDate          AgendaDate isCEQandA isCEQT
 ## 1       2407 2018-05-02T00:00:00 2018-05-02T00:00:00         0      0
 ## 2       2526 2018-05-03T00:00:00 2018-05-02T00:00:00         0      0
@@ -255,7 +256,7 @@
 ## 11  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180530-translate-e.pdf
 ## 12  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180531-translate-e.pdf</code></pre>
 <p>To fetch the items on the agenda of the meeting on May 23, 2018:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2451</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2451</span>)</a></code></pre></div>
 <pre><code>##            MeetingDate
 ## 1  2018-05-23T00:00:00
 ## 2  2018-05-23T00:00:00
@@ -369,29 +370,29 @@
 ## 36           NA         som    828827      2451</code></pre>
 <p>In this example, we will look into the motion <em>Not forgetting the 4 June incident</em>.</p>
 <p>The section codes indicate the type of the business. For exmaple, the section code “mbm” of the <em>Not forgetting the 4 June incident</em> means that it is a member’s motion:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>legco_section_type[legco_section_type<span class="op">$</span>SectionCode <span class="op">==</span><span class="st"> "mbm"</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">legco_section_type[legco_section_type<span class="op">$</span>SectionCode <span class="op">==</span><span class="st"> "mbm"</span>, ]</a></code></pre></div>
 <pre><code>##    SectionCode          NameEng  NameChi
 ## 45         mbm Members' motions 議員議案</code></pre>
 <p>The RundownID indicates the location of the first paragraph of the matter concerned in the hansard file. In other words, paragraphs of RundownID between 828783 and 828826 (one RundownID prior to the next item on the agenda) are the records of the matter the <em>Not forgetting the 4 june incident</em> during the meeting. The full text of these paragraphs can be fetched by:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="co"># Order by RundownID, i.e. chronological order</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(w<span class="op">$</span>RundownID), ]</span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(w)</span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a>w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co"># Order by RundownID, i.e. chronological order</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(w<span class="op">$</span>RundownID), ]</a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(w)</a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6">w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>]</a></code></pre></div>
 <pre><code>## [1] "PRESIDENT (in Cantonese): Will Members please proceed to vote."                                                  
 ## [2] "PRESIDENT (in Cantonese): Mr Abraham SHEK, do you wish to cast your vote?(Mr Abraham SHEK did not cast any vote)"</code></pre>
 <p>To check which members have spoken about the motion and to look up some of their names:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
-<span id="cb11-2"><a href="#cb11-2"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</a>
+<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</a></code></pre></div>
 <pre><code>## Retrieving records...</code></pre>
 <pre><code>## Error: Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
 <p>Note that there is a limit on the length of the parameters, which is at most 100 nodes as defined in the the Open Data Protocol, or approximately 19 filtering conditions. The code above produces 27 filtering conditions which are too long. If you need have parameters longer than that, break them down into multiple requests:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span>
-<span id="cb14-2"><a href="#cb14-2"></a>y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</span>
-<span id="cb14-3"><a href="#cb14-3"></a>y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">rbind</a></span>(y1, y2)</span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="co"># Show members who have spoken about this motion</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(y[y<span class="op">$</span>Type <span class="op">==</span><span class="st"> "MB"</span>, ])</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3">y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">rbind</a></span>(y1, y2)</a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="co"># Show members who have spoken about this motion</span></a>
+<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(y[y<span class="op">$</span>Type <span class="op">==</span><span class="st"> "MB"</span>, ])</a></code></pre></div>
 <pre><code>##   SpeakerID NameChi         NameEng Type Initial  FirstName LastName
 ## 2       138  林卓廷  LAM CHEUK-TING   MB     LCT Cheuk-ting      LAM
 ## 3       148  許智峯    HUI CHI-FUNG   MB     HCF   Chi-fung      HUI
@@ -400,8 +401,8 @@
 ## 6       141  邵家臻    SHIU KA-CHUN   MB     SKC    Ka-chun     SHIU
 ## 7       109  梁繼昌   KENNETH LEUNG   MB      KL Kai-cheong    LEUNG</code></pre>
 <p>To find out the voting results of the motion:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">section_code =</span> <span class="st">"mbm"</span>)</span>
-<span id="cb16-2"><a href="#cb16-2"></a>v[v<span class="op">$</span>Subject <span class="op">==</span><span class="st"> "Not forgetting the 4 June incident"</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">section_code =</span> <span class="st">"mbm"</span>)</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">v[v<span class="op">$</span>Subject <span class="op">==</span><span class="st"> "Not forgetting the 4 June incident"</span>, ]</a></code></pre></div>
 <pre><code>##           MeetingDate                            Subject VoteResult
 ## 3 2018-05-23T00:00:00 Not forgetting the 4 June incident  Negatived
 ##   SectionCode RundownID HansardID
@@ -409,8 +410,8 @@
 ##                                                                                                 HansardFileURL
 ## 3 https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00349</code></pre>
 <p>It is possible to fetch the detailed voting record of each member on this motion. To get a list of members who voted yes:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span>
-<span id="cb18-2"><a href="#cb18-2"></a>v[v<span class="op">$</span>Vote <span class="op">==</span><span class="st"> "Yes"</span>, <span class="dv">32</span><span class="op">:</span><span class="dv">33</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</a>
+<a class="sourceLine" id="cb18-2" data-line-number="2">v[v<span class="op">$</span>Vote <span class="op">==</span><span class="st"> "Yes"</span>, <span class="dv">32</span><span class="op">:</span><span class="dv">33</span>]</a></code></pre></div>
 <pre><code>##                NameEn Constituency
 ## 2            James TO   Functional
 ## 3     LEUNG Yiu-chung   Functional
@@ -437,8 +438,8 @@
 ## 65           Gary FAN Geographical
 ## 66         AU Nok-hin Geographical</code></pre>
 <p>To check the attendance of this meeting:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span></a>
+<a class="sourceLine" id="cb20-2" data-line-number="2"><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</a></code></pre></div>
 <pre><code>##   SlotID MeetID
 ## 1 174096 131473
 ## 2 169121 126590
@@ -481,9 +482,9 @@
 ## 3          http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523q.htm
 ## 4         http://www.legco.gov.hk/yr17-18/chinese/fc/pwsc/agenda/pwsc20180523.htm
 ## 5 http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc58/agenda/sc5820180523.htm</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>z &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">126590</span>)</span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="co"># Show members who were present</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a>z[z<span class="op">$</span>PresentAbsent <span class="op">==</span><span class="st"> "Present"</span>, <span class="dv">7</span><span class="op">:</span><span class="dv">9</span>] </span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">z &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">126590</span>)</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="co"># Show members who were present</span></a>
+<a class="sourceLine" id="cb22-3" data-line-number="3">z[z<span class="op">$</span>PresentAbsent <span class="op">==</span><span class="st"> "Present"</span>, <span class="dv">7</span><span class="op">:</span><span class="dv">9</span>] </a></code></pre></div>
 <pre><code>##                   MemberNameEnglish MemberNameChinese PresentAbsent
 ## 1                    Hon Tanya CHAN        陳淑莊議員       Present
 ## 2           Hon Tommy CHEUNG Yu-yan        張宇人議員       Present

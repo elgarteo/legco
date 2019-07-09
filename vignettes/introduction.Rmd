@@ -40,21 +40,21 @@ The LegCo APIs consist of different databases with seperate structures and ident
 and each database has its own API. The functions in this package correspond to the various data endpoints
 of these APIs. The databases supported by this package and the associating functions are as follow.
 
-1. **Attendance Database**
+\ 
 
-   <https://www.legco.gov.hk/odata/english/attendance-db.html>
-   
+1. [**Attendance Database**](./attn.html)
+
    This database contains the attendance record of LegCo Council and committee open meetings since the
    sixth term.
    
    This database is accessible with the following function:
    
    * `attendance()` fetches the attendance of members in LegCo Council and committee meetings.
-
-1. **Bills Database**
-
-   <https://www.legco.gov.hk/odata/english/billsdb.html>
    
+   \ 
+
+1. [**Bills Database**](./bills.html)
+
    This database contains key information of all the bills that have been presented in LegCo since 1906. 
    This database is accessible with the following function:
    
@@ -62,11 +62,11 @@ of these APIs. The databases supported by this package and the associating funct
    
    Comapred to `bills()` of the Hansard Database, `all_bills()` provides much more comprehensive information 
    of bills, including all key dates and the proposer.
-
-1. **Hansard Database**
-
-   <https://www.legco.gov.hk/odata/english/hansard-db.html>
    
+   \ 
+
+1. [**Hansard Database**](./hansard.html)
+
    This database contains information on matters discussed in LegCo Council meeting since the fifth term
    of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks 
    and section codes of the hansard files, the data endpoints retrieve data from the files directly. 
@@ -90,11 +90,11 @@ of these APIs. The databases supported by this package and the associating funct
    * `summoning_bells()` fetches instances in which the summoning bell have been rung in LegCo Council meetings.
    
    When using in combination, these functions are essentially hansard files crawler.
-
-1. **Meeting Schedule Database**
-
-   <https://www.legco.gov.hk/odata/english/schedule-db.html>
    
+   \ 
+
+1. [**Meeting Schedule Database**](./schedule.html)
+
    This database contains the member list and the meeting schedule of the LegCo Council and every committee
    since the fifth term of LegCo.
    This database is accessible with the following functions:
@@ -111,10 +111,10 @@ of these APIs. The databases supported by this package and the associating funct
    While the purpose of `member()` is similar to `speakers()` of the Hansard Database, `member()` returns only 
    LegCo members. Their identifiers, i.e. Speaker ID and Member ID, are unique and not interchangeable.
    
-1. **Voting Results Database**
-
-   <https://www.legco.gov.hk/odata/english/vrdb.html>
+   \ 
    
+1. [**Voting Results Database**](./voting.html)
+
    This database contains voting results of the LegCo Council, the House Committee and the Finance Committee
    and its subcomittees starting from the fifth term of LegCo.
    This database is accessible with the following function:
@@ -125,7 +125,9 @@ of these APIs. The databases supported by this package and the associating funct
    While `voting_results()` of the Hansard Database returns only the overall result of votes conducted in 
    Council meetings, `voting_record()` returns much more detailed information of votes conducted in Council 
    and other four committees and subcommittees meetings.
-
+   
+   \ 
+   
 A generic function `legco_api()` is available for access to other databases and endpoints of the LegCo APIs that 
 are not specified here.
    
