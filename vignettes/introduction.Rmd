@@ -40,9 +40,7 @@ The LegCo APIs consist of different databases with seperate structures and ident
 and each database has its own API. The functions in this package correspond to the various data endpoints
 of these APIs. The databases supported by this package and the associating functions are as follow.
 
-\ 
-
-1. [**Attendance Database**](./attn.html)
+1. **Attendance Database**
 
    This database contains the attendance record of LegCo Council and committee open meetings since the
    sixth term.
@@ -51,9 +49,9 @@ of these APIs. The databases supported by this package and the associating funct
    
    * `attendance()` fetches the attendance of members in LegCo Council and committee meetings.
    
-   \ 
+   See [here](./attn.html) for more information of this database.
 
-1. [**Bills Database**](./bills.html)
+1. **Bills Database**
 
    This database contains key information of all the bills that have been presented in LegCo since 1906. 
    This database is accessible with the following function:
@@ -63,9 +61,9 @@ of these APIs. The databases supported by this package and the associating funct
    Comapred to `bills()` of the Hansard Database, `all_bills()` provides much more comprehensive information 
    of bills, including all key dates and the proposer.
    
-   \ 
+   See [here](./bills.html) for more information of this database.
 
-1. [**Hansard Database**](./hansard.html)
+1. **Hansard Database**
 
    This database contains information on matters discussed in LegCo Council meeting since the fifth term
    of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks 
@@ -91,9 +89,9 @@ of these APIs. The databases supported by this package and the associating funct
    
    When using in combination, these functions are essentially hansard files crawler.
    
-   \ 
+   See [here](./hansard.html) for more information of this database.
 
-1. [**Meeting Schedule Database**](./schedule.html)
+1. **Meeting Schedule Database**
 
    This database contains the member list and the meeting schedule of the LegCo Council and every committee
    since the fifth term of LegCo.
@@ -111,9 +109,9 @@ of these APIs. The databases supported by this package and the associating funct
    While the purpose of `member()` is similar to `speakers()` of the Hansard Database, `member()` returns only 
    LegCo members. Their identifiers, i.e. Speaker ID and Member ID, are unique and not interchangeable.
    
-   \ 
+   See [here](./schedule.html) for more information of this database.
    
-1. [**Voting Results Database**](./voting.html)
+1. **Voting Results Database**
 
    This database contains voting results of the LegCo Council, the House Committee and the Finance Committee
    and its subcomittees starting from the fifth term of LegCo.
@@ -126,14 +124,56 @@ of these APIs. The databases supported by this package and the associating funct
    Council meetings, `voting_record()` returns much more detailed information of votes conducted in Council 
    and other four committees and subcommittees meetings.
    
-   \ 
+   See [here](./voting.html) for more information of this database.
    
+---
+
 A generic function `legco_api()` is available for access to other databases and endpoints of the LegCo APIs that 
 are not specified here.
    
 All functions can also be accessed with the prefix `legco_`, e.g. `legco_speakers()` and `speakers()`
 return the same result.
-   
+
+## API Limits
+
+### Request Limit
+
+LegCo APIs have a limit of 60 requests per IP per minute. Once the limit is reached, you will not be able to retrieve 
+any data for awhile. If you run into the following error message while pretty sure you have the correct parameters, 
+you have probably reached the limit:
+
+```{r echo = FALSE, message = TRUE}
+# Generate error message by requesting non-existence id
+speakers(0)
+```
+
+### Node Count Limit
+
+Another limit is the node count limit which is associated with the setting of the LegCo API server.
+The limit is at most 100 nodes per request, or approximately 19 filtering conditions in most cases. For instance,
+the following code contains 20 filtering conditions and thus reach the node count limit:
+
+```{r }
+# A request with 20 filtering conditions
+x <- c(1, 3, 5, 7, 9, 11, 13, 15, 17, 19,
+       21, 23, 25, 27, 29, 31, 33, 35, 37, 39)
+speakers(x)
+```
+
+If you run into the error message above, you need to break it down to multiple smaller requests,
+like [one of the examples below](#examples).
+
+Note that numeric filtering conditions that are sequential are not subjected to this limit: 
+
+```{r eval = FALSE}
+# A request with sequential numeric filtering conditions
+x <- c(1:50)
+speakers(x)
+```
+
+The code above will execute just fine without reaching the node count limit even though it effectively 
+contains 50 filtering conditions.
+
 ## Examples
 
 The following code shows all the LegCo Council meetings held from May 1, 2018 to May 31, 2018.
@@ -178,8 +218,7 @@ x <- unique(w$SpeakerID[!is.na(w$SpeakerID)])
 speakers(id = x)
 ```
 
-Note that there is a limit on the length of the parameters, which is at most 100 nodes as defined in the the Open Data Protocol,
-or approximately 19 filtering conditions. The code above produces 27 filtering conditions which are too long.
+The code above produces 27 filtering conditions which reahces the node count limit.
 If you need have parameters longer than that, break them down into multiple requests:
 
 ```{r echo=TRUE, message=FALSE}
