@@ -42,12 +42,12 @@ capitalise <- function(string) {
 ## Function to calculate node count of query
 node_count <- function(url) {
   url <- gsub(".*\\$filter=|\\&\\$.*", "", url)
-  url <- strsplit(url, " and ")[[1]]
+  url <- unlist(strsplit(url, " and "))
   url <- strsplit(url, " or ")
-  n <- length(url) # 'and' count
+  n <- length(url) - 1 # 'and' count
   for (i in 1:length(url)) {
-    n <- n + length(url[[i]]) # 'or' count
-    n <- n + length(url[[i]]) * 4 # individual condition count
+    n <- n + length(url[[i]]) - 1 # 'or' count
+    n <- n + sum(ifelse(grepl("datetime", url[[i]]), 5, 4)) # individual condition count
   }
   n
 }
