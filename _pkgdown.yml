@@ -1,6 +1,7 @@
 template:
   params:
     bootswatch: yeti
+    ganalytics: UA-143765255-1
 
 authors:
   Elgar Teo:
