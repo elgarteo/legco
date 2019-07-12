@@ -81,7 +81,6 @@ subjects <- function(hansard_id = NULL, rundown_id = NULL, section_code = NULL,
   }
   
   legco_api("hansard", query, n, verbose)
-  
 }
 
 #' @rdname subjects

@@ -75,12 +75,10 @@ petitions <- function(rundown_id = NULL, hansard_id = NULL, lang = "en",
   
   df <- legco_api("hansard", query, n, verbose)
   
-  if(!is.null(df)) {
-    # Create vector if more than one petition sponsor
-    df$Speakers <- lapply(df$Speakers, function(x) unlist(strsplit(x, ", ")))
-    
-    df
-  }
+  # Create vector if more than one petition sponsor
+  df$Speakers <- lapply(df$Speakers, function(x) unlist(strsplit(x, ", ")))
+  
+  df
 }
 
 #' @rdname petitions

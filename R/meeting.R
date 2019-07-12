@@ -76,11 +76,9 @@ meeting <- function(id = NULL, meet_id = NULL, from = '1900-01-01',
   
   df <- legco_api("schedule", query, n, verbose)
   
-  if (!is.null(df)) {
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-    
-    df
-  }
+  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  
+  df
 }
 
 #' @rdname meeting

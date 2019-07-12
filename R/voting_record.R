@@ -126,16 +126,14 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
   
   df <- legco_api("vrdb/odata", query, n, verbose)
   
-  if (!is.null(df)) {
-    # Rename column names
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-    names(df)[names(df) == "TermNo"] <- "TermID"
-    names(df)[names(df) == "Type"] <- "Committee"
-    df$TermID <- sapply(df$TermID, convert_term_no)
-    df <- df[, c(1, 2:4, 6:36)]
-    
-    df
-  }
+  # Rename column names
+  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  names(df)[names(df) == "TermNo"] <- "TermID"
+  names(df)[names(df) == "Type"] <- "Committee"
+  df$TermID <- sapply(df$TermID, convert_term_no)
+  df <- df[, c(1, 2:4, 6:36)]
+  
+  df
 }
 
 #' @rdname voting_record

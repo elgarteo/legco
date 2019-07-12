@@ -31,21 +31,19 @@ member_term <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
   
   df <- legco_api("schedule", query, 10000, verbose)
   
-  if (!is.null(df)) {
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-    
-    # Combine duplicated entries of members who have served more than one term
-    df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)] <- 
-      lapply(1:sum(duplicated(df$MemberID)), function(x) { 
-        # Combine multiple TermID of the same member into a single string
-        c(df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)][x], 
-              df$TermID[duplicated(df$MemberID)][x])
-      })
-    df <- df[!duplicated(df$MemberID), ]
-    rownames(df) <- 1:nrow(df)
-    
-    df
-  }
+  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  
+  # Combine duplicated entries of members who have served more than one term
+  df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)] <- 
+    lapply(1:sum(duplicated(df$MemberID)), function(x) { 
+      # Combine multiple TermID of the same member into a single string
+      c(df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)][x], 
+        df$TermID[duplicated(df$MemberID)][x])
+    })
+  df <- df[!duplicated(df$MemberID), ]
+  rownames(df) <- 1:nrow(df)
+  
+  df
 }
 
 #' @rdname member_term

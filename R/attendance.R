@@ -74,12 +74,10 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   
   df <- legco_api("attn", query, n, verbose)
   
-  if (!is.null(df)) {
-    # Rename column names
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-    
-    df
-  }
+  # Rename column names
+  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  
+  df
 }
 
 #' @rdname attendance
