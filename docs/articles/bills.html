@@ -15,7 +15,13 @@
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-143765255-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143765255-1');
+</script>
 </head>
 <body>
     <div class="container template-article">
@@ -97,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Bills Database</h1>
             
-            <h4 class="date">2019-07-05</h4>
+            <h4 class="date">2019-07-12</h4>
       
       
       <div class="hidden name"><code>bills.Rmd</code></div>
@@ -114,7 +120,7 @@
 <div id="key-identifiers" class="section level3">
 <h3 class="hasAnchor">
 <a href="#key-identifiers" class="anchor"></a>Key Identifiers</h3>
-<p>This database has an <code>InternalKey</code> which has little value since there is only one data endpoint and it is not interchangeable with other databases. To locate the bill in other databases, it is advisable to use the First, Second and Third Reading dates as the filter parameters (e.g. Hansard database) or find the CommitteeID of the relevant bill committee using <code>legcoplus::search_committee()</code> from the package <a href="https://elgarteo.ga/legco/legcoplus">legcoplus</a> (e.g. Meeting Schedule Database).</p>
+<p>This database has an <code>InternalKey</code> which has little value since there is only one data endpoint and it is not interchangeable with other databases. To locate the bill in other databases, it is advisable to use the First, Second and Third Reading dates as the filter parameters (e.g. Hansard database) or find the CommitteeID of the relevant bill committee using <code><a href="https://www.rdocumentation.org/packages/legcoplus/topics/search_committee">legcoplus::search_committee()</a></code> from the package <a href="https://elgarteo.ga/legco/legcoplus">legcoplus</a> (e.g. Meeting Schedule Database).</p>
 <hr>
 <p>This database is accessible with the following function:</p>
 </div>
@@ -123,8 +129,8 @@
 <h2 class="hasAnchor">
 <a href="#all_bills" class="anchor"></a>all_bills()</h2>
 <p><code><a href="../reference/all_bills.html">all_bills()</a></code> fetches the information of bills that have gone through LegCo.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch bills that passed thrid reading on February 20, 2019</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="../reference/all_bills.html">all_bills</a></span>(<span class="dt">third_from =</span> <span class="st">"2019-02-20"</span>)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch bills that passed thrid reading on February 20, 2019</span>
+<span class="kw"><a href="../reference/all_bills.html">all_bills</a></span>(<span class="dt">third_from =</span> <span class="st">"2019-02-20"</span>)</code></pre></div>
 <pre><code>##          InternalKey        OrdinanceTitleEng OrdinanceTitleChi
 ## 1 06657              Inland Revenue Ordinance          稅務條例
 ## 2 06661              Inland Revenue Ordinance          稅務條例
@@ -300,21 +306,36 @@
 ## 2                                                                                                     
 ## 3                                                                                                     
 ## 4 https://www.legco.gov.hk/yr18-19/chinese/counmtg/hansard/cm20190418-translate-c.pdf#nameddest=b2d01a
-##    SecondReadingDate3 SecondReadingDate3HansardUrlEng
-## 1                &lt;NA&gt;                                
-## 2                &lt;NA&gt;                                
-## 3                &lt;NA&gt;                                
-## 4 2019-05-08T00:00:00                                
-##   SecondReadingDate3HansardUrlChi  SecondReadingDate4
-## 1                                                &lt;NA&gt;
-## 2                                                &lt;NA&gt;
-## 3                                                &lt;NA&gt;
-## 4                                 2019-05-09T00:00:00
-##   SecondReadingDate4HansardUrlEng SecondReadingDate4HansardUrlChi
-## 1                                                                
-## 2                                                                
-## 3                                                                
-## 4                                                                
+##    SecondReadingDate3
+## 1                &lt;NA&gt;
+## 2                &lt;NA&gt;
+## 3                &lt;NA&gt;
+## 4 2019-05-08T00:00:00
+##                                                                        SecondReadingDate3HansardUrlEng
+## 1                                                                                                     
+## 2                                                                                                     
+## 3                                                                                                     
+## 4 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190508-translate-e.pdf#nameddest=b2d01a
+##                                                                        SecondReadingDate3HansardUrlChi
+## 1                                                                                                     
+## 2                                                                                                     
+## 3                                                                                                     
+## 4 https://www.legco.gov.hk/yr18-19/chinese/counmtg/hansard/cm20190508-translate-c.pdf#nameddest=b2d01a
+##    SecondReadingDate4
+## 1                &lt;NA&gt;
+## 2                &lt;NA&gt;
+## 3                &lt;NA&gt;
+## 4 2019-05-09T00:00:00
+##                                                                        SecondReadingDate4HansardUrlEng
+## 1                                                                                                     
+## 2                                                                                                     
+## 3                                                                                                     
+## 4 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190509-translate-e.pdf#nameddest=cwc01a
+##                                                                        SecondReadingDate4HansardUrlChi
+## 1                                                                                                     
+## 2                                                                                                     
+## 3                                                                                                     
+## 4 https://www.legco.gov.hk/yr18-19/chinese/counmtg/hansard/cm20190509-translate-c.pdf#nameddest=cwc01a
 ##    SecondReadingDate5 SecondReadingDate5HansardUrlEng
 ## 1                &lt;NA&gt;                                
 ## 2                &lt;NA&gt;                                
