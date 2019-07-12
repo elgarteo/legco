@@ -138,7 +138,7 @@ return the same result.
 
 ### Request Limit
 
-LegCo APIs have a limit of 60 requests per IP per minute. Once the limit is reached, you will not be able to retrieve 
+LegCo APIs have a limit of 1000 requests per IP per hour. Once the limit is reached, you will not be able to retrieve 
 any data for awhile. If you run into the following error message while pretty sure you have the correct parameters, 
 you have probably reached the limit:
 
