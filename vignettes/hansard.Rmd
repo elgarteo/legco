@@ -109,7 +109,8 @@ i.e. *Smoking (Public Health) (Amendment) Bill 2019*, by specifying the Bookmark
 
 ```{r }
 # Fetch the first bill under second reading on February 20, 2019
-rundown(bookmark_name = "b2r01", from = "2019-02-20", to = "2019-02-20")
+v <- rundown(bookmark_name = "b2r01", from = "2019-02-20", to = "2019-02-20")
+v
 ```
 
 Similarly, it can be applicable on other SectionCode as well, such as "pop01" and "pop02".
@@ -170,9 +171,10 @@ v
 `addresses()` fetches addresses made by members or government officials before tabling documents
 in LegCo Council meetings.
 
-```{r, eval = FALSE, echo = FALSE}
-# Bug in address endpoint
-addresses(hansard_id = 2714)
+```{r }
+# Fetch addresses given during the Council meeting on February 20, 2019
+v <- addresses(hansard_id = 2714)
+v
 ```
 
 ## statements()
