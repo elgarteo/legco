@@ -6,12 +6,14 @@
 \title{Rundown from LegCo Hansards}
 \usage{
 rundown(id = NULL, hansard_id = NULL, speaker_id = NULL,
-  lang = "en", from = "1900-01-01", to = Sys.Date(), floor = FALSE,
-  n = 1000, extra_param = NULL, verbose = TRUE)
+  lang = "en", bookmark_name = NULL, from = "1900-01-01",
+  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
+  verbose = TRUE)
 
 legco_rundown(id = NULL, hansard_id = NULL, speaker_id = NULL,
-  lang = "en", from = "1900-01-01", to = Sys.Date(), floor = FALSE,
-  n = 1000, extra_param = NULL, verbose = TRUE)
+  lang = "en", bookmark_name = NULL, from = "1900-01-01",
+  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
+  verbose = TRUE)
 }
 \arguments{
 \item{id}{The id of a rundown, or a vector of ids. Defaults to `NULL`.}
@@ -25,6 +27,9 @@ returns rundowns from all hansard files. Defaults to `NULL`.}
 \item{lang}{The language of hansard files to search from. `'en'` returns the
 English version. `'zh'` returns the Traditional Chinese version. Defaults
 to `'en'`.}
+
+\item{bookmark_name}{The bookmark name of the rundown, or a vector of names.
+Defaults to `NULL`.}
 
 \item{from}{Only fetch results from hansards of meetings on or after this
 date. Accepts character values in `'YYYY-MM-DD'` format, and objects of

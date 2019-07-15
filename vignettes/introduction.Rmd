@@ -142,7 +142,7 @@ LegCo APIs have a limit of 1000 requests per IP per hour. Once the limit is reac
 any data for awhile. If you run into the following error message while pretty sure you have the correct parameters, 
 you have probably reached the limit:
 
-```{r echo = FALSE, message = TRUE}
+```{r echo = FALSE, message = TRUE, error = TRUE}
 # Generate error message by requesting non-existence id
 speakers(0)
 ```
@@ -213,7 +213,7 @@ w$Content[41:42]
 
 To check which members have spoken about the motion and to look up some of their names:
 
-```{r, echo = TRUE, message = TRUE}
+```{r, echo = TRUE, message = TRUE, error = TRUE}
 x <- unique(w$SpeakerID[!is.na(w$SpeakerID)])
 speakers(id = x)
 ```

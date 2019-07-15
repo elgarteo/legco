@@ -151,12 +151,14 @@
     </div>
 
     <pre class="usage"><span class='fu'>rundown</span>(<span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>speaker_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>bookmark_name</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
 <span class='fu'>legco_rundown</span>(<span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>speaker_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>bookmark_name</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -180,6 +182,11 @@ returns rundowns from all hansard files. Defaults to `NULL`.</p></td>
       <td><p>The language of hansard files to search from. `'en'` returns the
 English version. `'zh'` returns the Traditional Chinese version. Defaults
 to `'en'`.</p></td>
+    </tr>
+    <tr>
+      <th>bookmark_name</th>
+      <td><p>The bookmark name of the rundown, or a vector of names.
+Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>from</th>
