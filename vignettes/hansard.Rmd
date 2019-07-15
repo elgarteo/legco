@@ -2,8 +2,10 @@
 title: "Hansard Database"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
-vignette: |
-  %\VignetteIndexEntry{introduction} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
+vignette: >
+  %\VignetteIndexEntry{hansard} 
+  %\VignetteEngine{knitr::rmarkdown} 
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, echo = FALSE}

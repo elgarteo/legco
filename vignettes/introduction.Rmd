@@ -2,8 +2,10 @@
 title: "Introduction to legco"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
-vignette: |
-  %\VignetteIndexEntry{introduction} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
+vignette: >
+  %\VignetteIndexEntry{introduction} 
+  %\VignetteEngine{knitr::rmarkdown} 
+  %\VignetteEncoding{UTF-8}
 ---
 
 `legco` is an R package to fetch data from the Hong Kong Legislative Council (LegCo) APIs. It provides 

@@ -2,8 +2,10 @@
 title: "Bills Database"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
-vignette: |
-  %\VignetteIndexEntry{bills} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
+vignette: >
+  %\VignetteIndexEntry{bills} 
+  %\VignetteEngine{knitr::rmarkdown} 
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, echo = FALSE}

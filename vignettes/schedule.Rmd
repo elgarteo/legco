@@ -2,8 +2,10 @@
 title: "Meeting Schedule Database"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
-vignette: |
-  %\VignetteIndexEntry{schedule} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
+vignette: >
+  %\VignetteIndexEntry{schedule} 
+  %\VignetteEngine{knitr::rmarkdown} 
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, echo = FALSE}
