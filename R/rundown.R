@@ -29,6 +29,9 @@
 #'   the original language delivered by the speakers in LegCo. If `TRUE`, the
 #'   language option is ignored. Defaults to `FALSE`.
 #'
+#' @param bookmark_name The bookmark name of the rundown, or a vector of names.
+#'   Defaults to `NULL`.
+#'
 #' @param n The number of subjects to request. Defaults to `1000`.
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
@@ -39,9 +42,9 @@
 #' @export
 #' 
 rundown <- function(id = NULL, hansard_id = NULL, speaker_id = NULL,
-                     lang = "en", from = '1900-01-01', to = Sys.Date(),
+                     lang = "en", bookmark_name = NULL, from = '1900-01-01', to = Sys.Date(),
                      floor = FALSE, n = 1000, extra_param = NULL, verbose = TRUE) {
-  query <- "Rundown?$select=RundownID,MeetingDate,Content,SpeakerID,HansardID,RundownID,HansardFileURL"
+  query <- "Rundown?$select=RundownID,MeetingDate,Content,BookmarkName,SpeakerID,HansardID,HansardFileURL"
   
   filter_args <- {}
   
@@ -66,6 +69,10 @@ rundown <- function(id = NULL, hansard_id = NULL, speaker_id = NULL,
     } else if (lang == "zh") {
       filter_args <- c(filter_args, "HansardType eq 'Chinese'")
     } 
+  }
+  
+  if (!is.null(bookmark_name)) {
+    filter_args <- c(filter_args, generate_filter("BookmarkName", bookmark_name))
   }
   
   from <- as.Date(from)

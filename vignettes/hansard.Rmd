@@ -34,6 +34,9 @@ as individual paragraphs in the Record of Proceedings.
 * `SectionCode` is the alphabetical code stipulating the type of business as indicated in the LegCo Rules of 
 Procedures 18(1) that a paragraph text is referring to in the hansard file. 
 
+* `BookmarkName` is the alphabetical code stipulating details of the rundown. A detailed explanation
+can be found [here](#rundown).
+
 * `SpeakerID` is the numerical ID stipulating the speaker of a paragraph text in the hansard file.
 
 These identifiers essentially indicate the *when* (HansardID), *where* (RundownID), *what* (SectionCode) 
@@ -72,13 +75,14 @@ head(v)
 `subjects()` fetches all subjects being discussed in a Council meeting. 
 
 ```{r }
-# Fetch second reading of bills during the Council meeting on February 20, 2019.
+# Fetch second reading of bills during the Council meeting on February 20, 2019
 v <- subjects(hansard_id = 2714, section_code = "b2r")
 head(v)
 ```
 
 The RundownID indicates the starting RundownID of the subject concerned. For instance, the starting 
-RundownID of *Smoking (Public Health) (Amendment) Bill 2019* is 899628, meaning that the paragraph text of this subject is from 899628 to 899649.
+RundownID of *Smoking (Public Health) (Amendment) Bill 2019* is 899628, meaning that the paragraph text
+of this subject is from 899628 to 899649.
 
 If the business is a continuation of a previous meeting, the date of the previous meeting will be shown 
 in the field `ResumptionOf`.
@@ -96,13 +100,27 @@ rownames(v) <- 1:nrow(v)
 v[3:5, ]
 ```
 
+Though of little use, BookmarkName can be a useful parameter to search for the neccesary data. 
+The BookmarkName of the starting Rundown of a subject is a combination of section code and
+the sequence number. For instance, the two bills that were under the process of second reading
+have a BookmarkName of "b2r01" and "b2r02" respectively. Therefore, it is possible to directly
+fetch the starting RundownID of the first bill under second reading on February 20, 2019,
+i.e. *Smoking (Public Health) (Amendment) Bill 2019*, by specifying the BookmarkName:
+
+```{r }
+# Fetch the first bill under second reading on February 20, 2019
+rundown(bookmark_name = "b2r01", from = "2019-02-20", to = "2019-02-20")
+```
+
+Similarly, it can be applicable on other SectionCode as well, such as "pop01" and "pop02".
+
 ## questions()
 
 `questions()` fetches the question put on the government by LegCo members. Note that this function does 
 not take HansardID as a filtering parameter.
 
 ```{r }
-# Fetch questions being put on the government during the Council meeting on February 20, 2019.
+# Fetch questions being put on the government during the Council meeting on February 20, 2019
 v <- questions(from = "2019-02-20", to = "2019-02-20")
 head(v)
 ```
@@ -115,7 +133,7 @@ to determine the range of the full question text.
 `bills()` fetches bills being debated in LegCo Countil meetings.
 
 ```{r }
-# Fetch bills debated during the Council meeting on February 20, 2019.
+# Fetch bills debated during the Council meeting on February 20, 2019
 v <- bills(hansard_id = 2714)
 head(v)
 ```
@@ -129,7 +147,7 @@ a particular bill, use `all_bills()` instead.
 `motions()` fetches the motions discussed in LegCo Council meetings. 
 
 ```{r }
-# Fetch motions discussed during the Council meeting on February 20, 2019.
+# Fetch motions discussed during the Council meeting on February 20, 2019
 v <- motions(hansard_id = 2714)
 head(v)
 ```
@@ -142,7 +160,7 @@ which can be used to determine the range of the full question text.
 `petitions()` fetches the petitions raised by LegCo members in Council meetings. 
 
 ```{r }
-# Fetch petition laid during the Council meeting on January 19, 2018.
+# Fetch petition laid during the Council meeting on January 19, 2018
 v <- petitions(from = "2018-01-10")
 v
 ```
@@ -162,7 +180,7 @@ addresses(hansard_id = 2714)
 `statements()` fetches statments made by government officials in LegCo Council meetings.
 
 ```{r }
-# Fetch statements made by government officials during the Council meeting on April 22, 2015.
+# Fetch statements made by government officials during the Council meeting on April 22, 2015
 v <- statements(from = "2015-04-22")
 v
 ```
@@ -172,7 +190,7 @@ v
 `voting_results()` fetches the results of votes conducted in LegCo Council meetings. 
 
 ```{r }
-# Fetch results of votes conducted during the Council meeting on January 19, 2018.
+# Fetch results of votes conducted during the Council meeting on January 19, 2018
 v <- voting_results(hansard_id = 2714)
 head(v)
 ```
@@ -186,7 +204,7 @@ infividual members, use `voting_record()` instead.
 Council meetings.
 
 ```{r }
-# Fetch instances of summoning bell during the Council meeting on January 19, 2018.
+# Fetch instances of summoning bell during the Council meeting on January 19, 2018
 v <- summoning_bells(hansard_id = 2714)
 head(v)
 ```
