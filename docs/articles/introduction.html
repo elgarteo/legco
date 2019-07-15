@@ -103,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Introduction to legco</h1>
             
-            <h4 class="date">2019-07-12</h4>
+            <h4 class="date">2019-07-15</h4>
       
       
       <div class="hidden name"><code>introduction.Rmd</code></div>
@@ -238,7 +238,7 @@
 <a href="#request-limit" class="anchor"></a>Request Limit</h3>
 <p>LegCo APIs have a limit of 1000 requests per IP per hour. Once the limit is reached, you will not be able to retrieve any data for awhile. If you run into the following error message while pretty sure you have the correct parameters, you have probably reached the limit:</p>
 <pre><code>## Retrieving records...</code></pre>
-<pre><code>## The request did not return any data. Please check your parameters.</code></pre>
+<pre><code>## Error in legco_api("hansard", query, n = 1000, verbose): The request did not return any data. Please check your parameters.</code></pre>
 </div>
 <div id="node-count-limit" class="section level3">
 <h3 class="hasAnchor">
@@ -249,12 +249,75 @@
 <span id="cb5-3"><a href="#cb5-3"></a>       <span class="dv">21</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">27</span>, <span class="dv">29</span>, <span class="dv">31</span>, <span class="dv">33</span>, <span class="dv">35</span>, <span class="dv">37</span>, <span class="dv">39</span>)</span>
 <span id="cb5-4"><a href="#cb5-4"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(x)</span></code></pre></div>
 <pre><code>## Retrieving records...</code></pre>
-<pre><code>## Error: Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
+<pre><code>## Retrieved 20 record(s). 20 record(s) available in total.</code></pre>
+<pre><code>##    SpeakerID                NameChi
+## 1          7             政務司司長
+## 2          5         代理全委會主席
+## 3          3               代理主席
+## 4          1                   主席
+## 5         15   政制及內地事務局局長
+## 6         21             發展局局長
+## 7         17             教育局局長
+## 8         19       食物及衞生局局長
+## 9         13   財經事務及庫務局局長
+## 10        11         民政事務局局長
+## 11         9             律政司司長
+## 12        31 商務及經濟發展局副局長
+## 13        29           教育局副局長
+## 14        25           環境局副局長
+## 15        23 財經事務及庫務局副局長
+## 16        27           保安局副局長
+## 17        35                 李卓人
+## 18        33                 何俊仁
+## 19        39                 涂謹申
+## 20        37                 李華明
+##                                                    NameEng Type Initial
+## 1                       CHIEF SECRETARY FOR ADMINISTRATION   PO     CSA
+## 2                                          DEPUTY CHAIRMAN   LC     DCM
+## 3                                         DEPUTY PRESIDENT   LC    DPSD
+## 4                                                PRESIDENT   LC     PSD
+## 5        SECRETARY FOR CONSTITUTIONAL AND MAINLAND AFFAIRS   PO    SCMA
+## 6                                SECRETARY FOR DEVELOPMENT   PO      SD
+## 7                                  SECRETARY FOR EDUCATION   PO      SE
+## 8                            SECRETARY FOR FOOD AND HEALTH   PO     SFH
+## 9        SECRETARY FOR FINANCIAL SERVICES AND THE TREASURY   PO    SFST
+## 10                              SECRETARY FOR HOME AFFAIRS   PO     SHA
+## 11                                   SECRETARY FOR JUSTICE   PO      SJ
+## 12   UNDER SECRETARY FOR COMMERCE AND ECONOMIC DEVELOPMENT   PO   USCED
+## 13                           UNDER SECRETARY FOR EDUCATION   PO   USEDU
+## 14                     UNDER SECRETARY FOR THE ENVIRONMENT   PO   USENV
+## 15 UNDER SECRETARY FOR FINANCIAL SERVICES AND THE TREASURY   PO  USFAST
+## 16                            UNDER SECRETARY FOR SECURITY   PO     USS
+## 17                                           LEE CHEUK-YAN   MB     LCY
+## 18                                               ALBERT HO   MB      AH
+## 19                                                JAMES TO   MB     TKS
+## 20                                                 FRED LI   MB      FL
+##    FirstName LastName
+## 1                    
+## 2                    
+## 3                    
+## 4                    
+## 5                    
+## 6                    
+## 7                    
+## 8                    
+## 9                    
+## 10                   
+## 11                   
+## 12                   
+## 13                   
+## 14                   
+## 15                   
+## 16                   
+## 17 Cheuk-yan      LEE
+## 18  Chun-yan       HO
+## 19   Kun-sun       TO
+## 20  Wah-ming       LI</code></pre>
 <p>If you run into the error message above, you need to break it down to multiple smaller requests, like <a href="#examples">one of the examples below</a>.</p>
 <p>Note that numeric filtering conditions that are sequential are not subjected to this limit:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># A request with sequential numeric filtering conditions</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># A request with sequential numeric filtering conditions</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(x)</span></code></pre></div>
 <p>The code above will execute just fine without reaching the node count limit even though it effectively contains 50 filtering conditions.</p>
 </div>
 </div>
@@ -262,7 +325,7 @@
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p>The following code shows all the LegCo Council meetings held from May 1, 2018 to May 31, 2018.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</span></code></pre></div>
 <pre><code>##    HansardID         MeetingDate          AgendaDate isCEQandA isCEQT
 ## 1       2407 2018-05-02T00:00:00 2018-05-02T00:00:00         0      0
 ## 2       2526 2018-05-03T00:00:00 2018-05-02T00:00:00         0      0
@@ -290,7 +353,7 @@
 ## 11  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180530-translate-e.pdf
 ## 12  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180531-translate-e.pdf</code></pre>
 <p>To fetch the items on the agenda of the meeting on May 23, 2018:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2451</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2451</span>)</span></code></pre></div>
 <pre><code>##            MeetingDate
 ## 1  2018-05-23T00:00:00
 ## 2  2018-05-23T00:00:00
@@ -404,23 +467,22 @@
 ## 36           NA         som    828827      2451</code></pre>
 <p>In this example, we will look into the motion <em>Not forgetting the 4 June incident</em>.</p>
 <p>The section codes indicate the type of the business. For exmaple, the section code “mbm” of the <em>Not forgetting the 4 June incident</em> means that it is a member’s motion:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>legco_section_type[legco_section_type<span class="op">$</span>SectionCode <span class="op">==</span><span class="st"> "mbm"</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>legco_section_type[legco_section_type<span class="op">$</span>SectionCode <span class="op">==</span><span class="st"> "mbm"</span>, ]</span></code></pre></div>
 <pre><code>##    SectionCode          NameEng  NameChi
 ## 45         mbm Members' motions 議員議案</code></pre>
 <p>The RundownID indicates the location of the first paragraph of the matter concerned in the hansard file. In other words, paragraphs of RundownID between 828783 and 828826 (one RundownID prior to the next item on the agenda) are the records of the matter the <em>Not forgetting the 4 june incident</em> during the meeting. The full text of these paragraphs can be fetched by:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="co"># Order by RundownID, i.e. chronological order</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a>w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(w<span class="op">$</span>RundownID), ]</span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(w)</span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a>w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="co"># Order by RundownID, i.e. chronological order</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(w<span class="op">$</span>RundownID), ]</span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(w)</span>
+<span id="cb16-5"><a href="#cb16-5"></a><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>]</span></code></pre></div>
 <pre><code>## [1] "PRESIDENT (in Cantonese): Will Members please proceed to vote."                                                  
 ## [2] "PRESIDENT (in Cantonese): Mr Abraham SHEK, do you wish to cast your vote?(Mr Abraham SHEK did not cast any vote)"</code></pre>
 <p>To check which members have spoken about the motion and to look up some of their names:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</span></code></pre></div>
-<pre><code>## Retrieving records...</code></pre>
-<pre><code>## Error: Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</span></code></pre></div>
+<pre><code>## Error in legco_api("hansard", query, n = 1000, verbose): Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
 <p>The code above produces 27 filtering conditions which reahces the node count limit. If you need have parameters longer than that, break them down into multiple requests:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span>
 <span id="cb20-2"><a href="#cb20-2"></a>y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</span>
