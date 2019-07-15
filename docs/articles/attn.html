@@ -134,8 +134,8 @@
 <h2 class="hasAnchor">
 <a href="#attendance" class="anchor"></a>attendance()</h2>
 <p><code><a href="../reference/attendance.html">attendance()</a></code> fetches the attendance record of one or more LegCo meeting(s), or the attendance record of one of more LegCo member(s), or both.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017</span>
-<span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">committee_id =</span> <span class="dv">2704</span>, <span class="dt">from =</span> <span class="st">"2017-10-13"</span>, <span class="dt">to =</span> <span class="st">"2017-10-13"</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">committee_id =</span> <span class="dv">2704</span>, <span class="dt">from =</span> <span class="st">"2017-10-13"</span>, <span class="dt">to =</span> <span class="st">"2017-10-13"</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)</span></code></pre></div>
 <pre><code>##   CommitteeID MeetID                                    MeetingNameEnglish
 ## 1        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars
 ## 2        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars
@@ -154,9 +154,9 @@
 ## 3       Hon CHU Hoi-dick        朱凱廸議員        Absent
 ## 4        Hon HO Kai-ming        何啟明議員        Absent
 ## 5     Hon LUK Chung-hung        陸頌雄議員        Absent</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch the meetings that Hon Chu Hoi-dick was absent from</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">member_id =</span> <span class="dv">910</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Fetch the meetings that Hon Chu Hoi-dick was absent from</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">member_id =</span> <span class="dv">910</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##   CommitteeID MeetID              MeetingNameEnglish MeetingNameChinese
 ## 1        2548 120628 Regular House Committee Meeting     內務委員會例會
 ## 2        2548 120629      Meeting of House Committee     內務委員會會議

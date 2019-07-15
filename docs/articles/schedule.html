@@ -137,8 +137,8 @@
 <h2 class="hasAnchor">
 <a href="#term" class="anchor"></a>term()</h2>
 <p><code><a href="../reference/term.html">term()</a></code> fetches the details of one or more LegCo term(s).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch all LegCo terms</span>
-<span class="kw"><a href="../reference/term.html">term</a></span>()</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch all LegCo terms</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="../reference/term.html">term</a></span>()</span></code></pre></div>
 <pre><code>##   TermID      Term           StartDate             EndDate
 ## 1      4 2012-2016 2012-10-01T00:00:00 2016-09-30T00:00:00
 ## 2      5 2016-2020 2016-10-01T00:00:00 2020-09-30T00:00:00</code></pre>
@@ -147,8 +147,8 @@
 <h2 class="hasAnchor">
 <a href="#session" class="anchor"></a>session()</h2>
 <p><code><a href="../reference/session.html">session()</a></code> fetches the details of one or more LegCo session(s).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch all LegCo sessions of the fifth term</span>
-<span class="kw"><a href="../reference/session.html">session</a></span>(<span class="dt">term_id =</span> <span class="dv">4</span>)</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Fetch all LegCo sessions of the fifth term</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw"><a href="../reference/session.html">session</a></span>(<span class="dt">term_id =</span> <span class="dv">4</span>)</span></code></pre></div>
 <pre><code>##   SessionID SessionCode TermID           StartDate             EndDate
 ## 1        13   2012-2013      4 2012-10-01T00:00:00 2013-10-08T00:00:00
 ## 2        14   2013-2014      4 2013-10-09T00:00:00 2014-10-07T00:00:00
@@ -159,9 +159,9 @@
 <h2 class="hasAnchor">
 <a href="#committee" class="anchor"></a>committee()</h2>
 <p><code><a href="../reference/committee.html">committee()</a></code> fetches the details of one or more LegCo committee(s).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch all LegCo committees from the sixth term</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/committee.html">committee</a></span>(<span class="dt">term_id =</span> <span class="dv">5</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Fetch all LegCo committees from the sixth term</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/committee.html">committee</a></span>(<span class="dt">term_id =</span> <span class="dv">5</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##   CommitteeID CommitteeCode
 ## 1        2660        AM-CFS
 ## 2        2662        AM-CMA
@@ -202,9 +202,9 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/committee
 <h2 class="hasAnchor">
 <a href="#membership" class="anchor"></a>membership()</h2>
 <p><code><a href="../reference/membership.html">membership()</a></code> fetches the membership of one or more LegCo member(s) or the members of one or more committee(s).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch members of the Subcommittee on Issues Relating to Bazaars</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/membership.html">membership</a></span>(<span class="dt">committee_id =</span> <span class="dv">2704</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Fetch members of the Subcommittee on Issues Relating to Bazaars</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/membership.html">membership</a></span>(<span class="dt">committee_id =</span> <span class="dv">2704</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##   MemberID CommitteeID                                    NameEng
 ## 1      258        2704 Subcommittee on Issues Relating to Bazaars
 ## 2      835        2704 Subcommittee on Issues Relating to Bazaars
@@ -233,9 +233,9 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/membershi
 ## 4       SBS, JP         梁         美芬     議員       SBS, JP
 ## 5                       梁         耀忠     議員              
 ## 6       GBS, JP         廖         長江     議員       GBS, JP</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch the committee membership of Hon Wu Chi-wai</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/membership.html">membership</a></span>(<span class="dt">member_id =</span> <span class="dv">834</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Fetch the committee membership of Hon Wu Chi-wai</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/membership.html">membership</a></span>(<span class="dt">member_id =</span> <span class="dv">834</span>)</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##   MemberID CommitteeID                        NameEng        NameChi
 ## 1      834        2025                House Committee     內務委員會
 ## 2      834        2045              Finance Committee     財務委員會
@@ -269,9 +269,9 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/membershi
 <h2 class="hasAnchor">
 <a href="#member" class="anchor"></a>member()</h2>
 <p><code><a href="../reference/member.html">member()</a></code> fetches the basic information of one or more LegCo members.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch full list of members</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/member.html">member</a></span>()
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Fetch full list of members</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/member.html">member</a></span>()</span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##   MemberID  TitleEng SurnameEng FirstnameEng EnglishName HonourableEng
 ## 1      167       Hon         NG   Leung-sing                   SBS, JP
 ## 2      188       Hon        SIN    Chung-kai                   SBS, JP
@@ -292,8 +292,8 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/member.ht
 <h2 class="hasAnchor">
 <a href="#member_term" class="anchor"></a>member_term()</h2>
 <p><code><a href="../reference/member_term.html">member_term()</a></code> fetches the all the term served by one or more LegCo members.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu</span>
-<span class="kw"><a href="../reference/member_term.html">member_term</a></span>(<span class="dt">id =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">273</span>, <span class="dv">924</span>))</code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">#Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="kw"><a href="../reference/member_term.html">member_term</a></span>(<span class="dt">id =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">273</span>, <span class="dv">924</span>))</span></code></pre></div>
 <pre><code>##   MemberID TermID
 ## 1      273   4, 5
 ## 2      924      5</code></pre>
@@ -302,8 +302,8 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/member.ht
 <h2 class="hasAnchor">
 <a href="#meeting" class="anchor"></a>meeting()</h2>
 <p><code><a href="../reference/meeting.html">meeting()</a></code> fetches the meeting schedule of LegCo Council or committees. Note that this function does not take CommitteeID as a filtering parameter. Use <code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> instead if needed.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch all meeting conducted on </span>
-<span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> <span class="st">"2019-03-20"</span>, <span class="dt">to =</span> <span class="st">"2019-03-20"</span>)</code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Fetch all meeting conducted on </span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> <span class="st">"2019-03-20"</span>, <span class="dt">to =</span> <span class="st">"2019-03-20"</span>)</span></code></pre></div>
 <pre><code>##   SlotID MeetID
 ## 1 175978 133311
 ## 2 178278 135602
@@ -337,9 +337,9 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/member.ht
 <h2 class="hasAnchor">
 <a href="#meeting_committee" class="anchor"></a>meeting_committee()</h2>
 <p><code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> fetches the meeting schedule of LegCo Council or committees. Note that this function does not support dates as filtering parameters. Use <code><a href="../reference/meeting.html">meeting()</a></code> instead if needed.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch all meetings of Subcommittee on Issues Relating to Bazaars</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/meeting_committee.html">meeting_committee</a></span>(<span class="dt">committee_id =</span> <span class="dv">2704</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Fetch all meetings of Subcommittee on Issues Relating to Bazaars</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/meeting_committee.html">meeting_committee</a></span>(<span class="dt">committee_id =</span> <span class="dv">2704</span>)</span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##   CommitteeID SlotID                                            SubjectEng
 ## 1        2704 163894 Meeting of Subcommittee on Issues Relating to Bazaars
 ## 2        2704 164380 Meeting of Subcommittee on Issues Relating to Bazaars

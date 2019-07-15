@@ -136,8 +136,8 @@
 <h2 class="hasAnchor">
 <a href="#hansard" class="anchor"></a>hansard()</h2>
 <p><code><a href="../reference/hansard.html">hansard()</a></code> fetches the information of the hansard files.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2019-02-20"</span>, <span class="dt">to =</span> <span class="st">"2019-02-20"</span>)
-v</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2019-02-20"</span>, <span class="dt">to =</span> <span class="st">"2019-02-20"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>v</span></code></pre></div>
 <pre><code>##   HansardID         MeetingDate          AgendaDate isCEQandA isCEQT
 ## 1      2691 2019-02-20T00:00:00 2019-02-20T00:00:00         0      1
 ## 2      2714 2019-02-20T00:00:00 2019-02-20T00:00:00         0      0
@@ -151,8 +151,8 @@ v</code></pre></div>
 <h2 class="hasAnchor">
 <a href="#legco_section_type" class="anchor"></a>legco_section_type</h2>
 <p><code>legco_section_type</code> is a data frame containing the meaning of the section code.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">v &lt;-<span class="st"> </span>legco_section_type
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>v &lt;-<span class="st"> </span>legco_section_type</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##   SectionCode                                            NameEng
 ## 1         r2r     Remaining proceedings after the Second Reading
 ## 2         orq                                     Oral Questions
@@ -172,9 +172,9 @@ v</code></pre></div>
 <h2 class="hasAnchor">
 <a href="#subjects" class="anchor"></a>subjects()</h2>
 <p><code><a href="../reference/subjects.html">subjects()</a></code> fetches all subjects being discussed in a Council meeting.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch second reading of bills during the Council meeting on February 20, 2019.</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>, <span class="dt">section_code =</span> <span class="st">"b2r"</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Fetch second reading of bills during the Council meeting on February 20, 2019.</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>, <span class="dt">section_code =</span> <span class="st">"b2r"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##           MeetingDate                                       Subject
 ## 1 2019-02-20T00:00:00            SECOND READING OF GOVERNMENT BILLS
 ## 2 2019-02-20T00:00:00 Smoking (Public Health) (Amendment) Bill 2019
@@ -190,11 +190,11 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/subjects.
 <h2 class="hasAnchor">
 <a href="#rundown" class="anchor"></a>rundown()</h2>
 <p><code><a href="../reference/rundown.html">rundown()</a></code> fetches the paragraph text in hansard files. Note that the result is not in any specific order so it is neccessary to reorder if needed.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch records of proceedings of the second reading of Smoking (Public Health) (Amendment) Bill 2019</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">899628</span><span class="op">:</span><span class="dv">899649</span>)
-v &lt;-<span class="st"> </span>v[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(v<span class="op">$</span>RundownID), ]
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(v) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(v)
-v[<span class="dv">3</span><span class="op">:</span><span class="dv">5</span>, ]</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Fetch records of proceedings of the second reading of Smoking (Public Health) (Amendment) Bill 2019</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">899628</span><span class="op">:</span><span class="dv">899649</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a>v &lt;-<span class="st"> </span>v[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(v<span class="op">$</span>RundownID), ]</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(v) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(v)</span>
+<span id="cb7-5"><a href="#cb7-5"></a>v[<span class="dv">3</span><span class="op">:</span><span class="dv">5</span>, ]</span></code></pre></div>
 <pre><code>##   RundownID         MeetingDate
 ## 3    899630 2019-02-20T00:00:00
 ## 4    899631 2019-02-20T00:00:00
@@ -216,9 +216,9 @@ v[<span class="dv">3</span><span class="op">:</span><span class="dv">5</span>, ]
 <h2 class="hasAnchor">
 <a href="#questions" class="anchor"></a>questions()</h2>
 <p><code><a href="../reference/questions.html">questions()</a></code> fetches the question put on the government by LegCo members. Note that this function does not take HansardID as a filtering parameter.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch questions being put on the government during the Council meeting on February 20, 2019.</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/questions.html">questions</a></span>(<span class="dt">from =</span> <span class="st">"2019-02-20"</span>, <span class="dt">to =</span> <span class="st">"2019-02-20"</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Fetch questions being put on the government during the Council meeting on February 20, 2019.</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/questions.html">questions</a></span>(<span class="dt">from =</span> <span class="st">"2019-02-20"</span>, <span class="dt">to =</span> <span class="st">"2019-02-20"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##           MeetingDate QuestionType
 ## 1 2019-02-20T00:00:00         Oral
 ## 2 2019-02-20T00:00:00         Oral
@@ -253,9 +253,9 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/questions
 <h2 class="hasAnchor">
 <a href="#bills" class="anchor"></a>bills()</h2>
 <p><code><a href="../reference/bills.html">bills()</a></code> fetches bills being debated in LegCo Countil meetings.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch bills debated during the Council meeting on February 20, 2019.</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bills.html">bills</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Fetch bills debated during the Council meeting on February 20, 2019.</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bills.html">bills</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##           MeetingDate
 ## 1 2019-02-20T00:00:00
 ## 2 2019-02-20T00:00:00
@@ -297,9 +297,9 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bills.htm
 <h2 class="hasAnchor">
 <a href="#motions" class="anchor"></a>motions()</h2>
 <p><code><a href="../reference/motions.html">motions()</a></code> fetches the motions discussed in LegCo Council meetings.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch motions discussed during the Council meeting on February 20, 2019.</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/motions.html">motions</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Fetch motions discussed during the Council meeting on February 20, 2019.</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/motions.html">motions</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)</span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##           MeetingDate
 ## 1 2019-02-20T00:00:00
 ## 2 2019-02-20T00:00:00
@@ -322,9 +322,9 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/motions.h
 <h2 class="hasAnchor">
 <a href="#petitions" class="anchor"></a>petitions()</h2>
 <p><code><a href="../reference/petitions.html">petitions()</a></code> fetches the petitions raised by LegCo members in Council meetings.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch petition laid during the Council meeting on January 19, 2018.</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/petitions.html">petitions</a></span>(<span class="dt">from =</span> <span class="st">"2018-01-10"</span>)
-v</code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Fetch petition laid during the Council meeting on January 19, 2018.</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/petitions.html">petitions</a></span>(<span class="dt">from =</span> <span class="st">"2018-01-10"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3"></a>v</span></code></pre></div>
 <pre><code>##           MeetingDate
 ## 1 2018-01-10T00:00:00
 ##                                                                                       Subject
@@ -343,9 +343,9 @@ v</code></pre></div>
 <h2 class="hasAnchor">
 <a href="#statements" class="anchor"></a>statements()</h2>
 <p><code><a href="../reference/statements.html">statements()</a></code> fetches statments made by government officials in LegCo Council meetings.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch statements made by government officials during the Council meeting on April 22, 2015.</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/statements.html">statements</a></span>(<span class="dt">from =</span> <span class="st">"2015-04-22"</span>)
-v</code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Fetch statements made by government officials during the Council meeting on April 22, 2015.</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/statements.html">statements</a></span>(<span class="dt">from =</span> <span class="st">"2015-04-22"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3"></a>v</span></code></pre></div>
 <pre><code>##           MeetingDate
 ## 1 2015-04-22T00:00:00
 ##                                                                                                   Subject
@@ -359,9 +359,9 @@ v</code></pre></div>
 <h2 class="hasAnchor">
 <a href="#voting_results" class="anchor"></a>voting_results()</h2>
 <p><code><a href="../reference/voting_results.html">voting_results()</a></code> fetches the results of votes conducted in LegCo Council meetings.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch results of votes conducted during the Council meeting on January 19, 2018.</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Fetch results of votes conducted during the Council meeting on January 19, 2018.</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)</span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##           MeetingDate
 ## 1 2019-02-20T00:00:00
 ## 2 2019-02-20T00:00:00
@@ -396,9 +396,9 @@ v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_re
 <h2 class="hasAnchor">
 <a href="#summoning_bell" class="anchor"></a>summoning_bell()</h2>
 <p><code>summong_bells()</code> fetches instances in which the summoning bell have been rung in LegCo Council meetings.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Fetch instances of summoning bell during the Council meeting on January 19, 2018.</span>
-v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/summoning_bells.html">summoning_bells</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Fetch instances of summoning bell during the Council meeting on January 19, 2018.</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/summoning_bells.html">summoning_bells</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)</span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##           MeetingDate SectionCode RundownID HansardID
 ## 1 2019-02-20T00:00:00         b2r    899635      2714
 ## 2 2019-02-20T00:00:00         mbm    899775      2714
