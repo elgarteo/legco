@@ -38,8 +38,10 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
   baseurl <- paste0("https://app.legco.gov.hk/", db, "/", query)
   
   # Check if any parameter already attached to query
-  if(stringr::str_detect(baseurl, '/.*\\?\\$')) { 
+  if (grepl('/.*\\?\\$', baseurl)) { 
     baseurl <- paste0(baseurl, "&$format=json&$inlinecount=allpages")
+  } else if (grepl('/.*\\?', baseurl)) {
+    baseurl <- paste0(baseurl, "$format=json&$inlinecount=allpages")
   } else {
     baseurl <- paste0(baseurl, "?$format=json&$inlinecount=allpages")
   }

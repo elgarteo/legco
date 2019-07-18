@@ -9,8 +9,7 @@ Description: This R package provides access to the LegCo open data APIs in R. Th
   correspond to the data endpoints of the APIs.
 Imports:
     jsonlite,
-    utils,
-    stringr
+    utils
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R(>= 3.5.0)
