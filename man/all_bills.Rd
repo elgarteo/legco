@@ -9,13 +9,13 @@ all_bills(id = NULL, ordinance = NULL, title = NULL,
   proposer = NULL, gazette_from = "all", gazette_to = "all",
   first_from = "all", first_to = "all", second_from = "all",
   second_to = "all", third_from = "all", third_to = "all",
-  n = 10000, extra_param = NULL, verbose = TRUE)
+  n = 10000, extra_param = NULL, count = FALSE, verbose = TRUE)
 
 legco_all_bills(id = NULL, ordinance = NULL, title = NULL,
   proposer = NULL, gazette_from = "all", gazette_to = "all",
   first_from = "all", first_to = "all", second_from = "all",
   second_to = "all", third_from = "all", third_to = "all",
-  n = 10000, extra_param = NULL, verbose = TRUE)
+  n = 10000, extra_param = NULL, count = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{id}{The id of a bill, or a vector of ids. Defaults to `NULL`.}
@@ -108,6 +108,9 @@ parameter. Defaults to `'all'`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}
+
+\item{count}{If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

@@ -15,13 +15,16 @@
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
+#'   
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
 #' @export
 #' 
-meeting_committee <- function(slot_id = NULL, meet_id = NULL,
-                              committee_id = NULL, extra_param = NULL, verbose = TRUE) {
+meeting_committee <- function(slot_id = NULL, meet_id = NULL, committee_id = NULL,
+                              extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "Tmeeting_committee?$select=committee_id,slot_id,Tmeeting&$expand=Tmeeting"
   
   filter_args <- {}
@@ -42,12 +45,14 @@ meeting_committee <- function(slot_id = NULL, meet_id = NULL,
     query <- paste0(query, extra_param)
   }
   
-  df <- legco_api("schedule", query, 10000, verbose)
+  df <- legco_api("schedule", query, 10000, count, verbose)
   
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-  colnames(df)[2] <- "SlotID"
-  df$CommitteeID <- sapply(df$CommitteeID, as.numeric)
-  df <- df[, c(1:2, 4:5, 8, 12:13, 9:11, 14, 6:7)]
+  if (!count) {
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    colnames(df)[2] <- "SlotID"
+    df$CommitteeID <- sapply(df$CommitteeID, as.numeric)
+    df <- df[, c(1:2, 4:5, 8, 12:13, 9:11, 14, 6:7)]
+  }
   
   df
 }

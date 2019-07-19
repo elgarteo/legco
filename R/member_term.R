@@ -7,12 +7,15 @@
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
+#'   
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
 #' @export
 #' 
-member_term <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
+member_term <- function(id = NULL, extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "Tmember_term?$select=member_id,term_id"
   
   filter_args <- {}
@@ -29,19 +32,21 @@ member_term <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
     query <- paste0(query, extra_param)
   }
   
-  df <- legco_api("schedule", query, 10000, verbose)
+  df <- legco_api("schedule", query, 10000, count, verbose)
   
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  if (!count) {
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
   
-  # Combine duplicated entries of members who have served more than one term
-  df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)] <- 
-    lapply(1:sum(duplicated(df$MemberID)), function(x) { 
-      # Combine multiple TermID of the same member into a single string
-      c(df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)][x], 
-        df$TermID[duplicated(df$MemberID)][x])
-    })
-  df <- df[!duplicated(df$MemberID), ]
-  rownames(df) <- 1:nrow(df)
+    # Combine duplicated entries of members who have served more than one term
+    df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)] <- 
+      lapply(1:sum(duplicated(df$MemberID)), function(x) { 
+        # Combine multiple TermID of the same member into a single string
+        c(df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)][x], 
+          df$TermID[duplicated(df$MemberID)][x])
+      })
+    df <- df[!duplicated(df$MemberID), ]
+    rownames(df) <- 1:nrow(df)
+  }
   
   df
 }

@@ -6,10 +6,10 @@
 \title{Speakers at LegCo}
 \usage{
 speakers(id = NULL, type = "all", extra_param = NULL,
-  verbose = TRUE)
+  count = FALSE, verbose = TRUE)
 
 legco_speakers(id = NULL, type = "all", extra_param = NULL,
-  verbose = TRUE)
+  count = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{id}{The id of a speaker at the Legislative Council, or a vector of ids. If `NULL`,
@@ -22,6 +22,9 @@ Default to `'all'`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API.
 Must begin with `'&'`.}
+
+\item{count}{If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

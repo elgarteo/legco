@@ -34,6 +34,17 @@ Meeting Schedule Database.
 * `MemberID` is the numerical ID of a LegCo member. It is same as the one in the Meeting Schedule
 Database. Note that it is a seperate identifier from the `SpeakerID` of the Hansard Database.
 
+### Total Count
+
+The function in this database has an option to return only the total count of the records matching 
+the specified parameters instead of returning the data frame containing the result.
+To activate this option, specify `count = TRUE`:
+
+```{r }
+# Fetch the total number of members absent from the LegCo Council meeting on May 22, 2019
+attendance(meet_id = 136897, from = "2019-05-22", to = "2019-05-22", attn = "a", count = TRUE)
+```
+
 ---
 
 This database is accessible with the following function:

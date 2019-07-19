@@ -14,11 +14,15 @@
 #' @param extra_param Additional query parameters defined in LegCo API.
 #' Must begin with `'&'`.
 #' 
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
+#' 
 #' @param verbose Defaults to `TRUE`.
 #' 
 #' @export
 #' 
-speakers <- function(id = NULL, type = "all", extra_param = NULL, verbose = TRUE) {
+speakers <- function(id = NULL, type = "all", extra_param = NULL,
+                     count = FALSE, verbose = TRUE) {
   query <- "Speakers?"
   
   filter_args <- {}
@@ -40,7 +44,7 @@ speakers <- function(id = NULL, type = "all", extra_param = NULL, verbose = TRUE
     query <- paste0(query, extra_param)
   }
   
-  legco_api("hansard", query, n = 1000, verbose)
+  legco_api("hansard", query, 1000, count, verbose)
   }
 
 #' @rdname speakers

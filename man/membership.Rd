@@ -7,11 +7,11 @@
 \usage{
 membership(id = NULL, member_id = NULL, committee_id = NULL,
   term_id = NULL, post = NULL, n = 10000, extra_param = NULL,
-  verbose = TRUE)
+  count = FALSE, verbose = TRUE)
 
 legco_membership(id = NULL, member_id = NULL, committee_id = NULL,
   term_id = NULL, post = NULL, n = 10000, extra_param = NULL,
-  verbose = TRUE)
+  count = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{id}{The id of a committee membership, or a vector of ids. If `NULL`, returns
@@ -35,6 +35,9 @@ members of all posts. Defaults to `NULL`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}
+
+\item{count}{If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

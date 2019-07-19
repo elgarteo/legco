@@ -38,6 +38,9 @@
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
+#'   
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
@@ -45,7 +48,7 @@
 #' 
 voting_results <- function(hansard_id = NULL, rundown_id = NULL, section_code = NULL,
                      result = "all", lang = "en", from = '1900-01-01', to = Sys.Date(),
-                     floor = FALSE, n = 1000, extra_param = NULL, verbose = TRUE) {
+                     floor = FALSE, n = 1000, extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "VotingResults?$select=MeetingDate,Subject,VoteResult,SectionCode,RundownID,HansardID,HansardFileURL"
   
   filter_args <- {}
@@ -91,7 +94,7 @@ voting_results <- function(hansard_id = NULL, rundown_id = NULL, section_code = 
     query <- paste0(query, extra_param)
   }
   
-  legco_api("hansard", query, n, verbose)
+  legco_api("hansard", query, n, count, verbose)
 }
 
 #' @rdname voting_results

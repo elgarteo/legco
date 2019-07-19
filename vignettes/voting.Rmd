@@ -37,6 +37,20 @@ advisable to use the `VoteDate` as the filter parameter (e.g. Hansard database) 
 the CommitteeID of the relevant bill committee using `legcoplus::search_committee()` from 
 the package [legcoplus](https://elgarteo.ga/legco/legcoplus) (e.g. Meeting Schedule Database).
 
+### Total Count
+
+The function in this database has an option to return only the total count of the records
+matching the specified parameters instead of returning the data frame containing the result.
+To activate this option, specify `count = TRUE`:
+
+```{r }
+# Fetch the total number of members absent from the division on the Motion Concerning
+# the Amendment to the Method for the Selection of the Chief Executive of the HKSAR
+voting_record(committee = "Council Meeting",
+              from = "2015-06-18", to = "2015-06-18",
+              vote = "absent", count = TRUE)
+```
+
 ---
 
 This database is accessible with the following function:

@@ -7,11 +7,11 @@
 \usage{
 meeting(id = NULL, meet_id = NULL, from = "1900-01-01",
   to = Sys.Date(), type = "all", term_id = NULL, n = 10000,
-  extra_param = NULL, verbose = TRUE)
+  extra_param = NULL, count = FALSE, verbose = TRUE)
 
 legco_meeting(id = NULL, meet_id = NULL, from = "1900-01-01",
   to = Sys.Date(), type = "all", term_id = NULL, n = 10000,
-  extra_param = NULL, verbose = TRUE)
+  extra_param = NULL, count = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{id}{The id of a meeting slot, or a vector of ids. If `NULL`, returns
@@ -42,6 +42,9 @@ all meetings. Defaults to `'all'`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}
+
+\item{count}{If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

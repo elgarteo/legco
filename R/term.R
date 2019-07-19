@@ -40,7 +40,7 @@ term <- function(id = NULL, date = NULL, extra_param = NULL, verbose = TRUE) {
     query <- paste0(query, extra_param)
   }
   
-  df <- legco_api("schedule", query, 10000, verbose)
+  df <- legco_api("schedule", query, 10000, FALSE, verbose)
   
   colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
   

@@ -47,6 +47,9 @@
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
+#'   
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
@@ -55,8 +58,8 @@
 voting_record <- function(committee = NULL, term_id = NULL, result = "all",
                           vote = "all", name_ch = NULL, seperate_mechanism = NULL,
                           mover_type = "all", from = '1900-01-01T00:00:00',
-                          to = Sys.time(), n = 10000,
-                          extra_param = NULL, verbose = TRUE) {
+                          to = Sys.time(), n = 10000, extra_param = NULL,
+                          count = FALSE, verbose = TRUE) {
   query <- "vVotingResult?"
   
   filter_args <- {}
@@ -124,14 +127,16 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
     query <- paste0(query, extra_param)
   }
   
-  df <- legco_api("vrdb/odata", query, n, verbose)
+  df <- legco_api("vrdb/odata", query, n, count, verbose)
   
-  # Rename column names
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-  names(df)[names(df) == "TermNo"] <- "TermID"
-  names(df)[names(df) == "Type"] <- "Committee"
-  df$TermID <- sapply(df$TermID, convert_term_no)
-  df <- df[, c(1, 2:4, 6:36)]
+  if (!count) {
+    # Rename column names
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    names(df)[names(df) == "TermNo"] <- "TermID"
+    names(df)[names(df) == "Type"] <- "Committee"
+    df$TermID <- sapply(df$TermID, convert_term_no)
+    df <- df[, c(1, 2:4, 6:36)]
+  }
   
   df
 }

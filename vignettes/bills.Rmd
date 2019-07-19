@@ -27,6 +27,17 @@ to use the First, Second and Third Reading dates as the filter parameters (e.g. 
 find the CommitteeID of the relevant bill committee using `legcoplus::search_committee()` from 
 the package [legcoplus](https://elgarteo.ga/legco/legcoplus) (e.g. Meeting Schedule Database).
 
+### Total Count
+
+The function in this database has an option to return only the total count of the records matching 
+the specified parameters instead of returning the data frame containing the result.
+To activate this option, specify `count = TRUE`:
+
+```{r }
+# Fetch the total number of bills that have been discussed in LegCo
+all_bills(count = TRUE)
+```
+
 ---
 
 This database is accessible with the following function:

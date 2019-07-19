@@ -6,10 +6,10 @@
 \title{Session of LegCo}
 \usage{
 session(id = NULL, term_id = NULL, date = NULL, extra_param = NULL,
-  verbose = TRUE)
+  count = FALSE, verbose = TRUE)
 
 legco_session(id = NULL, term_id = NULL, date = NULL,
-  extra_param = NULL, verbose = TRUE)
+  extra_param = NULL, count = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{id}{The id of a session, or a vector of ids. If `NULL`, returns terms.
@@ -25,6 +25,9 @@ to a date with `as.Date()`. Defaults to `NULL`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}
+
+\item{count}{If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

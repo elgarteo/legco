@@ -28,6 +28,9 @@
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
+#'   
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
@@ -35,7 +38,7 @@
 #' 
 attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL, 
                        attn = "all", from = '1900-01-01', to = Sys.Date(), 
-                       n = 1000, extra_param = NULL, verbose = TRUE) {
+                       n = 1000, extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "TAttendance?$select=committee_id,meet_id,meeting_name_english,meeting_name_chinese,meeting_start_date_time,member_id,member_name_english,member_name_chinese,present_absent"
   
   filter_args <- {}
@@ -72,10 +75,11 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
     query <- paste0(query, extra_param)
   }
   
-  df <- legco_api("attn", query, n, verbose)
+  df <- legco_api("attn", query, n, count, verbose)
   
-  # Rename column names
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  if (!count) {
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  }
   
   df
 }

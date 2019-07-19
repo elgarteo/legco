@@ -4,7 +4,7 @@
 \alias{legco_api}
 \title{Generic LegCo API Function}
 \usage{
-legco_api(db, query, n = 1000, verbose = TRUE)
+legco_api(db, query, n = 1000, count = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{db}{The database you wish to access. `'hansard'` for the hansard
@@ -17,6 +17,9 @@ endpoints, e.g. `'OpenData/HansardDB'`).}
 and parameters if any.}
 
 \item{n}{The number of record to fetch. Defaults to `1000`.}
+
+\item{count}{If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

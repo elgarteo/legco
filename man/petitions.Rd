@@ -7,11 +7,11 @@
 \usage{
 petitions(rundown_id = NULL, hansard_id = NULL, lang = "en",
   from = "1900-01-01", to = Sys.Date(), floor = FALSE, n = 1000,
-  extra_param = NULL, verbose = TRUE)
+  extra_param = NULL, count = FALSE, verbose = TRUE)
 
 legco_petitions(rundown_id = NULL, hansard_id = NULL, lang = "en",
   from = "1900-01-01", to = Sys.Date(), floor = FALSE, n = 1000,
-  extra_param = NULL, verbose = TRUE)
+  extra_param = NULL, count = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{rundown_id}{The id of a rundown, or a vector of ids. Defaults to
@@ -43,6 +43,9 @@ language option is ignored. Defaults to `FALSE`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}
+
+\item{count}{If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

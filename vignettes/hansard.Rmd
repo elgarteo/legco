@@ -44,6 +44,18 @@ can be found [here](#rundown).
 These identifiers essentially indicate the *when* (HansardID), *where* (RundownID), *what* (SectionCode) 
 and *who* (SpeakerID) of a parapgraph text in the Record of Proceedings.
 
+### Total Count
+
+All functions in this database have an option to return only the total count of the records matching 
+the specified parameters instead of returning the data frame containing the result.
+To activate this option, specify `count = TRUE`:
+
+```{r }
+# Fetch the total number of questions put on the government in LegCo in April, 2019
+v <- questions(from = "2019-04-01", to = "2019-04-30", count = TRUE)
+v
+```
+
 ---
 
 This database is accessible with the following functions/data:

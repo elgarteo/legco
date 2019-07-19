@@ -41,6 +41,18 @@ next year. As a term is four years, there are four sessions in one term.
 * `MeetID` is the numerical ID of a LegCo Council or committee meeting. Although similar, it is a seperate 
 identifier from the `SlotID` and is only used to match with records from the Attendance Database.
 
+### Total Count
+
+All functions in this database (except `term()`) have an option to return only the total count of the records
+matching the specified parameters instead of returning the data frame containing the result.
+To activate this option, specify `count = TRUE`:
+
+```{r }
+# Fetch the total number of members in the Bills Committee on Fugitive Offenders and
+# Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill 2019
+membership(committee_id = 3005, count = TRUE)
+```
+
 ---
 
 This database is accessible with the following functions:

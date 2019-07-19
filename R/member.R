@@ -7,12 +7,15 @@
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
+#'   
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
 #' @export
 #' 
-member <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
+member <- function(id = NULL, extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "Tmember?$select=member_id,title_eng,surname_eng,firstname_eng,english_name,honourable_eng,surname_chi,firstname_chi,title_chi,honourable_chi,latest_term_id"
   
   filter_args <- {}
@@ -29,9 +32,11 @@ member <- function(id = NULL, extra_param = NULL, verbose = TRUE) {
     query <- paste0(query, extra_param)
   }
   
-  df <- legco_api("schedule", query, 10000, verbose)
+  df <- legco_api("schedule", query, 10000, count, verbose)
   
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  if (!count) {
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  }
   
   df
 }

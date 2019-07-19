@@ -13,11 +13,14 @@
 #'
 #' @param n The number of record to fetch. Defaults to `1000`.
 #'
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
+#'
 #' @param verbose Defaults to `TRUE`.
 #'
 #' @export
 #' 
-legco_api <- function(db, query, n = 1000, verbose = TRUE) {
+legco_api <- function(db, query, n = 1000, count = FALSE, verbose = TRUE) {
   db <- tolower(db)
   if (db == "hansard") {
     db <- "OpenData/HansardDB"
@@ -58,7 +61,7 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
     message("Retrieving records...")
   }
   
-  baseurl <- utils::URLencode(baseurl)
+  baseurl <- utils::URLencode(iconv(baseurl, to = 'UTF-8', toRaw = FALSE))
   df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
   
   total <- as.numeric(df$odata.count)
@@ -68,7 +71,13 @@ legco_api <- function(db, query, n = 1000, verbose = TRUE) {
     stop("The request did not return any data. Please check your parameters.")
   }
   
-  if (n <= maximum | total < maximum) {
+  if (count) {
+    if (verbose) {
+      message("Retrieved total count of record(s).")
+    }
+    
+    total
+  } else if (n <= maximum | total < maximum) {
     # All data retrieved
     if (verbose) {
       message("Retrieved ", nrow(df$value), " record(s). ",

@@ -6,10 +6,12 @@
 \title{Committee of Meetings in LegCo}
 \usage{
 meeting_committee(slot_id = NULL, meet_id = NULL,
-  committee_id = NULL, extra_param = NULL, verbose = TRUE)
+  committee_id = NULL, extra_param = NULL, count = FALSE,
+  verbose = TRUE)
 
 legco_meeting_committee(slot_id = NULL, meet_id = NULL,
-  committee_id = NULL, extra_param = NULL, verbose = TRUE)
+  committee_id = NULL, extra_param = NULL, count = FALSE,
+  verbose = TRUE)
 }
 \arguments{
 \item{slot_id}{The id of a LegCo meeting slot, or a vector of ids. If `NULL`,
@@ -24,6 +26,9 @@ Database. Defaults to `NULL`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}
+
+\item{count}{If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.}
 
 \item{verbose}{Defaults to `TRUE`.}
 }

@@ -92,6 +92,9 @@
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
+#'   
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
@@ -101,7 +104,7 @@ all_bills <- function(id = NULL, ordinance = NULL, title = NULL, proposer = NULL
                       gazette_from = 'all', gazette_to = 'all',
                       first_from = 'all', first_to = 'all', second_from = 'all',
                       second_to = 'all', third_from = 'all', third_to = 'all', 
-                      n = 10000, extra_param = NULL, verbose = TRUE) {
+                      n = 10000, extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "Vbills?"
   
   filter_args <- {}
@@ -193,9 +196,11 @@ all_bills <- function(id = NULL, ordinance = NULL, title = NULL, proposer = NULL
     query <- paste0(query, extra_param)
   }
   
-  df <- legco_api("bill", query, n, verbose)
+  df <- legco_api("bill", query, n, count, verbose)
   
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  if (!count) {
+    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  }
   
   df
 }

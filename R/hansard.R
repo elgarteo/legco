@@ -28,13 +28,16 @@
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
+#'   
+#' @param count If `TRUE`, returns only the total count of records that matches
+#'   the paramter(s) instead of the result. Defaults to `FALSE`.
 #'
 #' @param verbose Defaults to `TRUE`.
 #'
 #' @export
 #' 
 hansard <- function(id = NULL, lang = "en", from = '1900-01-01', to = Sys.Date(), floor = FALSE, 
-                    n = 1000, extra_param = NULL, verbose = TRUE) {
+                    n = 1000, extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "Hansard?$select=HansardID,MeetingDate,AgendaDate,isCEQandA,isCEQT,HansardFileURL"
   
   filter_args <- {}
@@ -66,7 +69,7 @@ hansard <- function(id = NULL, lang = "en", from = '1900-01-01', to = Sys.Date()
     query <- paste0(query, extra_param)
   }
   
-  legco_api("hansard", query, n, verbose)
+  legco_api("hansard", query, n, count, verbose)
 }
 
 #' @rdname hansard
