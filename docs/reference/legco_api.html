@@ -150,7 +150,7 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>legco_api</span>(<span class='no'>db</span>, <span class='no'>query</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'>legco_api</span>(<span class='no'>db</span>, <span class='no'>query</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -171,6 +171,11 @@ and parameters if any.</p></td>
     <tr>
       <th>n</th>
       <td><p>The number of record to fetch. Defaults to `1000`.</p></td>
+    </tr>
+    <tr>
+      <th>count</th>
+      <td><p>If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.</p></td>
     </tr>
     <tr>
       <th>verbose</th>

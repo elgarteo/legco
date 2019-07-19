@@ -152,12 +152,12 @@
 
     <pre class="usage"><span class='fu'>motions</span>(<span class='kw'>rundown_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>section_code</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
 <span class='fu'>legco_motions</span>(<span class='kw'>rundown_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>section_code</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
   <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -212,6 +212,11 @@ language option is ignored. Defaults to `FALSE`.</p></td>
       <th>extra_param</th>
       <td><p>Additional query parameters defined in LegCo API. Must
 begin with `'&amp;'`.</p></td>
+    </tr>
+    <tr>
+      <th>count</th>
+      <td><p>If `TRUE`, returns only the total count of records that matches
+the paramter(s) instead of the result. Defaults to `FALSE`.</p></td>
     </tr>
     <tr>
       <th>verbose</th>
