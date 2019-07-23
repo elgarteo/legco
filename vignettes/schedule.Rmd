@@ -27,7 +27,7 @@ Database:
 
 * `CommitteeID` is the numerical ID of a LegCo committee.
 
-* `SlotID` is the numerical ID of a LegCo Council or committee meeting slot.
+* `SlotID` is the numerical ID of a Council or committee meeting slot.
 
 * `MemberID` is the numerical ID of a LegCo member. Note that it is a seperate identifier from the `SpeakerID` 
 of the Hansard Database.
@@ -38,7 +38,7 @@ of the term number by 1, i.e. the TermID of the fifth term is `4`.
 * `SessionID` is the numerical ID of a LegCo session. A LegCo session typically begins in October to September 
 next year. As a term is four years, there are four sessions in one term.
 
-* `MeetID` is the numerical ID of a LegCo Council or committee meeting. Although similar, it is a seperate 
+* `MeetID` is the numerical ID of a Council or committee meeting. Although similar, it is a seperate 
 identifier from the `SlotID` and is only used to match with records from the Attendance Database.
 
 ### Total Count
@@ -123,7 +123,7 @@ member_term(id = c(273, 924))
 
 ## meeting()
 
-`meeting()` fetches the meeting schedule of LegCo Council or committees. Note that this function does 
+`meeting()` fetches the meeting schedule of Council or committees. Note that this function does 
 not take CommitteeID as a filtering parameter. Use `meeting_committee()` instead if needed.
 
 ```{r }
@@ -133,7 +133,7 @@ meeting(from = "2019-03-20", to = "2019-03-20")
 
 ## meeting_committee()
 
-`meeting_committee()` fetches the meeting schedule of LegCo Council or committees. Note that this function does 
+`meeting_committee()` fetches the meeting schedule of Council or committees. Note that this function does 
 not support dates as filtering parameters. Use `meeting()` instead if needed.
 
 ```{r }

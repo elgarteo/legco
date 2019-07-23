@@ -103,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Voting Results Database</h1>
             
-            <h4 class="date">2019-07-19</h4>
+            <h4 class="date">2019-07-23</h4>
       
       
       <div class="hidden name"><code>voting.Rmd</code></div>
@@ -115,7 +115,7 @@
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h2>
-<p>This database contains voting results of the LegCo Council, the House Committee and the Finance Committeeand its subcomittees starting from the fifth term of LegCo.</p>
+<p>This database contains voting results of the Council, the House Committee and the Finance Committeeand its subcomittees starting from the fifth term of LegCo.</p>
 <p>For more details of the database, see <a href="https://www.legco.gov.hk/odata/english/vrdb.html" class="uri">https://www.legco.gov.hk/odata/english/vrdb.html</a>.</p>
 <div id="key-identifiers" class="section level3">
 <h3 class="hasAnchor">
@@ -144,7 +144,7 @@
 <div id="voting_record" class="section level2">
 <h2 class="hasAnchor">
 <a href="#voting_record" class="anchor"></a>voting_record()</h2>
-<p><code><a href="../reference/voting_record.html">voting_record()</a></code> fetches the voting record of one or more LegCo Council, the House Committee and the Finance Committeeand its subcomittees meeting(s), or the attendance record of one or more LegCo member(s) in these meetings. Note that this function takes none of <code>CommitteeID</code>, <code>SpeakerID</code> or <code>MemberID</code> as a filtering parameter. Instead, only the full English committee name and the full Chinese name of LegCo members can be used.</p>
+<p><code><a href="../reference/voting_record.html">voting_record()</a></code> fetches the voting record of one or more Council, the House Committee and the Finance Committeeand its subcomittees meeting(s), or the attendance record of one or more LegCo member(s) in these meetings. Note that this function takes none of <code>CommitteeID</code>, <code>SpeakerID</code> or <code>MemberID</code> as a filtering parameter. Instead, only the full English committee name and the full Chinese name of LegCo members can be used.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Fetch how members voted the motion on "Abolishing the MPF Offsetting Mechanism" on November 11, 2016</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">committee =</span> <span class="st">"Council Meeting"</span>,</span>
 <span id="cb3-3"><a href="#cb3-3"></a>                   <span class="dt">from =</span> <span class="st">"2016-11-16T13:51:53"</span>,</span>

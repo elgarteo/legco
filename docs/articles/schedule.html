@@ -103,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Meeting Schedule Database</h1>
             
-            <h4 class="date">2019-07-19</h4>
+            <h4 class="date">2019-07-23</h4>
       
       
       <div class="hidden name"><code>schedule.Rmd</code></div>
@@ -123,11 +123,11 @@
 <p>Here are the key identifies that is useful for locating the neccessary data from the Meeting Schedule Database:</p>
 <ul>
 <li><p><code>CommitteeID</code> is the numerical ID of a LegCo committee.</p></li>
-<li><p><code>SlotID</code> is the numerical ID of a LegCo Council or committee meeting slot.</p></li>
+<li><p><code>SlotID</code> is the numerical ID of a Council or committee meeting slot.</p></li>
 <li><p><code>MemberID</code> is the numerical ID of a LegCo member. Note that it is a seperate identifier from the <code>SpeakerID</code> of the Hansard Database.</p></li>
 <li><p><code>TermID</code> is the numerical ID of a LegCo term. Note that the nominal number of a TermID is less than that of the term number by 1, i.e. the TermID of the fifth term is <code>4</code>.</p></li>
 <li><p><code>SessionID</code> is the numerical ID of a LegCo session. A LegCo session typically begins in October to September next year. As a term is four years, there are four sessions in one term.</p></li>
-<li><p><code>MeetID</code> is the numerical ID of a LegCo Council or committee meeting. Although similar, it is a seperate identifier from the <code>SlotID</code> and is only used to match with records from the Attendance Database.</p></li>
+<li><p><code>MeetID</code> is the numerical ID of a Council or committee meeting. Although similar, it is a seperate identifier from the <code>SlotID</code> and is only used to match with records from the Attendance Database.</p></li>
 </ul>
 </div>
 <div id="total-count" class="section level3">
@@ -310,7 +310,7 @@
 <div id="meeting" class="section level2">
 <h2 class="hasAnchor">
 <a href="#meeting" class="anchor"></a>meeting()</h2>
-<p><code><a href="../reference/meeting.html">meeting()</a></code> fetches the meeting schedule of LegCo Council or committees. Note that this function does not take CommitteeID as a filtering parameter. Use <code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> instead if needed.</p>
+<p><code><a href="../reference/meeting.html">meeting()</a></code> fetches the meeting schedule of Council or committees. Note that this function does not take CommitteeID as a filtering parameter. Use <code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> instead if needed.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Fetch all meeting conducted on </span></span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> <span class="st">"2019-03-20"</span>, <span class="dt">to =</span> <span class="st">"2019-03-20"</span>)</span></code></pre></div>
 <pre><code>##   SlotID MeetID
@@ -345,7 +345,7 @@
 <div id="meeting_committee" class="section level2">
 <h2 class="hasAnchor">
 <a href="#meeting_committee" class="anchor"></a>meeting_committee()</h2>
-<p><code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> fetches the meeting schedule of LegCo Council or committees. Note that this function does not support dates as filtering parameters. Use <code><a href="../reference/meeting.html">meeting()</a></code> instead if needed.</p>
+<p><code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> fetches the meeting schedule of Council or committees. Note that this function does not support dates as filtering parameters. Use <code><a href="../reference/meeting.html">meeting()</a></code> instead if needed.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Fetch all meetings of Subcommittee on Issues Relating to Bazaars</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/meeting_committee.html">meeting_committee</a></span>(<span class="dt">committee_id =</span> <span class="dv">2704</span>)</span>
 <span id="cb19-3"><a href="#cb19-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>

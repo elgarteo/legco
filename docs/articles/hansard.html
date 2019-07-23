@@ -103,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Hansard Database</h1>
             
-            <h4 class="date">2019-07-19</h4>
+            <h4 class="date">2019-07-23</h4>
       
       
       <div class="hidden name"><code>hansard.Rmd</code></div>
@@ -115,14 +115,14 @@
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h2>
-<p>This database contains information on matters discussed in LegCo Council meeting since the fifth term of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks and section codes of the hansard files, the data endpoints retrieve data from the files directly.</p>
+<p>This database contains information on matters discussed in Council meeting since the fifth term of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks and section codes of the hansard files, the data endpoints retrieve data from the files directly.</p>
 <p>For more details of the database, see <a href="https://www.legco.gov.hk/odata/english/hansard-db.html" class="uri">https://www.legco.gov.hk/odata/english/hansard-db.html</a>.</p>
 <div id="key-identifiers" class="section level3">
 <h3 class="hasAnchor">
 <a href="#key-identifiers" class="anchor"></a>Key Identifiers</h3>
 <p>Here are the key identifies that is useful for locating the neccessary data from the Hansard database:</p>
 <ul>
-<li><p><code>HansardID</code> is the numerical ID of a hansard file. A hansard file is the Record of Proceedings of a LegCo Council meeting. Since there are three versions of hansard—Floor, Chinese and English, each Council meeting has three hansard files, meaning that there are three Hansard IDs corresponding to the same meeting.</p></li>
+<li><p><code>HansardID</code> is the numerical ID of a hansard file. A hansard file is the Record of Proceedings of a Council meeting. Since there are three versions of hansard—Floor, Chinese and English, each Council meeting has three hansard files, meaning that there are three Hansard IDs corresponding to the same meeting.</p></li>
 <li><p><code>RundownID</code> is the numerical ID of a rundown in the hansard file. In simple terms, rundowns can be understood as individual paragraphs in the Record of Proceedings.</p></li>
 <li><p><code>SectionCode</code> is the alphabetical code stipulating the type of business as indicated in the LegCo Rules of Procedures 18(1) that a paragraph text is referring to in the hansard file.</p></li>
 <li><p><code>BookmarkName</code> is the alphabetical code stipulating details of the rundown. A detailed explanation can be found <a href="#rundown">here</a>.</p></li>
@@ -319,7 +319,7 @@
 <div id="motions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#motions" class="anchor"></a>motions()</h2>
-<p><code><a href="../reference/motions.html">motions()</a></code> fetches the motions discussed in LegCo Council meetings.</p>
+<p><code><a href="../reference/motions.html">motions()</a></code> fetches the motions discussed in Council meetings.</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Fetch motions discussed during the Council meeting on February 20, 2019</span></span>
 <span id="cb17-2"><a href="#cb17-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/motions.html">motions</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)</span>
 <span id="cb17-3"><a href="#cb17-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
@@ -360,7 +360,7 @@
 <div id="addresses" class="section level2">
 <h2 class="hasAnchor">
 <a href="#addresses" class="anchor"></a>addresses()</h2>
-<p><code><a href="../reference/addresses.html">addresses()</a></code> fetches addresses made by members or government officials before tabling documents in LegCo Council meetings.</p>
+<p><code><a href="../reference/addresses.html">addresses()</a></code> fetches addresses made by members or government officials before tabling documents in Council meetings.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Fetch addresses given during the Council meeting on February 20, 2019</span></span>
 <span id="cb21-2"><a href="#cb21-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/addresses.html">addresses</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)</span>
 <span id="cb21-3"><a href="#cb21-3"></a>v</span></code></pre></div>
@@ -376,7 +376,7 @@
 <div id="statements" class="section level2">
 <h2 class="hasAnchor">
 <a href="#statements" class="anchor"></a>statements()</h2>
-<p><code><a href="../reference/statements.html">statements()</a></code> fetches statments made by government officials in LegCo Council meetings.</p>
+<p><code><a href="../reference/statements.html">statements()</a></code> fetches statments made by government officials in Council meetings.</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Fetch statements made by government officials during the Council meeting on April 22, 2015</span></span>
 <span id="cb23-2"><a href="#cb23-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/statements.html">statements</a></span>(<span class="dt">from =</span> <span class="st">"2015-04-22"</span>)</span>
 <span id="cb23-3"><a href="#cb23-3"></a>v</span></code></pre></div>
@@ -392,7 +392,7 @@
 <div id="voting_results" class="section level2">
 <h2 class="hasAnchor">
 <a href="#voting_results" class="anchor"></a>voting_results()</h2>
-<p><code><a href="../reference/voting_results.html">voting_results()</a></code> fetches the results of votes conducted in LegCo Council meetings.</p>
+<p><code><a href="../reference/voting_results.html">voting_results()</a></code> fetches the results of votes conducted in Council meetings.</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># Fetch results of votes conducted during the Council meeting on January 19, 2018</span></span>
 <span id="cb25-2"><a href="#cb25-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2714</span>)</span>
 <span id="cb25-3"><a href="#cb25-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>

@@ -44,12 +44,12 @@ of these APIs. The databases supported by this package and the associating funct
 
 1. **Attendance Database**
 
-   This database contains the attendance record of LegCo Council and committee open meetings since the
+   This database contains the attendance record of Council and committee open meetings since the
    sixth term.
    
    This database is accessible with the following function:
    
-   * `attendance()` fetches the attendance of members in LegCo Council and committee meetings.
+   * `attendance()` fetches the attendance of members in Council and committee meetings.
    
    See [here](./attn.html) for more information of this database.
 
@@ -67,7 +67,7 @@ of these APIs. The databases supported by this package and the associating funct
 
 1. **Hansard Database**
 
-   This database contains information on matters discussed in LegCo Council meeting since the fifth term
+   This database contains information on matters discussed in Council meeting since the fifth term
    of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks 
    and section codes of the hansard files, the data endpoints retrieve data from the files directly. 
    This database is accessible with the following functions/data:
@@ -79,15 +79,15 @@ of these APIs. The databases supported by this package and the associating funct
    * `speakers()` fetches the speakers in meetings, including members, government officials and secretariat 
    staff.
    * `rundown()` fetches the full text of the hansard files.
-   * `questions()` fetches the questions put on the government by the members during LegCo Council meetings.
-   * `bills()` fetches bills that have been debated in LegCo Council meetings. 
-   * `motions()` fetches motions that have been debated in LegCo Council meetings.
-   * `petitions()` fetches petitions initiated by members in LegCo Council meetings.
-   * `addresses()` fetches addresses made by members or government officials before tabling documents in LegCo 
+   * `questions()` fetches the questions put on the government by the members during Council meetings.
+   * `bills()` fetches bills that have been debated in Council meetings. 
+   * `motions()` fetches motions that have been debated in Council meetings.
+   * `petitions()` fetches petitions initiated by members in Council meetings.
+   * `addresses()` fetches addresses made by members or government officials before tabling documents in  
    Council meetings.
-   * `statements()` fetches statments made by government officials in LegCo Council meetings.
-   * `voting_results()` fetches the results of votes conducted in LegCo Council meetings.
-   * `summoning_bells()` fetches instances in which the summoning bell have been rung in LegCo Council meetings.
+   * `statements()` fetches statments made by government officials in Council meetings.
+   * `voting_results()` fetches the results of votes conducted in Council meetings.
+   * `summoning_bells()` fetches instances in which the summoning bell have been rung in Council meetings.
    
    When using in combination, these functions are essentially hansard files crawler.
    
@@ -95,7 +95,7 @@ of these APIs. The databases supported by this package and the associating funct
 
 1. **Meeting Schedule Database**
 
-   This database contains the member list and the meeting schedule of the LegCo Council and every committee
+   This database contains the member list and the meeting schedule of the Council and every committee
    since the fifth term of LegCo.
    This database is accessible with the following functions:
    
@@ -115,7 +115,7 @@ of these APIs. The databases supported by this package and the associating funct
    
 1. **Voting Results Database**
 
-   This database contains voting results of the LegCo Council, the House Committee and the Finance Committee
+   This database contains voting results of the Council, the House Committee and the Finance Committee
    and its subcomittees starting from the fifth term of LegCo.
    This database is accessible with the following function:
    
@@ -178,7 +178,7 @@ contains 50 filtering conditions.
 
 ## Examples
 
-The following code shows all the LegCo Council meetings held from May 1, 2018 to May 31, 2018.
+The following code shows all the Council meetings held from May 1, 2018 to May 31, 2018.
 
 ```{r echo=TRUE, message=FALSE}
 hansard(from = "2018-05-01", to = "2018-05-31")
