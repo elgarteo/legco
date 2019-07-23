@@ -15,7 +15,7 @@ library(legco)
 
 ## Introduction
 
-This database contains voting results of the LegCo Council, the House Committee and the Finance
+This database contains voting results of the Council, the House Committee and the Finance
 Committeeand its subcomittees starting from the fifth term of LegCo.
 
 For more details of the database, see <https://www.legco.gov.hk/odata/english/vrdb.html>.
@@ -57,7 +57,7 @@ This database is accessible with the following function:
 
 ## voting_record()
 
-`voting_record()` fetches the voting record of one or more LegCo Council, the House Committee
+`voting_record()` fetches the voting record of one or more Council, the House Committee
 and the Finance Committeeand its subcomittees meeting(s), or the attendance record of one or more 
 LegCo member(s) in these meetings. Note that this function takes none of `CommitteeID`, `SpeakerID`
 or `MemberID` as a filtering parameter. Instead, only the full English committee name and the full

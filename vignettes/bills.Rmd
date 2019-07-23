@@ -47,6 +47,6 @@ This database is accessible with the following function:
 `all_bills()` fetches the information of bills that have gone through LegCo.
 
 ```{r }
-# Fetch bills that passed thrid reading on February 20, 2019
+# Fetch bills that passed third reading on February 20, 2019
 all_bills(third_from = "2019-02-20")
 ```
