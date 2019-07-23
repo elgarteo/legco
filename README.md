@@ -7,7 +7,7 @@ Under development.
 
 To install this package, run:
 ```
-#install.pacakges("devtools")
+#install.packages("devtools")
 devtools::install_github("elgarteo/legco")
 ```
 or
