@@ -214,9 +214,9 @@ head(v)
 `voting_results()` only returns the overall result of the vote. To fetch the voting record of 
 infividual members, use `voting_record()` instead.
 
-## summoning_bell()
+## summoning_bells()
 
-`summong_bells()` fetches instances in which the summoning bell have been rung in LegCo
+`summoning_bells()` fetches instances in which the summoning bell have been rung in LegCo
 Council meetings.
 
 ```{r }
