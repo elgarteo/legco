@@ -103,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Attendance Database</h1>
             
-            <h4 class="date">2019-07-15</h4>
+            <h4 class="date">2019-07-23</h4>
       
       
       <div class="hidden name"><code>attn.Rmd</code></div>
@@ -115,7 +115,7 @@
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h2>
-<p>This database contains the attendance record of LegCo Council and committee open meetings since the sixth term.</p>
+<p>This database contains the attendance record of Council and committee open meetings since the sixth term.</p>
 <p>For more details of the database, see <a href="https://www.legco.gov.hk/odata/english/attendance-db.html" class="uri">https://www.legco.gov.hk/odata/english/attendance-db.html</a>.</p>
 <div id="key-identifiers" class="section level3">
 <h3 class="hasAnchor">
@@ -123,9 +123,17 @@
 <p>Here are the key identifies that is useful for locating the neccessary data from the Attendance Database:</p>
 <ul>
 <li><p><code>CommitteeID</code> is the numerical ID of a LegCo committee. It is same as the one in the Meeting Schedule Database.</p></li>
-<li><p><code>MeetID</code> is the numerical ID of a LegCo Council or committee meeting. It is same as the one in the Meeting Schedule Database.</p></li>
+<li><p><code>MeetID</code> is the numerical ID of a Council or committee meeting. It is same as the one in the Meeting Schedule Database.</p></li>
 <li><p><code>MemberID</code> is the numerical ID of a LegCo member. It is same as the one in the Meeting Schedule Database. Note that it is a seperate identifier from the <code>SpeakerID</code> of the Hansard Database.</p></li>
 </ul>
+</div>
+<div id="total-count" class="section level3">
+<h3 class="hasAnchor">
+<a href="#total-count" class="anchor"></a>Total Count</h3>
+<p>The function in this database has an option to return only the total count of the records matching the specified parameters instead of returning the data frame containing the result. To activate this option, specify <code>count = TRUE</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch the total number of members absent from the Council meeting on May 22, 2019</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">136897</span>, <span class="dt">from =</span> <span class="st">"2019-05-22"</span>, <span class="dt">to =</span> <span class="st">"2019-05-22"</span>, <span class="dt">attn =</span> <span class="st">"a"</span>, <span class="dt">count =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
 <hr>
 <p>This database is accessible with the following function:</p>
 </div>
@@ -134,8 +142,8 @@
 <h2 class="hasAnchor">
 <a href="#attendance" class="anchor"></a>attendance()</h2>
 <p><code><a href="../reference/attendance.html">attendance()</a></code> fetches the attendance record of one or more LegCo meeting(s), or the attendance record of one of more LegCo member(s), or both.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">committee_id =</span> <span class="dv">2704</span>, <span class="dt">from =</span> <span class="st">"2017-10-13"</span>, <span class="dt">to =</span> <span class="st">"2017-10-13"</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">committee_id =</span> <span class="dv">2704</span>, <span class="dt">from =</span> <span class="st">"2017-10-13"</span>, <span class="dt">to =</span> <span class="st">"2017-10-13"</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)</span></code></pre></div>
 <pre><code>##   CommitteeID MeetID                                    MeetingNameEnglish
 ## 1        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars
 ## 2        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars
@@ -154,9 +162,9 @@
 ## 3       Hon CHU Hoi-dick        朱凱廸議員        Absent
 ## 4        Hon HO Kai-ming        何啟明議員        Absent
 ## 5     Hon LUK Chung-hung        陸頌雄議員        Absent</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Fetch the meetings that Hon Chu Hoi-dick was absent from</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">member_id =</span> <span class="dv">910</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Fetch the meetings that Hon Chu Hoi-dick was absent from</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">member_id =</span> <span class="dv">910</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##   CommitteeID MeetID              MeetingNameEnglish MeetingNameChinese
 ## 1        2548 120628 Regular House Committee Meeting     內務委員會例會
 ## 2        2548 120629      Meeting of House Committee     內務委員會會議

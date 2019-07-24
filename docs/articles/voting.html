@@ -103,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Voting Results Database</h1>
             
-            <h4 class="date">2019-07-15</h4>
+            <h4 class="date">2019-07-23</h4>
       
       
       <div class="hidden name"><code>voting.Rmd</code></div>
@@ -115,7 +115,7 @@
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h2>
-<p>This database contains voting results of the LegCo Council, the House Committee and the Finance Committeeand its subcomittees starting from the fifth term of LegCo.</p>
+<p>This database contains voting results of the Council, the House Committee and the Finance Committeeand its subcomittees starting from the fifth term of LegCo.</p>
 <p>For more details of the database, see <a href="https://www.legco.gov.hk/odata/english/vrdb.html" class="uri">https://www.legco.gov.hk/odata/english/vrdb.html</a>.</p>
 <div id="key-identifiers" class="section level3">
 <h3 class="hasAnchor">
@@ -126,6 +126,17 @@
 <li><p><code>TermID</code> is the numerical ID of a LegCo term. Note that the nominal number of a TermID is less than that of the term number by 1, i.e. the TermID of the fifth term is <code>4</code>.</p></li>
 </ul>
 <p>This database has an <code>ID</code> which has little value since there is only one data endpoint and it is not interchangeable with other databases. To locate the bill in other databases, it is advisable to use the <code>VoteDate</code> as the filter parameter (e.g. Hansard database) or to find the CommitteeID of the relevant bill committee using <code><a href="https://www.rdocumentation.org/packages/legcoplus/topics/search_committee">legcoplus::search_committee()</a></code> from the package <a href="https://elgarteo.ga/legco/legcoplus">legcoplus</a> (e.g. Meeting Schedule Database).</p>
+</div>
+<div id="total-count" class="section level3">
+<h3 class="hasAnchor">
+<a href="#total-count" class="anchor"></a>Total Count</h3>
+<p>The function in this database has an option to return only the total count of the records matching the specified parameters instead of returning the data frame containing the result. To activate this option, specify <code>count = TRUE</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch the total number of members absent from the division on the Motion Concerning</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># the Amendment to the Method for the Selection of the Chief Executive of the HKSAR</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">committee =</span> <span class="st">"Council Meeting"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4"></a>              <span class="dt">from =</span> <span class="st">"2015-06-18"</span>, <span class="dt">to =</span> <span class="st">"2015-06-18"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5"></a>              <span class="dt">vote =</span> <span class="st">"absent"</span>, <span class="dt">count =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 33</code></pre>
 <hr>
 <p>This database is accessible with the following function:</p>
 </div>
@@ -133,12 +144,12 @@
 <div id="voting_record" class="section level2">
 <h2 class="hasAnchor">
 <a href="#voting_record" class="anchor"></a>voting_record()</h2>
-<p><code><a href="../reference/voting_record.html">voting_record()</a></code> fetches the voting record of one or more LegCo Council, the House Committee and the Finance Committeeand its subcomittees meeting(s), or the attendance record of one or more LegCo member(s) in these meetings. Note that this function takes none of <code>CommitteeID</code>, <code>SpeakerID</code> or <code>MemberID</code> as a filtering parameter. Instead, only the full English committee name and the full Chinese name of LegCo members can be used.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch how members voted the motion on "Abolishing the MPF Offsetting Mechanism" on November 11, 2016</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">committee =</span> <span class="st">"Council Meeting"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>                   <span class="dt">from =</span> <span class="st">"2016-11-16T13:51:53"</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>                   <span class="dt">to =</span> <span class="st">"2016-11-16T13:51:53"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
+<p><code><a href="../reference/voting_record.html">voting_record()</a></code> fetches the voting record of one or more Council, the House Committee and the Finance Committeeand its subcomittees meeting(s), or the attendance record of one or more LegCo member(s) in these meetings. Note that this function takes none of <code>CommitteeID</code>, <code>SpeakerID</code> or <code>MemberID</code> as a filtering parameter. Instead, only the full English committee name and the full Chinese name of LegCo members can be used.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Fetch how members voted the motion on "Abolishing the MPF Offsetting Mechanism" on November 11, 2016</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">committee =</span> <span class="st">"Council Meeting"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>                   <span class="dt">from =</span> <span class="st">"2016-11-16T13:51:53"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>                   <span class="dt">to =</span> <span class="st">"2016-11-16T13:51:53"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##       ID           StartDate       Committee TermID            VoteDate
 ## 1 526982 2016-11-16T00:00:00 Council Meeting      5 2016-11-16T00:00:00
 ## 2 526983 2016-11-16T00:00:00 Council Meeting      5 2016-11-16T00:00:00
@@ -202,9 +213,9 @@
 ## 4  Absent            4
 ## 5      No            5
 ## 6     Yes            6</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Fetch the votes that Hon Abraham Shek were abstained from</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">name_ch =</span> <span class="st">"石禮謙"</span>, <span class="dt">vote =</span> <span class="st">"abstain"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Fetch the votes that Hon Abraham Shek were abstained from</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">name_ch =</span> <span class="st">"石禮謙"</span>, <span class="dt">vote =</span> <span class="st">"abstain"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
 <pre><code>##      ID           StartDate       Committee TermID            VoteDate
 ## 1 47797 2012-11-07T00:00:00 Council Meeting      4 2012-11-07T00:00:00
 ## 2 48427 2012-11-07T00:00:00 Council Meeting      4 2012-11-07T00:00:00

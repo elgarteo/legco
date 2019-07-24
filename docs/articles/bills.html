@@ -103,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Bills Database</h1>
             
-            <h4 class="date">2019-07-15</h4>
+            <h4 class="date">2019-07-23</h4>
       
       
       <div class="hidden name"><code>bills.Rmd</code></div>
@@ -121,6 +121,14 @@
 <h3 class="hasAnchor">
 <a href="#key-identifiers" class="anchor"></a>Key Identifiers</h3>
 <p>This database has an <code>InternalKey</code> which has little value since there is only one data endpoint and it is not interchangeable with other databases. To locate the bill in other databases, it is advisable to use the First, Second and Third Reading dates as the filter parameters (e.g. Hansard database) or find the CommitteeID of the relevant bill committee using <code><a href="https://www.rdocumentation.org/packages/legcoplus/topics/search_committee">legcoplus::search_committee()</a></code> from the package <a href="https://elgarteo.ga/legco/legcoplus">legcoplus</a> (e.g. Meeting Schedule Database).</p>
+</div>
+<div id="total-count" class="section level3">
+<h3 class="hasAnchor">
+<a href="#total-count" class="anchor"></a>Total Count</h3>
+<p>The function in this database has an option to return only the total count of the records matching the specified parameters instead of returning the data frame containing the result. To activate this option, specify <code>count = TRUE</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch the total number of bills that have been discussed in LegCo</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="../reference/all_bills.html">all_bills</a></span>(<span class="dt">count =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 6015</code></pre>
 <hr>
 <p>This database is accessible with the following function:</p>
 </div>
@@ -129,8 +137,8 @@
 <h2 class="hasAnchor">
 <a href="#all_bills" class="anchor"></a>all_bills()</h2>
 <p><code><a href="../reference/all_bills.html">all_bills()</a></code> fetches the information of bills that have gone through LegCo.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch bills that passed thrid reading on February 20, 2019</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="../reference/all_bills.html">all_bills</a></span>(<span class="dt">third_from =</span> <span class="st">"2019-02-20"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Fetch bills that passed third reading on February 20, 2019</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw"><a href="../reference/all_bills.html">all_bills</a></span>(<span class="dt">third_from =</span> <span class="st">"2019-02-20"</span>)</span></code></pre></div>
 <pre><code>##          InternalKey        OrdinanceTitleEng OrdinanceTitleChi
 ## 1 06657              Inland Revenue Ordinance          稅務條例
 ## 2 06661              Inland Revenue Ordinance          稅務條例

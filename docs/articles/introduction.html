@@ -103,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Introduction to legco</h1>
             
-            <h4 class="date">2019-07-15</h4>
+            <h4 class="date">2019-07-23</h4>
       
       
       <div class="hidden name"><code>introduction.Rmd</code></div>
@@ -139,11 +139,11 @@
 <ol style="list-style-type: decimal">
 <li>
 <p><strong>Attendance Database</strong></p>
-<p>This database contains the attendance record of LegCo Council and committee open meetings since the sixth term.</p>
+<p>This database contains the attendance record of Council and committee open meetings since the sixth term.</p>
 <p>This database is accessible with the following function:</p>
 <ul>
 <li>
-<code><a href="../reference/attendance.html">attendance()</a></code> fetches the attendance of members in LegCo Council and committee meetings.</li>
+<code><a href="../reference/attendance.html">attendance()</a></code> fetches the attendance of members in Council and committee meetings.</li>
 </ul>
 <p>See <a href="./attn.html">here</a> for more information of this database.</p>
 </li>
@@ -159,7 +159,7 @@
 </li>
 <li>
 <p><strong>Hansard Database</strong></p>
-<p>This database contains information on matters discussed in LegCo Council meeting since the fifth term of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks and section codes of the hansard files, the data endpoints retrieve data from the files directly. This database is accessible with the following functions/data:</p>
+<p>This database contains information on matters discussed in Council meeting since the fifth term of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks and section codes of the hansard files, the data endpoints retrieve data from the files directly. This database is accessible with the following functions/data:</p>
 <ul>
 <li>
 <code><a href="../reference/hansard.html">hansard()</a></code> fetches the information of the hansard files.</li>
@@ -172,28 +172,29 @@
 <li>
 <code><a href="../reference/rundown.html">rundown()</a></code> fetches the full text of the hansard files.</li>
 <li>
-<code><a href="../reference/questions.html">questions()</a></code> fetches the questions put on the government by the members during LegCo Council meetings.</li>
+<code><a href="../reference/questions.html">questions()</a></code> fetches the questions put on the government by the members during Council meetings.</li>
 <li>
-<code><a href="../reference/bills.html">bills()</a></code> fetches bills that have been debated in LegCo Council meetings.</li>
+<code><a href="../reference/bills.html">bills()</a></code> fetches bills that have been debated in Council meetings.</li>
 <li>
-<code><a href="../reference/motions.html">motions()</a></code> fetches motions that have been debated in LegCo Council meetings.</li>
+<code><a href="../reference/motions.html">motions()</a></code> fetches motions that have been debated in Council meetings.</li>
 <li>
-<code><a href="../reference/petitions.html">petitions()</a></code> fetches petitions initiated by members in LegCo Council meetings.</li>
+<code><a href="../reference/petitions.html">petitions()</a></code> fetches petitions initiated by members in Council meetings.</li>
 <li>
-<code><a href="../reference/addresses.html">addresses()</a></code> fetches addresses made by members or government officials before tabling documents in LegCo Council meetings.</li>
+<code><a href="../reference/addresses.html">addresses()</a></code> fetches addresses made by members or government officials before tabling documents in<br>
+Council meetings.</li>
 <li>
-<code><a href="../reference/statements.html">statements()</a></code> fetches statments made by government officials in LegCo Council meetings.</li>
+<code><a href="../reference/statements.html">statements()</a></code> fetches statments made by government officials in Council meetings.</li>
 <li>
-<code><a href="../reference/voting_results.html">voting_results()</a></code> fetches the results of votes conducted in LegCo Council meetings.</li>
+<code><a href="../reference/voting_results.html">voting_results()</a></code> fetches the results of votes conducted in Council meetings.</li>
 <li>
-<code><a href="../reference/summoning_bells.html">summoning_bells()</a></code> fetches instances in which the summoning bell have been rung in LegCo Council meetings.</li>
+<code><a href="../reference/summoning_bells.html">summoning_bells()</a></code> fetches instances in which the summoning bell have been rung in Council meetings.</li>
 </ul>
 <p>When using in combination, these functions are essentially hansard files crawler.</p>
 <p>See <a href="./hansard.html">here</a> for more information of this database.</p>
 </li>
 <li>
 <p><strong>Meeting Schedule Database</strong></p>
-<p>This database contains the member list and the meeting schedule of the LegCo Council and every committee since the fifth term of LegCo. This database is accessible with the following functions:</p>
+<p>This database contains the member list and the meeting schedule of the Council and every committee since the fifth term of LegCo. This database is accessible with the following functions:</p>
 <ul>
 <li>
 <code><a href="../reference/term.html">term()</a></code> fetches the terms in LegCo.</li>
@@ -217,7 +218,7 @@
 </li>
 <li>
 <p><strong>Voting Results Database</strong></p>
-<p>This database contains voting results of the LegCo Council, the House Committee and the Finance Committee and its subcomittees starting from the fifth term of LegCo. This database is accessible with the following function:</p>
+<p>This database contains voting results of the Council, the House Committee and the Finance Committee and its subcomittees starting from the fifth term of LegCo. This database is accessible with the following function:</p>
 <ul>
 <li>
 <code><a href="../reference/voting_record.html">voting_record()</a></code> fetches the information of votes conducted in the meetings, including the voting record of each member.</li>
@@ -238,7 +239,7 @@
 <a href="#request-limit" class="anchor"></a>Request Limit</h3>
 <p>LegCo APIs have a limit of 1000 requests per IP per hour. Once the limit is reached, you will not be able to retrieve any data for awhile. If you run into the following error message while pretty sure you have the correct parameters, you have probably reached the limit:</p>
 <pre><code>## Retrieving records...</code></pre>
-<pre><code>## Error in legco_api("hansard", query, n = 1000, verbose): The request did not return any data. Please check your parameters.</code></pre>
+<pre><code>## Error in legco_api("hansard", query, 1000, count, verbose): The request did not return any data. Please check your parameters.</code></pre>
 </div>
 <div id="node-count-limit" class="section level3">
 <h3 class="hasAnchor">
@@ -324,7 +325,7 @@
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
-<p>The following code shows all the LegCo Council meetings held from May 1, 2018 to May 31, 2018.</p>
+<p>The following code shows all the Council meetings held from May 1, 2018 to May 31, 2018.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</span></code></pre></div>
 <pre><code>##    HansardID         MeetingDate          AgendaDate isCEQandA isCEQT
 ## 1       2407 2018-05-02T00:00:00 2018-05-02T00:00:00         0      0
@@ -482,7 +483,7 @@
 <p>To check which members have spoken about the motion and to look up some of their names:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
 <span id="cb18-2"><a href="#cb18-2"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</span></code></pre></div>
-<pre><code>## Error in legco_api("hansard", query, n = 1000, verbose): Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
+<pre><code>## Error in legco_api("hansard", query, 1000, count, verbose): Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
 <p>The code above produces 27 filtering conditions which reahces the node count limit. If you need have parameters longer than that, break them down into multiple requests:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span>
 <span id="cb20-2"><a href="#cb20-2"></a>y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</span>
