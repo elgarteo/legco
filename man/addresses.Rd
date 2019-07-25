@@ -50,6 +50,6 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch addresses by LegCo members and government officials when tabling papers
-and reports in LegCo council meetings.
+Fetch addresses made by members or government officials while presenting
+papers to the Council.
 }

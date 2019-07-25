@@ -1,7 +1,7 @@
 #' Addresses Delivered in LegCo
 #'
-#' Fetch addresses by LegCo members and government officials when tabling papers
-#' and reports in LegCo council meetings.
+#' Fetch addresses made by members or government officials while presenting
+#' papers to the Council.
 #'
 #' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
 #'   returns addresses from all hansard files. Defaults to `NULL`.
@@ -32,7 +32,7 @@
 #'
 #' @param extra_param Additional query parameters defined in LegCo API. Must
 #'   begin with `'&'`.
-#'   
+#'
 #' @param count If `TRUE`, returns only the total count of records that matches
 #'   the paramter(s) instead of the result. Defaults to `FALSE`.
 #'

@@ -182,8 +182,8 @@ v
 
 ## addresses()
 
-`addresses()` fetches addresses made by members or government officials before tabling documents
-in Council meetings.
+`addresses()` fetches fetches addresses made by members or government officials while presenting papers
+to the Council.
 
 ```{r }
 # Fetch addresses given during the Council meeting on February 20, 2019
