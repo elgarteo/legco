@@ -16,7 +16,7 @@ This R package provides access to the LegCo open data APIs in R. The functions i
 correspond to the data endpoints of the APIs.
 
 It is recommended to also install an addon package [elgarteo/legcoplus](https://github.com/elgarteo/legocplus)
-which provides functions that facilitate the use of the LegCo open data.
+which provides functions that facilitate the use LegCo's data.
 
 ## How it works
 This package compiles the correct query and request data from the following LegCo APIs:
@@ -27,7 +27,7 @@ This package compiles the correct query and request data from the following LegC
 * [Voting Result Database](https://www.legco.gov.hk/odata/english/vrdb.html)
 
 ## How to use
-Read the [vignettes](https://elgarteo.ga/legco/legcoplus/) for details.
+Read the [vignettes](https://elgarteo.ga/legco/) for details.
 
 ## Disclaimer
 This package is not affiliated or endorsed by the Legislative Council of Hong Kong. 
