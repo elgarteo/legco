@@ -103,7 +103,7 @@
     <div class="page-header toc-ignore">
       <h1>Introduction to legco</h1>
             
-            <h4 class="date">2019-07-25</h4>
+            <h4 class="date">2019-07-26</h4>
       
       
       <div class="hidden name"><code>introduction.Rmd</code></div>
@@ -119,17 +119,16 @@
 <div id="from-github" class="section level3">
 <h3 class="hasAnchor">
 <a href="#from-github" class="anchor"></a>From GitHub</h3>
-<p><em>Available Soon</em></p>
-</div>
-<div id="from-web" class="section level3">
-<h3 class="hasAnchor">
-<a href="#from-web" class="anchor"></a>From web</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"https://elgarteo.ga/legco/legco_0.0.9999.tar.gz"</span>, <span class="dt">repos =</span> <span class="ot">NULL</span>, <span class="dt">type =</span> <span class="st">"source"</span>)</span></code></pre></div>
+<pre><code>## Installing package into '/usr/local/lib/R/3.6/site-library'
+## (as 'lib' is unspecified)</code></pre>
+<pre><code>## Skipping install of 'legco' from a github remote, the SHA1 (ac1d761b) has not changed since last install.
+##   Use `force = TRUE` to force installation</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"https://elgarteo.ga/legco/legco_0.0.9999.tar.gz"</span>, <span class="dt">repos =</span> <span class="ot">NULL</span>, <span class="dt">type =</span> <span class="st">"source"</span>)</span></code></pre></div>
 </div>
 <div id="load-legco" class="section level3">
 <h3 class="hasAnchor">
 <a href="#load-legco" class="anchor"></a>Load legco</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(legco)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(legco)</span></code></pre></div>
 </div>
 </div>
 <div id="understanding-the-legco-apis" class="section level2">
@@ -236,7 +235,7 @@
 <div id="request-limit" class="section level3">
 <h3 class="hasAnchor">
 <a href="#request-limit" class="anchor"></a>Request Limit</h3>
-<p>LegCo APIs have a limit of 1000 requests per IP per hour. Once the limit is reached, you will not be able to retrieve any data for awhile. If you run into the following error message while pretty sure you have the correct parameters, you have probably reached the limit:</p>
+<p>LegCo APIs have a limit of approximately 1000 requests per IP per hour. Once the limit is reached, you will not be able to retrieve any data for awhile. If you run into the following error message while pretty sure you have entered the correct parameters, you have probably reached the limit:</p>
 <pre><code>## Retrieving records...</code></pre>
 <pre><code>## Error in legco_api("hansard", query, 1000, count, verbose): The request did not return any data. Please check your parameters.</code></pre>
 </div>
@@ -244,10 +243,10 @@
 <h3 class="hasAnchor">
 <a href="#node-count-limit" class="anchor"></a>Node Count Limit</h3>
 <p>Another limit is the node count limit which is associated with the setting of the LegCo API server. The limit is at most 100 nodes per request, or approximately 19 filtering conditions in most cases. For instance, the following code contains 20 filtering conditions and thus reach the node count limit:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># A request with 20 filtering conditions</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">19</span>,</span>
-<span id="cb5-3"><a href="#cb5-3"></a>       <span class="dv">21</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">27</span>, <span class="dv">29</span>, <span class="dv">31</span>, <span class="dv">33</span>, <span class="dv">35</span>, <span class="dv">37</span>, <span class="dv">39</span>)</span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># A request with 20 filtering conditions</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">19</span>,</span>
+<span id="cb7-3"><a href="#cb7-3"></a>       <span class="dv">21</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">27</span>, <span class="dv">29</span>, <span class="dv">31</span>, <span class="dv">33</span>, <span class="dv">35</span>, <span class="dv">37</span>, <span class="dv">39</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(x)</span></code></pre></div>
 <pre><code>## Retrieving records...</code></pre>
 <pre><code>## Retrieved 20 record(s). 20 record(s) available in total.</code></pre>
 <pre><code>##    SpeakerID                NameChi
@@ -315,9 +314,9 @@
 ## 20  Wah-ming       LI</code></pre>
 <p>If you run into the error message above, you need to break it down to multiple smaller requests, like <a href="#examples">one of the examples below</a>.</p>
 <p>Note that numeric filtering conditions that are sequential are not subjected to this limit:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># A request with sequential numeric filtering conditions</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># A request with sequential numeric filtering conditions</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(x)</span></code></pre></div>
 <p>The code above will execute just fine without reaching the node count limit even though it effectively contains 50 filtering conditions.</p>
 </div>
 </div>
@@ -325,7 +324,7 @@
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p>The following code shows all the Council meetings held from May 1, 2018 to May 31, 2018.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</span></code></pre></div>
 <pre><code>##    HansardID         MeetingDate          AgendaDate isCEQandA isCEQT
 ## 1       2407 2018-05-02T00:00:00 2018-05-02T00:00:00         0      0
 ## 2       2526 2018-05-03T00:00:00 2018-05-02T00:00:00         0      0
@@ -353,7 +352,7 @@
 ## 11  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180530-translate-e.pdf
 ## 12  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180531-translate-e.pdf</code></pre>
 <p>To fetch the items on the agenda of the meeting on May 23, 2018:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2451</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2451</span>)</span></code></pre></div>
 <pre><code>##            MeetingDate
 ## 1  2018-05-23T00:00:00
 ## 2  2018-05-23T00:00:00
@@ -467,28 +466,28 @@
 ## 36           NA         som    828827      2451</code></pre>
 <p>In this example, we will look into the motion <em>Not forgetting the 4 June incident</em>.</p>
 <p>The section codes indicate the type of the business. For exmaple, the section code “mbm” of the <em>Not forgetting the 4 June incident</em> means that it is a member’s motion:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>legco_section_type[legco_section_type<span class="op">$</span>SectionCode <span class="op">==</span><span class="st"> "mbm"</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>legco_section_type[legco_section_type<span class="op">$</span>SectionCode <span class="op">==</span><span class="st"> "mbm"</span>, ]</span></code></pre></div>
 <pre><code>##    SectionCode          NameEng  NameChi
 ## 45         mbm Members' motions 議員議案</code></pre>
 <p>The RundownID indicates the location of the first paragraph of the matter concerned in the hansard file. In other words, paragraphs of RundownID between 828783 and 828826 (one RundownID prior to the next item on the agenda) are the records of the matter the <em>Not forgetting the 4 june incident</em> during the meeting. The full text of these paragraphs can be fetched by:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="co"># Order by RundownID, i.e. chronological order</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a>w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(w<span class="op">$</span>RundownID), ]</span>
-<span id="cb16-4"><a href="#cb16-4"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(w)</span>
-<span id="cb16-5"><a href="#cb16-5"></a><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a>w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="co"># Order by RundownID, i.e. chronological order</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a>w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(w<span class="op">$</span>RundownID), ]</span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(w)</span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></span>
+<span id="cb18-6"><a href="#cb18-6"></a>w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>]</span></code></pre></div>
 <pre><code>## [1] "PRESIDENT (in Cantonese): Will Members please proceed to vote."                                                  
 ## [2] "PRESIDENT (in Cantonese): Mr Abraham SHEK, do you wish to cast your vote?(Mr Abraham SHEK did not cast any vote)"</code></pre>
 <p>To check which members have spoken about the motion and to look up some of their names:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
-<span id="cb18-2"><a href="#cb18-2"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</span></code></pre></div>
 <pre><code>## Error in legco_api("hansard", query, 1000, count, verbose): Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
 <p>The code above produces 27 filtering conditions which reahces the node count limit. If you need have parameters longer than that, break them down into multiple requests:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span>
-<span id="cb20-2"><a href="#cb20-2"></a>y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</span>
-<span id="cb20-3"><a href="#cb20-3"></a>y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">rbind</a></span>(y1, y2)</span>
-<span id="cb20-4"><a href="#cb20-4"></a><span class="co"># Show members who have spoken about this motion</span></span>
-<span id="cb20-5"><a href="#cb20-5"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(y[y<span class="op">$</span>Type <span class="op">==</span><span class="st"> "MB"</span>, ])</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span>
+<span id="cb22-2"><a href="#cb22-2"></a>y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</span>
+<span id="cb22-3"><a href="#cb22-3"></a>y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">rbind</a></span>(y1, y2)</span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="co"># Show members who have spoken about this motion</span></span>
+<span id="cb22-5"><a href="#cb22-5"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(y[y<span class="op">$</span>Type <span class="op">==</span><span class="st"> "MB"</span>, ])</span></code></pre></div>
 <pre><code>##   SpeakerID NameChi         NameEng Type Initial  FirstName LastName
 ## 2       138  林卓廷  LAM CHEUK-TING   MB     LCT Cheuk-ting      LAM
 ## 3       148  許智峯    HUI CHI-FUNG   MB     HCF   Chi-fung      HUI
@@ -497,8 +496,8 @@
 ## 6       141  邵家臻    SHIU KA-CHUN   MB     SKC    Ka-chun     SHIU
 ## 7       109  梁繼昌   KENNETH LEUNG   MB      KL Kai-cheong    LEUNG</code></pre>
 <p>To find out the voting results of the motion:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">section_code =</span> <span class="st">"mbm"</span>)</span>
-<span id="cb22-2"><a href="#cb22-2"></a>v[v<span class="op">$</span>Subject <span class="op">==</span><span class="st"> "Not forgetting the 4 June incident"</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">section_code =</span> <span class="st">"mbm"</span>)</span>
+<span id="cb24-2"><a href="#cb24-2"></a>v[v<span class="op">$</span>Subject <span class="op">==</span><span class="st"> "Not forgetting the 4 June incident"</span>, ]</span></code></pre></div>
 <pre><code>##           MeetingDate                            Subject VoteResult
 ## 3 2018-05-23T00:00:00 Not forgetting the 4 June incident  Negatived
 ##   SectionCode RundownID HansardID
@@ -506,8 +505,8 @@
 ##                                                                                                 HansardFileURL
 ## 3 https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00349</code></pre>
 <p>It is possible to fetch the detailed voting record of each member on this motion. To get a list of members who voted yes:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span>
-<span id="cb24-2"><a href="#cb24-2"></a>v[v<span class="op">$</span>Vote <span class="op">==</span><span class="st"> "Yes"</span>, <span class="dv">32</span><span class="op">:</span><span class="dv">33</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span>
+<span id="cb26-2"><a href="#cb26-2"></a>v[v<span class="op">$</span>Vote <span class="op">==</span><span class="st"> "Yes"</span>, <span class="dv">32</span><span class="op">:</span><span class="dv">33</span>]</span></code></pre></div>
 <pre><code>##                NameEn Constituency
 ## 2            James TO   Functional
 ## 3     LEUNG Yiu-chung   Functional
@@ -534,8 +533,8 @@
 ## 65           Gary FAN Geographical
 ## 66         AU Nok-hin Geographical</code></pre>
 <p>To check the attendance of this meeting:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span></span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span></code></pre></div>
 <pre><code>##   SlotID MeetID
 ## 1 174096 131473
 ## 2 169121 126590
@@ -578,9 +577,9 @@
 ## 3          http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523q.htm
 ## 4         http://www.legco.gov.hk/yr17-18/chinese/fc/pwsc/agenda/pwsc20180523.htm
 ## 5 http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc58/agenda/sc5820180523.htm</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>z &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">126590</span>)</span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="co"># Show members who were present</span></span>
-<span id="cb28-3"><a href="#cb28-3"></a>z[z<span class="op">$</span>PresentAbsent <span class="op">==</span><span class="st"> "Present"</span>, <span class="dv">7</span><span class="op">:</span><span class="dv">9</span>] </span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>z &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">126590</span>)</span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="co"># Show members who were present</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>z[z<span class="op">$</span>PresentAbsent <span class="op">==</span><span class="st"> "Present"</span>, <span class="dv">7</span><span class="op">:</span><span class="dv">9</span>] </span></code></pre></div>
 <pre><code>##                   MemberNameEnglish MemberNameChinese PresentAbsent
 ## 1                    Hon Tanya CHAN        陳淑莊議員       Present
 ## 2           Hon Tommy CHEUNG Yu-yan        張宇人議員       Present
