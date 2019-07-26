@@ -33,6 +33,6 @@ This package compiles the correct query and request data from the following LegC
 * [Voting Result Database](https://www.legco.gov.hk/odata/english/vrdb.html)
 
 ## Disclaimer
-This package is not affiliated or endorsed by the Legislative Council of Hong Kong.
-The Legislative Council of Hong Kong owns the copyright of any data retieved from its
-open data APIs.
+This package is not affiliated or endorsed by the Legislative Council of Hong Kong. 
+
+The Legislative Council of Hong Kong is the copyright owner of data retieved from its open data APIs.
