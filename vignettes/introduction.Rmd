@@ -17,12 +17,12 @@ in json format and presented in a dataframe.
 
 ### From GitHub
 
-```{r, echo = FALSE}
+```{r, eval = FALSE}
 install.packages("devtools")
 devtools::install_github("elgarteo/legco")
 ```
 
-```{r, eval = FALSE, eval = FALSE}
+```{r, eval = FALSE, echo = FALSE}
 install.packages("https://elgarteo.ga/legco/legco_0.0.9999.tar.gz", repos = NULL, type = "source")
 ```
 
