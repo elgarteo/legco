@@ -27,7 +27,7 @@ This package compiles the correct query and request data from the following LegC
 * [Voting Result Database](https://www.legco.gov.hk/odata/english/vrdb.html)
 
 ## How to use
-Read the [vignettes](https://elgarteo.ga/legco/) for details.
+Read the [vignettes](https://elgarteo.github.io/legco/) for details.
 
 ## Disclaimer
 This package is not affiliated or endorsed by the Legislative Council of Hong Kong. 
