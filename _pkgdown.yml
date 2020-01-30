@@ -78,4 +78,3 @@ reference:
     desc: "Function to access LegCo members' voting record in Council, House Committee, Finance Committee and subcomittees"
     contents:
       - '`voting_record`'
-

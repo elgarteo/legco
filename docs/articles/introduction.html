@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Introduction to legco • legco</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to legco">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
@@ -98,12 +99,13 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Introduction to legco</h1>
             
-            <h4 class="date">2019-07-26</h4>
+            <h4 class="date">2020-01-30</h4>
       
       
       <div class="hidden name"><code>introduction.Rmd</code></div>
@@ -119,13 +121,13 @@
 <div id="from-github" class="section level3">
 <h3 class="hasAnchor">
 <a href="#from-github" class="anchor"></a>From GitHub</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"elgarteo/legco"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"elgarteo/legco"</span>)</span></code></pre></div>
 </div>
 <div id="load-legco" class="section level3">
 <h3 class="hasAnchor">
 <a href="#load-legco" class="anchor"></a>Load legco</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(legco)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(legco)</span></code></pre></div>
 </div>
 </div>
 <div id="understanding-the-legco-apis" class="section level2">
@@ -241,7 +243,7 @@
 <a href="#node-count-limit" class="anchor"></a>Node Count Limit</h3>
 <p>Another limit is the node count limit which is associated with the setting of the LegCo API server. The limit is at most 100 nodes per request, or approximately 19 filtering conditions in most cases. For instance, the following code contains 20 filtering conditions and thus reach the node count limit:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># A request with 20 filtering conditions</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">19</span>,</span>
+<span id="cb5-2"><a href="#cb5-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">19</span>,</span>
 <span id="cb5-3"><a href="#cb5-3"></a>       <span class="dv">21</span>, <span class="dv">23</span>, <span class="dv">25</span>, <span class="dv">27</span>, <span class="dv">29</span>, <span class="dv">31</span>, <span class="dv">33</span>, <span class="dv">35</span>, <span class="dv">37</span>, <span class="dv">39</span>)</span>
 <span id="cb5-4"><a href="#cb5-4"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(x)</span></code></pre></div>
 <pre><code>## Retrieving records...</code></pre>
@@ -312,7 +314,7 @@
 <p>If you run into the error message above, you need to break it down to multiple smaller requests, like <a href="#examples">one of the examples below</a>.</p>
 <p>Note that numeric filtering conditions that are sequential are not subjected to this limit:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># A request with sequential numeric filtering conditions</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
+<span id="cb9-2"><a href="#cb9-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(x)</span></code></pre></div>
 <p>The code above will execute just fine without reaching the node count limit even though it effectively contains 50 filtering conditions.</p>
 </div>
@@ -469,22 +471,22 @@
 <p>The RundownID indicates the location of the first paragraph of the matter concerned in the hansard file. In other words, paragraphs of RundownID between 828783 and 828826 (one RundownID prior to the next item on the agenda) are the records of the matter the <em>Not forgetting the 4 june incident</em> during the meeting. The full text of these paragraphs can be fetched by:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</span>
 <span id="cb16-2"><a href="#cb16-2"></a><span class="co"># Order by RundownID, i.e. chronological order</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a>w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/order">order</a></span>(w<span class="op">$</span>RundownID), ]</span>
-<span id="cb16-4"><a href="#cb16-4"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/colnames">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/nrow">nrow</a></span>(w)</span>
+<span id="cb16-3"><a href="#cb16-3"></a>w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://rdrr.io/r/base/order.html">order</a></span>(w<span class="op">$</span>RundownID), ]</span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="kw"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(w)</span>
 <span id="cb16-5"><a href="#cb16-5"></a><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></span>
 <span id="cb16-6"><a href="#cb16-6"></a>w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>]</span></code></pre></div>
 <pre><code>## [1] "PRESIDENT (in Cantonese): Will Members please proceed to vote."                                                  
 ## [2] "PRESIDENT (in Cantonese): Mr Abraham SHEK, do you wish to cast your vote?(Mr Abraham SHEK did not cast any vote)"</code></pre>
 <p>To check which members have spoken about the motion and to look up some of their names:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unique">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/NA">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/unique.html">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
 <span id="cb18-2"><a href="#cb18-2"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</span></code></pre></div>
 <pre><code>## Error in legco_api("hansard", query, 1000, count, verbose): Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
 <p>The code above produces 27 filtering conditions which reahces the node count limit. If you need have parameters longer than that, break them down into multiple requests:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span>
 <span id="cb20-2"><a href="#cb20-2"></a>y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</span>
-<span id="cb20-3"><a href="#cb20-3"></a>y &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/cbind">rbind</a></span>(y1, y2)</span>
+<span id="cb20-3"><a href="#cb20-3"></a>y &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span>(y1, y2)</span>
 <span id="cb20-4"><a href="#cb20-4"></a><span class="co"># Show members who have spoken about this motion</span></span>
-<span id="cb20-5"><a href="#cb20-5"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(y[y<span class="op">$</span>Type <span class="op">==</span><span class="st"> "MB"</span>, ])</span></code></pre></div>
+<span id="cb20-5"><a href="#cb20-5"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(y[y<span class="op">$</span>Type <span class="op">==</span><span class="st"> "MB"</span>, ])</span></code></pre></div>
 <pre><code>##   SpeakerID NameChi         NameEng Type Initial  FirstName LastName
 ## 2       138  林卓廷  LAM CHEUK-TING   MB     LCT Cheuk-ting      LAM
 ## 3       148  許智峯    HUI CHI-FUNG   MB     HCF   Chi-fung      HUI
@@ -495,10 +497,10 @@
 <p>To find out the voting results of the motion:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">section_code =</span> <span class="st">"mbm"</span>)</span>
 <span id="cb22-2"><a href="#cb22-2"></a>v[v<span class="op">$</span>Subject <span class="op">==</span><span class="st"> "Not forgetting the 4 June incident"</span>, ]</span></code></pre></div>
-<pre><code>##           MeetingDate                            Subject VoteResult
-## 3 2018-05-23T00:00:00 Not forgetting the 4 June incident  Negatived
-##   SectionCode RundownID HansardID
-## 3         mbm    828826      2451
+<pre><code>##           MeetingDate                            Subject VoteResult SectionCode
+## 3 2018-05-23T00:00:00 Not forgetting the 4 June incident  Negatived         mbm
+##   RundownID HansardID
+## 3    828826      2451
 ##                                                                                                 HansardFileURL
 ## 3 https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00349</code></pre>
 <p>It is possible to fetch the detailed voting record of each member on this motion. To get a list of members who voted yes:</p>
@@ -550,18 +552,18 @@
 ## 3                               立法會會議 (行政長官質詢時間)
 ## 4                                          工務小組委員會會議
 ## 5        《醫務委員會(選舉和委任業外委員)規例》小組委員會會議
-##         StartDateTime MeetingTypeEng MeetingTypeChi VenueCode
-## 1 2018-05-23T08:30:00           Open       公開會議      Rm 3
-## 2 2018-05-23T11:30:00           Open       公開會議   Chamber
-## 3 2018-05-23T11:00:00           Open       公開會議   Chamber
-## 4 2018-05-23T08:30:00           Open       公開會議      Rm 1
-## 5 2018-05-23T08:30:00           Open       公開會議      Rm 2
-##        VenueNameEng VenueNameChi TermID
-## 1 Conference Room 3      會議室3      5
-## 2           Chamber       會議廳      5
-## 3           Chamber       會議廳      5
-## 4 Conference Room 1      會議室1      5
-## 5 Conference Room 2      會議室2      5
+##         StartDateTime MeetingTypeEng MeetingTypeChi VenueCode      VenueNameEng
+## 1 2018-05-23T08:30:00           Open       公開會議      Rm 3 Conference Room 3
+## 2 2018-05-23T11:30:00           Open       公開會議   Chamber           Chamber
+## 3 2018-05-23T11:00:00           Open       公開會議   Chamber           Chamber
+## 4 2018-05-23T08:30:00           Open       公開會議      Rm 1 Conference Room 1
+## 5 2018-05-23T08:30:00           Open       公開會議      Rm 2 Conference Room 2
+##   VenueNameChi TermID
+## 1      會議室3      5
+## 2       會議廳      5
+## 3       會議廳      5
+## 4      會議室1      5
+## 5      會議室2      5
 ##                                                                      AgendaUrlEng
 ## 1         http://www.legco.gov.hk/yr17-18/english/bc/bc02/agenda/bc0220180523.htm
 ## 2           http://www.legco.gov.hk/yr17-18/english/counmtg/agenda/cm20180523.htm
@@ -577,79 +579,78 @@
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>z &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">126590</span>)</span>
 <span id="cb28-2"><a href="#cb28-2"></a><span class="co"># Show members who were present</span></span>
 <span id="cb28-3"><a href="#cb28-3"></a>z[z<span class="op">$</span>PresentAbsent <span class="op">==</span><span class="st"> "Present"</span>, <span class="dv">7</span><span class="op">:</span><span class="dv">9</span>] </span></code></pre></div>
-<pre><code>##                   MemberNameEnglish MemberNameChinese PresentAbsent
-## 1                    Hon Tanya CHAN        陳淑莊議員       Present
-## 2           Hon Tommy CHEUNG Yu-yan        張宇人議員       Present
-## 3               Hon LEUNG Yiu-chung        梁耀忠議員       Present
-## 4                  Hon MA Fung-kwok        馬逢國議員       Present
-## 5          Hon Abraham SHEK Lai-him        石禮謙議員       Present
-## 6              Hon James TO Kun-sun        涂謹申議員       Present
-## 7  Dr Hon Fernando CHEUNG Chiu-hung        張超雄議員       Present
-## 8                 Dr Hon KWOK Ka-ki        郭家麒議員       Present
-## 9          Hon Jeffrey LAM Kin-fung        林健鋒議員       Present
-## 10     Prof Hon Joseph LEE Kok-long        李國麟議員       Present
-## 11      Hon Andrew LEUNG Kwan-yuen         梁君彥議員       Present
-## 12              Hon WONG Ting-kwong        黃定光議員       Present
-## 13          Hon Starry LEE Wai-king        李慧琼議員       Present
-## 14                 Hon CHAN Hak-kan        陳克勤議員       Present
-## 15                 Hon CHAN Kin-por        陳健波議員       Present
-## 16   Dr Hon Priscilla LEUNG Mei-fun        梁美芬議員       Present
-## 17                Hon WONG Kwok-kin        黃國健議員       Present
-## 18    Hon Mrs Regina IP LAU Suk-yee      葉劉淑儀議員       Present
-## 19            Hon Paul TSE Wai-chun        謝偉俊議員       Present
-## 20       Dr Hon Helena WONG Pik-wan        黃碧雲議員       Present
-## 21            Dr Hon CHIANG Lai-wan        蔣麗芸議員       Present
-## 22                   Hon Claudia MO        毛孟靜議員       Present
-## 23                   Hon WU Chi-wai        胡志偉議員       Present
-## 24             Hon LEUNG Che-cheung        梁志祥議員       Present
-## 25           Hon Alice MAK Mei-kuen        麥美娟議員       Present
-## 26         Hon Michael TIEN Puk-sun        田北辰議員       Present
-## 27                 Hon CHAN Han-pan        陳恒鑌議員       Present
-## 28            Dr Hon Elizabeth QUAT        葛珮帆議員       Present
-## 29               Hon CHAN Chi-chuen        陳志全議員       Present
-## 30            Hon Gary FAN Kwok-wai        范國威議員       Present
-## 31           Hon Steven HO Chun-yin        何俊賢議員       Present
-## 32        Hon Frankie YICK Chi-ming        易志明議員       Present
-## 33                  Hon IP Kin-yuen        葉建源議員       Present
-## 34        Hon Dennis KWOK Wing-hang        郭榮鏗議員       Present
-## 35                Hon Kenneth LEUNG        梁繼昌議員       Present
-## 36            Ir Dr Hon LO Wai-kwok        盧偉國議員       Present
-## 37           Hon Tony TSE Wai-chuen        謝偉銓議員       Present
-## 38               Hon KWOK Wai-keung        郭偉强議員       Present
-## 39                Hon POON Siu-ping        潘兆平議員       Present
-## 40                  Hon YIU Si-wing        姚思榮議員       Present
-## 41      Hon Martin LIAO Cheung-kong        廖長江議員       Present
-## 42  Hon Christopher CHEUNG Wah-fung        張華峰議員       Present
-## 43               Hon CHUNG Kwok-pan        鍾國斌議員       Present
-## 44            Hon Charles Peter MOK        莫乃光議員       Present
-## 45                  Hon Alvin YEUNG        楊岳橋議員       Present
-## 46             Hon CHEUNG Kwok-kwan        張國鈞議員       Present
-## 47                 Hon HUI Chi-fung        許智峯議員       Present
-## 48        Hon Wilson OR Chong-shing        柯創盛議員       Present
-## 49            Hon Jeremy TAM Man-ho        譚文豪議員       Present
-## 50           Hon Andrew WAN Siu-kin        尹兆堅議員       Present
-## 51           Dr Hon CHENG Chung-tai        鄭松泰議員       Present
-## 52        Dr Hon Junius HO Kwan-yiu        何君堯議員       Present
-## 53                 Hon CHU Hoi-dick        朱凱廸議員       Present
-## 54               Hon LAM Cheuk-ting        林卓廷議員       Present
-## 55                 Hon YUNG Hoi-yan        容海恩議員       Present
-## 56         Hon Kenneth LAU Ip-keung        劉業強議員       Present
-## 57               Dr Hon Pierre CHAN        陳沛然議員       Present
-## 58                  Hon HO Kai-ming        何啟明議員       Present
-## 59               Hon LUK Chung-hung        陸頌雄議員       Present
-## 60                 Hon SHIU Ka-chun        邵家臻議員       Present
-## 61             Hon Jimmy NG Wing-ka        吳永嘉議員       Present
-## 62               Hon CHAN Chun-ying        陳振英議員       Present
-## 63                  Hon SHIU Ka-fai        邵家輝議員       Present
-## 64                 Hon LAU Kwok-fan        劉國勳議員       Present
-## 65                Hon KWONG Chun-yu        鄺俊宇議員       Present
-## 66          Hon Holden CHOW Ho-ding        周浩鼎議員       Present
-## 67                   Hon AU Nok-hin        區諾軒議員       Present
-## 68      Hon Vincent CHENG Wing-shun        鄭泳舜議員       Present</code></pre>
+<pre><code>##                         MemberNameEnglish MemberNameChinese PresentAbsent
+## 1  Hon Andrew LEUNG Kwan-yuen (President) 梁君彥議員 (主席)       Present
+## 2                    Hon James TO Kun-sun        涂謹申議員       Present
+## 3                     Hon LEUNG Yiu-chung        梁耀忠議員       Present
+## 4                Hon Abraham SHEK Lai-him        石禮謙議員       Present
+## 5                 Hon Tommy CHEUNG Yu-yan        張宇人議員       Present
+## 6            Prof Hon Joseph LEE Kok-long        李國麟議員       Present
+## 7                Hon Jeffrey LAM Kin-fung        林健鋒議員       Present
+## 8                     Hon WONG Ting-kwong        黃定光議員       Present
+## 9                 Hon Starry LEE Wai-king        李慧琼議員       Present
+## 10                       Hon CHAN Hak-kan        陳克勤議員       Present
+## 11                       Hon CHAN Kin-por        陳健波議員       Present
+## 12         Dr Hon Priscilla LEUNG Mei-fun        梁美芬議員       Present
+## 13                      Hon WONG Kwok-kin        黃國健議員       Present
+## 14          Hon Mrs Regina IP LAU Suk-yee      葉劉淑儀議員       Present
+## 15                  Hon Paul TSE Wai-chun        謝偉俊議員       Present
+## 16                         Hon Claudia MO        毛孟靜議員       Present
+## 17               Hon Michael TIEN Puk-sun        田北辰議員       Present
+## 18                 Hon Steven HO Chun-yin        何俊賢議員       Present
+## 19              Hon Frankie YICK Chi-ming        易志明議員       Present
+## 20                         Hon WU Chi-wai        胡志偉議員       Present
+## 21                        Hon YIU Si-wing        姚思榮議員       Present
+## 22                       Hon MA Fung-kwok        馬逢國議員       Present
+## 23                  Hon Charles Peter MOK        莫乃光議員       Present
+## 24                     Hon CHAN Chi-chuen        陳志全議員       Present
+## 25                       Hon CHAN Han-pan        陳恒鑌議員       Present
+## 26                   Hon LEUNG Che-cheung        梁志祥議員       Present
+## 27                      Hon Kenneth LEUNG        梁繼昌議員       Present
+## 28                 Hon Alice MAK Mei-kuen        麥美娟議員       Present
+## 29                      Dr Hon KWOK Ka-ki        郭家麒議員       Present
+## 30                     Hon KWOK Wai-keung        郭偉强議員       Present
+## 31              Hon Dennis KWOK Wing-hang        郭榮鏗議員       Present
+## 32        Hon Christopher CHEUNG Wah-fung        張華峰議員       Present
+## 33       Dr Hon Fernando CHEUNG Chiu-hung        張超雄議員       Present
+## 34             Dr Hon Helena WONG Pik-wan        黃碧雲議員       Present
+## 35                        Hon IP Kin-yuen        葉建源議員       Present
+## 36                     Hon Elizabeth QUAT        葛珮帆議員       Present
+## 37            Hon Martin LIAO Cheung-kong        廖長江議員       Present
+## 38                      Hon POON Siu-ping        潘兆平議員       Present
+## 39                  Dr Hon CHIANG Lai-wan        蔣麗芸議員       Present
+## 40                  Ir Dr Hon LO Wai-kwok        盧偉國議員       Present
+## 41                     Hon CHUNG Kwok-pan        鍾國斌議員       Present
+## 42                        Hon Alvin YEUNG        楊岳橋議員       Present
+## 43                 Hon Andrew WAN Siu-kin        尹兆堅議員       Present
+## 44                       Hon CHU Hoi-dick        朱凱廸議員       Present
+## 45                   Hon Jimmy NG Wing-ka        吳永嘉議員       Present
+## 46              Dr Hon Junius HO Kwan-yiu        何君堯議員       Present
+## 47                        Hon HO Kai-ming        何啟明議員       Present
+## 48                     Hon LAM Cheuk-ting        林卓廷議員       Present
+## 49                Hon Holden CHOW Ho-ding        周浩鼎議員       Present
+## 50                        Hon SHIU Ka-fai        邵家輝議員       Present
+## 51                       Hon SHIU Ka-chun        邵家臻議員       Present
+## 52              Hon Wilson OR Chong-shing        柯創盛議員       Present
+## 53                       Hon YUNG Hoi-yan        容海恩議員       Present
+## 54                     Dr Hon Pierre CHAN        陳沛然議員       Present
+## 55                     Hon CHAN Chun-ying        陳振英議員       Present
+## 56                         Hon Tanya CHAN        陳淑莊議員       Present
+## 57                   Hon CHEUNG Kwok-kwan        張國鈞議員       Present
+## 58                       Hon HUI Chi-fung        許智峯議員       Present
+## 59                     Hon LUK Chung-hung        陸頌雄議員       Present
+## 60                       Hon LAU Kwok-fan        劉國勳議員       Present
+## 61               Hon Kenneth LAU Ip-keung        劉業強議員       Present
+## 62                 Dr Hon CHENG Chung-tai        鄭松泰議員       Present
+## 63                      Hon KWONG Chun-yu        鄺俊宇議員       Present
+## 64                  Hon Jeremy TAM Man-ho        譚文豪議員       Present
+## 65            Hon Vincent CHENG Wing-shun        鄭泳舜議員       Present
+## 66                 Hon Tony TSE Wai-chuen        謝偉銓議員       Present</code></pre>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -665,17 +666,20 @@
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by <a href="https://elgarteo.ga">Elgar Teo</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

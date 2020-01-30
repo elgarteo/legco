@@ -22,10 +22,6 @@ install.packages("devtools")
 devtools::install_github("elgarteo/legco")
 ```
 
-```{r, eval = FALSE, echo = FALSE}
-install.packages("https://elgarteo.ga/legco/legco_0.0.9999.tar.gz", repos = NULL, type = "source")
-```
-
 ### Load legco
 
 ```{r}

@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Voting Results Database • legco</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Voting Results Database">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
@@ -98,12 +99,13 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Voting Results Database</h1>
             
-            <h4 class="date">2019-07-26</h4>
+            <h4 class="date">2020-01-30</h4>
       
       
       <div class="hidden name"><code>voting.Rmd</code></div>
@@ -125,7 +127,7 @@
 <li><p><code>VoteTime</code> is the date and time when a vote is conducted. The lack of a designated unique identifier means the <code>VoteTime</code> is the only unique identifier of each individual vote.</p></li>
 <li><p><code>TermID</code> is the numerical ID of a LegCo term. Note that the nominal number of a TermID is less than that of the term number by 1, i.e. the TermID of the fifth term is <code>4</code>.</p></li>
 </ul>
-<p>This database has an <code>ID</code> which has little value since there is only one data endpoint and it is not interchangeable with other databases. To locate the bill in other databases, it is advisable to use the <code>VoteDate</code> as the filter parameter (e.g. Hansard database) or to find the CommitteeID of the relevant bill committee using <code><a href="https://www.rdocumentation.org/packages/legcoplus/topics/search_committee">legcoplus::search_committee()</a></code> from the package <a href="https://elgarteo.ga/legco/legcoplus">legcoplus</a> (e.g. Meeting Schedule Database).</p>
+<p>This database has an <code>ID</code> which has little value since there is only one data endpoint and it is not interchangeable with other databases. To locate the bill in other databases, it is advisable to use the <code>VoteDate</code> as the filter parameter (e.g. Hansard database) or to find the CommitteeID of the relevant bill committee using <code><a href="https://rdrr.io/pkg/legcoplus/man/search_committee.html">legcoplus::search_committee()</a></code> from the package <a href="https://elgarteo.ga/legco/legcoplus">legcoplus</a> (e.g. Meeting Schedule Database).</p>
 </div>
 <div id="total-count" class="section level3">
 <h3 class="hasAnchor">
@@ -149,7 +151,7 @@
 <span id="cb3-2"><a href="#cb3-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">committee =</span> <span class="st">"Council Meeting"</span>,</span>
 <span id="cb3-3"><a href="#cb3-3"></a>                   <span class="dt">from =</span> <span class="st">"2016-11-16T13:51:53"</span>,</span>
 <span id="cb3-4"><a href="#cb3-4"></a>                   <span class="dt">to =</span> <span class="st">"2016-11-16T13:51:53"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(v)</span></code></pre></div>
 <pre><code>##       ID           StartDate       Committee TermID            VoteDate
 ## 1 526982 2016-11-16T00:00:00 Council Meeting      5 2016-11-16T00:00:00
 ## 2 526983 2016-11-16T00:00:00 Council Meeting      5 2016-11-16T00:00:00
@@ -185,37 +187,30 @@
 ## 4          31         28         3              0   Passed             28
 ## 5          31         28         3              0   Passed             28
 ## 6          31         28         3              0   Passed             28
-##   FcVoteCount FcYesCount FcNoCount FcAbstainCount FcResult
-## 1          27         16         8              3   Passed
-## 2          27         16         8              3   Passed
-## 3          27         16         8              3   Passed
-## 4          27         16         8              3   Passed
-## 5          27         16         8              3   Passed
-## 6          27         16         8              3   Passed
-##   OverallPresentCount OverallVoteCount OverallYesCount OverallNoCount
-## 1                  NA               NA              NA             NA
-## 2                  NA               NA              NA             NA
-## 3                  NA               NA              NA             NA
-## 4                  NA               NA              NA             NA
-## 5                  NA               NA              NA             NA
-## 6                  NA               NA              NA             NA
-##   OverallAbstainCount OverallResult NameCh          NameEn Constituency
-## 1                  NA        Passed 梁君彥    Andrew LEUNG   Functional
-## 2                  NA        Passed 涂謹申        James TO   Functional
-## 3                  NA        Passed 梁耀忠 LEUNG Yiu-chung   Functional
-## 4                  NA        Passed 石禮謙    Abraham SHEK   Functional
-## 5                  NA        Passed 張宇人    Tommy CHEUNG   Functional
-## 6                  NA        Passed 李國麟 Prof Joseph LEE   Functional
-##      Vote DisplayOrder
-## 1 Present            1
-## 2     Yes            2
-## 3     Yes            3
-## 4  Absent            4
-## 5      No            5
-## 6     Yes            6</code></pre>
+##   FcVoteCount FcYesCount FcNoCount FcAbstainCount FcResult OverallPresentCount
+## 1          27         16         8              3   Passed                  NA
+## 2          27         16         8              3   Passed                  NA
+## 3          27         16         8              3   Passed                  NA
+## 4          27         16         8              3   Passed                  NA
+## 5          27         16         8              3   Passed                  NA
+## 6          27         16         8              3   Passed                  NA
+##   OverallVoteCount OverallYesCount OverallNoCount OverallAbstainCount
+## 1               NA              NA             NA                  NA
+## 2               NA              NA             NA                  NA
+## 3               NA              NA             NA                  NA
+## 4               NA              NA             NA                  NA
+## 5               NA              NA             NA                  NA
+## 6               NA              NA             NA                  NA
+##   OverallResult NameCh          NameEn Constituency    Vote DisplayOrder
+## 1        Passed 梁君彥    Andrew LEUNG   Functional Present            1
+## 2        Passed 涂謹申        James TO   Functional     Yes            2
+## 3        Passed 梁耀忠 LEUNG Yiu-chung   Functional     Yes            3
+## 4        Passed 石禮謙    Abraham SHEK   Functional  Absent            4
+## 5        Passed 張宇人    Tommy CHEUNG   Functional      No            5
+## 6        Passed 李國麟 Prof Joseph LEE   Functional     Yes            6</code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Fetch the votes that Hon Abraham Shek were abstained from</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">name_ch =</span> <span class="st">"石禮謙"</span>, <span class="dt">vote =</span> <span class="st">"abstain"</span>)</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(v)</span></code></pre></div>
 <pre><code>##      ID           StartDate       Committee TermID            VoteDate
 ## 1 47797 2012-11-07T00:00:00 Council Meeting      4 2012-11-07T00:00:00
 ## 2 48427 2012-11-07T00:00:00 Council Meeting      4 2012-11-07T00:00:00
@@ -258,38 +253,32 @@
 ## 4          33         29         3              1    Passed             34
 ## 5          15         15         0              0    Passed             25
 ## 6          29         14         0             15 Negatived             28
-##   FcVoteCount FcYesCount FcNoCount FcAbstainCount  FcResult
-## 1          35         16         8             11 Negatived
-## 2          30         20         2              8    Passed
-## 3          33         17         7              9    Passed
-## 4          34         18         5             11    Passed
-## 5          25         13         6              6    Passed
-## 6          28         15         0             13    Passed
-##   OverallPresentCount OverallVoteCount OverallYesCount OverallNoCount
-## 1                  NA               NA              NA             NA
-## 2                  NA               NA              NA             NA
-## 3                  NA               NA              NA             NA
-## 4                  NA               NA              NA             NA
-## 5                  NA               NA              NA             NA
-## 6                  NA               NA              NA             NA
-##   OverallAbstainCount OverallResult NameCh       NameEn Constituency
-## 1                  NA     Negatived 石禮謙 Abraham SHEK   Functional
-## 2                  NA        Passed 石禮謙 Abraham SHEK   Functional
-## 3                  NA        Passed 石禮謙 Abraham SHEK   Functional
-## 4                  NA        Passed 石禮謙 Abraham SHEK   Functional
-## 5                  NA        Passed 石禮謙 Abraham SHEK   Functional
-## 6                  NA     Negatived 石禮謙 Abraham SHEK   Functional
-##      Vote DisplayOrder
-## 1 Abstain           10
-## 2 Abstain           10
-## 3 Abstain           10
-## 4 Abstain           10
-## 5 Abstain           10
-## 6 Abstain           10</code></pre>
+##   FcVoteCount FcYesCount FcNoCount FcAbstainCount  FcResult OverallPresentCount
+## 1          35         16         8             11 Negatived                  NA
+## 2          30         20         2              8    Passed                  NA
+## 3          33         17         7              9    Passed                  NA
+## 4          34         18         5             11    Passed                  NA
+## 5          25         13         6              6    Passed                  NA
+## 6          28         15         0             13    Passed                  NA
+##   OverallVoteCount OverallYesCount OverallNoCount OverallAbstainCount
+## 1               NA              NA             NA                  NA
+## 2               NA              NA             NA                  NA
+## 3               NA              NA             NA                  NA
+## 4               NA              NA             NA                  NA
+## 5               NA              NA             NA                  NA
+## 6               NA              NA             NA                  NA
+##   OverallResult NameCh       NameEn Constituency    Vote DisplayOrder
+## 1     Negatived 石禮謙 Abraham SHEK   Functional Abstain           10
+## 2        Passed 石禮謙 Abraham SHEK   Functional Abstain           10
+## 3        Passed 石禮謙 Abraham SHEK   Functional Abstain           10
+## 4        Passed 石禮謙 Abraham SHEK   Functional Abstain           10
+## 5        Passed 石禮謙 Abraham SHEK   Functional Abstain           10
+## 6     Negatived 石禮謙 Abraham SHEK   Functional Abstain           10</code></pre>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -303,17 +292,20 @@
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by <a href="https://elgarteo.ga">Elgar Teo</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

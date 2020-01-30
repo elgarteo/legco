@@ -25,7 +25,7 @@ This database has an `InternalKey` which has little value since there is only on
 it is not interchangeable with other databases. To locate the bill in other databases, it is advisable
 to use the First, Second and Third Reading dates as the filter parameters (e.g. Hansard database) or 
 find the CommitteeID of the relevant bill committee using `legcoplus::search_committee()` from 
-the package [legcoplus](https://elgarteo.ga/legco/legcoplus) (e.g. Meeting Schedule Database).
+the package [legcoplus](https://github.com/elgarteo/legcoplus) (e.g. Meeting Schedule Database).
 
 ### Total Count
 
