@@ -28,7 +28,7 @@ navbar:
     - text: "Reference"
       href: reference/index.html
     - text: "Add-on: legcoplus"
-      href: ./legcoplus
+      href: https://elgarteo.github.io/legcoplus/
 
   right:
     - icon: fa-github fa-lg
