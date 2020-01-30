@@ -15,14 +15,12 @@ in json format and presented in a dataframe.
 
 ## Installing legco
 
-### From GitHub
-
 ```{r, eval = FALSE}
 install.packages("devtools")
 devtools::install_github("elgarteo/legco")
 ```
 
-### Load legco
+And to load it before every use:
 
 ```{r}
 library(legco)
