@@ -15,7 +15,7 @@ devtools::install_github("elgarteo/legco")
 This R package provides access to the LegCo open data APIs in R. The functions in this package 
 correspond to the data endpoints of the APIs.
 
-It is recommended to also install an addon package [elgarteo/legcoplus](https://github.com/elgarteo/legocplus)
+It is recommended to also install an addon package [elgarteo/legcoplus](https://github.com/elgarteo/legcoplus)
 which provides functions that facilitate the use LegCo's data.
 
 ## How it works
