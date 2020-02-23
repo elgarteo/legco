@@ -5,13 +5,31 @@
 \alias{legco_petitions}
 \title{Petitions in LegCo}
 \usage{
-petitions(rundown_id = NULL, hansard_id = NULL, lang = "en",
-  from = "1900-01-01", to = Sys.Date(), floor = FALSE, n = 1000,
-  extra_param = NULL, count = FALSE, verbose = TRUE)
+petitions(
+  rundown_id = NULL,
+  hansard_id = NULL,
+  lang = "en",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_petitions(rundown_id = NULL, hansard_id = NULL, lang = "en",
-  from = "1900-01-01", to = Sys.Date(), floor = FALSE, n = 1000,
-  extra_param = NULL, count = FALSE, verbose = TRUE)
+legco_petitions(
+  rundown_id = NULL,
+  hansard_id = NULL,
+  lang = "en",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{rundown_id}{The id of a rundown, or a vector of ids. Defaults to
@@ -24,22 +42,22 @@ returns petitions from all hansard files. Defaults to `NULL`.}
 English version. `'zh'` returns the Traditional Chinese version. Defaults
 to `'en'`.}
 
-\item{from}{Only fetch results from hansards of meetings on or after this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{Only includes hansards of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch results from hansards of meetings on or before this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to the current system date.}
+\item{to}{Only includes hansards of meetings on or before this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.}
 
-\item{floor}{Whether to fetch results from the floor version of the hansard
-files. The floor version is the first presented version of hansard file in
-the original language delivered by the speakers in LegCo. If `TRUE`, the
+\item{floor}{Whether to fetch the floor version of the hansard files. The
+floor version is the first presented version of hansard file in the
+original language delivered by the speakers in LegCo. If `TRUE`, the
 language option is ignored. Defaults to `FALSE`.}
 
-\item{n}{The number of records to request. Defaults to `1000`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}

@@ -88,15 +88,7 @@
 #'   that have not gone through third reading and overrides the `third_from`
 #'   parameter. Defaults to `'all'`.
 #'
-#' @param n The number of record to request. Defaults to `10000`.
-#'
-#' @param extra_param Additional query parameters defined in LegCo API. Must
-#'   begin with `'&'`.
-#'   
-#' @param count If `TRUE`, returns only the total count of records that matches
-#'   the paramter(s) instead of the result. Defaults to `FALSE`.
-#'
-#' @param verbose Defaults to `TRUE`.
+#' @inheritParams legco_api
 #'
 #' @export
 #' 

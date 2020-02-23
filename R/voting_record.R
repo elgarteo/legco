@@ -43,15 +43,7 @@
 #'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 #'   to a time with `as.POSIXlt()`. Defaults to system time.
 #'
-#' @param n The number of records to request. Defaults to `10000`.
-#'
-#' @param extra_param Additional query parameters defined in LegCo API. Must
-#'   begin with `'&'`.
-#'   
-#' @param count If `TRUE`, returns only the total count of records that matches
-#'   the paramter(s) instead of the result. Defaults to `FALSE`.
-#'
-#' @param verbose Defaults to `TRUE`.
+#' @inheritParams legco_api
 #'
 #' @export
 #' 

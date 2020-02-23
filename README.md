@@ -3,8 +3,6 @@ An R package to fetch data from the Hong Kong Legislative Council (LegCo) APIs.
 
 Inspired by [evanodell/hansard](https://github.com/evanodell/hansard).
 
-Under active development.
-
 To install this package, run:
 ```
 #install.packages("devtools")

@@ -37,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.9999</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -99,14 +99,15 @@
 <!--/.navbar -->
 
       
-      </header><div class="row">
+
+      </header><script src="attn_files/header-attrs-2.1/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Attendance Database</h1>
             
-            <h4 class="date">2019-07-26</h4>
+            <h4 class="date">2020-02-24</h4>
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/master/vignettes/attn.Rmd"><code>vignettes/attn.Rmd</code></a></small>
       <div class="hidden name"><code>attn.Rmd</code></div>
 
     </div>
@@ -151,21 +152,21 @@
 ## 3        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars
 ## 4        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars
 ## 5        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars
-##       MeetingNameChinese MeetingStartDateTime MemberID
-## 1 墟市事宜小組委員會會議  2017-10-13T08:30:00      842
-## 2 墟市事宜小組委員會會議  2017-10-13T08:30:00      846
-## 3 墟市事宜小組委員會會議  2017-10-13T08:30:00      910
-## 4 墟市事宜小組委員會會議  2017-10-13T08:30:00      917
-## 5 墟市事宜小組委員會會議  2017-10-13T08:30:00      918
-##        MemberNameEnglish MemberNameChinese PresentAbsent
-## 1 Hon Steven HO Chun-yin        何俊賢議員        Absent
-## 2      Hon Kenneth LEUNG        梁繼昌議員        Absent
-## 3       Hon CHU Hoi-dick        朱凱廸議員        Absent
-## 4        Hon HO Kai-ming        何啟明議員        Absent
-## 5     Hon LUK Chung-hung        陸頌雄議員        Absent</code></pre>
+##       MeetingNameChinese MeetingStartDateTime MemberID      MemberNameEnglish
+## 1 墟市事宜小組委員會會議  2017-10-13T08:30:00      750 Hon Steven HO Chun-yin
+## 2 墟市事宜小組委員會會議  2017-10-13T08:30:00      759      Hon Kenneth LEUNG
+## 3 墟市事宜小組委員會會議  2017-10-13T08:30:00      776       Hon CHU Hoi-dick
+## 4 墟市事宜小組委員會會議  2017-10-13T08:30:00      779        Hon HO Kai-ming
+## 5 墟市事宜小組委員會會議  2017-10-13T08:30:00      791     Hon LUK Chung-hung
+##   MemberNameChinese PresentAbsent
+## 1        何俊賢議員        Absent
+## 2        梁繼昌議員        Absent
+## 3        朱凱廸議員        Absent
+## 4        何啟明議員        Absent
+## 5        陸頌雄議員        Absent</code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Fetch the meetings that Hon Chu Hoi-dick was absent from</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">member_id =</span> <span class="dv">910</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(v)</span></code></pre></div>
+<span id="cb5-2"><a href="#cb5-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">member_id =</span> <span class="dv">776</span>, <span class="dt">attn =</span> <span class="st">"a"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(v)</span></code></pre></div>
 <pre><code>##   CommitteeID MeetID              MeetingNameEnglish MeetingNameChinese
 ## 1        2548 120628 Regular House Committee Meeting     內務委員會例會
 ## 2        2548 120629      Meeting of House Committee     內務委員會會議
@@ -174,12 +175,12 @@
 ## 5        2548 120632      Meeting of House Committee     內務委員會會議
 ## 6        2548 120639      Meeting of House Committee     內務委員會會議
 ##   MeetingStartDateTime MemberID MemberNameEnglish MemberNameChinese
-## 1  2017-01-06T14:30:00      910  Hon CHU Hoi-dick        朱凱廸議員
-## 2  2017-01-13T14:30:00      910  Hon CHU Hoi-dick        朱凱廸議員
-## 3  2017-01-20T14:30:00      910  Hon CHU Hoi-dick        朱凱廸議員
-## 4  2017-02-03T14:30:00      910  Hon CHU Hoi-dick        朱凱廸議員
-## 5  2017-02-10T14:30:00      910  Hon CHU Hoi-dick        朱凱廸議員
-## 6  2017-05-12T14:30:00      910  Hon CHU Hoi-dick        朱凱廸議員
+## 1  2017-01-06T14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員
+## 2  2017-01-13T14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員
+## 3  2017-01-20T14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員
+## 4  2017-02-03T14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員
+## 5  2017-02-10T14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員
+## 6  2017-05-12T14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員
 ##   PresentAbsent
 ## 1        Absent
 ## 2        Absent
@@ -191,6 +192,7 @@
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+
         <div id="tocnav">
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
@@ -204,17 +206,20 @@
 </div>
 
 
+
       <footer><div class="copyright">
   <p>Developed by <a href="https://elgarteo.ga">Elgar Teo</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

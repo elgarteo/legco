@@ -5,15 +5,37 @@
 \alias{legco_voting_record}
 \title{Voting Record in LegCo Meetings}
 \usage{
-voting_record(committee = NULL, term_id = NULL, result = "all",
-  vote = "all", name_ch = NULL, seperate_mechanism = NULL,
-  mover_type = "all", from = "1900-01-01T00:00:00", to = Sys.time(),
-  n = 10000, extra_param = NULL, count = FALSE, verbose = TRUE)
+voting_record(
+  committee = NULL,
+  term_id = NULL,
+  result = "all",
+  vote = "all",
+  name_ch = NULL,
+  seperate_mechanism = NULL,
+  mover_type = "all",
+  from = "1900-01-01T00:00:00",
+  to = Sys.time(),
+  n = 10000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_voting_record(committee = NULL, term_id = NULL, result = "all",
-  vote = "all", name_ch = NULL, seperate_mechanism = NULL,
-  mover_type = "all", from = "1900-01-01T00:00:00", to = Sys.time(),
-  n = 10000, extra_param = NULL, count = FALSE, verbose = TRUE)
+legco_voting_record(
+  committee = NULL,
+  term_id = NULL,
+  result = "all",
+  vote = "all",
+  name_ch = NULL,
+  seperate_mechanism = NULL,
+  mover_type = "all",
+  from = "1900-01-01T00:00:00",
+  to = Sys.time(),
+  n = 10000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{committee}{The name of the committee or subcommittee. Defaults to
@@ -56,10 +78,7 @@ character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
 `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 to a time with `as.POSIXlt()`. Defaults to system time.}
 
-\item{n}{The number of records to request. Defaults to `10000`.}
-
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{count}{If `TRUE`, returns only the total count of records that matches
 the paramter(s) instead of the result. Defaults to `FALSE`.}

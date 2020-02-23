@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.9999</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -146,7 +146,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Bills in LegCo</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/elgarteo/legco/blob/master/R/bills.R'><code>R/bills.R</code></a></small>
     <div class="hidden name"><code>bills.Rd</code></div>
     </div>
 
@@ -154,14 +154,33 @@
     <p>Fetch bills presented in LegCo council meetings.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>bills</span>(<span class='kw'>rundown_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>section_code</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+    <pre class="usage"><span class='fu'>bills</span>(
+  <span class='kw'>rundown_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>section_code</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(),
+  <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)
 
-<span class='fu'>legco_bills</span>(<span class='kw'>rundown_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>section_code</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
-  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+<span class='fu'>legco_bills</span>(
+  <span class='kw'>rundown_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>section_code</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(),
+  <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -210,12 +229,7 @@ language option is ignored. Defaults to `FALSE`.</p></td>
     </tr>
     <tr>
       <th>n</th>
-      <td><p>The number of records to request. Defaults to `1000`.</p></td>
-    </tr>
-    <tr>
-      <th>extra_param</th>
-      <td><p>Additional query parameters defined in LegCo API. Must
-begin with `'&amp;'`.</p></td>
+      <td><p>The number of record to fetch. Defaults to `1000`.</p></td>
     </tr>
     <tr>
       <th>count</th>

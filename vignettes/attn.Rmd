@@ -59,6 +59,6 @@ one of more LegCo member(s), or both.
 attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", attn = "a")
 
 # Fetch the meetings that Hon Chu Hoi-dick was absent from
-v <- attendance(member_id = 910, attn = "a")
+v <- attendance(member_id = 776, attn = "a")
 head(v)
 ```

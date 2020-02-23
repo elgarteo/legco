@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.9999</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -146,7 +146,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Rundown from LegCo Hansards</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/elgarteo/legco/blob/master/R/rundown.R'><code>R/rundown.R</code></a></small>
     <div class="hidden name"><code>rundown.Rd</code></div>
     </div>
 
@@ -154,15 +154,35 @@
     <p>Fetch the rundown from hansard files of LegCo council meetings.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>rundown</span>(<span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>speaker_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>bookmark_name</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
-  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+    <pre class="usage"><span class='fu'>rundown</span>(
+  <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>speaker_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
+  <span class='kw'>bookmark_name</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(),
+  <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)
 
-<span class='fu'>legco_rundown</span>(<span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>speaker_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>, <span class='kw'>bookmark_name</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
-  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+<span class='fu'>legco_rundown</span>(
+  <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>speaker_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
+  <span class='kw'>bookmark_name</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(),
+  <span class='kw'>floor</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1000</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -194,28 +214,28 @@ Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>from</th>
-      <td><p>Only fetch results from hansards of meetings on or after this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.</p></td>
+      <td><p>Only includes hansards of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.</p></td>
     </tr>
     <tr>
       <th>to</th>
-      <td><p>Only fetch results from hansards of meetings on or before this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to the current system date.</p></td>
+      <td><p>Only includes hansards of meetings on or before this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.</p></td>
     </tr>
     <tr>
       <th>floor</th>
-      <td><p>Whether to fetch results from the floor version of the hansard
-files. The floor version is the first presented version of hansard file in
-the original language delivered by the speakers in LegCo. If `TRUE`, the
+      <td><p>Whether to fetch the floor version of the hansard files. The
+floor version is the first presented version of hansard file in the
+original language delivered by the speakers in LegCo. If `TRUE`, the
 language option is ignored. Defaults to `FALSE`.</p></td>
     </tr>
     <tr>
       <th>n</th>
-      <td><p>The number of subjects to request. Defaults to `1000`.</p></td>
+      <td><p>The number of record to fetch. Defaults to `1000`.</p></td>
     </tr>
     <tr>
       <th>extra_param</th>

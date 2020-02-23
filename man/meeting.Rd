@@ -5,13 +5,31 @@
 \alias{legco_meeting}
 \title{Meetings of LegCo Committees}
 \usage{
-meeting(id = NULL, meet_id = NULL, from = "1900-01-01",
-  to = Sys.Date(), type = "all", term_id = NULL, n = 10000,
-  extra_param = NULL, count = FALSE, verbose = TRUE)
+meeting(
+  id = NULL,
+  meet_id = NULL,
+  from = "1900-01-01",
+  to = Sys.Date(),
+  type = "all",
+  term_id = NULL,
+  n = 10000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_meeting(id = NULL, meet_id = NULL, from = "1900-01-01",
-  to = Sys.Date(), type = "all", term_id = NULL, n = 10000,
-  extra_param = NULL, count = FALSE, verbose = TRUE)
+legco_meeting(
+  id = NULL,
+  meet_id = NULL,
+  from = "1900-01-01",
+  to = Sys.Date(),
+  type = "all",
+  term_id = NULL,
+  n = 10000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{id}{The id of a meeting slot, or a vector of ids. If `NULL`, returns
@@ -38,10 +56,7 @@ of all terms.}
 open meetings. If `'closed'`, returns closed meetings. If `'all'`, returns
 all meetings. Defaults to `'all'`.}
 
-\item{n}{The number of records to request. Defaults to `10000`.}
-
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{count}{If `TRUE`, returns only the total count of records that matches
 the paramter(s) instead of the result. Defaults to `FALSE`.}

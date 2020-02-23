@@ -5,14 +5,31 @@
 \alias{legco_attendance}
 \title{Attendance of LegCo Members}
 \usage{
-attendance(committee_id = NULL, meet_id = NULL, member_id = NULL,
-  attn = "all", from = "1900-01-01", to = Sys.Date(), n = 1000,
-  extra_param = NULL, count = FALSE, verbose = TRUE)
+attendance(
+  committee_id = NULL,
+  meet_id = NULL,
+  member_id = NULL,
+  attn = "all",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_attendance(committee_id = NULL, meet_id = NULL,
-  member_id = NULL, attn = "all", from = "1900-01-01",
-  to = Sys.Date(), n = 1000, extra_param = NULL, count = FALSE,
-  verbose = TRUE)
+legco_attendance(
+  committee_id = NULL,
+  meet_id = NULL,
+  member_id = NULL,
+  attn = "all",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{committee_id}{The id of a committee, or a vector of ids. If `NULL`,
@@ -37,10 +54,7 @@ character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
 `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
 date with `as.Date()`. Defaults to the current system date.}
 
-\item{n}{The number of records to request. Defaults to `1000`.}
-
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{count}{If `TRUE`, returns only the total count of records that matches
 the paramter(s) instead of the result. Defaults to `FALSE`.}

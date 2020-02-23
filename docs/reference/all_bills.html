@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.9999</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -146,7 +146,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>All Bills in LegCo</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/elgarteo/legco/blob/master/R/all_bills.R'><code>R/all_bills.R</code></a></small>
     <div class="hidden name"><code>all_bills.Rd</code></div>
     </div>
 
@@ -154,17 +154,43 @@
     <p>Fetch the information of bills presented in LegCo since 1906.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>all_bills</span>(<span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ordinance</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>title</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>proposer</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>gazette_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>gazette_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>first_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>first_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>second_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>second_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>third_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>third_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+    <pre class="usage"><span class='fu'>all_bills</span>(
+  <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>ordinance</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>title</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>proposer</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>gazette_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>gazette_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>first_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>first_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>second_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>second_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>third_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>third_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)
 
-<span class='fu'>legco_all_bills</span>(<span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ordinance</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>title</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>proposer</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>gazette_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>gazette_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>first_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>first_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>second_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>second_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>third_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>third_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+<span class='fu'>legco_all_bills</span>(
+  <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>ordinance</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>title</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>proposer</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>gazette_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>gazette_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>first_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>first_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>second_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>second_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>third_from</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>third_to</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -281,12 +307,7 @@ parameter. Defaults to `'all'`.</p></td>
     </tr>
     <tr>
       <th>n</th>
-      <td><p>The number of record to request. Defaults to `10000`.</p></td>
-    </tr>
-    <tr>
-      <th>extra_param</th>
-      <td><p>Additional query parameters defined in LegCo API. Must
-begin with `'&amp;'`.</p></td>
+      <td><p>The number of record to fetch. Defaults to `1000`.</p></td>
     </tr>
     <tr>
       <th>count</th>

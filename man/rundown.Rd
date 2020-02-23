@@ -5,15 +5,35 @@
 \alias{legco_rundown}
 \title{Rundown from LegCo Hansards}
 \usage{
-rundown(id = NULL, hansard_id = NULL, speaker_id = NULL,
-  lang = "en", bookmark_name = NULL, from = "1900-01-01",
-  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
-  count = FALSE, verbose = TRUE)
+rundown(
+  id = NULL,
+  hansard_id = NULL,
+  speaker_id = NULL,
+  lang = "en",
+  bookmark_name = NULL,
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_rundown(id = NULL, hansard_id = NULL, speaker_id = NULL,
-  lang = "en", bookmark_name = NULL, from = "1900-01-01",
-  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
-  count = FALSE, verbose = TRUE)
+legco_rundown(
+  id = NULL,
+  hansard_id = NULL,
+  speaker_id = NULL,
+  lang = "en",
+  bookmark_name = NULL,
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{id}{The id of a rundown, or a vector of ids. Defaults to `NULL`.}
@@ -31,22 +51,22 @@ to `'en'`.}
 \item{bookmark_name}{The bookmark name of the rundown, or a vector of names.
 Defaults to `NULL`.}
 
-\item{from}{Only fetch results from hansards of meetings on or after this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{Only includes hansards of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch results from hansards of meetings on or before this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to the current system date.}
+\item{to}{Only includes hansards of meetings on or before this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.}
 
-\item{floor}{Whether to fetch results from the floor version of the hansard
-files. The floor version is the first presented version of hansard file in
-the original language delivered by the speakers in LegCo. If `TRUE`, the
+\item{floor}{Whether to fetch the floor version of the hansard files. The
+floor version is the first presented version of hansard file in the
+original language delivered by the speakers in LegCo. If `TRUE`, the
 language option is ignored. Defaults to `FALSE`.}
 
-\item{n}{The number of subjects to request. Defaults to `1000`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}

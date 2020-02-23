@@ -80,7 +80,7 @@ given meeting slot(s)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.9999</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -147,7 +147,7 @@ given meeting slot(s)." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Committee of Meetings in LegCo</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/elgarteo/legco/blob/master/R/meeting_committee.R'><code>R/meeting_committee.R</code></a></small>
     <div class="hidden name"><code>meeting_committee.Rd</code></div>
     </div>
 
@@ -156,13 +156,23 @@ given meeting slot(s)." />
 given meeting slot(s).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>meeting_committee</span>(<span class='kw'>slot_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>meet_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>committee_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+    <pre class="usage"><span class='fu'>meeting_committee</span>(
+  <span class='kw'>slot_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>meet_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>committee_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)
 
-<span class='fu'>legco_meeting_committee</span>(<span class='kw'>slot_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>meet_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>committee_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+<span class='fu'>legco_meeting_committee</span>(
+  <span class='kw'>slot_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>meet_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>committee_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -182,11 +192,6 @@ Database. Defaults to `NULL`.</p></td>
       <th>committee_id</th>
       <td><p>The id of a LegCo committee, or a vector of ids. If
 `NULL`, returns committees. Defaults to `NULL`.</p></td>
-    </tr>
-    <tr>
-      <th>extra_param</th>
-      <td><p>Additional query parameters defined in LegCo API. Must
-begin with `'&amp;'`.</p></td>
     </tr>
     <tr>
       <th>count</th>

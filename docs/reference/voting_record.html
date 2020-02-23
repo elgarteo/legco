@@ -80,7 +80,7 @@ subcommittees and the House Committee meetings." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.9999</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -147,7 +147,7 @@ subcommittees and the House Committee meetings." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Voting Record in LegCo Meetings</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/elgarteo/legco/blob/master/R/voting_record.R'><code>R/voting_record.R</code></a></small>
     <div class="hidden name"><code>voting_record.Rd</code></div>
     </div>
 
@@ -156,15 +156,37 @@ subcommittees and the House Committee meetings." />
 subcommittees and the House Committee meetings.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>voting_record</span>(<span class='kw'>committee</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>term_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>result</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>vote</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span>(),
-  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+    <pre class="usage"><span class='fu'>voting_record</span>(
+  <span class='kw'>committee</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>term_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>result</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>vote</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>,
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span>(),
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)
 
-<span class='fu'>legco_voting_record</span>(<span class='kw'>committee</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>term_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>result</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>vote</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span>(),
-  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>, <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+<span class='fu'>legco_voting_record</span>(
+  <span class='kw'>committee</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>term_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>result</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>vote</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>,
+  <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span>(),
+  <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
+  <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>count</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -229,12 +251,7 @@ to a time with `as.POSIXlt()`. Defaults to system time.</p></td>
     </tr>
     <tr>
       <th>n</th>
-      <td><p>The number of records to request. Defaults to `10000`.</p></td>
-    </tr>
-    <tr>
-      <th>extra_param</th>
-      <td><p>Additional query parameters defined in LegCo API. Must
-begin with `'&amp;'`.</p></td>
+      <td><p>The number of record to fetch. Defaults to `1000`.</p></td>
     </tr>
     <tr>
       <th>count</th>

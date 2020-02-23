@@ -5,13 +5,7 @@
 #' @param id The id of a LegCo member, or a vector of ids. If `NULL`, returns
 #'   all LegCo members. Defaults to `NULL`.
 #'
-#' @param extra_param Additional query parameters defined in LegCo API. Must
-#'   begin with `'&'`.
-#'   
-#' @param count If `TRUE`, returns only the total count of records that matches
-#'   the paramter(s) instead of the result. Defaults to `FALSE`.
-#'
-#' @param verbose Defaults to `TRUE`.
+#' @inheritParams legco_api
 #'
 #' @export
 #' 

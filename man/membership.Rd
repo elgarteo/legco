@@ -5,13 +5,29 @@
 \alias{legco_membership}
 \title{Membership of LegCo Committees}
 \usage{
-membership(id = NULL, member_id = NULL, committee_id = NULL,
-  term_id = NULL, post = NULL, n = 10000, extra_param = NULL,
-  count = FALSE, verbose = TRUE)
+membership(
+  id = NULL,
+  member_id = NULL,
+  committee_id = NULL,
+  term_id = NULL,
+  post = NULL,
+  n = 10000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_membership(id = NULL, member_id = NULL, committee_id = NULL,
-  term_id = NULL, post = NULL, n = 10000, extra_param = NULL,
-  count = FALSE, verbose = TRUE)
+legco_membership(
+  id = NULL,
+  member_id = NULL,
+  committee_id = NULL,
+  term_id = NULL,
+  post = NULL,
+  n = 10000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{id}{The id of a committee membership, or a vector of ids. If `NULL`, returns
@@ -31,10 +47,7 @@ membership of committees of all terms.}
 `'Convenor'` return members of the respective post. If `NULL`, returns
 members of all posts. Defaults to `NULL`.}
 
-\item{n}{The number of records to request. Defaults to `10000`.}
-
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{count}{If `TRUE`, returns only the total count of records that matches
 the paramter(s) instead of the result. Defaults to `FALSE`.}

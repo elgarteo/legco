@@ -5,13 +5,29 @@
 \alias{legco_hansard}
 \title{Hansard of LegCo}
 \usage{
-hansard(id = NULL, lang = "en", from = "1900-01-01",
-  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
-  count = FALSE, verbose = TRUE)
+hansard(
+  id = NULL,
+  lang = "en",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_hansard(id = NULL, lang = "en", from = "1900-01-01",
-  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
-  count = FALSE, verbose = TRUE)
+legco_hansard(
+  id = NULL,
+  lang = "en",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{id}{The id of a hansard file, or a vector of ids. If `NULL`, returns a
@@ -36,7 +52,7 @@ floor version is the first presented version of hansard file in the
 original language delivered by the speakers in LegCo. If `TRUE`, the
 language option is ignored. Defaults to `FALSE`.}
 
-\item{n}{The number of hansard files to request. Defaults to `1000`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}

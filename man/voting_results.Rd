@@ -5,15 +5,35 @@
 \alias{legco_voting_results}
 \title{Voting Results in LegCo Meetings}
 \usage{
-voting_results(hansard_id = NULL, rundown_id = NULL,
-  section_code = NULL, result = "all", lang = "en",
-  from = "1900-01-01", to = Sys.Date(), floor = FALSE, n = 1000,
-  extra_param = NULL, count = FALSE, verbose = TRUE)
+voting_results(
+  hansard_id = NULL,
+  rundown_id = NULL,
+  section_code = NULL,
+  result = "all",
+  lang = "en",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_voting_results(hansard_id = NULL, rundown_id = NULL,
-  section_code = NULL, result = "all", lang = "en",
-  from = "1900-01-01", to = Sys.Date(), floor = FALSE, n = 1000,
-  extra_param = NULL, count = FALSE, verbose = TRUE)
+legco_voting_results(
+  hansard_id = NULL,
+  rundown_id = NULL,
+  section_code = NULL,
+  result = "all",
+  lang = "en",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{hansard_id}{The id of a hansard file, or a vector of ids. If `NULL`,
@@ -33,22 +53,22 @@ all motions that has been voted in LegCo. Defaults to `all`.}
 English version. `'zh'` returns the Traditional Chinese version. Defaults
 to `'en'`.}
 
-\item{from}{Only fetch results of meetings on or after this date. Accepts
+\item{from}{Only includes hansards of meetings on or after this date. Accepts
 character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
 `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
 date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch results of meetings on or before this date. Accepts
+\item{to}{Only includes hansards of meetings on or before this date. Accepts
 character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
 `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
 date with `as.Date()`. Defaults to the current system date.}
 
-\item{floor}{Whether to fetch results from the floor version of the hansard
-files. The floor version is the first presented version of hansard file in
-the original language delivered by the speakers in LegCo. If `TRUE`, the
+\item{floor}{Whether to fetch the floor version of the hansard files. The
+floor version is the first presented version of hansard file in the
+original language delivered by the speakers in LegCo. If `TRUE`, the
 language option is ignored. Defaults to `FALSE`.}
 
-\item{n}{The number of records to request. Defaults to `1000`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}

@@ -5,14 +5,33 @@
 \alias{legco_bills}
 \title{Bills in LegCo}
 \usage{
-bills(rundown_id = NULL, hansard_id = NULL, section_code = NULL,
-  lang = "en", from = "1900-01-01", to = Sys.Date(), floor = FALSE,
-  n = 1000, extra_param = NULL, count = FALSE, verbose = TRUE)
+bills(
+  rundown_id = NULL,
+  hansard_id = NULL,
+  section_code = NULL,
+  lang = "en",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_bills(rundown_id = NULL, hansard_id = NULL,
-  section_code = NULL, lang = "en", from = "1900-01-01",
-  to = Sys.Date(), floor = FALSE, n = 1000, extra_param = NULL,
-  count = FALSE, verbose = TRUE)
+legco_bills(
+  rundown_id = NULL,
+  hansard_id = NULL,
+  section_code = NULL,
+  lang = "en",
+  from = "1900-01-01",
+  to = Sys.Date(),
+  floor = FALSE,
+  n = 1000,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{rundown_id}{The id of a rundown, or a vector of ids. Defaults to
@@ -43,10 +62,7 @@ files. The floor version is the first presented version of hansard file in
 the original language delivered by the speakers in LegCo. If `TRUE`, the
 language option is ignored. Defaults to `FALSE`.}
 
-\item{n}{The number of records to request. Defaults to `1000`.}
-
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{n}{The number of record to fetch. Defaults to `1000`.}
 
 \item{count}{If `TRUE`, returns only the total count of records that matches
 the paramter(s) instead of the result. Defaults to `FALSE`.}

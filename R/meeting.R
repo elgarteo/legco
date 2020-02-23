@@ -26,15 +26,7 @@
 #'   open meetings. If `'closed'`, returns closed meetings. If `'all'`, returns
 #'   all meetings. Defaults to `'all'`.
 #'
-#' @param n The number of records to request. Defaults to `10000`.
-#'
-#' @param extra_param Additional query parameters defined in LegCo API. Must
-#'   begin with `'&'`.
-#'   
-#' @param count If `TRUE`, returns only the total count of records that matches
-#'   the paramter(s) instead of the result. Defaults to `FALSE`.
-#'
-#' @param verbose Defaults to `TRUE`.
+#' @inheritParams legco_api
 #'
 #' @export
 #' 

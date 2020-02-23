@@ -10,10 +10,7 @@
 #'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 #'   to a date with `as.Date()`. Defaults to `NULL`.
 #'
-#' @param extra_param Additional query parameters defined in LegCo API. Must
-#'   begin with `'&'`.
-#'
-#' @param verbose Defaults to `TRUE`.
+#' @inheritParams legco_api
 #'
 #' @export
 #' 
