@@ -1,7 +1,7 @@
 Package: legco
 Type: Package
 Title: Provides access to Hong Kong Legislative Council APIs
-Version: 0.1.0
+Version: 0.1.1
 Author: Elgar Teo
 Maintainer: Elgar Teo <scteo@hku.hk>
 URL: https://github.com/elgarteo/legco

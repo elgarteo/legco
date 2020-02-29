@@ -58,6 +58,9 @@ all meetings. Defaults to `'all'`.}
 
 \item{n}{The number of record to fetch. Defaults to `1000`.}
 
+\item{extra_param}{Additional query parameters defined in LegCo API. Must
+begin with `'&'`.}
+
 \item{count}{If `TRUE`, returns only the total count of records that matches
 the paramter(s) instead of the result. Defaults to `FALSE`.}
 

@@ -57,7 +57,6 @@ hansard <- function(id = NULL, lang = "en", from = '1900-01-01', to = Sys.Date()
   filter_args <- c(filter_args, paste0("MeetingDate ge datetime\'", from, 
                     "\' and MeetingDate le datetime\'", to, "\'"))
   
-  
   query <- paste0(query, "&$filter=", paste(filter_args, collapse = " and "))
 
   if (!is.null(extra_param)) {

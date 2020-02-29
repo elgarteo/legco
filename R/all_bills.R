@@ -89,6 +89,7 @@
 #'   parameter. Defaults to `'all'`.
 #'
 #' @inheritParams legco_api
+#' @inheritParams hansard
 #'
 #' @export
 #' 

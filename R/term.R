@@ -11,6 +11,7 @@
 #'   to a date with `as.Date()`. Defaults to `NULL`.
 #'
 #' @inheritParams legco_api
+#' @inheritParams hansard
 #'
 #' @export
 #' 

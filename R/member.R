@@ -6,6 +6,7 @@
 #'   all LegCo members. Defaults to `NULL`.
 #'
 #' @inheritParams legco_api
+#' @inheritParams hansard
 #' 
 #' @export
 #' 

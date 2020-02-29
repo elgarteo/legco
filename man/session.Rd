@@ -35,6 +35,9 @@ Accepts character values in `'YYYY-MM-DD'` format, and objects of class
 `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 to a date with `as.Date()`. Defaults to `NULL`.}
 
+\item{extra_param}{Additional query parameters defined in LegCo API. Must
+begin with `'&'`.}
+
 \item{count}{If `TRUE`, returns only the total count of records that matches
 the paramter(s) instead of the result. Defaults to `FALSE`.}
 

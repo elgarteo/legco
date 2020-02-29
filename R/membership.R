@@ -20,6 +20,7 @@
 #'   members of all posts. Defaults to `NULL`.
 #'
 #' @inheritParams legco_api
+#' @inheritParams hansard
 #'
 #' @export
 #' 

@@ -44,6 +44,7 @@
 #'   to a time with `as.POSIXlt()`. Defaults to system time.
 #'
 #' @inheritParams legco_api
+#' @inheritParams hansard
 #'
 #' @export
 #' 
