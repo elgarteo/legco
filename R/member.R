@@ -2,21 +2,26 @@
 #'
 #' Fetch the basic information of LegCo members.
 #'
-#' @param id The id of a LegCo member, or a vector of ids. If `NULL`, returns
-#'   all LegCo members. Defaults to `NULL`.
+#' @param member_id The id of a LegCo member, or a vector of ids. If `NULL`,
+#'   returns results of all LegCo members. Defaults to `NULL`.
 #'
-#' @inheritParams legco_api
 #' @inheritParams hansard
 #' 
+#' @examples 
+#' \dontrun{
+#' # Fetch full list of members
+#' member()
+#' }
+#'
 #' @export
 #' 
-member <- function(id = NULL, extra_param = NULL, count = FALSE, verbose = TRUE) {
+member <- function(member_id = NULL, extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "Tmember?$select=member_id,title_eng,surname_eng,firstname_eng,english_name,honourable_eng,surname_chi,firstname_chi,title_chi,honourable_chi,latest_term_id"
   
   filter_args <- {}
   
-  if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("member_id", id))
+  if (!is.null(member_id)) {
+    filter_args <- c(filter_args, generate_filter("member_id", member_id))
   }
   
   if(!is.null(filter_args)) {

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>legco: Provides Access to the Hong Kong Legislative Council APIs — legco • legco</title>
+<title>legco: Accessing the Hong Kong Legislative Council APIs — legco • legco</title>
 
 
 <!-- jquery -->
@@ -35,7 +35,7 @@
 
 
 
-<meta property="og:title" content="legco: Provides Access to the Hong Kong Legislative Council APIs — legco" />
+<meta property="og:title" content="legco: Accessing the Hong Kong Legislative Council APIs — legco" />
 <meta property="og:description" content="Provides functions to request data from the Hong Kong Legislative Council
 APIs." />
 <meta name="twitter:card" content="summary" />
@@ -80,7 +80,7 @@ APIs." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -146,7 +146,7 @@ APIs." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>legco: Provides Access to the Hong Kong Legislative Council APIs</h1>
+    <h1>legco: Accessing the Hong Kong Legislative Council APIs</h1>
     <small class="dont-index">Source: <a href='https://github.com/elgarteo/legco/blob/master/R/legco-package.R'><code>R/legco-package.R</code></a></small>
     <div class="hidden name"><code>legco.Rd</code></div>
     </div>
@@ -160,24 +160,66 @@ APIs.</p>
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>For more details please see the API documentation on
-<a href='https://www.legco.gov.hk/odata/english/hansard-db.html'>https://www.legco.gov.hk/odata/english/hansard-db.html</a> and
-<a href='https://www.legco.gov.hk/odata/english/attendance-db.html'>https://www.legco.gov.hk/odata/english/attendance-db.html</a>.</p>
-<p>In addition to the standard function names, each function in the `legco`
-package has a wrapper where the name is prefixed with `'legco_'`. For
-example, both `speakers()` and `legco_speakers()` will return the same
-result. This is because function names are taken from the data endpoints
-provided by the APIs on , which nonetheless are often not very informative
-and could clash with functions in other packages (e.g. `speakers()` is not a
-term unique to LegCo).</p>
-<p>This package is not officially related to or endorsed by the Legislative
-Council of Hong Kong.</p>
+    <p>Each function of this package corresponds to the data
+  endpoints of the APIs. It is therefore neccessary to understand the
+  structure of the APIs in order to extract the data needed. Please refer to
+  the vignettes for more details.</p>
+<p>LegCo's APIs do not have a specified rate limit, but in general the limit
+  is approximately 1000 requests per IP per hour. When the rate limit is
+  reached, the server will return an empty json.</p>
+<p>LegCo's API server also has a node count limit of 100 nodes per request,
+  which can be translated as 20 filtering conditions per request in most
+  cases in meaningful term. This package automatically blocks requests that
+  exceed the node count.</p>
+<p>It is recommended to also intall the package <code>legcoplus</code> which
+  provides fucntions that facilitate the use of LegCo data.</p>
+    <h2 class="hasAnchor" id="notes"><a class="anchor" href="#notes"></a>Notes</h2>
+
+    <p>In addition to the standard function names, each function in
+  this package has a wrapper where the name is prefixed with <code>legco_</code>.
+  For example, both <code><a href='speakers.html'>speakers()</a></code> and <code><a href='speakers.html'>legco_speakers()</a></code> will return
+  the same result. This is because function names are taken from the data
+  endpoints provided by the APIs on, which nonetheless are often not very
+  informative and could clash with functions in other packages (e.g.
+  <code><a href='speakers.html'>speakers()</a></code> is not a term unique to LegCo).</p>
+    <h2 class="hasAnchor" id="disclaimer"><a class="anchor" href="#disclaimer"></a>Disclaimer</h2>
+
+    <p>This package is not officially related to or endorsed by
+  the Legislative Council of Hong Kong.</p>
+<p>The Legislative Council of Hong Kong is the copyright owner of data
+  retieved from its open data APIs.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>GitHub page</p><ul>
+<li><p><a href='https://github.com/elgarteo/legco/'>https://github.com/elgarteo/legco/</a></p></li>
+</ul>
+
+<p>Online Vignettes</p><ul>
+<li><p><a href='https://elgarteo.github.io/legco/'>https://elgarteo.github.io/legco/</a></p></li>
+</ul>
+
+<p>LegCo API Documentations</p><ul>
+<li><p>Attendance database:
+  <a href='https://www.legco.gov.hk/odata/english/attendance-db.html'>https://www.legco.gov.hk/odata/english/attendance-db.html</a></p></li>
+<li><p>Bills
+  Database: <a href='https://www.legco.gov.hk/odata/english/billsdb.html'>https://www.legco.gov.hk/odata/english/billsdb.html</a></p></li>
+<li><p>Hansard Database:
+  <a href='https://www.legco.gov.hk/odata/english/hansard-db.html'>https://www.legco.gov.hk/odata/english/hansard-db.html</a></p></li>
+<li><p>Schedule
+  Database: <a href='https://www.legco.gov.hk/odata/english/schedule-db.html'>https://www.legco.gov.hk/odata/english/schedule-db.html</a></p></li>
+<li><p>Voting Result Database:
+  <a href='https://www.legco.gov.hk/odata/english/vrdb.html'>https://www.legco.gov.hk/odata/english/vrdb.html</a></p></li>
+</ul>
+</div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#details">Details</a></li>
+      <li><a href="#notes">Notes</a></li>
+      <li><a href="#disclaimer">Disclaimer</a></li>
+      <li><a href="#see-also">See also</a></li>
     </ul>
 
   </div>

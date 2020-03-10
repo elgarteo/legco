@@ -6,7 +6,7 @@
 \title{Committees of LegCo}
 \usage{
 committee(
-  id = NULL,
+  committee_id = NULL,
   code = NULL,
   term_id = NULL,
   extra_param = NULL,
@@ -15,7 +15,7 @@ committee(
 )
 
 legco_committee(
-  id = NULL,
+  committee_id = NULL,
   code = NULL,
   term_id = NULL,
   extra_param = NULL,
@@ -24,14 +24,17 @@ legco_committee(
 )
 }
 \arguments{
-\item{id}{The id of a committee, or a vector of ids. If `NULL`, returns all
-committees. Defaults to `NULL`.}
+\item{committee_id}{The id of a committee, or a vector of ids. If `NULL`,
+returns results of all committees. Defaults to `NULL`.}
 
 \item{code}{The code of a committee, or a vector of ids. If `NULL`, returns
 all committees. Defaults to `NULL`.}
 
 \item{term_id}{The id of a term, or a vector of ids. If `NULL`, returns
-committees of all terms.}
+results of all terms. Defaults to `NULL`.}
+
+\item{extra_param}{Additional query parameters defined in LegCo API. Must
+begin with `'&'`.}
 
 \item{count}{If `TRUE`, returns only the total count of records that matches
 the paramter(s) instead of the result. Defaults to `FALSE`.}
@@ -40,4 +43,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 }
 \description{
 Fetch basic information of LegCo committees.
+}
+\examples{
+\dontrun{
+# Fetch all LegCo committees from the sixth term
+committee(term_id = 5)
+}
+
 }

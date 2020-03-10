@@ -37,13 +37,13 @@ legco_voting_results(
 }
 \arguments{
 \item{hansard_id}{The id of a hansard file, or a vector of ids. If `NULL`,
-returns voting results from all hansard files. Defaults to `NULL`.}
+returns results of all hansard files. Defaults to `NULL`.}
 
-\item{rundown_id}{The id of a rundown, or a vector of ids. Defaults to
-`NULL`.}
+\item{rundown_id}{The id of a rundown, or a vector of ids. If `NULL`, returns
+results of all rundowns. Defaults to `NULL`.}
 
-\item{section_code}{The section code, or a vector of codes. Defaults to
-`NULL`.}
+\item{section_code}{The section code, or a vector of codes. If `NULL`,
+returns results of sections. Defaults to `NULL`.}
 
 \item{result}{The voting result. `'passed'` returns motions that have been
 passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
@@ -53,15 +53,15 @@ all motions that has been voted in LegCo. Defaults to `all`.}
 English version. `'zh'` returns the Traditional Chinese version. Defaults
 to `'en'`.}
 
-\item{from}{Only fetch results from hansards of meetings on or after this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{Only fetch results of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch results from hansards of meetings on or before this
-date.  Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to the current system date.}
+\item{to}{Only fetch results of meetings on or before this date.  Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.}
 
 \item{floor}{Whether to fetch results from the floor version of the hansard
 files. The floor version is the first presented version of hansard file in
@@ -80,4 +80,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 }
 \description{
 Fetch result of votes made in LegCo council meetings.
+}
+\examples{
+\dontrun{
+# Fetch results of votes conducted during the Council meeting on January 19, 2018
+voting_results(hansard_id = 2714)
+}
+
 }

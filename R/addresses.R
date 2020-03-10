@@ -3,15 +3,15 @@
 #' Fetch addresses made by members or government officials while presenting
 #' papers to the Council.
 #'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns addresses from all hansard files. Defaults to `NULL`.
-#'
-#' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
-#'   `NULL`.
-#'   
-#' @inheritParams legco_api
 #' @inheritParams hansard
-#'
+#' @inheritParams rundown
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch addresses given during the Council meeting on February 20, 2019
+#' addresses(hansard_id = 2714)
+#' }
+#' 
 #' @export
 #' 
 addresses <- function(hansard_id = NULL, rundown_id = NULL,

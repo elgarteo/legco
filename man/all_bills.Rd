@@ -143,3 +143,10 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 \description{
 Fetch the information of bills presented in LegCo since 1906.
 }
+\examples{
+\dontrun{
+# Fetch bills that passed third reading on February 20, 2019
+all_bills(third_from = "2019-02-20")
+}
+
+}

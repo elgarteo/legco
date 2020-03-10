@@ -24,15 +24,15 @@ legco_meeting_committee(
 )
 }
 \arguments{
-\item{slot_id}{The id of a LegCo meeting slot, or a vector of ids. If `NULL`,
+\item{slot_id}{The id of a meeting slot, or a vector of ids. If `NULL`,
 returns all meetings. Defaults to `NULL`.}
 
 \item{meet_id}{The id of a meeting, or a vector of ids. If `NULL`, returns
 all meetings. Useful for matching meeting with records from the Attendance
 Database. Defaults to `NULL`.}
 
-\item{committee_id}{The id of a LegCo committee, or a vector of ids. If
-`NULL`, returns committees. Defaults to `NULL`.}
+\item{committee_id}{The id of a committee, or a vector of ids. If `NULL`,
+returns results of all committees. Defaults to `NULL`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}
@@ -45,4 +45,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 \description{
 Fetch all the meeting slots of a given committee(s), or the committee of a
 given meeting slot(s).
+}
+\examples{
+\dontrun{
+# Fetch all meetings of Subcommittee on Issues Relating to Bazaars
+meeting_committee(committee_id = 2704)
+}
+
 }

@@ -6,7 +6,7 @@
 \title{Meetings of LegCo Committees}
 \usage{
 meeting(
-  id = NULL,
+  slot_id = NULL,
   meet_id = NULL,
   from = "1900-01-01",
   to = Sys.Date(),
@@ -19,7 +19,7 @@ meeting(
 )
 
 legco_meeting(
-  id = NULL,
+  slot_id = NULL,
   meet_id = NULL,
   from = "1900-01-01",
   to = Sys.Date(),
@@ -32,29 +32,29 @@ legco_meeting(
 )
 }
 \arguments{
-\item{id}{The id of a meeting slot, or a vector of ids. If `NULL`, returns
-all meetings. Defaults to `NULL`.}
+\item{slot_id}{The id of a meeting slot, or a vector of ids. If `NULL`,
+returns all meetings. Defaults to `NULL`.}
 
 \item{meet_id}{The id of a meeting, or a vector of ids. If `NULL`, returns
 all meetings. Useful for matching meeting with records from the Attendance
 Database. Defaults to `NULL`.}
 
-\item{from}{Only fetch meetings on or after this date. Accepts character
-values in `'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`,
-`POSIXct`, `POSIXlt` or anything else that can be coerced to a date with
-`as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{Only fetch results of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only meetings on or before this date. Accepts character values in
-`'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`, `POSIXct`,
-`POSIXlt` or anything else that can be coerced to a date with `as.Date()`.
-Defaults to the current system date.}
+\item{to}{Only fetch results of meetings on or before this date.  Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.}
 
-\item{type}{The type of meeting. If `all`, returns membership of committees
-of all terms.}
+\item{type}{The type of meeting. If `'open'`, returns open meetings. If
+`'closed'`, returns closed meetings. If `'all'`, returns all meetings.
+Defaults to `'all'`.}
 
-\item{term_id}{The id of a term, or a vector of ids. If `'open'`, returns
-open meetings. If `'closed'`, returns closed meetings. If `'all'`, returns
-all meetings. Defaults to `'all'`.}
+\item{term_id}{The id of a term, or a vector of ids. If `NULL`, returns
+results of all terms. Defaults to `NULL`.}
 
 \item{n}{The number of record to fetch. Defaults to `1000`.}
 
@@ -68,4 +68,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 }
 \description{
 Fetch basic information of LegCo committee meetings.
+}
+\examples{
+\dontrun{
+# Fetch all meeting conducted on March 20, 2019
+meeting(from = "2019-03-20", to = "2019-03-20")
+}
+
 }

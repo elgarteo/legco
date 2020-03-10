@@ -6,7 +6,6 @@
 \title{Membership of LegCo Committees}
 \usage{
 membership(
-  id = NULL,
   member_id = NULL,
   committee_id = NULL,
   term_id = NULL,
@@ -18,7 +17,6 @@ membership(
 )
 
 legco_membership(
-  id = NULL,
   member_id = NULL,
   committee_id = NULL,
   term_id = NULL,
@@ -30,17 +28,14 @@ legco_membership(
 )
 }
 \arguments{
-\item{id}{The id of a committee membership, or a vector of ids. If `NULL`, returns
-all committee membership. Defaults to `NULL`.}
+\item{member_id}{The id of a LegCo member, or a vector of ids. If `NULL`,
+returns results of all LegCo members. Defaults to `NULL`.}
 
-\item{member_id}{The code of a LegCo member, or a vector of ids. If `NULL`,
-returns all LegCo members. Defaults to `NULL`.}
-
-\item{committee_id}{The code of a LegCo committee, or a vector of ids. If
-`NULL`, returns records of all LegCo committees. Defaults to `NULL`.}
+\item{committee_id}{The id of a committee, or a vector of ids. If `NULL`,
+returns results of all committees. Defaults to `NULL`.}
 
 \item{term_id}{The id of a term, or a vector of ids. If `NULL`, returns
-membership of committees of all terms.}
+results of all terms. Defaults to `NULL`.}
 
 \item{post}{The post of a member in the committee, or a vector of posts.
 `'President'`, `'Chairman'`, `'Deputy Chairman'`, `'Member'` and
@@ -59,4 +54,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 }
 \description{
 Fetch the members of LegCo committees.
+}
+\examples{
+\dontrun{
+# Fetch members of the Subcommittee on Issues Relating to Bazaars
+membership(committee_id = 2704)
+}
+
 }

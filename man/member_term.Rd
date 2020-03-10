@@ -5,13 +5,23 @@
 \alias{legco_member_term}
 \title{Terms of Members of LegCo}
 \usage{
-member_term(id = NULL, extra_param = NULL, count = FALSE, verbose = TRUE)
+member_term(
+  member_id = NULL,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 
-legco_member_term(id = NULL, extra_param = NULL, count = FALSE, verbose = TRUE)
+legco_member_term(
+  member_id = NULL,
+  extra_param = NULL,
+  count = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
-\item{id}{The id of a LegCo member, or a vector of ids. If `NULL`, returns
-all LegCo members. Defaults to `NULL`.}
+\item{member_id}{The id of a LegCo member, or a vector of ids. If `NULL`,
+returns results of all LegCo members. Defaults to `NULL`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}
@@ -23,4 +33,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 }
 \description{
 Fetch the serving terms in Term ID of LegCo members
+}
+\examples{
+\dontrun{
+#Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
+member_term(id = c(273, 924))
+}
+
 }

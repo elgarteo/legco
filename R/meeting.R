@@ -2,44 +2,39 @@
 #'
 #' Fetch basic information of LegCo committee meetings.
 #'
-#' @param id The id of a meeting slot, or a vector of ids. If `NULL`, returns
-#'   all meetings. Defaults to `NULL`.
+#' @param slot_id The id of a meeting slot, or a vector of ids. If `NULL`,
+#'   returns all meetings. Defaults to `NULL`.
 #'
 #' @param meet_id The id of a meeting, or a vector of ids. If `NULL`, returns
 #'   all meetings. Useful for matching meeting with records from the Attendance
 #'   Database. Defaults to `NULL`.
 #'
-#' @param from Only fetch meetings on or after this date. Accepts character
-#'   values in `'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`,
-#'   `POSIXct`, `POSIXlt` or anything else that can be coerced to a date with
-#'   `as.Date()`. Defaults to `'1900-01-01'`.
-#'
-#' @param to Only meetings on or before this date. Accepts character values in
-#'   `'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`, `POSIXct`,
-#'   `POSIXlt` or anything else that can be coerced to a date with `as.Date()`.
-#'   Defaults to the current system date.
-#'
-#' @param type The type of meeting. If `all`, returns membership of committees
-#'   of all terms.
-#'
-#' @param term_id The id of a term, or a vector of ids. If `'open'`, returns
-#'   open meetings. If `'closed'`, returns closed meetings. If `'all'`, returns
-#'   all meetings. Defaults to `'all'`.
-#'
-#' @inheritParams legco_api
+#' @param type The type of meeting. If `'open'`, returns open meetings. If
+#'   `'closed'`, returns closed meetings. If `'all'`, returns all meetings.
+#'   Defaults to `'all'`.
+#'   
 #' @inheritParams hansard
+#' @inheritParams term
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch all meeting conducted on March 20, 2019
+#' meeting(from = "2019-03-20", to = "2019-03-20")
+#' }
 #'
 #' @export
 #' 
-meeting <- function(id = NULL, meet_id = NULL, from = '1900-01-01',
+meeting <- function(slot_id = NULL, meet_id = NULL, from = '1900-01-01',
                     to = Sys.Date(), type = "all", term_id = NULL,
                     n = 10000, extra_param = NULL, count = FALSE, verbose = TRUE) {
-  query <- "Tmeeting?$select=slot_id,meet_id,subject_eng,subject_chi,start_date_time,meeting_type_eng,meeting_type_chi,venue_code,venue_name_eng,venue_name_chi,term_id,agenda_url_eng,agenda_url_chi"
+  query <- "Tmeeting?$select=slot_id,meet_id,subject_eng,subject_chi,start_date_time,
+  meeting_type_eng,meeting_type_chi,venue_code,venue_name_eng,venue_name_chi,term_id,
+  agenda_url_eng,agenda_url_chi"
   
   filter_args <- {}
   
-  if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("slot_id", id))
+  if (!is.null(slot_id)) {
+    filter_args <- c(filter_args, generate_filter("slot_id", slot_id))
   }
   
   if (!is.null(meet_id)) {

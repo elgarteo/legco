@@ -1,13 +1,13 @@
 Package: legco
 Type: Package
-Title: Provides access to Hong Kong Legislative Council APIs
-Version: 0.1.1
+Title: Accessing Hong Kong Legislative Council APIs
+Version: 0.1.2
 Author: Elgar Teo
-Maintainer: Elgar Teo <scteo@hku.hk>
+Maintainer: Elgar Teo <elgarteo@connect.hku.hk>
 URL: https://github.com/elgarteo/legco
 BugReports: https://github.com/elgarteo/legco/issues
-Description: This R package provides access to the LegCo open data APIs in R. The functions in this package 
-  correspond to the data endpoints of the APIs.
+Description: Fetching data from Hong Kong LegCo open data APIs in R. 
+    Functions correspond to the data endpoints of the APIs.
 Imports:
     jsonlite,
     utils
@@ -18,5 +18,6 @@ LazyData: true
 RoxygenNote: 7.0.2
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    legcoplus
 VignetteBuilder: knitr

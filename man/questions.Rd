@@ -34,11 +34,11 @@ legco_questions(
 )
 }
 \arguments{
-\item{rundown_id}{The id of a rundown, or a vector of ids. Defaults to
-`NULL`.}
+\item{rundown_id}{The id of a rundown, or a vector of ids. If `NULL`, returns
+results of all rundowns. Defaults to `NULL`.}
 
-\item{speaker_id}{The id of a speaker, or a vector of ids. Defaults to
-`NULL`.}
+\item{speaker_id}{The id of a speaker at the Legislative Council, or a vector
+of ids. If `NULL`, returns all speakers. Defaults to `NULL`.}
 
 \item{type}{The type of question. `'oral'` returns oral questions.
 `'written'` returns written questions. `'all'` returns all questions.
@@ -48,15 +48,15 @@ Defaults to `'all'`.}
 English version. `'zh'` returns the Traditional Chinese version. Defaults
 to `'en'`.}
 
-\item{from}{Only fetch results from hansards of meetings on or after this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{Only fetch results of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch results from hansards of meetings on or before this
-date.  Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to the current system date.}
+\item{to}{Only fetch results of meetings on or before this date.  Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.}
 
 \item{floor}{Whether to fetch results from the floor version of the hansard
 files. The floor version is the first presented version of hansard file in
@@ -75,4 +75,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 }
 \description{
 Fetch questions put to the government by LegCo members in council meetings.
+}
+\examples{
+\dontrun{
+# Fetch questions being put on the government during the Council meeting on February 20, 2019
+questions(from = "2019-02-20", to = "2019-02-20")
+}
+
 }

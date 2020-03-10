@@ -1,22 +1,52 @@
-#' legco: Provides Access to the Hong Kong Legislative Council APIs
+#' legco: Accessing the Hong Kong Legislative Council APIs
 #'
 #' Provides functions to request data from the Hong Kong Legislative Council
 #' APIs.
 #'
-#' For more details please see the API documentation on
-#' \url{https://www.legco.gov.hk/odata/english/hansard-db.html} and
-#' \url{https://www.legco.gov.hk/odata/english/attendance-db.html}.
+#' @section Details: Each function of this package corresponds to the data
+#'   endpoints of the APIs. It is therefore neccessary to understand the
+#'   structure of the APIs in order to extract the data needed. Please refer to
+#'   the vignettes for more details.
 #'
-#' In addition to the standard function names, each function in the `legco`
-#' package has a wrapper where the name is prefixed with `'legco_'`. For
-#' example, both `speakers()` and `legco_speakers()` will return the same
-#' result. This is because function names are taken from the data endpoints
-#' provided by the APIs on , which nonetheless are often not very informative
-#' and could clash with functions in other packages (e.g. `speakers()` is not a
-#' term unique to LegCo).
+#'   LegCo's APIs do not have a specified rate limit, but in general the limit
+#'   is approximately 1000 requests per IP per hour. When the rate limit is
+#'   reached, the server will return an empty json.
 #'
-#' This package is not officially related to or endorsed by the Legislative
-#' Council of Hong Kong.
+#'   LegCo's API server also has a node count limit of 100 nodes per request,
+#'   which can be translated as 20 filtering conditions per request in most
+#'   cases in meaningful term. This package automatically blocks requests that
+#'   exceed the node count.
+#'
+#'   It is recommended to also intall the package \code{legcoplus} which
+#'   provides fucntions that facilitate the use of LegCo data.
+#'
+#' @section Notes: In addition to the standard function names, each function in
+#'   this package has a wrapper where the name is prefixed with \code{legco_}.
+#'   For example, both \code{speakers()} and \code{legco_speakers()} will return
+#'   the same result. This is because function names are taken from the data
+#'   endpoints provided by the APIs on, which nonetheless are often not very
+#'   informative and could clash with functions in other packages (e.g.
+#'   \code{speakers()} is not a term unique to LegCo).
+#'
+#' @section Disclaimer: This package is not officially related to or endorsed by
+#'   the Legislative Council of Hong Kong.
+#'
+#'   The Legislative Council of Hong Kong is the copyright owner of data
+#'   retieved from its open data APIs.
+#'
+#' @seealso  GitHub page \itemize{ \item
+#'   \url{https://github.com/elgarteo/legco/} }
+#'
+#'   Online Vignettes \itemize{ \item \url{https://elgarteo.github.io/legco/} }
+#'
+#'   LegCo API Documentations \itemize{ \item Attendance database:
+#'   \url{https://www.legco.gov.hk/odata/english/attendance-db.html} \item Bills
+#'   Database: \url{https://www.legco.gov.hk/odata/english/billsdb.html} \item
+#'   Hansard Database:
+#'   \url{https://www.legco.gov.hk/odata/english/hansard-db.html} \item Schedule
+#'   Database: \url{https://www.legco.gov.hk/odata/english/schedule-db.html}
+#'   \item Voting Result Database:
+#'   \url{https://www.legco.gov.hk/odata/english/vrdb.html} }
 #'
 #' @docType package
 #' @name legco

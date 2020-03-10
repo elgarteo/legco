@@ -118,7 +118,7 @@ the terms served by a member since the fifth term, use `member_term()` instead.
 
 ```{r }
 #Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
-member_term(id = c(273, 924))
+member_term(member_id = c(273, 924))
 ```
 
 ## meeting()
@@ -127,7 +127,7 @@ member_term(id = c(273, 924))
 not take CommitteeID as a filtering parameter. Use `meeting_committee()` instead if needed.
 
 ```{r }
-# Fetch all meeting conducted on 
+# Fetch all meeting conducted on March 20, 2019
 meeting(from = "2019-03-20", to = "2019-03-20")
 ```
 

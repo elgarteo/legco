@@ -88,8 +88,13 @@
 #'   that have not gone through third reading and overrides the `third_from`
 #'   parameter. Defaults to `'all'`.
 #'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch bills that passed third reading on February 20, 2019
+#' all_bills(third_from = "2019-02-20")
+#' }
 #'
 #' @export
 #' 

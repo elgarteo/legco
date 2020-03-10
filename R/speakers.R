@@ -1,29 +1,28 @@
 #' Speakers at LegCo
-#' 
-#' Fetch the basic information of speakers in LegCo council meetings, including LegCo members,
-#' government officials and Secretariat staff.
-#' 
-#' @param id The id of a speaker at the Legislative Council, or a vector of ids. If `NULL`,
-#' returns a list of all speakers. Defaults to `NULL`.
-#' 
-#' @param type The position of a speaker. `'all'` returns all speakers.
-#' `'PO'` returns public officers. `'LC'` returns key appointment holders and staff
-#' at LegCo, such as President, Chariman and clerk.`'MB'` returns LegCo members.
-#' Default to `'all'`.
-#' 
-#' @inheritParams legco_api
+#'
+#' Fetch the basic information of speakers in LegCo council meetings, including
+#' LegCo members, government officials and Secretariat staff.
+#'
+#' @param speaker_id The id of a speaker at the Legislative Council, or a vector
+#'   of ids. If `NULL`, returns all speakers. Defaults to `NULL`.
+#'
+#' @param type The position of a speaker. `'all'` returns all speakers. `'PO'`
+#'   returns public officers. `'LC'` returns key appointment holders and staff
+#'   at LegCo, such as President, Chariman and clerk.`'MB'` returns LegCo
+#'   members. Default to `'all'`.
+#'
 #' @inheritParams hansard
-#' 
+#'
 #' @export
 #' 
-speakers <- function(id = NULL, type = "all", extra_param = NULL,
+speakers <- function(speaker_id = NULL, type = "all", extra_param = NULL,
                      count = FALSE, verbose = TRUE) {
   query <- "Speakers?"
   
   filter_args <- {}
   
-  if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("SpeakerID", id))
+  if (!is.null(speaker_id)) {
+    filter_args <- c(filter_args, generate_filter("SpeakerID", speaker_id))
   }
   
   type <- toupper(type)

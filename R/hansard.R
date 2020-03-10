@@ -2,22 +2,22 @@
 #'
 #' Fetch metadata and URLs of the hansard files of LegCo council meetings.
 #'
-#' @param id The id of a hansard file, or a vector of ids. If `NULL`, returns a
-#'   list of all hansard files. Defaults to `NULL`.
+#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
+#'   returns results of all hansard files. Defaults to `NULL`.
 #'
 #' @param lang The language of hansard files to search from. `'en'` returns the
 #'   English version. `'zh'` returns the Traditional Chinese version. Defaults
 #'   to `'en'`.
 #'
-#' @param from Only fetch results from hansards of meetings on or after this
-#'   date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-#'   class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-#'   coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.
+#' @param from Only fetch results of meetings on or after this date. Accepts
+#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+#'   date with `as.Date()`. Defaults to `'1900-01-01'`.
 #'
-#' @param to Only fetch results from hansards of meetings on or before this
-#'   date.  Accepts character values in `'YYYY-MM-DD'` format, and objects of
-#'   class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-#'   coerced to a date with `as.Date()`. Defaults to the current system date.
+#' @param to Only fetch results of meetings on or before this date.  Accepts
+#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+#'   date with `as.Date()`. Defaults to the current system date.
 #'
 #' @param floor Whether to fetch results from the floor version of the hansard
 #'   files. The floor version is the first presented version of hansard file in
@@ -28,20 +28,25 @@
 #'   begin with `'&'`.
 #'
 #' @inheritParams legco_api
+#' 
+#' @examples 
+#' \dontrun{
+#' hansard(from = "2019-02-20", to = "2019-02-20")
+#' }
 #'
 #' @export
 #' 
-hansard <- function(id = NULL, lang = "en", from = '1900-01-01', to = Sys.Date(), floor = FALSE, 
+hansard <- function(hansard_id = NULL, lang = "en", from = '1900-01-01', to = Sys.Date(), floor = FALSE, 
                     n = 1000, extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "Hansard?$select=HansardID,MeetingDate,AgendaDate,isCEQandA,isCEQT,HansardFileURL"
   
   filter_args <- {}
   
-  if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("HansardID", id)) # in utils-misc.R
+  if (!is.null(hansard_id)) {
+    filter_args <- c(filter_args, generate_filter("HansardID", hansard_id)) # in utils-misc.R
   }
   
-  if(is.null(id)) {
+  if (is.null(hansard_id)) {
     lang <- tolower(lang)
     if (floor) {
       filter_args <- c(filter_args, "HansardType eq 'Floor'")

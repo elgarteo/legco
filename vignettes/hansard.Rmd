@@ -108,7 +108,7 @@ so it is neccessary to reorder if needed.
 
 ```{r }
 # Fetch records of proceedings of the second reading of Smoking (Public Health) (Amendment) Bill 2019
-v <- rundown(id = 899628:899649)
+v <- rundown(rundown_id = 899628:899649)
 v <- v[order(v$RundownID), ]
 rownames(v) <- 1:nrow(v)
 v[3:5, ]

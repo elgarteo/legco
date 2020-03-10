@@ -128,9 +128,9 @@ return the same result.
 
 ## API Limits
 
-### Request Limit
+### Rate Limit
 
-LegCo APIs have a limit of approximately 1000 requests per IP per hour. Once the limit is reached, you will not be
+LegCo APIs have a rate limit of approximately 1000 requests per IP per hour. Once the limit is reached, you will not be
 able to retrieve any data for awhile. If you run into the following error message while pretty sure you have entered
 the correct parameters, you have probably reached the limit:
 
@@ -142,14 +142,14 @@ speakers(0)
 ### Node Count Limit
 
 Another limit is the node count limit which is associated with the setting of the LegCo API server.
-The limit is at most 100 nodes per request, or approximately 19 filtering conditions in most cases. For instance,
-the following code contains 20 filtering conditions and thus reach the node count limit:
+The limit is at most 100 nodes per request, or approximately 20 filtering conditions in most cases. 
+For instance, the following code contains 21 filtering conditions and thus reach the node count limit:
 
-```{r }
-# A request with 20 filtering conditions
-x <- c(1, 3, 5, 7, 9, 11, 13, 15, 17, 19,
-       21, 23, 25, 27, 29, 31, 33, 35, 37, 39)
-speakers(x)
+```{r echo = FALSE, message = TRUE, error = TRUE}
+# A request with 21 filtering conditions
+x <- c(1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 
+       23, 25, 27, 29, 31, 33, 35, 37, 39, 41)
+speakers(speaker_id = x)
 ```
 
 If you run into the error message above, you need to break it down to multiple smaller requests,
@@ -160,7 +160,7 @@ Note that numeric filtering conditions that are sequential are not subjected to 
 ```{r eval = FALSE}
 # A request with sequential numeric filtering conditions
 x <- c(1:50)
-speakers(x)
+speakers(speaker_id = x)
 ```
 
 The code above will execute just fine without reaching the node count limit even though it effectively 
@@ -195,7 +195,7 @@ matter the _Not forgetting the 4 june incident_ during the meeting.
 The full text of these paragraphs can be fetched by:
 
 ```{r, echo = TRUE, message = FALSE}
-w <- rundown(id = 828783:828826)
+w <- rundown(rundown_id = 828783:828826)
 # Order by RundownID, i.e. chronological order
 w <- w[order(w$RundownID), ]
 rownames(w) <- 1:nrow(w)
@@ -214,8 +214,8 @@ The code above produces 27 filtering conditions which reahces the node count lim
 If you need have parameters longer than that, break them down into multiple requests:
 
 ```{r echo=TRUE, message=FALSE}
-y1 <- speakers(id = x[1:19])
-y2 <- speakers(id = x[20:27])
+y1 <- speakers(speaker_id = x[1:19])
+y2 <- speakers(speaker_id = x[20:27])
 y <- rbind(y1, y2)
 # Show members who have spoken about this motion
 head(y[y$Type == "MB", ])

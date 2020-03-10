@@ -37,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -105,7 +105,7 @@
     <div class="page-header toc-ignore">
       <h1>Attendance Database</h1>
             
-            <h4 class="date">2020-02-29</h4>
+            <h4 class="date">2020-03-10</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/master/vignettes/attn.Rmd"><code>vignettes/attn.Rmd</code></a></small>
       <div class="hidden name"><code>attn.Rmd</code></div>
@@ -135,7 +135,7 @@
 <p>The function in this database has an option to return only the total count of the records matching the specified parameters instead of returning the data frame containing the result. To activate this option, specify <code>count = TRUE</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch the total number of members absent from the Council meeting on May 22, 2019</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">136897</span>, <span class="dt">from =</span> <span class="st">"2019-05-22"</span>, <span class="dt">to =</span> <span class="st">"2019-05-22"</span>, <span class="dt">attn =</span> <span class="st">"a"</span>, <span class="dt">count =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
-<pre><code>## [1] 2</code></pre>
+<pre><code>## [1] "2"</code></pre>
 <hr>
 <p>This database is accessible with the following function:</p>
 </div>

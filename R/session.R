@@ -2,30 +2,28 @@
 #'
 #' Fetch the basic information of LegCo sessions.
 #'
-#' @param id The id of a session, or a vector of ids. If `NULL`, returns terms.
-#'   Defaults to `NULL`.
+#' @param session_id The id of a session, or a vector of ids. If `NULL`, returns
+#'   result of all sessions. Defaults to `NULL`.
 #'
-#' @param term_id The id of a term, or a vector of ids. If `NULL`, returns
-#'   sessions of all terms.
-#'
-#' @param date Only fetch the session in which the specified date falls within.
-#'   Accepts character values in `'YYYY-MM-DD'` format, and objects of class
-#'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
-#'   to a date with `as.Date()`. Defaults to `NULL`.
-#'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' @inheritParams term
+#'
+#' @examples 
+#' \dontrun{
+#' # Fetch all LegCo sessions of the fifth term
+#' session(term_id = 4)
+#' }
 #'
 #' @export
 #' 
-session <- function(id = NULL, term_id = NULL, date = NULL, extra_param = NULL, 
+session <- function(session_id = NULL, term_id = NULL, date = NULL, extra_param = NULL, 
                     count = FALSE, verbose = TRUE) {
   query <- "Tsession?$select=session_id,session_code,term_id,start_date,end_date"
   
   filter_args <- {}
   
-  if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("session_id", id))
+  if (!is.null(session_id)) {
+    filter_args <- c(filter_args, generate_filter("session_id", session_id))
   }
   
   if (!is.null(term_id)) {

@@ -2,27 +2,31 @@
 #'
 #' Fetch basic information of LegCo committees.
 #'
-#' @param id The id of a committee, or a vector of ids. If `NULL`, returns all
-#'   committees. Defaults to `NULL`.
+#' @param committee_id The id of a committee, or a vector of ids. If `NULL`,
+#'   returns results of all committees. Defaults to `NULL`.
 #'
 #' @param code The code of a committee, or a vector of ids. If `NULL`, returns
 #'   all committees. Defaults to `NULL`.
 #'
-#' @param term_id The id of a term, or a vector of ids. If `NULL`, returns
-#'   committees of all terms.
-#'
-#' @inheritParams legco_api
+#' @inheritParams hansard
+#' @inheritParams term
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch all LegCo committees from the sixth term
+#' committee(term_id = 5)
+#' }
 #'
 #' @export
 #' 
-committee <- function(id = NULL, code = NULL, term_id = NULL, 
+committee <- function(committee_id = NULL, code = NULL, term_id = NULL, 
                       extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "Tcommittee?$select=committee_id,committee_code,name_eng,name_chi,term_id,home_url_eng,home_url_chi"
   
   filter_args <- {}
   
-  if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("committee_id", id))
+  if (!is.null(committee_id)) {
+    filter_args <- c(filter_args, generate_filter("committee_id", committee_id))
   }
   
   if (!is.null(code)) {

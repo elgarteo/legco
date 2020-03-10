@@ -2,35 +2,15 @@
 #'
 #' Fetch bills presented in LegCo council meetings.
 #'
-#' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
-#'   `NULL`.
-#'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns bills from all hansard files. Defaults to `NULL`.
-#'
-#' @param section_code The section code, or a vector of codes. Defaults to
-#'   `NULL`.
-#'
-#' @param lang The language of hansard files to search from. `'en'` returns the
-#'   English version. `'zh'` returns the Traditional Chinese version. Defaults
-#'   to `'en'`.
-#'
-#' @param from Only fetch results from hansards of meetings on or after this
-#'   date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-#'   class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-#'   coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.
-#'
-#' @param to Only fetch results from hansards of meetings on or before this
-#'   date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-#'   class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-#'   coerced to a date with `as.Date()`. Defaults to the current system date.
-#'
-#' @param floor Whether to fetch results from the floor version of the hansard
-#'   files. The floor version is the first presented version of hansard file in
-#'   the original language delivered by the speakers in LegCo. If `TRUE`, the
-#'   language option is ignored. Defaults to `FALSE`.
-#'
-#' @inheritParams legco_api
+#' @inheritParams hansard
+#' @inheritParams rundown
+#' @inheritParams subjects
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch bills debated during the Council meeting on February 20, 2019
+#' bills(hansard_id = 2714)
+#' }
 #'
 #' @export
 #' 

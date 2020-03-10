@@ -2,33 +2,20 @@
 #'
 #' Fetch attendance record of LegCo committee meetings
 #'
-#' @param committee_id The id of a committee, or a vector of ids. If `NULL`,
-#'   returns records of meetings from all committee. Defaults to `NULL`.
-#'
-#' @param meet_id The id of a meeting, or a vector of ids. If `NULL`, returns
-#'   records of all meetings. Defaults to `NULL`.
-#'
-#' @param member_id The id of a member, or a vector of ids. Defaults to `NULL`.
-#'
 #' @param attn The attendance. `'p'` returns members who were present. `'a'`
 #'   returns members who were absent. `'all'` returns all members. Defaults to
 #'   `'all'`.
 #'
-#' @param from Only fetch records of meetings on or after this date. Accepts
-#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-#'   date with `as.Date()`. Defaults to `'1900-01-01'`.
-#'
-#' @param to Only fetch records of meetings on or before this date. Accepts
-#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-#'   date with `as.Date()`. Defaults to the current system date.
-#'   
-#' @param extra_param Additional query parameters defined in LegCo API. Must
-#'   begin with `'&'`.
-#'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' @inheritParams meeting
+#' @inheritParams member
+#' @inheritParams committee
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017
+#' attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", attn = "a")
+#' }
 #'
 #' @export
 #' 

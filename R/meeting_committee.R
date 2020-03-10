@@ -3,18 +3,15 @@
 #' Fetch all the meeting slots of a given committee(s), or the committee of a
 #' given meeting slot(s).
 #'
-#' @param slot_id The id of a LegCo meeting slot, or a vector of ids. If `NULL`,
-#'   returns all meetings. Defaults to `NULL`.
-#'   
-#' @param meet_id The id of a meeting, or a vector of ids. If `NULL`, returns
-#'   all meetings. Useful for matching meeting with records from the Attendance
-#'   Database. Defaults to `NULL`.
-#'
-#' @param committee_id The id of a LegCo committee, or a vector of ids. If
-#'   `NULL`, returns committees. Defaults to `NULL`.
-#'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' @inheritParams committee
+#' @inheritParams meeting
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch all meetings of Subcommittee on Issues Relating to Bazaars
+#' meeting_committee(committee_id = 2704)
+#' }
 #'
 #' @export
 #' 

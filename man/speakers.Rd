@@ -6,7 +6,7 @@
 \title{Speakers at LegCo}
 \usage{
 speakers(
-  id = NULL,
+  speaker_id = NULL,
   type = "all",
   extra_param = NULL,
   count = FALSE,
@@ -14,7 +14,7 @@ speakers(
 )
 
 legco_speakers(
-  id = NULL,
+  speaker_id = NULL,
   type = "all",
   extra_param = NULL,
   count = FALSE,
@@ -22,13 +22,13 @@ legco_speakers(
 )
 }
 \arguments{
-\item{id}{The id of a speaker at the Legislative Council, or a vector of ids. If `NULL`,
-returns a list of all speakers. Defaults to `NULL`.}
+\item{speaker_id}{The id of a speaker at the Legislative Council, or a vector
+of ids. If `NULL`, returns all speakers. Defaults to `NULL`.}
 
-\item{type}{The position of a speaker. `'all'` returns all speakers.
-`'PO'` returns public officers. `'LC'` returns key appointment holders and staff
-at LegCo, such as President, Chariman and clerk.`'MB'` returns LegCo members.
-Default to `'all'`.}
+\item{type}{The position of a speaker. `'all'` returns all speakers. `'PO'`
+returns public officers. `'LC'` returns key appointment holders and staff
+at LegCo, such as President, Chariman and clerk.`'MB'` returns LegCo
+members. Default to `'all'`.}
 
 \item{extra_param}{Additional query parameters defined in LegCo API. Must
 begin with `'&'`.}
@@ -39,6 +39,6 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 \item{verbose}{Defaults to `TRUE`.}
 }
 \description{
-Fetch the basic information of speakers in LegCo council meetings, including LegCo members,
-government officials and Secretariat staff.
+Fetch the basic information of speakers in LegCo council meetings, including
+LegCo members, government officials and Secretariat staff.
 }

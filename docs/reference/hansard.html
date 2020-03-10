@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -155,7 +155,7 @@
     </div>
 
     <pre class="usage"><span class='fu'>hansard</span>(
-  <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
   <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
   <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(),
@@ -167,7 +167,7 @@
 )
 
 <span class='fu'>legco_hansard</span>(
-  <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>hansard_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"en"</span>,
   <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01"</span>,
   <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(),
@@ -182,9 +182,9 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>id</th>
-      <td><p>The id of a hansard file, or a vector of ids. If `NULL`, returns a
-list of all hansard files. Defaults to `NULL`.</p></td>
+      <th>hansard_id</th>
+      <td><p>The id of a hansard file, or a vector of ids. If `NULL`,
+returns results of all hansard files. Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>lang</th>
@@ -194,17 +194,17 @@ to `'en'`.</p></td>
     </tr>
     <tr>
       <th>from</th>
-      <td><p>Only fetch results from hansards of meetings on or after this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.</p></td>
+      <td><p>Only fetch results of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.</p></td>
     </tr>
     <tr>
       <th>to</th>
-      <td><p>Only fetch results from hansards of meetings on or before this
-date.  Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to the current system date.</p></td>
+      <td><p>Only fetch results of meetings on or before this date.  Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.</p></td>
     </tr>
     <tr>
       <th>floor</th>
@@ -234,11 +234,16 @@ the paramter(s) instead of the result. Defaults to `FALSE`.</p></td>
     </table>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>hansard</span>(<span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"2019-02-20"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>"2019-02-20"</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

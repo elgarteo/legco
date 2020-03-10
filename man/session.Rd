@@ -6,7 +6,7 @@
 \title{Session of LegCo}
 \usage{
 session(
-  id = NULL,
+  session_id = NULL,
   term_id = NULL,
   date = NULL,
   extra_param = NULL,
@@ -15,7 +15,7 @@ session(
 )
 
 legco_session(
-  id = NULL,
+  session_id = NULL,
   term_id = NULL,
   date = NULL,
   extra_param = NULL,
@@ -24,13 +24,13 @@ legco_session(
 )
 }
 \arguments{
-\item{id}{The id of a session, or a vector of ids. If `NULL`, returns terms.
-Defaults to `NULL`.}
+\item{session_id}{The id of a session, or a vector of ids. If `NULL`, returns
+result of all sessions. Defaults to `NULL`.}
 
 \item{term_id}{The id of a term, or a vector of ids. If `NULL`, returns
-sessions of all terms.}
+results of all terms. Defaults to `NULL`.}
 
-\item{date}{Only fetch the session in which the specified date falls within.
+\item{date}{Only fetch the result in which the specified date falls within.
 Accepts character values in `'YYYY-MM-DD'` format, and objects of class
 `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 to a date with `as.Date()`. Defaults to `NULL`.}
@@ -45,4 +45,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 }
 \description{
 Fetch the basic information of LegCo sessions.
+}
+\examples{
+\dontrun{
+# Fetch all LegCo sessions of the fifth term
+session(term_id = 4)
+}
+
 }

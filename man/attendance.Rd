@@ -33,23 +33,25 @@ legco_attendance(
 }
 \arguments{
 \item{committee_id}{The id of a committee, or a vector of ids. If `NULL`,
-returns records of meetings from all committee. Defaults to `NULL`.}
+returns results of all committees. Defaults to `NULL`.}
 
 \item{meet_id}{The id of a meeting, or a vector of ids. If `NULL`, returns
-records of all meetings. Defaults to `NULL`.}
+all meetings. Useful for matching meeting with records from the Attendance
+Database. Defaults to `NULL`.}
 
-\item{member_id}{The id of a member, or a vector of ids. Defaults to `NULL`.}
+\item{member_id}{The id of a LegCo member, or a vector of ids. If `NULL`,
+returns results of all LegCo members. Defaults to `NULL`.}
 
 \item{attn}{The attendance. `'p'` returns members who were present. `'a'`
 returns members who were absent. `'all'` returns all members. Defaults to
 `'all'`.}
 
-\item{from}{Only fetch records of meetings on or after this date. Accepts
+\item{from}{Only fetch results of meetings on or after this date. Accepts
 character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
 `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
 date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch records of meetings on or before this date. Accepts
+\item{to}{Only fetch results of meetings on or before this date.  Accepts
 character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
 `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
 date with `as.Date()`. Defaults to the current system date.}
@@ -66,4 +68,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 }
 \description{
 Fetch attendance record of LegCo committee meetings
+}
+\examples{
+\dontrun{
+# Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017
+attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", attn = "a")
+}
+
 }

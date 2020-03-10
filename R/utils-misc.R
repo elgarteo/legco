@@ -53,13 +53,24 @@ node_count <- function(url) {
 }
 
 ## Function to convert time into .NET datetime string
-convert_time <- function(string) {
+posixlt2net <- function(string) {
   tmp <- as.character(string)
   tmp <- unlist(strsplit(tmp, "T"))
   if (length(tmp) != 2) {
     string <- format(as.POSIXlt(string), "%Y-%m-%dT%H:%M:%S")
   }
   string
+}
+
+## Function to convert .NET datetime string in POSIXlt compatiable in a dataframe
+net2posixlt <- function(df) {
+  time_col <- grep("[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}", df[1, ])
+  if (length(time_col)) {
+    for (i in time_col) {
+      df[, i] <- gsub("T", " ", df[, i])
+    }
+  }
+  df
 }
 
 ## Function to convert TermNo into TermID

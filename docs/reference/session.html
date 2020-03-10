@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -155,7 +155,7 @@
     </div>
 
     <pre class="usage"><span class='fu'>session</span>(
-  <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>session_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>term_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>date</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -164,7 +164,7 @@
 )
 
 <span class='fu'>legco_session</span>(
-  <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>session_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>term_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>date</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -176,18 +176,18 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>id</th>
-      <td><p>The id of a session, or a vector of ids. If `NULL`, returns terms.
-Defaults to `NULL`.</p></td>
+      <th>session_id</th>
+      <td><p>The id of a session, or a vector of ids. If `NULL`, returns
+result of all sessions. Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>term_id</th>
       <td><p>The id of a term, or a vector of ids. If `NULL`, returns
-sessions of all terms.</p></td>
+results of all terms. Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>date</th>
-      <td><p>Only fetch the session in which the specified date falls within.
+      <td><p>Only fetch the result in which the specified date falls within.
 Accepts character values in `'YYYY-MM-DD'` format, and objects of class
 `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 to a date with `as.Date()`. Defaults to `NULL`.</p></td>
@@ -209,11 +209,17 @@ the paramter(s) instead of the result. Defaults to `FALSE`.</p></td>
     </table>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='co'># Fetch all LegCo sessions of the fifth term</span>
+<span class='fu'>session</span>(<span class='kw'>term_id</span> <span class='kw'>=</span> <span class='fl'>4</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

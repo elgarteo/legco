@@ -2,21 +2,24 @@
 #'
 #' Fetch the serving terms in Term ID of LegCo members
 #'
-#' @param id The id of a LegCo member, or a vector of ids. If `NULL`, returns
-#'   all LegCo members. Defaults to `NULL`.
-#'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' @inheritParams member
+#' 
+#' @examples 
+#' \dontrun{
+#' #Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
+#' member_term(id = c(273, 924))
+#' }
 #'
 #' @export
 #' 
-member_term <- function(id = NULL, extra_param = NULL, count = FALSE, verbose = TRUE) {
+member_term <- function(member_id = NULL, extra_param = NULL, count = FALSE, verbose = TRUE) {
   query <- "Tmember_term?$select=member_id,term_id"
   
   filter_args <- {}
   
-  if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("member_id", id))
+  if (!is.null(member_id)) {
+    filter_args <- c(filter_args, generate_filter("member_id", member_id))
   }
   
   if(!is.null(filter_args)) {

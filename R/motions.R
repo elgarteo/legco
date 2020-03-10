@@ -2,18 +2,16 @@
 #'
 #' Fetch motions presented in LegCo council meetings.
 #'
-#' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
-#'   `NULL`.
-#'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns motions from all hansard files. Defaults to `NULL`.
-#'
-#' @param section_code The section code, or a vector of codes. Defaults to
-#'   `NULL`.
-#'
-#' @inheritParams legco_api
 #' @inheritParams hansard
-#'
+#' @inheritParams rundown
+#' @inheritParams subjects
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch motions discussed during the Council meeting on February 20, 2019
+#' motions(hansard_id = 2714)
+#' }
+#' 
 #' @export
 #' 
 motions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,

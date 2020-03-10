@@ -2,14 +2,14 @@
 #'
 #' Fetch petitions presented in LegCo council meetings.
 #'
-#' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
-#'   `NULL`.
-#'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns petitions from all hansard files. Defaults to `NULL`.
-#'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' @inheritParams rundown
+#'
+#' @examples 
+#' \dontrun{
+#' # Fetch petition laid during the Council meeting on January 19, 2018
+#' petitions(from = "2018-01-10")
+#' }
 #'
 #' @export
 #' 

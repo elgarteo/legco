@@ -2,17 +2,9 @@
 #'
 #' Fetch instances of summoning bell being rung in LegCo council meetings
 #'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns all instances from all hansard files. Defaults to `NULL`.
-#'
-#' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
-#'   `NULL`.
-#'
-#' @param section_code The section code, or a vector of codes. Defaults to
-#'   `NULL`.
-#'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' @inheritParams rundown
+#' @inheritParams subjects
 #'
 #' @export
 #' 

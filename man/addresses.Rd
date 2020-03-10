@@ -33,24 +33,24 @@ legco_addresses(
 }
 \arguments{
 \item{hansard_id}{The id of a hansard file, or a vector of ids. If `NULL`,
-returns addresses from all hansard files. Defaults to `NULL`.}
+returns results of all hansard files. Defaults to `NULL`.}
 
-\item{rundown_id}{The id of a rundown, or a vector of ids. Defaults to
-`NULL`.}
+\item{rundown_id}{The id of a rundown, or a vector of ids. If `NULL`, returns
+results of all rundowns. Defaults to `NULL`.}
 
 \item{lang}{The language of hansard files to search from. `'en'` returns the
 English version. `'zh'` returns the Traditional Chinese version. Defaults
 to `'en'`.}
 
-\item{from}{Only fetch results from hansards of meetings on or after this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{Only fetch results of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch results from hansards of meetings on or before this
-date.  Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to the current system date.}
+\item{to}{Only fetch results of meetings on or before this date.  Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.}
 
 \item{floor}{Whether to fetch results from the floor version of the hansard
 files. The floor version is the first presented version of hansard file in
@@ -70,4 +70,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 \description{
 Fetch addresses made by members or government officials while presenting
 papers to the Council.
+}
+\examples{
+\dontrun{
+# Fetch addresses given during the Council meeting on February 20, 2019
+addresses(hansard_id = 2714)
+}
+
 }

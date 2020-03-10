@@ -37,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -105,7 +105,7 @@
     <div class="page-header toc-ignore">
       <h1>Hansard Database</h1>
             
-            <h4 class="date">2020-02-29</h4>
+            <h4 class="date">2020-03-10</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/master/vignettes/hansard.Rmd"><code>vignettes/hansard.Rmd</code></a></small>
       <div class="hidden name"><code>hansard.Rmd</code></div>
@@ -139,7 +139,7 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch the total number of questions put on the government in LegCo in April, 2019</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/questions.html">questions</a></span>(<span class="dt">from =</span> <span class="st">"2019-04-01"</span>, <span class="dt">to =</span> <span class="st">"2019-04-30"</span>, <span class="dt">count =</span> <span class="ot">TRUE</span>)</span>
 <span id="cb1-3"><a href="#cb1-3"></a>v</span></code></pre></div>
-<pre><code>## [1] 44</code></pre>
+<pre><code>## [1] "44"</code></pre>
 <hr>
 <p>This database is accessible with the following functions/data:</p>
 </div>
@@ -165,20 +165,27 @@
 <p><code>legco_section_type</code> is a data frame containing the meaning of the section code.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>v &lt;-<span class="st"> </span>legco_section_type</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(v)</span></code></pre></div>
-<pre><code>##   SectionCode                                            NameEng
-## 1         r2r     Remaining proceedings after the Second Reading
-## 2         orq                                     Oral Questions
-## 3         r2a         Motions for the Adjournment of the Council
-## 4         r4a         Motions for the Adjournment of the Council
-## 5         cea               The Chief Executive's Policy Address
-## 6         ceq The Chief Executive's Question and Answer Session 
-##                NameChi
-## 1     二讀後的餘下程序
-## 2             口頭質詢
-## 3   立法會休會待續議案
-## 4   立法會休會待續議案
-## 5 行政長官發表施政報告
-## 6       行政長官答問會</code></pre>
+<pre><code>##   SectionCode
+## 1         r2r
+## 2         oth
+## 3         pex
+## 4         orq
+## 5         sta
+## 6         rsl
+##                                                                            NameEng
+## 1                                   Remaining proceedings after the Second Reading
+## 2                                                                   Taking of Oath
+## 3                                                            Personal Explanations
+## 4                                                                   Oral Questions
+## 5                                                    Statements by Public Officers
+## 6 Request for Special Leave of the Council to Give Evidence of Council Proceedings
+##                                        NameChi
+## 1                             二讀後的餘下程序
+## 2                               作出立法會誓言
+## 3                                     個人解釋
+## 4                                     口頭質詢
+## 5                                     官員聲明
+## 6 就立法會會議程序提供證據一事請求給予特別許可</code></pre>
 </div>
 <div id="subjects" class="section level2">
 <h2 class="hasAnchor">
@@ -203,7 +210,7 @@
 <a href="#rundown" class="anchor"></a>rundown()</h2>
 <p><code><a href="../reference/rundown.html">rundown()</a></code> fetches the paragraph text in hansard files. Note that the result is not in any specific order so it is neccessary to reorder if needed.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Fetch records of proceedings of the second reading of Smoking (Public Health) (Amendment) Bill 2019</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">id =</span> <span class="dv">899628</span><span class="op">:</span><span class="dv">899649</span>)</span>
+<span id="cb9-2"><a href="#cb9-2"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">rundown_id =</span> <span class="dv">899628</span><span class="op">:</span><span class="dv">899649</span>)</span>
 <span id="cb9-3"><a href="#cb9-3"></a>v &lt;-<span class="st"> </span>v[<span class="kw"><a href="https://rdrr.io/r/base/order.html">order</a></span>(v<span class="op">$</span>RundownID), ]</span>
 <span id="cb9-4"><a href="#cb9-4"></a><span class="kw"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span>(v) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(v)</span>
 <span id="cb9-5"><a href="#cb9-5"></a>v[<span class="dv">3</span><span class="op">:</span><span class="dv">5</span>, ]</span></code></pre></div>

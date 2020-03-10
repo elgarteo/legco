@@ -2,14 +2,14 @@
 #'
 #' Fetch statemetns made by Public Officers in LegCo council meetings.
 #'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns statements from all hansard files. Defaults to `NULL`.
-#'
-#' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
-#'   `NULL`.
-#'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' @inheritParams rundown
+#'
+#' @examples 
+#' \dontrun{
+#' # Fetch statements made by government officials during the Council meeting on April 22, 2015
+#' statements(from = "2015-04-22")
+#' }
 #'
 #' @export
 #' 

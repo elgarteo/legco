@@ -2,18 +2,18 @@
 #'
 #' Fetch questions put to the government by LegCo members in council meetings.
 #'
-#' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
-#'   `NULL`.
-#'
-#' @param speaker_id The id of a speaker, or a vector of ids. Defaults to
-#'   `NULL`.
-#'
 #' @param type The type of question. `'oral'` returns oral questions.
 #'   `'written'` returns written questions. `'all'` returns all questions.
 #'   Defaults to `'all'`.
 #'
-#' @inheritParams legco_api
-#' @inheritParams hansard
+#' @inheritParams rundown
+#' @inheritParams speakers
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch questions being put on the government during the Council meeting on February 20, 2019
+#' questions(from = "2019-02-20", to = "2019-02-20")
+#' }
 #'
 #' @export
 #' 

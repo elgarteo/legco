@@ -6,8 +6,6 @@
 #' @param committee The name of the committee or subcommittee. Defaults to
 #'   `NULL`.
 #'
-#' @param term_id The ID of a term. Defaults to `NULL`.
-#'
 #' @param result The voting result. If `'passed'`, returns motions that have
 #'   been passed. If `'vetoed'`, returns motions that have been vetoed.If
 #'   `'all'`, returns all motions that has been voted in LegCo. Defaults to
@@ -33,18 +31,16 @@
 #'   motions only. If `'all'`, returns votes on all motions. Defaults to
 #'   `'all'`.
 #'
-#' @param from Only fetch votes conducted at or after this time. Accepts
-#'   character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
-#'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
-#'   to a time with `as.POSIXlt()`. Defaults to `'1900-01-01T00:00:00'`.
-#'
-#' @param to Only fetch votes conducted at or before this time. Accepts
-#'   character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
-#'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
-#'   to a time with `as.POSIXlt()`. Defaults to system time.
-#'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' @inheritParams term
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch how members voted the motion on "Abolishing the MPF Offsetting Mechanism" on November 11, 2016
+#' voting_record(committee = "Council Meeting",
+#'               from = "2016-11-16T13:51:53",
+#'               to = "2016-11-16T13:51:53")
+#' }
 #'
 #' @export
 #' 
@@ -106,8 +102,8 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
     filter_args <- c(filter_args, "mover_type eq 'Member'")
   }
   
-  from <- convert_time(from)
-  to <- convert_time(to)
+  from <- posixlt2net(from)
+  to <- posixlt2net(to)
   if (from == to & grepl("T00:00:00", from) & grepl("T00:00:00", to)) {
     to <- gsub("T.*", "T23:59:59", to)
   }

@@ -41,7 +41,8 @@ legco_voting_record(
 \item{committee}{The name of the committee or subcommittee. Defaults to
 `NULL`.}
 
-\item{term_id}{The ID of a term. Defaults to `NULL`.}
+\item{term_id}{The id of a term, or a vector of ids. If `NULL`, returns
+results of all terms. Defaults to `NULL`.}
 
 \item{result}{The voting result. If `'passed'`, returns motions that have
 been passed. If `'vetoed'`, returns motions that have been vetoed.If
@@ -68,15 +69,15 @@ votes on government motions only. If `'MB'`, returns votes on members'
 motions only. If `'all'`, returns votes on all motions. Defaults to
 `'all'`.}
 
-\item{from}{Only fetch votes conducted at or after this time. Accepts
-character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
-`Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
-to a time with `as.POSIXlt()`. Defaults to `'1900-01-01T00:00:00'`.}
+\item{from}{Only fetch results of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch votes conducted at or before this time. Accepts
-character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
-`Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
-to a time with `as.POSIXlt()`. Defaults to system time.}
+\item{to}{Only fetch results of meetings on or before this date.  Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.}
 
 \item{n}{The number of record to fetch. Defaults to `1000`.}
 
@@ -91,4 +92,13 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 \description{
 Fetch voting records of LegCo council, the Finance Committee and its
 subcommittees and the House Committee meetings.
+}
+\examples{
+\dontrun{
+# Fetch how members voted the motion on "Abolishing the MPF Offsetting Mechanism" on November 11, 2016
+voting_record(committee = "Council Meeting",
+              from = "2016-11-16T13:51:53",
+              to = "2016-11-16T13:51:53")
+}
+
 }

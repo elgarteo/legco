@@ -5,15 +5,15 @@
 \alias{legco_term}
 \title{Term of LegCo}
 \usage{
-term(id = NULL, date = NULL, extra_param = NULL, verbose = TRUE)
+term(term_id = NULL, date = NULL, extra_param = NULL, verbose = TRUE)
 
-legco_term(id = NULL, date = NULL, extra_param = NULL, verbose = TRUE)
+legco_term(term_id = NULL, date = NULL, extra_param = NULL, verbose = TRUE)
 }
 \arguments{
-\item{id}{The id of a term, or a vector of ids. If `NULL`, returns all terms.
-Defaults to `NULL`.}
+\item{term_id}{The id of a term, or a vector of ids. If `NULL`, returns
+results of all terms. Defaults to `NULL`.}
 
-\item{date}{Only fetch the term in which the specified date falls within.
+\item{date}{Only fetch the result in which the specified date falls within.
 Accepts character values in `'YYYY-MM-DD'` format, and objects of class
 `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 to a date with `as.Date()`. Defaults to `NULL`.}
@@ -25,4 +25,11 @@ begin with `'&'`.}
 }
 \description{
 Fetch the basic information of LegCo terms.
+}
+\examples{
+\dontrun{
+# Fetch all LegCo terms
+term()
+}
+
 }

@@ -32,25 +32,25 @@ legco_petitions(
 )
 }
 \arguments{
-\item{rundown_id}{The id of a rundown, or a vector of ids. Defaults to
-`NULL`.}
+\item{rundown_id}{The id of a rundown, or a vector of ids. If `NULL`, returns
+results of all rundowns. Defaults to `NULL`.}
 
 \item{hansard_id}{The id of a hansard file, or a vector of ids. If `NULL`,
-returns petitions from all hansard files. Defaults to `NULL`.}
+returns results of all hansard files. Defaults to `NULL`.}
 
 \item{lang}{The language of hansard files to search from. `'en'` returns the
 English version. `'zh'` returns the Traditional Chinese version. Defaults
 to `'en'`.}
 
-\item{from}{Only fetch results from hansards of meetings on or after this
-date. Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{Only fetch results of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.}
 
-\item{to}{Only fetch results from hansards of meetings on or before this
-date.  Accepts character values in `'YYYY-MM-DD'` format, and objects of
-class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be
-coerced to a date with `as.Date()`. Defaults to the current system date.}
+\item{to}{Only fetch results of meetings on or before this date.  Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.}
 
 \item{floor}{Whether to fetch results from the floor version of the hansard
 files. The floor version is the first presented version of hansard file in
@@ -69,4 +69,11 @@ the paramter(s) instead of the result. Defaults to `FALSE`.}
 }
 \description{
 Fetch petitions presented in LegCo council meetings.
+}
+\examples{
+\dontrun{
+# Fetch petition laid during the Council meeting on January 19, 2018
+petitions(from = "2018-01-10")
+}
+
 }

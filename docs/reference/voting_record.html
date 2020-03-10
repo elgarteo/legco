@@ -80,7 +80,7 @@ subcommittees and the House Committee meetings." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -198,7 +198,8 @@ subcommittees and the House Committee meetings.</p>
     </tr>
     <tr>
       <th>term_id</th>
-      <td><p>The ID of a term. Defaults to `NULL`.</p></td>
+      <td><p>The id of a term, or a vector of ids. If `NULL`, returns
+results of all terms. Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>result</th>
@@ -237,17 +238,17 @@ motions only. If `'all'`, returns votes on all motions. Defaults to
     </tr>
     <tr>
       <th>from</th>
-      <td><p>Only fetch votes conducted at or after this time. Accepts
-character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
-`Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
-to a time with `as.POSIXlt()`. Defaults to `'1900-01-01T00:00:00'`.</p></td>
+      <td><p>Only fetch results of meetings on or after this date. Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to `'1900-01-01'`.</p></td>
     </tr>
     <tr>
       <th>to</th>
-      <td><p>Only fetch votes conducted at or before this time. Accepts
-character values in `'YYYY-MM-DDTHH:MM:SS'` format, and objects of class
-`Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
-to a time with `as.POSIXlt()`. Defaults to system time.</p></td>
+      <td><p>Only fetch results of meetings on or before this date.  Accepts
+character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
+`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
+date with `as.Date()`. Defaults to the current system date.</p></td>
     </tr>
     <tr>
       <th>n</th>
@@ -270,11 +271,19 @@ the paramter(s) instead of the result. Defaults to `FALSE`.</p></td>
     </table>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='co'># Fetch how members voted the motion on "Abolishing the MPF Offsetting Mechanism" on November 11, 2016</span>
+<span class='fu'>voting_record</span>(<span class='kw'>committee</span> <span class='kw'>=</span> <span class='st'>"Council Meeting"</span>,
+              <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"2016-11-16T13:51:53"</span>,
+              <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>"2016-11-16T13:51:53"</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

@@ -75,57 +75,56 @@ legco_api <- function(db, query, n = 1000, count = FALSE, verbose = TRUE) {
     if (verbose) {
       message("Retrieved total count of record(s).")
     }
-    
-    total
-  } else if (n <= maximum | total < maximum) {
+    return(df$odata.count)
+  }
+  
+  if (n <= maximum | total < maximum) {
     # All data retrieved
     if (verbose) {
       message("Retrieved ", nrow(df$value), " record(s). ",
               total, " record(s) available in total.")
     }
-    
-    df$value
-  } else {
-    # Only partial data retrieved
-    remaining <- ifelse(n > total, total - maximum, n - maximum)
-    nexturl <- df$odata.nextLink
-    df <- df$value
-    
-    if (verbose) {
-      message("Retrieved ", nrow(df), " records. ",
-              remaining, " record(s) remaining.")
-    }
-    
-    for (i in 1:ceiling(remaining / maximum)) {
-      if (remaining < maximum) {
-        nexturl <- paste0(nexturl, "&$top=", remaining)
-      }
-      
-      if (verbose) {
-        message("Retrieving ", ifelse(remaining < maximum, remaining, maximum), " records...")
-      }
-      
-      Sys.sleep(2) # Enhance stability by preventing back-to-back request
-      nexturl <- utils::URLencode(nexturl)
-      tmp <- jsonlite::fromJSON(nexturl, flatten = TRUE)
-      
-      df <- rbind(df, tmp$value)
-      
-      if (remaining > maximum) {
-        remaining <- remaining - maximum
-        if (verbose) {
-          message("Retrieved ", nrow(df), " records. ",
-                  remaining, " record(s) remaining.")
-        }
-        nexturl <- tmp$odata.nextLink
-      }
-    }
-    
-    if (verbose) {
-      message("Retrieved ", nrow(df), " records. ",
-              total, " records available in total.")
-    }
-    
-    df
+    return(net2posixlt(df$value))
   }
+  
+  # Only partial data retrieved
+  remaining <- ifelse(n > total, total - maximum, n - maximum)
+  nexturl <- df$odata.nextLink
+  df <- df$value
+  
+  if (verbose) {
+    message("Retrieved ", nrow(df), " records. ",
+            remaining, " record(s) remaining.")
+  }
+  
+  for (i in 1:ceiling(remaining / maximum)) {
+    if (remaining < maximum) {
+      nexturl <- paste0(nexturl, "&$top=", remaining)
+    }
+    
+    if (verbose) {
+      message("Retrieving ", ifelse(remaining < maximum, remaining, maximum), " records...")
+    }
+    
+    Sys.sleep(2) # Prevent back-to-back request
+    nexturl <- utils::URLencode(nexturl)
+    tmp <- jsonlite::fromJSON(nexturl, flatten = TRUE)
+    
+    df <- rbind(df, tmp$value)
+    
+    if (remaining > maximum) {
+      remaining <- remaining - maximum
+      if (verbose) {
+        message("Retrieved ", nrow(df), " records. ",
+                remaining, " record(s) remaining.")
+      }
+      nexturl <- tmp$odata.nextLink
+    }
+  }
+  
+  if (verbose) {
+    message("Retrieved ", nrow(df), " records. ",
+            total, " records available in total.")
+  }
+  net2posixlt(df)
 }

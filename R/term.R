@@ -2,26 +2,31 @@
 #'
 #' Fetch the basic information of LegCo terms.
 #'
-#' @param id The id of a term, or a vector of ids. If `NULL`, returns all terms.
-#'   Defaults to `NULL`.
+#' @param term_id The id of a term, or a vector of ids. If `NULL`, returns
+#'   results of all terms. Defaults to `NULL`.
 #'
-#' @param date Only fetch the term in which the specified date falls within.
+#' @param date Only fetch the result in which the specified date falls within.
 #'   Accepts character values in `'YYYY-MM-DD'` format, and objects of class
 #'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
 #'   to a date with `as.Date()`. Defaults to `NULL`.
 #'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch all LegCo terms
+#' term()
+#' }
 #'
 #' @export
 #' 
-term <- function(id = NULL, date = NULL, extra_param = NULL, verbose = TRUE) {
+term <- function(term_id = NULL, date = NULL, extra_param = NULL, verbose = TRUE) {
   query <- "Tterm?$select=term_id,term,start_date,end_date"
   
   filter_args <- {}
   
-  if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("term_id", id))
+  if (!is.null(term_id)) {
+    filter_args <- c(filter_args, generate_filter("term_id", term_id))
   }
   
   if (!is.null(date)) {

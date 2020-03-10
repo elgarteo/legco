@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -186,16 +186,18 @@
     <tr>
       <th>committee_id</th>
       <td><p>The id of a committee, or a vector of ids. If `NULL`,
-returns records of meetings from all committee. Defaults to `NULL`.</p></td>
+returns results of all committees. Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>meet_id</th>
       <td><p>The id of a meeting, or a vector of ids. If `NULL`, returns
-records of all meetings. Defaults to `NULL`.</p></td>
+all meetings. Useful for matching meeting with records from the Attendance
+Database. Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>member_id</th>
-      <td><p>The id of a member, or a vector of ids. Defaults to `NULL`.</p></td>
+      <td><p>The id of a LegCo member, or a vector of ids. If `NULL`,
+returns results of all LegCo members. Defaults to `NULL`.</p></td>
     </tr>
     <tr>
       <th>attn</th>
@@ -205,14 +207,14 @@ returns members who were absent. `'all'` returns all members. Defaults to
     </tr>
     <tr>
       <th>from</th>
-      <td><p>Only fetch records of meetings on or after this date. Accepts
+      <td><p>Only fetch results of meetings on or after this date. Accepts
 character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
 `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
 date with `as.Date()`. Defaults to `'1900-01-01'`.</p></td>
     </tr>
     <tr>
       <th>to</th>
-      <td><p>Only fetch records of meetings on or before this date. Accepts
+      <td><p>Only fetch results of meetings on or before this date.  Accepts
 character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
 `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
 date with `as.Date()`. Defaults to the current system date.</p></td>
@@ -238,11 +240,17 @@ the paramter(s) instead of the result. Defaults to `FALSE`.</p></td>
     </table>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='co'># Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017</span>
+<span class='fu'>attendance</span>(<span class='kw'>committee_id</span> <span class='kw'>=</span> <span class='fl'>2704</span>, <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"2017-10-13"</span>, <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>"2017-10-13"</span>, <span class='kw'>attn</span> <span class='kw'>=</span> <span class='st'>"a"</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

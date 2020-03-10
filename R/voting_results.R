@@ -2,21 +2,19 @@
 #'
 #' Fetch result of votes made in LegCo council meetings.
 #'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns voting results from all hansard files. Defaults to `NULL`.
-#'
-#' @param rundown_id The id of a rundown, or a vector of ids. Defaults to
-#'   `NULL`.
-#'
-#' @param section_code The section code, or a vector of codes. Defaults to
-#'   `NULL`.
-#'
 #' @param result The voting result. `'passed'` returns motions that have been
 #'   passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
 #'   all motions that has been voted in LegCo. Defaults to `all`.
 #'
-#' @inheritParams legco_api
 #' @inheritParams hansard
+#' @inheritParams rundown
+#' @inheritParams subjects
+#' 
+#' @examples 
+#' \dontrun{
+#' # Fetch results of votes conducted during the Council meeting on January 19, 2018
+#' voting_results(hansard_id = 2714)
+#' }
 #'
 #' @export
 #' 

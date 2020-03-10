@@ -37,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -105,7 +105,7 @@
     <div class="page-header toc-ignore">
       <h1>Meeting Schedule Database</h1>
             
-            <h4 class="date">2020-02-29</h4>
+            <h4 class="date">2020-03-10</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/master/vignettes/schedule.Rmd"><code>vignettes/schedule.Rmd</code></a></small>
       <div class="hidden name"><code>schedule.Rmd</code></div>
@@ -139,7 +139,7 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fetch the total number of members in the Bills Committee on Fugitive Offenders and</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="co"># Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill 2019</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="kw"><a href="../reference/membership.html">membership</a></span>(<span class="dt">committee_id =</span> <span class="dv">3005</span>, <span class="dt">count =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
-<pre><code>## [1] 62</code></pre>
+<pre><code>## [1] "62"</code></pre>
 <hr>
 <p>This database is accessible with the following functions:</p>
 </div>
@@ -297,7 +297,7 @@
 <a href="#member_term" class="anchor"></a>member_term()</h2>
 <p><code><a href="../reference/member_term.html">member_term()</a></code> fetches the all the term served by one or more LegCo members.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">#Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="kw"><a href="../reference/member_term.html">member_term</a></span>(<span class="dt">id =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">273</span>, <span class="dv">924</span>))</span></code></pre></div>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="kw"><a href="../reference/member_term.html">member_term</a></span>(<span class="dt">member_id =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">273</span>, <span class="dv">924</span>))</span></code></pre></div>
 <pre><code>##   MemberID TermID
 ## 1      273   4, 5
 ## 2      924      5</code></pre>
@@ -306,7 +306,7 @@
 <h2 class="hasAnchor">
 <a href="#meeting" class="anchor"></a>meeting()</h2>
 <p><code><a href="../reference/meeting.html">meeting()</a></code> fetches the meeting schedule of Council or committees. Note that this function does not take CommitteeID as a filtering parameter. Use <code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> instead if needed.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Fetch all meeting conducted on </span></span>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Fetch all meeting conducted on March 20, 2019</span></span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> <span class="st">"2019-03-20"</span>, <span class="dt">to =</span> <span class="st">"2019-03-20"</span>)</span></code></pre></div>
 <pre><code>##   SlotID MeetID
 ## 1 175978 133311
