@@ -27,6 +27,8 @@ navbar:
           href: articles/voting.html
     - text: "Reference"
       href: reference/index.html
+    - text: "Changelog"
+      href: news/index.html
     - text: "Add-on: legcoplus"
       href: https://elgarteo.github.io/legcoplus/
 
