@@ -2,19 +2,15 @@
 #'
 #' Fetch basic information of LegCo committees.
 #'
-#' @param committee_id The id of a committee, or a vector of ids. If `NULL`,
-#'   returns results of all committees. Defaults to `NULL`.
+#' This function corresponds to the \emph{Tcommittee} data endpoint of the
+#' Meeting Schedule Database.
 #'
-#' @param code The code of a committee, or a vector of ids. If `NULL`, returns
-#'   all committees. Defaults to `NULL`.
+#' @inherit meeting_schedule-db
 #'
-#' @inheritParams hansard
-#' @inheritParams term
-#' 
-#' @examples 
-#' \dontrun{
+#' @examples
+#' \donttest{
 #' # Fetch all LegCo committees from the sixth term
-#' committee(term_id = 5)
+#' x <- committee(term_id = 5)
 #' }
 #'
 #' @export

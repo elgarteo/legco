@@ -15,12 +15,12 @@ navbar:
       href: articles/introduction.html
     - text: "Functions"
       menu:
-        - text: "Attendance Database"
-          href: articles/attn.html
         - text: "Bills Database"
           href: articles/bills.html
         - text: "Hansard Database"
           href: articles/hansard.html
+        - text: "Meeting Attendance Database"
+          href: articles/attn.html
         - text: "Meeting Schedule Database"
           href: articles/schedule.html
         - text: "Voting Results Database"
@@ -36,13 +36,9 @@ navbar:
       
 reference:
   - title: "Generic"
-    desc: "Function to access LegCo open data APIs"
     contents:
+      - '`legco-package`'
       - '`legco_api`'
-  - title: "Attendance Database"
-    desc: "Function to access LegCo members' attendance record in Council meetings"
-    contents:
-      - '`attendance`'
   - title: "Bills Database"
     desc: "Fucntion to access details of bills debated in LegCo since 1906"
     contents:
@@ -63,6 +59,10 @@ reference:
       - '`statements`'
       - '`voting_results`'
       - '`summoning_bells`'
+  - title: "Meeting Attendance Database"
+    desc: "Function to access LegCo members' attendance record in Council meetings"
+    contents:
+      - '`attendance`'
   - title: "Meeting Schedule Database"
     desc: "Functions to access the data of LegCo Council and committee meetings"
     contents:

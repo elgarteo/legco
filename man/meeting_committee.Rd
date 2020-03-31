@@ -24,32 +24,52 @@ legco_meeting_committee(
 )
 }
 \arguments{
-\item{slot_id}{The id of a meeting slot, or a vector of ids. If `NULL`,
-returns all meetings. Defaults to `NULL`.}
+\item{slot_id}{the id of a meeting slot, or a vector of ids. If \code{NULL},
+returns all meetings. Defaults to \code{NULL}.}
 
-\item{meet_id}{The id of a meeting, or a vector of ids. If `NULL`, returns
-all meetings. Useful for matching meeting with records from the Attendance
-Database. Defaults to `NULL`.}
+\item{meet_id}{the id of a meeting, or a vector of ids. If \code{NULL},
+returns all meetings. Useful for matching meeting with records from the
+Attendance Database. Defaults to \code{NULL}.}
 
-\item{committee_id}{The id of a committee, or a vector of ids. If `NULL`,
-returns results of all committees. Defaults to `NULL`.}
+\item{committee_id}{the id of a committee, or a vector of ids. If
+\code{NULL}, returns results of all committees. Defaults to \code{NULL}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch all the meeting slots of a given committee(s), or the committee of a
 given meeting slot(s).
 }
-\examples{
-\dontrun{
-# Fetch all meetings of Subcommittee on Issues Relating to Bazaars
-meeting_committee(committee_id = 2704)
+\details{
+This function corresponds to the \emph{Tmeeting_committee} data endpoint of
+the Meeting Schedule Database.
+}
+\section{Functions}{
+ Functions of the Meeting Schedule Database: \itemize{
+  \item \code{\link{term}}: LegCo terms \item \code{\link{session}}: LegCo
+  sessions \item \code{\link{committee}}: LegCo committees \item
+  \code{\link{membership}}: Membership of LegCo committees \item
+  \code{\link{member}}: LegCo members \item \code{\link{member_term}}: Terms
+  served by LegCo members \item \code{\link{meeting}}: Meetings of LegCo
+  committees \item \code{\link{meeting_committee}}: Committees of LegCo
+  meetings }
 }
 
+\examples{
+\donttest{
+# Fetch all meetings of Subcommittee on Issues Relating to Bazaars
+x <- meeting_committee(committee_id = 2704)
+}
+
+}
+\seealso{
+LegCo API documentation for the Meeting Schedule database:
+  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
 }

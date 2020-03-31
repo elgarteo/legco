@@ -1,0 +1,204 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Rundown&$select=RundownID,MeetingDate,Content,BookmarkName,SpeakerID,HansardID,HansardFileURL",
+    "odata.count": "22",
+    "value": [
+        {
+            "RundownID": 899628,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "Smoking (Public Health) (Amendment) Bill 2019",
+            "BookmarkName": "b2r01",
+            "SpeakerID": null,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01"
+        },
+        {
+            "RundownID": 899635,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "(While the summoning bell was ringing, a number of Members returned to the Chamber, but some Members did not return to their seats)",
+            "BookmarkName": "EV_BELL_00211",
+            "SpeakerID": null,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_BELL_00211"
+        },
+        {
+            "RundownID": 899630,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): Secretary, please hold on.  Mr SHIU Ka-fai, what is your point of order?",
+            "BookmarkName": "SP_LC_DPSD_00206",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00206"
+        },
+        {
+            "RundownID": 899632,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): Are you requesting a headcount?",
+            "BookmarkName": "SP_LC_DPSD_00208",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00208"
+        },
+        {
+            "RundownID": 899634,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): Mr SHIU Ka-fai requested a headcount.Will the Clerk please ring the bell to summon Members back to the Chamber.",
+            "BookmarkName": "SP_LC_DPSD_00210",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00210"
+        },
+        {
+            "RundownID": 899636,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): A quorum is now present in the Chamber.  Will Members please return to their seats and keep quiet.  The meeting now continues.(Mr AU Nok-hin remained standing)",
+            "BookmarkName": "SP_LC_DPSD_00212",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00212"
+        },
+        {
+            "RundownID": 899637,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): Mr AU Nok-hin, what is your point of order?",
+            "BookmarkName": "SP_LC_DPSD_00213",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00213"
+        },
+        {
+            "RundownID": 899639,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): Mr AU Nok-hin, please state your point of order.  If you wish to make comments, this is not the appropriate forum to do so.",
+            "BookmarkName": "SP_LC_DPSD_00215",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00215"
+        },
+        {
+            "RundownID": 899641,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): Secretary, you may choose to clarify or continue with your speech.",
+            "BookmarkName": "SP_LC_DPSD_00217",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00217"
+        },
+        {
+            "RundownID": 899643,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): Secretary, please continue.",
+            "BookmarkName": "SP_LC_DPSD_00219",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00219"
+        },
+        {
+            "RundownID": 899645,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): Secretary, please hold on.  Mr SHIU Ka-fai, what is your point of order?",
+            "BookmarkName": "SP_LC_DPSD_00221",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00221"
+        },
+        {
+            "RundownID": 899647,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): Mr SHIU, this is not the time for a debate with the Secretary.  If you are not raising a point of order, please sit down.Secretary, please continue.",
+            "BookmarkName": "SP_LC_DPSD_00223",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00223"
+        },
+        {
+            "RundownID": 899649,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "DEPUTY PRESIDENT (in Cantonese): I now propose the question to you and that is: That the Smoking (Public Health) (Amendment) Bill 2019 be read the Second time.In accordance with the Rules of Procedure, the Second Reading debate is adjourned and the Bill referred to the House Committee.",
+            "BookmarkName": "SP_LC_DPSD_00225",
+            "SpeakerID": 3,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00225"
+        },
+        {
+            "RundownID": 899638,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "MR AU NOK-HIN (in Cantonese): Deputy President, I wish to raise a point of order.  I noted that in summarizing Members' comments on this issue in her speech just now, Secretary Prof Sophia CHAN mentioned only those views that support a total ban, but not those on the other side of the argument.  She talked about the Government's change of position following the passage of a motion by a Panel, but in the meantime, many Members had put forth other views ",
+            "BookmarkName": "SP_MB_ANH_00214",
+            "SpeakerID": 159,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_MB_ANH_00214"
+        },
+        {
+            "RundownID": 899640,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "MR AU NOK-HIN (in Cantonese): I hope the Secretary can clarify how she summarized the views of Members.  Has she considered the views of some Members who request regulation rather than a total ban on alternative smoking products?",
+            "BookmarkName": "SP_MB_ANH_00216",
+            "SpeakerID": 159,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_MB_ANH_00216"
+        },
+        {
+            "RundownID": 899631,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "MR SHIU KA-FAI (in Cantonese): Deputy President, I think a quorum is lacking in the Chamber.",
+            "BookmarkName": "SP_MB_SKF_00207",
+            "SpeakerID": 140,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_MB_SKF_00207"
+        },
+        {
+            "RundownID": 899633,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "MR SHIU KA-FAI (in Cantonese): Yes, please, Deputy President.",
+            "BookmarkName": "SP_MB_SKF_00209",
+            "SpeakerID": 140,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_MB_SKF_00209"
+        },
+        {
+            "RundownID": 899646,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "MR SHIU KA-FAI (in Cantonese): Deputy President, I think the statement of the Secretary is incorrect.  In the meeting of the relevant Panel, apart from the passage of a motion calling for a ban on the relevant smoking products, there were also members who expressed the views for stopped up regulation.  The Secretary should not forcibly impose the one-sided version of the story she told just now on the Panel.",
+            "BookmarkName": "SP_MB_SKF_00222",
+            "SpeakerID": 140,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_MB_SKF_00222"
+        },
+        {
+            "RundownID": 899629,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "SECRETARY FOR FOOD AND HEALTH (in Cantonese): Deputy President, I move the Second Reading of the Smoking (Public Health) (Amendment) Bill 2019 (\"the Bill\") to ban the import, manufacture, sale, distribution and advertisement of alternative smoking products, including electronic cigarettes (\"e-cigarettes\"), heat-not-burn (\"HNB\") products and herbal cigarettes.To safeguard the health of the public, it is the Government's policy to discourage smoking, contain the proliferation of tobacco use and minimize the impact of passive smoking on the public.  Our multi-pronged approach comprises legislation, enforcement, publicity, education, smoking cessation services and taxation.  Different measures have been introduced, including the designation and continuous expansion of no smoking areas (\"NSAs\") (by, for example, including public transport carriers), and periodic increases in tobacco duty.  With the concerted efforts by the Government and other stakeholders, smoking prevalence among persons aged 15 and above has significantly dropped from over 20% in the 1980s to 10% at present, which is lower than many other places.  Under the \"Towards 2025: Strategy and Action Plan to Prevent and Control Non-communicable Diseases in Hong Kong\", the Government has also laid down the target of further reducing smoking prevalence to 7.8% by 2025.  We will also reference international experience in exploring the way forward in achieving a tobacco endgame.The emergence of alternative smoking products has posed new health risk and challenges.  Often packaged as less harmful substitutes with promotion tactics targeted at youngsters and non-smokers, these products open a gateway to the eventual consumption of such conventional products as cigarettes.  The fact is: all these alternative smoking products are harmful to health and produces second-hand smoke.  It should be stressed that there is a lack of sufficient evidence to prove that e-cigarettes or HNB products can help quit smoking.  Instead, there are studies suggesting that the introduction of these new products could result in the dual use of alternative and conventional smoking products.  The public may underestimate the harmful effects of these products and eventually endorse the smoking image and relevant behaviour once again.The Food and Health Bureau presented a regulatory proposal for alternative smoking products to the Panel on Health Services of the Legislative Council (\"the Panel\") in June 2018.  However, the relevant proposal had drawn fierce criticism from the medical professions, education sector, parents and many members of the public, who worried that allowing the sale of alternative smoking products―even with restrictions imposed―may, for one, prove inadequate for protecting public health, and for another, bring about highly negative impacts, especially those on children and adolescents.  On 19 June 2018, the Panel passed a non-binding motion, urging the Government to impose a total ban on such products.Meanwhile, there is increasing evidence that both e-cigarettes and HNB products are definitely harmful and may bring about gateway effects.  The World Health Organization (\"WHO\") has tightened its guidelines on tobacco control.  Further to the seventh session of the Conference of the Parties to the WHO Framework Convention on Tobacco Control which proposed, in November 2016, to its Contracting Parties to consider applying regulatory measures to, inter alia, prohibit the manufacture, importation, distribution, sale, presentation, etc., of e-cigarettes, the eighth session held in October 2018 proposed the same for HNB products.Overall, protecting public health should be the Government's prime consideration.  We must ensure that our achievements in tobacco control over the years would not be undermined, and must prevent the harm of new products from taking root.  With this in mind, the Chief Executive announced in the Policy Address 2018 the legislative amendment proposal to ban the import, manufacture, sale, distribution and advertisement of alternative smoking products.The Bill proposes to ban the import of alternative smoking products into Hong Kong, including (Mr SHIU Ka-fai stood up)",
+            "BookmarkName": "SP_PO_SFH_00205",
+            "SpeakerID": 19,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_PO_SFH_00205"
+        },
+        {
+            "RundownID": 899642,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "SECRETARY FOR FOOD AND HEALTH (in Cantonese): Deputy President, I mentioned just now that a non-binding motion was recently passed by the relevant Panel of the Legislative Council.  It is one piece of information set out in my Second Reading speech, which I have yet to finish.",
+            "BookmarkName": "SP_PO_SFH_00218",
+            "SpeakerID": 19,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_PO_SFH_00218"
+        },
+        {
+            "RundownID": 899644,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "SECRETARY FOR FOOD AND HEALTH (in Cantonese): Yes.  Thank you, Deputy President.(Mr SHIU Ka-fai stood up)",
+            "BookmarkName": "SP_PO_SFH_00220",
+            "SpeakerID": 19,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_PO_SFH_00220"
+        },
+        {
+            "RundownID": 899648,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "SECRETARY FOR FOOD AND HEALTH (in Cantonese): There are several aspects concerning the details of the Bill.  In respect of the ban on import, the Bill proposes to ban the import of alternative smoking products into Hong Kong, including through parcels and cargoes and bringing in by incoming travellers.  Articles in transit, air trans-shipment cargoes and persons in transit, who arrive at the Hong Kong International Airport and have not passed through immigration control since arrival, shall be exempted from the proposed ban.On the ban on manufacture, sale, distribution and advertisement of alternative smoking products, as well as the use of such products in NSAs, we propose to ban the manufacture, sale, distribution and advertisement of alternative smoking products.  Possession for the purpose of manufacture, sale, or the said distribution shall also be prohibited.  We also prohibit any person from using or activating alternative smoking products in NSAs.As for enforcement, the proposed ban will be enforced by the Tobacco and Alcohol Control Office of the Department of Health, and by the Customs and Excise Department (\"C&amp;ED\").  C&amp;ED officers will be in charge of detecting and intercepting incoming parcels, cargoes and travelers at import level while Tobacco and Alcohol Control Inspectors will be in charge of enforcement at street level and follow up on cases referred by C&amp;ED.We briefed the Panel on Health Services of the Legislative Council (\"the Panel\") on a regulatory proposal for alternative smoking products on 19 June 2018.  A hundred and four submissions were received.  The medical and education sectors expressed great concern on the harmful health effects brought about by these alternative smoking products, the attractiveness of these products to the younger generation and their gateway effects.  A non-binding motion was passed by the Panel, urging the Government to impose a total ban on alternative smoking products.  While close to 2 000 letters or email messages were received thereafter supporting regulation―instead of a total ban―of alternative smoking products, the medical professions, education sector, parents and many members of the public strongly objected to a regulatory approach that may not be adequate to protect public health, in particular for children and adolescents.  The Hong Kong Council on Smoking and Health (\"COSH\") alongside representatives from the medical professions, patient groups and the education sector have held joint press conferences on 15 June, 27 September and 15 October 2018, urging the Government to impose a full ban on alternative smoking products, in order to prevent these new products from taking root in Hong Kong.  COSH also collected around 62 000 signatures from the public supporting the ban.Deputy President, I implore Members to support the Bill as a way of protecting public health, ensuring that our achievements in tobacco control over the years would not be combusted and preventing the harm of these new products from taking root.I so submit.  Thank you, Deputy President.",
+            "BookmarkName": "SP_PO_SFH_00224",
+            "SpeakerID": 19,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_PO_SFH_00224"
+        }
+    ]
+}

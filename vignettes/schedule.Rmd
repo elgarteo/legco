@@ -8,9 +8,11 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, echo = FALSE}
+```{r include=FALSE}
 knitr::opts_chunk$set(message = FALSE)
 library(legco)
+library(httptest)
+start_vignette("schedule")
 ```
 
 ## Introduction
@@ -22,14 +24,14 @@ For more details of the database, see <https://www.legco.gov.hk/odata/english/sc
 
 ### Key Identifiers
 
-Here are the key identifies that is useful for locating the neccessary data from the Meeting Schedule
+Here are the key identifies that is useful for locating the necessary data from the Meeting Schedule
 Database:
 
 * `CommitteeID` is the numerical ID of a LegCo committee.
 
 * `SlotID` is the numerical ID of a Council or committee meeting slot.
 
-* `MemberID` is the numerical ID of a LegCo member. Note that it is a seperate identifier from the `SpeakerID` 
+* `MemberID` is the numerical ID of a LegCo member. Note that it is a separate identifier from the `SpeakerID` 
 of the Hansard Database.
 
 * `TermID` is the numerical ID of a LegCo term. Note that the nominal number of a TermID is less than that
@@ -38,7 +40,7 @@ of the term number by 1, i.e. the TermID of the fifth term is `4`.
 * `SessionID` is the numerical ID of a LegCo session. A LegCo session typically begins in October to September 
 next year. As a term is four years, there are four sessions in one term.
 
-* `MeetID` is the numerical ID of a Council or committee meeting. Although similar, it is a seperate 
+* `MeetID` is the numerical ID of a Council or committee meeting. Although similar it is a separate 
 identifier from the `SlotID` and is only used to match with records from the Attendance Database.
 
 ### Total Count
@@ -51,6 +53,10 @@ To activate this option, specify `count = TRUE`:
 # Fetch the total number of members in the Bills Committee on Fugitive Offenders and
 # Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill 2019
 membership(committee_id = 3005, count = TRUE)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 ---
@@ -65,6 +71,10 @@ This database is accessible with the following functions:
 # Fetch all LegCo terms
 term()
 ```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
 ## session()
 
@@ -73,6 +83,10 @@ term()
 ```{r }
 # Fetch all LegCo sessions of the fifth term
 session(term_id = 4)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 ## committee()
@@ -84,6 +98,10 @@ session(term_id = 4)
 v <- committee(term_id = 5)
 head(v)
 ```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
 ## membership()
 
@@ -93,10 +111,19 @@ head(v)
 # Fetch members of the Subcommittee on Issues Relating to Bazaars
 v <- membership(committee_id = 2704)
 head(v)
-
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
+```{r }
 # Fetch the committee membership of Hon Wu Chi-wai
 v <- membership(member_id = 834)
 head(v)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 ## member()
@@ -107,6 +134,10 @@ head(v)
 # Fetch full list of members
 v <- member()
 head(v)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 Note that `member()` only returns the latest term that the member has served as `LatestTermID`. To fetch all 
@@ -120,6 +151,13 @@ the terms served by a member since the fifth term, use `member_term()` instead.
 #Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
 member_term(member_id = c(273, 924))
 ```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
+
+Note that members who have served more than one term will have more than one entry, 
+e.g. the member with MemberID 245 as shown above.
 
 ## meeting()
 
@@ -129,6 +167,10 @@ not take CommitteeID as a filtering parameter. Use `meeting_committee()` instead
 ```{r }
 # Fetch all meeting conducted on March 20, 2019
 meeting(from = "2019-03-20", to = "2019-03-20")
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 ## meeting_committee()
@@ -140,4 +182,7 @@ not support dates as filtering parameters. Use `meeting()` instead if needed.
 # Fetch all meetings of Subcommittee on Issues Relating to Bazaars
 v <- meeting_committee(committee_id = 2704)
 head(v)
+```
+```{r include=FALSE}
+end_vignette()
 ```

@@ -2,18 +2,18 @@
 #'
 #' Fetch the subjects from hansard files of LegCo council meetings.
 #'
-#' @param section_code The section code, or a vector of codes. If `NULL`,
-#'   returns results of sections. Defaults to `NULL`.
+#' This function corresponds to the \emph{Subjects} data endpoint of the Hansard
+#' Database.
 #'
-#' @inheritParams hansard
-#' @inheritParams rundown
-#' 
-#' @examples 
-#' \dontrun{
+#'
+#' @inherit hansard-db
+#'
+#' @examples
+#' \donttest{
 #' # Fetch second reading of bills during the Council meeting on February 20, 2019
-#' subjects(hansard_id = 2714, section_code = "b2r")
+#' x <- subjects(hansard_id = 2714, section_code = "b2r")
 #' }
-#' 
+#'
 #' @export
 #' 
 subjects <- function(hansard_id = NULL, rundown_id = NULL, section_code = NULL,

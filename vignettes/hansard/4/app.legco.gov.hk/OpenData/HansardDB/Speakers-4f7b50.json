@@ -1,0 +1,1131 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Speakers",
+    "odata.count": "125",
+    "value": [
+        {
+            "SpeakerID": 108,
+            "NameChi": "梁志祥",
+            "NameEng": "LEUNG CHE-CHEUNG",
+            "Type": "MB",
+            "Initial": "LCC",
+            "FirstName": "Che-cheung",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 138,
+            "NameChi": "林卓廷",
+            "NameEng": "LAM CHEUK-TING",
+            "Type": "MB",
+            "Initial": "LCT",
+            "FirstName": "Cheuk-ting",
+            "LastName": "LAM"
+        },
+        {
+            "SpeakerID": 35,
+            "NameChi": "李卓人",
+            "NameEng": "LEE CHEUK-YAN",
+            "Type": "MB",
+            "Initial": "LCY",
+            "FirstName": "Cheuk-yan",
+            "LastName": "LEE"
+        },
+        {
+            "SpeakerID": 120,
+            "NameChi": "廖長江",
+            "NameEng": "MARTIN LIAO",
+            "Type": "MB",
+            "Initial": "ML",
+            "FirstName": "Cheung-kong",
+            "LastName": "LIAO"
+        },
+        {
+            "SpeakerID": 104,
+            "NameChi": "陳志全",
+            "NameEng": "CHAN CHI-CHUEN",
+            "Type": "MB",
+            "Initial": "CCC",
+            "FirstName": "Chi-chuen",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 148,
+            "NameChi": "許智峯",
+            "NameEng": "HUI CHI-FUNG",
+            "Type": "MB",
+            "Initial": "HCF",
+            "FirstName": "Chi-fung",
+            "LastName": "HUI"
+        },
+        {
+            "SpeakerID": 98,
+            "NameChi": "易志明",
+            "NameEng": "FRANKIE YICK",
+            "Type": "MB",
+            "Initial": "FY",
+            "FirstName": "Chi-ming",
+            "LastName": "YICK"
+        },
+        {
+            "SpeakerID": 115,
+            "NameChi": "張超雄",
+            "NameEng": "FERNANDO CHEUNG",
+            "Type": "MB",
+            "Initial": "CCH",
+            "FirstName": "Chiu-hung",
+            "LastName": "CHEUNG"
+        },
+        {
+            "SpeakerID": 99,
+            "NameChi": "胡志偉",
+            "NameEng": "WU CHI-WAI",
+            "Type": "MB",
+            "Initial": "WCW",
+            "FirstName": "Chi-wai",
+            "LastName": "WU"
+        },
+        {
+            "SpeakerID": 143,
+            "NameChi": "柯創盛",
+            "NameEng": "WILSON OR",
+            "Type": "MB",
+            "Initial": "WO",
+            "FirstName": "Chong-shing",
+            "LastName": "OR"
+        },
+        {
+            "SpeakerID": 149,
+            "NameChi": "梁頌恆",
+            "NameEng": "SIXTUS LEUNG",
+            "Type": "MB",
+            "Initial": "SLCH",
+            "FirstName": "Chung-hang",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 150,
+            "NameChi": "陸頌雄",
+            "NameEng": "LUK CHUNG-HUNG",
+            "Type": "MB",
+            "Initial": "LCH",
+            "FirstName": "Chung-hung",
+            "LastName": "LUK"
+        },
+        {
+            "SpeakerID": 116,
+            "NameChi": "單仲偕",
+            "NameEng": "SIN CHUNG-KAI",
+            "Type": "MB",
+            "Initial": "SCK",
+            "FirstName": "Chung-kai",
+            "LastName": "SIN"
+        },
+        {
+            "SpeakerID": 155,
+            "NameChi": "鄭松泰",
+            "NameEng": "CHENG CHUNG-TAI",
+            "Type": "MB",
+            "Initial": "CCT",
+            "FirstName": "Chung-tai",
+            "LastName": "CHENG"
+        },
+        {
+            "SpeakerID": 34,
+            "NameChi": "何鍾泰",
+            "NameEng": "RAYMOND HO",
+            "Type": "MB",
+            "Initial": "HCT",
+            "FirstName": "Chung-tai",
+            "LastName": "HO"
+        },
+        {
+            "SpeakerID": 142,
+            "NameChi": "姚松炎",
+            "NameEng": "YIU CHUNG-YIM",
+            "Type": "MB",
+            "Initial": "YCY",
+            "FirstName": "Chung-yim",
+            "LastName": "YIU"
+        },
+        {
+            "SpeakerID": 33,
+            "NameChi": "何俊仁",
+            "NameEng": "ALBERT HO",
+            "Type": "MB",
+            "Initial": "AH",
+            "FirstName": "Chun-yan",
+            "LastName": "HO"
+        },
+        {
+            "SpeakerID": 97,
+            "NameChi": "何俊賢",
+            "NameEng": "STEVEN HO",
+            "Type": "MB",
+            "Initial": "SH",
+            "FirstName": "Chun-yin",
+            "LastName": "HO"
+        },
+        {
+            "SpeakerID": 146,
+            "NameChi": "陳振英",
+            "NameEng": "CHAN CHUN-YING",
+            "Type": "MB",
+            "Initial": "CCY",
+            "FirstName": "Chun-ying",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 156,
+            "NameChi": "鄺俊宇",
+            "NameEng": "KWONG CHUN-YU",
+            "Type": "MB",
+            "Initial": "KCY",
+            "FirstName": "Chun-yu",
+            "LastName": "KWONG"
+        },
+        {
+            "SpeakerID": 102,
+            "NameChi": "馬逢國",
+            "NameEng": "MA FUNG-KWOK",
+            "Type": "MB",
+            "Initial": "MFK",
+            "FirstName": "Fung-kwok",
+            "LastName": "MA"
+        },
+        {
+            "SpeakerID": 54,
+            "NameChi": "李鳳英",
+            "NameEng": "LI FUNG-YING",
+            "Type": "MB",
+            "Initial": "LFY",
+            "FirstName": "Fung-ying",
+            "LastName": "LI"
+        },
+        {
+            "SpeakerID": 73,
+            "NameChi": "陳克勤",
+            "NameEng": "CHAN HAK-KAN",
+            "Type": "MB",
+            "Initial": "CHK",
+            "FirstName": "Hak-kan",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 105,
+            "NameChi": "陳恒鑌",
+            "NameEng": "CHAN HAN-PAN",
+            "Type": "MB",
+            "Initial": "CHP",
+            "FirstName": "Han-pan",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 139,
+            "NameChi": "周浩鼎",
+            "NameEng": "HOLDEN CHOW",
+            "Type": "MB",
+            "Initial": "HC",
+            "FirstName": "Ho-ding",
+            "LastName": "CHOW"
+        },
+        {
+            "SpeakerID": 134,
+            "NameChi": "朱凱廸",
+            "NameEng": "CHU HOI-DICK",
+            "Type": "MB",
+            "Initial": "EC",
+            "FirstName": "Hoi-dick",
+            "LastName": "CHU"
+        },
+        {
+            "SpeakerID": 161,
+            "NameChi": "陳凱欣",
+            "NameEng": "CHAN HOI-YAN",
+            "Type": "MB",
+            "Initial": "CHY",
+            "FirstName": "Hoi-yan",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 144,
+            "NameChi": "容海恩",
+            "NameEng": "YUNG HOI-YAN",
+            "Type": "MB",
+            "Initial": "YHY",
+            "FirstName": "Hoi-yan",
+            "LastName": "YUNG"
+        },
+        {
+            "SpeakerID": 64,
+            "NameChi": "張學明",
+            "NameEng": "CHEUNG HOK-MING",
+            "Type": "MB",
+            "Initial": "CHM",
+            "FirstName": "Hok-ming",
+            "LastName": "CHEUNG"
+        },
+        {
+            "SpeakerID": 154,
+            "NameChi": "劉業強",
+            "NameEng": "KENNETH LAU",
+            "Type": "MB",
+            "Initial": "LIK",
+            "FirstName": "Ip-keung",
+            "LastName": "LAU"
+        },
+        {
+            "SpeakerID": 141,
+            "NameChi": "邵家臻",
+            "NameEng": "SHIU KA-CHUN",
+            "Type": "MB",
+            "Initial": "SKC",
+            "FirstName": "Ka-chun",
+            "LastName": "SHIU"
+        },
+        {
+            "SpeakerID": 140,
+            "NameChi": "邵家輝",
+            "NameEng": "SHIU KA-FAI",
+            "Type": "MB",
+            "Initial": "SKF",
+            "FirstName": "Ka-fai",
+            "LastName": "SHIU"
+        },
+        {
+            "SpeakerID": 87,
+            "NameChi": "梁家傑",
+            "NameEng": "ALAN LEONG",
+            "Type": "MB",
+            "Initial": "LKK",
+            "FirstName": "Kah-kit",
+            "LastName": "LEONG"
+        },
+        {
+            "SpeakerID": 109,
+            "NameChi": "梁繼昌",
+            "NameEng": "KENNETH LEUNG",
+            "Type": "MB",
+            "Initial": "KL",
+            "FirstName": "Kai-cheong",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 137,
+            "NameChi": "何啟明",
+            "NameEng": "HO KAI-MING",
+            "Type": "MB",
+            "Initial": "HKM",
+            "FirstName": "Kai-ming",
+            "LastName": "HO"
+        },
+        {
+            "SpeakerID": 111,
+            "NameChi": "郭家麒",
+            "NameEng": "KWOK KA-KI",
+            "Type": "MB",
+            "Initial": "KKK",
+            "FirstName": "Ka-ki",
+            "LastName": "KWOK"
+        },
+        {
+            "SpeakerID": 77,
+            "NameChi": "梁家騮",
+            "NameEng": "LEUNG KA-LAU",
+            "Type": "MB",
+            "Initial": "LKL",
+            "FirstName": "Ka-lau",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 106,
+            "NameChi": "陳家洛",
+            "NameEng": "KENNETH CHAN",
+            "Type": "MB",
+            "Initial": "KC",
+            "FirstName": "Ka-lok",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 41,
+            "NameChi": "陳鑑林",
+            "NameEng": "CHAN KAM-LAM",
+            "Type": "MB",
+            "Initial": "CKL",
+            "FirstName": "Kam-lam",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 58,
+            "NameChi": "方剛",
+            "NameEng": "VINCENT FANG",
+            "Type": "MB",
+            "Initial": "VF",
+            "FirstName": "Kang",
+            "LastName": "FANG"
+        },
+        {
+            "SpeakerID": 122,
+            "NameChi": "鄧家彪",
+            "NameEng": "TANG KA-PIU",
+            "Type": "MB",
+            "Initial": "TKP",
+            "FirstName": "Ka-piu",
+            "LastName": "TANG"
+        },
+        {
+            "SpeakerID": 50,
+            "NameChi": "鄭家富",
+            "NameEng": "ANDREW CHENG",
+            "Type": "MB",
+            "Initial": "AC",
+            "FirstName": "Kar-foo",
+            "LastName": "CHENG"
+        },
+        {
+            "SpeakerID": 66,
+            "NameChi": "湯家驊",
+            "NameEng": "RONNY TONG",
+            "Type": "MB",
+            "Initial": "TKW",
+            "FirstName": "Ka-wah",
+            "LastName": "TONG"
+        },
+        {
+            "SpeakerID": 62,
+            "NameChi": "林健鋒",
+            "NameEng": "JEFFREY LAM",
+            "Type": "MB",
+            "Initial": "LKF",
+            "FirstName": "Kin-fung",
+            "LastName": "LAM"
+        },
+        {
+            "SpeakerID": 56,
+            "NameChi": "馮檢基",
+            "NameEng": "FREDERICK FUNG",
+            "Type": "MB",
+            "Initial": "FKK",
+            "FirstName": "Kin-kee",
+            "LastName": "FUNG"
+        },
+        {
+            "SpeakerID": 75,
+            "NameChi": "陳健波",
+            "NameEng": "CHAN KIN-POR",
+            "Type": "MB",
+            "Initial": "CKP",
+            "FirstName": "Kin-por",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 48,
+            "NameChi": "劉健儀",
+            "NameEng": "MIRIAM LAU",
+            "Type": "MB",
+            "Initial": "LKY",
+            "FirstName": "Kin-yee",
+            "LastName": "LAU"
+        },
+        {
+            "SpeakerID": 118,
+            "NameChi": "葉建源",
+            "NameEng": "IP KIN-YUEN",
+            "Type": "MB",
+            "Initial": "IKY",
+            "FirstName": "Kin-yuen",
+            "LastName": "IP"
+        },
+        {
+            "SpeakerID": 61,
+            "NameChi": "李國麟",
+            "NameEng": "JOSEPH LEE",
+            "Type": "MB",
+            "Initial": "JL",
+            "FirstName": "Kok-long",
+            "LastName": "LEE"
+        },
+        {
+            "SpeakerID": 46,
+            "NameChi": "劉江華",
+            "NameEng": "LAU KONG-WAH",
+            "Type": "MB",
+            "Initial": "LKW",
+            "FirstName": "Kong-wah",
+            "LastName": "LAU"
+        },
+        {
+            "SpeakerID": 39,
+            "NameChi": "涂謹申",
+            "NameEng": "JAMES TO",
+            "Type": "MB",
+            "Initial": "TKS",
+            "FirstName": "Kun-sun",
+            "LastName": "TO"
+        },
+        {
+            "SpeakerID": 136,
+            "NameChi": "何君堯",
+            "NameEng": "JUNIUS HO",
+            "Type": "MB",
+            "Initial": "JH",
+            "FirstName": "Kwan-yiu",
+            "LastName": "HO"
+        },
+        {
+            "SpeakerID": 63,
+            "NameChi": "梁君彥",
+            "NameEng": "ANDREW LEUNG",
+            "Type": "MB",
+            "Initial": "AL",
+            "FirstName": "Kwan-yuen",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 78,
+            "NameChi": "張國柱",
+            "NameEng": "CHEUNG KWOK-CHE",
+            "Type": "MB",
+            "Initial": "CKC",
+            "FirstName": "Kwok-che",
+            "LastName": "CHEUNG"
+        },
+        {
+            "SpeakerID": 153,
+            "NameChi": "劉國勳",
+            "NameEng": "LAU KWOK-FAN",
+            "Type": "MB",
+            "Initial": "KF",
+            "FirstName": "Kwok-fan",
+            "LastName": "LAU"
+        },
+        {
+            "SpeakerID": 82,
+            "NameChi": "葉國謙",
+            "NameEng": "IP KWOK-HIM",
+            "Type": "MB",
+            "Initial": "IKH",
+            "FirstName": "Kwok-him",
+            "LastName": "IP"
+        },
+        {
+            "SpeakerID": 59,
+            "NameChi": "王國興",
+            "NameEng": "WONG KWOK-HING",
+            "Type": "MB",
+            "Initial": "WKH",
+            "FirstName": "Kwok-hing",
+            "LastName": "WONG"
+        },
+        {
+            "SpeakerID": 88,
+            "NameChi": "梁國雄",
+            "NameEng": "LEUNG KWOK-HUNG",
+            "Type": "MB",
+            "Initial": "LKH",
+            "FirstName": "Kwok-hung",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 80,
+            "NameChi": "黃國健",
+            "NameEng": "WONG KWOK-KIN",
+            "Type": "MB",
+            "Initial": "WKK",
+            "FirstName": "Kwok-kin",
+            "LastName": "WONG"
+        },
+        {
+            "SpeakerID": 147,
+            "NameChi": "張國鈞",
+            "NameEng": "CHEUNG KWOK-KWAN",
+            "Type": "MB",
+            "Initial": "CKK",
+            "FirstName": "Kwok-kwan",
+            "LastName": "CHEUNG"
+        },
+        {
+            "SpeakerID": 125,
+            "NameChi": "鍾國斌",
+            "NameEng": "CHUNG KWOK-PAN",
+            "Type": "MB",
+            "Initial": "CKPA",
+            "FirstName": "Kwok-pan",
+            "LastName": "CHUNG"
+        },
+        {
+            "SpeakerID": 36,
+            "NameChi": "李國寶",
+            "NameEng": "DAVID LI",
+            "Type": "MB",
+            "Initial": "DL",
+            "FirstName": "Kwok-po",
+            "LastName": "LI"
+        },
+        {
+            "SpeakerID": 101,
+            "NameChi": "范國威",
+            "NameEng": "GARY FAN",
+            "Type": "MB",
+            "Initial": "GF",
+            "FirstName": "Kwok-wai",
+            "LastName": "FAN"
+        },
+        {
+            "SpeakerID": 158,
+            "NameChi": "羅冠聰",
+            "NameEng": "NATHAN LAW",
+            "Type": "MB",
+            "Initial": "LKC",
+            "FirstName": "Kwun-chung",
+            "LastName": "LAW"
+        },
+        {
+            "SpeakerID": 53,
+            "NameChi": "石禮謙",
+            "NameEng": "ABRAHAM SHEK",
+            "Type": "MB",
+            "Initial": "AS",
+            "FirstName": "Lai-him",
+            "LastName": "SHEK"
+        },
+        {
+            "SpeakerID": 123,
+            "NameChi": "蔣麗芸",
+            "NameEng": "CHIANG LAI-WAN",
+            "Type": "MB",
+            "Initial": "CLW",
+            "FirstName": "Lai-wan",
+            "LastName": "CHIANG"
+        },
+        {
+            "SpeakerID": 96,
+            "NameChi": "吳亮星",
+            "NameEng": "NG LEUNG-SING",
+            "Type": "MB",
+            "Initial": "NLS",
+            "FirstName": "Leung-sing",
+            "LastName": "NG"
+        },
+        {
+            "SpeakerID": 93,
+            "NameChi": "毛孟靜",
+            "NameEng": "CLAUDIA MO",
+            "Type": "MB",
+            "Initial": "CM",
+            "FirstName": "Man-ching",
+            "LastName": "MO"
+        },
+        {
+            "SpeakerID": 157,
+            "NameChi": "譚文豪",
+            "NameEng": "JEREMY TAM",
+            "Type": "MB",
+            "Initial": "JT",
+            "FirstName": "Man-ho",
+            "LastName": "TAM"
+        },
+        {
+            "SpeakerID": 40,
+            "NameChi": "張文光",
+            "NameEng": "CHEUNG MAN-KWONG",
+            "Type": "MB",
+            "Initial": "CMK",
+            "FirstName": "Man-kwong",
+            "LastName": "CHEUNG"
+        },
+        {
+            "SpeakerID": 76,
+            "NameChi": "梁美芬",
+            "NameEng": "PRISCILLA LEUNG",
+            "Type": "MB",
+            "Initial": "LMF",
+            "FirstName": "Mei-fun",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 110,
+            "NameChi": "麥美娟",
+            "NameEng": "ALICE MAK",
+            "Type": "MB",
+            "Initial": "AM",
+            "FirstName": "Mei-kuen",
+            "LastName": "MAK"
+        },
+        {
+            "SpeakerID": 74,
+            "NameChi": "陳茂波",
+            "NameEng": "PAUL CHAN",
+            "Type": "MB",
+            "Initial": "PC",
+            "FirstName": "Mo-po",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 103,
+            "NameChi": "莫乃光",
+            "NameEng": "CHARLES PETER MOK",
+            "Type": "MB",
+            "Initial": "CPM",
+            "FirstName": "Nai-kwong",
+            "LastName": "MOK"
+        },
+        {
+            "SpeakerID": 69,
+            "NameChi": "甘乃威",
+            "NameEng": "KAM NAI-WAI",
+            "Type": "MB",
+            "Initial": "KNW",
+            "FirstName": "Nai-wai",
+            "LastName": "KAM"
+        },
+        {
+            "SpeakerID": 38,
+            "NameChi": "吳靄儀",
+            "NameEng": "MARGARET NG",
+            "Type": "MB",
+            "Initial": "MN",
+            "FirstName": "Ngoi-yee",
+            "LastName": "NG"
+        },
+        {
+            "SpeakerID": 131,
+            "NameChi": "楊岳橋",
+            "NameEng": "ALVIN YEUNG",
+            "Type": "MB",
+            "Initial": "AY",
+            "FirstName": "Ngok-kiu",
+            "LastName": "YEUNG"
+        },
+        {
+            "SpeakerID": 159,
+            "NameChi": "區諾軒",
+            "NameEng": "AU NOK-HIN",
+            "Type": "MB",
+            "Initial": "ANH",
+            "FirstName": "Nok-hin",
+            "LastName": "AU"
+        },
+        {
+            "SpeakerID": 95,
+            "NameChi": "田北俊",
+            "NameEng": "JAMES TIEN",
+            "Type": "MB",
+            "Initial": "TPC",
+            "FirstName": "Pei-chun",
+            "LastName": "TIEN"
+        },
+        {
+            "SpeakerID": 84,
+            "NameChi": "潘佩璆",
+            "NameEng": "PAN PEY-CHYOU",
+            "Type": "MB",
+            "Initial": "PPC",
+            "FirstName": "Pey-chyou",
+            "LastName": "PAN"
+        },
+        {
+            "SpeakerID": 145,
+            "NameChi": "陳沛然",
+            "NameEng": "PIERRE CHAN",
+            "Type": "MB",
+            "Initial": "PCPY",
+            "FirstName": "Pierre",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 117,
+            "NameChi": "黃碧雲",
+            "NameEng": "HELENA WONG",
+            "Type": "MB",
+            "Initial": "HW",
+            "FirstName": "Pik-wan",
+            "LastName": "WONG"
+        },
+        {
+            "SpeakerID": 67,
+            "NameChi": "詹培忠",
+            "NameEng": "CHIM PUI-CHUNG",
+            "Type": "MB",
+            "Initial": "CPC",
+            "FirstName": "Pui-chung",
+            "LastName": "CHIM"
+        },
+        {
+            "SpeakerID": 119,
+            "NameChi": "葛珮帆",
+            "NameEng": "ELIZABETH QUAT",
+            "Type": "MB",
+            "Initial": "EQ",
+            "FirstName": "Pui-fan",
+            "LastName": "QUAT"
+        },
+        {
+            "SpeakerID": 94,
+            "NameChi": "田北辰",
+            "NameEng": "MICHAEL TIEN",
+            "Type": "MB",
+            "Initial": "MT",
+            "FirstName": "Puk-sun",
+            "LastName": "TIEN"
+        },
+        {
+            "SpeakerID": 70,
+            "NameChi": "何秀蘭",
+            "NameEng": "CYD HO",
+            "Type": "MB",
+            "Initial": "CH",
+            "FirstName": "Sau-lan",
+            "LastName": "HO"
+        },
+        {
+            "SpeakerID": 68,
+            "NameChi": "劉秀成",
+            "NameEng": "PATRICK LAU",
+            "Type": "MB",
+            "Initial": "PL",
+            "FirstName": "Sau-shing",
+            "LastName": "LAU"
+        },
+        {
+            "SpeakerID": 126,
+            "NameChi": "鍾樹根",
+            "NameEng": "CHRISTOPHER CHUNG",
+            "Type": "MB",
+            "Initial": "CCA",
+            "FirstName": "Shu-kun",
+            "LastName": "CHUNG"
+        },
+        {
+            "SpeakerID": 79,
+            "NameChi": "黃成智",
+            "NameEng": "WONG SING-CHI",
+            "Type": "MB",
+            "Initial": "WSC",
+            "FirstName": "Sing-chi",
+            "LastName": "WONG"
+        },
+        {
+            "SpeakerID": 133,
+            "NameChi": "尹兆堅",
+            "NameEng": "ANDREW WAN",
+            "Type": "MB",
+            "Initial": "AW",
+            "FirstName": "Siu-kin",
+            "LastName": "WAN"
+        },
+        {
+            "SpeakerID": 152,
+            "NameChi": "劉小麗",
+            "NameEng": "LAU SIU-LAI",
+            "Type": "MB",
+            "Initial": "LSL",
+            "FirstName": "Siu-lai",
+            "LastName": "LAU"
+        },
+        {
+            "SpeakerID": 121,
+            "NameChi": "潘兆平",
+            "NameEng": "POON SIU-PING",
+            "Type": "MB",
+            "Initial": "PSP",
+            "FirstName": "Siu-ping",
+            "LastName": "POON"
+        },
+        {
+            "SpeakerID": 100,
+            "NameChi": "姚思榮",
+            "NameEng": "YIU SI-WING",
+            "Type": "MB",
+            "Initial": "YSW",
+            "FirstName": "Si-wing",
+            "LastName": "YIU"
+        },
+        {
+            "SpeakerID": 89,
+            "NameChi": "陳淑莊",
+            "NameEng": "TANYA CHAN",
+            "Type": "MB",
+            "Initial": "CT",
+            "FirstName": "Suk-chong",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 83,
+            "NameChi": "葉劉淑儀",
+            "NameEng": "REGINA IP",
+            "Type": "MB",
+            "Initial": "RI",
+            "FirstName": "Suk-yee",
+            "LastName": "IP LAU"
+        },
+        {
+            "SpeakerID": 72,
+            "NameChi": "林大輝",
+            "NameEng": "LAM TAI-FAI",
+            "Type": "MB",
+            "Initial": "LTF",
+            "FirstName": "Tai-fai",
+            "LastName": "LAM"
+        },
+        {
+            "SpeakerID": 65,
+            "NameChi": "黃定光",
+            "NameEng": "WONG TING-KWONG",
+            "Type": "MB",
+            "Initial": "WTK",
+            "FirstName": "Ting-kwong",
+            "LastName": "WONG"
+        },
+        {
+            "SpeakerID": 51,
+            "NameChi": "霍震霆",
+            "NameEng": "TIMOTHY FOK",
+            "Type": "MB",
+            "Initial": "TF",
+            "FirstName": "Tsun-ting",
+            "LastName": "FOK"
+        },
+        {
+            "SpeakerID": 114,
+            "NameChi": "張華峰",
+            "NameEng": "CHRISTOPHER CHEUNG",
+            "Type": "MB",
+            "Initial": "CC",
+            "FirstName": "Wah-fung",
+            "LastName": "CHEUNG"
+        },
+        {
+            "SpeakerID": 37,
+            "NameChi": "李華明",
+            "NameEng": "FRED LI",
+            "Type": "MB",
+            "Initial": "FL",
+            "FirstName": "Wah-ming",
+            "LastName": "LI"
+        },
+        {
+            "SpeakerID": 151,
+            "NameChi": "游蕙禎",
+            "NameEng": "YAU WAI-CHING",
+            "Type": "MB",
+            "Initial": "YWC",
+            "FirstName": "Wai-ching",
+            "LastName": "YAU"
+        },
+        {
+            "SpeakerID": 127,
+            "NameChi": "謝偉銓",
+            "NameEng": "TONY TSE",
+            "Type": "MB",
+            "Initial": "TT",
+            "FirstName": "Wai-chuen",
+            "LastName": "TSE"
+        },
+        {
+            "SpeakerID": 85,
+            "NameChi": "謝偉俊",
+            "NameEng": "PAUL TSE",
+            "Type": "MB",
+            "Initial": "PT",
+            "FirstName": "Wai-chun",
+            "LastName": "TSE"
+        },
+        {
+            "SpeakerID": 49,
+            "NameChi": "劉慧卿",
+            "NameEng": "EMILY LAU",
+            "Type": "MB",
+            "Initial": "LWH",
+            "FirstName": "Wai-hing",
+            "LastName": "LAU"
+        },
+        {
+            "SpeakerID": 86,
+            "NameChi": "譚偉豪",
+            "NameEng": "SAMSON TAM",
+            "Type": "MB",
+            "Initial": "TWH",
+            "FirstName": "Wai-ho",
+            "LastName": "TAM"
+        },
+        {
+            "SpeakerID": 112,
+            "NameChi": "郭偉强",
+            "NameEng": "KWOK WAI-KEUNG",
+            "Type": "MB",
+            "Initial": "KWK",
+            "FirstName": "Wai-keung",
+            "LastName": "KWOK"
+        },
+        {
+            "SpeakerID": 71,
+            "NameChi": "李慧琼",
+            "NameEng": "STARRY LEE",
+            "Type": "MB",
+            "Initial": "SL",
+            "FirstName": "Wai-king",
+            "LastName": "LEE"
+        },
+        {
+            "SpeakerID": 124,
+            "NameChi": "盧偉國",
+            "NameEng": "LO WAI-KWOK",
+            "Type": "MB",
+            "Initial": "LWK",
+            "FirstName": "Wai-kwok",
+            "LastName": "LO"
+        },
+        {
+            "SpeakerID": 81,
+            "NameChi": "葉偉明",
+            "NameEng": "IP WAI-MING",
+            "Type": "MB",
+            "Initial": "IWM",
+            "FirstName": "Wai-ming",
+            "LastName": "IP"
+        },
+        {
+            "SpeakerID": 90,
+            "NameChi": "陳偉業",
+            "NameEng": "ALBERT CHAN",
+            "Type": "MB",
+            "Initial": "CWY",
+            "FirstName": "Wai-yip",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 113,
+            "NameChi": "郭榮鏗",
+            "NameEng": "DENNIS KWOK",
+            "Type": "MB",
+            "Initial": "DK",
+            "FirstName": "Wing-hang",
+            "LastName": "KWOK"
+        },
+        {
+            "SpeakerID": 135,
+            "NameChi": "吳永嘉",
+            "NameEng": "JIMMY NG",
+            "Type": "MB",
+            "Initial": "NWK",
+            "FirstName": "Wing-ka",
+            "LastName": "NG"
+        },
+        {
+            "SpeakerID": 160,
+            "NameChi": "鄭泳舜",
+            "NameEng": "VINCENT CHENG",
+            "Type": "MB",
+            "Initial": "VC",
+            "FirstName": "Wing-shun",
+            "LastName": "CHENG"
+        },
+        {
+            "SpeakerID": 60,
+            "NameChi": "李永達",
+            "NameEng": "LEE WING-TAT",
+            "Type": "MB",
+            "Initial": "LWT",
+            "FirstName": "Wing-tat",
+            "LastName": "LEE"
+        },
+        {
+            "SpeakerID": 47,
+            "NameChi": "劉皇發",
+            "NameEng": "LAU WONG-FAT",
+            "Type": "MB",
+            "Initial": "LWF",
+            "FirstName": "Wong-fat",
+            "LastName": "LAU"
+        },
+        {
+            "SpeakerID": 42,
+            "NameChi": "梁劉柔芬",
+            "NameEng": "SOPHIE LEUNG",
+            "Type": "MB",
+            "Initial": "LYF",
+            "FirstName": "Yau-fun",
+            "LastName": "LEUNG LAU"
+        },
+        {
+            "SpeakerID": 43,
+            "NameChi": "梁耀忠",
+            "NameEng": "LEUNG YIU-CHUNG",
+            "Type": "MB",
+            "Initial": "LYC",
+            "FirstName": "Yiu-chung",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 52,
+            "NameChi": "譚耀宗",
+            "NameEng": "TAM YIU-CHUNG",
+            "Type": "MB",
+            "Initial": "TYC",
+            "FirstName": "Yiu-chung",
+            "LastName": "TAM"
+        },
+        {
+            "SpeakerID": 92,
+            "NameChi": "曾鈺成",
+            "NameEng": "JASPER TSANG YOK-SING",
+            "Type": "MB",
+            "Initial": "TYS",
+            "FirstName": "Yok-sing",
+            "LastName": "TSANG"
+        },
+        {
+            "SpeakerID": 107,
+            "NameChi": "陳婉嫻",
+            "NameEng": "CHAN YUEN-HAN",
+            "Type": "MB",
+            "Initial": "CYH",
+            "FirstName": "Yuen-han",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 57,
+            "NameChi": "余若薇",
+            "NameEng": "AUDREY EU",
+            "Type": "MB",
+            "Initial": "AE",
+            "FirstName": "Yuet-mee",
+            "LastName": "EU"
+        },
+        {
+            "SpeakerID": 44,
+            "NameChi": "黃宜弘",
+            "NameEng": "PHILIP WONG",
+            "Type": "MB",
+            "Initial": "WYH",
+            "FirstName": "Yu-hong",
+            "LastName": "WONG"
+        },
+        {
+            "SpeakerID": 91,
+            "NameChi": "黃毓民",
+            "NameEng": "WONG YUK-MAN",
+            "Type": "MB",
+            "Initial": "WYM",
+            "FirstName": "Yuk-man",
+            "LastName": "WONG"
+        },
+        {
+            "SpeakerID": 45,
+            "NameChi": "黃容根",
+            "NameEng": "WONG YUNG-KAN",
+            "Type": "MB",
+            "Initial": "WYK",
+            "FirstName": "Yung-kan",
+            "LastName": "WONG"
+        },
+        {
+            "SpeakerID": 55,
+            "NameChi": "張宇人",
+            "NameEng": "TOMMY CHEUNG",
+            "Type": "MB",
+            "Initial": "TC",
+            "FirstName": "Yu-yan",
+            "LastName": "CHEUNG"
+        }
+    ]
+}

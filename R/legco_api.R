@@ -2,21 +2,28 @@
 #'
 #' A generic function to access LegCo APIs.
 #'
-#' @param db The database you wish to access. `'hansard'` for the hansard
-#'   database. `'attn'` for the attendance database. `'bill'` for the bills
-#'   database. `'schedule'` for the schedule database. Or the path name for
-#'   databases not listed here (i.e. the string between the domain name and data
-#'   endpoints, e.g. `'OpenData/HansardDB'`).
+#' @param db the database you wish to access. \code{"hansard"} for the hansard
+#'   database. \code{"attn"} for the attendance database. \code{"bill"} for the
+#'   bills database. \code{"schedule"} for the schedule database. Or the path
+#'   name for databases not listed here (i.e. the string between the domain name
+#'   and data endpoints, e.g. \code{"OpenData/HansardDB"}).
 #'
-#' @param query The query for retrieving data. Should include the data endpoint
+#' @param query the query for retrieving data. Should include the data endpoint
 #'   and parameters if any.
 #'
-#' @param n The number of record to fetch. Defaults to `1000`.
+#' @param n the number of record to fetch. Defaults to \code{1000}.
 #'
-#' @param count If `TRUE`, returns only the total count of records that matches
-#'   the paramter(s) instead of the result. Defaults to `FALSE`.
+#' @param count logical: Whether to return only the total count of records that
+#'   matches the parameter(s) instead of the result. Defaults to \code{FALSE}.
 #'
-#' @param verbose Defaults to `TRUE`.
+#' @param verbose logical: Whether to display progress messages when fetching
+#'   data? Defaults to \code{TRUE}.
+#'
+#' @examples
+#' # Fetch data from the "bills" endpoint of the hansard database
+#' \donttest{
+#' x <- legco_api("hansard", "Bills")
+#' }
 #'
 #' @export
 #' 
@@ -60,16 +67,8 @@ legco_api <- function(db, query, n = 1000, count = FALSE, verbose = TRUE) {
   if (verbose) {
     message("Retrieving records...")
   }
-  
-  baseurl <- utils::URLencode(iconv(baseurl, to = 'UTF-8', toRaw = FALSE))
-  df <- jsonlite::fromJSON(baseurl, flatten = TRUE)
-  
+  df <- access_api(baseurl, verbose)
   total <- as.numeric(df$odata.count)
-  
-  if (df$odata.count == 0) {
-    # No data retrieved
-    stop("The request did not return any data. Please check your parameters.")
-  }
   
   if (count) {
     if (verbose) {
@@ -96,7 +95,6 @@ legco_api <- function(db, query, n = 1000, count = FALSE, verbose = TRUE) {
     message("Retrieved ", nrow(df), " records. ",
             remaining, " record(s) remaining.")
   }
-  
   for (i in 1:ceiling(remaining / maximum)) {
     if (remaining < maximum) {
       nexturl <- paste0(nexturl, "&$top=", remaining)
@@ -105,15 +103,13 @@ legco_api <- function(db, query, n = 1000, count = FALSE, verbose = TRUE) {
     if (verbose) {
       message("Retrieving ", ifelse(remaining < maximum, remaining, maximum), " records...")
     }
-    
     Sys.sleep(2) # Prevent back-to-back request
-    nexturl <- utils::URLencode(nexturl)
-    tmp <- jsonlite::fromJSON(nexturl, flatten = TRUE)
-    
+    tmp <- access_api(nexturl, verbose)
     df <- rbind(df, tmp$value)
     
     if (remaining > maximum) {
       remaining <- remaining - maximum
+      
       if (verbose) {
         message("Retrieved ", nrow(df), " records. ",
                 remaining, " record(s) remaining.")
@@ -127,4 +123,39 @@ legco_api <- function(db, query, n = 1000, count = FALSE, verbose = TRUE) {
             total, " records available in total.")
   }
   net2posixlt(df)
+}
+
+# Function to fetch data from API
+access_api <- function(url, verbose, ssl = FALSE, empty = FALSE) {
+  tryCatch({
+    url <- utils::URLencode(iconv(url, to = "UTF-8", toRaw = FALSE))
+    json <- httr::GET(url, httr::accept_json())
+    json <- httr::content(json, as = "text", encoding = "UTF-8")
+    df <- jsonlite::fromJSON(json, flatten = TRUE)
+    if (df$odata.count == 0) {
+      # If no data retrieved, retry again to make sure it's not a connection problem
+      if (empty) stop("The request did not return any data: ",
+                      "Invalid search parameters or rate limit exceeded.")
+      if (verbose) {
+        message("The request did not return any data.")
+        message("Possible common connection problem resolvable by retrying.")
+        message("Retrying...")
+      }
+      Sys.sleep(2)
+      return(access_api(url, verbose, empty = TRUE))
+    }
+    df
+  }, error = function(cnd) {
+    # Retry if error is a common LegCo API connection problem
+    if (grepl("SSL_ERROR_SYSCALL", cnd[[1]]) & !ssl) {
+      if (verbose) {
+        message("Encountered ", cnd)
+        message("Possible common connection problem resolvable by retrying.")
+        message("Retrying...")
+      }
+      Sys.sleep(2)
+      return(access_api(url, verbose, ssl = TRUE))
+    } 
+    stop(cnd)
+  })
 }

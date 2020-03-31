@@ -1,0 +1,33 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#VotingResults&$select=MeetingDate,Subject,VoteResult,SectionCode,RundownID,HansardID,HansardFileURL",
+    "odata.count": "3",
+    "value": [
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Proposed resolution under section 34(4) of the Interpretation and General Clauses Ordinance",
+            "VoteResult": "Passed",
+            "SectionCode": "mbm",
+            "RundownID": 828741,
+            "HansardID": 2451,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00264"
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Report of the Joint Subcommittee on Long-term Care Policy",
+            "VoteResult": "Passed",
+            "SectionCode": "mbm",
+            "RundownID": 828781,
+            "HansardID": 2451,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00304"
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Not forgetting the 4 June incident",
+            "VoteResult": "Negatived",
+            "SectionCode": "mbm",
+            "RundownID": 828826,
+            "HansardID": 2451,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00349"
+        }
+    ]
+}

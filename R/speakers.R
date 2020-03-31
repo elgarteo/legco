@@ -3,15 +3,25 @@
 #' Fetch the basic information of speakers in LegCo council meetings, including
 #' LegCo members, government officials and Secretariat staff.
 #'
-#' @param speaker_id The id of a speaker at the Legislative Council, or a vector
-#'   of ids. If `NULL`, returns all speakers. Defaults to `NULL`.
+#' This function corresponds to the \emph{Speakers} data endpoint of the Hansard
+#' Database.
 #'
-#' @param type The position of a speaker. `'all'` returns all speakers. `'PO'`
-#'   returns public officers. `'LC'` returns key appointment holders and staff
-#'   at LegCo, such as President, Chariman and clerk.`'MB'` returns LegCo
-#'   members. Default to `'all'`.
+#' @param type the position of a speaker. \code{"all"} returns all speakers.
+#'   \code{"PO"} returns public officers. \code{"LC"} returns key appointment
+#'   holders and staff at LegCo, such as President, Chairman and clerk.
+#'   \code{"MB"} returns LegCo members. Default to \code{"all"}.
 #'
-#' @inheritParams hansard
+#' @inherit hansard-db
+#'
+#' @examples
+#' \donttest{
+#' # Fetch a list of all speakers in LegCo council meetings
+#' x <- speakers()
+#' # Fetch a list of all speakers who are LegCo members
+#' x <- speakers(type = "MB")
+#' # Look up the details of a speaker with the id 6
+#' x <- speakers(speaker_id = 6)
+#' }
 #'
 #' @export
 #' 

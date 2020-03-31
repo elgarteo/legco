@@ -2,18 +2,15 @@
 #'
 #' Fetch result of votes made in LegCo council meetings.
 #'
-#' @param result The voting result. `'passed'` returns motions that have been
-#'   passed. `'vetoed'` returns motions that have been vetoed. `'all'` returns
-#'   all motions that has been voted in LegCo. Defaults to `all`.
+#' This function corresponds to the \emph{VotingResults} data endpoint of the
+#' Hansard Database.
 #'
-#' @inheritParams hansard
-#' @inheritParams rundown
-#' @inheritParams subjects
-#' 
-#' @examples 
-#' \dontrun{
+#' @inherit hansard-db
+#'
+#' @examples
+#' \donttest{
 #' # Fetch results of votes conducted during the Council meeting on January 19, 2018
-#' voting_results(hansard_id = 2714)
+#' x <- voting_results(hansard_id = 2714)
 #' }
 #'
 #' @export

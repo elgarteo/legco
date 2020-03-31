@@ -1,0 +1,15 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Speakers",
+    "odata.count": "1",
+    "value": [
+        {
+            "SpeakerID": 6,
+            "NameChi": "行政長官",
+            "NameEng": "CHIEF EXECUTIVE",
+            "Type": "PO",
+            "Initial": "CE",
+            "FirstName": "",
+            "LastName": ""
+        }
+    ]
+}

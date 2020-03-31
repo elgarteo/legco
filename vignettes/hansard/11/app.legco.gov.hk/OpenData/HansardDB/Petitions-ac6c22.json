@@ -1,0 +1,14 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Petitions&$select=MeetingDate,Subject,Speakers,RundownID,HansardID,HansardFileURL",
+    "odata.count": "1",
+    "value": [
+        {
+            "MeetingDate": "2018-01-10T00:00:00",
+            "Subject": "Mr Charles Peter MOK, with the other three Members, will present a petition to this Council",
+            "Speakers": "CHARLES PETER MOK",
+            "RundownID": 781135,
+            "HansardID": 2278,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180110-translate-e.pdf#nameddest=pop01"
+        }
+    ]
+}

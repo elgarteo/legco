@@ -15,24 +15,44 @@ legco_member(
 )
 }
 \arguments{
-\item{member_id}{The id of a LegCo member, or a vector of ids. If `NULL`,
-returns results of all LegCo members. Defaults to `NULL`.}
+\item{member_id}{the id of a LegCo member, or a vector of ids. If
+\code{NULL}, returns results of all LegCo members. Defaults to \code{NULL}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch the basic information of LegCo members.
 }
-\examples{
-\dontrun{
-# Fetch full list of members
-member()
+\details{
+This function corresponds to the \emph{Tmember} data endpoint of the Meeting
+Schedule Database.
+}
+\section{Functions}{
+ Functions of the Meeting Schedule Database: \itemize{
+  \item \code{\link{term}}: LegCo terms \item \code{\link{session}}: LegCo
+  sessions \item \code{\link{committee}}: LegCo committees \item
+  \code{\link{membership}}: Membership of LegCo committees \item
+  \code{\link{member}}: LegCo members \item \code{\link{member_term}}: Terms
+  served by LegCo members \item \code{\link{meeting}}: Meetings of LegCo
+  committees \item \code{\link{meeting_committee}}: Committees of LegCo
+  meetings }
 }
 
+\examples{
+\donttest{
+# Fetch full list of members
+x <- member()
+}
+
+}
+\seealso{
+LegCo API documentation for the Meeting Schedule database:
+  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
 }

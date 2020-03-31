@@ -1,0 +1,78 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Speakers",
+    "odata.count": "8",
+    "value": [
+        {
+            "SpeakerID": 104,
+            "NameChi": "陳志全",
+            "NameEng": "CHAN CHI-CHUEN",
+            "Type": "MB",
+            "Initial": "CCC",
+            "FirstName": "Chi-chuen",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 134,
+            "NameChi": "朱凱廸",
+            "NameEng": "CHU HOI-DICK",
+            "Type": "MB",
+            "Initial": "EC",
+            "FirstName": "Hoi-dick",
+            "LastName": "CHU"
+        },
+        {
+            "SpeakerID": 61,
+            "NameChi": "李國麟",
+            "NameEng": "JOSEPH LEE",
+            "Type": "MB",
+            "Initial": "JL",
+            "FirstName": "Kok-long",
+            "LastName": "LEE"
+        },
+        {
+            "SpeakerID": 136,
+            "NameChi": "何君堯",
+            "NameEng": "JUNIUS HO",
+            "Type": "MB",
+            "Initial": "JH",
+            "FirstName": "Kwan-yiu",
+            "LastName": "HO"
+        },
+        {
+            "SpeakerID": 53,
+            "NameChi": "石禮謙",
+            "NameEng": "ABRAHAM SHEK",
+            "Type": "MB",
+            "Initial": "AS",
+            "FirstName": "Lai-him",
+            "LastName": "SHEK"
+        },
+        {
+            "SpeakerID": 157,
+            "NameChi": "譚文豪",
+            "NameEng": "JEREMY TAM",
+            "Type": "MB",
+            "Initial": "JT",
+            "FirstName": "Man-ho",
+            "LastName": "TAM"
+        },
+        {
+            "SpeakerID": 159,
+            "NameChi": "區諾軒",
+            "NameEng": "AU NOK-HIN",
+            "Type": "MB",
+            "Initial": "ANH",
+            "FirstName": "Nok-hin",
+            "LastName": "AU"
+        },
+        {
+            "SpeakerID": 133,
+            "NameChi": "尹兆堅",
+            "NameEng": "ANDREW WAN",
+            "Type": "MB",
+            "Initial": "AW",
+            "FirstName": "Siu-kin",
+            "LastName": "WAN"
+        }
+    ]
+}

@@ -2,36 +2,16 @@
 #'
 #' Fetch metadata and URLs of the hansard files of LegCo council meetings.
 #'
-#' @param hansard_id The id of a hansard file, or a vector of ids. If `NULL`,
-#'   returns results of all hansard files. Defaults to `NULL`.
+#' This function corresponds to the \emph{Hansard} data endpoint of the Hansard
+#' Database.
 #'
-#' @param lang The language of hansard files to search from. `'en'` returns the
-#'   English version. `'zh'` returns the Traditional Chinese version. Defaults
-#'   to `'en'`.
+#' @inherit hansard-db
 #'
-#' @param from Only fetch results of meetings on or after this date. Accepts
-#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-#'   date with `as.Date()`. Defaults to `'1900-01-01'`.
-#'
-#' @param to Only fetch results of meetings on or before this date.  Accepts
-#'   character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-#'   `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-#'   date with `as.Date()`. Defaults to the current system date.
-#'
-#' @param floor Whether to fetch results from the floor version of the hansard
-#'   files. The floor version is the first presented version of hansard file in
-#'   the original language delivered by the speakers in LegCo. If `TRUE`, the
-#'   language option is ignored. Defaults to `FALSE`.
-#'
-#' @param extra_param Additional query parameters defined in LegCo API. Must
-#'   begin with `'&'`.
-#'
-#' @inheritParams legco_api
-#' 
-#' @examples 
-#' \dontrun{
-#' hansard(from = "2019-02-20", to = "2019-02-20")
+#' @examples
+#' \donttest{
+#' # Fetch metadata of hansard files of all LegCo meetings
+#' # conducted between Feburary 20 to March 20, 2019
+#' x <- hansard(from = "2019-02-20", to = "2019-03-20")
 #' }
 #'
 #' @export

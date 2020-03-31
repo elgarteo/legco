@@ -1,0 +1,61 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/AttendanceDB/$metadata#TAttendance&$select=committee_id,meet_id,meeting_name_english,meeting_name_chinese,meeting_start_date_time,member_id,member_name_english,member_name_chinese,present_absent",
+    "odata.count": "5",
+    "value": [
+        {
+            "committee_id": "2704",
+            "meet_id": 127931,
+            "meeting_name_english": "Meeting of Subcommittee on Issues Relating to Bazaars",
+            "meeting_name_chinese": "墟市事宜小組委員會會議",
+            "meeting_start_date_time": "2017-10-13T08:30:00",
+            "member_id": 750,
+            "member_name_english": "Hon Steven HO Chun-yin",
+            "member_name_chinese": "何俊賢議員",
+            "present_absent": "Absent"
+        },
+        {
+            "committee_id": "2704",
+            "meet_id": 127931,
+            "meeting_name_english": "Meeting of Subcommittee on Issues Relating to Bazaars",
+            "meeting_name_chinese": "墟市事宜小組委員會會議",
+            "meeting_start_date_time": "2017-10-13T08:30:00",
+            "member_id": 759,
+            "member_name_english": "Hon Kenneth LEUNG",
+            "member_name_chinese": "梁繼昌議員",
+            "present_absent": "Absent"
+        },
+        {
+            "committee_id": "2704",
+            "meet_id": 127931,
+            "meeting_name_english": "Meeting of Subcommittee on Issues Relating to Bazaars",
+            "meeting_name_chinese": "墟市事宜小組委員會會議",
+            "meeting_start_date_time": "2017-10-13T08:30:00",
+            "member_id": 776,
+            "member_name_english": "Hon CHU Hoi-dick",
+            "member_name_chinese": "朱凱廸議員",
+            "present_absent": "Absent"
+        },
+        {
+            "committee_id": "2704",
+            "meet_id": 127931,
+            "meeting_name_english": "Meeting of Subcommittee on Issues Relating to Bazaars",
+            "meeting_name_chinese": "墟市事宜小組委員會會議",
+            "meeting_start_date_time": "2017-10-13T08:30:00",
+            "member_id": 779,
+            "member_name_english": "Hon HO Kai-ming",
+            "member_name_chinese": "何啟明議員",
+            "present_absent": "Absent"
+        },
+        {
+            "committee_id": "2704",
+            "meet_id": 127931,
+            "meeting_name_english": "Meeting of Subcommittee on Issues Relating to Bazaars",
+            "meeting_name_chinese": "墟市事宜小組委員會會議",
+            "meeting_start_date_time": "2017-10-13T08:30:00",
+            "member_id": 791,
+            "member_name_english": "Hon LUK Chung-hung",
+            "member_name_chinese": "陸頌雄議員",
+            "present_absent": "Absent"
+        }
+    ]
+}

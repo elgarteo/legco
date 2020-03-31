@@ -2,9 +2,16 @@
 #'
 #' Fetch instances of summoning bell being rung in LegCo council meetings
 #'
-#' @inheritParams hansard
-#' @inheritParams rundown
-#' @inheritParams subjects
+#' This function corresponds to the \emph{SummoningBells} data endpoint of the
+#' Hansard Database.
+#'
+#' @inherit hansard-db
+#'
+#' @examples
+#' \donttest{
+#' # Fetch instances of summoning bell during the Council meeting on January 19, 2018
+#' x <- summoning_bells(hansard_id = 2714)
+#' }
 #'
 #' @export
 #' 

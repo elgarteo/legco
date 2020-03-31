@@ -1,0 +1,20 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#SummoningBells&$select=MeetingDate,SectionCode,RundownID,HansardID,HansardFileURL",
+    "odata.count": "2",
+    "value": [
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "SectionCode": "b2r",
+            "RundownID": 899635,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_BELL_00211"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "SectionCode": "mbm",
+            "RundownID": 899775,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_BELL_00354"
+        }
+    ]
+}

@@ -2,19 +2,24 @@
 #'
 #' Fetch attendance record of LegCo committee meetings
 #'
-#' @param attn The attendance. `'p'` returns members who were present. `'a'`
-#'   returns members who were absent. `'all'` returns all members. Defaults to
-#'   `'all'`.
+#' This function corresponds to the \emph{Tattendance} data endpoint of the
+#' Meeting Attendance Database.
 #'
-#' @inheritParams hansard
-#' @inheritParams meeting
-#' @inheritParams member
-#' @inheritParams committee
-#' 
-#' @examples 
-#' \dontrun{
-#' # Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017
-#' attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", attn = "a")
+#' @param attn the attendance. \code{"p"} returns members who were present.
+#'   \code{"a"} returns members who were absent. \code{"all"} returns all
+#'   members. Defaults to \code{"all"}.
+#'   
+#' @inheritParams hansard-db
+#' @inheritParams meeting_schedule-db
+#'
+#' @seealso LegCo API documentation for the Attendance database:
+#'   \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
+#'
+#' @examples
+#' \donttest{
+#' # Fetch members who were absent from the Subcommittee on Issues
+#' # Relating to Bazaars meetings on October 13, 2017
+#' x <- attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", attn = "a")
 #' }
 #'
 #' @export

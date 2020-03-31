@@ -1,0 +1,30 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Subjects&$select=MeetingDate,Subject,ResumptionOf,SectionCode,RundownID,HansardID",
+    "odata.count": "3",
+    "value": [
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "SECOND READING OF GOVERNMENT BILLS",
+            "ResumptionOf": null,
+            "SectionCode": "b2r",
+            "RundownID": 899626,
+            "HansardID": 2714
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Smoking (Public Health) (Amendment) Bill 2019",
+            "ResumptionOf": null,
+            "SectionCode": "b2r",
+            "RundownID": 899628,
+            "HansardID": 2714
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Trade Marks (Amendment) Bill 2019",
+            "ResumptionOf": null,
+            "SectionCode": "b2r",
+            "RundownID": 899650,
+            "HansardID": 2714
+        }
+    ]
+}

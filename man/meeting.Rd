@@ -32,47 +32,69 @@ legco_meeting(
 )
 }
 \arguments{
-\item{slot_id}{The id of a meeting slot, or a vector of ids. If `NULL`,
-returns all meetings. Defaults to `NULL`.}
+\item{slot_id}{the id of a meeting slot, or a vector of ids. If \code{NULL},
+returns all meetings. Defaults to \code{NULL}.}
 
-\item{meet_id}{The id of a meeting, or a vector of ids. If `NULL`, returns
-all meetings. Useful for matching meeting with records from the Attendance
-Database. Defaults to `NULL`.}
+\item{meet_id}{the id of a meeting, or a vector of ids. If \code{NULL},
+returns all meetings. Useful for matching meeting with records from the
+Attendance Database. Defaults to \code{NULL}.}
 
-\item{from}{Only fetch results of meetings on or after this date. Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{only fetch results of meetings on or after this date. Accepts
+character values in \code{"YYYY-MM-DD"} format, and objects of class
+\code{Date}, \code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else
+that can be coerced to a date with \code{as.Date()}. Defaults to
+\code{"1900-01-01"}.}
 
-\item{to}{Only fetch results of meetings on or before this date.  Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to the current system date.}
+\item{to}{only fetch results of meetings on or before this date. Accepts
+character values in \code{"YYYY-MM-DD"} format, and objects of class
+\code{Date}, \code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else
+that can be coerced to a date with \code{as.Date()}. Defaults to the
+current system date.}
 
-\item{type}{The type of meeting. If `'open'`, returns open meetings. If
-`'closed'`, returns closed meetings. If `'all'`, returns all meetings.
-Defaults to `'all'`.}
+\item{type}{the type of meeting. If \code{"open"}, returns open meetings. If
+\code{"closed"}, returns closed meetings. If \code{"all"}, returns all
+meetings. Defaults to \code{"all"}.}
 
-\item{term_id}{The id of a term, or a vector of ids. If `NULL`, returns
-results of all terms. Defaults to `NULL`.}
+\item{term_id}{the id of a term, or a vector of ids. If \code{NULL}, returns
+results of all terms. Defaults to \code{NULL}.}
 
-\item{n}{The number of record to fetch. Defaults to `1000`.}
+\item{n}{the number of record to fetch. Defaults to \code{1000}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch basic information of LegCo committee meetings.
 }
-\examples{
-\dontrun{
-# Fetch all meeting conducted on March 20, 2019
-meeting(from = "2019-03-20", to = "2019-03-20")
+\details{
+This function corresponds to the \emph{Tmeeting} data endpoint of the Meeting
+Schedule Database.
+}
+\section{Functions}{
+ Functions of the Meeting Schedule Database: \itemize{
+  \item \code{\link{term}}: LegCo terms \item \code{\link{session}}: LegCo
+  sessions \item \code{\link{committee}}: LegCo committees \item
+  \code{\link{membership}}: Membership of LegCo committees \item
+  \code{\link{member}}: LegCo members \item \code{\link{member_term}}: Terms
+  served by LegCo members \item \code{\link{meeting}}: Meetings of LegCo
+  committees \item \code{\link{meeting_committee}}: Committees of LegCo
+  meetings }
 }
 
+\examples{
+\donttest{
+# Fetch all meeting conducted on March 20, 2019
+x <- meeting(from = "2019-03-20", to = "2019-03-20")
+}
+
+}
+\seealso{
+LegCo API documentation for the Meeting Schedule database:
+  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
 }

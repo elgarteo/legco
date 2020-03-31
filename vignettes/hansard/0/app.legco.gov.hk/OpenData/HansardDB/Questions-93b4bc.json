@@ -1,0 +1,402 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Questions&$select=MeetingDate,QuestionType,Subject,Speaker,SpeakerID,RundownID,HansardFileURL",
+    "odata.count": "44",
+    "value": [
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Remuneration packages for disciplined services staff",
+            "Speaker": "ELIZABETH QUAT",
+            "SpeakerID": 119,
+            "RundownID": 906592,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=orq01"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Non-eligible persons defaulting on payment of medical fees",
+            "Speaker": "GARY FAN",
+            "SpeakerID": 101,
+            "RundownID": 906616,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=orq02"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Increasing the number of parking spaces",
+            "Speaker": "VINCENT CHENG",
+            "SpeakerID": 160,
+            "RundownID": 906639,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=orq03"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Preparation for the development of the fifth generation mobile network and services",
+            "Speaker": "CHARLES PETER MOK",
+            "SpeakerID": 103,
+            "RundownID": 906659,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=orq04"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Making good use of government properties and lands",
+            "Speaker": "LAU KWOK-FAN",
+            "SpeakerID": 153,
+            "RundownID": 906676,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=orq05"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Redevelopment of old areas",
+            "Speaker": "CHAN HAN-PAN",
+            "SpeakerID": 105,
+            "RundownID": 906700,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=orq06"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Travel agents switching to use the E-levy System",
+            "Speaker": "YIU SI-WING",
+            "SpeakerID": 100,
+            "RundownID": 906715,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq07"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Manpower situation of the elderly service sector",
+            "Speaker": "KWOK WAI-KEUNG",
+            "SpeakerID": 112,
+            "RundownID": 906718,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq08"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Illegal parking",
+            "Speaker": "MICHAEL TIEN",
+            "SpeakerID": 94,
+            "RundownID": 906721,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq09"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Persons in custody applying for early release",
+            "Speaker": "SHIU KA-CHUN",
+            "SpeakerID": 141,
+            "RundownID": 906724,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq10"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "An incident occurred in the airport restricted area",
+            "Speaker": "CHU HOI-DICK",
+            "SpeakerID": 134,
+            "RundownID": 906727,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq11"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Use of public health care services by persons who were issued the Hong Kong identity cards in certain years",
+            "Speaker": "PIERRE CHAN",
+            "SpeakerID": 145,
+            "RundownID": 906730,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq12"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Environmental hygiene problems caused by wild birds",
+            "Speaker": "REGINA IP",
+            "SpeakerID": 83,
+            "RundownID": 906733,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq13"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Manpower situation of the construction industry",
+            "Speaker": "HO KAI-MING",
+            "SpeakerID": 137,
+            "RundownID": 906736,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq14"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Financial assistance for patients with permanent stomata",
+            "Speaker": "JOSEPH LEE",
+            "SpeakerID": 61,
+            "RundownID": 906739,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq15"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Regulation of financial technology applications",
+            "Speaker": "DENNIS KWOK",
+            "SpeakerID": 113,
+            "RundownID": 906742,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq16"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Kwun Tong Typhoon Shelter",
+            "Speaker": "PAUL TSE",
+            "SpeakerID": 85,
+            "RundownID": 906745,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq17"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Staffing issues relating to tree management and landscape work",
+            "Speaker": "TONY TSE",
+            "SpeakerID": 127,
+            "RundownID": 906748,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq18"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Making good use and combating abuses of public rental housing resources",
+            "Speaker": "ANDREW WAN",
+            "SpeakerID": 133,
+            "RundownID": 906751,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq19"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Regulation of virtual asset investment activities",
+            "Speaker": "WU CHI-WAI",
+            "SpeakerID": 99,
+            "RundownID": 906754,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq20"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Handling of claimants",
+            "Speaker": "JIMMY NG",
+            "SpeakerID": 135,
+            "RundownID": 906757,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq21"
+        },
+        {
+            "MeetingDate": "2019-04-03T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Subsidized sale flats",
+            "Speaker": "CHAN HAK-KAN",
+            "SpeakerID": 73,
+            "RundownID": 906760,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190403-translate-e.pdf#nameddest=wrq22"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Imposition of tourism taxes",
+            "Speaker": "GARY FAN",
+            "SpeakerID": 101,
+            "RundownID": 907456,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq01"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Unsold units in completed private residential projects",
+            "Speaker": "ABRAHAM SHEK",
+            "SpeakerID": 53,
+            "RundownID": 907459,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq02"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Raising the penalties under occupational safety and health legislation",
+            "Speaker": "SHIU KA-FAI",
+            "SpeakerID": 140,
+            "RundownID": 907462,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq03"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Trade between Hong Kong and Taiwan",
+            "Speaker": "WONG TING-KWONG",
+            "SpeakerID": 65,
+            "RundownID": 907465,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq04"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Vehicle registration and licensing",
+            "Speaker": "HUI CHI-FUNG",
+            "SpeakerID": 148,
+            "RundownID": 907468,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq05"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Mental health of principals and teachers",
+            "Speaker": "MICHAEL TIEN",
+            "SpeakerID": 94,
+            "RundownID": 907471,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq06"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Default on payment of wages by works contractors of the Hong Kong Housing Authority",
+            "Speaker": "FERNANDO CHEUNG",
+            "SpeakerID": 115,
+            "RundownID": 907474,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq07"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Lifeguards employed by the Leisure and Cultural Services Department",
+            "Speaker": "MA FUNG-KWOK",
+            "SpeakerID": 102,
+            "RundownID": 907477,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq08"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Performing first aid on persons suffering from sudden cardiac arrest",
+            "Speaker": "KENNETH LAU",
+            "SpeakerID": 154,
+            "RundownID": 907480,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq09"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Vaccination for children",
+            "Speaker": "PIERRE CHAN",
+            "SpeakerID": 145,
+            "RundownID": 907483,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq10"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Statistics on the services of public hospitals",
+            "Speaker": "REGINA IP",
+            "SpeakerID": 83,
+            "RundownID": 907486,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq11"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Offering index funds as investment choices for Mandatory Provident Fund scheme members",
+            "Speaker": "HO KAI-MING",
+            "SpeakerID": 137,
+            "RundownID": 907489,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq12"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Circulation and supply of as well as demand for public niches",
+            "Speaker": "JEREMY TAM",
+            "SpeakerID": 157,
+            "RundownID": 907492,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq13"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Introduction of a mechanism for class actions",
+            "Speaker": "DENNIS KWOK",
+            "SpeakerID": 113,
+            "RundownID": 907495,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq14"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Implementation of the Electronic Identity System",
+            "Speaker": "CHARLES PETER MOK",
+            "SpeakerID": 103,
+            "RundownID": 907498,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq15"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Encourage saving up for retirement",
+            "Speaker": "PAUL TSE",
+            "SpeakerID": 85,
+            "RundownID": 907501,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq16"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Implementation of Railway Development Strategy 2014",
+            "Speaker": "HOLDEN CHOW",
+            "SpeakerID": 139,
+            "RundownID": 907504,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq17"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Microplastics and waste plastics causing environmental problems",
+            "Speaker": "ELIZABETH QUAT",
+            "SpeakerID": 119,
+            "RundownID": 907507,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq18"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Regulation of money lenders",
+            "Speaker": "KENNETH LEUNG",
+            "SpeakerID": 109,
+            "RundownID": 907510,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq19"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Waiting time for the services of specialist outpatient clinics and ambulatory diagnostic services in public hospitals",
+            "Speaker": "WU CHI-WAI",
+            "SpeakerID": 99,
+            "RundownID": 907513,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq20"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Issuance of full Hong Kong driving licences and International Driving Permits",
+            "Speaker": "ANDREW WAN",
+            "SpeakerID": 133,
+            "RundownID": 907516,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq21"
+        },
+        {
+            "MeetingDate": "2019-04-17T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Mandatory Provident Fund scheme members consolidating their accounts",
+            "Speaker": "JIMMY NG",
+            "SpeakerID": 135,
+            "RundownID": 907519,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190417-translate-e.pdf#nameddest=wrq22"
+        }
+    ]
+}

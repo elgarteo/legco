@@ -8,9 +8,11 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, echo = FALSE}
+```{r include=FALSE}
 knitr::opts_chunk$set(message = FALSE)
 library(legco)
+library(httptest)
+start_vignette("voting")
 ```
 
 ## Introduction
@@ -22,7 +24,7 @@ For more details of the database, see <https://www.legco.gov.hk/odata/english/vr
 
 ### Key Identifiers
 
-Here are the key identifies that is useful for locating the neccessary data from the Attendance 
+Here are the key identifies that is useful for locating the necessary data from the Attendance 
 Database:
 
 * `VoteTime` is the date and time when a vote is conducted. The lack of a designated unique identifier
@@ -50,6 +52,9 @@ voting_record(committee = "Council Meeting",
               from = "2015-06-18", to = "2015-06-18",
               vote = "absent", count = TRUE)
 ```
+```{r echo=FALSE}
+Sys.sleep(2)
+```
 
 ---
 
@@ -58,7 +63,7 @@ This database is accessible with the following function:
 ## voting_record()
 
 `voting_record()` fetches the voting record of one or more Council, the House Committee
-and the Finance Committeeand its subcomittees meeting(s), or the attendance record of one or more 
+and the Finance Committee and its subcomittees meeting(s), or the attendance record of one or more 
 LegCo member(s) in these meetings. Note that this function takes none of `CommitteeID`, `SpeakerID`
 or `MemberID` as a filtering parameter. Instead, only the full English committee name and the full
 Chinese name of LegCo members can be used.
@@ -66,11 +71,23 @@ Chinese name of LegCo members can be used.
 ```{r }
 # Fetch how members voted the motion on "Abolishing the MPF Offsetting Mechanism" on November 11, 2016
 v <- voting_record(committee = "Council Meeting",
-                   from = "2016-11-16T13:51:53",
-                   to = "2016-11-16T13:51:53")
+                   from = "2016-11-16 13:51:53",
+                   to = "2016-11-16 13:51:53")
 head(v)
-
+```
+```{r echo=FALSE}
+Sys.sleep(2)
+```
+```{r eval=FALSE}
 # Fetch the votes that Hon Abraham Shek were abstained from
-v <- voting_record(name_ch = "石禮謙", vote = "abstain")
+v <- voting_record(name_en = "Abraham SHEK", vote = "abstain")
 head(v)
+```
+```{r echo=FALSE}
+# CRAN's build server does not support Chinese characters
+v <- voting_record(name_en = "Abraham SHEK", vote = "abstain", to = "2020-03-27")
+head(v)
+```
+```{r include=FALSE}
+end_vignette()
 ```

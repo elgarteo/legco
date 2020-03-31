@@ -20,24 +20,44 @@ legco_member_term(
 )
 }
 \arguments{
-\item{member_id}{The id of a LegCo member, or a vector of ids. If `NULL`,
-returns results of all LegCo members. Defaults to `NULL`.}
+\item{member_id}{the id of a LegCo member, or a vector of ids. If
+\code{NULL}, returns results of all LegCo members. Defaults to \code{NULL}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch the serving terms in Term ID of LegCo members
 }
-\examples{
-\dontrun{
-#Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
-member_term(id = c(273, 924))
+\details{
+This function corresponds to the \emph{Tmember_term} data endpoint of the
+Meeting Schedule Database.
+}
+\section{Functions}{
+ Functions of the Meeting Schedule Database: \itemize{
+  \item \code{\link{term}}: LegCo terms \item \code{\link{session}}: LegCo
+  sessions \item \code{\link{committee}}: LegCo committees \item
+  \code{\link{membership}}: Membership of LegCo committees \item
+  \code{\link{member}}: LegCo members \item \code{\link{member_term}}: Terms
+  served by LegCo members \item \code{\link{meeting}}: Meetings of LegCo
+  committees \item \code{\link{meeting_committee}}: Committees of LegCo
+  meetings }
 }
 
+\examples{
+\donttest{
+#Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
+x <- member_term(member_id = c(273, 924))
+}
+
+}
+\seealso{
+LegCo API documentation for the Meeting Schedule database:
+  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
 }

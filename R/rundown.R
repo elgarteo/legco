@@ -2,19 +2,16 @@
 #'
 #' Fetch the rundown from hansard files of LegCo council meetings.
 #'
-#' @param rundown_id The id of a rundown, or a vector of ids. If `NULL`, returns
-#'   results of all rundowns. Defaults to `NULL`.
+#' This function corresponds to the \emph{Rundown} data endpoint of the Hansard
+#' Database.
 #'
-#' @param bookmark_name The bookmark name of the rundown, or a vector of names.
-#'   Defaults to `NULL`.
-#'
-#' @inheritParams hansard
-#' @inheritParams speakers
+#' @inherit hansard-db
 #'
 #' @examples
-#' \dontrun{
-#' # Fetch records of proceedings of the second reading of Smoking (Public Health) (Amendment) Bill 2019
-#' rundown(id = 899628:899649)
+#' \donttest{
+#' # Fetch records of proceedings of the second reading of
+#' # Smoking (Public Health) (Amendment) Bill 2019
+#' x <- rundown(id = 899628:899649)
 #' }
 #'
 #' @export

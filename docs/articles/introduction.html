@@ -6,13 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Introduction to legco • legco</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to legco">
-<meta property="og:description" content="">
-<meta name="twitter:card" content="summary">
+<meta property="og:description" content="legco">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -24,7 +24,7 @@
   gtag('config', 'UA-143765255-1');
 </script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -37,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
       </span>
     </div>
 
@@ -60,13 +60,13 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/attn.html">Attendance Database</a>
-    </li>
-    <li>
       <a href="../articles/bills.html">Bills Database</a>
     </li>
     <li>
       <a href="../articles/hansard.html">Hansard Database</a>
+    </li>
+    <li>
+      <a href="../articles/attn.html">Meeting Attendance Database</a>
     </li>
     <li>
       <a href="../articles/schedule.html">Meeting Schedule Database</a>
@@ -103,9 +103,9 @@
       </header><script src="introduction_files/header-attrs-2.1/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Introduction to legco</h1>
+      <h1 data-toc-skip>Introduction to legco</h1>
             
-            <h4 class="date">2020-03-10</h4>
+            <h4 class="date">2020-03-31</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/master/vignettes/introduction.Rmd"><code>vignettes/introduction.Rmd</code></a></small>
       <div class="hidden name"><code>introduction.Rmd</code></div>
@@ -114,30 +114,20 @@
 
     
     
-<p><code>legco</code> is an R package to fetch data from the Hong Kong Legislative Council (LegCo) APIs. It provides easy access to LegCo’s open data in an intergrated manner without having to dig deep into the structures and parameters of the APIs. Each function corresponds to a data endpoint of the APIs. Data is retrieved in json format and presented in a dataframe.</p>
+<p><code>legco</code> is an R package to fetch data from the Hong Kong Legislative Council (LegCo) API. It provides easy access to LegCo’s open data in an integrated manner without having to dig deep into the structures and parameters of the API. Each function corresponds to a data endpoint of the API. Data is retrieved in json format and presented in a dataframe.</p>
 <div id="installing-legco" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installing-legco" class="anchor"></a>Installing legco</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>devtools<span class="op">::</span><span class="kw"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"elgarteo/legco"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)
+<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"elgarteo/legco"</span>)</pre></body></html></div>
 <p>And to load it before every use:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(legco)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">legco</span>)</pre></body></html></div>
 </div>
-<div id="understanding-the-legco-apis" class="section level2">
+<div id="understanding-the-legco-api" class="section level2">
 <h2 class="hasAnchor">
-<a href="#understanding-the-legco-apis" class="anchor"></a>Understanding the LegCo APIs</h2>
-<p>The LegCo APIs consist of different databases with seperate structures and identifiers, and each database has its own API. The functions in this package correspond to the various data endpoints of these APIs. The databases supported by this package and the associating functions are as follow.</p>
+<a href="#understanding-the-legco-api" class="anchor"></a>Understanding the LegCo API</h2>
+<p>The LegCo API consists of different databases with separate structures and identifiers. The functions in this package correspond to the various data endpoints of these databases. The databases supported by this package and the associating functions are as follow.</p>
 <ol style="list-style-type: decimal">
-<li>
-<p><strong>Attendance Database</strong></p>
-<p>This database contains the attendance record of Council and committee open meetings since the sixth term.</p>
-<p>This database is accessible with the following function:</p>
-<ul>
-<li>
-<code><a href="../reference/attendance.html">attendance()</a></code> fetches the attendance of members in Council and committee meetings.</li>
-</ul>
-<p>See <a href="./attn.html">here</a> for more information of this database.</p>
-</li>
 <li>
 <p><strong>Bills Database</strong></p>
 <p>This database contains key information of all the bills that have been presented in LegCo since 1906. This database is accessible with the following function:</p>
@@ -145,7 +135,7 @@
 <li>
 <code><a href="../reference/all_bills.html">all_bills()</a></code> fetches the information of bills that have gone through LegCo.</li>
 </ul>
-<p>Comapred to <code><a href="../reference/bills.html">bills()</a></code> of the Hansard Database, <code><a href="../reference/all_bills.html">all_bills()</a></code> provides much more comprehensive information of bills, including all key dates and the proposer.</p>
+<p>Compared to <code><a href="../reference/bills.html">bills()</a></code> of the Hansard Database, <code><a href="../reference/all_bills.html">all_bills()</a></code> provides much more comprehensive information of bills, including all key dates and the proposer.</p>
 <p>See <a href="./bills.html">here</a> for more information of this database.</p>
 </li>
 <li>
@@ -173,7 +163,7 @@
 <li>
 <code><a href="../reference/addresses.html">addresses()</a></code> fetches addresses made by members or government officials while presenting papers to the Council.</li>
 <li>
-<code><a href="../reference/statements.html">statements()</a></code> fetches statments made by government officials in Council meetings.</li>
+<code><a href="../reference/statements.html">statements()</a></code> fetches statements made by government officials in Council meetings.</li>
 <li>
 <code><a href="../reference/voting_results.html">voting_results()</a></code> fetches the results of votes conducted in Council meetings.</li>
 <li>
@@ -181,6 +171,16 @@
 </ul>
 <p>When using in combination, these functions are essentially hansard files crawler.</p>
 <p>See <a href="./hansard.html">here</a> for more information of this database.</p>
+</li>
+<li>
+<p><strong>Meeting Attendance Database</strong></p>
+<p>This database contains the attendance record of Council and committee open meetings since the sixth term.</p>
+<p>This database is accessible with the following function:</p>
+<ul>
+<li>
+<code><a href="../reference/attendance.html">attendance()</a></code> fetches the attendance of members in Council and committee meetings.</li>
+</ul>
+<p>See <a href="./attn.html">here</a> for more information of this database.</p>
 </li>
 <li>
 <p><strong>Meeting Schedule Database</strong></p>
@@ -218,7 +218,7 @@
 </li>
 </ol>
 <hr>
-<p>A generic function <code><a href="../reference/legco_api.html">legco_api()</a></code> is available for access to other databases and endpoints of the LegCo APIs that are not specified here.</p>
+<p>A generic function <code><a href="../reference/legco_api.html">legco_api()</a></code> is available for access to other databases and endpoints of the LegCo API that are not specified here.</p>
 <p>All functions can also be accessed with the prefix <code>legco_</code>, e.g. <code><a href="../reference/speakers.html">legco_speakers()</a></code> and <code><a href="../reference/speakers.html">speakers()</a></code> return the same result.</p>
 </div>
 <div id="api-limits" class="section level2">
@@ -227,9 +227,8 @@
 <div id="rate-limit" class="section level3">
 <h3 class="hasAnchor">
 <a href="#rate-limit" class="anchor"></a>Rate Limit</h3>
-<p>LegCo APIs have a rate limit of approximately 1000 requests per IP per hour. Once the limit is reached, you will not be able to retrieve any data for awhile. If you run into the following error message while pretty sure you have entered the correct parameters, you have probably reached the limit:</p>
-<pre><code>## Retrieving records...</code></pre>
-<pre><code>## Error in legco_api("hansard", query, 1000, count, verbose): The request did not return any data. Please check your parameters.</code></pre>
+<p>LegCo API has a rate limit of approximately 1000 requests per IP per hour. Once the limit is reached, you will not be able to retrieve any data for awhile. If you run into the following error message while pretty sure you have entered the correct parameters, you have probably reached the limit:</p>
+<pre><code>## Error in doTryCatch(return(expr), name, parentenv, handler): The request did not return any data: Invalid search parameters or rate limit exceeded.</code></pre>
 </div>
 <div id="node-count-limit" class="section level3">
 <h3 class="hasAnchor">
@@ -238,30 +237,41 @@
 <pre><code>## Error in legco_api("hansard", query, 1000, count, verbose): Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
 <p>If you run into the error message above, you need to break it down to multiple smaller requests, like <a href="#examples">one of the examples below</a>.</p>
 <p>Note that numeric filtering conditions that are sequential are not subjected to this limit:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># A request with sequential numeric filtering conditions</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">speaker_id =</span> x)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="co"># A request with sequential numeric filtering conditions</span>
+<span class="no">x</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">1</span>:<span class="fl">50</span>)
+<span class="fu"><a href="../reference/speakers.html">speakers</a></span>(<span class="kw">speaker_id</span> <span class="kw">=</span> <span class="no">x</span>)</pre></body></html></div>
 <p>The code above will execute just fine without reaching the node count limit even though it effectively contains 50 filtering conditions.</p>
+</div>
+<div id="common-connection-problems" class="section level3">
+<h3 class="hasAnchor">
+<a href="#common-connection-problems" class="anchor"></a>Common Connection Problems</h3>
+<p>It is common for the connection to the LegCo API to experience SSL error from time to time, especially during repeated requests. This can usually be resolved simply by retrying. This package automatically retries the request once when an SSL error occurs with the following messages:</p>
+<pre><code>## Encountered Error in open.connection(con, "rb"): LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to app.legco.gov.hk:443</code></pre>
+<pre><code>## Possible common connection problem resolvable by retrying.</code></pre>
+<pre><code>## Retrying...</code></pre>
+<p>If the same error happens again after retrying, the process will be terminated with an error message. In this case, the cause of the problem is likely to be a genuine SSL error.</p>
+<p>Another common problem is that the LegCo API sometimes returns an empty json file when it is not supposed to. Again, this can usually be resolved by retrying. This package automatically retries the request once to make sure that an invalid search query or rate limit is not the cause of the problem. The following messages will be shown if this problem occurs:</p>
+<p>If the API returns an empty result again, the process will be terminated with an error message. In this case, the cause is likely to be invalid search parameters or that you have exceeded the rate limit (see <a href="#rate-limit">here</a>).</p>
 </div>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p>The following code shows all the Council meetings held from May 1, 2018 to May 31, 2018.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw"><a href="../reference/hansard.html">hansard</a></span>(<span class="dt">from =</span> <span class="st">"2018-05-01"</span>, <span class="dt">to =</span> <span class="st">"2018-05-31"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="fu"><a href="../reference/hansard.html">hansard</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="st">"2018-05-01"</span>, <span class="kw">to</span> <span class="kw">=</span> <span class="st">"2018-05-31"</span>)</pre></body></html></div>
 <pre><code>##    HansardID         MeetingDate          AgendaDate isCEQandA isCEQT
-## 1       2407 2018-05-02T00:00:00 2018-05-02T00:00:00         0      0
-## 2       2526 2018-05-03T00:00:00 2018-05-02T00:00:00         0      0
-## 3       2405 2018-05-03T00:00:00 2018-05-03T00:00:00         1      0
-## 4       2418 2018-05-09T00:00:00 2018-05-09T00:00:00         0      0
-## 5       2419 2018-05-10T00:00:00 2018-05-09T00:00:00         0      0
-## 6       2425 2018-05-16T00:00:00 2018-05-16T00:00:00         0      0
-## 7       2434 2018-05-17T00:00:00 2018-05-16T00:00:00         0      0
-## 8       2443 2018-05-23T00:00:00 2018-05-23T00:00:00         0      1
-## 9       2451 2018-05-23T00:00:00 2018-05-23T00:00:00         0      0
-## 10      2450 2018-05-24T00:00:00 2018-05-23T00:00:00         0      0
-## 11      2541 2018-05-30T00:00:00 2018-05-30T00:00:00         0      0
-## 12      2462 2018-05-31T00:00:00 2018-05-30T00:00:00         0      0
+## 1       2407 2018-05-02 00:00:00 2018-05-02 00:00:00         0      0
+## 2       2526 2018-05-03 00:00:00 2018-05-02 00:00:00         0      0
+## 3       2405 2018-05-03 00:00:00 2018-05-03 00:00:00         1      0
+## 4       2418 2018-05-09 00:00:00 2018-05-09 00:00:00         0      0
+## 5       2419 2018-05-10 00:00:00 2018-05-09 00:00:00         0      0
+## 6       2425 2018-05-16 00:00:00 2018-05-16 00:00:00         0      0
+## 7       2434 2018-05-17 00:00:00 2018-05-16 00:00:00         0      0
+## 8       2443 2018-05-23 00:00:00 2018-05-23 00:00:00         0      1
+## 9       2451 2018-05-23 00:00:00 2018-05-23 00:00:00         0      0
+## 10      2450 2018-05-24 00:00:00 2018-05-23 00:00:00         0      0
+## 11      2541 2018-05-30 00:00:00 2018-05-30 00:00:00         0      0
+## 12      2462 2018-05-31 00:00:00 2018-05-30 00:00:00         0      0
 ##                                                                          HansardFileURL
 ## 1   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180502-translate-e.pdf
 ## 2   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180503-translate-e.pdf
@@ -276,44 +286,44 @@
 ## 11  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180530-translate-e.pdf
 ## 12  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180531-translate-e.pdf</code></pre>
 <p>To fetch the items on the agenda of the meeting on May 23, 2018:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw"><a href="../reference/subjects.html">subjects</a></span>(<span class="dt">hansard_id =</span> <span class="dv">2451</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="fu"><a href="../reference/subjects.html">subjects</a></span>(<span class="kw">hansard_id</span> <span class="kw">=</span> <span class="fl">2451</span>)</pre></body></html></div>
 <pre><code>##            MeetingDate
-## 1  2018-05-23T00:00:00
-## 2  2018-05-23T00:00:00
-## 3  2018-05-23T00:00:00
-## 4  2018-05-23T00:00:00
-## 5  2018-05-23T00:00:00
-## 6  2018-05-23T00:00:00
-## 7  2018-05-23T00:00:00
-## 8  2018-05-23T00:00:00
-## 9  2018-05-23T00:00:00
-## 10 2018-05-23T00:00:00
-## 11 2018-05-23T00:00:00
-## 12 2018-05-23T00:00:00
-## 13 2018-05-23T00:00:00
-## 14 2018-05-23T00:00:00
-## 15 2018-05-23T00:00:00
-## 16 2018-05-23T00:00:00
-## 17 2018-05-23T00:00:00
-## 18 2018-05-23T00:00:00
-## 19 2018-05-23T00:00:00
-## 20 2018-05-23T00:00:00
-## 21 2018-05-23T00:00:00
-## 22 2018-05-23T00:00:00
-## 23 2018-05-23T00:00:00
-## 24 2018-05-23T00:00:00
-## 25 2018-05-23T00:00:00
-## 26 2018-05-23T00:00:00
-## 27 2018-05-23T00:00:00
-## 28 2018-05-23T00:00:00
-## 29 2018-05-23T00:00:00
-## 30 2018-05-23T00:00:00
-## 31 2018-05-23T00:00:00
-## 32 2018-05-23T00:00:00
-## 33 2018-05-23T00:00:00
-## 34 2018-05-23T00:00:00
-## 35 2018-05-23T00:00:00
-## 36 2018-05-23T00:00:00
+## 1  2018-05-23 00:00:00
+## 2  2018-05-23 00:00:00
+## 3  2018-05-23 00:00:00
+## 4  2018-05-23 00:00:00
+## 5  2018-05-23 00:00:00
+## 6  2018-05-23 00:00:00
+## 7  2018-05-23 00:00:00
+## 8  2018-05-23 00:00:00
+## 9  2018-05-23 00:00:00
+## 10 2018-05-23 00:00:00
+## 11 2018-05-23 00:00:00
+## 12 2018-05-23 00:00:00
+## 13 2018-05-23 00:00:00
+## 14 2018-05-23 00:00:00
+## 15 2018-05-23 00:00:00
+## 16 2018-05-23 00:00:00
+## 17 2018-05-23 00:00:00
+## 18 2018-05-23 00:00:00
+## 19 2018-05-23 00:00:00
+## 20 2018-05-23 00:00:00
+## 21 2018-05-23 00:00:00
+## 22 2018-05-23 00:00:00
+## 23 2018-05-23 00:00:00
+## 24 2018-05-23 00:00:00
+## 25 2018-05-23 00:00:00
+## 26 2018-05-23 00:00:00
+## 27 2018-05-23 00:00:00
+## 28 2018-05-23 00:00:00
+## 29 2018-05-23 00:00:00
+## 30 2018-05-23 00:00:00
+## 31 2018-05-23 00:00:00
+## 32 2018-05-23 00:00:00
+## 33 2018-05-23 00:00:00
+## 34 2018-05-23 00:00:00
+## 35 2018-05-23 00:00:00
+## 36 2018-05-23 00:00:00
 ##                                                                                        Subject
 ## 1                                                                            MEETING COMMENCED
 ## 2                                                                    ORAL ANSWERS TO QUESTIONS
@@ -389,29 +399,29 @@
 ## 35           NA         mbm    828783      2451
 ## 36           NA         som    828827      2451</code></pre>
 <p>In this example, we will look into the motion <em>Not forgetting the 4 June incident</em>.</p>
-<p>The section codes indicate the type of the business. For exmaple, the section code “mbm” of the <em>Not forgetting the 4 June incident</em> means that it is a member’s motion:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>legco_section_type[legco_section_type<span class="op">$</span>SectionCode <span class="op">==</span><span class="st"> "mbm"</span>, ]</span></code></pre></div>
+<p>The section codes indicate the type of the business. For example, the section code “mbm” of the <em>Not forgetting the 4 June incident</em> means that it is a member’s motion:</p>
+<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="no">legco_section_type</span>[<span class="no">legco_section_type</span>$<span class="no">SectionCode</span> <span class="kw">==</span> <span class="st">"mbm"</span>, ]</pre></body></html></div>
 <pre><code>##    SectionCode          NameEng  NameChi
 ## 44         mbm Members' motions 議員議案</code></pre>
-<p>The RundownID indicates the location of the first paragraph of the matter concerned in the hansard file. In other words, paragraphs of RundownID between 828783 and 828826 (one RundownID prior to the next item on the agenda) are the records of the matter the <em>Not forgetting the 4 june incident</em> during the meeting. The full text of these paragraphs can be fetched by:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>w &lt;-<span class="st"> </span><span class="kw"><a href="../reference/rundown.html">rundown</a></span>(<span class="dt">rundown_id =</span> <span class="dv">828783</span><span class="op">:</span><span class="dv">828826</span>)</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="co"># Order by RundownID, i.e. chronological order</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a>w &lt;-<span class="st"> </span>w[<span class="kw"><a href="https://rdrr.io/r/base/order.html">order</a></span>(w<span class="op">$</span>RundownID), ]</span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="kw"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span>(w) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(w)</span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>w<span class="op">$</span>Content[<span class="dv">41</span><span class="op">:</span><span class="dv">42</span>]</span></code></pre></div>
+<p>The RundownID indicates the location of the first paragraph of the matter concerned in the hansard file. In other words, paragraphs of RundownID between 828783 and 828826 (one RundownID prior to the next item on the agenda) are the records of the matter the <em>Not forgetting the 4 June incident</em> during the meeting. The full text of these paragraphs can be fetched by:</p>
+<div class="sourceCode" id="cb15"><html><body><pre class="r"><span class="no">w</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/rundown.html">rundown</a></span>(<span class="kw">rundown_id</span> <span class="kw">=</span> <span class="fl">828783</span>:<span class="fl">828826</span>)
+<span class="co"># Order by RundownID, i.e. chronological order</span>
+<span class="no">w</span> <span class="kw">&lt;-</span> <span class="no">w</span>[<span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span>(<span class="no">w</span>$<span class="no">RundownID</span>), ]
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span>(<span class="no">w</span>) <span class="kw">&lt;-</span> <span class="fl">1</span>:<span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(<span class="no">w</span>)
+<span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span>
+<span class="no">w</span>$<span class="no">Content</span>[<span class="fl">41</span>:<span class="fl">42</span>]</pre></body></html></div>
 <pre><code>## [1] "PRESIDENT (in Cantonese): Will Members please proceed to vote."                                                  
 ## [2] "PRESIDENT (in Cantonese): Mr Abraham SHEK, do you wish to cast your vote?(Mr Abraham SHEK did not cast any vote)"</code></pre>
 <p>To check which members have spoken about the motion and to look up some of their names:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>x &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/unique.html">unique</a></span>(w<span class="op">$</span>SpeakerID[<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span>(w<span class="op">$</span>SpeakerID)])</span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">id =</span> x)</span></code></pre></div>
-<pre><code>## Error in speakers(id = x): unused argument (id = x)</code></pre>
-<p>The code above produces 27 filtering conditions which reahces the node count limit. If you need have parameters longer than that, break them down into multiple requests:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>y1 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">speaker_id =</span> x[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span>
-<span id="cb17-2"><a href="#cb17-2"></a>y2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/speakers.html">speakers</a></span>(<span class="dt">speaker_id =</span> x[<span class="dv">20</span><span class="op">:</span><span class="dv">27</span>])</span>
-<span id="cb17-3"><a href="#cb17-3"></a>y &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span>(y1, y2)</span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="co"># Show members who have spoken about this motion</span></span>
-<span id="cb17-5"><a href="#cb17-5"></a><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(y[y<span class="op">$</span>Type <span class="op">==</span><span class="st"> "MB"</span>, ])</span></code></pre></div>
+<div class="sourceCode" id="cb17"><html><body><pre class="r"><span class="no">x</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span>(<span class="no">w</span>$<span class="no">SpeakerID</span>[!<span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span>(<span class="no">w</span>$<span class="no">SpeakerID</span>)])
+<span class="fu"><a href="../reference/speakers.html">speakers</a></span>(<span class="kw">speaker_id</span> <span class="kw">=</span> <span class="no">x</span>)</pre></body></html></div>
+<pre><code>## Error in legco_api("hansard", query, 1000, count, verbose): Parameters too long. Please shorten your parameters and break down into multiple requests.</code></pre>
+<p>The code above produces 27 filtering conditions which exceed the node count limit. If you need have parameters longer than that, break them down into multiple requests:</p>
+<div class="sourceCode" id="cb19"><html><body><pre class="r"><span class="no">y1</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span>(<span class="kw">speaker_id</span> <span class="kw">=</span> <span class="no">x</span>[<span class="fl">1</span>:<span class="fl">19</span>])
+<span class="no">y2</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span>(<span class="kw">speaker_id</span> <span class="kw">=</span> <span class="no">x</span>[<span class="fl">20</span>:<span class="fl">27</span>])
+<span class="no">y</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span>(<span class="no">y1</span>, <span class="no">y2</span>)
+<span class="co"># Show members who have spoken about this motion</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">y</span>[<span class="no">y</span>$<span class="no">Type</span> <span class="kw">==</span> <span class="st">"MB"</span>, ])</pre></body></html></div>
 <pre><code>##   SpeakerID NameChi         NameEng Type Initial  FirstName LastName
 ## 2       138  林卓廷  LAM CHEUK-TING   MB     LCT Cheuk-ting      LAM
 ## 3       148  許智峯    HUI CHI-FUNG   MB     HCF   Chi-fung      HUI
@@ -420,17 +430,17 @@
 ## 6       141  邵家臻    SHIU KA-CHUN   MB     SKC    Ka-chun     SHIU
 ## 7       109  梁繼昌   KENNETH LEUNG   MB      KL Kai-cheong    LEUNG</code></pre>
 <p>To find out the voting results of the motion:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">section_code =</span> <span class="st">"mbm"</span>)</span>
-<span id="cb19-2"><a href="#cb19-2"></a>v[v<span class="op">$</span>Subject <span class="op">==</span><span class="st"> "Not forgetting the 4 June incident"</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb21"><html><body><pre class="r"><span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="no">w</span>$<span class="no">MeetingDate</span>[<span class="fl">1</span>], <span class="kw">to</span> <span class="kw">=</span> <span class="no">w</span>$<span class="no">MeetingDate</span>[<span class="fl">1</span>], <span class="kw">section_code</span> <span class="kw">=</span> <span class="st">"mbm"</span>)
+<span class="no">v</span>[<span class="no">v</span>$<span class="no">Subject</span> <span class="kw">==</span> <span class="st">"Not forgetting the 4 June incident"</span>, ]</pre></body></html></div>
 <pre><code>##           MeetingDate                            Subject VoteResult SectionCode
-## 3 2018-05-23T00:00:00 Not forgetting the 4 June incident  Negatived         mbm
+## 3 2018-05-23 00:00:00 Not forgetting the 4 June incident  Negatived         mbm
 ##   RundownID HansardID
 ## 3    828826      2451
 ##                                                                                                 HansardFileURL
 ## 3 https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00349</code></pre>
 <p>It is possible to fetch the detailed voting record of each member on this motion. To get a list of members who voted yes:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>v &lt;-<span class="st"> </span><span class="kw"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span>
-<span id="cb21-2"><a href="#cb21-2"></a>v[v<span class="op">$</span>Vote <span class="op">==</span><span class="st"> "Yes"</span>, <span class="dv">32</span><span class="op">:</span><span class="dv">33</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb23"><html><body><pre class="r"><span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/voting_record.html">voting_record</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="no">w</span>$<span class="no">MeetingDate</span>[<span class="fl">1</span>], <span class="kw">to</span> <span class="kw">=</span> <span class="no">w</span>$<span class="no">MeetingDate</span>[<span class="fl">1</span>])
+<span class="no">v</span>[<span class="no">v</span>$<span class="no">Vote</span> <span class="kw">==</span> <span class="st">"Yes"</span>, <span class="fl">32</span>:<span class="fl">33</span>]</pre></body></html></div>
 <pre><code>##                NameEn Constituency
 ## 2            James TO   Functional
 ## 3     LEUNG Yiu-chung   Functional
@@ -457,8 +467,8 @@
 ## 65           Gary FAN Geographical
 ## 66         AU Nok-hin Geographical</code></pre>
 <p>To check the attendance of this meeting:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="kw"><a href="../reference/meeting.html">meeting</a></span>(<span class="dt">from =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>], <span class="dt">to =</span> w<span class="op">$</span>MeetingDate[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb25"><html><body><pre class="r"><span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span>
+<span class="fu"><a href="../reference/meeting.html">meeting</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="no">w</span>$<span class="no">MeetingDate</span>[<span class="fl">1</span>], <span class="kw">to</span> <span class="kw">=</span> <span class="no">w</span>$<span class="no">MeetingDate</span>[<span class="fl">1</span>])</pre></body></html></div>
 <pre><code>##   SlotID MeetID
 ## 1 174096 131473
 ## 2 169121 126590
@@ -478,11 +488,11 @@
 ## 4                                          工務小組委員會會議
 ## 5        《醫務委員會(選舉和委任業外委員)規例》小組委員會會議
 ##         StartDateTime MeetingTypeEng MeetingTypeChi VenueCode      VenueNameEng
-## 1 2018-05-23T08:30:00           Open       公開會議      Rm 3 Conference Room 3
-## 2 2018-05-23T11:30:00           Open       公開會議   Chamber           Chamber
-## 3 2018-05-23T11:00:00           Open       公開會議   Chamber           Chamber
-## 4 2018-05-23T08:30:00           Open       公開會議      Rm 1 Conference Room 1
-## 5 2018-05-23T08:30:00           Open       公開會議      Rm 2 Conference Room 2
+## 1 2018-05-23 08:30:00           Open       公開會議      Rm 3 Conference Room 3
+## 2 2018-05-23 11:30:00           Open       公開會議   Chamber           Chamber
+## 3 2018-05-23 11:00:00           Open       公開會議   Chamber           Chamber
+## 4 2018-05-23 08:30:00           Open       公開會議      Rm 1 Conference Room 1
+## 5 2018-05-23 08:30:00           Open       公開會議      Rm 2 Conference Room 2
 ##   VenueNameChi TermID
 ## 1      會議室3      5
 ## 2       會議廳      5
@@ -501,9 +511,9 @@
 ## 3          http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523q.htm
 ## 4         http://www.legco.gov.hk/yr17-18/chinese/fc/pwsc/agenda/pwsc20180523.htm
 ## 5 http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc58/agenda/sc5820180523.htm</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>z &lt;-<span class="st"> </span><span class="kw"><a href="../reference/attendance.html">attendance</a></span>(<span class="dt">meet_id =</span> <span class="dv">126590</span>)</span>
-<span id="cb25-2"><a href="#cb25-2"></a><span class="co"># Show members who were present</span></span>
-<span id="cb25-3"><a href="#cb25-3"></a>z[z<span class="op">$</span>PresentAbsent <span class="op">==</span><span class="st"> "Present"</span>, <span class="dv">7</span><span class="op">:</span><span class="dv">9</span>] </span></code></pre></div>
+<div class="sourceCode" id="cb27"><html><body><pre class="r"><span class="no">z</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/attendance.html">attendance</a></span>(<span class="kw">meet_id</span> <span class="kw">=</span> <span class="fl">126590</span>)
+<span class="co"># Show members who were present</span>
+<span class="no">z</span>[<span class="no">z</span>$<span class="no">PresentAbsent</span> <span class="kw">==</span> <span class="st">"Present"</span>, <span class="fl">7</span>:<span class="fl">9</span>]</pre></body></html></div>
 <pre><code>##                         MemberNameEnglish MemberNameChinese PresentAbsent
 ## 1  Hon Andrew LEUNG Kwan-yuen (President) 梁君彥議員 (主席)       Present
 ## 2                    Hon James TO Kun-sun        涂謹申議員       Present
@@ -574,19 +584,11 @@
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#installing-legco">Installing legco</a></li>
-      <li><a href="#understanding-the-legco-apis">Understanding the LegCo APIs</a></li>
-      <li><a href="#api-limits">API Limits</a></li>
-      <li><a href="#examples">Examples</a></li>
-      </ul>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
 
@@ -597,7 +599,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
 </div>
 
       </footer>

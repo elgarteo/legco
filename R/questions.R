@@ -2,17 +2,19 @@
 #'
 #' Fetch questions put to the government by LegCo members in council meetings.
 #'
-#' @param type The type of question. `'oral'` returns oral questions.
-#'   `'written'` returns written questions. `'all'` returns all questions.
-#'   Defaults to `'all'`.
+#' This function corresponds to the \emph{Questions} data endpoint of the
+#' Hansard Database.
 #'
-#' @inheritParams rundown
-#' @inheritParams speakers
-#' 
-#' @examples 
-#' \dontrun{
+#' @param type the type of question. \code{"oral"} returns oral questions.
+#'   \code{"written"} returns written questions. \code{"all"} returns all
+#'   questions. Defaults to \code{"all"}.
+#'
+#' @inherit hansard-db
+#'
+#' @examples
+#' \donttest{
 #' # Fetch questions being put on the government during the Council meeting on February 20, 2019
-#' questions(from = "2019-02-20", to = "2019-02-20")
+#' x <- questions(from = "2019-02-20", to = "2019-02-20")
 #' }
 #'
 #' @export

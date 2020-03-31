@@ -44,109 +44,128 @@ legco_all_bills(
 )
 }
 \arguments{
-\item{id}{The id of a bill, or a vector of ids. Defaults to `NULL`.}
+\item{id}{the id of a bill, or a vector of ids. Defaults to \code{NULL}.}
 
-\item{ordinance}{The ordinance associated with the bill. Takes the full
-English name of the ordinanace, e.g. `Buildings Ordinanace`. Defaults to
-`NULL`.}
+\item{ordinance}{the ordinance associated with the bill. Takes the full
+English name of the ordinance, e.g. \code{"Buildings Ordinanace"}. Defaults
+to \code{NULL}.}
 
-\item{title}{The title of the bill. Takes the full English name of the bill,
-e.g. `National Anthem Bill`. Defaults to `NULL`.}
+\item{title}{the title of the bill. Takes the full English name of the bill,
+e.g. \code{"National Anthem Bill"}. Defaults to \code{NULL}.}
 
-\item{proposer}{The proposer of the bill. Takes the full English title of the
-proposer, e.g. `Secretary for Security`. Defaults to `NULL`.}
+\item{proposer}{the proposer of the bill. Takes the full English title of the
+proposer, e.g. \code{"Secretary for Security"}. Defaults to \code{NULL}.}
 
-\item{gazette_from}{Only fetch bills gazetted on or after this date. Accepts
-`'all'`, `NULL` or character values in `'YYYY-MM-DD'` format, and objects
-of class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can
-be coerced to a date with `as.Date()`. If `'all'`, returns all bills that
-have and have not been gazetted before being tabled in LegCo and overrides
-the `gazette_to` parameter. If `NULL`, returns bills that have not been
-gazetted before being tabled in LegCo (mainly older bills as newer ones
-required to be gazetted before tabling as required by the Rules of
-Procedure) and overrides the `gazette_to` parameter. Defaults to `'all'`.}
+\item{gazette_from}{only fetch bills gazetted on or after this date. Accepts
+\code{"all"}, \code{NULL} or character values in \code{"YYYY-MM-DD"}
+format, and objects of class \code{Date}, \code{POSIXt}, \code{POSIXct},
+\code{POSIXlt} or anything else that can be coerced to a date with
+\code{as.Date()}. If \code{"all"}, returns all bills that have and have not
+been gazetted before being tabled in LegCo and overrides the
+\code{gazette_to} parameter. If \code{NULL}, returns bills that have not
+been gazetted before being tabled in LegCo (mainly older bills as newer
+ones required to be gazetted before tabling as required by the Rules of
+Procedure) and overrides the \code{gazette_to} parameter. Defaults to
+\code{"all"}.}
 
-\item{gazette_to}{Only fetch bills gazetted on or before this date. Accepts
-`'all'`, `NULL` or character values in `'YYYY-MM-DD'` format, and objects
-of class `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can
-be coerced to a date with `as.Date()`. If `'all'`, returns all bills that
-have and have not been gazetted before being tabled in LegCo and overrides
-the `gazette_from` parameter. If `NULL`, returns bills that have not been
-gazetted before being tabled in LegCo (mainly older bills as newer ones
-required to be gazetted before tabling as required by the Rules of
-Procedure) and overrides the `gazette_from` parameter. Defaults to `'all'`.}
+\item{gazette_to}{only fetch bills gazetted on or before this date. Accepts
+\code{"all"}, \code{NULL} or character values in \code{"YYYY-MM-DD"}
+format, and objects of class \code{Date}, \code{POSIXt}, \code{POSIXct},
+\code{POSIXlt} or anything else that can be coerced to a date with
+\code{as.Date()}. If \code{"all"}, returns all bills that have and have not
+been gazetted before being tabled in LegCo and overrides the
+\code{gazette_from} parameter. If \code{NULL}, returns bills that have not
+been gazetted before being tabled in LegCo (mainly older bills as newer
+ones required to be gazetted before tabling as required by the Rules of
+Procedure) and overrides the \code{gazette_from} parameter. Defaults to
+\code{"all"}.}
 
-\item{first_from}{Only fetch bills that have gone through first reading on or
-after this date. Accepts `'all'`, `NULL` or character values in
-`'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`, `POSIXct`,
-`POSIXlt` or anything else that can be coerced to a date with `as.Date()`.
-If `'all'`, returns all bills that have and have not gone through first
-reading and overrides the `first_to` parameter. If `NULL`, returns bills
-that have not gone through first reading and overrides the `first_to`
-parameter. Defaults to `'all'`.}
+\item{first_from}{only fetch bills that have gone through first reading on or
+after this date. Accepts \code{"all"}, \code{NULL} or character values in
+\code{"YYYY-MM-DD"} format, and objects of class \code{Date},
+\code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else that can be
+coerced to a date with \code{as.Date()}. If \code{"all"}, returns all bills
+that have and have not gone through first reading and overrides the
+\code{first_to} parameter. If \code{NULL}, returns bills that have not gone
+through first reading and overrides the \code{first_to} parameter. Defaults
+to \code{"all"}.}
 
-\item{first_to}{Only fetch bills that have gone through first reading on or
-before this date. Accepts `'all'`, `NULL` or character values in
-`'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`, `POSIXct`,
-`POSIXlt` or anything else that can be coerced to a date with `as.Date()`.
-If `'all'`, returns all bills that have and have not gone through first
-reading and overrides the `first_from` parameter. If `NULL`, returns bills
-that have not gone through first reading and overrides the `first_from`
-parameter. Defaults to `'all'`.}
+\item{first_to}{only fetch bills that have gone through first reading on or
+before this date. Accepts \code{"all"}, \code{NULL} or character values in
+\code{"YYYY-MM-DD"} format, and objects of class \code{Date},
+\code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else that can be
+coerced to a date with \code{as.Date()}. If \code{"all"}, returns all bills
+that have and have not gone through first reading and overrides the
+\code{first_from} parameter. If \code{NULL}, returns bills that have not
+gone through first reading and overrides the \code{first_from} parameter.
+Defaults to \code{"all"}.}
 
-\item{second_from}{Only fetch bills that have gone through second reading on
-or after this date. Accepts `'all'`, `NULL` or character values in
-`'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`, `POSIXct`,
-`POSIXlt` or anything else that can be coerced to a date with `as.Date()`.
-If `'all'`, returns all bills that have and have not gone through second
-reading and overrides the `second_to` parameter. If `NULL`, returns bills
-that have not gone through second reading and overrides the `second_to`
-parameter. Defaults to `'all'`.}
+\item{second_from}{only fetch bills that have gone through second reading on
+or after this date. Accepts \code{"all"}, \code{NULL} or character values
+in \code{"YYYY-MM-DD"} format, and objects of class \code{Date},
+\code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else that can be
+coerced to a date with \code{as.Date()}. If \code{"all"}, returns all bills
+that have and have not gone through second reading and overrides the
+\code{second_to} parameter. If \code{NULL}, returns bills that have not
+gone through second reading and overrides the \code{second_to} parameter.
+Defaults to \code{"all"}.}
 
-\item{second_to}{Only fetch bills that have gone through second reading on or
-before this date. Accepts `'all'`, `NULL` or character values in
-`'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`, `POSIXct`,
-`POSIXlt` or anything else that can be coerced to a date with `as.Date()`.
-If `'all'`, returns all bills that have and have not gone through second
-reading and overrides the `second_from` parameter. If `NULL`, returns bills
-that have not gone through second reading and overrides the `second_from`
-parameter. Defaults to `'all'`.}
+\item{second_to}{only fetch bills that have gone through second reading on or
+before this date. Accepts \code{"all"}, \code{NULL} or character values in
+\code{"YYYY-MM-DD"} format, and objects of class \code{Date},
+\code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else that can be
+coerced to a date with \code{as.Date()}. If \code{"all"}, returns all bills
+that have and have not gone through second reading and overrides the
+\code{second_from} parameter. If \code{NULL}, returns bills that have not
+gone through second reading and overrides the \code{second_from} parameter.
+Defaults to \code{"all"}.}
 
-\item{third_from}{Only fetch bills that have gone through third reading on or
-after this date. Accepts `'all'`, `NULL` or character values in
-`'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`, `POSIXct`,
-`POSIXlt` or anything else that can be coerced to a date with `as.Date()`.
-If `'all'`, returns all bills that have and have not gone through third
-reading and overrides the `third_to` parameter. If `NULL`, returns bills
-that have not gone through third reading and overrides the `third_to`
-parameter. Defaults to `'all'`.}
+\item{third_from}{only fetch bills that have gone through third reading on or
+after this date. Accepts \code{"all"}, \code{NULL} or character values in
+\code{"YYYY-MM-DD"} format, and objects of class \code{Date},
+\code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else that can be
+coerced to a date with \code{as.Date()}. If \code{"all"}, returns all bills
+that have and have not gone through third reading and overrides the
+\code{third_to} parameter. If \code{NULL}, returns bills that have not gone
+through third reading and overrides the \code{third_to} parameter. Defaults
+to \code{"all"}.}
 
-\item{third_to}{Only fetch bills that have gone through third reading on or
-before this date. Accepts `'all'`, `NULL` or character values in
-`'YYYY-MM-DD'` format, and objects of class `Date`, `POSIXt`, `POSIXct`,
-`POSIXlt` or anything else that can be coerced to a date with `as.Date()`.
-If `'all'`, returns all bills that have and have not gone through third
-reading and overrides the `third_from` parameter. If `NULL`, returns bills
-that have not gone through third reading and overrides the `third_from`
-parameter. Defaults to `'all'`.}
+\item{third_to}{only fetch bills that have gone through third reading on or
+before this date. Accepts \code{"all"}, \code{NULL} or character values in
+\code{"YYYY-MM-DD"} format, and objects of class \code{Date},
+\code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else that can be
+coerced to a date with \code{as.Date()}. If \code{"all"}, returns all bills
+that have and have not gone through third reading and overrides the
+\code{third_from} parameter. If \code{NULL}, returns bills that have not
+gone through third reading and overrides the \code{third_from} parameter.
+Defaults to \code{"all"}.}
 
-\item{n}{The number of record to fetch. Defaults to `1000`.}
+\item{n}{the number of record to fetch. Defaults to \code{1000}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch the information of bills presented in LegCo since 1906.
 }
+\details{
+This function corresponds to the \emph{Vbills} data endpoint of the Bills
+Database.
+}
 \examples{
-\dontrun{
+\donttest{
 # Fetch bills that passed third reading on February 20, 2019
-all_bills(third_from = "2019-02-20")
+x <- all_bills(third_from = "2019-02-20")
 }
 
+}
+\seealso{
+LegCo API documentation for the Meeting Schedule database:
+  \url{https://www.legco.gov.hk/odata/english/billsdb.html}
 }

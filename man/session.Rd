@@ -24,32 +24,53 @@ legco_session(
 )
 }
 \arguments{
-\item{session_id}{The id of a session, or a vector of ids. If `NULL`, returns
-result of all sessions. Defaults to `NULL`.}
+\item{session_id}{the id of a session, or a vector of ids. If \code{NULL},
+returns result of all sessions. Defaults to \code{NULL}.}
 
-\item{term_id}{The id of a term, or a vector of ids. If `NULL`, returns
-results of all terms. Defaults to `NULL`.}
+\item{term_id}{the id of a term, or a vector of ids. If \code{NULL}, returns
+results of all terms. Defaults to \code{NULL}.}
 
-\item{date}{Only fetch the result in which the specified date falls within.
-Accepts character values in `'YYYY-MM-DD'` format, and objects of class
-`Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
-to a date with `as.Date()`. Defaults to `NULL`.}
+\item{date}{only fetch the result in which the specified date falls within.
+Accepts character values in \code{"YYYY-MM-DD"} format, and objects of
+class \code{Date}, \code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or
+anything else that can be coerced to a date with \code{as.Date()}. Defaults
+to \code{NULL}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch the basic information of LegCo sessions.
 }
-\examples{
-\dontrun{
-# Fetch all LegCo sessions of the fifth term
-session(term_id = 4)
+\details{
+This function corresponds to the \emph{Tsession} data endpoint of the Meeting
+Schedule Database.
+}
+\section{Functions}{
+ Functions of the Meeting Schedule Database: \itemize{
+  \item \code{\link{term}}: LegCo terms \item \code{\link{session}}: LegCo
+  sessions \item \code{\link{committee}}: LegCo committees \item
+  \code{\link{membership}}: Membership of LegCo committees \item
+  \code{\link{member}}: LegCo members \item \code{\link{member_term}}: Terms
+  served by LegCo members \item \code{\link{meeting}}: Meetings of LegCo
+  committees \item \code{\link{meeting_committee}}: Committees of LegCo
+  meetings }
 }
 
+\examples{
+\donttest{
+# Fetch all LegCo sessions of the fifth term
+x <- session(term_id = 4)
+}
+
+}
+\seealso{
+LegCo API documentation for the Meeting Schedule database:
+  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
 }

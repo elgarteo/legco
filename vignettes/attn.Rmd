@@ -1,5 +1,5 @@
 ---
-title: "Attendance Database"
+title: "Meeting Attendance Database"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -8,9 +8,11 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, echo = FALSE}
+```{r include=FALSE}
 knitr::opts_chunk$set(message = FALSE)
 library(legco)
+library(httptest)
+start_vignette("attn")
 ```
 
 ## Introduction
@@ -22,7 +24,7 @@ For more details of the database, see <https://www.legco.gov.hk/odata/english/at
 
 ### Key Identifiers
 
-Here are the key identifies that is useful for locating the neccessary data from the Attendance 
+Here are the key identifies that is useful for locating the necessary data from the Attendance 
 Database:
 
 * `CommitteeID` is the numerical ID of a LegCo committee. It is same as the one in the Meeting
@@ -32,7 +34,7 @@ Schedule Database.
 Meeting Schedule Database.
 
 * `MemberID` is the numerical ID of a LegCo member. It is same as the one in the Meeting Schedule
-Database. Note that it is a seperate identifier from the `SpeakerID` of the Hansard Database.
+Database. Note that it is a separate identifier from the `SpeakerID` of the Hansard Database.
 
 ### Total Count
 
@@ -43,6 +45,10 @@ To activate this option, specify `count = TRUE`:
 ```{r }
 # Fetch the total number of members absent from the Council meeting on May 22, 2019
 attendance(meet_id = 136897, from = "2019-05-22", to = "2019-05-22", attn = "a", count = TRUE)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 ---
@@ -57,8 +63,21 @@ one of more LegCo member(s), or both.
 ```{r }
 # Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017
 attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", attn = "a")
-
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
+```{r eval=FALSE}
 # Fetch the meetings that Hon Chu Hoi-dick was absent from
 v <- attendance(member_id = 776, attn = "a")
 head(v)
+```
+```{r echo=FALSE}
+# Fetch the meetings that Hon Chu Hoi-dick was absent from
+v <- attendance(member_id = 776, attn = "a", to = "2020-03-27")
+head(v)
+```
+```{r include=FALSE}
+end_vignette()
 ```

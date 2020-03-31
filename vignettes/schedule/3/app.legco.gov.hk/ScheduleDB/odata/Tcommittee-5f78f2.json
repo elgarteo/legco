@@ -1,0 +1,2220 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/ScheduleDB/odata/$metadata#Tcommittee&$select=committee_id,committee_code,name_eng,name_chi,term_id,home_url_eng,home_url_chi",
+    "odata.count": "246",
+    "value": [
+        {
+            "committee_id": "2660",
+            "committee_code": "AM-CFS",
+            "name_eng": "Committee on Facilities and Services",
+            "name_chi": "設施及服務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/lcc/lcc_fs/fs_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/lcc/lcc_fs/fs_1620.htm"
+        },
+        {
+            "committee_id": "2662",
+            "committee_code": "AM-CMA",
+            "name_eng": "Committee on Members' Operating Expenses",
+            "name_chi": "議員工作開支事宜委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/lcc/lcc_moe/moe_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/lcc/lcc_moe/moe_1620.htm"
+        },
+        {
+            "committee_id": "2663",
+            "committee_code": "AM-CPM",
+            "name_eng": "Committee on Personnel Matters",
+            "name_chi": "人事委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/lcc/lcc_pm/pm_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/lcc/lcc_pm/pm_1620.htm"
+        },
+        {
+            "committee_id": "2659",
+            "committee_code": "AM-LCC",
+            "name_eng": "The Legislative Council Commission",
+            "name_chi": "立法會行政管理委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm"
+        },
+        {
+            "committee_id": "2785",
+            "committee_code": "AM-LCC",
+            "name_eng": "The Legislative Council Commission",
+            "name_chi": "立法會行政管理委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm"
+        },
+        {
+            "committee_id": "2912",
+            "committee_code": "AM-LCC",
+            "name_eng": "The Legislative Council Commission",
+            "name_chi": "立法會行政管理委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm"
+        },
+        {
+            "committee_id": "3028",
+            "committee_code": "AM-LCC",
+            "name_eng": "The Legislative Council Commission",
+            "name_chi": "立法會行政管理委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm"
+        },
+        {
+            "committee_id": "2675",
+            "committee_code": "AM-LCSQ",
+            "name_eng": "Committee on the Use of Legislative Council Square",
+            "name_chi": "立法會廣場使用事宜委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/lcc/lcc_ulcs/ulcs_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/lcc/lcc_ulcs/ulcs_1620.htm"
+        },
+        {
+            "committee_id": "2615",
+            "committee_code": "AM-MA",
+            "name_eng": "Subcommittee on Members' Remuneration and Operating Expenses Reimbursement",
+            "name_chi": "立法會議員酬金及工作開支償還款額小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/ma/general/ma.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/ma/general/ma.htm"
+        },
+        {
+            "committee_id": "2724",
+            "committee_code": "BC/1/16",
+            "name_eng": "Bills Committee on Stamp Duty (Amendment) Bill 2017 and Stamp Duty (Amendment) (No. 2) Bill 2017",
+            "name_chi": "《2017年印花稅(修訂)條例草案》及《2017年印花稅(修訂)(第2號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc01/general/bc01.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc01/general/bc01.htm"
+        },
+        {
+            "committee_id": "2834",
+            "committee_code": "BC/1/17",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 5) Bill 2017",
+            "name_chi": "《2017年稅務(修訂)(第5號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc01/general/bc01.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc01/general/bc01.htm"
+        },
+        {
+            "committee_id": "2960",
+            "committee_code": "BC/1/18",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 6) Bill 2018",
+            "name_chi": "《2018年稅務(修訂)(第6號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/bc/bc01/general/bc01.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/bc/bc01/general/bc01.htm"
+        },
+        {
+            "committee_id": "3011",
+            "committee_code": "BC/10/18",
+            "name_eng": "Bills Committee on Occupational Retirement Schemes (Amendment) Bill 2019",
+            "name_chi": "《2019年職業退休計劃(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc10/general/bc10.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc10/general/bc10.htm"
+        },
+        {
+            "committee_id": "2712",
+            "committee_code": "BC/101/16",
+            "name_eng": "Bills Committee on Arbitration (Amendment) Bill 2016",
+            "name_chi": "《2016年仲裁(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc101/general/bc101.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc101/general/bc101.htm"
+        },
+        {
+            "committee_id": "2844",
+            "committee_code": "BC/101/17",
+            "name_eng": "Bills Committee on Banking (Amendment) Bill 2017",
+            "name_chi": "《2017年銀行業(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc101/general/bc101.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc101/general/bc101.htm"
+        },
+        {
+            "committee_id": "3000",
+            "committee_code": "BC/101/18",
+            "name_eng": "Bills Committee on Judicial Officers (Extension of Retirement Age) (Amendment) Bill 2019",
+            "name_chi": "《2019年司法人員(延展退休年齡)(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/bc/bc101/general/bc101.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/bc/bc101/general/bc101.htm"
+        },
+        {
+            "committee_id": "2718",
+            "committee_code": "BC/102/16",
+            "name_eng": "Bills Committee on Arbitration and Mediation Legislation (Third Party Funding) (Amendment) Bill 2016",
+            "name_chi": "《2016年仲裁及調解法例(第三者資助)(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc102/general/bc102.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc102/general/bc102.htm"
+        },
+        {
+            "committee_id": "2857",
+            "committee_code": "BC/102/17",
+            "name_eng": "Bills Committee on Guangzhou-Shenzhen-Hong Kong Express Rail Link (Co-location) Bill",
+            "name_chi": "《廣深港高鐵(一地兩檢)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc102/general/bc102.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc102/general/bc102.htm"
+        },
+        {
+            "committee_id": "3016",
+            "committee_code": "BC/102/18",
+            "name_eng": "Bills Committee on Franchised Taxi Services Bill",
+            "name_chi": "《專營的士服務條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc102/general/bc102.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc102/general/bc102.htm"
+        },
+        {
+            "committee_id": "2725",
+            "committee_code": "BC/103/16",
+            "name_eng": "Bills Committee on Apology Bill",
+            "name_chi": "《道歉條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc103/general/bc103.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc103/general/bc103.htm"
+        },
+        {
+            "committee_id": "2867",
+            "committee_code": "BC/103/17",
+            "name_eng": "Bills Committee on Road Traffic (Amendment) Bill 2018",
+            "name_chi": "《2018年道路交通(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc103/general/bc103.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc103/general/bc103.htm"
+        },
+        {
+            "committee_id": "2743",
+            "committee_code": "BC/104/16",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 2) Bill 2017",
+            "name_chi": "《2017年稅務(修訂)(第2號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc104/general/bc104.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc104/general/bc104.htm"
+        },
+        {
+            "committee_id": "2905",
+            "committee_code": "BC/104/17",
+            "name_eng": "Bills Committee on Ferry Services (Amendment) Bill 2018",
+            "name_chi": "《2018年渡輪服務(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc104/general/bc104.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc104/general/bc104.htm"
+        },
+        {
+            "committee_id": "2742",
+            "committee_code": "BC/105/16",
+            "name_eng": "Bills Committee on Travel Industry Bill",
+            "name_chi": "《旅遊業條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc105/general/bc105.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc105/general/bc105.htm"
+        },
+        {
+            "committee_id": "2908",
+            "committee_code": "BC/105/17",
+            "name_eng": "Bills Committee on Evidence (Amendment) Bill 2018",
+            "name_chi": "《2018年證據(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc105/general/bc105.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc105/general/bc105.htm"
+        },
+        {
+            "committee_id": "2750",
+            "committee_code": "BC/106/16",
+            "name_eng": "Bills Committee on Road Traffic (Amendment) Bill 2017",
+            "name_chi": "《2017年道路交通(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc106/general/bc106.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc106/general/bc106.htm"
+        },
+        {
+            "committee_id": "2767",
+            "committee_code": "BC/107/16",
+            "name_eng": "Bills Committee on Statute Law (Miscellaneous Provisions) Bill 2017",
+            "name_chi": "《2017年成文法(雜項規定)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc107/general/bc107.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc107/general/bc107.htm"
+        },
+        {
+            "committee_id": "2830",
+            "committee_code": "BC/108/16",
+            "name_eng": "Bills Committee on Road Tunnels (Government) (Amendment) Bill 2017",
+            "name_chi": "《2017年行車隧道(政府)(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc108/general/bc108.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc108/general/bc108.htm"
+        },
+        {
+            "committee_id": "2741",
+            "committee_code": "BC/2/16",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) Bill 2017",
+            "name_chi": "《2017年稅務(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc02/general/bc02.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc02/general/bc02.htm"
+        },
+        {
+            "committee_id": "2851",
+            "committee_code": "BC/2/17",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment)(No. 6) Bill 2017",
+            "name_chi": "《2017年稅務(修訂)(第6號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc02/general/bc02.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc02/general/bc02.htm"
+        },
+        {
+            "committee_id": "2967",
+            "committee_code": "BC/2/18",
+            "name_eng": "Bills Committee on Waste Disposal (Charging for Municipal Solid Waste) (Amendment) Bill 2018",
+            "name_chi": "《2018年廢物處置(都市固體廢物收費)(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc02/general/bc02.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc02/general/bc02.htm"
+        },
+        {
+            "committee_id": "2744",
+            "committee_code": "BC/3/16",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 3) Bill 2017",
+            "name_chi": "《2017年稅務(修訂)(第3號)條例草案》 委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc03/general/bc03.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc03/general/bc03.htm"
+        },
+        {
+            "committee_id": "2852",
+            "committee_code": "BC/3/17",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment)(No. 7) Bill 2017",
+            "name_chi": "《2017年稅務(修訂)(第7號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc03/general/bc03.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc03/general/bc03.htm"
+        },
+        {
+            "committee_id": "2965",
+            "committee_code": "BC/3/18",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "name_chi": "《2018年稅務(修訂)(第7號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc03/general/bc03.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc03/general/bc03.htm"
+        },
+        {
+            "committee_id": "2749",
+            "committee_code": "BC/4/16",
+            "name_eng": "Bills Committee on Waterworks (Amendment) Bill 2017",
+            "name_chi": "《2017 年水務設施(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc04/general/bc04.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc04/general/bc04.htm"
+        },
+        {
+            "committee_id": "2855",
+            "committee_code": "BC/4/17",
+            "name_eng": "Bills Committee on Financial Reporting Council (Amendment) Bill 2018",
+            "name_chi": "《2018年財務匯報局(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc04/general/bc04.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc04/general/bc04.htm"
+        },
+        {
+            "committee_id": "2966",
+            "committee_code": "BC/4/18",
+            "name_eng": "Bills Committee on Professional Accountants (Amendment) Bill 2018",
+            "name_chi": "《2018年專業會計師(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc04/general/bc04.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc04/general/bc04.htm"
+        },
+        {
+            "committee_id": "2759",
+            "committee_code": "BC/5/16",
+            "name_eng": "Bills Committee on Bank of Communications (Hong Kong) Limited (Merger) Bill",
+            "name_chi": "《交通銀行(香港)有限公司(合併)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc05/general/bc05.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc05/general/bc05.htm"
+        },
+        {
+            "committee_id": "2865",
+            "committee_code": "BC/5/17",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) Bill 2018",
+            "name_chi": "《2018年稅務(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc05/general/bc05.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc05/general/bc05.htm"
+        },
+        {
+            "committee_id": "2975",
+            "committee_code": "BC/5/18",
+            "name_eng": "Bills Committee on Inland Revenue and MPF Schemes Legislation (Tax Deductions for Annuity Premiums and MPF Voluntary Contributions) (Amendment) Bill 2018",
+            "name_chi": "《2018年稅務及強積金計劃法例(關於年金保費及強積金自願性供款的稅務扣除)(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc05/general/bc05.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc05/general/bc05.htm"
+        },
+        {
+            "committee_id": "2705",
+            "committee_code": "BC/51/16",
+            "name_eng": "Bills Committee on Private Columbaria Bill",
+            "name_chi": "《私營骨灰安置所條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc51/general/bc51.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc51/general/bc51.htm"
+        },
+        {
+            "committee_id": "2883",
+            "committee_code": "BC/51/17",
+            "name_eng": "Bills Committee on Human Organ Transplant (Amendment) Bill 2018",
+            "name_chi": "《2018年人體器官移植(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc51/general/bc51.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc51/general/bc51.htm"
+        },
+        {
+            "committee_id": "2977",
+            "committee_code": "BC/51/18",
+            "name_eng": "Bills Committee on Fire Safety (Industrial Buildings) Bill",
+            "name_chi": "《消防安全(工業建築物)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc51/general/bc51.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc51/general/bc51.htm"
+        },
+        {
+            "committee_id": "2707",
+            "committee_code": "BC/52/16",
+            "name_eng": "Bills Committee on Fire Services (Amendment) Bill 2016",
+            "name_chi": "《2016年消防(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc52/general/bc52.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc52/general/bc52.htm"
+        },
+        {
+            "committee_id": "2894",
+            "committee_code": "BC/52/17",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 4) Bill 2018",
+            "name_chi": "《2018年稅務(修訂)(第4號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc52/general/bc52.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc52/general/bc52.htm"
+        },
+        {
+            "committee_id": "2978",
+            "committee_code": "BC/52/18",
+            "name_eng": "Bills Committee on Discrimination Legislation (Miscellaneous Amendments) Bill 2018",
+            "name_chi": "《2018年歧視法例(雜項修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc52/general/bc52.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc52/general/bc52.htm"
+        },
+        {
+            "committee_id": "2737",
+            "committee_code": "BC/53/16",
+            "name_eng": "Bills Committee on Cross-boundary Movement of Physical Currency and Bearer Negotiable Instruments Bill",
+            "name_chi": "《實體貨幣及不記名可轉讓票據跨境流動條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc53/general/bc53.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc53/general/bc53.htm"
+        },
+        {
+            "committee_id": "2904",
+            "committee_code": "BC/53/17",
+            "name_eng": "Bills Committee on Employment (Amendment) Bill 2018",
+            "name_chi": "《2018年僱傭(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc53/general/bc53.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc53/general/bc53.htm"
+        },
+        {
+            "committee_id": "2982",
+            "committee_code": "BC/53/18",
+            "name_eng": "Bills Committee on National Anthem Bill",
+            "name_chi": "《國歌條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc53/general/bc53.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc53/general/bc53.htm"
+        },
+        {
+            "committee_id": "2757",
+            "committee_code": "BC/54/16",
+            "name_eng": "Bills Committee on Employment (Amendment) Bill 2017",
+            "name_chi": "《2017年僱傭(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc54/general/bc54.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc54/general/bc54.htm"
+        },
+        {
+            "committee_id": "2907",
+            "committee_code": "BC/54/17",
+            "name_eng": "Bills Committee on Conservation of Antarctic Marine Living Resources Bill",
+            "name_chi": "《南極海洋生物資源養護條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc54/general/bc54.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc54/general/bc54.htm"
+        },
+        {
+            "committee_id": "2989",
+            "committee_code": "BC/54/18",
+            "name_eng": "Bills Committee on Smoking (Public Health) (Amendment) Bill 2019",
+            "name_chi": "《2019年吸煙(公眾衞生)(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc54/general/bc54.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc54/general/bc54.htm"
+        },
+        {
+            "committee_id": "2765",
+            "committee_code": "BC/55/16",
+            "name_eng": "Bills Committee on Medical Registration (Amendment) Bill 2017",
+            "name_chi": "《2017年醫生註冊(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc55/general/bc55.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc55/general/bc55.htm"
+        },
+        {
+            "committee_id": "2946",
+            "committee_code": "BC/55/17",
+            "name_eng": "Bills Committee on Hotel and Guesthouse Accommodation (Amendment) Bill 2018",
+            "name_chi": "《2018年旅館業(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc55/general/bc55.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc55/general/bc55.htm"
+        },
+        {
+            "committee_id": "2999",
+            "committee_code": "BC/55/18",
+            "name_eng": "Bills Committee on Electoral Legislation (Miscellaneous Amendments) Bill 2019",
+            "name_chi": "《2019年選舉法例(雜項修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/bc/bc55/general/bc55.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/bc/bc55/general/bc55.htm"
+        },
+        {
+            "committee_id": "2766",
+            "committee_code": "BC/56/16",
+            "name_eng": "Bills Committee on Chinese Medicine (Amendment) Bill 2017",
+            "name_chi": "《2017年中醫藥(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc56/general/bc56.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc56/general/bc56.htm"
+        },
+        {
+            "committee_id": "2947",
+            "committee_code": "BC/56/17",
+            "name_eng": "Bills Committee on Electoral Legislation (Miscellaneous Amendments) Bill 2018",
+            "name_chi": "《2018年選舉法例(雜項修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc56/general/bc56.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc56/general/bc56.htm"
+        },
+        {
+            "committee_id": "3005",
+            "committee_code": "BC/56/18",
+            "name_eng": "Bills Committee on Fugitive Offenders and Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill 2019",
+            "name_chi": "《2019年逃犯及刑事事宜相互法律協助法例(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "",
+            "home_url_chi": ""
+        },
+        {
+            "committee_id": "2770",
+            "committee_code": "BC/57/16",
+            "name_eng": "Bills Committee on Dutiable Commodities (Amendment) Bill 2017",
+            "name_chi": "《2017年應課稅品(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc57/general/bc57.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc57/general/bc57.htm"
+        },
+        {
+            "committee_id": "2771",
+            "committee_code": "BC/58/16",
+            "name_eng": "Bills Committee on Private Healthcare Facilities Bill",
+            "name_chi": "《私營醫療機構條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc58/general/bc58.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc58/general/bc58.htm"
+        },
+        {
+            "committee_id": "2773",
+            "committee_code": "BC/59/16",
+            "name_eng": "Bills Committee on United Nations (Anti-Terrorism Measures) (Amendment) Bill 2017",
+            "name_chi": "《2017年聯合國(反恐怖主義措施)(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc59/general/bc59.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc59/general/bc59.htm"
+        },
+        {
+            "committee_id": "2768",
+            "committee_code": "BC/6/16",
+            "name_eng": "Bills Committee on Protection of Endangered Species of Animals and Plants (Amendment) Bill 2017",
+            "name_chi": "《2017年保護瀕危動植物物種(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc06/general/bc06.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc06/general/bc06.htm"
+        },
+        {
+            "committee_id": "2870",
+            "committee_code": "BC/6/17",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 2) Bill 2018",
+            "name_chi": "《2018年稅務(修訂)(第2號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc06/general/bc06.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc06/general/bc06.htm"
+        },
+        {
+            "committee_id": "2976",
+            "committee_code": "BC/6/18",
+            "name_eng": "Bills Committee on Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018",
+            "name_chi": "《2018年稅務(豁免基金繳付利得稅)(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc06/general/bc06.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc06/general/bc06.htm"
+        },
+        {
+            "committee_id": "2774",
+            "committee_code": "BC/60/16",
+            "name_eng": "Bills Committee on Employment (Amendment) (No. 2) Bill 2017",
+            "name_chi": "《2017年僱傭(修訂)(第2號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc60/general/bc60.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc60/general/bc60.htm"
+        },
+        {
+            "committee_id": "2778",
+            "committee_code": "BC/7/16",
+            "name_eng": "Bills Committee on Anti-Money Laundering and Counter-Terrorist Financing (Financial Institutions) (Amendment) Bill 2017 and Companies (Amendment) Bill 2017",
+            "name_chi": "《2017年打擊洗錢及恐怖分子資金籌集(金融機構)(修訂)條例草案》及《2017年公司(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc07/general/bc07.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc07/general/bc07.htm"
+        },
+        {
+            "committee_id": "2873",
+            "committee_code": "BC/7/17",
+            "name_eng": "Bills Committee on Companies (Amendment) Bill 2018",
+            "name_chi": "《2018年公司(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc07/general/bc07.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc07/general/bc07.htm"
+        },
+        {
+            "committee_id": "2988",
+            "committee_code": "BC/7/18",
+            "name_eng": "Bills Committee on Trade Marks (Amendment) Bill 2019",
+            "name_chi": "《2019年商標(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/bc/bc07/general/bc07.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/bc/bc07/general/bc07.htm"
+        },
+        {
+            "committee_id": "2779",
+            "committee_code": "BC/8/16",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 4) Bill 2017",
+            "name_chi": "《2017年稅務(修訂)(第4 號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/bc/bc08/general/bc08.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/bc/bc08/general/bc08.htm"
+        },
+        {
+            "committee_id": "2875",
+            "committee_code": "BC/8/17",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 3) Bill 2018",
+            "name_chi": "《2018年稅務(修訂)(第3號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc08/general/bc08.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc08/general/bc08.htm"
+        },
+        {
+            "committee_id": "2996",
+            "committee_code": "BC/8/18",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (Tax Concessions) Bill 2019",
+            "name_chi": "《2019年稅務(修訂)(稅務寬免)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/bc/bc08/general/bc08.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/bc/bc08/general/bc08.htm"
+        },
+        {
+            "committee_id": "2899",
+            "committee_code": "BC/9/17",
+            "name_eng": "Bills Committee on Inland Revenue (Amendment) (No. 5) Bill 2018",
+            "name_chi": "《2018年稅務(修訂)(第5號)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc09/general/bc09.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc09/general/bc09.htm"
+        },
+        {
+            "committee_id": "3001",
+            "committee_code": "BC/9/18",
+            "name_eng": "Bills Committee on Broadcasting and Telecommunications Legislation (Amendment) Bill 2019",
+            "name_chi": "《2019年廣播及電訊法例(修訂)條例草案》委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/bc/bc09/general/bc09.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/bc/bc09/general/bc09.htm"
+        },
+        {
+            "committee_id": "2616",
+            "committee_code": "CB(4)/PAC",
+            "name_eng": "Public Accounts Committee",
+            "name_chi": "政府帳目委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/pac/pac_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/pac/pac_1620.htm"
+        },
+        {
+            "committee_id": "2562",
+            "committee_code": "CB/CM",
+            "name_eng": "Council Meeting",
+            "name_chi": "立法會會議",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/counmtg/cm1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/counmtg/cm1620.htm"
+        },
+        {
+            "committee_id": "2617",
+            "committee_code": "CB3/RP",
+            "name_eng": "Committee on Rules of Procedure",
+            "name_chi": "議事規則委員會",
+            "term_id": 5,
+            "home_url_eng": "",
+            "home_url_chi": ""
+        },
+        {
+            "committee_id": "2683",
+            "committee_code": "CB4/COA",
+            "name_eng": "Committee on Access to the Legislature's Documents and Records",
+            "name_chi": "查閱立法機關文件及紀錄事宜委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/coa/coa_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/coa/coa_1620.htm"
+        },
+        {
+            "committee_id": "2541",
+            "committee_code": "CB4/SC/PL",
+            "name_eng": "Parliamentary Liaison Subcommittee",
+            "name_chi": "議會聯絡小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/hc/yr16-20/parl1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/hc/yr16-20/parl1620.htm"
+        },
+        {
+            "committee_id": "2644",
+            "committee_code": "CMI",
+            "name_eng": "Committee on Members' Interests",
+            "name_chi": "議員個人利益監察委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/cmi/cmi_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/cmi/cmi_1620.htm"
+        },
+        {
+            "committee_id": "2567",
+            "committee_code": "FC",
+            "name_eng": "Finance Committee",
+            "name_chi": "財務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/fc/fc1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/fc/fc1620.htm"
+        },
+        {
+            "committee_id": "2573",
+            "committee_code": "FC/1",
+            "name_eng": "Finance Committee Briefing",
+            "name_chi": "財務委員會簡報會",
+            "term_id": 5,
+            "home_url_eng": "",
+            "home_url_chi": ""
+        },
+        {
+            "committee_id": "2669",
+            "committee_code": "FC/ESC",
+            "name_eng": "Establishment Subcommittee",
+            "name_chi": "人事編制小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/fc/fc1620.htm#esc",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/fc/fc1620.htm#esc"
+        },
+        {
+            "committee_id": "2827",
+            "committee_code": "FC/ESC",
+            "name_eng": "Establishment Subcommittee",
+            "name_chi": "人事編制小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/fc/fc1620.htm#esc",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/fc/fc1620.htm#esc"
+        },
+        {
+            "committee_id": "2943",
+            "committee_code": "FC/ESC",
+            "name_eng": "Establishment Subcommittee",
+            "name_chi": "人事編制小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/fc/fc1620.htm#esc",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/fc/fc1620.htm#esc"
+        },
+        {
+            "committee_id": "3059",
+            "committee_code": "FC/ESC",
+            "name_eng": "Establishment Subcommittee",
+            "name_chi": "人事編制小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/fc/fc1620.htm#esc",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/fc/fc1620.htm#esc"
+        },
+        {
+            "committee_id": "2558",
+            "committee_code": "FC/FS",
+            "name_eng": "Briefing by the Financial Secretary",
+            "name_chi": "財政司司長舉行的簡報會",
+            "term_id": 5,
+            "home_url_eng": "",
+            "home_url_chi": ""
+        },
+        {
+            "committee_id": "2670",
+            "committee_code": "FC/PWSC",
+            "name_eng": "Public Works Subcommittee",
+            "name_chi": "工務小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/fc/fc1620.htm#pwsc",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/fc/fc1620.htm#pwsc"
+        },
+        {
+            "committee_id": "2795",
+            "committee_code": "FC/PWSC",
+            "name_eng": "Public Works Subcommittee",
+            "name_chi": "工務小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/fc/fc1620.htm#pwsc",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/fc/fc1620.htm#pwsc"
+        },
+        {
+            "committee_id": "2921",
+            "committee_code": "FC/PWSC",
+            "name_eng": "Public Works Subcommittee",
+            "name_chi": "工務小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/fc/fc1620.htm#pwsc",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/fc/fc1620.htm#pwsc"
+        },
+        {
+            "committee_id": "3037",
+            "committee_code": "FC/PWSC",
+            "name_eng": "Public Works Subcommittee",
+            "name_chi": "工務小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/fc/fc1620.htm#pwsc",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/fc/fc1620.htm#pwsc"
+        },
+        {
+            "committee_id": "2548",
+            "committee_code": "HC/1",
+            "name_eng": "House Committee",
+            "name_chi": "內務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/hc/hc1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/hc/hc1620.htm"
+        },
+        {
+            "committee_id": "2690",
+            "committee_code": "HS/1/16",
+            "name_eng": "Subcommittee to Examine the Implementation in Hong Kong of Resolutions of the United Nations Security Council in relation to Sanctions",
+            "name_chi": "研究在香港實施聯合國安全理事會就制裁事宜所作決議的小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs01/general/hs01.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs01/general/hs01.htm"
+        },
+        {
+            "committee_id": "3068",
+            "committee_code": "HS/1/19",
+            "name_eng": "Subcommittee on Issues Relating to Policy on Industrial Buildings",
+            "name_chi": "工業大廈政策相關事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs03/general/hs03.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs03/general/hs03.htm"
+        },
+        {
+            "committee_id": "2693",
+            "committee_code": "HS/101/16",
+            "name_eng": "Subcommittee on Children's Rights",
+            "name_chi": "兒童權利小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs101/general/hs101.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs101/general/hs101.htm"
+        },
+        {
+            "committee_id": "2866",
+            "committee_code": "HS/101/17",
+            "name_eng": "Subcommittee on Proposed Senior Judicial Appointments",
+            "name_chi": "資深司法任命建議小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_com/hs101/general/hs101.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_com/hs101/general/hs101.htm"
+        },
+        {
+            "committee_id": "3022",
+            "committee_code": "HS/101/18",
+            "name_eng": "Subcommittee on Proposed Senior Judicial Appointments",
+            "name_chi": "資深司法任命建議小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_com/hs101/general/hs101.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_com/hs101/general/hs101.htm"
+        },
+        {
+            "committee_id": "2695",
+            "committee_code": "HS/102/16",
+            "name_eng": "Subcommittee to Follow up Issues Relating to the Three-runway System at the Hong Kong International Airport",
+            "name_chi": "跟進香港國際機場三跑道系統相關事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs102/general/hs102.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs102/general/hs102.htm"
+        },
+        {
+            "committee_id": "2720",
+            "committee_code": "HS/103/16",
+            "name_eng": "Subcommittee on Proposed Senior Judicial Appointments",
+            "name_chi": "資深司法任命建議小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs103/general/hs103.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs103/general/hs103.htm"
+        },
+        {
+            "committee_id": "2848",
+            "committee_code": "HS/104/16",
+            "name_eng": "Subcommittee on Issues Relating to Shopping Centres, Markets and Carparks in Public Rental Housing Estates and Home Ownership Scheme Estates",
+            "name_chi": "公屋及居屋商場、街市及停車場事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs104/general/hs104.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs104/general/hs104.htm"
+        },
+        {
+            "committee_id": "2704",
+            "committee_code": "HS/2/16",
+            "name_eng": "Subcommittee on Issues Relating to Bazaars",
+            "name_chi": "墟市事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/general/hs02.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/general/hs02.htm"
+        },
+        {
+            "committee_id": "2691",
+            "committee_code": "HS/51/16",
+            "name_eng": "Subcommittee on Retirement Protection",
+            "name_chi": "退休保障事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs51/general/hs51.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs51/general/hs51.htm"
+        },
+        {
+            "committee_id": "2692",
+            "committee_code": "HS/52/16",
+            "name_eng": "Subcommittee on Rights of Ethnic Minorities",
+            "name_chi": "少數族裔權益事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs52/general/hs52.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs52/general/hs52.htm"
+        },
+        {
+            "committee_id": "2701",
+            "committee_code": "HS/53/16",
+            "name_eng": "Subcommittee to Prepare for the Operation of the Select Committee on the Petition Presented at the Council Meeting of 2 November 2016",
+            "name_chi": "為處理2016年11月2日立法會會議上提交的呈請書的專責委員會籌備運作事宜的小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs53/general/hs53.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs53/general/hs53.htm"
+        },
+        {
+            "committee_id": "2854",
+            "committee_code": "HS/54/16",
+            "name_eng": "Subcommittee to Follow Up Issues Relating to the Unified Screening Mechanism for Non-refoulement Claims",
+            "name_chi": "跟進免遣返聲請統一審核機制有關事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs54/general/hs54.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs54/general/hs54.htm"
+        },
+        {
+            "committee_id": "2714",
+            "committee_code": "IC/01",
+            "name_eng": "Investigation Committee established under Rule 49B(2A) of the Rules of Procedure in respect of the motion to censure Dr Hon CHENG Chung-tai",
+            "name_chi": "根據《議事規則》第49B(2A)條就譴責鄭松泰議員的議案成立的調查委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/invest/ic_cct/general/ic_cct.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/invest/ic_cct/general/ic_cct.htm"
+        },
+        {
+            "committee_id": "2777",
+            "committee_code": "IC/16",
+            "name_eng": "Investigation Committee established under Rule 49B(2A) of the Rules of Procedure in respect of the motion to censure Hon Holden CHOW Ho-ding",
+            "name_chi": "根據《議事規則》第49B(2A)條就譴責周浩鼎議員的議案成立的調查委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/invest/ic_chdh/general/ic_chdh.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/invest/ic_chdh/general/ic_chdh.htm"
+        },
+        {
+            "committee_id": "2895",
+            "committee_code": "IC/17",
+            "name_eng": "Investigation Committee established under Rule 49B(2A) of the Rules of Procedure in respect of the motion to censure Hon HUI Chi-fung",
+            "name_chi": "根據《議事規則》第49B(2A)條就譴責許智峯議員的議案成立的調查委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/invest/ic_hcf/general/ic_hcf.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/invest/ic_hcf/general/ic_hcf.htm"
+        },
+        {
+            "committee_id": "2560",
+            "committee_code": "OMBUDSMAN",
+            "name_eng": "Members' Meeting with The Ombudsman",
+            "name_chi": "立法會議員與申訴專員舉行會議",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/ombuds/omb_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/ombuds/omb_1620.htm"
+        },
+        {
+            "committee_id": "2648",
+            "committee_code": "PL/AJLS",
+            "name_eng": "Panel on Administration of Justice and Legal Services",
+            "name_chi": "司法及法律事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ajls.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ajls.htm"
+        },
+        {
+            "committee_id": "2596",
+            "committee_code": "PL/CA",
+            "name_eng": "Panel on Constitutional Affairs",
+            "name_chi": "政制事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ca.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ca.htm"
+        },
+        {
+            "committee_id": "2612",
+            "committee_code": "PL/DEV",
+            "name_eng": "Panel on Development",
+            "name_chi": "發展事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/dev.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/dev.htm"
+        },
+        {
+            "committee_id": "2700",
+            "committee_code": "PL/DEV/HA/S2",
+            "name_eng": "Joint Subcommittee to Monitor the Implementation of the West Kowloon Cultural District Project",
+            "name_chi": "監察西九文化區計劃推行情況聯合小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/wkcd.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/wkcd.htm"
+        },
+        {
+            "committee_id": "2599",
+            "committee_code": "PL/EA",
+            "name_eng": "Panel on Environmental Affairs",
+            "name_chi": "環境事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ea.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ea.htm"
+        },
+        {
+            "committee_id": "2696",
+            "committee_code": "PL/EA/S1",
+            "name_eng": "Subcommittee on Refuse Collection and Resource Recovery",
+            "name_chi": "垃圾收集及資源回收小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ea_rcrr.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ea_rcrr.htm"
+        },
+        {
+            "committee_id": "2650",
+            "committee_code": "PL/ED",
+            "name_eng": "Panel on Education",
+            "name_chi": "教育事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ed.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ed.htm"
+        },
+        {
+            "committee_id": "2601",
+            "committee_code": "PL/EDEV",
+            "name_eng": "Panel on Economic Development",
+            "name_chi": "經濟發展事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/edev.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/edev.htm"
+        },
+        {
+            "committee_id": "2603",
+            "committee_code": "PL/FA",
+            "name_eng": "Panel on Financial Affairs",
+            "name_chi": "財經事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/fa.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/fa.htm"
+        },
+        {
+            "committee_id": "2597",
+            "committee_code": "PL/FE",
+            "name_eng": "Panel on Food Safety and Environmental Hygiene",
+            "name_chi": "食物安全及環境衞生事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/fseh.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/fseh.htm"
+        },
+        {
+            "committee_id": "2703",
+            "committee_code": "PL/FE/S4",
+            "name_eng": "Subcommittee to Study Issues Relating to Animal Rights",
+            "name_chi": "研究動物權益相關事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/fseh_ar.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/fseh_ar.htm"
+        },
+        {
+            "committee_id": "2853",
+            "committee_code": "PL/FE/S5",
+            "name_eng": "Subcommittee on Issues Relating to Public Markets",
+            "name_chi": "研究公眾街市事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/fseh_pm.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/fseh_pm.htm"
+        },
+        {
+            "committee_id": "2606",
+            "committee_code": "PL/HA",
+            "name_eng": "Panel on Home Affairs",
+            "name_chi": "民政事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ha.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ha.htm"
+        },
+        {
+            "committee_id": "2987",
+            "committee_code": "PL/HA/DEV/S6",
+            "name_eng": "Joint Subcommittee to Follow Up Issues Relating to the Redevelopment, Maintenance and Management of Aged Buildings",
+            "name_chi": "跟進舊樓重建、維修及管理事宜聯合小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/rmab.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/rmab.htm"
+        },
+        {
+            "committee_id": "2971",
+            "committee_code": "PL/HG/S1",
+            "name_eng": "Subcommittee to Follow Up Issues Related to Inadequate Housing and Relevant Housing Policies",
+            "name_chi": "跟進本地不適切住屋問題及相關房屋政策事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/hg_ihp.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/hg_ihp.htm"
+        },
+        {
+            "committee_id": "2608",
+            "committee_code": "PL/HOU",
+            "name_eng": "Panel on Housing",
+            "name_chi": "房屋事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/hg.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/hg.htm"
+        },
+        {
+            "committee_id": "2610",
+            "committee_code": "PL/HS",
+            "name_eng": "Panel on Health Services",
+            "name_chi": "衞生事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/hs.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/hs.htm"
+        },
+        {
+            "committee_id": "2972",
+            "committee_code": "PL/HS/CI/S1",
+            "name_eng": "Joint Subcommittee on Issues Relating to the Regulation of Devices and Development of the Beauty Industry",
+            "name_chi": "美容業儀器規管和發展事宜聯合小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/dbi.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/dbi.htm"
+        },
+        {
+            "committee_id": "2986",
+            "committee_code": "PL/HS/S5",
+            "name_eng": "Subcommittee on Issues Relating to the Support for Cancer Patients",
+            "name_chi": "支援癌症病患者事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/hs_scp.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/hs_scp.htm"
+        },
+        {
+            "committee_id": "3069",
+            "committee_code": "PL/HS/S6",
+            "name_eng": "Subcommittee on Issues Relating to the Development of Chinese Medicine",
+            "name_chi": "中醫藥發展事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/general/english/panels/yr16-20/hs_dcm.htm",
+            "home_url_chi": "https://www.legco.gov.hk/general/chinese/panels/yr16-20/hs_dcm.htm"
+        },
+        {
+            "committee_id": "2649",
+            "committee_code": "PL/ITB",
+            "name_eng": "Panel on Information Technology and Broadcasting",
+            "name_chi": "資訊科技及廣播事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/itb.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/itb.htm"
+        },
+        {
+            "committee_id": "2611",
+            "committee_code": "PL/MP",
+            "name_eng": "Panel on Manpower",
+            "name_chi": "人力事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/mp.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/mp.htm"
+        },
+        {
+            "committee_id": "2647",
+            "committee_code": "PL/PS",
+            "name_eng": "Panel on Public Service",
+            "name_chi": "公務員及資助機構員工事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ps.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ps.htm"
+        },
+        {
+            "committee_id": "2613",
+            "committee_code": "PL/SE",
+            "name_eng": "Panel on Security",
+            "name_chi": "保安事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/se.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/se.htm"
+        },
+        {
+            "committee_id": "2594",
+            "committee_code": "PL/TI",
+            "name_eng": "Panel on Commerce and Industry",
+            "name_chi": "工商事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ci.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ci.htm"
+        },
+        {
+            "committee_id": "2698",
+            "committee_code": "PL/TP/S1",
+            "name_eng": "Subcommittee on Matters Relating to Railways",
+            "name_chi": "鐵路事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/tp_rdp.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/tp_rdp.htm"
+        },
+        {
+            "committee_id": "2992",
+            "committee_code": "PL/TP/S2",
+            "name_eng": "Subcommittee on Hillside Escalator Links and Elevator Systems",
+            "name_chi": "上坡地區自動扶梯連接系統和升降機系統小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/general/english/panels/yr16-20/tp_hel.htm",
+            "home_url_chi": "https://www.legco.gov.hk/general/chinese/panels/yr16-20/tp_hel.htm"
+        },
+        {
+            "committee_id": "2686",
+            "committee_code": "PL/TRA",
+            "name_eng": "Panel on Transport",
+            "name_chi": "交通事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/tp.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/tp.htm"
+        },
+        {
+            "committee_id": "2598",
+            "committee_code": "PL/WS",
+            "name_eng": "Panel on Welfare Services",
+            "name_chi": "福利事務委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ws.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ws.htm"
+        },
+        {
+            "committee_id": "2702",
+            "committee_code": "PL/WS/HS/S12",
+            "name_eng": "Joint Subcommittee on Long-term Care Policy",
+            "name_chi": "長期護理政策聯合小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/ltcp.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/ltcp.htm"
+        },
+        {
+            "committee_id": "2860",
+            "committee_code": "PS/1/17",
+            "name_eng": "Subcommittee to Follow Up the Issues Related to the Wang Chau Development Project",
+            "name_chi": "跟進橫洲發展項目事宜小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/panels/yr16-20/hg_wcdp.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/panels/yr16-20/hg_wcdp.htm"
+        },
+        {
+            "committee_id": "2651",
+            "committee_code": "RP",
+            "name_eng": "Committee on Rules of Procedure",
+            "name_chi": "議事規則委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/general/english/procedur/pro_1620.htm",
+            "home_url_chi": "http://www.legco.gov.hk/general/chinese/procedur/pro_1620.htm"
+        },
+        {
+            "committee_id": "2694",
+            "committee_code": "SC/1/16",
+            "name_eng": "Subcommittee on Mandatory Provident Fund Schemes (Amendment) Ordinance 2016 (Commencement) Notice",
+            "name_chi": "《〈2016年強制性公積金計劃(修訂)條例〉(生效日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc01/general/sc01.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc01/general/sc01.htm"
+        },
+        {
+            "committee_id": "2836",
+            "committee_code": "SC/1/17",
+            "name_eng": "Subcommittee on Waterworks (Amendment) (No. 2) Regulation 2017",
+            "name_chi": "《2017年水務設施(修訂)(第2號)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc01/general/sc01.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc01/general/sc01.htm"
+        },
+        {
+            "committee_id": "2952",
+            "committee_code": "SC/1/18",
+            "name_eng": "Subcommittee on Tax Reserve Certificates (Rate of Interest) (Consolidation) (Amendment) Notice 2018",
+            "name_chi": "《2018年儲稅券(利率)(綜合)(修訂)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc01/general/sc01.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc01/general/sc01.htm"
+        },
+        {
+            "committee_id": "2881",
+            "committee_code": "SC/10/17",
+            "name_eng": "Subcommittee on Construction Workers Registration Ordinance (Expiry of Section 39(1)(b) and (d)) Notice",
+            "name_chi": "《〈建造業工人註冊條例〉(第39(1)(b)及(d)條失效)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc10/general/sc10.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc10/general/sc10.htm"
+        },
+        {
+            "committee_id": "2994",
+            "committee_code": "SC/10/18",
+            "name_eng": "Subcommittee on Revenue (Reduction of Business Registration Fees and Branch Registration Fees) Order 2019",
+            "name_chi": "《2019年收入(減少商業登記費及分行登記費)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc10/general/sc10.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc10/general/sc10.htm"
+        },
+        {
+            "committee_id": "2688",
+            "committee_code": "SC/101/16",
+            "name_eng": "Subcommittee on Road Traffic (Public Light Buses: Limit on Number) Notice 2016",
+            "name_chi": "《2016 年道路交通(公共小巴：數目限定)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc101/general/sc101.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc101/general/sc101.htm"
+        },
+        {
+            "committee_id": "2833",
+            "committee_code": "SC/101/17",
+            "name_eng": "Subcommittee on Trainee Solicitors (Amendment) Rules 2017 (Commencement) Notice",
+            "name_chi": "《〈2017年實習律師(修訂)規則〉(生效日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc101/general/sc101.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc101/general/sc101.htm"
+        },
+        {
+            "committee_id": "2953",
+            "committee_code": "SC/101/18",
+            "name_eng": "Subcommittee on Peak Tramway (Safety) (Amendment) Regulation 2018 and Peak Tramway Ordinance (Amendment of Section 3(3)) Notice 2018",
+            "name_chi": "《2018年山頂纜車 (安全) (修訂) 規例》及《2018年山頂纜車條例 (修訂第3(3)條) 公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc101/general/sc101.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc101/general/sc101.htm"
+        },
+        {
+            "committee_id": "2709",
+            "committee_code": "SC/102/16",
+            "name_eng": "Subcommittee on Solicitors (Professional Indemnity) (Amendment) Rules 2016 and Solicitors' Practice (Amendment) Rules 2016",
+            "name_chi": "《 2016 年律師(專業彌償)(修訂)規則》及《 2016 年律師執業(修訂)規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc102/general/sc102.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc102/general/sc102.htm"
+        },
+        {
+            "committee_id": "2841",
+            "committee_code": "SC/102/17",
+            "name_eng": "Subcommittee on Telecommunications (Designation of Frequency Bands subject to Payment of Spectrum Utilization Fee) (Amendment) Order 2017 \nand Telecommunications (Level of Spectrum Utilization Fee) (Fixed and Other Links) Regulation",
+            "name_chi": "《2017年電訊(指定須繳付頻譜使用費的頻帶)(修訂)令》及《電訊(頻譜使用費水平)(固定及其他鏈路)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc102/general/sc102.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc102/general/sc102.htm"
+        },
+        {
+            "committee_id": "2957",
+            "committee_code": "SC/102/18",
+            "name_eng": "Subcommittee on Subsidiary Legislation to Commence the Requirements of the 2006 Maritime Labour Convention in Hong Kong",
+            "name_chi": "《2006年海事勞工公約》在香港生效的附屬法例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc102/general/sc102.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc102/general/sc102.htm"
+        },
+        {
+            "committee_id": "2711",
+            "committee_code": "SC/103/16",
+            "name_eng": "Subcommittee on Port Control (Cargo Working Areas) (Amendment) Regulation 2016",
+            "name_chi": "《2016年港口管制(貨物裝卸區)(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc103/general/sc103.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc103/general/sc103.htm"
+        },
+        {
+            "committee_id": "2845",
+            "committee_code": "SC/103/17",
+            "name_eng": "Subcommittee on Legislative Amendments to Improve Vessel Traffic Services and Regulate Marine Safety",
+            "name_chi": "修訂法例以改善船隻航行監察服務及規管海上交通的小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc103/general/sc103.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc103/general/sc103.htm"
+        },
+        {
+            "committee_id": "2963",
+            "committee_code": "SC/103/18",
+            "name_eng": "Subcommittee on Foreign Lawyers Practice (Amendment) Rules 2018 (Commencement) Notice, Solicitors' Practice (Amendment) Rules 2018 (Commencement) Notice and Summary Disposal of Complaints (Solicitors) (Amendment) Rules 2018 (Commencement) Notice",
+            "name_chi": "《〈2018年外地律師執業(修訂)規則〉(生效日期)公告》、《〈2018年律師執業(修訂)規則〉\n(生效日期)公告》及《〈2018年簡易處理申訴(律師)(修訂)規則〉(生效日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc103/general/sc103.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc103/general/sc103.htm"
+        },
+        {
+            "committee_id": "2715",
+            "committee_code": "SC/104/16",
+            "name_eng": "Subcommittee on Merchant Shipping (Local Vessels) (General) (Amendment) Regulation 2016 and Merchant Shipping (Local Vessels) (Safety and Survey) (Amendment) Regulation 2016",
+            "name_chi": "《2016年商船(本地船隻)(一般)(修訂)規例》及《2016年商船(本地船隻)(安全及檢驗)(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc104/general/sc104.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc104/general/sc104.htm"
+        },
+        {
+            "committee_id": "2864",
+            "committee_code": "SC/104/17",
+            "name_eng": "Subcommittee on Proposed Resolutions under the District Court Ordinance and the Small Claims Tribunal Ordinance",
+            "name_chi": "根據《區域法院條例》及《小額錢債審裁處條例》提出的擬議決議案小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc104/general/sc104.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc104/general/sc104.htm"
+        },
+        {
+            "committee_id": "2974",
+            "committee_code": "SC/104/18",
+            "name_eng": "Subcommittee on Three Regulations to Exempt the Toll for Franchised Buses Using Government Tunnels as well as the Tsing Ma and Tsing Sha Control Areas",
+            "name_chi": "豁免專營巴士使用政府隧道和青馬及青沙管制區的收費的3條規例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc104/general/sc104.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc104/general/sc104.htm"
+        },
+        {
+            "committee_id": "2719",
+            "committee_code": "SC/105/16",
+            "name_eng": "Subcommittee on Public Bus Franchisees' Schedule of Routes Orders",
+            "name_chi": "公共專營巴士公司路線表令小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc105/general/sc105.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc105/general/sc105.htm"
+        },
+        {
+            "committee_id": "2872",
+            "committee_code": "SC/105/17",
+            "name_eng": "Subcommittee on Toys and Children's Products Safety Ordinance (Amendment of Schedules 1 and 2) Notice 2018",
+            "name_chi": "《2018年玩具及兒童產品安全條例 (修訂附表1及2)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc105/general/sc105.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc105/general/sc105.htm"
+        },
+        {
+            "committee_id": "2729",
+            "committee_code": "SC/106/16",
+            "name_eng": "Subcommittee on Two Proposed Resolutions under the Fixed Penalty (Traffic Contraventions) Ordinance and the Fixed Penalty (Criminal Proceedings) Ordinance",
+            "name_chi": "兩項根據《定額罰款(交通違例事項)條例》及《定額罰款(刑事訴訟)條例》提出的擬議決議案小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc106/general/sc106.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc106/general/sc106.htm"
+        },
+        {
+            "committee_id": "3008",
+            "committee_code": "SC/106/18",
+            "name_eng": "Subcommittee on Subsidiary Legislation to Implement the Latest Requirements under Conventions of the International Maritime Organization",
+            "name_chi": "實施國際海事組織有關公約的最新要求的附屬法例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc106/general/sc106.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc106/general/sc106.htm"
+        },
+        {
+            "committee_id": "2739",
+            "committee_code": "SC/107/16",
+            "name_eng": "Subcommittee on Three Regulations to Effect Toll Payment through Electronic Payment Facility",
+            "name_chi": "實施透過電子付款設施繳費安排的3項規例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc107/general/sc107.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc107/general/sc107.htm"
+        },
+        {
+            "committee_id": "2889",
+            "committee_code": "SC/107/17",
+            "name_eng": "Subcommittee on Practising Certificate (Solicitors) (Amendment) Rules 2018",
+            "name_chi": "《2018年執業證書(律師)(修訂)規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc107/general/sc107.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc107/general/sc107.htm"
+        },
+        {
+            "committee_id": "3006",
+            "committee_code": "SC/107/18",
+            "name_eng": "Subcommittee on Toys and Children's Products Safety Ordinance (Amendment of Schedules 1 and 2) Notice 2019",
+            "name_chi": "《2019年玩具及兒童產品安全條例(修訂附表1及2)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc107/general/sc107.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc107/general/sc107.htm"
+        },
+        {
+            "committee_id": "2738",
+            "committee_code": "SC/108/16",
+            "name_eng": "Subcommittee on Proposed Resolution under Section 23(3) of the Road Traffic Ordinance (Cap. 374)",
+            "name_chi": "根據《道路交通條例》(第374章)第23(3)條提出的擬議決議案小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc108/general/sc108.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc108/general/sc108.htm"
+        },
+        {
+            "committee_id": "2890",
+            "committee_code": "SC/108/17",
+            "name_eng": "Subcommittee on Public Bus Franchisees' Schedule of Routes Orders",
+            "name_chi": "公共專營巴士公司路線表令小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc108/general/sc108.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc108/general/sc108.htm"
+        },
+        {
+            "committee_id": "3007",
+            "committee_code": "SC/108/18",
+            "name_eng": "Subcommittee on Solicitors (Professional Indemnity) (Amendment) Rules 2019 and Solicitors (Professional Indemnity) (Amendment) (No. 2) Rules 2019",
+            "name_chi": "《2019年律師(專業彌償)(修訂)規則》及《2019年律師(專業彌償)(修訂)(第2號)規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc108/general/sc108.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc108/general/sc108.htm"
+        },
+        {
+            "committee_id": "2751",
+            "committee_code": "SC/109/16",
+            "name_eng": "Subcommittee on Technical Legislative Amendments on Traffic Arrangements for the Hong Kong—Zhuhai—Macao Bridge",
+            "name_chi": "與港珠澳大橋交通安排相關的技術性法例修訂小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc109/general/sc109.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc109/general/sc109.htm"
+        },
+        {
+            "committee_id": "2891",
+            "committee_code": "SC/109/17",
+            "name_eng": "Subcommittee on Subsidiary Legislation Relating to Spectrum Utilization Fees",
+            "name_chi": "與頻譜使用費相關的附屬法例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc109/general/sc109.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc109/general/sc109.htm"
+        },
+        {
+            "committee_id": "3015",
+            "committee_code": "SC/109/18",
+            "name_eng": "Subcommittee on Subsidiary Legislation Relating to the Central Military Dock",
+            "name_chi": "與中區軍用碼頭相關的附屬法例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc109/general/sc109.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc109/general/sc109.htm"
+        },
+        {
+            "committee_id": "2754",
+            "committee_code": "SC/11/16",
+            "name_eng": "Subcommittee on Energy Efficiency (Labelling of Products) Ordinance (Amendment of Schedule 1) Order 2017",
+            "name_chi": "《2017年能源效益(產品標籤)條例(修訂附表1)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc11/general/sc11.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc11/general/sc11.htm"
+        },
+        {
+            "committee_id": "2888",
+            "committee_code": "SC/11/17",
+            "name_eng": "Subcommittee on Proposed Resolutions under Construction Industry Council Ordinance and Pneumoconiosis and Mesothelioma (Compensation) Ordinance",
+            "name_chi": "根據《建造業議會條例》及《肺塵埃沉着病及間皮瘤(補償)條例》提出的擬議決議案小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc11/general/sc11.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc11/general/sc11.htm"
+        },
+        {
+            "committee_id": "2997",
+            "committee_code": "SC/11/18",
+            "name_eng": "Subcommittee on Non-Hong Kong Companies (Disclosure of Company Name, Place of Incorporation and Members' Limited Liability) Regulation, Companies (Amendment) (No. 2) Ordinance 2018 (Commencement) Notice and Companies Ordinance (Amendment of Schedule 7) Notice 2019",
+            "name_chi": "《非香港公司(披露公司名稱、成立為法團所在地方及成員的有限法律責任)規例》、《〈2018年公司(修訂)(第2號)條例〉(生效日期)公告》及《2019年公司條例(修訂附表7)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "",
+            "home_url_chi": ""
+        },
+        {
+            "committee_id": "2753",
+            "committee_code": "SC/110/16",
+            "name_eng": "Subcommittee on Proposed Resolution under Section 5(3)(b) of the Public Bus Services Ordinance (Cap. 230)",
+            "name_chi": "根據《公共巴士服務條例》(第230章)第5(3)(b)條提出的擬議決議案小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc110/general/sc110.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc110/general/sc110.htm"
+        },
+        {
+            "committee_id": "2897",
+            "committee_code": "SC/110/17",
+            "name_eng": "Subcommittee on Proposed Resolution under Section 4(5) of the Fatal Accidents Ordinance (Cap. 22)",
+            "name_chi": "根據《致命意外條例》(第22章)第4(5)條提出的擬議決議案小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc110/general/sc110.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc110/general/sc110.htm"
+        },
+        {
+            "committee_id": "2762",
+            "committee_code": "SC/111/16",
+            "name_eng": "Subcommittee on Legislative Amendments for Imposing Conditions on Vessels Navigating in the Vicinity of the Hong Kong-Zhuhai-Macao Bridge",
+            "name_chi": "修訂法例以對在港珠澳大橋一帶水域航行的船隻施加限制的小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc111/general/sc111.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc111/general/sc111.htm"
+        },
+        {
+            "committee_id": "2949",
+            "committee_code": "SC/111/17",
+            "name_eng": "Subcommittee on Guangzhou-Shenzhen-Hong Kong Express Rail Link (Co-location) Ordinance (Commencement) Notice",
+            "name_chi": "《〈廣深港高鐵(一地兩檢)條例〉(生效日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc111/general/sc111.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc111/general/sc111.htm"
+        },
+        {
+            "committee_id": "2950",
+            "committee_code": "SC/112/17",
+            "name_eng": "Subcommittee on Tai Lam Tunnel and Yuen Long Approach Road Ordinance (Amendment of Schedule 1) Notice 2018 and Western Harbour Crossing Ordinance (Amendment of Schedule 1) Notice 2018",
+            "name_chi": "《2018年大欖隧道及元朗引道條例(修訂附表1)公告》及《2018年西區海底隧道條例(修訂附表1)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc112/general/sc112.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc112/general/sc112.htm"
+        },
+        {
+            "committee_id": "3062",
+            "committee_code": "SC/112/18",
+            "name_eng": "Subcommittee on Travel Industry Ordinance (Commencement) Notice 2019",
+            "name_chi": "《2019年〈旅遊業條例〉(生效日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc112/general/sc112.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc112/general/sc112.htm"
+        },
+        {
+            "committee_id": "2761",
+            "committee_code": "SC/113/16",
+            "name_eng": "Subcommittee on Toys and Children's Products Safety Ordinance (Amendment of Schedules 1 and 2) Notice 2017",
+            "name_chi": "《2017年玩具及兒童產品安全條例(修訂附表1及2)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc113/general/sc113.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc113/general/sc113.htm"
+        },
+        {
+            "committee_id": "2769",
+            "committee_code": "SC/115/16",
+            "name_eng": "Subcommittee on Hong Kong Civil Aviation (Investigation of Accidents) (Amendment) Regulation 2017 and Air Navigation (Hong Kong) Order 1995 (Amendment) Order 2017",
+            "name_chi": "《2017年香港民航(意外調查)(修訂)規例》及《2017年〈1995年飛航(香港)令〉(修訂)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc115/general/sc115.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc115/general/sc115.htm"
+        },
+        {
+            "committee_id": "2772",
+            "committee_code": "SC/116/16",
+            "name_eng": "Subcommittee on Rules of the High Court (Amendment) Rules 2017",
+            "name_chi": "《2017年高等法院規則(修訂)規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc116/general/sc116.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc116/general/sc116.htm"
+        },
+        {
+            "committee_id": "2775",
+            "committee_code": "SC/117/16",
+            "name_eng": "Subcommittee on Proposed Resolution under Section 7(a) of the Legal Aid Ordinance (Cap. 91)",
+            "name_chi": "根據《法律援助條例》(第91章)第7(a)條提出的擬議決議案小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc117/general/sc117.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc117/general/sc117.htm"
+        },
+        {
+            "committee_id": "2756",
+            "committee_code": "SC/12/16",
+            "name_eng": "Subcommittee on Financial Institutions (Resolution) (Protected Arrangements) Regulation and Financial Institutions (Resolution) Ordinance Commencement) Notice 2017",
+            "name_chi": "《金融機構(處置機制)(受保障安排)規例》及《2017年〈金融機構(處置機制)條例〉(生效日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc12/general/sc12.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc12/general/sc12.htm"
+        },
+        {
+            "committee_id": "2892",
+            "committee_code": "SC/12/17",
+            "name_eng": "Subcommittee on Three Pieces of Subsidiary Legislation Related to the Open-ended Fund Company Regime and Gazetted on 18 May 2018",
+            "name_chi": "與開放式基金型公司制度有關並於2018年5月18日在憲報刊登的三項附屬法例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc12/general/sc12.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc12/general/sc12.htm"
+        },
+        {
+            "committee_id": "2998",
+            "committee_code": "SC/12/18",
+            "name_eng": "Subcommittee on Patents (General) (Amendment) Rules 2019",
+            "name_chi": "《2019年專利(一般)(修訂)規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc12/general/sc12.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc12/general/sc12.htm"
+        },
+        {
+            "committee_id": "2758",
+            "committee_code": "SC/13/16",
+            "name_eng": "Subcommittee on Waterworks (Amendment) Regulation 2017",
+            "name_chi": "《2017年水務設施(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc13/general/sc13.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc13/general/sc13.htm"
+        },
+        {
+            "committee_id": "2893",
+            "committee_code": "SC/13/17",
+            "name_eng": "Subcommittee on Securities and Futures (Professional Investor) (Amendment) Rules 2018",
+            "name_chi": "《2018 年證券及期貨(專業投資者)(修訂)規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc13/general/sc13.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc13/general/sc13.htm"
+        },
+        {
+            "committee_id": "3003",
+            "committee_code": "SC/13/18",
+            "name_eng": "Subcommittee on Insurance (Prescribed Fees) (Amendment) Regulation 2019",
+            "name_chi": "《2019年保險業(訂明費用)(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc13/general/sc13.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc13/general/sc13.htm"
+        },
+        {
+            "committee_id": "2900",
+            "committee_code": "SC/14/17",
+            "name_eng": "Subcommittee on Proposed Resolution under Section 3(1) of the Loans Ordinance (Cap. 61)",
+            "name_chi": "根據《借款條例》(第61 章)第3(1)條提出的擬議決議案小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc14/general/sc14.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc14/general/sc14.htm"
+        },
+        {
+            "committee_id": "3012",
+            "committee_code": "SC/14/18",
+            "name_eng": "Subcommittee on Entertainment Special Effects (Fees) (Amendment) Regulation 2019",
+            "name_chi": "《2019年娛樂特別效果(費用)(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc14/general/sc14.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc14/general/sc14.htm"
+        },
+        {
+            "committee_id": "2948",
+            "committee_code": "SC/15/17",
+            "name_eng": "Subcommittee on Two Orders Made under Section 49(1A) of the Inland Revenue Ordinance and Gazetted on 14 September 2018",
+            "name_chi": "根據《稅務條例》第49(1A)條作出並於2018年9月14日在憲報刊登的兩項命令小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc15/general/sc15.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc15/general/sc15.htm"
+        },
+        {
+            "committee_id": "3013",
+            "committee_code": "SC/15/18",
+            "name_eng": "Subcommittee on Trade Descriptions Ordinance (Amendment of Schedule 1) Notice 2019",
+            "name_chi": "《2019年商品說明條例(修訂附表1)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "",
+            "home_url_chi": ""
+        },
+        {
+            "committee_id": "2829",
+            "committee_code": "SC/16/16",
+            "name_eng": "Subcommittee on Country Parks (Designation) (Consolidation) (Amendment) Order 2017",
+            "name_chi": "《2017年郊野公園(指定)(綜合)(修訂)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc16/general/sc16.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc16/general/sc16.htm"
+        },
+        {
+            "committee_id": "3020",
+            "committee_code": "SC/16/18",
+            "name_eng": "Subcommittee on Telecommunications (Method for Determining Spectrum Utilization Fee) (Spectrum for Auction) Regulation and Telecommunications (Designation of Frequency Bands subject to Payment of Spectrum Utilization Fee) (Amendment) Order 2019",
+            "name_chi": "《電訊(釐定頻譜使用費的方法)(供拍賣頻譜)規例》及《2019年電訊(指定須繳付頻譜使用費的頻帶)(修訂)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc16/general/sc16.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc16/general/sc16.htm"
+        },
+        {
+            "committee_id": "3021",
+            "committee_code": "SC/18/18",
+            "name_eng": "Subcommittee on Financial Reporting Council (Amendment) Ordinance 2019 (Commencement) Notice",
+            "name_chi": "《〈2019年財務匯報局(修訂)條例〉(生效日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc18/general/sc18.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc18/general/sc18.htm"
+        },
+        {
+            "committee_id": "3064",
+            "committee_code": "SC/19/18",
+            "name_eng": "Subcommittee on Two Regulations to Waive or Reduce Government Fees and Charges in the Agriculture and Fisheries Sectors",
+            "name_chi": "免收或減收漁農業內的政府收費的兩項規例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc19/general/sc19.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc19/general/sc19.htm"
+        },
+        {
+            "committee_id": "2697",
+            "committee_code": "SC/2/16",
+            "name_eng": "Subcommittee on Inland Revenue Ordinance (Amendment of Schedule 17E) Notice 2016",
+            "name_chi": "《2016年稅務條例(修訂附表17E)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc02/general/sc02.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc02/general/sc02.htm"
+        },
+        {
+            "committee_id": "2838",
+            "committee_code": "SC/2/17",
+            "name_eng": "Subcommittee on Air Pollution Control (Volatile Organic Compounds) (Amendment) Regulation 2017",
+            "name_chi": "《2017年空氣污染管制(揮發性有機化合物)(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc02/general/sc02.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc02/general/sc02.htm"
+        },
+        {
+            "committee_id": "2954",
+            "committee_code": "SC/2/18",
+            "name_eng": "Subcommittee on Financial Institutions (Resolution) (Loss-absorbing Capacity Requirements-Banking Sector) Rules",
+            "name_chi": "《金融機構(處置機制)(吸收虧損能力規定-銀行界)規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc02/general/sc02.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc02/general/sc02.htm"
+        },
+        {
+            "committee_id": "3063",
+            "committee_code": "SC/20/18",
+            "name_eng": "Subcommittee on Two Orders Made under Section 49(1A) of the Inland Revenue Ordinance and Gazetted on 4 October 2019",
+            "name_chi": "根據《稅務條例》第49(1A)條作出並於2019年10月4日在憲報刊登的兩項命令小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc20/general/sc20.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc20/general/sc20.htm"
+        },
+        {
+            "committee_id": "2699",
+            "committee_code": "SC/3/16",
+            "name_eng": "Subcommittee on Marine Parks (Designation) (Amendment) Order 2016",
+            "name_chi": "《2016年海岸公園(指定)(修訂)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc03/general/sc03.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc03/general/sc03.htm"
+        },
+        {
+            "committee_id": "2839",
+            "committee_code": "SC/3/17",
+            "name_eng": "Subcommittee on Antiquities and Monuments (Declaration of Monuments and Historical Buildings) (Consolidation) (Amendment) Notice 2017",
+            "name_chi": "《2017年古物及古蹟(古蹟及歷史建築物的宣布)(綜合)(修訂)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc03/general/sc03.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc03/general/sc03.htm"
+        },
+        {
+            "committee_id": "2955",
+            "committee_code": "SC/3/18",
+            "name_eng": "Subcommittee on Securities and Futures (Financial Resources) (Amendment) Rules 2018",
+            "name_chi": "《2018年證券及期貨(財政資源)(修訂)規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc03/general/sc03.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc03/general/sc03.htm"
+        },
+        {
+            "committee_id": "2713",
+            "committee_code": "SC/4/16",
+            "name_eng": "Subcommittee on Construction Workers Registration (Exemption) Regulation and Construction Workers Registration Ordinance (Amendment of Schedules 1 and 1A) Notice 2016",
+            "name_chi": "《建造業工人註冊(豁免)規例》及《2016年建造業工人註冊條例(修訂附表1及1A)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc04/general/sc04.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc04/general/sc04.htm"
+        },
+        {
+            "committee_id": "2840",
+            "committee_code": "SC/4/17",
+            "name_eng": "Subcommittee on Seventh Technical Memorandum for Allocation of Emission Allowances in Respect of Specified Licences",
+            "name_chi": "《指明牌照分配排放限額第七份技術備忘錄》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc04/general/sc04.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc04/general/sc04.htm"
+        },
+        {
+            "committee_id": "2962",
+            "committee_code": "SC/4/18",
+            "name_eng": "Subcommittee on Land (Miscellaneous Provisions) (Amendment) Regulation 2018",
+            "name_chi": "《2018年土地(雜項條文)(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc04/general/sc04.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc04/general/sc04.htm"
+        },
+        {
+            "committee_id": "2716",
+            "committee_code": "sc/5/16",
+            "name_eng": "Subcommittee on Banking (Disclosure) (Amendment) Rules 2016 and Banking (Specification of Class of Exempted Charges) (Amendment) Notice 2016",
+            "name_chi": "《2016年銀行業(披露)(修訂)規則》及《2016年銀行業(指明獲豁免押記類別)(修訂)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc05/general/sc05.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc05/general/sc05.htm"
+        },
+        {
+            "committee_id": "2842",
+            "committee_code": "SC/5/17",
+            "name_eng": "Subcommittee on Banking (Capital) (Amendment) Rules 2017, Banking (Liquidity) (Amendment) Rules 2017 and Banking (Specification of Multilateral Development Bank) (Amendment) Notice 2017",
+            "name_chi": "《2017年銀行業(資本)(修訂)規則》、《2017年銀行業(流動性)(修訂)規則》及《2017年銀行業(指明多邊發展銀行)(修訂)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc05/general/sc05.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc05/general/sc05.htm"
+        },
+        {
+            "committee_id": "2708",
+            "committee_code": "SC/51/16",
+            "name_eng": "Subcommittee on Public Health (Animals and Birds) (Animal Traders) (Amendment) Regulation 2016 (Commencement) Notice",
+            "name_chi": "《〈2016年公眾衞生(動物及禽鳥)(動物售賣商)(修訂)規例〉(生效日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc51/general/sc51.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc51/general/sc51.htm"
+        },
+        {
+            "committee_id": "2832",
+            "committee_code": "SC/51/17",
+            "name_eng": "Subcommittee on Subsidiary Legislation Relating to the Commissioning of the Hong Kong-Zhuhai-Macao Bridge Hong Kong Port",
+            "name_chi": "與港珠澳大橋香港口岸的啟用相關的附屬法例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc51/general/sc51.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc51/general/sc51.htm"
+        },
+        {
+            "committee_id": "2956",
+            "committee_code": "SC/51/18",
+            "name_eng": "Subcommittee on Registration of Persons (Application for New Identity Cards) Order 2018 and Registration of Persons (Application for New Identity Cards) Order (Repeal) Order",
+            "name_chi": "《2018年人事登記(申請新身分證)令》及《〈人事登記(申請新身分證)令〉(廢除)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc51/general/sc51.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc51/general/sc51.htm"
+        },
+        {
+            "committee_id": "2723",
+            "committee_code": "SC/52/16",
+            "name_eng": "Subcommittee on Minimum Wage Ordinance (Amendment of Schedule 3) Notice 2017 and Employment Ordinance (Amendment of Ninth Schedule) Notice 2017",
+            "name_chi": "《2017年最低工資條例(修訂附表3)公告》及《2017年僱傭條例(修訂附表9)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc52/general/sc52.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc52/general/sc52.htm"
+        },
+        {
+            "committee_id": "2835",
+            "committee_code": "SC/52/17",
+            "name_eng": "Subcommittee on Pharmacy and Poisons (Amendment) (No. 5) Regulation 2017",
+            "name_chi": "《2017年藥劑業及毒藥(修訂)(第5號)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc52/general/sc52.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc52/general/sc52.htm"
+        },
+        {
+            "committee_id": "2958",
+            "committee_code": "SC/52/18",
+            "name_eng": "Subcommittee on Four Commencement Notices Relating to the Commissioning of the Hong Kong-Zhuhai-Macao Bridge Gazetted on 22 October 2018 and Cross-boundary Movement of Physical Currency and Bearer Negotiable Instruments Ordinance (Amendment of Schedule 1) (No. 3) Notice 2018",
+            "name_chi": "與港珠澳大橋開通有關並於2018年10月22日在憲報刊登的4項生效日期公告及《2018年實體貨幣及不記名可轉讓票據跨境流動條例(修訂附表1)(第3號)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc52/general/sc52.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc52/general/sc52.htm"
+        },
+        {
+            "committee_id": "2837",
+            "committee_code": "SC/53/17",
+            "name_eng": "Subcommittee on District Councils Ordinance (Amendment of Schedule 3) Order 2017",
+            "name_chi": "《2017年區議會條例(修訂附表3)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc53/general/sc53.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc53/general/sc53.htm"
+        },
+        {
+            "committee_id": "2747",
+            "committee_code": "SC/54/16",
+            "name_eng": "Subcommittee on Smoking (Public Health) (Notices) (Amendment) Order 2017",
+            "name_chi": "《2017年吸煙(公眾衞生)(公告)(修訂)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc54/general/sc54.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc54/general/sc54.htm"
+        },
+        {
+            "committee_id": "2843",
+            "committee_code": "SC/54/17",
+            "name_eng": "Subcommittee on Amendments to Three Regulations under the Electoral Affairs Commission Ordinance",
+            "name_chi": "《選舉管理委員會條例》下3項規例的修訂小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc54/general/sc54.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc54/general/sc54.htm"
+        },
+        {
+            "committee_id": "2973",
+            "committee_code": "SC/54/18",
+            "name_eng": "Subcommittee on Fugitive Offenders (France) Order",
+            "name_chi": "《逃犯(法國)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc54/general/sc54.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc54/general/sc54.htm"
+        },
+        {
+            "committee_id": "2776",
+            "committee_code": "SC/55/16",
+            "name_eng": "Subcommittee on Amendments to Five Regulations under the Electoral Affairs Commission Ordinance",
+            "name_chi": "《選舉管理委員會條例》下5項規例的修訂小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc55/general/sc55.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc55/general/sc55.htm"
+        },
+        {
+            "committee_id": "2979",
+            "committee_code": "SC/55/18",
+            "name_eng": "Subcommittee on Private Healthcare Facilities Ordinance (Specification of Date for Section 135(1)(a)) Notice and Private Healthcare Facilities Ordinance (Specification of Date for Section 136(1)(a)) Notice",
+            "name_chi": "《〈私營醫療機構條例〉(為施行第135(1)(a)條指明日期)公告》及《〈私營醫療機構條例〉(為施行第136(1)(a)條指明日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc55/general/sc55.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc55/general/sc55.htm"
+        },
+        {
+            "committee_id": "2859",
+            "committee_code": "SC/56/17",
+            "name_eng": "Subcommittee on Hospital Authority Ordinance (Amendment of Schedule 1) Order 2018",
+            "name_chi": "《2018年醫院管理局條例(修訂附表1)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc56/general/sc56.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc56/general/sc56.htm"
+        },
+        {
+            "committee_id": "2874",
+            "committee_code": "SC/57/17",
+            "name_eng": "Subcommittee on Smoking (Public Health) (Designation of No Smoking Areas) (Amendment) Notice 2018",
+            "name_chi": "《2018年吸煙(公眾衞生)(指定禁止吸煙區)(修訂)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc57/general/sc57.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc57/general/sc57.htm"
+        },
+        {
+            "committee_id": "2985",
+            "committee_code": "SC/57/18",
+            "name_eng": "Subcommittee on Minimum Wage Ordinance (Amendment of Schedule 3) Notice 2019 and Employment Ordinance (Amendment of Ninth Schedule) Notice 2019",
+            "name_chi": "《2019年最低工資條例(修訂附表3)公告》及《2019年僱傭條例(修訂附表9)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc57/general/sc57.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc57/general/sc57.htm"
+        },
+        {
+            "committee_id": "2882",
+            "committee_code": "SC/58/17",
+            "name_eng": "Subcommittee on Medical Council (Election and Appointment of Lay Members) Regulation",
+            "name_chi": "《醫務委員會(選舉和委任業外委員)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc58/general/sc58.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc58/general/sc58.htm"
+        },
+        {
+            "committee_id": "2990",
+            "committee_code": "SC/58/18",
+            "name_eng": "Subcommittee on Public Health and Municipal Services (Fees) (Amendment) Regulation 2019",
+            "name_chi": "《2019年公眾衞生及市政(費用)(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc58/general/sc58.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc58/general/sc58.htm"
+        },
+        {
+            "committee_id": "2887",
+            "committee_code": "SC/59/17",
+            "name_eng": "Subcommittee on Smoking (Public Health) Ordinance (Amendment of Schedule 2) Order 2018",
+            "name_chi": "《2018年吸煙(公眾衞生)條例(修訂附表2)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc59/general/sc59.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc59/general/sc59.htm"
+        },
+        {
+            "committee_id": "2728",
+            "committee_code": "SC/6/16",
+            "name_eng": "Subcommittee on Air Pollution Control (Vehicle Design Standards) (Emission) (Amendment) Regulation 2017",
+            "name_chi": "《2017年空氣污染管制(車輛設計標準)(排放)(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc06/general/sc06.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc06/general/sc06.htm"
+        },
+        {
+            "committee_id": "2969",
+            "committee_code": "SC/6/18",
+            "name_eng": "Subcommittee on Antiquities and Monuments (Declaration of Monuments and Historical Buildings) (Consolidation) (Amendment) Notice 2018",
+            "name_chi": "《2018年古物及古蹟(古蹟及歷史建築物的宣布)(綜合)(修訂)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc06/general/sc06.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc06/general/sc06.htm"
+        },
+        {
+            "committee_id": "2898",
+            "committee_code": "SC/60/17",
+            "name_eng": "Subcommittee on Subsidiary Legislation Relating to the Commissioning of the West Kowloon Station of the Guangzhou-Shenzhen-Hong Kong Express Rail Link and Gazetted on 1 June 2018",
+            "name_chi": "與廣深港高速鐵路西九龍站的啟用相關並於2018年6月1日在憲報刊登的附屬法例小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc60/general/sc60.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc60/general/sc60.htm"
+        },
+        {
+            "committee_id": "3004",
+            "committee_code": "SC/60/18",
+            "name_eng": "Subcommittee on Registration of Persons (Application for New Identity Cards) Order 2018 (Amendment) Order 2019",
+            "name_chi": "《2019年〈2018年人事登記(申請新身分證)令〉(修訂)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc60/general/sc60.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc60/general/sc60.htm"
+        },
+        {
+            "committee_id": "2901",
+            "committee_code": "SC/61/17",
+            "name_eng": "Subcommittee on Food Adulteration (Metallic Contamination) (Amendment) Regulation 2018",
+            "name_chi": "《2018年食物攙雜(金屬雜質含量)(修訂)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc61/general/sc61.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc61/general/sc61.htm"
+        },
+        {
+            "committee_id": "2902",
+            "committee_code": "SC/62/17",
+            "name_eng": "Subcommittee on Employment (Amendment) (No. 2) Ordinance 2018 (Commencement) Notice",
+            "name_chi": "《〈2018年僱傭(修訂)(第2號)條例〉(生效日期)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc62/general/sc62.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc62/general/sc62.htm"
+        },
+        {
+            "committee_id": "3065",
+            "committee_code": "SC/62/18",
+            "name_eng": "Subcommittee on Public Health and Municipal Services Ordinance (Public Pleasure Grounds) (Amendment of Fourth Schedule) (No. 2) Order 2019",
+            "name_chi": "《2019年公眾衞生及市政條例(公眾遊樂場地)(修訂附表4)(第2號)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc62/general/sc62.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc62/general/sc62.htm"
+        },
+        {
+            "committee_id": "3066",
+            "committee_code": "SC/63/18",
+            "name_eng": "Subcommittee on Prohibition on Face Covering Regulation",
+            "name_chi": "《禁止蒙面規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc63/general/sc63.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc63/general/sc63.htm"
+        },
+        {
+            "committee_id": "2735",
+            "committee_code": "SC/7/16",
+            "name_eng": "Subcommittee on Copyright Tribunal Rules",
+            "name_chi": "《版權審裁處規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc07/general/sc07.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc07/general/sc07.htm"
+        },
+        {
+            "committee_id": "2863",
+            "committee_code": "SC/7/17",
+            "name_eng": "Subcommittee on Rating (Exemption) Order 2018",
+            "name_chi": "《 2018 年差餉(豁免)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc07/general/sc07.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc07/general/sc07.htm"
+        },
+        {
+            "committee_id": "2736",
+            "committee_code": "SC/8/16",
+            "name_eng": "Subcommittee on Antiquities and Monuments (Declaration of Proposed Monument) (Hung Lau) Notice",
+            "name_chi": "《古物及古蹟(暫定古蹟的宣布)(紅樓)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc08/general/sc08.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc08/general/sc08.htm"
+        },
+        {
+            "committee_id": "2871",
+            "committee_code": "SC/8/17",
+            "name_eng": "Subcommittee on International Organizations (Privileges and Immunities) (New Development Bank) Order",
+            "name_chi": "《國際組織(特權及豁免權)(新開發銀行)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc08/general/sc08.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc08/general/sc08.htm"
+        },
+        {
+            "committee_id": "2981",
+            "committee_code": "SC/8/18",
+            "name_eng": "Subcommittee on Exemption from Profits Tax (People's Bank of China Debt Instrument) Order",
+            "name_chi": "《豁免利得稅(中國人民銀行債務票據)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "",
+            "home_url_chi": ""
+        },
+        {
+            "committee_id": "2748",
+            "committee_code": "SC/9/16",
+            "name_eng": "Subcommittee on Promotion of Recycling and Proper Disposal (Electrical Equipment and Electronic Equipment) (Amendment) Ordinance 2016 (Commencement) Notice 2017 and Product Eco-Responsibility (Regulated Electrical Equipment) Regulation",
+            "name_chi": "《2017年〈2016年促進循環再造及妥善處置(電氣設備及電子設備)(修訂)條例〉(生效日期)公告》及《產品環保責任(受管制電器)規例》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_leg/sc09/general/sc09.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_leg/sc09/general/sc09.htm"
+        },
+        {
+            "committee_id": "2880",
+            "committee_code": "SC/9/17",
+            "name_eng": "Subcommittee on Banking (Disclosure) (Amendment) Rules 2018 and Banking (Specification of Multilateral Development Bank) (Amendment) Notice 2018",
+            "name_chi": "《2018年銀行業(披露)(修訂)規則》及《2018年銀行業(指明多邊發展銀行)(修訂)公告》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc09/general/sc09.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc09/general/sc09.htm"
+        },
+        {
+            "committee_id": "2993",
+            "committee_code": "SC/9/18",
+            "name_eng": "Subcommittee on Rating (Exemption) Order 2019",
+            "name_chi": "《2019年差餉(豁免)令》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "https://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc09/general/sc09.htm",
+            "home_url_chi": "https://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc09/general/sc09.htm"
+        },
+        {
+            "committee_id": "2721",
+            "committee_code": "SE/LCYUGL/16",
+            "name_eng": "Select Committee to Inquire into Matters about the Agreement between Mr LEUNG Chun-ying and the Australian firm UGL Limited",
+            "name_chi": "調查梁振英先生與澳洲企業UGL Limited 所訂協議的事宜專責委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr16-17/english/sc/sc_lcyugl/general/sc_lcyugl.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/sc/sc_lcyugl/general/sc_lcyugl.htm"
+        },
+        {
+            "committee_id": "2722",
+            "committee_code": "SE/LCYUGL/16/HEARING",
+            "name_eng": "Hearing of Select Committee to Inquire into Matters about the Agreement between Mr LEUNG Chun-ying and the Australian firm UGL Limited",
+            "name_chi": "調查梁振英先生與澳洲企業UGL Limited 所訂協議的事宜專責委員會研訊",
+            "term_id": 5,
+            "home_url_eng": "",
+            "home_url_chi": ""
+        },
+        {
+            "committee_id": "3019",
+            "committee_code": "SS/111/18",
+            "name_eng": "Subcommittee on Arbitration (Appointment of Arbitrators and Mediators and Decision on Number of Arbitrators) (Amendment) Rules 2019",
+            "name_chi": "《2019年仲裁 (委任仲裁員及調解員和決定仲裁員人數) (修訂) 規則》小組委員會",
+            "term_id": 5,
+            "home_url_eng": "http://www.legco.gov.hk/yr18-19/english/hc/sub_leg/sc111/general/sc111.htm",
+            "home_url_chi": "http://www.legco.gov.hk/yr18-19/chinese/hc/sub_leg/sc111/general/sc111.htm"
+        }
+    ]
+}

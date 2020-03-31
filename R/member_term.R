@@ -2,13 +2,15 @@
 #'
 #' Fetch the serving terms in Term ID of LegCo members
 #'
-#' @inheritParams hansard
-#' @inheritParams member
-#' 
-#' @examples 
-#' \dontrun{
+#' This function corresponds to the \emph{Tmember_term} data endpoint of the
+#' Meeting Schedule Database.
+#'
+#' @inherit meeting_schedule-db
+#'
+#' @examples
+#' \donttest{
 #' #Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
-#' member_term(id = c(273, 924))
+#' x <- member_term(member_id = c(273, 924))
 #' }
 #'
 #' @export
@@ -34,16 +36,6 @@ member_term <- function(member_id = NULL, extra_param = NULL, count = FALSE, ver
   
   if (!count) {
     colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
-  
-    # Combine duplicated entries of members who have served more than one term
-    df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)] <- 
-      lapply(1:sum(duplicated(df$MemberID)), function(x) { 
-        # Combine multiple TermID of the same member into a single string
-        c(df$TermID[df$MemberID %in% df$MemberID[duplicated(df$MemberID)] & !duplicated(df$MemberID)][x], 
-          df$TermID[duplicated(df$MemberID)][x])
-      })
-    df <- df[!duplicated(df$MemberID), ]
-    rownames(df) <- 1:nrow(df)
   }
   
   df

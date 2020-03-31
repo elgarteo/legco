@@ -2,14 +2,15 @@
 #'
 #' Fetch bills presented in LegCo council meetings.
 #'
-#' @inheritParams hansard
-#' @inheritParams rundown
-#' @inheritParams subjects
-#' 
-#' @examples 
-#' \dontrun{
+#' This function corresponds to the \emph{Bills} data endpoint of the Hansard
+#' Database.
+#'
+#' @inherit hansard-db
+#'
+#' @examples
+#' \donttest{
 #' # Fetch bills debated during the Council meeting on February 20, 2019
-#' bills(hansard_id = 2714)
+#' x <- bills(hansard_id = 2714)
 #' }
 #'
 #' @export

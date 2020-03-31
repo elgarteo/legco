@@ -1,4 +1,4 @@
-# Formulating legco_section_type
+# Formulate legco_section_type
 legco_section_type <- legco::legco_api("hansard", "Sections")
 
 legco_section_type <- legco_section_type[c("SectionCode", "NameEng", "NameChi")]

@@ -8,9 +8,11 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, echo = FALSE}
+```{r include=FALSE}
 knitr::opts_chunk$set(message = FALSE)
 library(legco)
+library(httptest)
+start_vignette("bills")
 ```
 
 ## Introduction
@@ -37,6 +39,10 @@ To activate this option, specify `count = TRUE`:
 # Fetch the total number of bills that have been discussed in LegCo
 all_bills(count = TRUE)
 ```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
 ---
 
@@ -49,4 +55,7 @@ This database is accessible with the following function:
 ```{r }
 # Fetch bills that passed third reading on February 20, 2019
 all_bills(third_from = "2019-02-20")
+```
+```{r include=FALSE}
+end_vignette()
 ```

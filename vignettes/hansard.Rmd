@@ -8,9 +8,11 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, echo = FALSE}
+```{r include=FALSE}
 knitr::opts_chunk$set(message = FALSE)
 library(legco)
+library(httptest)
+start_vignette("hansard")
 ```
 
 ## Introduction
@@ -23,10 +25,10 @@ For more details of the database, see <https://www.legco.gov.hk/odata/english/ha
 
 ### Key Identifiers
 
-Here are the key identifies that is useful for locating the neccessary data from the Hansard database:
+Here are the key identifies that is useful for locating the necessary data from the Hansard database:
 
 * `HansardID` is the numerical ID of a hansard file. A hansard file is the Record of Proceedings of
-a Council meeting. Since there are three versions of hansard---Floor, Chinese and English, 
+a Council meeting. Since there are three versions of hansard---Floor Chinese and English, 
 each Council meeting has three hansard files, meaning that there are three Hansard IDs corresponding 
 to the same meeting.
 
@@ -42,7 +44,7 @@ can be found [here](#rundown).
 * `SpeakerID` is the numerical ID stipulating the speaker of a paragraph text in the hansard file.
 
 These identifiers essentially indicate the *when* (HansardID), *where* (RundownID), *what* (SectionCode) 
-and *who* (SpeakerID) of a parapgraph text in the Record of Proceedings.
+and *who* (SpeakerID) of a paragraph text in the Record of Proceedings.
 
 ### Total Count
 
@@ -55,7 +57,10 @@ To activate this option, specify `count = TRUE`:
 v <- questions(from = "2019-04-01", to = "2019-04-30", count = TRUE)
 v
 ```
-
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 ---
 
 This database is accessible with the following functions/data:
@@ -68,12 +73,15 @@ This database is accessible with the following functions/data:
 v <- hansard(from = "2019-02-20", to = "2019-02-20")
 v
 ```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
 If `isCEQandA` is `1`, the hansard file is the Record of Proceedings of a Chief Executive's Question
 and Answer Session. 
 
 If `isCEQT` is `1`, the hansard file is the Record of Proceedings of a Chief Executive's Question Time.
-
 
 ## legco_section_type
 
@@ -88,10 +96,18 @@ head(v)
 
 `subjects()` fetches all subjects being discussed in a Council meeting. 
 
-```{r }
+```{r eval=FALSE}
 # Fetch second reading of bills during the Council meeting on February 20, 2019
 v <- subjects(hansard_id = 2714, section_code = "b2r")
 head(v)
+```
+```{r echo=FALSE}
+v <- subjects(hansard_id = 2714, section_code = "b2r", to = "2020-03-27")
+head(v)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 The RundownID indicates the starting RundownID of the subject concerned. For instance, the starting 
@@ -101,20 +117,66 @@ of this subject is from 899628 to 899649.
 If the business is a continuation of a previous meeting, the date of the previous meeting will be shown 
 in the field `ResumptionOf`.
 
+## speakers()
+
+`speakers()` fetches the basic information of speakers in LegCo council meetings. 
+Speakers here refer to all personnel who can speak during the meetings, which include
+not only LegCo members but also government officials and Secretariat staff.
+
+```{r }
+# Fetch a list of all speakers in LegCo council meetings
+v <- speakers()
+head(v)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
+```{r }
+# Fetch a list of all speakers who are LegCo members
+v <- speakers(type = "MB")
+head(v)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
+```{r }
+# Look up the details of a speaker with the id 6
+speakers(speaker_id = 6)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
+
+Every single paragraph in the hansard files (excluding section titles and summoning of bells) is marked
+with the unique Speaker ID to indicate the speaker of the text. 
+
 ## rundown()
 
 `rundown()` fetches the paragraph text in hansard files. Note that the result is not in any specific order 
-so it is neccessary to reorder if needed.
+so it is necessary to reorder if needed.
 
-```{r }
+```{r eval=FALSE}
 # Fetch records of proceedings of the second reading of Smoking (Public Health) (Amendment) Bill 2019
 v <- rundown(rundown_id = 899628:899649)
 v <- v[order(v$RundownID), ]
 rownames(v) <- 1:nrow(v)
 v[3:5, ]
 ```
+```{r echo=FALSE}
+v <- rundown(rundown_id = 899628:899649, to = "2020-03-27")
+v <- v[order(v$RundownID), ]
+rownames(v) <- 1:nrow(v)
+v[3:5, ]
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
-Though of little use, BookmarkName can be a useful parameter to search for the neccesary data. 
+Though of little use, BookmarkName can be a useful parameter to search for the necessary data. 
 The BookmarkName of the starting Rundown of a subject is a combination of section code and
 the sequence number. For instance, the two bills that were under the process of second reading
 have a BookmarkName of "b2r01" and "b2r02" respectively. Therefore, it is possible to directly
@@ -125,6 +187,10 @@ i.e. *Smoking (Public Health) (Amendment) Bill 2019*, by specifying the Bookmark
 # Fetch the first bill under second reading on February 20, 2019
 v <- rundown(bookmark_name = "b2r01", from = "2019-02-20", to = "2019-02-20")
 v
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 Similarly, it can be applicable on other SectionCode as well, such as "pop01" and "pop02".
@@ -139,18 +205,30 @@ not take HansardID as a filtering parameter.
 v <- questions(from = "2019-02-20", to = "2019-02-20")
 head(v)
 ```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
 Similar to the output of `subjects()`, RundownID here refers to the starting RundownID, which can be used 
 to determine the range of the full question text.
 
 ## bills()
 
-`bills()` fetches bills being debated in LegCo Countil meetings.
+`bills()` fetches bills being debated in LegCo Council meetings.
 
-```{r }
+```{r eval=FALSE}
 # Fetch bills debated during the Council meeting on February 20, 2019
 v <- bills(hansard_id = 2714)
 head(v)
+```
+```{r echo=FALSE}
+v <- bills(hansard_id = 2714, to = "2020-03-27")
+head(v)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 Note that the name of a bill may appear more than once like above, since the bill went through first 
@@ -161,10 +239,18 @@ a particular bill, use `all_bills()` instead.
 
 `motions()` fetches the motions discussed in Council meetings. 
 
-```{r }
+```{r eval=FALSE}
 # Fetch motions discussed during the Council meeting on February 20, 2019
 v <- motions(hansard_id = 2714)
 head(v)
+```
+```{r echo=FALSE}
+v <- motions(hansard_id = 2714, to = "2020-03-27")
+head(v)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 Similar to the output of `subjects()` and `questions()`, RundownID here refers to the starting RundownID,
@@ -174,10 +260,18 @@ which can be used to determine the range of the full question text.
 
 `petitions()` fetches the petitions raised by LegCo members in Council meetings. 
 
-```{r }
+```{r eval=FALSE}
 # Fetch petition laid during the Council meeting on January 19, 2018
 v <- petitions(from = "2018-01-10")
 v
+```
+```{r echo=FALSE}
+v <- petitions(from = "2018-01-10", to = "2020-03-27")
+v
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 ## addresses()
@@ -185,42 +279,74 @@ v
 `addresses()` fetches fetches addresses made by members or government officials while presenting papers
 to the Council.
 
-```{r }
+```{r eval=FALSE}
 # Fetch addresses given during the Council meeting on February 20, 2019
 v <- addresses(hansard_id = 2714)
 v
 ```
+```{r echo=FALSE}
+v <- addresses(hansard_id = 2714, to = "2020-03-27")
+v
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
 ## statements()
 
-`statements()` fetches statments made by government officials in Council meetings.
+`statements()` fetches statements made by government officials in Council meetings.
 
-```{r }
+```{r eval=FALSE}
 # Fetch statements made by government officials during the Council meeting on April 22, 2015
 v <- statements(from = "2015-04-22")
 v
+```
+```{r echo=FALSE}
+v <- statements(from = "2015-04-22", to = "2020-03-27")
+v
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 ## voting_results()
 
 `voting_results()` fetches the results of votes conducted in Council meetings. 
 
-```{r }
+```{r eval=FALSE}
 # Fetch results of votes conducted during the Council meeting on January 19, 2018
 v <- voting_results(hansard_id = 2714)
 head(v)
 ```
+```{r echo=FALSE}
+v <- voting_results(hansard_id = 2714, to = "2020-03-27")
+head(v)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
 `voting_results()` only returns the overall result of the vote. To fetch the voting record of 
-infividual members, use `voting_record()` instead.
+individual members, use `voting_record()` instead.
 
 ## summoning_bells()
 
 `summoning_bells()` fetches instances in which the summoning bell have been rung in LegCo
 Council meetings.
 
-```{r }
+```{r eval=FALSE}
 # Fetch instances of summoning bell during the Council meeting on January 19, 2018
 v <- summoning_bells(hansard_id = 2714)
 head(v)
+```
+```{r echo=FALSE}
+# Fetch instances of summoning bell during the Council meeting on January 19, 2018
+v <- summoning_bells(hansard_id = 2714, to = "2020-03-27")
+head(v)
+```
+```{r include=FALSE}
+end_vignette()
 ```

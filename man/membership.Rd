@@ -28,37 +28,58 @@ legco_membership(
 )
 }
 \arguments{
-\item{member_id}{The id of a LegCo member, or a vector of ids. If `NULL`,
-returns results of all LegCo members. Defaults to `NULL`.}
+\item{member_id}{the id of a LegCo member, or a vector of ids. If
+\code{NULL}, returns results of all LegCo members. Defaults to \code{NULL}.}
 
-\item{committee_id}{The id of a committee, or a vector of ids. If `NULL`,
-returns results of all committees. Defaults to `NULL`.}
+\item{committee_id}{the id of a committee, or a vector of ids. If
+\code{NULL}, returns results of all committees. Defaults to \code{NULL}.}
 
-\item{term_id}{The id of a term, or a vector of ids. If `NULL`, returns
-results of all terms. Defaults to `NULL`.}
+\item{term_id}{the id of a term, or a vector of ids. If \code{NULL}, returns
+results of all terms. Defaults to \code{NULL}.}
 
-\item{post}{The post of a member in the committee, or a vector of posts.
-`'President'`, `'Chairman'`, `'Deputy Chairman'`, `'Member'` and
-`'Convenor'` return members of the respective post. If `NULL`, returns
-members of all posts. Defaults to `NULL`.}
+\item{post}{the post of a member in the committee, or a vector of posts.
+\code{"President"}, \code{"Chairman"}, \code{"Deputy Chairman"},
+\code{"Member"} and \code{"Convenor"} return members of the respective
+post. If \code{NULL}, returns members of all posts. Defaults to
+\code{NULL}.}
 
-\item{n}{The number of record to fetch. Defaults to `1000`.}
+\item{n}{the number of record to fetch. Defaults to \code{1000}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch the members of LegCo committees.
 }
-\examples{
-\dontrun{
-# Fetch members of the Subcommittee on Issues Relating to Bazaars
-membership(committee_id = 2704)
+\details{
+This function corresponds to the \emph{Tmembership} data endpoint of the
+Meeting Schedule Database.
+}
+\section{Functions}{
+ Functions of the Meeting Schedule Database: \itemize{
+  \item \code{\link{term}}: LegCo terms \item \code{\link{session}}: LegCo
+  sessions \item \code{\link{committee}}: LegCo committees \item
+  \code{\link{membership}}: Membership of LegCo committees \item
+  \code{\link{member}}: LegCo members \item \code{\link{member_term}}: Terms
+  served by LegCo members \item \code{\link{meeting}}: Meetings of LegCo
+  committees \item \code{\link{meeting_committee}}: Committees of LegCo
+  meetings }
 }
 
+\examples{
+\donttest{
+# Fetch members of the Subcommittee on Issues Relating to Bazaars
+x <- membership(committee_id = 2704)
+}
+
+}
+\seealso{
+LegCo API documentation for the Meeting Schedule database:
+  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
 }

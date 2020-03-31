@@ -2,20 +2,15 @@
 #'
 #' Fetch the basic information of LegCo terms.
 #'
-#' @param term_id The id of a term, or a vector of ids. If `NULL`, returns
-#'   results of all terms. Defaults to `NULL`.
+#' This function corresponds to the \emph{Tterm} data endpoint of the Meeting
+#' Schedule Database.
 #'
-#' @param date Only fetch the result in which the specified date falls within.
-#'   Accepts character values in `'YYYY-MM-DD'` format, and objects of class
-#'   `Date`, `POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced
-#'   to a date with `as.Date()`. Defaults to `NULL`.
+#' @inherit meeting_schedule-db
 #'
-#' @inheritParams hansard
-#' 
-#' @examples 
-#' \dontrun{
+#' @examples
+#' \donttest{
 #' # Fetch all LegCo terms
-#' term()
+#' x <- term()
 #' }
 #'
 #' @export

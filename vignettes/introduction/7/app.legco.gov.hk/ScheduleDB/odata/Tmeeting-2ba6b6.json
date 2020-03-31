@@ -1,0 +1,81 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/ScheduleDB/odata/$metadata#Tmeeting&$select=slot_id,meet_id,subject_eng,subject_chi,start_date_time,%0A%20%20meeting_type_eng,meeting_type_chi,venue_code,venue_name_eng,venue_name_chi,term_id,%0A%20%20agenda_url_eng,agenda_url_chi",
+    "odata.count": "5",
+    "value": [
+        {
+            "slot_id": "174096",
+            "meet_id": 131473,
+            "subject_eng": "Meeting of Bills Committee on Inland Revenue (Amendment)(No. 6) Bill 2017",
+            "subject_chi": "《2017年稅務(修訂)(第6號)條例草案》委員會會議",
+            "start_date_time": "2018-05-23T08:30:00",
+            "meeting_type_eng": "Open",
+            "meeting_type_chi": "公開會議",
+            "venue_code": "Rm 3",
+            "venue_name_eng": "Conference Room 3",
+            "venue_name_chi": "會議室3",
+            "term_id": 5,
+            "agenda_url_eng": "http://www.legco.gov.hk/yr17-18/english/bc/bc02/agenda/bc0220180523.htm",
+            "agenda_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/bc/bc02/agenda/bc0220180523.htm"
+        },
+        {
+            "slot_id": "169121",
+            "meet_id": 126590,
+            "subject_eng": "Council meeting (Regular meeting)\n(or to be held immediately after the meeting for Chief Executive’s Question Time)",
+            "subject_chi": "立法會會議 (例行會議)\n(或緊接行政長官質詢時間的會議後開始)",
+            "start_date_time": "2018-05-23T11:30:00",
+            "meeting_type_eng": "Open",
+            "meeting_type_chi": "公開會議",
+            "venue_code": "Chamber",
+            "venue_name_eng": "Chamber",
+            "venue_name_chi": "會議廳",
+            "term_id": 5,
+            "agenda_url_eng": "http://www.legco.gov.hk/yr17-18/english/counmtg/agenda/cm20180523.htm",
+            "agenda_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523.htm"
+        },
+        {
+            "slot_id": "172136",
+            "meet_id": 129529,
+            "subject_eng": "Council meeting (The Chief Executive's Question Time)",
+            "subject_chi": "立法會會議 (行政長官質詢時間)",
+            "start_date_time": "2018-05-23T11:00:00",
+            "meeting_type_eng": "Open",
+            "meeting_type_chi": "公開會議",
+            "venue_code": "Chamber",
+            "venue_name_eng": "Chamber",
+            "venue_name_chi": "會議廳",
+            "term_id": 5,
+            "agenda_url_eng": "http://www.legco.gov.hk/yr17-18/english/counmtg/agenda/cm20180523q.htm",
+            "agenda_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523q.htm"
+        },
+        {
+            "slot_id": "169842",
+            "meet_id": 127310,
+            "subject_eng": "Meeting of Public Works Subcommittee",
+            "subject_chi": "工務小組委員會會議",
+            "start_date_time": "2018-05-23T08:30:00",
+            "meeting_type_eng": "Open",
+            "meeting_type_chi": "公開會議",
+            "venue_code": "Rm 1",
+            "venue_name_eng": "Conference Room 1",
+            "venue_name_chi": "會議室1",
+            "term_id": 5,
+            "agenda_url_eng": "http://www.legco.gov.hk/yr17-18/english/fc/pwsc/agenda/pwsc20180523.htm",
+            "agenda_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/fc/pwsc/agenda/pwsc20180523.htm"
+        },
+        {
+            "slot_id": "174121",
+            "meet_id": 131498,
+            "subject_eng": "Meeting of Subcommittee on Medical Council (Election and Appointment of Lay Members) Regulation",
+            "subject_chi": "《醫務委員會(選舉和委任業外委員)規例》小組委員會會議",
+            "start_date_time": "2018-05-23T08:30:00",
+            "meeting_type_eng": "Open",
+            "meeting_type_chi": "公開會議",
+            "venue_code": "Rm 2",
+            "venue_name_eng": "Conference Room 2",
+            "venue_name_chi": "會議室2",
+            "term_id": 5,
+            "agenda_url_eng": "http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc58/agenda/sc5820180523.htm",
+            "agenda_url_chi": "http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc58/agenda/sc5820180523.htm"
+        }
+    ]
+}

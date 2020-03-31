@@ -2,20 +2,15 @@
 #'
 #' Fetch the members of LegCo committees.
 #'
-#' @param post The post of a member in the committee, or a vector of posts.
-#'   `'President'`, `'Chairman'`, `'Deputy Chairman'`, `'Member'` and
-#'   `'Convenor'` return members of the respective post. If `NULL`, returns
-#'   members of all posts. Defaults to `NULL`.
+#' This function corresponds to the \emph{Tmembership} data endpoint of the
+#' Meeting Schedule Database.
 #'
-#' @inheritParams hansard
-#' @inheritParams member
-#' @inheritParams committee
-#' @inheritParams term
+#' @inherit meeting_schedule-db
 #'
-#' @examples 
-#' \dontrun{
+#' @examples
+#' \donttest{
 #' # Fetch members of the Subcommittee on Issues Relating to Bazaars
-#' membership(committee_id = 2704)
+#' x <- membership(committee_id = 2704)
 #' }
 #'
 #' @export

@@ -1,0 +1,33 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Motions&$select=MeetingDate,Subject,Section,SectionCode,RundownID,HansardID,HansardFileURL",
+    "odata.count": "3",
+    "value": [
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Proposed resolution under section 34(4) of the Interpretation and General Clauses Ordinance",
+            "Section": "Members' motions",
+            "SectionCode": "mbm",
+            "RundownID": 899758,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=mbm01"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Proposed resolution under Article 75 of the Basic Law of the Hong Kong Special Administrative Region of the People's Republic of China",
+            "Section": "Members' motions",
+            "SectionCode": "mbm",
+            "RundownID": 899768,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=mbm02"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Motion under the Legislative Council (Powers and Privileges) Ordinance",
+            "Section": "Members' motions",
+            "SectionCode": "mbm",
+            "RundownID": 899812,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=mbm03"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/AttendanceDB/$metadata#TAttendance&$select=committee_id,meet_id,meeting_name_english,meeting_name_chinese,meeting_start_date_time,member_id,member_name_english,member_name_chinese,present_absent",
+    "odata.count": "2",
+    "value": [
+        {
+            "committee_id": "2562",
+            "meet_id": 136897,
+            "meeting_name_english": "Council meeting (Regular meeting)\n(or to be held immediately after the meeting for Chief Executive’s Question Time)",
+            "meeting_name_chinese": "立法會會議 (例行會議)\n(或緊接行政長官質詢時間的會議後開始)",
+            "meeting_start_date_time": "2019-05-22T11:30:00",
+            "member_id": 783,
+            "member_name_english": "Hon SHIU Ka-chun",
+            "member_name_chinese": "邵家臻議員",
+            "present_absent": "Absent"
+        },
+        {
+            "committee_id": "2562",
+            "meet_id": 136897,
+            "meeting_name_english": "Council meeting (Regular meeting)\n(or to be held immediately after the meeting for Chief Executive’s Question Time)",
+            "meeting_name_chinese": "立法會會議 (例行會議)\n(或緊接行政長官質詢時間的會議後開始)",
+            "meeting_start_date_time": "2019-05-22T11:30:00",
+            "member_id": 788,
+            "member_name_english": "Hon Tanya CHAN",
+            "member_name_chinese": "陳淑莊議員",
+            "present_absent": "Absent"
+        }
+    ]
+}

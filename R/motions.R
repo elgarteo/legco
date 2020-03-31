@@ -2,16 +2,17 @@
 #'
 #' Fetch motions presented in LegCo council meetings.
 #'
-#' @inheritParams hansard
-#' @inheritParams rundown
-#' @inheritParams subjects
-#' 
-#' @examples 
-#' \dontrun{
+#' This function corresponds to the \emph{Motions} data endpoint of the Hansard
+#' Database.
+#'
+#' @inherit hansard-db
+#'
+#' @examples
+#' \donttest{
 #' # Fetch motions discussed during the Council meeting on February 20, 2019
-#' motions(hansard_id = 2714)
+#' x <- motions(hansard_id = 2714)
 #' }
-#' 
+#'
 #' @export
 #' 
 motions <- function(rundown_id = NULL, hansard_id = NULL, section_code = NULL,

@@ -1,0 +1,15 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Rundown&$select=RundownID,MeetingDate,Content,BookmarkName,SpeakerID,HansardID,HansardFileURL",
+    "odata.count": "1",
+    "value": [
+        {
+            "RundownID": 899628,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Content": "Smoking (Public Health) (Amendment) Bill 2019",
+            "BookmarkName": "b2r01",
+            "SpeakerID": null,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01"
+        }
+    ]
+}

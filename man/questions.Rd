@@ -34,52 +34,80 @@ legco_questions(
 )
 }
 \arguments{
-\item{rundown_id}{The id of a rundown, or a vector of ids. If `NULL`, returns
-results of all rundowns. Defaults to `NULL`.}
+\item{rundown_id}{the id of a rundown, or a vector of ids. If \code{NULL},
+returns results of all rundowns. Defaults to \code{NULL}.}
 
-\item{speaker_id}{The id of a speaker at the Legislative Council, or a vector
-of ids. If `NULL`, returns all speakers. Defaults to `NULL`.}
+\item{speaker_id}{the id of a speaker at the Legislative Council, or a vector
+of ids. If \code{NULL}, returns all speakers. Defaults to \code{NULL}.}
 
-\item{type}{The type of question. `'oral'` returns oral questions.
-`'written'` returns written questions. `'all'` returns all questions.
-Defaults to `'all'`.}
+\item{type}{the type of question. \code{"oral"} returns oral questions.
+\code{"written"} returns written questions. \code{"all"} returns all
+questions. Defaults to \code{"all"}.}
 
-\item{lang}{The language of hansard files to search from. `'en'` returns the
-English version. `'zh'` returns the Traditional Chinese version. Defaults
-to `'en'`.}
+\item{lang}{the language of hansard files to search from. \code{"en"} returns
+the English version. \code{"zh"} returns the Traditional Chinese version.
+Defaults to \code{"en"}.}
 
-\item{from}{Only fetch results of meetings on or after this date. Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{only fetch results of meetings on or after this date. Accepts
+character values in \code{"YYYY-MM-DD"} format, and objects of class
+\code{Date}, \code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else
+that can be coerced to a date with \code{as.Date()}. Defaults to
+\code{"1900-01-01"}.}
 
-\item{to}{Only fetch results of meetings on or before this date.  Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to the current system date.}
+\item{to}{only fetch results of meetings on or before this date. Accepts
+character values in \code{"YYYY-MM-DD"} format, and objects of class
+\code{Date}, \code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else
+that can be coerced to a date with \code{as.Date()}. Defaults to the
+current system date.}
 
-\item{floor}{Whether to fetch results from the floor version of the hansard
-files. The floor version is the first presented version of hansard file in
-the original language delivered by the speakers in LegCo. If `TRUE`, the
-language option is ignored. Defaults to `FALSE`.}
+\item{floor}{logical: whether to fetch results from the floor version of the
+hansard files? The floor version is the first presented version of hansard
+file in the original language delivered by the speakers in LegCo. If
+\code{TRUE}, the language option is ignored. Defaults to \code{FALSE}.}
 
-\item{n}{The number of record to fetch. Defaults to `1000`.}
+\item{n}{the number of record to fetch. Defaults to \code{1000}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch questions put to the government by LegCo members in council meetings.
 }
-\examples{
-\dontrun{
-# Fetch questions being put on the government during the Council meeting on February 20, 2019
-questions(from = "2019-02-20", to = "2019-02-20")
+\details{
+This function corresponds to the \emph{Questions} data endpoint of the
+Hansard Database.
+}
+\section{Functions}{
+ Functions of the Hansard database: \itemize{ \item
+  \code{\link{hansard}}: Hansard files \item
+  \code{\link{legco_section_type}}: Section code \item
+  \code{\link{subjects}}: Subjects \code{\link{speakers}}: Speakers in the
+  council, including members, government officials and secretariat staff
+  \item \code{\link{rundown}}: Rundown (Paragraphs in hansard) \item
+  \code{\link{questions}}: Questions raised by members \item
+  \code{\link{bills}}: Bills \item \code{\link{motions}}: Motions \item
+  \code{\link{petitions}}: Petitions \item \code{\link{addresses}}: Addresses
+  made by members or government officials when presenting papers to the
+  Council \item \code{\link{statements}}: Statements made by government
+  officials \item \code{\link{voting_results}}: Results of votes in council
+  meetings \item \code{\link{summoning_bells}}: Instances of summoning bells
+  being rung }
 }
 
+\examples{
+\donttest{
+# Fetch questions being put on the government during the Council meeting on February 20, 2019
+x <- questions(from = "2019-02-20", to = "2019-02-20")
+}
+
+}
+\seealso{
+LegCo API documentation for the Hansard database:
+  \url{https://www.legco.gov.hk/odata/english/hansard-db.html}
 }

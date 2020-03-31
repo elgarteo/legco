@@ -22,23 +22,60 @@ legco_speakers(
 )
 }
 \arguments{
-\item{speaker_id}{The id of a speaker at the Legislative Council, or a vector
-of ids. If `NULL`, returns all speakers. Defaults to `NULL`.}
+\item{speaker_id}{the id of a speaker at the Legislative Council, or a vector
+of ids. If \code{NULL}, returns all speakers. Defaults to \code{NULL}.}
 
-\item{type}{The position of a speaker. `'all'` returns all speakers. `'PO'`
-returns public officers. `'LC'` returns key appointment holders and staff
-at LegCo, such as President, Chariman and clerk.`'MB'` returns LegCo
-members. Default to `'all'`.}
+\item{type}{the position of a speaker. \code{"all"} returns all speakers.
+\code{"PO"} returns public officers. \code{"LC"} returns key appointment
+holders and staff at LegCo, such as President, Chairman and clerk.
+\code{"MB"} returns LegCo members. Default to \code{"all"}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch the basic information of speakers in LegCo council meetings, including
 LegCo members, government officials and Secretariat staff.
+}
+\details{
+This function corresponds to the \emph{Speakers} data endpoint of the Hansard
+Database.
+}
+\section{Functions}{
+ Functions of the Hansard database: \itemize{ \item
+  \code{\link{hansard}}: Hansard files \item
+  \code{\link{legco_section_type}}: Section code \item
+  \code{\link{subjects}}: Subjects \code{\link{speakers}}: Speakers in the
+  council, including members, government officials and secretariat staff
+  \item \code{\link{rundown}}: Rundown (Paragraphs in hansard) \item
+  \code{\link{questions}}: Questions raised by members \item
+  \code{\link{bills}}: Bills \item \code{\link{motions}}: Motions \item
+  \code{\link{petitions}}: Petitions \item \code{\link{addresses}}: Addresses
+  made by members or government officials when presenting papers to the
+  Council \item \code{\link{statements}}: Statements made by government
+  officials \item \code{\link{voting_results}}: Results of votes in council
+  meetings \item \code{\link{summoning_bells}}: Instances of summoning bells
+  being rung }
+}
+
+\examples{
+\donttest{
+# Fetch a list of all speakers in LegCo council meetings
+x <- speakers()
+# Fetch a list of all speakers who are LegCo members
+x <- speakers(type = "MB")
+# Look up the details of a speaker with the id 6
+x <- speakers(speaker_id = 6)
+}
+
+}
+\seealso{
+LegCo API documentation for the Hansard database:
+  \url{https://www.legco.gov.hk/odata/english/hansard-db.html}
 }

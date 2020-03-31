@@ -3,15 +3,17 @@
 #' Fetch addresses made by members or government officials while presenting
 #' papers to the Council.
 #'
-#' @inheritParams hansard
-#' @inheritParams rundown
-#' 
-#' @examples 
-#' \dontrun{
+#' This function corresponds to the \emph{Addresses} data endpoint of the
+#' Hansard Database.
+#'
+#' @inherit hansard-db
+#'
+#' @examples
+#' \donttest{
 #' # Fetch addresses given during the Council meeting on February 20, 2019
-#' addresses(hansard_id = 2714)
+#' x <- addresses(hansard_id = 2714)
 #' }
-#' 
+#'
 #' @export
 #' 
 addresses <- function(hansard_id = NULL, rundown_id = NULL,

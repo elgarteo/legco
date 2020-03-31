@@ -1,0 +1,204 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Questions&$select=MeetingDate,QuestionType,Subject,Speaker,SpeakerID,RundownID,HansardFileURL",
+    "odata.count": "22",
+    "value": [
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Following up marine incidents",
+            "Speaker": "STEVEN HO",
+            "SpeakerID": 97,
+            "RundownID": 899439,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq01"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "The overloaded public health care system",
+            "Speaker": "WILSON OR",
+            "SpeakerID": 143,
+            "RundownID": 899457,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq02"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Alleviating the pressure on the services of public hospitals",
+            "Speaker": "CHAN HOI-YAN",
+            "SpeakerID": 161,
+            "RundownID": 899479,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq03"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Medical and nursing manpower in the public health care system",
+            "Speaker": "HELENA WONG",
+            "SpeakerID": 117,
+            "RundownID": 899496,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq04"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Regulation of e-sports venues",
+            "Speaker": "JEREMY TAM",
+            "SpeakerID": 157,
+            "RundownID": 899514,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq05"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Oral",
+            "Subject": "Construction documentation of the Shatin to Central Link project",
+            "Speaker": "LAM CHEUK-TING",
+            "SpeakerID": 138,
+            "RundownID": 899529,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq06"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Non-local students and graduates staying in Hong Kong",
+            "Speaker": "HUI CHI-FUNG",
+            "SpeakerID": 148,
+            "RundownID": 899572,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq07"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Monitoring the water quality of fountains",
+            "Speaker": "PIERRE CHAN",
+            "SpeakerID": 145,
+            "RundownID": 899575,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq08"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Legal basis for non-Hong Kong residents to settle/stay in Hong Kong",
+            "Speaker": "ALVIN YEUNG",
+            "SpeakerID": 131,
+            "RundownID": 899578,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq09"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Certification systems for Chinese medicines pharmacists and personnel",
+            "Speaker": "WONG TING-KWONG",
+            "SpeakerID": 65,
+            "RundownID": 899581,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq10"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Serious drug offences",
+            "Speaker": "LAU KWOK-FAN",
+            "SpeakerID": 153,
+            "RundownID": 899584,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq11"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Retrofitting noise barriers on existing roads",
+            "Speaker": "KWOK WAI-KEUNG",
+            "SpeakerID": 112,
+            "RundownID": 899587,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq12"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Enforcement of the Import and Export Ordinance",
+            "Speaker": "DENNIS KWOK",
+            "SpeakerID": 113,
+            "RundownID": 899590,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq13"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Declaration of the ownership of properties outside Hong Kong",
+            "Speaker": "CHAN CHI-CHUEN",
+            "SpeakerID": 104,
+            "RundownID": 899593,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq14"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Home and community care services for the elderly and persons with disabilities",
+            "Speaker": "FERNANDO CHEUNG",
+            "SpeakerID": 115,
+            "RundownID": 899596,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq15"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Alleviating the financial burden on parents of students",
+            "Speaker": "ALICE MAK",
+            "SpeakerID": 110,
+            "RundownID": 899599,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq16"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Support for Self-reliance Scheme",
+            "Speaker": "TOMMY CHEUNG",
+            "SpeakerID": 55,
+            "RundownID": 899602,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq17"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "\"Smart Tender\" Building Rehabilitation Facilitating Services",
+            "Speaker": "YUNG HOI-YAN",
+            "SpeakerID": 144,
+            "RundownID": 899605,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq18"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Unauthorized building works and related prosecutions",
+            "Speaker": "CHU HOI-DICK",
+            "SpeakerID": 134,
+            "RundownID": 899608,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq19"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Land administration of shipyard sites",
+            "Speaker": "AU NOK-HIN",
+            "SpeakerID": 159,
+            "RundownID": 899611,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq20"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Owner-occupied residential properties owned by applicants for Comprehensive Social Security Assistance",
+            "Speaker": "LEUNG CHE-CHEUNG",
+            "SpeakerID": 108,
+            "RundownID": 899614,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq21"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "QuestionType": "Written",
+            "Subject": "Shortage of taxi drivers",
+            "Speaker": "FRANKIE YICK",
+            "SpeakerID": 98,
+            "RundownID": 899617,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=wrq22"
+        }
+    ]
+}

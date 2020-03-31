@@ -1,0 +1,22 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Hansard&$select=HansardID,MeetingDate,AgendaDate,isCEQandA,isCEQT,HansardFileURL",
+    "odata.count": "2",
+    "value": [
+        {
+            "HansardID": 2691,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "AgendaDate": "2019-02-20T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 1,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220q-translate-e.pdf"
+        },
+        {
+            "HansardID": 2714,
+            "MeetingDate": "2019-02-20T00:00:00",
+            "AgendaDate": "2019-02-20T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf"
+        }
+    ]
+}

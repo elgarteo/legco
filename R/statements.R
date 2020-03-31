@@ -1,14 +1,16 @@
 #' Statements by Public Officers
 #'
-#' Fetch statemetns made by Public Officers in LegCo council meetings.
+#' Fetch statements made by Public Officers in LegCo council meetings.
 #'
-#' @inheritParams hansard
-#' @inheritParams rundown
+#' This function corresponds to the \emph{Statements} data endpoint of the
+#' Hansard Database.
 #'
-#' @examples 
-#' \dontrun{
+#' @inherit hansard-db
+#'
+#' @examples
+#' \donttest{
 #' # Fetch statements made by government officials during the Council meeting on April 22, 2015
-#' statements(from = "2015-04-22")
+#' x <- statements(from = "2015-04-22")
 #' }
 #'
 #' @export

@@ -2,13 +2,15 @@
 #'
 #' Fetch petitions presented in LegCo council meetings.
 #'
-#' @inheritParams hansard
-#' @inheritParams rundown
+#' This function corresponds to the \emph{Petitions} data endpoint of the
+#' Hansard Database.
 #'
-#' @examples 
-#' \dontrun{
+#' @inherit hansard-db
+#' 
+#' @examples
+#' \donttest{
 #' # Fetch petition laid during the Council meeting on January 19, 2018
-#' petitions(from = "2018-01-10")
+#' x <- petitions(from = "2018-01-10")
 #' }
 #'
 #' @export

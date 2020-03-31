@@ -1,0 +1,114 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Bills&$select=MeetingDate,Subject,Section,SectionCode,RundownID,HansardID,HansardFileURL",
+    "odata.count": "12",
+    "value": [
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Smoking (Public Health) (Amendment) Bill 2019",
+            "Section": "First Reading of Government Bills",
+            "SectionCode": "b1r",
+            "RundownID": 899623,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b1r01"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Trade Marks (Amendment) Bill 2019",
+            "Section": "First Reading of Government Bills",
+            "SectionCode": "b1r",
+            "RundownID": 899624,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b1r02"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018",
+            "Section": "Resumption of Second Reading Debate on Government Bills",
+            "SectionCode": "b2d",
+            "RundownID": 899655,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2d01a"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "Section": "Resumption of Second Reading Debate on Government Bills",
+            "SectionCode": "b2d",
+            "RundownID": 899698,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2d02a"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Smoking (Public Health) (Amendment) Bill 2019",
+            "Section": "Second Reading of Government Bills",
+            "SectionCode": "b2r",
+            "RundownID": 899628,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Smoking (Public Health) (Amendment) Bill 2019",
+            "Section": "Withdrawal of the Bill",
+            "SectionCode": "b2r",
+            "RundownID": 899628,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Trade Marks (Amendment) Bill 2019",
+            "Section": "Second Reading of Government Bills",
+            "SectionCode": "b2r",
+            "RundownID": 899650,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r02"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Trade Marks (Amendment) Bill 2019",
+            "Section": "Withdrawal of the Bill",
+            "SectionCode": "b2r",
+            "RundownID": 899650,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r02"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018",
+            "Section": "Third Reading of Government Bills",
+            "SectionCode": "b3r",
+            "RundownID": 899688,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b3r01a"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "Section": "Third Reading of Government Bills",
+            "SectionCode": "b3r",
+            "RundownID": 899747,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b3r02a"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018",
+            "Section": "Committee Stage of Government Bills",
+            "SectionCode": "cwc",
+            "RundownID": 899669,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=cwc01a"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "Section": "Committee Stage of Government Bills",
+            "SectionCode": "cwc",
+            "RundownID": 899712,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=cwc02a"
+        }
+    ]
+}

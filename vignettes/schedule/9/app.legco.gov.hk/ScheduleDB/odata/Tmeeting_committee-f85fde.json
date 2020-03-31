@@ -1,0 +1,291 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/ScheduleDB/odata/$metadata#Tmeeting_committee&$select=committee_id,slot_id,Tmeeting",
+    "odata.count": "15",
+    "value": [
+        {
+            "Tmeeting": {
+                "meet_id": 121452,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220161206.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220161206.htm",
+                "start_date_time": "2016-12-06T15:00:00",
+                "venue_code": "Rm 3",
+                "venue_name_eng": "Conference Room 3",
+                "venue_name_chi": "會議室3",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "163894"
+            },
+            "committee_id": "2704",
+            "slot_id": "163894"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 121938,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220161220.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220161220.htm",
+                "start_date_time": "2016-12-20T09:00:00",
+                "venue_code": "Rm 1",
+                "venue_name_eng": "Conference Room 1",
+                "venue_name_chi": "會議室1",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "164380"
+            },
+            "committee_id": "2704",
+            "slot_id": "164380"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 121944,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170110.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170110.htm",
+                "start_date_time": "2017-01-10T16:30:00",
+                "venue_code": "Rm 3",
+                "venue_name_eng": "Conference Room 3",
+                "venue_name_chi": "會議室3",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "164386"
+            },
+            "committee_id": "2704",
+            "slot_id": "164386"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 121967,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170121.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170121.htm",
+                "start_date_time": "2017-01-21T09:00:00",
+                "venue_code": "Rm 1",
+                "venue_name_eng": "Conference Room 1",
+                "venue_name_chi": "會議室1",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "164409"
+            },
+            "committee_id": "2704",
+            "slot_id": "164409"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 121616,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170221.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170221.htm",
+                "start_date_time": "2017-02-21T08:30:00",
+                "venue_code": "Rm 3",
+                "venue_name_eng": "Conference Room 3",
+                "venue_name_chi": "會議室3",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "164058"
+            },
+            "committee_id": "2704",
+            "slot_id": "164058"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 120851,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170522.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170522.htm",
+                "start_date_time": "2017-05-22T14:30:00",
+                "venue_code": "Rm 1",
+                "venue_name_eng": "Conference Room 1",
+                "venue_name_chi": "會議室1",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "163292"
+            },
+            "committee_id": "2704",
+            "slot_id": "163292"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 121550,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170321.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170321.htm",
+                "start_date_time": "2017-03-21T14:30:00",
+                "venue_code": "Rm 3",
+                "venue_name_eng": "Conference Room 3",
+                "venue_name_chi": "會議室3",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "163992"
+            },
+            "committee_id": "2704",
+            "slot_id": "163992"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 121551,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170613.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170613.htm",
+                "start_date_time": "2017-06-13T10:45:00",
+                "venue_code": "Rm 1",
+                "venue_name_eng": "Conference Room 1",
+                "venue_name_chi": "會議室1",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "163993"
+            },
+            "committee_id": "2704",
+            "slot_id": "163993"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 121552,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170704.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170704.htm",
+                "start_date_time": "2017-07-04T10:45:00",
+                "venue_code": "Rm 3",
+                "venue_name_eng": "Conference Room 3",
+                "venue_name_chi": "會議室3",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "163994"
+            },
+            "committee_id": "2704",
+            "slot_id": "163994"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 122575,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170420.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170420.htm",
+                "start_date_time": "2017-04-20T08:30:00",
+                "venue_code": "Rm 2",
+                "venue_name_eng": "Conference Room 2",
+                "venue_name_chi": "會議室2",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "165025"
+            },
+            "committee_id": "2704",
+            "slot_id": "165025"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 125855,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170927.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170927.htm",
+                "start_date_time": "2017-09-27T10:45:00",
+                "venue_code": "Rm 1",
+                "venue_name_eng": "Conference Room 1",
+                "venue_name_chi": "會議室1",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "168384"
+            },
+            "committee_id": "2704",
+            "slot_id": "168384"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 127931,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220171013.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220171013.htm",
+                "start_date_time": "2017-10-13T08:30:00",
+                "venue_code": "Rm 1",
+                "venue_name_eng": "Conference Room 1",
+                "venue_name_chi": "會議室1",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "170497"
+            },
+            "committee_id": "2704",
+            "slot_id": "170497"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 126258,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220171024.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220171024.htm",
+                "start_date_time": "2017-10-24T10:45:00",
+                "venue_code": "Rm 3",
+                "venue_name_eng": "Conference Room 3",
+                "venue_name_chi": "會議室3",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "168789"
+            },
+            "committee_id": "2704",
+            "slot_id": "168789"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 126366,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220171127.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220171127.htm",
+                "start_date_time": "2017-11-27T10:45:00",
+                "venue_code": "Rm 2",
+                "venue_name_eng": "Conference Room 2",
+                "venue_name_chi": "會議室2",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "168897"
+            },
+            "committee_id": "2704",
+            "slot_id": "168897"
+        },
+        {
+            "Tmeeting": {
+                "meet_id": 126414,
+                "subject_eng": "Meeting of Subcommittee on Issues Relating to Bazaars",
+                "subject_chi": "墟市事宜小組委員會會議",
+                "agenda_url_eng": "http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220171107.htm",
+                "agenda_url_chi": "http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220171107.htm",
+                "start_date_time": "2017-11-07T08:30:00",
+                "venue_code": "Rm 1",
+                "venue_name_eng": "Conference Room 1",
+                "venue_name_chi": "會議室1",
+                "meeting_type_eng": "Open",
+                "meeting_type_chi": "公開會議",
+                "term_id": 5,
+                "slot_id": "168945"
+            },
+            "committee_id": "2704",
+            "slot_id": "168945"
+        }
+    ]
+}

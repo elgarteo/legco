@@ -4,20 +4,47 @@
 \name{legco_section_type}
 \alias{legco_section_type}
 \title{Section Types of LegCo Meetings}
-\format{A dataframe with 51 rows and 3 variables: \itemize{ \item
+\format{
+A dataframe with 51 rows and 3 variables: \itemize{ \item
   \code{SectionCode}: Unique code(s) for each section type \item
   \code{NameEng}: English name of the section \item \code{NameChi}: Chinese
-  name of the section }}
+  name of the section }
+}
 \usage{
 legco_section_type
 }
 \description{
-A data frame of possible types of sections in LegCo meetings. For use to look
-up the meaning of a section code returned by the API.
+A data frame containing possible types of sections in LegCo meetings. For use
+to look up the meaning of a section code returned by the API.
 }
+\details{
+This data frame is a formatted offline copy of the \emph{Sections} data
+endpoint of the Hansard Database.
+}
+\section{Functions}{
+ Functions of the Hansard database: \itemize{ \item
+  \code{\link{hansard}}: Hansard files \item
+  \code{\link{legco_section_type}}: Section code \item
+  \code{\link{subjects}}: Subjects \code{\link{speakers}}: Speakers in the
+  council, including members, government officials and secretariat staff
+  \item \code{\link{rundown}}: Rundown (Paragraphs in hansard) \item
+  \code{\link{questions}}: Questions raised by members \item
+  \code{\link{bills}}: Bills \item \code{\link{motions}}: Motions \item
+  \code{\link{petitions}}: Petitions \item \code{\link{addresses}}: Addresses
+  made by members or government officials when presenting papers to the
+  Council \item \code{\link{statements}}: Statements made by government
+  officials \item \code{\link{voting_results}}: Results of votes in council
+  meetings \item \code{\link{summoning_bells}}: Instances of summoning bells
+  being rung }
+}
+
 \examples{
 # Look up the meaning of section code "mbm"
-legco_section_type[legco_section_type$SectionCode == "mbm", ]
+x <- legco_section_type[legco_section_type$SectionCode == "mbm", ]
 
+}
+\seealso{
+LegCo API documentation for the Hansard database:
+  \url{https://www.legco.gov.hk/odata/english/hansard-db.html}
 }
 \keyword{datasets}

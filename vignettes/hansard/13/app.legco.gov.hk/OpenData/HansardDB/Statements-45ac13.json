@@ -1,0 +1,14 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Statements&$select=MeetingDate,Subject,Speaker,RundownID,HansardID,HansardFileURL",
+    "odata.count": "1",
+    "value": [
+        {
+            "MeetingDate": "2015-04-22T00:00:00",
+            "Subject": "Consultation Report and Proposals on the Method for Selecting the Chief Executive by Universal Suffrage",
+            "Speaker": "CHIEF SECRETARY FOR ADMINISTRATION",
+            "RundownID": 408564,
+            "HansardID": 997,
+            "HansardFileURL": "https://www.legco.gov.hk/yr14-15/english/counmtg/hansard/cm20150422-translate-e.pdf#nameddest=sta01"
+        }
+    ]
+}

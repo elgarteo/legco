@@ -7,22 +7,30 @@
 legco_api(db, query, n = 1000, count = FALSE, verbose = TRUE)
 }
 \arguments{
-\item{db}{The database you wish to access. `'hansard'` for the hansard
-database. `'attn'` for the attendance database. `'bill'` for the bills
-database. `'schedule'` for the schedule database. Or the path name for
-databases not listed here (i.e. the string between the domain name and data
-endpoints, e.g. `'OpenData/HansardDB'`).}
+\item{db}{the database you wish to access. \code{"hansard"} for the hansard
+database. \code{"attn"} for the attendance database. \code{"bill"} for the
+bills database. \code{"schedule"} for the schedule database. Or the path
+name for databases not listed here (i.e. the string between the domain name
+and data endpoints, e.g. \code{"OpenData/HansardDB"}).}
 
-\item{query}{The query for retrieving data. Should include the data endpoint
+\item{query}{the query for retrieving data. Should include the data endpoint
 and parameters if any.}
 
-\item{n}{The number of record to fetch. Defaults to `1000`.}
+\item{n}{the number of record to fetch. Defaults to \code{1000}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 A generic function to access LegCo APIs.
+}
+\examples{
+# Fetch data from the "bills" endpoint of the hansard database
+\donttest{
+x <- legco_api("hansard", "Bills")
+}
+
 }

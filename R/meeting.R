@@ -2,24 +2,16 @@
 #'
 #' Fetch basic information of LegCo committee meetings.
 #'
-#' @param slot_id The id of a meeting slot, or a vector of ids. If `NULL`,
-#'   returns all meetings. Defaults to `NULL`.
+#' This function corresponds to the \emph{Tmeeting} data endpoint of the Meeting
+#' Schedule Database.
 #'
-#' @param meet_id The id of a meeting, or a vector of ids. If `NULL`, returns
-#'   all meetings. Useful for matching meeting with records from the Attendance
-#'   Database. Defaults to `NULL`.
+#' @inherit meeting_schedule-db
+#' @inheritParams hansard-db
 #'
-#' @param type The type of meeting. If `'open'`, returns open meetings. If
-#'   `'closed'`, returns closed meetings. If `'all'`, returns all meetings.
-#'   Defaults to `'all'`.
-#'   
-#' @inheritParams hansard
-#' @inheritParams term
-#' 
-#' @examples 
-#' \dontrun{
+#' @examples
+#' \donttest{
 #' # Fetch all meeting conducted on March 20, 2019
-#' meeting(from = "2019-03-20", to = "2019-03-20")
+#' x <- meeting(from = "2019-03-20", to = "2019-03-20")
 #' }
 #'
 #' @export

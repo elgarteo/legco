@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -36,9 +40,8 @@
 
 
 <meta property="og:title" content="Section Types of LegCo Meetings — legco_section_type" />
-<meta property="og:description" content="A data frame of possible types of sections in LegCo meetings. For use to look
-up the meaning of a section code returned by the API." />
-<meta name="twitter:card" content="summary" />
+<meta property="og:description" content="A data frame containing possible types of sections in LegCo meetings. For use
+to look up the meaning of a section code returned by the API." />
 
 
 
@@ -66,7 +69,7 @@ up the meaning of a section code returned by the API." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -80,7 +83,7 @@ up the meaning of a section code returned by the API." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
       </span>
     </div>
 
@@ -103,13 +106,13 @@ up the meaning of a section code returned by the API." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/attn.html">Attendance Database</a>
-    </li>
-    <li>
       <a href="../articles/bills.html">Bills Database</a>
     </li>
     <li>
       <a href="../articles/hansard.html">Hansard Database</a>
+    </li>
+    <li>
+      <a href="../articles/attn.html">Meeting Attendance Database</a>
     </li>
     <li>
       <a href="../articles/schedule.html">Meeting Schedule Database</a>
@@ -152,8 +155,8 @@ up the meaning of a section code returned by the API." />
     </div>
 
     <div class="ref-description">
-    <p>A data frame of possible types of sections in LegCo meetings. For use to look
-up the meaning of a section code returned by the API.</p>
+    <p>A data frame containing possible types of sections in LegCo meetings. For use
+to look up the meaning of a section code returned by the API.</p>
     </div>
 
     <pre class="usage"><span class='no'>legco_section_type</span></pre>
@@ -168,19 +171,46 @@ up the meaning of a section code returned by the API.</p>
   name of the section</p></li>
 </ul>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This data frame is a formatted offline copy of the <em>Sections</em> data
+endpoint of the Hansard Database.</p>
+    <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+
+    <p>Functions of the Hansard database:</p><ul>
+<li><p><code><a href='hansard.html'>hansard</a></code>: Hansard files</p></li>
+<li><p><code>legco_section_type</code>: Section code</p></li>
+<li><p><code><a href='subjects.html'>subjects</a></code>: Subjects <code><a href='speakers.html'>speakers</a></code>: Speakers in the
+  council, including members, government officials and secretariat staff</p></li>
+<li><p><code><a href='rundown.html'>rundown</a></code>: Rundown (Paragraphs in hansard)</p></li>
+<li><p><code><a href='questions.html'>questions</a></code>: Questions raised by members</p></li>
+<li><p><code><a href='bills.html'>bills</a></code>: Bills</p></li>
+<li><p><code><a href='motions.html'>motions</a></code>: Motions</p></li>
+<li><p><code><a href='petitions.html'>petitions</a></code>: Petitions</p></li>
+<li><p><code><a href='addresses.html'>addresses</a></code>: Addresses
+  made by members or government officials when presenting papers to the
+  Council</p></li>
+<li><p><code><a href='statements.html'>statements</a></code>: Statements made by government
+  officials</p></li>
+<li><p><code><a href='voting_results.html'>voting_results</a></code>: Results of votes in council
+  meetings</p></li>
+<li><p><code><a href='summoning_bells.html'>summoning_bells</a></code>: Instances of summoning bells
+  being rung</p></li>
+</ul>
+
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>LegCo API documentation for the Hansard database:
+  <a href='https://www.legco.gov.hk/odata/english/hansard-db.html'>https://www.legco.gov.hk/odata/english/hansard-db.html</a></p></div>
+
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Look up the meaning of section code "mbm"</span>
-<span class='no'>legco_section_type</span>[<span class='no'>legco_section_type</span>$<span class='no'>SectionCode</span> <span class='kw'>==</span> <span class='st'>"mbm"</span>, ]</div><div class='output co'>#&gt;    SectionCode          NameEng  NameChi
-#&gt; 44         mbm Members' motions 議員議案</div><div class='input'>
-</div></pre>
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='no'>legco_section_type</span>[<span class='no'>legco_section_type</span>$<span class='no'>SectionCode</span> <span class='kw'>==</span> <span class='st'>"mbm"</span>, ]</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#format">Format</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -191,7 +221,7 @@ up the meaning of a section code returned by the API.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
 </div>
 
       </footer>

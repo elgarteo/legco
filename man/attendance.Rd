@@ -32,47 +32,59 @@ legco_attendance(
 )
 }
 \arguments{
-\item{committee_id}{The id of a committee, or a vector of ids. If `NULL`,
-returns results of all committees. Defaults to `NULL`.}
+\item{committee_id}{the id of a committee, or a vector of ids. If
+\code{NULL}, returns results of all committees. Defaults to \code{NULL}.}
 
-\item{meet_id}{The id of a meeting, or a vector of ids. If `NULL`, returns
-all meetings. Useful for matching meeting with records from the Attendance
-Database. Defaults to `NULL`.}
+\item{meet_id}{the id of a meeting, or a vector of ids. If \code{NULL},
+returns all meetings. Useful for matching meeting with records from the
+Attendance Database. Defaults to \code{NULL}.}
 
-\item{member_id}{The id of a LegCo member, or a vector of ids. If `NULL`,
-returns results of all LegCo members. Defaults to `NULL`.}
+\item{member_id}{the id of a LegCo member, or a vector of ids. If
+\code{NULL}, returns results of all LegCo members. Defaults to \code{NULL}.}
 
-\item{attn}{The attendance. `'p'` returns members who were present. `'a'`
-returns members who were absent. `'all'` returns all members. Defaults to
-`'all'`.}
+\item{attn}{the attendance. \code{"p"} returns members who were present.
+\code{"a"} returns members who were absent. \code{"all"} returns all
+members. Defaults to \code{"all"}.}
 
-\item{from}{Only fetch results of meetings on or after this date. Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to `'1900-01-01'`.}
+\item{from}{only fetch results of meetings on or after this date. Accepts
+character values in \code{"YYYY-MM-DD"} format, and objects of class
+\code{Date}, \code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else
+that can be coerced to a date with \code{as.Date()}. Defaults to
+\code{"1900-01-01"}.}
 
-\item{to}{Only fetch results of meetings on or before this date.  Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to the current system date.}
+\item{to}{only fetch results of meetings on or before this date. Accepts
+character values in \code{"YYYY-MM-DD"} format, and objects of class
+\code{Date}, \code{POSIXt}, \code{POSIXct}, \code{POSIXlt} or anything else
+that can be coerced to a date with \code{as.Date()}. Defaults to the
+current system date.}
 
-\item{n}{The number of record to fetch. Defaults to `1000`.}
+\item{n}{the number of record to fetch. Defaults to \code{1000}.}
 
-\item{extra_param}{Additional query parameters defined in LegCo API. Must
-begin with `'&'`.}
+\item{extra_param}{additional query parameters defined in LegCo API. Must
+begin with \code{"&"}.}
 
-\item{count}{If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.}
+\item{count}{logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to \code{FALSE}.}
 
-\item{verbose}{Defaults to `TRUE`.}
+\item{verbose}{logical: Whether to display progress messages when fetching
+data? Defaults to \code{TRUE}.}
 }
 \description{
 Fetch attendance record of LegCo committee meetings
 }
+\details{
+This function corresponds to the \emph{Tattendance} data endpoint of the
+Meeting Attendance Database.
+}
 \examples{
-\dontrun{
-# Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017
-attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", attn = "a")
+\donttest{
+# Fetch members who were absent from the Subcommittee on Issues
+# Relating to Bazaars meetings on October 13, 2017
+x <- attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", attn = "a")
 }
 
+}
+\seealso{
+LegCo API documentation for the Attendance database:
+  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
 }

@@ -1,0 +1,294 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Subjects&$select=MeetingDate,Subject,ResumptionOf,SectionCode,RundownID,HansardID",
+    "odata.count": "36",
+    "value": [
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "MEETING COMMENCED",
+            "ResumptionOf": null,
+            "SectionCode": "mtc",
+            "RundownID": 828481,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "ORAL ANSWERS TO QUESTIONS",
+            "ResumptionOf": null,
+            "SectionCode": "orq",
+            "RundownID": 828485,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Collection of handling charges from persons purchasing tickets online",
+            "ResumptionOf": null,
+            "SectionCode": "orq",
+            "RundownID": 828487,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Measures to improve the reception of visitors to Hong Kong",
+            "ResumptionOf": null,
+            "SectionCode": "orq",
+            "RundownID": 828511,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Foreign domestic helpers congregating in public places during holidays",
+            "ResumptionOf": null,
+            "SectionCode": "orq",
+            "RundownID": 828541,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Pressure on road traffic brought about by cross-boundary vehicles",
+            "ResumptionOf": null,
+            "SectionCode": "orq",
+            "RundownID": 828581,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Assisting local residents in acquiring properties by levying new taxes",
+            "ResumptionOf": null,
+            "SectionCode": "orq",
+            "RundownID": 828603,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Maternity protection for female employees",
+            "ResumptionOf": null,
+            "SectionCode": "orq",
+            "RundownID": 828643,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "WRITTEN ANSWERS TO QUESTIONS",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828673,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Lack of berthing spaces at typhoon shelters for small fishing vessels",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828674,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Sponsored Visitors Programme",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828677,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "A large number of Mainland tourists staying overnight in local camp sites and beaches",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828680,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Combating traffic contraventions in New Territories North and Kowloon East",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828683,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Helping ethnic minority women integrate into the community",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828686,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Employment of academic staff by post-secondary institutions",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828689,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Assessments to rates for properties on agricultural lands",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828692,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Child health assessment and rehabilitation services",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828695,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Measures to boost the supply of industrial lands",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828698,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Development of high-tier data centres and cross-boundary transmission of data",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828701,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Bogus marriage-related offences involving human trafficking",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828704,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Provision of community support services for residents of new public rental housing estates",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828707,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Support for single-parent families",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828710,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Trading of shark fins",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828713,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Management of water resources",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828716,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Supply of first-hand private residential units",
+            "ResumptionOf": null,
+            "SectionCode": "wrq",
+            "RundownID": 828719,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "GOVERNMENT BILL",
+            "ResumptionOf": null,
+            "SectionCode": "bil",
+            "RundownID": 828722,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "FIRST READING OF GOVERNMENT BILL",
+            "ResumptionOf": null,
+            "SectionCode": "b1r",
+            "RundownID": 828723,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 4) Bill 2018",
+            "ResumptionOf": null,
+            "SectionCode": "b1r",
+            "RundownID": 828725,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "SECOND READING OF GOVERNMENT BILL",
+            "ResumptionOf": null,
+            "SectionCode": "b2r",
+            "RundownID": 828727,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 4) Bill 2018",
+            "ResumptionOf": null,
+            "SectionCode": "b2r",
+            "RundownID": 828729,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "MEMBERS' MOTIONS",
+            "ResumptionOf": null,
+            "SectionCode": "mbm",
+            "RundownID": 828732,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Proposed resolution under section 34(4) of the Interpretation and General Clauses Ordinance",
+            "ResumptionOf": null,
+            "SectionCode": "mbm",
+            "RundownID": 828734,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Motion under Rule 49B(1A) of the Rules of Procedure",
+            "ResumptionOf": null,
+            "SectionCode": "mbm",
+            "RundownID": 828743,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Report of the Joint Subcommittee on Long-term Care Policy",
+            "ResumptionOf": null,
+            "SectionCode": "mbm",
+            "RundownID": 828747,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "Not forgetting the 4 June incident",
+            "ResumptionOf": null,
+            "SectionCode": "mbm",
+            "RundownID": 828783,
+            "HansardID": 2451
+        },
+        {
+            "MeetingDate": "2018-05-23T00:00:00",
+            "Subject": "SUSPENSION OF MEETING",
+            "ResumptionOf": null,
+            "SectionCode": "som",
+            "RundownID": 828827,
+            "HansardID": 2451
+        }
+    ]
+}

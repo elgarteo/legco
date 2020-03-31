@@ -2,15 +2,15 @@
 #'
 #' Fetch the basic information of LegCo members.
 #'
-#' @param member_id The id of a LegCo member, or a vector of ids. If `NULL`,
-#'   returns results of all LegCo members. Defaults to `NULL`.
+#' This function corresponds to the \emph{Tmember} data endpoint of the Meeting
+#' Schedule Database.
 #'
-#' @inheritParams hansard
-#' 
-#' @examples 
-#' \dontrun{
+#' @inherit meeting_schedule-db
+#'
+#' @examples
+#' \donttest{
 #' # Fetch full list of members
-#' member()
+#' x <- member()
 #' }
 #'
 #' @export

@@ -2,16 +2,15 @@
 #'
 #' Fetch the basic information of LegCo sessions.
 #'
-#' @param session_id The id of a session, or a vector of ids. If `NULL`, returns
-#'   result of all sessions. Defaults to `NULL`.
+#' This function corresponds to the \emph{Tsession} data endpoint of the Meeting
+#' Schedule Database.
 #'
-#' @inheritParams hansard
-#' @inheritParams term
+#' @inherit meeting_schedule-db
 #'
-#' @examples 
-#' \dontrun{
+#' @examples
+#' \donttest{
 #' # Fetch all LegCo sessions of the fifth term
-#' session(term_id = 4)
+#' x <- session(term_id = 4)
 #' }
 #'
 #' @export

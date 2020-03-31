@@ -1,0 +1,177 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Speakers",
+    "odata.count": "19",
+    "value": [
+        {
+            "SpeakerID": 1,
+            "NameChi": "主席",
+            "NameEng": "PRESIDENT",
+            "Type": "LC",
+            "Initial": "PSD",
+            "FirstName": "",
+            "LastName": ""
+        },
+        {
+            "SpeakerID": 138,
+            "NameChi": "林卓廷",
+            "NameEng": "LAM CHEUK-TING",
+            "Type": "MB",
+            "Initial": "LCT",
+            "FirstName": "Cheuk-ting",
+            "LastName": "LAM"
+        },
+        {
+            "SpeakerID": 148,
+            "NameChi": "許智峯",
+            "NameEng": "HUI CHI-FUNG",
+            "Type": "MB",
+            "Initial": "HCF",
+            "FirstName": "Chi-fung",
+            "LastName": "HUI"
+        },
+        {
+            "SpeakerID": 115,
+            "NameChi": "張超雄",
+            "NameEng": "FERNANDO CHEUNG",
+            "Type": "MB",
+            "Initial": "CCH",
+            "FirstName": "Chiu-hung",
+            "LastName": "CHEUNG"
+        },
+        {
+            "SpeakerID": 99,
+            "NameChi": "胡志偉",
+            "NameEng": "WU CHI-WAI",
+            "Type": "MB",
+            "Initial": "WCW",
+            "FirstName": "Chi-wai",
+            "LastName": "WU"
+        },
+        {
+            "SpeakerID": 141,
+            "NameChi": "邵家臻",
+            "NameEng": "SHIU KA-CHUN",
+            "Type": "MB",
+            "Initial": "SKC",
+            "FirstName": "Ka-chun",
+            "LastName": "SHIU"
+        },
+        {
+            "SpeakerID": 109,
+            "NameChi": "梁繼昌",
+            "NameEng": "KENNETH LEUNG",
+            "Type": "MB",
+            "Initial": "KL",
+            "FirstName": "Kai-cheong",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 111,
+            "NameChi": "郭家麒",
+            "NameEng": "KWOK KA-KI",
+            "Type": "MB",
+            "Initial": "KKK",
+            "FirstName": "Ka-ki",
+            "LastName": "KWOK"
+        },
+        {
+            "SpeakerID": 118,
+            "NameChi": "葉建源",
+            "NameEng": "IP KIN-YUEN",
+            "Type": "MB",
+            "Initial": "IKY",
+            "FirstName": "Kin-yuen",
+            "LastName": "IP"
+        },
+        {
+            "SpeakerID": 101,
+            "NameChi": "范國威",
+            "NameEng": "GARY FAN",
+            "Type": "MB",
+            "Initial": "GF",
+            "FirstName": "Kwok-wai",
+            "LastName": "FAN"
+        },
+        {
+            "SpeakerID": 93,
+            "NameChi": "毛孟靜",
+            "NameEng": "CLAUDIA MO",
+            "Type": "MB",
+            "Initial": "CM",
+            "FirstName": "Man-ching",
+            "LastName": "MO"
+        },
+        {
+            "SpeakerID": 103,
+            "NameChi": "莫乃光",
+            "NameEng": "CHARLES PETER MOK",
+            "Type": "MB",
+            "Initial": "CPM",
+            "FirstName": "Nai-kwong",
+            "LastName": "MOK"
+        },
+        {
+            "SpeakerID": 131,
+            "NameChi": "楊岳橋",
+            "NameEng": "ALVIN YEUNG",
+            "Type": "MB",
+            "Initial": "AY",
+            "FirstName": "Ngok-kiu",
+            "LastName": "YEUNG"
+        },
+        {
+            "SpeakerID": 117,
+            "NameChi": "黃碧雲",
+            "NameEng": "HELENA WONG",
+            "Type": "MB",
+            "Initial": "HW",
+            "FirstName": "Pik-wan",
+            "LastName": "WONG"
+        },
+        {
+            "SpeakerID": 89,
+            "NameChi": "陳淑莊",
+            "NameEng": "TANYA CHAN",
+            "Type": "MB",
+            "Initial": "CT",
+            "FirstName": "Suk-chong",
+            "LastName": "CHAN"
+        },
+        {
+            "SpeakerID": 127,
+            "NameChi": "謝偉銓",
+            "NameEng": "TONY TSE",
+            "Type": "MB",
+            "Initial": "TT",
+            "FirstName": "Wai-chuen",
+            "LastName": "TSE"
+        },
+        {
+            "SpeakerID": 113,
+            "NameChi": "郭榮鏗",
+            "NameEng": "DENNIS KWOK",
+            "Type": "MB",
+            "Initial": "DK",
+            "FirstName": "Wing-hang",
+            "LastName": "KWOK"
+        },
+        {
+            "SpeakerID": 43,
+            "NameChi": "梁耀忠",
+            "NameEng": "LEUNG YIU-CHUNG",
+            "Type": "MB",
+            "Initial": "LYC",
+            "FirstName": "Yiu-chung",
+            "LastName": "LEUNG"
+        },
+        {
+            "SpeakerID": 55,
+            "NameChi": "張宇人",
+            "NameEng": "TOMMY CHEUNG",
+            "Type": "MB",
+            "Initial": "TC",
+            "FirstName": "Yu-yan",
+            "LastName": "CHEUNG"
+        }
+    ]
+}

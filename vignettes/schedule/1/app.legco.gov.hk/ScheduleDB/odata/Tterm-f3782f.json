@@ -1,0 +1,18 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/ScheduleDB/odata/$metadata#Tterm&$select=term_id,term,start_date,end_date",
+    "odata.count": "2",
+    "value": [
+        {
+            "term_id": 4,
+            "term": "2012-2016",
+            "start_date": "2012-10-01T00:00:00",
+            "end_date": "2016-09-30T00:00:00"
+        },
+        {
+            "term_id": 5,
+            "term": "2016-2020",
+            "start_date": "2016-10-01T00:00:00",
+            "end_date": "2020-09-30T00:00:00"
+        }
+    ]
+}

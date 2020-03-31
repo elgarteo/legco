@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -38,7 +42,6 @@
 <meta property="og:title" content="Voting Record in LegCo Meetings — voting_record" />
 <meta property="og:description" content="Fetch voting records of LegCo council, the Finance Committee and its
 subcommittees and the House Committee meetings." />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -66,7 +69,7 @@ subcommittees and the House Committee meetings." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -80,7 +83,7 @@ subcommittees and the House Committee meetings." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
       </span>
     </div>
 
@@ -103,13 +106,13 @@ subcommittees and the House Committee meetings." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/attn.html">Attendance Database</a>
-    </li>
-    <li>
       <a href="../articles/bills.html">Bills Database</a>
     </li>
     <li>
       <a href="../articles/hansard.html">Hansard Database</a>
+    </li>
+    <li>
+      <a href="../articles/attn.html">Meeting Attendance Database</a>
     </li>
     <li>
       <a href="../articles/schedule.html">Meeting Schedule Database</a>
@@ -162,9 +165,10 @@ subcommittees and the House Committee meetings.</p>
   <span class='kw'>result</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
   <span class='kw'>vote</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
   <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>name_en</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>separate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>,
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01 00:00:00"</span>,
   <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span>(),
   <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
   <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -178,9 +182,10 @@ subcommittees and the House Committee meetings.</p>
   <span class='kw'>result</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
   <span class='kw'>vote</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
   <span class='kw'>name_ch</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>seperate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>name_en</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>separate_mechanism</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>mover_type</span> <span class='kw'>=</span> <span class='st'>"all"</span>,
-  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01T00:00:00"</span>,
+  <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"1900-01-01 00:00:00"</span>,
   <span class='kw'>to</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.time</a></span>(),
   <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10000</span>,
   <span class='kw'>extra_param</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
@@ -193,99 +198,122 @@ subcommittees and the House Committee meetings.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>committee</th>
-      <td><p>The name of the committee or subcommittee. Defaults to
-`NULL`.</p></td>
+      <td><p>the name of the committee or subcommittee. Defaults to
+<code>NULL</code>.</p></td>
     </tr>
     <tr>
       <th>term_id</th>
-      <td><p>The id of a term, or a vector of ids. If `NULL`, returns
-results of all terms. Defaults to `NULL`.</p></td>
+      <td><p>the id of a term, or a vector of ids. If <code>NULL</code>, returns
+results of all terms. Defaults to <code>NULL</code>.</p></td>
     </tr>
     <tr>
       <th>result</th>
-      <td><p>The voting result. If `'passed'`, returns motions that have
-been passed. If `'vetoed'`, returns motions that have been vetoed.If
-`'all'`, returns all motions that has been voted in LegCo. Defaults to
-`all`.</p></td>
+      <td><p>the voting result. If <code>"passed"</code>, returns motions that
+have been passed. If <code>"vetoed"</code>, returns motions that have been
+vetoed.If <code>"all"</code>, returns all motions that has been voted in LegCo.
+Defaults to <code>all</code>.</p></td>
     </tr>
     <tr>
       <th>vote</th>
-      <td><p>The vote that casted. If `'yes'`, returns only members who casted
-affirmative votes. If `'no'`, returns only members who casted negative
-votes. If `'abstain'`, returns only members who abstained from voting. If
-`'absent'`, returns only members who were absent. If `'present'`, returns
-only members who were present and did not vote (e.g. President). If
-`'all'`, returns all votes. Defaults to `'all'`.</p></td>
+      <td><p>the vote cast. If <code>"yes"</code>, returns only members who cast
+affirmative votes. If <code>"no"</code>, returns only members who cast negative
+votes. If <code>"abstain"</code>, returns only members who abstained from voting.
+If <code>"absent"</code>, returns only members who were absent. If
+<code>"present"</code>, returns only members who were present and did not vote
+(e.g. President). If <code>"all"</code>, returns all votes. Defaults to
+<code>"all"</code>.</p></td>
     </tr>
     <tr>
       <th>name_ch</th>
-      <td><p>The name of a LegCo member, or a vector of names. If `NULL`,
-returns voting records of all members. Defaults to `NULL`.</p></td>
+      <td><p>the name of a LegCo member in Traditional Chinese, or a vector
+of names. If <code>NULL</code>, returns voting records of all members. Defaults
+to <code>NULL</code>.</p></td>
     </tr>
     <tr>
-      <th>seperate_mechanism</th>
-      <td><p>Only fetch votes that were counted with the vote
-seperate mechanism, i.e. requiring majority in both geographical and
-functional constituencies to pass. If `NULL`, returns all votes regardless
-of the vote counting mechanism used. Defaults to `NULL`.</p></td>
+      <th>name_en</th>
+      <td><p>the name of a LegCo member in English, or a vector of names.
+If the member has an English name, the English name should go first
+followed by the surname in capital letters, e.g. <code>"Peter CHAN"</code>. If
+the member does not have an English name, the surname in capital letters
+should go first followed by the translated first name with a hyphen
+separating the different syllable, e.g. <code>"CHAN Tai-man"</code>. Check the
+names of the members with <code><a href='member.html'>member</a>()</code>. If <code>NULL</code>, returns
+voting records of all members. Defaults to <code>NULL</code>.</p></td>
+    </tr>
+    <tr>
+      <th>separate_mechanism</th>
+      <td><p>only fetch votes that were counted with the vote
+separate mechanism, i.e. requiring majority in both geographical and
+functional constituencies to pass. If <code>NULL</code>, returns all votes
+regardless of the vote counting mechanism used. Defaults to <code>NULL</code>.</p></td>
     </tr>
     <tr>
       <th>mover_type</th>
-      <td><p>The type of motion being put on vote. If `'PO'`, returns
-votes on government motions only. If `'MB'`, returns votes on members'
-motions only. If `'all'`, returns votes on all motions. Defaults to
-`'all'`.</p></td>
+      <td><p>the type of motion being put on vote. If <code>"PO"</code>,
+returns votes on government motions only. If <code>"MB"</code>, returns votes on
+members' motions only. If <code>"all"</code>, returns votes on all motions.
+Defaults to <code>"all"</code>.</p></td>
     </tr>
     <tr>
       <th>from</th>
-      <td><p>Only fetch results of meetings on or after this date. Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to `'1900-01-01'`.</p></td>
+      <td><p>only fetch results of meetings on or after this date and time.
+Accepts character values in <code>"YYYY-MM-DD"</code> or <code>"YYYY-MM-DD
+HH:MM:SS"</code> format, and objects of class <code>Date</code>, <code>POSIXt</code>,
+<code>POSIXct</code>, <code>POSIXlt</code> or anything else that can be coerced to a
+date with <code><a href='https://rdrr.io/r/base/as.Date.html'>as.Date()</a></code>. Defaults to <code>"1900-01-01 00:00:00"</code>.</p></td>
     </tr>
     <tr>
       <th>to</th>
-      <td><p>Only fetch results of meetings on or before this date.  Accepts
-character values in `'YYYY-MM-DD'` format, and objects of class `Date`,
-`POSIXt`, `POSIXct`, `POSIXlt` or anything else that can be coerced to a
-date with `as.Date()`. Defaults to the current system date.</p></td>
+      <td><p>only fetch results of meetings on or before this date and time.
+Accepts character values in <code>"YYYY-MM-DD"</code> or <code>"YYYY-MM-DD
+HH:MM:SS"</code> format, and objects of class <code>Date</code>, <code>POSIXt</code>,
+<code>POSIXct</code>, <code>POSIXlt</code> or anything else that can be coerced to a
+date with <code><a href='https://rdrr.io/r/base/as.Date.html'>as.Date()</a></code>. Defaults to the current system time.</p></td>
     </tr>
     <tr>
       <th>n</th>
-      <td><p>The number of record to fetch. Defaults to `1000`.</p></td>
+      <td><p>the number of record to fetch. Defaults to <code>1000</code>.</p></td>
     </tr>
     <tr>
       <th>extra_param</th>
-      <td><p>Additional query parameters defined in LegCo API. Must
-begin with `'&amp;'`.</p></td>
+      <td><p>additional query parameters defined in LegCo API. Must
+begin with <code>"&amp;"</code>.</p></td>
     </tr>
     <tr>
       <th>count</th>
-      <td><p>If `TRUE`, returns only the total count of records that matches
-the paramter(s) instead of the result. Defaults to `FALSE`.</p></td>
+      <td><p>logical: Whether to return only the total count of records that
+matches the parameter(s) instead of the result. Defaults to <code>FALSE</code>.</p></td>
     </tr>
     <tr>
       <th>verbose</th>
-      <td><p>Defaults to `TRUE`.</p></td>
+      <td><p>logical: Whether to display progress messages when fetching
+data? Defaults to <code>TRUE</code>.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This function corresponds to the <em>vVotingResult</em> data endpoint of the
+Voting Result Database.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>LegCo API documentation for the Voting Record database:
+  <a href='https://www.legco.gov.hk/odata/english/vrdb.html'>https://www.legco.gov.hk/odata/english/vrdb.html</a></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='co'># Fetch how members voted the motion on "Abolishing the MPF Offsetting Mechanism" on November 11, 2016</span>
-<span class='fu'>voting_record</span>(<span class='kw'>committee</span> <span class='kw'>=</span> <span class='st'>"Council Meeting"</span>,
-              <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"2016-11-16T13:51:53"</span>,
-              <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>"2016-11-16T13:51:53"</span>)
-}</div></pre>
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
+<span class='co'># Fetch how members voted the motion on</span>
+<span class='co'># Abolishing the MPF Offsetting Mechanism on November 11, 2016</span>
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'>voting_record</span>(<span class='kw'>committee</span> <span class='kw'>=</span> <span class='st'>"Council Meeting"</span>,
+                   <span class='kw'>from</span> <span class='kw'>=</span> <span class='st'>"2016-11-16 13:51:53"</span>,
+                   <span class='kw'>to</span> <span class='kw'>=</span> <span class='st'>"2016-11-16 13:51:53"</span>)</div><div class='output co'>#&gt; <span class='message'>Retrieving records...</span></div><div class='output co'>#&gt; <span class='message'>Retrieved 68 record(s). 68 record(s) available in total.</span></div><div class='input'># }
 
+</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -296,7 +324,7 @@ the paramter(s) instead of the result. Defaults to `FALSE`.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
 </div>
 
       </footer>

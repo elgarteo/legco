@@ -8,40 +8,35 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-`legco` is an R package to fetch data from the Hong Kong Legislative Council (LegCo) APIs. It provides 
-easy access to LegCo's open data in an intergrated manner without having to dig deep into the structures 
-and parameters of the APIs. Each function corresponds to a data endpoint of the APIs. Data is retrieved 
+```{r include=FALSE}
+knitr::opts_chunk$set(message = FALSE)
+library(httptest)
+start_vignette("introduction")
+```
+
+`legco` is an R package to fetch data from the Hong Kong Legislative Council (LegCo) API. It provides 
+easy access to LegCo’s open data in an integrated manner without having to dig deep into the structures 
+and parameters of the API. Each function corresponds to a data endpoint of the API. Data is retrieved 
 in json format and presented in a dataframe.
 
 ## Installing legco
 
-```{r, eval = FALSE}
+```{r eval=FALSE}
 install.packages("devtools")
 devtools::install_github("elgarteo/legco")
 ```
 
 And to load it before every use:
 
-```{r}
+```{r }
 library(legco)
 ```
 
-## Understanding the LegCo APIs
+## Understanding the LegCo API
 
-The LegCo APIs consist of different databases with seperate structures and identifiers,
-and each database has its own API. The functions in this package correspond to the various data endpoints
-of these APIs. The databases supported by this package and the associating functions are as follow.
-
-1. **Attendance Database**
-
-   This database contains the attendance record of Council and committee open meetings since the
-   sixth term.
-   
-   This database is accessible with the following function:
-   
-   * `attendance()` fetches the attendance of members in Council and committee meetings.
-   
-   See [here](./attn.html) for more information of this database.
+The LegCo API consists of different databases with separate structures and identifiers.
+The functions in this package correspond to the various data endpoints
+of these databases. The databases supported by this package and the associating functions are as follow.
 
 1. **Bills Database**
 
@@ -50,7 +45,7 @@ of these APIs. The databases supported by this package and the associating funct
    
    * `all_bills()` fetches the information of bills that have gone through LegCo.
    
-   Comapred to `bills()` of the Hansard Database, `all_bills()` provides much more comprehensive information 
+   Compared to `bills()` of the Hansard Database, `all_bills()` provides much more comprehensive information 
    of bills, including all key dates and the proposer.
    
    See [here](./bills.html) for more information of this database.
@@ -75,13 +70,24 @@ of these APIs. The databases supported by this package and the associating funct
    * `petitions()` fetches petitions initiated by members in Council meetings.
    * `addresses()` fetches addresses made by members or government officials while presenting papers
    to the Council.
-   * `statements()` fetches statments made by government officials in Council meetings.
+   * `statements()` fetches statements made by government officials in Council meetings.
    * `voting_results()` fetches the results of votes conducted in Council meetings.
    * `summoning_bells()` fetches instances in which the summoning bell have been rung in Council meetings.
    
    When using in combination, these functions are essentially hansard files crawler.
    
    See [here](./hansard.html) for more information of this database.
+   
+1. **Meeting Attendance Database**
+
+   This database contains the attendance record of Council and committee open meetings since the
+   sixth term.
+   
+   This database is accessible with the following function:
+   
+   * `attendance()` fetches the attendance of members in Council and committee meetings.
+   
+   See [here](./attn.html) for more information of this database.
 
 1. **Meeting Schedule Database**
 
@@ -120,7 +126,7 @@ of these APIs. The databases supported by this package and the associating funct
    
 ---
 
-A generic function `legco_api()` is available for access to other databases and endpoints of the LegCo APIs that 
+A generic function `legco_api()` is available for access to other databases and endpoints of the LegCo API that 
 are not specified here.
    
 All functions can also be accessed with the prefix `legco_`, e.g. `legco_speakers()` and `speakers()`
@@ -130,13 +136,17 @@ return the same result.
 
 ### Rate Limit
 
-LegCo APIs have a rate limit of approximately 1000 requests per IP per hour. Once the limit is reached, you will not be
+LegCo API has a rate limit of approximately 1000 requests per IP per hour. Once the limit is reached, you will not be
 able to retrieve any data for awhile. If you run into the following error message while pretty sure you have entered
 the correct parameters, you have probably reached the limit:
 
-```{r echo = FALSE, message = TRUE, error = TRUE}
+```{r echo=FALSE, error=TRUE, purl=FALSE}
 # Generate error message by requesting non-existence id
 speakers(0)
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 ### Node Count Limit
@@ -145,7 +155,7 @@ Another limit is the node count limit which is associated with the setting of th
 The limit is at most 100 nodes per request, or approximately 20 filtering conditions in most cases. 
 For instance, the following code contains 21 filtering conditions and thus reach the node count limit:
 
-```{r echo = FALSE, message = TRUE, error = TRUE}
+```{r echo=FALSE, error=TRUE, purl=FALSE}
 # A request with 21 filtering conditions
 x <- c(1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 
        23, 25, 27, 29, 31, 33, 35, 37, 39, 41)
@@ -157,7 +167,7 @@ like [one of the examples below](#examples).
 
 Note that numeric filtering conditions that are sequential are not subjected to this limit: 
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 # A request with sequential numeric filtering conditions
 x <- c(1:50)
 speakers(speaker_id = x)
@@ -166,35 +176,77 @@ speakers(speaker_id = x)
 The code above will execute just fine without reaching the node count limit even though it effectively 
 contains 50 filtering conditions.
 
+### Common Connection Problems
+
+It is common for the connection to the LegCo API to experience SSL error from time to time, 
+especially during repeated requests. This can usually be resolved simply by retrying. 
+This package automatically retries the request once when an SSL error occurs with the following
+messages:
+
+```{r echo=FALSE, message=TRUE}
+message("Encountered Error in open.connection(con, \"rb\"): LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to app.legco.gov.hk:443")
+message("Possible common connection problem resolvable by retrying.")
+message("Retrying...")
+```
+
+If the same error happens again after retrying, the process will be terminated with an error message.
+In this case, the cause of the problem is likely to be a genuine SSL error.
+
+Another common problem is that the LegCo API sometimes returns an empty json file when it
+is not supposed to. Again, this can usually be resolved by retrying. This package automatically
+retries the request once to make sure that an invalid search query or rate limit is not the cause
+of the problem. The following messages will be shown if this problem occurs:
+
+```{r echo=FALSE, message=FALSE}
+message("The request did not return any data.")
+message("Possible common connection problem resolvable by retrying.")
+message("Retrying...")
+```
+
+If the API returns an empty result again, the process will be terminated with an error message.
+In this case, the cause is likely to be invalid search parameters or that you have exceeded 
+the rate limit (see [here](#rate-limit)).
+
 ## Examples
 
 The following code shows all the Council meetings held from May 1, 2018 to May 31, 2018.
 
-```{r echo=TRUE, message=FALSE}
+```{r }
 hansard(from = "2018-05-01", to = "2018-05-31")
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 To fetch the items on the agenda of the meeting on May 23, 2018:
 
-```{r, echo = TRUE, message = FALSE}
+```{r eval=FALSE}
 subjects(hansard_id = 2451)
+```
+```{r echo=FALSE}
+subjects(hansard_id = 2451, to = "2020-03-27")
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 In this example, we will look into the motion _Not forgetting the 4 June incident_.
 
-The section codes indicate the type of the business. For exmaple, the section code "mbm" of the
+The section codes indicate the type of the business. For example, the section code "mbm" of the
 _Not forgetting the 4 June incident_ means that it is a member's motion:
 
-```{r, echo = TRUE, message = FALSE}
+```{r }
 legco_section_type[legco_section_type$SectionCode == "mbm", ]
 ```
 
 The RundownID indicates the location of the first paragraph of the matter concerned in the hansard file. In other words, 
 paragraphs of RundownID between 828783 and 828826 (one RundownID prior to the next item on the agenda) are the records of the 
-matter the _Not forgetting the 4 june incident_ during the meeting.
+matter the _Not forgetting the 4 June incident_ during the meeting.
 The full text of these paragraphs can be fetched by:
 
-```{r, echo = TRUE, message = FALSE}
+```{r eval=FALSE}
 w <- rundown(rundown_id = 828783:828826)
 # Order by RundownID, i.e. chronological order
 w <- w[order(w$RundownID), ]
@@ -202,45 +254,83 @@ rownames(w) <- 1:nrow(w)
 # Some two paragraphs of the hansard relevant to the discussion of the motion
 w$Content[41:42]
 ```
+```{r echo=FALSE}
+w <- rundown(rundown_id = 828783:828826, to = "2020-03-27")
+# Order by RundownID, i.e. chronological order
+w <- w[order(w$RundownID), ]
+rownames(w) <- 1:nrow(w)
+# Some two paragraphs of the hansard relevant to the discussion of the motion
+w$Content[41:42]
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
 To check which members have spoken about the motion and to look up some of their names:
 
-```{r, echo = TRUE, message = TRUE, error = TRUE}
+```{r error=TRUE, purl=FALSE}
 x <- unique(w$SpeakerID[!is.na(w$SpeakerID)])
-speakers(id = x)
+speakers(speaker_id = x)
 ```
 
-The code above produces 27 filtering conditions which reahces the node count limit.
+The code above produces 27 filtering conditions which exceed the node count limit.
 If you need have parameters longer than that, break them down into multiple requests:
 
-```{r echo=TRUE, message=FALSE}
+```{r }
 y1 <- speakers(speaker_id = x[1:19])
 y2 <- speakers(speaker_id = x[20:27])
 y <- rbind(y1, y2)
 # Show members who have spoken about this motion
 head(y[y$Type == "MB", ])
 ```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
 
 To find out the voting results of the motion:
 
-```{r, echo = TRUE, message = FALSE}
+```{r }
 v <- voting_results(from = w$MeetingDate[1], to = w$MeetingDate[1], section_code = "mbm")
 v[v$Subject == "Not forgetting the 4 June incident", ]
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 It is possible to fetch the detailed voting record of each member on this motion. To get a list of members who voted yes:
 
-```{r, echo = TRUE, message = FALSE}
+```{r }
 v <- voting_record(from = w$MeetingDate[1], to = w$MeetingDate[1])
 v[v$Vote == "Yes", 32:33]
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
 ```
 
 To check the attendance of this meeting:
 
-```{r, echo = TRUE, message = FALSE}
+```{r }
 # Find out MeetID of the Council meeting on May 23, 2018
 meeting(from = w$MeetingDate[1], to = w$MeetingDate[1])
+```
+```{r echo=FALSE}
+change_state()
+Sys.sleep(2)
+```
+```{r eval=FALSE}
 z <- attendance(meet_id = 126590)
 # Show members who were present
 z[z$PresentAbsent == "Present", 7:9] 
+```
+```{r echo=FALSE}
+z <- attendance(meet_id = 126590, to = "2020-03-27")
+# Show members who were present
+z[z$PresentAbsent == "Present", 7:9] 
+```
+```{r include=FALSE}
+end_vignette()
 ```

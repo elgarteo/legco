@@ -1,0 +1,18 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/ScheduleDB/odata/$metadata#Tmember_term&$select=member_id,term_id",
+    "odata.count": "3",
+    "value": [
+        {
+            "member_id": 273,
+            "term_id": 4
+        },
+        {
+            "member_id": 273,
+            "term_id": 5
+        },
+        {
+            "member_id": 924,
+            "term_id": 5
+        }
+    ]
+}

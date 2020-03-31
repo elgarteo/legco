@@ -1,0 +1,102 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#Hansard&$select=HansardID,MeetingDate,AgendaDate,isCEQandA,isCEQT,HansardFileURL",
+    "odata.count": "12",
+    "value": [
+        {
+            "HansardID": 2407,
+            "MeetingDate": "2018-05-02T00:00:00",
+            "AgendaDate": "2018-05-02T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180502-translate-e.pdf"
+        },
+        {
+            "HansardID": 2526,
+            "MeetingDate": "2018-05-03T00:00:00",
+            "AgendaDate": "2018-05-02T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180503-translate-e.pdf"
+        },
+        {
+            "HansardID": 2405,
+            "MeetingDate": "2018-05-03T00:00:00",
+            "AgendaDate": "2018-05-03T00:00:00",
+            "isCEQandA": 1,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180503a-translate-e.pdf"
+        },
+        {
+            "HansardID": 2418,
+            "MeetingDate": "2018-05-09T00:00:00",
+            "AgendaDate": "2018-05-09T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180509-translate-e.pdf"
+        },
+        {
+            "HansardID": 2419,
+            "MeetingDate": "2018-05-10T00:00:00",
+            "AgendaDate": "2018-05-09T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180510-translate-e.pdf"
+        },
+        {
+            "HansardID": 2425,
+            "MeetingDate": "2018-05-16T00:00:00",
+            "AgendaDate": "2018-05-16T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180516-translate-e.pdf"
+        },
+        {
+            "HansardID": 2434,
+            "MeetingDate": "2018-05-17T00:00:00",
+            "AgendaDate": "2018-05-16T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180517-translate-e.pdf"
+        },
+        {
+            "HansardID": 2443,
+            "MeetingDate": "2018-05-23T00:00:00",
+            "AgendaDate": "2018-05-23T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 1,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523q-translate-e.pdf"
+        },
+        {
+            "HansardID": 2451,
+            "MeetingDate": "2018-05-23T00:00:00",
+            "AgendaDate": "2018-05-23T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf"
+        },
+        {
+            "HansardID": 2450,
+            "MeetingDate": "2018-05-24T00:00:00",
+            "AgendaDate": "2018-05-23T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180524-translate-e.pdf"
+        },
+        {
+            "HansardID": 2541,
+            "MeetingDate": "2018-05-30T00:00:00",
+            "AgendaDate": "2018-05-30T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180530-translate-e.pdf"
+        },
+        {
+            "HansardID": 2462,
+            "MeetingDate": "2018-05-31T00:00:00",
+            "AgendaDate": "2018-05-30T00:00:00",
+            "isCEQandA": 0,
+            "isCEQT": 0,
+            "HansardFileURL": "https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180531-translate-e.pdf"
+        }
+    ]
+}

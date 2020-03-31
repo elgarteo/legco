@@ -3,14 +3,15 @@
 #' Fetch all the meeting slots of a given committee(s), or the committee of a
 #' given meeting slot(s).
 #'
-#' @inheritParams hansard
-#' @inheritParams committee
-#' @inheritParams meeting
-#' 
-#' @examples 
-#' \dontrun{
+#' This function corresponds to the \emph{Tmeeting_committee} data endpoint of
+#' the Meeting Schedule Database.
+#'
+#' @inherit meeting_schedule-db
+#'
+#' @examples
+#' \donttest{
 #' # Fetch all meetings of Subcommittee on Issues Relating to Bazaars
-#' meeting_committee(committee_id = 2704)
+#' x <- meeting_committee(committee_id = 2704)
 #' }
 #'
 #' @export

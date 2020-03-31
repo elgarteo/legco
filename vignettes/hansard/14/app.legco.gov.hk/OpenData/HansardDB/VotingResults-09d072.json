@@ -1,0 +1,114 @@
+{
+    "odata.metadata": "https://app.legco.gov.hk/OpenData/HansardDB/$metadata#VotingResults&$select=MeetingDate,Subject,VoteResult,SectionCode,RundownID,HansardID,HansardFileURL",
+    "odata.count": "12",
+    "value": [
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "b2d",
+            "RundownID": 899665,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00241"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "cwc",
+            "RundownID": 899677,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00253"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "cwc",
+            "RundownID": 899685,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00261"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "b3r",
+            "RundownID": 899695,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00271"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "b2d",
+            "RundownID": 899709,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00286"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "cwc",
+            "RundownID": 899720,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00298"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "cwc",
+            "RundownID": 899731,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00309"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "cwc",
+            "RundownID": 899737,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00315"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "cwc",
+            "RundownID": 899745,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00323"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Inland Revenue (Amendment) (No. 7) Bill 2018",
+            "VoteResult": "Passed",
+            "SectionCode": "b3r",
+            "RundownID": 899754,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00333"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Proposed resolution under section 34(4) of the Interpretation and General Clauses Ordinance",
+            "VoteResult": "Passed",
+            "SectionCode": "mbm",
+            "RundownID": 899766,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00345"
+        },
+        {
+            "MeetingDate": "2019-02-20T00:00:00",
+            "Subject": "Proposed resolution under Article 75 of the Basic Law of the Hong Kong Special Administrative Region of the People's Republic of China",
+            "VoteResult": "Passed",
+            "SectionCode": "mbm",
+            "RundownID": 899810,
+            "HansardID": 2714,
+            "HansardFileURL": "https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00389"
+        }
+    ]
+}
