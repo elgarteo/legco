@@ -61,7 +61,9 @@ legco_api <- function(db, query, n = 1000, count = FALSE, verbose = TRUE) {
   }
   
   if (node_count(baseurl) > 100) { # in utils-misc.R
-    stop("Parameters too long. Please shorten your parameters and break down into multiple requests.")
+    stop("Parameters too long. ", 
+         "Please shorten your parameters and break down into multiple requests.", 
+         call. = FALSE)
   }
   
   if (verbose) {
@@ -132,10 +134,14 @@ access_api <- function(url, verbose, ssl = FALSE, empty = FALSE) {
     json <- httr::GET(url, httr::accept_json())
     json <- httr::content(json, as = "text", encoding = "UTF-8")
     df <- jsonlite::fromJSON(json, flatten = TRUE)
+    if (is.null(df[["odata.count"]])) 
+      stop("The request did not return any data: ",
+           "Invalid search parameters or rate limit exceeded.", call. = FALSE)
     if (df$odata.count == 0) {
       # If no data retrieved, retry again to make sure it's not a connection problem
-      if (empty) stop("The request did not return any data: ",
-                      "Invalid search parameters or rate limit exceeded.")
+      if (empty) 
+        stop("The request did not return any data: ",
+             "Invalid search parameters or rate limit exceeded.", call. = FALSE)
       if (verbose) {
         message("The request did not return any data.")
         message("Possible common connection problem resolvable by retrying.")
@@ -147,7 +153,7 @@ access_api <- function(url, verbose, ssl = FALSE, empty = FALSE) {
     df
   }, error = function(cnd) {
     # Retry if error is a common LegCo API connection problem
-    if (grepl("SSL_ERROR_SYSCALL", cnd[[1]]) & !ssl) {
+    if (grepl("SSL_ERROR_SYSCALL", cnd[["message"]]) & !ssl) {
       if (verbose) {
         message("Encountered ", cnd)
         message("Possible common connection problem resolvable by retrying.")
@@ -156,6 +162,6 @@ access_api <- function(url, verbose, ssl = FALSE, empty = FALSE) {
       Sys.sleep(2)
       return(access_api(url, verbose, ssl = TRUE))
     } 
-    stop(cnd)
+    stop(cnd[["message"]], call. = FALSE)
   })
 }
