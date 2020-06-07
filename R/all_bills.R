@@ -124,21 +124,21 @@ all_bills <- function(id = NULL, ordinance = NULL, title = NULL, proposer = NULL
   filter_args <- {}
   
   if (!is.null(id)) {
-    filter_args <- c(filter_args, generate_filter("internal_key", id))
+    filter_args <- c(filter_args, .generate_filter("internal_key", id))
   }
 
   if (!is.null(ordinance)) {
-    ordinance <- capitalise(ordinance)
+    ordinance <-.capitalise(ordinance)
     filter_args <- c(filter_args, paste0("ordinance_title_eng eq '", ordinance, "'"))
   }
   
   if (!is.null(title)) {
-    title <- capitalise(title)
+    title <-.capitalise(title)
     filter_args <- c(filter_args, paste0("bill_title_eng eq '", title, "'"))
   }
   
   if (!is.null(proposer)) {
-    proposer <- capitalise(proposer)
+    proposer <-.capitalise(proposer)
     filter_args <- c(filter_args, paste0("proposed_by_eng eq '", proposer, "'"))
   }
   
@@ -213,7 +213,7 @@ all_bills <- function(id = NULL, ordinance = NULL, title = NULL, proposer = NULL
   df <- legco_api("bill", query, n, count, verbose)
   
   if (!count) {
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    colnames(df) <-.unify_colnames(colnames(df)) # in utils-misc.R
   }
   
   df

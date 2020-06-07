@@ -26,11 +26,11 @@ meeting <- function(slot_id = NULL, meet_id = NULL, from = '1900-01-01',
   filter_args <- {}
   
   if (!is.null(slot_id)) {
-    filter_args <- c(filter_args, generate_filter("slot_id", slot_id))
+    filter_args <- c(filter_args, .generate_filter("slot_id", slot_id))
   }
   
   if (!is.null(meet_id)) {
-    filter_args <- c(filter_args, generate_filter("meet_id", meet_id))
+    filter_args <- c(filter_args, .generate_filter("meet_id", meet_id))
   }
   
   from <- as.Date(from)
@@ -48,7 +48,7 @@ meeting <- function(slot_id = NULL, meet_id = NULL, from = '1900-01-01',
   }
   
   if (!is.null(term_id)) {
-    filter_args <- c(filter_args, generate_filter("term_id", term_id))
+    filter_args <- c(filter_args, .generate_filter("term_id", term_id))
   }
   
   query <- paste0(query, "&$filter=", paste(filter_args, collapse = " and "))
@@ -60,7 +60,7 @@ meeting <- function(slot_id = NULL, meet_id = NULL, from = '1900-01-01',
   df <- legco_api("schedule", query, n, count, verbose)
   
   if (!count) {
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    colnames(df) <- .unify_colnames(colnames(df)) # in utils-misc.R
   }
   
   df

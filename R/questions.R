@@ -27,11 +27,11 @@ questions <- function(rundown_id = NULL, speaker_id = NULL, type = "all",
   filter_args <- {}
   
   if (!is.null(rundown_id)) {
-    filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
+    filter_args <- c(filter_args, .generate_filter("RundownID", rundown_id))
   }
 
   if (!is.null(speaker_id)) {
-    filter_args <- c(filter_args, generate_filter("SpeakerID", speaker_id))
+    filter_args <- c(filter_args, .generate_filter("SpeakerID", speaker_id))
   }
   
   type <- tolower(type)

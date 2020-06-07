@@ -23,11 +23,11 @@ meeting_committee <- function(slot_id = NULL, meet_id = NULL, committee_id = NUL
   filter_args <- {}
   
   if (!is.null(slot_id)) {
-    filter_args <- c(filter_args, generate_filter("slot_id", slot_id))
+    filter_args <- c(filter_args, .generate_filter("slot_id", slot_id))
   }
   
   if (!is.null(committee_id)) {
-    filter_args <- c(filter_args, generate_filter("committee_id", committee_id))
+    filter_args <- c(filter_args, .generate_filter("committee_id", committee_id))
   }
   
   if(!is.null(filter_args)) {
@@ -41,7 +41,7 @@ meeting_committee <- function(slot_id = NULL, meet_id = NULL, committee_id = NUL
   df <- legco_api("schedule", query, 10000, count, verbose)
   
   if (!count) {
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    colnames(df) <- .unify_colnames(colnames(df)) # in utils-misc.R
     colnames(df)[2] <- "SlotID"
     df$CommitteeID <- sapply(df$CommitteeID, as.numeric)
     df <- df[, c(1:2, 4:5, 8, 12:13, 9:11, 14, 6:7)]

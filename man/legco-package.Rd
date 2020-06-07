@@ -4,12 +4,12 @@
 \name{legco-package}
 \alias{legco}
 \alias{legco-package}
-\title{legco: Accessing the Hong Kong Legislative Council API}
+\title{legco: R bindings for the Hong Kong Legislative Council API}
 \description{
 Provides functions to fetch data from the Hong Kong Legislative Council API.
 }
 \section{Details}{
- Each function of this package corresponds to the data
+ Most functions of this package correspond to the data
   endpoints of the API. It is therefore necessary to understand the structure
   of the API in order to extract the data needed. Please refer to the
   vignettes for more details.
@@ -24,8 +24,8 @@ Provides functions to fetch data from the Hong Kong Legislative Council API.
 
 \section{API Limits}{
  The LegCo API does not have a specified rate limit, but
-  in general the limit is approximately 1000 requests per IP per hour. When
-  the rate limit is reached, the server will return an empty json.
+  by experience the limit is approximately 1000 requests per IP per hour.
+  When the rate limit is reached, the server will return an empty json.
 
   LegCo's API server also has a node count limit of 100 nodes per request,
   which can be translated as 20 filtering conditions per request in most
@@ -80,6 +80,13 @@ Provides functions to fetch data from the Hong Kong Legislative Council API.
   served by LegCo members \item \code{\link{meeting}}: Meetings of LegCo
   committees \item \code{\link{meeting_committee}}: Committees of LegCo
   meetings }
+
+ Complementary Functions: \itemize{ \item
+  \code{\link{search_committee}}: Search LegCo committees \item
+  \code{\link{search_member}}: Search LegCo members \item
+  \code{\link{search_voting_record}}: Search Voting Record in LegCo meetings
+  \item \code{\link{search_question}}: Search full text of question put to
+  the government by LegCo members}
 }
 
 \section{Notes}{

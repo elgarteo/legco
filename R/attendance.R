@@ -32,15 +32,15 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   filter_args <- {}
   
   if (!is.null(committee_id)) {
-    filter_args <- c(filter_args, generate_filter("committee_id", committee_id))
+    filter_args <- c(filter_args, .generate_filter("committee_id", committee_id))
   }
   
   if (!is.null(meet_id)) {
-    filter_args <- c(filter_args, generate_filter("meet_id", meet_id))
+    filter_args <- c(filter_args, .generate_filter("meet_id", meet_id))
   }
   
   if (!is.null(member_id)) {
-    filter_args <- c(filter_args, generate_filter("member_id", member_id))
+    filter_args <- c(filter_args, .generate_filter("member_id", member_id))
   }
   
   attn <- tolower(attn)
@@ -66,7 +66,7 @@ attendance <- function(committee_id = NULL, meet_id = NULL, member_id = NULL,
   df <- legco_api("attn", query, n, count, verbose)
   
   if (!count) {
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    colnames(df) <-.unify_colnames(colnames(df)) # in utils-misc.R
   }
   
   df

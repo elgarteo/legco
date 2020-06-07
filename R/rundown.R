@@ -24,15 +24,15 @@ rundown <- function(rundown_id = NULL, hansard_id = NULL, speaker_id = NULL,
   filter_args <- {}
   
   if (!is.null(rundown_id)) {
-    filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
+    filter_args <- c(filter_args, .generate_filter("RundownID", rundown_id))
   }
   
   if (!is.null(hansard_id)) {
-    filter_args <- c(filter_args, generate_filter("HansardID", hansard_id))
+    filter_args <- c(filter_args, .generate_filter("HansardID", hansard_id))
   }
 
   if (!is.null(speaker_id)) {
-    filter_args <- c(filter_args, generate_filter("SpeakerID", speaker_id))
+    filter_args <- c(filter_args, .generate_filter("SpeakerID", speaker_id))
   }
   
   if (is.null(rundown_id) & is.null(hansard_id)) {
@@ -47,7 +47,7 @@ rundown <- function(rundown_id = NULL, hansard_id = NULL, speaker_id = NULL,
   }
   
   if (!is.null(bookmark_name)) {
-    filter_args <- c(filter_args, generate_filter("BookmarkName", bookmark_name))
+    filter_args <- c(filter_args, .generate_filter("BookmarkName", bookmark_name))
   }
   
   from <- as.Date(from)

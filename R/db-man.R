@@ -149,3 +149,26 @@ NULL
 #' @name meeting_schedule-db
 #'   
 NULL
+
+#' Complementary Functions
+#'
+#' This set of complementary functions are wrappers around the database
+#' functions that facilitate the use of the LegCo API or return data from the
+#' API in a more usable form. All complementary functions have a prefix of
+#' \code{search_}.
+#'
+#' @section Functions: Complementary Functions: \itemize{ \item
+#'   \code{\link{search_committee}}: Search LegCo committees \item
+#'   \code{\link{search_member}}: Search LegCo members \item
+#'   \code{\link{search_voting_record}}: Search Voting Record in LegCo meetings
+#'   \item \code{\link{search_question}}: Search full text of question put to
+#'   the government by LegCo members}
+#'
+#' @section Notes: The complementary functions work by calling a number of
+#'   database functions and combining their output, meaning that a function call
+#'   usually involves multiple API calls. Use with caution to prevent reaching
+#'   the API’s rate limit too quickly.
+#'
+#' @name comp-fun
+#'   
+NULL

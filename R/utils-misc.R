@@ -1,5 +1,5 @@
 ## Function to generate one single filter statement from multiple matching values for the LegCo API
-generate_filter <- function(var_name, var_values) {
+.generate_filter <- function(var_name, var_values) {
   var_values <- unlist(var_values, use.names = FALSE)
   if (is.numeric(var_values)) {
     # Check if vector is sequential
@@ -17,18 +17,18 @@ generate_filter <- function(var_name, var_values) {
 }
 
 ## Function to unify format of column names (e.g. from 'member_id' to 'MemberID')
-unify_colnames <- function(col_names) {
+.unify_colnames <- function(col_names) {
   sapply(col_names, function(x) {
     x <- gsub("^.*\\.", "", x)
     x <- unlist(strsplit(x, "_"), use.names = FALSE)
-    x <- capitalise(x)
+    x <-.capitalise(x)
     x <- gsub(" ", "", x)
     x <- gsub("[Ii]{1}d$", "ID", x)
   })
 }
 
-## Function to capitalise first letter of every word in a string except for prepositions
-capitalise <- function(string) {
+## Function to.capitalise first letter of every word in a string except for prepositions
+.capitalise <- function(string) {
   string <- unlist(strsplit(string, " "), use.names = FALSE)
   string <- sapply(string, function(x)
     ifelse(tolower(x) %in% c("the", "of", "for", "to", "at", "on", "by"), 
@@ -40,7 +40,7 @@ capitalise <- function(string) {
 }
 
 ## Function to calculate node count of query
-node_count <- function(url) {
+.node_count <- function(url) {
   url <- gsub(".*\\$filter=|\\&\\$.*", "", url)
   url <- unlist(strsplit(url, " and "), use.names = FALSE)
   url <- strsplit(url, " or ")
@@ -53,7 +53,7 @@ node_count <- function(url) {
 }
 
 ## Function to convert time into .NET datetime string
-posixlt2net <- function(string) {
+.posixlt2net <- function(string) {
   string <- as.character(string)
   if (!grepl("T", string)) {
     string <- format(as.POSIXlt(string), "%Y-%m-%dT%H:%M:%S")
@@ -62,7 +62,7 @@ posixlt2net <- function(string) {
 }
 
 ## Function to convert .NET datetime string in POSIXlt compatiable in a dataframe
-net2posixlt <- function(df) {
+.net2posixlt <- function(df) {
   time_col <- grep("[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}", df[1, ])
   if (length(time_col)) {
     for (i in time_col) {
@@ -73,11 +73,11 @@ net2posixlt <- function(df) {
 }
 
 ## Function to convert TermNo into TermID
-convert_term_no <- function(term_no) {
+.convert_term_no <- function(term_no) {
   term_no - 1
 }
 
 ## Function to convert TermID into TermNo
-convert_term_id <- function(term_id) {
+.convert_term_id <- function(term_id) {
   term_id + 1
 }

@@ -32,7 +32,7 @@ speakers <- function(speaker_id = NULL, type = "all", extra_param = NULL,
   filter_args <- {}
   
   if (!is.null(speaker_id)) {
-    filter_args <- c(filter_args, generate_filter("SpeakerID", speaker_id))
+    filter_args <- c(filter_args, .generate_filter("SpeakerID", speaker_id))
   }
   
   type <- toupper(type)

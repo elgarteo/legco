@@ -21,7 +21,7 @@ term <- function(term_id = NULL, date = NULL, extra_param = NULL, verbose = TRUE
   filter_args <- {}
   
   if (!is.null(term_id)) {
-    filter_args <- c(filter_args, generate_filter("term_id", term_id))
+    filter_args <- c(filter_args, .generate_filter("term_id", term_id))
   }
   
   if (!is.null(date)) {
@@ -40,7 +40,7 @@ term <- function(term_id = NULL, date = NULL, extra_param = NULL, verbose = TRUE
   
   df <- legco_api("schedule", query, 10000, FALSE, verbose)
   
-  colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+  colnames(df) <- .unify_colnames(colnames(df)) # in utils-misc.R
   
   df
 }

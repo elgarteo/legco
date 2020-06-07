@@ -21,7 +21,7 @@ member <- function(member_id = NULL, extra_param = NULL, count = FALSE, verbose 
   filter_args <- {}
   
   if (!is.null(member_id)) {
-    filter_args <- c(filter_args, generate_filter("member_id", member_id))
+    filter_args <- c(filter_args, .generate_filter("member_id", member_id))
   }
   
   if(!is.null(filter_args)) {
@@ -35,7 +35,7 @@ member <- function(member_id = NULL, extra_param = NULL, count = FALSE, verbose 
   df <- legco_api("schedule", query, 10000, count, verbose)
   
   if (!count) {
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    colnames(df) <- .unify_colnames(colnames(df)) # in utils-misc.R
   }
   
   df

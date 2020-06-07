@@ -23,15 +23,15 @@ voting_results <- function(hansard_id = NULL, rundown_id = NULL, section_code = 
   filter_args <- {}
   
   if (!is.null(hansard_id)) {
-    filter_args <- c(filter_args, generate_filter("HansardID", hansard_id))
+    filter_args <- c(filter_args, .generate_filter("HansardID", hansard_id))
   }
   
   if (!is.null(rundown_id)) {
-    filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
+    filter_args <- c(filter_args, .generate_filter("RundownID", rundown_id))
   }
   
   if (!is.null(section_code)) {
-    filter_args <- c(filter_args, generate_filter("SectionCode", section_code))
+    filter_args <- c(filter_args, .generate_filter("SectionCode", section_code))
   }
   
   result <- tolower(result)

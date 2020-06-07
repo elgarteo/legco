@@ -22,20 +22,20 @@ membership <- function(member_id = NULL, committee_id = NULL, term_id = NULL, po
   filter_args <- {}
   
   if (!is.null(member_id)) {
-    filter_args <- c(filter_args, generate_filter("member_id", member_id))
+    filter_args <- c(filter_args, .generate_filter("member_id", member_id))
   }
   
   if (!is.null(committee_id)) {
-    filter_args <- c(filter_args, generate_filter("committee_id", committee_id))
+    filter_args <- c(filter_args, .generate_filter("committee_id", committee_id))
   }
   
   if (!is.null(term_id)) {
-    filter_args <- c(filter_args, generate_filter("term_id", term_id))
+    filter_args <- c(filter_args, .generate_filter("term_id", term_id))
   }
   
   if (!is.null(post)) {
-    post <- capitalise(post)
-    filter_args <- c(filter_args, generate_filter("post_eng", post))
+    post <-.capitalise(post)
+    filter_args <- c(filter_args, .generate_filter("post_eng", post))
   }
   
   if(!is.null(filter_args)) {
@@ -49,7 +49,7 @@ membership <- function(member_id = NULL, committee_id = NULL, term_id = NULL, po
   df <- legco_api("schedule", query, n, count, verbose)
   
   if (!count) {
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    colnames(df) <- .unify_colnames(colnames(df)) # in utils-misc.R
     df <- df[, c(1:2, 10:11, 3:7, 22, 17, 19:20, 24, 16, 18, 21, 23)]
   }
   

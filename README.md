@@ -10,8 +10,7 @@
 MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
-An R package to fetch data from the Hong Kong Legislative Council
-(LegCo) API.
+R bindings for the Hong Kong Legislative Council (LegCo) API.
 
 本套件提供能在R中直接透過香港立法會開放數據應用程式介面擷取數據的函數。
 

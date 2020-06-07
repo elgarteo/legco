@@ -23,7 +23,7 @@ hansard <- function(hansard_id = NULL, lang = "en", from = '1900-01-01', to = Sy
   filter_args <- {}
   
   if (!is.null(hansard_id)) {
-    filter_args <- c(filter_args, generate_filter("HansardID", hansard_id)) # in utils-misc.R
+    filter_args <- c(filter_args, .generate_filter("HansardID", hansard_id)) # in utils-misc.R
   }
   
   if (is.null(hansard_id)) {

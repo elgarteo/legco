@@ -23,11 +23,11 @@ petitions <- function(rundown_id = NULL, hansard_id = NULL, lang = "en",
   filter_args <- {}
   
   if (!is.null(rundown_id)) {
-    filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
+    filter_args <- c(filter_args, .generate_filter("RundownID", rundown_id))
   }
 
   if (!is.null(hansard_id)) {
-    filter_args <- c(filter_args, generate_filter("HansardID", hansard_id))
+    filter_args <- c(filter_args, .generate_filter("HansardID", hansard_id))
   }
   
   if (is.null(hansard_id) & is.null(rundown_id)) {

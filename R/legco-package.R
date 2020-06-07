@@ -1,8 +1,8 @@
-#' legco: Accessing the Hong Kong Legislative Council API
+#' legco: R bindings for the Hong Kong Legislative Council API
 #'
 #' Provides functions to fetch data from the Hong Kong Legislative Council API.
 #'
-#' @section Details: Each function of this package corresponds to the data
+#' @section Details: Most functions of this package correspond to the data
 #'   endpoints of the API. It is therefore necessary to understand the structure
 #'   of the API in order to extract the data needed. Please refer to the
 #'   vignettes for more details.
@@ -15,8 +15,8 @@
 #'   Also’).
 #'
 #' @section API Limits: The LegCo API does not have a specified rate limit, but
-#'   in general the limit is approximately 1000 requests per IP per hour. When
-#'   the rate limit is reached, the server will return an empty json.
+#'   by experience the limit is approximately 1000 requests per IP per hour.
+#'   When the rate limit is reached, the server will return an empty json.
 #'
 #'   LegCo's API server also has a node count limit of 100 nodes per request,
 #'   which can be translated as 20 filtering conditions per request in most
@@ -47,6 +47,7 @@
 #'   \code{\link{voting_record}}: Voting record in LegCo meetings }
 #' @inheritSection hansard-db Functions
 #' @inheritSection meeting_schedule-db Functions
+#' @inheritSection comp-fun Functions
 #'
 #' @section Notes: In addition to the standard function names, each function in
 #'   this package has a wrapper where the name is prefixed with \code{legco_}.
@@ -79,6 +80,7 @@
 #'
 #' @docType package
 #' @keywords internal
+#' @importFrom dplyr full_join
 #' @importFrom httr accept_json content GET
 #' @importFrom jsonlite fromJSON
 #' @importFrom utils URLencode

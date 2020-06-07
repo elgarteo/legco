@@ -22,16 +22,16 @@ committee <- function(committee_id = NULL, code = NULL, term_id = NULL,
   filter_args <- {}
   
   if (!is.null(committee_id)) {
-    filter_args <- c(filter_args, generate_filter("committee_id", committee_id))
+    filter_args <- c(filter_args, .generate_filter("committee_id", committee_id))
   }
   
   if (!is.null(code)) {
     code <- toupper(code)
-    filter_args <- c(filter_args, generate_filter("committee_code", code))
+    filter_args <- c(filter_args, .generate_filter("committee_code", code))
   }
   
   if (!is.null(term_id)) {
-    filter_args <- c(filter_args, generate_filter("term_id", term_id))
+    filter_args <- c(filter_args, .generate_filter("term_id", term_id))
   }
   
   if(!is.null(filter_args)) {
@@ -45,7 +45,7 @@ committee <- function(committee_id = NULL, code = NULL, term_id = NULL,
   df <- legco_api("schedule", query, 10000, count, verbose)
   
   if (!count) {
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    colnames(df) <- .unify_colnames(colnames(df)) # in utils-misc.R
     df$CommitteeID <- sapply(df$CommitteeID, as.numeric)
   }
   

@@ -23,11 +23,11 @@ statements <- function(hansard_id = NULL, rundown_id = NULL,
   filter_args <- {}
   
   if (!is.null(hansard_id)) {
-    filter_args <- c(filter_args, generate_filter("HansardID", hansard_id))
+    filter_args <- c(filter_args, .generate_filter("HansardID", hansard_id))
   }
   
   if (!is.null(rundown_id)) {
-    filter_args <- c(filter_args, generate_filter("RundownID", rundown_id))
+    filter_args <- c(filter_args, .generate_filter("RundownID", rundown_id))
   }
   
   lang <- tolower(lang)

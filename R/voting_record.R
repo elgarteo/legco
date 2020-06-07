@@ -77,7 +77,7 @@
 voting_record <- function(committee = NULL, term_id = NULL, result = "all",
                           vote = "all", name_ch = NULL, name_en = NULL,
                           separate_mechanism = NULL, mover_type = "all",
-                          from = '1900-01-01 00:00:00', to = Sys.time(),
+                          from = "1900-01-01 00:00:00", to = Sys.time(),
                           n = 10000, extra_param = NULL,
                           count = FALSE, verbose = TRUE) {
   query <- "vVotingResult?"
@@ -85,12 +85,12 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
   filter_args <- {}
   
   if (!is.null(committee)) {
-    committee <- capitalise(committee)
+    committee <-.capitalise(committee)
     filter_args <- c(filter_args, paste0("type eq '", committee, "'"))
   }
   
   if (!is.null(term_id)) {
-    term_id <- convert_term_id(term_id)
+    term_id <- .convert_term_id(term_id)
     filter_args <- c(filter_args, paste0("term_no eq ", term_id))
   }
   
@@ -115,11 +115,11 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
   }
   
   if (!is.null(name_ch)) {
-    filter_args <- c(filter_args, generate_filter("name_ch", name_ch))
+    filter_args <- c(filter_args, .generate_filter("name_ch", name_ch))
   }
   
   if (!is.null(name_en)) {
-    filter_args <- c(filter_args, generate_filter("name_en", name_en))
+    filter_args <- c(filter_args, .generate_filter("name_en", name_en))
   }
   
   if (!is.null(separate_mechanism)) {
@@ -137,10 +137,14 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
     filter_args <- c(filter_args, "mover_type eq 'Member'")
   }
   
-  from <- posixlt2net(from)
-  to <- posixlt2net(to)
+  tryCatch({
+    from <- .posixlt2net(from)
+    to <- .posixlt2net(to)
+  }, error = function(cnd)
+    stop("Invalid datetime format for arguments `from` and/or `to`.", call. = FALSE)
+  )
   if (from == to & grepl("T00:00:00", from) & grepl("T00:00:00", to)) {
-    to <- gsub("T.*", "T23:59:59", to)
+    to <- gsub("T00:00:00", "T23:59:59", to)
   }
   filter_args <- c(filter_args, paste0("vote_time ge datetime\'", from, 
                                        "\' and vote_time le datetime\'", to, "\'"))
@@ -155,10 +159,10 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
   
   if (!count) {
     # Rename column names
-    colnames(df) <- unify_colnames(colnames(df)) # in utils-misc.R
+    colnames(df) <-.unify_colnames(colnames(df)) # in utils-misc.R
     names(df)[names(df) == "TermNo"] <- "TermID"
     names(df)[names(df) == "Type"] <- "Committee"
-    df$TermID <- sapply(df$TermID, convert_term_no)
+    df$TermID <- sapply(df$TermID, .convert_term_no)
     df <- df[, c(1, 2:4, 6:36)]
   }
   
