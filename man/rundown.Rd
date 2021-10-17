@@ -108,7 +108,7 @@ Database.
 \donttest{
 # Fetch records of proceedings of the second reading of
 # Smoking (Public Health) (Amendment) Bill 2019
-x <- rundown(id = 899628:899649)
+x <- rundown(rundown_id = 899628:899649)
 }
 
 }

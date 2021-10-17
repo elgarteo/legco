@@ -1,7 +1,7 @@
 Package: legco
 Type: Package
-Title: R bindings for the Hong Kong Legislative Council API
-Version: 0.1.3.5
+Title: R Bindings for the Hong Kong Legislative Council API
+Version: 0.1.4
 Author: Elgar Teo
 Maintainer: Elgar Teo <elgarteo@connect.hku.hk>
 URL: https://github.com/elgarteo/legco
@@ -23,7 +23,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R(>= 3.5.0)
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.2
 Suggests: 
     curl,
     httptest,

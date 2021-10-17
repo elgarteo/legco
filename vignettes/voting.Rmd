@@ -36,8 +36,8 @@ of the term number by 1, i.e. the TermID of the fifth term is `4`.
 This database has an `ID` which has little value since there is only one data endpoint and 
 it is not interchangeable with other databases. To locate the bill in other databases, it is
 advisable to use the `VoteDate` as the filter parameter (e.g. Hansard database) or to find
-the CommitteeID of the relevant bill committee using `legcoplus::search_committee()` from 
-the package [legcoplus](https://elgarteo.ga/legco/legcoplus) (e.g. Meeting Schedule Database).
+the CommitteeID of the relevant bill committee using the complimentary function 
+`search_committee()` (e.g. Meeting Schedule Database).
 
 ### Total Count
 
