@@ -59,5 +59,5 @@ x <- member_term(member_id = c(273, 924))
 }
 \seealso{
 LegCo API documentation for the Meeting Schedule database:
-  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
+  \url{https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html}
 }

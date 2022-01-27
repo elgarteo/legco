@@ -69,5 +69,5 @@ x <- committee(term_id = 5)
 }
 \seealso{
 LegCo API documentation for the Meeting Schedule database:
-  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
+  \url{https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html}
 }
