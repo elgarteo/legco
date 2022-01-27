@@ -49,3 +49,10 @@ This is a complementary function to \code{\link{voting_record}()}.
   the API’s rate limit too quickly.
 }
 
+\examples{
+\donttest{
+# Search all Bills Committees established in the sixth term of LegCo
+x <- search_committee(search_string = "bills committee", term_id = 5)
+}
+
+}

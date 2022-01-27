@@ -25,6 +25,8 @@
 </script>
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -37,7 +39,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
       </span>
     </div>
 
@@ -83,12 +85,12 @@
   <a href="../news/index.html">Changelog</a>
 </li>
 <li>
-  <a href="https://elgarteo.github.io/legcoplus/">Add-on: legcoplus</a>
+  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/elgarteo/legco">
+  <a href="https://github.com/elgarteo/legco" class="external-link">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -103,287 +105,329 @@
 
       
 
-      </header><script src="schedule_files/header-attrs-2.1/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Meeting Schedule Database</h1>
             
-            <h4 class="date">2020-03-31</h4>
+            <h4 data-toc-skip class="date">2022-01-27</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/master/vignettes/schedule.Rmd"><code>vignettes/schedule.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/HEAD/vignettes/schedule.Rmd" class="external-link"><code>vignettes/schedule.Rmd</code></a></small>
       <div class="hidden name"><code>schedule.Rmd</code></div>
 
     </div>
 
     
     
-<div id="introduction" class="section level2">
-<h2 class="hasAnchor">
-<a href="#introduction" class="anchor"></a>Introduction</h2>
-<p>This database contains the information of LegCo committees, namely the name of all LegCo committees established since the fifth term and their corresponding member lists and meeting schedule.</p>
-<p>For more details of the database, see <a href="https://www.legco.gov.hk/odata/english/schedule-db.html" class="uri">https://www.legco.gov.hk/odata/english/schedule-db.html</a>.</p>
-<div id="key-identifiers" class="section level3">
-<h3 class="hasAnchor">
-<a href="#key-identifiers" class="anchor"></a>Key Identifiers</h3>
-<p>Here are the key identifies that is useful for locating the necessary data from the Meeting Schedule Database:</p>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<p>This database contains the information of LegCo committees, namely
+the name of all LegCo committees established since the fifth term and
+their corresponding member lists and meeting schedule.</p>
+<p>For more details of the database, see <a href="https://www.legco.gov.hk/odata/english/schedule-db.html" class="external-link uri">https://www.legco.gov.hk/odata/english/schedule-db.html</a>.</p>
+<div class="section level3">
+<h3 id="key-identifiers">Key Identifiers<a class="anchor" aria-label="anchor" href="#key-identifiers"></a>
+</h3>
+<p>Here are the key identifies that is useful for locating the necessary
+data from the Meeting Schedule Database:</p>
 <ul>
-<li><p><code>CommitteeID</code> is the numerical ID of a LegCo committee.</p></li>
-<li><p><code>SlotID</code> is the numerical ID of a Council or committee meeting slot.</p></li>
-<li><p><code>MemberID</code> is the numerical ID of a LegCo member. Note that it is a separate identifier from the <code>SpeakerID</code> of the Hansard Database.</p></li>
-<li><p><code>TermID</code> is the numerical ID of a LegCo term. Note that the nominal number of a TermID is less than that of the term number by 1, i.e. the TermID of the fifth term is <code>4</code>.</p></li>
-<li><p><code>SessionID</code> is the numerical ID of a LegCo session. A LegCo session typically begins in October to September next year. As a term is four years, there are four sessions in one term.</p></li>
-<li><p><code>MeetID</code> is the numerical ID of a Council or committee meeting. Although similar it is a separate identifier from the <code>SlotID</code> and is only used to match with records from the Attendance Database.</p></li>
+<li><p><code>CommitteeID</code> is the numerical ID of a LegCo
+committee.</p></li>
+<li><p><code>SlotID</code> is the numerical ID of a Council or committee
+meeting slot.</p></li>
+<li><p><code>MemberID</code> is the numerical ID of a LegCo member. Note
+that it is a separate identifier from the <code>SpeakerID</code> of the
+Hansard Database.</p></li>
+<li><p><code>TermID</code> is the numerical ID of a LegCo term. Note
+that the nominal number of a TermID is less than that of the term number
+by 1, i.e. the TermID of the fifth term is <code>4</code>.</p></li>
+<li><p><code>SessionID</code> is the numerical ID of a LegCo session. A
+LegCo session typically begins in October to September next year. As a
+term is four years, there are four sessions in one term.</p></li>
+<li><p><code>MeetID</code> is the numerical ID of a Council or committee
+meeting. Although similar it is a separate identifier from the
+<code>SlotID</code> and is only used to match with records from the
+Attendance Database.</p></li>
 </ul>
 </div>
-<div id="total-count" class="section level3">
-<h3 class="hasAnchor">
-<a href="#total-count" class="anchor"></a>Total Count</h3>
-<p>All functions in this database (except <code><a href="../reference/term.html">term()</a></code>) have an option to return only the total count of the records matching the specified parameters instead of returning the data frame containing the result. To activate this option, specify <code>count = TRUE</code>:</p>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># Fetch the total number of members in the Bills Committee on Fugitive Offenders and</span>
+<div class="section level3">
+<h3 id="total-count">Total Count<a class="anchor" aria-label="anchor" href="#total-count"></a>
+</h3>
+<p>All functions in this database (except <code><a href="../reference/term.html">term()</a></code>) have an
+option to return only the total count of the records matching the
+specified parameters instead of returning the data frame containing the
+result. To activate this option, specify <code>count = TRUE</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch the total number of members in the Bills Committee on Fugitive Offenders and</span>
 <span class="co"># Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill 2019</span>
-<span class="fu"><a href="../reference/membership.html">membership</a></span>(<span class="kw">committee_id</span> <span class="kw">=</span> <span class="fl">3005</span>, <span class="kw">count</span> <span class="kw">=</span> <span class="fl">TRUE</span>)</pre></body></html></div>
-<pre><code>## [1] "62"</code></pre>
+<span class="fu"><a href="../reference/membership.html">membership</a></span><span class="op">(</span>committee_id <span class="op">=</span> <span class="fl">3005</span>, count <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">## [1] "62"</span></code></pre>
 <hr>
 <p>This database is accessible with the following functions:</p>
 </div>
 </div>
-<div id="term" class="section level2">
-<h2 class="hasAnchor">
-<a href="#term" class="anchor"></a>term()</h2>
-<p><code><a href="../reference/term.html">term()</a></code> fetches the details of one or more LegCo term(s).</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="co"># Fetch all LegCo terms</span>
-<span class="fu"><a href="../reference/term.html">term</a></span>()</pre></body></html></div>
-<pre><code>##   TermID      Term           StartDate             EndDate
-## 1      4 2012-2016 2012-10-01 00:00:00 2016-09-30 00:00:00
-## 2      5 2016-2020 2016-10-01 00:00:00 2020-09-30 00:00:00</code></pre>
+<div class="section level2">
+<h2 id="term">term()<a class="anchor" aria-label="anchor" href="#term"></a>
+</h2>
+<p><code><a href="../reference/term.html">term()</a></code> fetches the details of one or more LegCo
+term(s).</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch all LegCo terms</span>
+<span class="fu"><a href="../reference/term.html">term</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   TermID      Term           StartDate             EndDate</span>
+<span class="co">## 1      4 2012-2016 2012-10-01 00:00:00 2016-09-30 00:00:00</span>
+<span class="co">## 2      5 2016-2020 2016-10-01 00:00:00 2020-09-30 00:00:00</span></code></pre>
 </div>
-<div id="session" class="section level2">
-<h2 class="hasAnchor">
-<a href="#session" class="anchor"></a>session()</h2>
-<p><code><a href="../reference/session.html">session()</a></code> fetches the details of one or more LegCo session(s).</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="co"># Fetch all LegCo sessions of the fifth term</span>
-<span class="fu"><a href="../reference/session.html">session</a></span>(<span class="kw">term_id</span> <span class="kw">=</span> <span class="fl">4</span>)</pre></body></html></div>
-<pre><code>##   SessionID SessionCode TermID           StartDate             EndDate
-## 1        13   2012-2013      4 2012-10-01 00:00:00 2013-10-08 00:00:00
-## 2        14   2013-2014      4 2013-10-09 00:00:00 2014-10-07 00:00:00
-## 3        15   2014-2015      4 2014-10-08 00:00:00 2015-09-30 00:00:00
-## 4        16   2015-2016      4 2015-10-14 00:00:00 2016-09-30 00:00:00</code></pre>
+<div class="section level2">
+<h2 id="session">session()<a class="anchor" aria-label="anchor" href="#session"></a>
+</h2>
+<p><code><a href="../reference/session.html">session()</a></code> fetches the details of one or more LegCo
+session(s).</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch all LegCo sessions of the fifth term</span>
+<span class="fu"><a href="../reference/session.html">session</a></span><span class="op">(</span>term_id <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   SessionID SessionCode TermID           StartDate             EndDate</span>
+<span class="co">## 1        13   2012-2013      4 2012-10-01 00:00:00 2013-10-08 00:00:00</span>
+<span class="co">## 2        14   2013-2014      4 2013-10-09 00:00:00 2014-10-07 00:00:00</span>
+<span class="co">## 3        15   2014-2015      4 2014-10-08 00:00:00 2015-09-30 00:00:00</span>
+<span class="co">## 4        16   2015-2016      4 2015-10-14 00:00:00 2016-09-30 00:00:00</span></code></pre>
 </div>
-<div id="committee" class="section level2">
-<h2 class="hasAnchor">
-<a href="#committee" class="anchor"></a>committee()</h2>
-<p><code><a href="../reference/committee.html">committee()</a></code> fetches the details of one or more LegCo committee(s).</p>
-<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="co"># Fetch all LegCo committees from the sixth term</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/committee.html">committee</a></span>(<span class="kw">term_id</span> <span class="kw">=</span> <span class="fl">5</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##   CommitteeID CommitteeCode                                  NameEng
-## 1        2660        AM-CFS     Committee on Facilities and Services
-## 2        2662        AM-CMA Committee on Members' Operating Expenses
-## 3        2663        AM-CPM           Committee on Personnel Matters
-## 4        2659        AM-LCC       The Legislative Council Commission
-## 5        2785        AM-LCC       The Legislative Council Commission
-## 6        2912        AM-LCC       The Legislative Council Commission
-##                  NameChi TermID
-## 1       設施及服務委員會      5
-## 2 議員工作開支事宜委員會      5
-## 3             人事委員會      5
-## 4   立法會行政管理委員會      5
-## 5   立法會行政管理委員會      5
-## 6   立法會行政管理委員會      5
-##                                                         HomeUrlEng
-## 1   http://www.legco.gov.hk/general/english/lcc/lcc_fs/fs_1620.htm
-## 2 http://www.legco.gov.hk/general/english/lcc/lcc_moe/moe_1620.htm
-## 3   http://www.legco.gov.hk/general/english/lcc/lcc_pm/pm_1620.htm
-## 4         http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm
-## 5         http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm
-## 6         http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm
-##                                                         HomeUrlChi
-## 1   http://www.legco.gov.hk/general/chinese/lcc/lcc_fs/fs_1620.htm
-## 2 http://www.legco.gov.hk/general/chinese/lcc/lcc_moe/moe_1620.htm
-## 3   http://www.legco.gov.hk/general/chinese/lcc/lcc_pm/pm_1620.htm
-## 4         http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm
-## 5         http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm
-## 6         http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm</code></pre>
+<div class="section level2">
+<h2 id="committee">committee()<a class="anchor" aria-label="anchor" href="#committee"></a>
+</h2>
+<p><code><a href="../reference/committee.html">committee()</a></code> fetches the details of one or more LegCo
+committee(s).</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch all LegCo committees from the sixth term</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/committee.html">committee</a></span><span class="op">(</span>term_id <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   CommitteeID CommitteeCode                                  NameEng</span>
+<span class="co">## 1        2660        AM-CFS     Committee on Facilities and Services</span>
+<span class="co">## 2        2662        AM-CMA Committee on Members' Operating Expenses</span>
+<span class="co">## 3        2663        AM-CPM           Committee on Personnel Matters</span>
+<span class="co">## 4        2659        AM-LCC       The Legislative Council Commission</span>
+<span class="co">## 5        2785        AM-LCC       The Legislative Council Commission</span>
+<span class="co">## 6        2912        AM-LCC       The Legislative Council Commission</span>
+<span class="co">##                  NameChi TermID</span>
+<span class="co">## 1       設施及服務委員會      5</span>
+<span class="co">## 2 議員工作開支事宜委員會      5</span>
+<span class="co">## 3             人事委員會      5</span>
+<span class="co">## 4   立法會行政管理委員會      5</span>
+<span class="co">## 5   立法會行政管理委員會      5</span>
+<span class="co">## 6   立法會行政管理委員會      5</span>
+<span class="co">##                                                         HomeUrlEng</span>
+<span class="co">## 1   http://www.legco.gov.hk/general/english/lcc/lcc_fs/fs_1620.htm</span>
+<span class="co">## 2 http://www.legco.gov.hk/general/english/lcc/lcc_moe/moe_1620.htm</span>
+<span class="co">## 3   http://www.legco.gov.hk/general/english/lcc/lcc_pm/pm_1620.htm</span>
+<span class="co">## 4         http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm</span>
+<span class="co">## 5         http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm</span>
+<span class="co">## 6         http://www.legco.gov.hk/general/english/lcc/lcc_1620.htm</span>
+<span class="co">##                                                         HomeUrlChi</span>
+<span class="co">## 1   http://www.legco.gov.hk/general/chinese/lcc/lcc_fs/fs_1620.htm</span>
+<span class="co">## 2 http://www.legco.gov.hk/general/chinese/lcc/lcc_moe/moe_1620.htm</span>
+<span class="co">## 3   http://www.legco.gov.hk/general/chinese/lcc/lcc_pm/pm_1620.htm</span>
+<span class="co">## 4         http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm</span>
+<span class="co">## 5         http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm</span>
+<span class="co">## 6         http://www.legco.gov.hk/general/chinese/lcc/lcc_1620.htm</span></code></pre>
 </div>
-<div id="membership" class="section level2">
-<h2 class="hasAnchor">
-<a href="#membership" class="anchor"></a>membership()</h2>
-<p><code><a href="../reference/membership.html">membership()</a></code> fetches the membership of one or more LegCo member(s) or the members of one or more committee(s).</p>
-<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="co"># Fetch members of the Subcommittee on Issues Relating to Bazaars</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/membership.html">membership</a></span>(<span class="kw">committee_id</span> <span class="kw">=</span> <span class="fl">2704</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##   MemberID CommitteeID                                    NameEng
-## 1      258        2704 Subcommittee on Issues Relating to Bazaars
-## 2      835        2704 Subcommittee on Issues Relating to Bazaars
-## 3      846        2704 Subcommittee on Issues Relating to Bazaars
-## 4      274        2704 Subcommittee on Issues Relating to Bazaars
-## 5      134        2704 Subcommittee on Issues Relating to Bazaars
-## 6      853        2704 Subcommittee on Issues Relating to Bazaars
-##              NameChi PostEng PostChi       PostStartDate         PostEndDate
-## 1 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00 2016-12-07 23:59:59
-## 2 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00                &lt;NA&gt;
-## 3 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00                &lt;NA&gt;
-## 4 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00 2017-02-22 23:59:59
-## 5 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00                &lt;NA&gt;
-## 6 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00                &lt;NA&gt;
-##   TermID TitleEng SurnameEng FirstnameEng EnglishName HonourableEng SurnameChi
-## 1      5 Prof Hon        LEE    Kok-long       Joseph       SBS, JP         李
-## 2      5      Hon      LEUNG   Che-cheung               SBS, MH, JP         梁
-## 3      5      Hon      LEUNG                  Kenneth                       梁
-## 4      5   Dr Hon      LEUNG      Mei-fun   Priscilla       SBS, JP         梁
-## 5      5      Hon      LEUNG    Yiu-chung                                   梁
-## 6      5      Hon       LIAO  Cheung-kong      Martin       GBS, JP         廖
-##   FirstnameChi TitleChi HonourableChi
-## 1         國麟     議員       SBS, JP
-## 2         志祥     議員   SBS, MH, JP
-## 3         繼昌     議員              
-## 4         美芬     議員       SBS, JP
-## 5         耀忠     議員              
-## 6         長江     議員       GBS, JP</code></pre>
-<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="co"># Fetch the committee membership of Hon Wu Chi-wai</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/membership.html">membership</a></span>(<span class="kw">member_id</span> <span class="kw">=</span> <span class="fl">834</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##   MemberID CommitteeID                        NameEng        NameChi PostEng
-## 1      834        2025                House Committee     內務委員會  Member
-## 2      834        2045              Finance Committee     財務委員會  Member
-## 3      834        2095           Panel on Development 發展事務委員會  Member
-## 4      834        2079             Panel on Transport 交通事務委員會  Member
-## 5      834        2088          Panel on Home Affairs 民政事務委員會  Member
-## 6      834        2081 Panel on Environmental Affairs 環境事務委員會  Member
-##   PostChi       PostStartDate PostEndDate TermID TitleEng SurnameEng
-## 1    委員 2012-10-10 11:00:00        &lt;NA&gt;      4      Hon         WU
-## 2    委員 2012-10-10 14:30:00        &lt;NA&gt;      4      Hon         WU
-## 3    委員 2012-10-13 00:00:00        &lt;NA&gt;      4      Hon         WU
-## 4    委員 2012-10-13 00:00:00        &lt;NA&gt;      4      Hon         WU
-## 5    委員 2012-10-16 00:00:00        &lt;NA&gt;      4      Hon         WU
-## 6    委員 2012-10-13 00:00:00        &lt;NA&gt;      4      Hon         WU
-##   FirstnameEng EnglishName HonourableEng SurnameChi FirstnameChi TitleChi
-## 1      Chi-wai                        MH         胡         志偉     議員
-## 2      Chi-wai                        MH         胡         志偉     議員
-## 3      Chi-wai                        MH         胡         志偉     議員
-## 4      Chi-wai                        MH         胡         志偉     議員
-## 5      Chi-wai                        MH         胡         志偉     議員
-## 6      Chi-wai                        MH         胡         志偉     議員
-##   HonourableChi
-## 1            MH
-## 2            MH
-## 3            MH
-## 4            MH
-## 5            MH
-## 6            MH</code></pre>
+<div class="section level2">
+<h2 id="membership">membership()<a class="anchor" aria-label="anchor" href="#membership"></a>
+</h2>
+<p><code><a href="../reference/membership.html">membership()</a></code> fetches the membership of one or more LegCo
+member(s) or the members of one or more committee(s).</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch members of the Subcommittee on Issues Relating to Bazaars</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/membership.html">membership</a></span><span class="op">(</span>committee_id <span class="op">=</span> <span class="fl">2704</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   MemberID CommitteeID                                    NameEng</span>
+<span class="co">## 1      258        2704 Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 2      835        2704 Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 3      846        2704 Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 4      274        2704 Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 5      134        2704 Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 6      853        2704 Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">##              NameChi PostEng PostChi       PostStartDate         PostEndDate</span>
+<span class="co">## 1 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00 2016-12-07 23:59:59</span>
+<span class="co">## 2 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00                &lt;NA&gt;</span>
+<span class="co">## 3 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00                &lt;NA&gt;</span>
+<span class="co">## 4 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00 2017-02-22 23:59:59</span>
+<span class="co">## 5 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00                &lt;NA&gt;</span>
+<span class="co">## 6 墟市事宜小組委員會  Member    委員 2016-12-03 00:00:00                &lt;NA&gt;</span>
+<span class="co">##   TermID TitleEng SurnameEng FirstnameEng EnglishName HonourableEng SurnameChi</span>
+<span class="co">## 1      5 Prof Hon        LEE    Kok-long       Joseph       SBS, JP         李</span>
+<span class="co">## 2      5      Hon      LEUNG   Che-cheung               SBS, MH, JP         梁</span>
+<span class="co">## 3      5      Hon      LEUNG                  Kenneth                       梁</span>
+<span class="co">## 4      5   Dr Hon      LEUNG      Mei-fun   Priscilla       SBS, JP         梁</span>
+<span class="co">## 5      5      Hon      LEUNG    Yiu-chung                                   梁</span>
+<span class="co">## 6      5      Hon       LIAO  Cheung-kong      Martin       GBS, JP         廖</span>
+<span class="co">##   FirstnameChi TitleChi HonourableChi</span>
+<span class="co">## 1         國麟     議員       SBS, JP</span>
+<span class="co">## 2         志祥     議員   SBS, MH, JP</span>
+<span class="co">## 3         繼昌     議員              </span>
+<span class="co">## 4         美芬     議員       SBS, JP</span>
+<span class="co">## 5         耀忠     議員              </span>
+<span class="co">## 6         長江     議員       GBS, JP</span></code></pre>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch the committee membership of Hon Wu Chi-wai</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/membership.html">membership</a></span><span class="op">(</span>member_id <span class="op">=</span> <span class="fl">834</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   MemberID CommitteeID                        NameEng        NameChi PostEng</span>
+<span class="co">## 1      834        2025                House Committee     內務委員會  Member</span>
+<span class="co">## 2      834        2045              Finance Committee     財務委員會  Member</span>
+<span class="co">## 3      834        2095           Panel on Development 發展事務委員會  Member</span>
+<span class="co">## 4      834        2079             Panel on Transport 交通事務委員會  Member</span>
+<span class="co">## 5      834        2088          Panel on Home Affairs 民政事務委員會  Member</span>
+<span class="co">## 6      834        2081 Panel on Environmental Affairs 環境事務委員會  Member</span>
+<span class="co">##   PostChi       PostStartDate PostEndDate TermID TitleEng SurnameEng</span>
+<span class="co">## 1    委員 2012-10-10 11:00:00        &lt;NA&gt;      4      Hon         WU</span>
+<span class="co">## 2    委員 2012-10-10 14:30:00        &lt;NA&gt;      4      Hon         WU</span>
+<span class="co">## 3    委員 2012-10-13 00:00:00        &lt;NA&gt;      4      Hon         WU</span>
+<span class="co">## 4    委員 2012-10-13 00:00:00        &lt;NA&gt;      4      Hon         WU</span>
+<span class="co">## 5    委員 2012-10-16 00:00:00        &lt;NA&gt;      4      Hon         WU</span>
+<span class="co">## 6    委員 2012-10-13 00:00:00        &lt;NA&gt;      4      Hon         WU</span>
+<span class="co">##   FirstnameEng EnglishName HonourableEng SurnameChi FirstnameChi TitleChi</span>
+<span class="co">## 1      Chi-wai                        MH         胡         志偉     議員</span>
+<span class="co">## 2      Chi-wai                        MH         胡         志偉     議員</span>
+<span class="co">## 3      Chi-wai                        MH         胡         志偉     議員</span>
+<span class="co">## 4      Chi-wai                        MH         胡         志偉     議員</span>
+<span class="co">## 5      Chi-wai                        MH         胡         志偉     議員</span>
+<span class="co">## 6      Chi-wai                        MH         胡         志偉     議員</span>
+<span class="co">##   HonourableChi</span>
+<span class="co">## 1            MH</span>
+<span class="co">## 2            MH</span>
+<span class="co">## 3            MH</span>
+<span class="co">## 4            MH</span>
+<span class="co">## 5            MH</span>
+<span class="co">## 6            MH</span></code></pre>
 </div>
-<div id="member" class="section level2">
-<h2 class="hasAnchor">
-<a href="#member" class="anchor"></a>member()</h2>
-<p><code><a href="../reference/member.html">member()</a></code> fetches the basic information of one or more LegCo members.</p>
-<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="co"># Fetch full list of members</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/member.html">member</a></span>()
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##   MemberID  TitleEng SurnameEng FirstnameEng EnglishName HonourableEng
-## 1      167       Hon         NG   Leung-sing                   SBS, JP
-## 2      188       Hon        SIN    Chung-kai                   SBS, JP
-## 3      924                KWONG      Chun-yu                          
-## 4      847 Ir Dr Hon         LO     Wai-kwok               SBS, MH, JP
-## 5      849       Hon       KWOK    Wai-keung                        JP
-## 6      273       Hon       CHAN      Kin-por                   GBS, JP
-##   SurnameChi FirstnameChi TitleChi HonourableChi LatestTermID
-## 1         吳         亮星     議員       SBS, JP            4
-## 2         單         仲偕     議員       SBS, JP            4
-## 3         鄺         俊宇     議員                          5
-## 4         盧         偉國     議員   SBS, MH, JP            5
-## 5         郭         偉强     議員            JP            5
-## 6         陳         健波     議員       GBS, JP            5</code></pre>
-<p>Note that <code><a href="../reference/member.html">member()</a></code> only returns the latest term that the member has served as <code>LatestTermID</code>. To fetch all the terms served by a member since the fifth term, use <code><a href="../reference/member_term.html">member_term()</a></code> instead.</p>
+<div class="section level2">
+<h2 id="member">member()<a class="anchor" aria-label="anchor" href="#member"></a>
+</h2>
+<p><code><a href="../reference/member.html">member()</a></code> fetches the basic information of one or more
+LegCo members.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch full list of members</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/member.html">member</a></span><span class="op">(</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   MemberID  TitleEng SurnameEng FirstnameEng EnglishName HonourableEng</span>
+<span class="co">## 1      167       Hon         NG   Leung-sing                   SBS, JP</span>
+<span class="co">## 2      188       Hon        SIN    Chung-kai                   SBS, JP</span>
+<span class="co">## 3      924                KWONG      Chun-yu                          </span>
+<span class="co">## 4      847 Ir Dr Hon         LO     Wai-kwok               SBS, MH, JP</span>
+<span class="co">## 5      849       Hon       KWOK    Wai-keung                        JP</span>
+<span class="co">## 6      273       Hon       CHAN      Kin-por                   GBS, JP</span>
+<span class="co">##   SurnameChi FirstnameChi TitleChi HonourableChi LatestTermID</span>
+<span class="co">## 1         吳         亮星     議員       SBS, JP            4</span>
+<span class="co">## 2         單         仲偕     議員       SBS, JP            4</span>
+<span class="co">## 3         鄺         俊宇     議員                          5</span>
+<span class="co">## 4         盧         偉國     議員   SBS, MH, JP            5</span>
+<span class="co">## 5         郭         偉强     議員            JP            5</span>
+<span class="co">## 6         陳         健波     議員       GBS, JP            5</span></code></pre>
+<p>Note that <code><a href="../reference/member.html">member()</a></code> only returns the latest term that the
+member has served as <code>LatestTermID</code>. To fetch all the terms
+served by a member since the fifth term, use <code><a href="../reference/member_term.html">member_term()</a></code>
+instead.</p>
 </div>
-<div id="member_term" class="section level2">
-<h2 class="hasAnchor">
-<a href="#member_term" class="anchor"></a>member_term()</h2>
-<p><code><a href="../reference/member_term.html">member_term()</a></code> fetches the all the term served by one or more LegCo members.</p>
-<div class="sourceCode" id="cb15"><html><body><pre class="r"><span class="co">#Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu</span>
-<span class="fu"><a href="../reference/member_term.html">member_term</a></span>(<span class="kw">member_id</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">273</span>, <span class="fl">924</span>))</pre></body></html></div>
-<pre><code>##   MemberID TermID
-## 1      273      4
-## 2      273      5
-## 3      924      5</code></pre>
-<p>Note that members who have served more than one term will have more than one entry, e.g. the member with MemberID 245 as shown above.</p>
+<div class="section level2">
+<h2 id="member_term">member_term()<a class="anchor" aria-label="anchor" href="#member_term"></a>
+</h2>
+<p><code><a href="../reference/member_term.html">member_term()</a></code> fetches the all the term served by one or
+more LegCo members.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu</span>
+<span class="fu"><a href="../reference/member_term.html">member_term</a></span><span class="op">(</span>member_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">273</span>, <span class="fl">924</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   MemberID TermID</span>
+<span class="co">## 1      273      4</span>
+<span class="co">## 2      273      5</span>
+<span class="co">## 3      924      5</span></code></pre>
+<p>Note that members who have served more than one term will have more
+than one entry, e.g. the member with MemberID 245 as shown above.</p>
 </div>
-<div id="meeting" class="section level2">
-<h2 class="hasAnchor">
-<a href="#meeting" class="anchor"></a>meeting()</h2>
-<p><code><a href="../reference/meeting.html">meeting()</a></code> fetches the meeting schedule of Council or committees. Note that this function does not take CommitteeID as a filtering parameter. Use <code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> instead if needed.</p>
-<div class="sourceCode" id="cb17"><html><body><pre class="r"><span class="co"># Fetch all meeting conducted on March 20, 2019</span>
-<span class="fu"><a href="../reference/meeting.html">meeting</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="st">"2019-03-20"</span>, <span class="kw">to</span> <span class="kw">=</span> <span class="st">"2019-03-20"</span>)</pre></body></html></div>
-<pre><code>##   SlotID MeetID
-## 1 175978 133311
-## 2 178278 135602
-## 3 177295 134619
-##                                                                                                             SubjectEng
-## 1 Council meeting (Regular meeting)\n(or to be held immediately after the meeting for Chief Executive’s Question Time)
-## 2                                                                Council meeting (The Chief Executive's Question Time)
-## 3                                                                                 Meeting of Public Works Subcommittee
-##                                                    SubjectChi
-## 1 立法會會議 (例行會議)\n(或緊接行政長官質詢時間的會議後開始)
-## 2                               立法會會議 (行政長官質詢時間)
-## 3                                          工務小組委員會會議
-##         StartDateTime MeetingTypeEng MeetingTypeChi VenueCode      VenueNameEng
-## 1 2019-03-20 11:30:00           Open       公開會議   Chamber           Chamber
-## 2 2019-03-20 11:00:00           Open       公開會議   Chamber           Chamber
-## 3 2019-03-20 08:30:00           Open       公開會議      Rm 1 Conference Room 1
-##   VenueNameChi TermID
-## 1       會議廳      5
-## 2       會議廳      5
-## 3      會議室1      5
-##                                                              AgendaUrlEng
-## 1   http://www.legco.gov.hk/yr18-19/english/counmtg/agenda/cm20190320.htm
-## 2  http://www.legco.gov.hk/yr18-19/english/counmtg/agenda/cm20190320q.htm
-## 3 http://www.legco.gov.hk/yr18-19/english/fc/pwsc/agenda/pwsc20190320.htm
-##                                                              AgendaUrlChi
-## 1   http://www.legco.gov.hk/yr18-19/chinese/counmtg/agenda/cm20190320.htm
-## 2  http://www.legco.gov.hk/yr18-19/chinese/counmtg/agenda/cm20190320q.htm
-## 3 http://www.legco.gov.hk/yr18-19/chinese/fc/pwsc/agenda/pwsc20190320.htm</code></pre>
+<div class="section level2">
+<h2 id="meeting">meeting()<a class="anchor" aria-label="anchor" href="#meeting"></a>
+</h2>
+<p><code><a href="../reference/meeting.html">meeting()</a></code> fetches the meeting schedule of Council or
+committees. Note that this function does not take CommitteeID as a
+filtering parameter. Use <code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> instead if
+needed.</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch all meeting conducted on March 20, 2019</span>
+<span class="fu"><a href="../reference/meeting.html">meeting</a></span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2019-03-20"</span>, to <span class="op">=</span> <span class="st">"2019-03-20"</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   SlotID MeetID</span>
+<span class="co">## 1 175978 133311</span>
+<span class="co">## 2 178278 135602</span>
+<span class="co">## 3 177295 134619</span>
+<span class="co">##                                                                                                             SubjectEng</span>
+<span class="co">## 1 Council meeting (Regular meeting)\n(or to be held immediately after the meeting for Chief Executive’s Question Time)</span>
+<span class="co">## 2                                                                Council meeting (The Chief Executive's Question Time)</span>
+<span class="co">## 3                                                                                 Meeting of Public Works Subcommittee</span>
+<span class="co">##                                                    SubjectChi</span>
+<span class="co">## 1 立法會會議 (例行會議)\n(或緊接行政長官質詢時間的會議後開始)</span>
+<span class="co">## 2                               立法會會議 (行政長官質詢時間)</span>
+<span class="co">## 3                                          工務小組委員會會議</span>
+<span class="co">##         StartDateTime MeetingTypeEng MeetingTypeChi VenueCode      VenueNameEng</span>
+<span class="co">## 1 2019-03-20 11:30:00           Open       公開會議   Chamber           Chamber</span>
+<span class="co">## 2 2019-03-20 11:00:00           Open       公開會議   Chamber           Chamber</span>
+<span class="co">## 3 2019-03-20 08:30:00           Open       公開會議      Rm 1 Conference Room 1</span>
+<span class="co">##   VenueNameChi TermID</span>
+<span class="co">## 1       會議廳      5</span>
+<span class="co">## 2       會議廳      5</span>
+<span class="co">## 3      會議室1      5</span>
+<span class="co">##                                                              AgendaUrlEng</span>
+<span class="co">## 1   http://www.legco.gov.hk/yr18-19/english/counmtg/agenda/cm20190320.htm</span>
+<span class="co">## 2  http://www.legco.gov.hk/yr18-19/english/counmtg/agenda/cm20190320q.htm</span>
+<span class="co">## 3 http://www.legco.gov.hk/yr18-19/english/fc/pwsc/agenda/pwsc20190320.htm</span>
+<span class="co">##                                                              AgendaUrlChi</span>
+<span class="co">## 1   http://www.legco.gov.hk/yr18-19/chinese/counmtg/agenda/cm20190320.htm</span>
+<span class="co">## 2  http://www.legco.gov.hk/yr18-19/chinese/counmtg/agenda/cm20190320q.htm</span>
+<span class="co">## 3 http://www.legco.gov.hk/yr18-19/chinese/fc/pwsc/agenda/pwsc20190320.htm</span></code></pre>
 </div>
-<div id="meeting_committee" class="section level2">
-<h2 class="hasAnchor">
-<a href="#meeting_committee" class="anchor"></a>meeting_committee()</h2>
-<p><code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> fetches the meeting schedule of Council or committees. Note that this function does not support dates as filtering parameters. Use <code><a href="../reference/meeting.html">meeting()</a></code> instead if needed.</p>
-<div class="sourceCode" id="cb19"><html><body><pre class="r"><span class="co"># Fetch all meetings of Subcommittee on Issues Relating to Bazaars</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/meeting_committee.html">meeting_committee</a></span>(<span class="kw">committee_id</span> <span class="kw">=</span> <span class="fl">2704</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##   CommitteeID SlotID                                            SubjectEng
-## 1        2704 163894 Meeting of Subcommittee on Issues Relating to Bazaars
-## 2        2704 164380 Meeting of Subcommittee on Issues Relating to Bazaars
-## 3        2704 164386 Meeting of Subcommittee on Issues Relating to Bazaars
-## 4        2704 164409 Meeting of Subcommittee on Issues Relating to Bazaars
-## 5        2704 164058 Meeting of Subcommittee on Issues Relating to Bazaars
-## 6        2704 163292 Meeting of Subcommittee on Issues Relating to Bazaars
-##               SubjectChi       StartDateTime MeetingTypeEng MeetingTypeChi
-## 1 墟市事宜小組委員會會議 2016-12-06 15:00:00           Open       公開會議
-## 2 墟市事宜小組委員會會議 2016-12-20 09:00:00           Open       公開會議
-## 3 墟市事宜小組委員會會議 2017-01-10 16:30:00           Open       公開會議
-## 4 墟市事宜小組委員會會議 2017-01-21 09:00:00           Open       公開會議
-## 5 墟市事宜小組委員會會議 2017-02-21 08:30:00           Open       公開會議
-## 6 墟市事宜小組委員會會議 2017-05-22 14:30:00           Open       公開會議
-##   VenueCode      VenueNameEng VenueNameChi TermID
-## 1      Rm 3 Conference Room 3      會議室3      5
-## 2      Rm 1 Conference Room 1      會議室1      5
-## 3      Rm 3 Conference Room 3      會議室3      5
-## 4      Rm 1 Conference Room 1      會議室1      5
-## 5      Rm 3 Conference Room 3      會議室3      5
-## 6      Rm 1 Conference Room 1      會議室1      5
-##                                                                      AgendaUrlEng
-## 1 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220161206.htm
-## 2 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220161220.htm
-## 3 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170110.htm
-## 4 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170121.htm
-## 5 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170221.htm
-## 6 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170522.htm
-##                                                                      AgendaUrlChi
-## 1 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220161206.htm
-## 2 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220161220.htm
-## 3 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170110.htm
-## 4 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170121.htm
-## 5 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170221.htm
-## 6 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170522.htm</code></pre>
+<div class="section level2">
+<h2 id="meeting_committee">meeting_committee()<a class="anchor" aria-label="anchor" href="#meeting_committee"></a>
+</h2>
+<p><code><a href="../reference/meeting_committee.html">meeting_committee()</a></code> fetches the meeting schedule of
+Council or committees. Note that this function does not support dates as
+filtering parameters. Use <code><a href="../reference/meeting.html">meeting()</a></code> instead if needed.</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch all meetings of Subcommittee on Issues Relating to Bazaars</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/meeting_committee.html">meeting_committee</a></span><span class="op">(</span>committee_id <span class="op">=</span> <span class="fl">2704</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   CommitteeID SlotID                                            SubjectEng</span>
+<span class="co">## 1        2704 163894 Meeting of Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 2        2704 164380 Meeting of Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 3        2704 164386 Meeting of Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 4        2704 164409 Meeting of Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 5        2704 164058 Meeting of Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">## 6        2704 163292 Meeting of Subcommittee on Issues Relating to Bazaars</span>
+<span class="co">##               SubjectChi       StartDateTime MeetingTypeEng MeetingTypeChi</span>
+<span class="co">## 1 墟市事宜小組委員會會議 2016-12-06 15:00:00           Open       公開會議</span>
+<span class="co">## 2 墟市事宜小組委員會會議 2016-12-20 09:00:00           Open       公開會議</span>
+<span class="co">## 3 墟市事宜小組委員會會議 2017-01-10 16:30:00           Open       公開會議</span>
+<span class="co">## 4 墟市事宜小組委員會會議 2017-01-21 09:00:00           Open       公開會議</span>
+<span class="co">## 5 墟市事宜小組委員會會議 2017-02-21 08:30:00           Open       公開會議</span>
+<span class="co">## 6 墟市事宜小組委員會會議 2017-05-22 14:30:00           Open       公開會議</span>
+<span class="co">##   VenueCode      VenueNameEng VenueNameChi TermID</span>
+<span class="co">## 1      Rm 3 Conference Room 3      會議室3      5</span>
+<span class="co">## 2      Rm 1 Conference Room 1      會議室1      5</span>
+<span class="co">## 3      Rm 3 Conference Room 3      會議室3      5</span>
+<span class="co">## 4      Rm 1 Conference Room 1      會議室1      5</span>
+<span class="co">## 5      Rm 3 Conference Room 3      會議室3      5</span>
+<span class="co">## 6      Rm 1 Conference Room 1      會議室1      5</span>
+<span class="co">##                                                                      AgendaUrlEng</span>
+<span class="co">## 1 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220161206.htm</span>
+<span class="co">## 2 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220161220.htm</span>
+<span class="co">## 3 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170110.htm</span>
+<span class="co">## 4 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170121.htm</span>
+<span class="co">## 5 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170221.htm</span>
+<span class="co">## 6 http://www.legco.gov.hk/yr16-17/english/hc/sub_com/hs02/agenda/hs0220170522.htm</span>
+<span class="co">##                                                                      AgendaUrlChi</span>
+<span class="co">## 1 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220161206.htm</span>
+<span class="co">## 2 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220161220.htm</span>
+<span class="co">## 3 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170110.htm</span>
+<span class="co">## 4 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170121.htm</span>
+<span class="co">## 5 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170221.htm</span>
+<span class="co">## 6 http://www.legco.gov.hk/yr16-17/chinese/hc/sub_com/hs02/agenda/hs0220170522.htm</span></code></pre>
 </div>
   </div>
 
@@ -398,11 +442,14 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://elgarteo.ga">Elgar Teo</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://elgarteo.ga" class="external-link">Elgar Teo</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.2.</p>
 </div>
 
       </footer>
@@ -410,6 +457,8 @@
 
   
 
+
+  
 
   </body>
 </html>

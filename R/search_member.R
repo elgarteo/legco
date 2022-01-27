@@ -16,6 +16,16 @@
 #' @inheritParams hansard-db
 #' @inherit comp-fun
 #'
+#' @examples
+#' \donttest{
+#' # Lookup LegCo member of SpeakerID 63
+#' x <- search_member(speaker_id = 63)
+#' # Lookup LegCo member of MemberID 273
+#' x <- search_member(member_id = 273)
+#' # Lookup members with "ting" in their names
+#' x <- search_member(search_string = "ting")
+#' }
+#'
 #' @export
 #' 
 search_member <- function(search_string = NULL, speaker_id = NULL, member_id = NULL, 

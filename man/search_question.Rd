@@ -93,3 +93,10 @@ This is a complementary function to \code{\link{questions}()}.
   the API’s rate limit too quickly.
 }
 
+\examples{
+\donttest{
+# Fetch all written questions asked by MemberID 273 from January to April 2019 in Chinese
+x <- search_question(member_id = 273, from = "2019-01-01", to ="2019-04-30", type = "written", lang = "zh")
+}
+
+}

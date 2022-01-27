@@ -81,3 +81,10 @@ This is a complementary function to \code{\link{voting_record}()}.
   the API’s rate limit too quickly.
 }
 
+\examples{
+\donttest{
+# Search the voting records of SpeakerID 102 in CommitteeID 2567 since June 15, 2019.
+x <- search_voting_record(speaker_id = 102, committee_id = 2567, from = "2019-06-15")
+}
+
+}

@@ -13,6 +13,12 @@
 #' @inheritParams voting_record
 #' @inheritParams meeting_schedule-db
 #' @inherit comp-fun
+#' 
+#' @examples
+#' \donttest{
+#' # Search all Bills Committees established in the sixth term of LegCo
+#' x <- search_committee(search_string = "bills committee", term_id = 5)
+#' }
 #'
 #' @export
 #' 

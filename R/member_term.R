@@ -9,7 +9,7 @@
 #'
 #' @examples
 #' \donttest{
-#' #Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
+#' # Fetches the term served by Hon Chan Kin-por and Kwong Chun-yu
 #' x <- member_term(member_id = c(273, 924))
 #' }
 #'

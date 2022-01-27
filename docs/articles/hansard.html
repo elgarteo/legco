@@ -25,6 +25,8 @@
 </script>
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -37,7 +39,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
       </span>
     </div>
 
@@ -83,12 +85,12 @@
   <a href="../news/index.html">Changelog</a>
 </li>
 <li>
-  <a href="https://elgarteo.github.io/legcoplus/">Add-on: legcoplus</a>
+  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/elgarteo/legco">
+  <a href="https://github.com/elgarteo/legco" class="external-link">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -103,389 +105,472 @@
 
       
 
-      </header><script src="hansard_files/header-attrs-2.1/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Hansard Database</h1>
             
-            <h4 class="date">2020-03-31</h4>
+            <h4 data-toc-skip class="date">2022-01-27</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/master/vignettes/hansard.Rmd"><code>vignettes/hansard.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/HEAD/vignettes/hansard.Rmd" class="external-link"><code>vignettes/hansard.Rmd</code></a></small>
       <div class="hidden name"><code>hansard.Rmd</code></div>
 
     </div>
 
     
     
-<div id="introduction" class="section level2">
-<h2 class="hasAnchor">
-<a href="#introduction" class="anchor"></a>Introduction</h2>
-<p>This database contains information on matters discussed in Council meeting since the fifth term of LegCo. Hinting by its name, the database is built upon the PDF hansard files. Relying on the bookmarks and section codes of the hansard files, the data endpoints retrieve data from the files directly.</p>
-<p>For more details of the database, see <a href="https://www.legco.gov.hk/odata/english/hansard-db.html" class="uri">https://www.legco.gov.hk/odata/english/hansard-db.html</a>.</p>
-<div id="key-identifiers" class="section level3">
-<h3 class="hasAnchor">
-<a href="#key-identifiers" class="anchor"></a>Key Identifiers</h3>
-<p>Here are the key identifies that is useful for locating the necessary data from the Hansard database:</p>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<p>This database contains information on matters discussed in Council
+meeting since the fifth term of LegCo. Hinting by its name, the database
+is built upon the PDF hansard files. Relying on the bookmarks and
+section codes of the hansard files, the data endpoints retrieve data
+from the files directly.</p>
+<p>For more details of the database, see <a href="https://www.legco.gov.hk/odata/english/hansard-db.html" class="external-link uri">https://www.legco.gov.hk/odata/english/hansard-db.html</a>.</p>
+<div class="section level3">
+<h3 id="key-identifiers">Key Identifiers<a class="anchor" aria-label="anchor" href="#key-identifiers"></a>
+</h3>
+<p>Here are the key identifies that is useful for locating the necessary
+data from the Hansard database:</p>
 <ul>
-<li><p><code>HansardID</code> is the numerical ID of a hansard file. A hansard file is the Record of Proceedings of a Council meeting. Since there are three versions of hansard—Floor Chinese and English, each Council meeting has three hansard files, meaning that there are three Hansard IDs corresponding to the same meeting.</p></li>
-<li><p><code>RundownID</code> is the numerical ID of a rundown in the hansard file. In simple terms, rundowns can be understood as individual paragraphs in the Record of Proceedings.</p></li>
-<li><p><code>SectionCode</code> is the alphabetical code stipulating the type of business as indicated in the LegCo Rules of Procedures 18(1) that a paragraph text is referring to in the hansard file.</p></li>
-<li><p><code>BookmarkName</code> is the alphabetical code stipulating details of the rundown. A detailed explanation can be found <a href="#rundown">here</a>.</p></li>
-<li><p><code>SpeakerID</code> is the numerical ID stipulating the speaker of a paragraph text in the hansard file.</p></li>
+<li><p><code>HansardID</code> is the numerical ID of a hansard file. A
+hansard file is the Record of Proceedings of a Council meeting. Since
+there are three versions of hansard—Floor Chinese and English, each
+Council meeting has three hansard files, meaning that there are three
+Hansard IDs corresponding to the same meeting.</p></li>
+<li><p><code>RundownID</code> is the numerical ID of a rundown in the
+hansard file. In simple terms, rundowns can be understood as individual
+paragraphs in the Record of Proceedings.</p></li>
+<li><p><code>SectionCode</code> is the alphabetical code stipulating the
+type of business as indicated in the LegCo Rules of Procedures 18(1)
+that a paragraph text is referring to in the hansard file.</p></li>
+<li><p><code>BookmarkName</code> is the alphabetical code stipulating
+details of the rundown. A detailed explanation can be found <a href="#rundown">here</a>.</p></li>
+<li><p><code>SpeakerID</code> is the numerical ID stipulating the
+speaker of a paragraph text in the hansard file.</p></li>
 </ul>
-<p>These identifiers essentially indicate the <em>when</em> (HansardID), <em>where</em> (RundownID), <em>what</em> (SectionCode) and <em>who</em> (SpeakerID) of a paragraph text in the Record of Proceedings.</p>
+<p>These identifiers essentially indicate the <em>when</em> (HansardID),
+<em>where</em> (RundownID), <em>what</em> (SectionCode) and <em>who</em>
+(SpeakerID) of a paragraph text in the Record of Proceedings.</p>
 </div>
-<div id="total-count" class="section level3">
-<h3 class="hasAnchor">
-<a href="#total-count" class="anchor"></a>Total Count</h3>
-<p>All functions in this database have an option to return only the total count of the records matching the specified parameters instead of returning the data frame containing the result. To activate this option, specify <code>count = TRUE</code>:</p>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># Fetch the total number of questions put on the government in LegCo in April, 2019</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/questions.html">questions</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="st">"2019-04-01"</span>, <span class="kw">to</span> <span class="kw">=</span> <span class="st">"2019-04-30"</span>, <span class="kw">count</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
-<span class="no">v</span></pre></body></html></div>
-<pre><code>## [1] "44"</code></pre>
+<div class="section level3">
+<h3 id="total-count">Total Count<a class="anchor" aria-label="anchor" href="#total-count"></a>
+</h3>
+<p>All functions in this database have an option to return only the
+total count of the records matching the specified parameters instead of
+returning the data frame containing the result. To activate this option,
+specify <code>count = TRUE</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch the total number of questions put on the government in LegCo in April, 2019</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/questions.html">questions</a></span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2019-04-01"</span>, to <span class="op">=</span> <span class="st">"2019-04-30"</span>, count <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+<span class="va">v</span></code></pre></div>
+<pre><code><span class="co">## [1] "44"</span></code></pre>
 <hr>
 <p>This database is accessible with the following functions/data:</p>
 </div>
 </div>
-<div id="hansard" class="section level2">
-<h2 class="hasAnchor">
-<a href="#hansard" class="anchor"></a>hansard()</h2>
-<p><code><a href="../reference/hansard.html">hansard()</a></code> fetches the information of the hansard files.</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/hansard.html">hansard</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="st">"2019-02-20"</span>, <span class="kw">to</span> <span class="kw">=</span> <span class="st">"2019-02-20"</span>)
-<span class="no">v</span></pre></body></html></div>
-<pre><code>##   HansardID         MeetingDate          AgendaDate isCEQandA isCEQT
-## 1      2691 2019-02-20 00:00:00 2019-02-20 00:00:00         0      1
-## 2      2714 2019-02-20 00:00:00 2019-02-20 00:00:00         0      0
-##                                                                         HansardFileURL
-## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220q-translate-e.pdf
-## 2  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf</code></pre>
-<p>If <code>isCEQandA</code> is <code>1</code>, the hansard file is the Record of Proceedings of a Chief Executive’s Question and Answer Session.</p>
-<p>If <code>isCEQT</code> is <code>1</code>, the hansard file is the Record of Proceedings of a Chief Executive’s Question Time.</p>
+<div class="section level2">
+<h2 id="hansard">hansard()<a class="anchor" aria-label="anchor" href="#hansard"></a>
+</h2>
+<p><code><a href="../reference/hansard.html">hansard()</a></code> fetches the information of the hansard
+files.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/hansard.html">hansard</a></span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2019-02-20"</span>, to <span class="op">=</span> <span class="st">"2019-02-20"</span><span class="op">)</span>
+<span class="va">v</span></code></pre></div>
+<pre><code><span class="co">##   HansardID         MeetingDate          AgendaDate isCEQandA isCEQT</span>
+<span class="co">## 1      2691 2019-02-20 00:00:00 2019-02-20 00:00:00         0      1</span>
+<span class="co">## 2      2714 2019-02-20 00:00:00 2019-02-20 00:00:00         0      0</span>
+<span class="co">##                                                                         HansardFileURL</span>
+<span class="co">## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220q-translate-e.pdf</span>
+<span class="co">## 2  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf</span></code></pre>
+<p>If <code>isCEQandA</code> is <code>1</code>, the hansard file is the
+Record of Proceedings of a Chief Executive’s Question and Answer
+Session.</p>
+<p>If <code>isCEQT</code> is <code>1</code>, the hansard file is the
+Record of Proceedings of a Chief Executive’s Question Time.</p>
 </div>
-<div id="legco_section_type" class="section level2">
-<h2 class="hasAnchor">
-<a href="#legco_section_type" class="anchor"></a>legco_section_type</h2>
-<p><code>legco_section_type</code> is a data frame containing the meaning of the section code.</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="no">v</span> <span class="kw">&lt;-</span> <span class="no">legco_section_type</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##   SectionCode
-## 1         r2r
-## 2         oth
-## 3         pex
-## 4         orq
-## 5         sta
-## 6         rsl
-##                                                                            NameEng
-## 1                                   Remaining proceedings after the Second Reading
-## 2                                                                   Taking of Oath
-## 3                                                            Personal Explanations
-## 4                                                                   Oral Questions
-## 5                                                    Statements by Public Officers
-## 6 Request for Special Leave of the Council to Give Evidence of Council Proceedings
-##                                        NameChi
-## 1                             二讀後的餘下程序
-## 2                               作出立法會誓言
-## 3                                     個人解釋
-## 4                                     口頭質詢
-## 5                                     官員聲明
-## 6 就立法會會議程序提供證據一事請求給予特別許可</code></pre>
+<div class="section level2">
+<h2 id="legco_section_type">legco_section_type<a class="anchor" aria-label="anchor" href="#legco_section_type"></a>
+</h2>
+<p><code>legco_section_type</code> is a data frame containing the
+meaning of the section code.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">v</span> <span class="op">&lt;-</span> <span class="va">legco_section_type</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   SectionCode</span>
+<span class="co">## 1         r2r</span>
+<span class="co">## 2         oth</span>
+<span class="co">## 3         pex</span>
+<span class="co">## 4         orq</span>
+<span class="co">## 5         sta</span>
+<span class="co">## 6         rsl</span>
+<span class="co">##                                                                            NameEng</span>
+<span class="co">## 1                                   Remaining proceedings after the Second Reading</span>
+<span class="co">## 2                                                                   Taking of Oath</span>
+<span class="co">## 3                                                            Personal Explanations</span>
+<span class="co">## 4                                                                   Oral Questions</span>
+<span class="co">## 5                                                    Statements by Public Officers</span>
+<span class="co">## 6 Request for Special Leave of the Council to Give Evidence of Council Proceedings</span>
+<span class="co">##                                        NameChi</span>
+<span class="co">## 1                             二讀後的餘下程序</span>
+<span class="co">## 2                               作出立法會誓言</span>
+<span class="co">## 3                                     個人解釋</span>
+<span class="co">## 4                                     口頭質詢</span>
+<span class="co">## 5                                     官員聲明</span>
+<span class="co">## 6 就立法會會議程序提供證據一事請求給予特別許可</span></code></pre>
 </div>
-<div id="subjects" class="section level2">
-<h2 class="hasAnchor">
-<a href="#subjects" class="anchor"></a>subjects()</h2>
-<p><code><a href="../reference/subjects.html">subjects()</a></code> fetches all subjects being discussed in a Council meeting.</p>
-<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="co"># Fetch second reading of bills during the Council meeting on February 20, 2019</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/subjects.html">subjects</a></span>(<span class="kw">hansard_id</span> <span class="kw">=</span> <span class="fl">2714</span>, <span class="kw">section_code</span> <span class="kw">=</span> <span class="st">"b2r"</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##           MeetingDate                                       Subject
-## 1 2019-02-20 00:00:00            SECOND READING OF GOVERNMENT BILLS
-## 2 2019-02-20 00:00:00 Smoking (Public Health) (Amendment) Bill 2019
-## 3 2019-02-20 00:00:00             Trade Marks (Amendment) Bill 2019
-##   ResumptionOf SectionCode RundownID HansardID
-## 1           NA         b2r    899626      2714
-## 2           NA         b2r    899628      2714
-## 3           NA         b2r    899650      2714</code></pre>
-<p>The RundownID indicates the starting RundownID of the subject concerned. For instance, the starting RundownID of <em>Smoking (Public Health) (Amendment) Bill 2019</em> is 899628, meaning that the paragraph text of this subject is from 899628 to 899649.</p>
-<p>If the business is a continuation of a previous meeting, the date of the previous meeting will be shown in the field <code>ResumptionOf</code>.</p>
+<div class="section level2">
+<h2 id="subjects">subjects()<a class="anchor" aria-label="anchor" href="#subjects"></a>
+</h2>
+<p><code><a href="../reference/subjects.html">subjects()</a></code> fetches all subjects being discussed in a
+Council meeting.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch second reading of bills during the Council meeting on February 20, 2019</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/subjects.html">subjects</a></span><span class="op">(</span>hansard_id <span class="op">=</span> <span class="fl">2714</span>, section_code <span class="op">=</span> <span class="st">"b2r"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##           MeetingDate                                       Subject</span>
+<span class="co">## 1 2019-02-20 00:00:00            SECOND READING OF GOVERNMENT BILLS</span>
+<span class="co">## 2 2019-02-20 00:00:00 Smoking (Public Health) (Amendment) Bill 2019</span>
+<span class="co">## 3 2019-02-20 00:00:00             Trade Marks (Amendment) Bill 2019</span>
+<span class="co">##   ResumptionOf SectionCode RundownID HansardID</span>
+<span class="co">## 1           NA         b2r    899626      2714</span>
+<span class="co">## 2           NA         b2r    899628      2714</span>
+<span class="co">## 3           NA         b2r    899650      2714</span></code></pre>
+<p>The RundownID indicates the starting RundownID of the subject
+concerned. For instance, the starting RundownID of <em>Smoking (Public
+Health) (Amendment) Bill 2019</em> is 899628, meaning that the paragraph
+text of this subject is from 899628 to 899649.</p>
+<p>If the business is a continuation of a previous meeting, the date of
+the previous meeting will be shown in the field
+<code>ResumptionOf</code>.</p>
 </div>
-<div id="speakers" class="section level2">
-<h2 class="hasAnchor">
-<a href="#speakers" class="anchor"></a>speakers()</h2>
-<p><code><a href="../reference/speakers.html">speakers()</a></code> fetches the basic information of speakers in LegCo council meetings. Speakers here refer to all personnel who can speak during the meetings, which include not only LegCo members but also government officials and Secretariat staff.</p>
-<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="co"># Fetch a list of all speakers in LegCo council meetings</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span>()
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##   SpeakerID        NameChi                            NameEng Type Initial
-## 1         6       行政長官                    CHIEF EXECUTIVE   PO      CE
-## 2         2           秘書                              CLERK   LC     CLK
-## 3         4     全委會主席                           CHAIRMAN   LC      CM
-## 4         7     政務司司長 CHIEF SECRETARY FOR ADMINISTRATION   PO     CSA
-## 5         5 代理全委會主席                    DEPUTY CHAIRMAN   LC     DCM
-## 6         3       代理主席                   DEPUTY PRESIDENT   LC    DPSD
-##   FirstName LastName
-## 1                   
-## 2                   
-## 3                   
-## 4                   
-## 5                   
-## 6</code></pre>
-<div class="sourceCode" id="cb11"><html><body><pre class="r"><span class="co"># Fetch a list of all speakers who are LegCo members</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span>(<span class="kw">type</span> <span class="kw">=</span> <span class="st">"MB"</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##   SpeakerID NameChi          NameEng Type Initial   FirstName LastName
-## 1       108  梁志祥 LEUNG CHE-CHEUNG   MB     LCC  Che-cheung    LEUNG
-## 2       138  林卓廷   LAM CHEUK-TING   MB     LCT  Cheuk-ting      LAM
-## 3        35  李卓人    LEE CHEUK-YAN   MB     LCY   Cheuk-yan      LEE
-## 4       120  廖長江      MARTIN LIAO   MB      ML Cheung-kong     LIAO
-## 5       104  陳志全   CHAN CHI-CHUEN   MB     CCC   Chi-chuen     CHAN
-## 6       148  許智峯     HUI CHI-FUNG   MB     HCF    Chi-fung      HUI</code></pre>
-<div class="sourceCode" id="cb13"><html><body><pre class="r"><span class="co"># Look up the details of a speaker with the id 6</span>
-<span class="fu"><a href="../reference/speakers.html">speakers</a></span>(<span class="kw">speaker_id</span> <span class="kw">=</span> <span class="fl">6</span>)</pre></body></html></div>
-<pre><code>##   SpeakerID  NameChi         NameEng Type Initial FirstName LastName
-## 1         6 行政長官 CHIEF EXECUTIVE   PO      CE</code></pre>
-<p>Every single paragraph in the hansard files (excluding section titles and summoning of bells) is marked with the unique Speaker ID to indicate the speaker of the text.</p>
+<div class="section level2">
+<h2 id="speakers">speakers()<a class="anchor" aria-label="anchor" href="#speakers"></a>
+</h2>
+<p><code><a href="../reference/speakers.html">speakers()</a></code> fetches the basic information of speakers in
+LegCo council meetings. Speakers here refer to all personnel who can
+speak during the meetings, which include not only LegCo members but also
+government officials and Secretariat staff.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch a list of all speakers in LegCo council meetings</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   SpeakerID        NameChi                            NameEng Type Initial</span>
+<span class="co">## 1         6       行政長官                    CHIEF EXECUTIVE   PO      CE</span>
+<span class="co">## 2         2           秘書                              CLERK   LC     CLK</span>
+<span class="co">## 3         4     全委會主席                           CHAIRMAN   LC      CM</span>
+<span class="co">## 4         7     政務司司長 CHIEF SECRETARY FOR ADMINISTRATION   PO     CSA</span>
+<span class="co">## 5         5 代理全委會主席                    DEPUTY CHAIRMAN   LC     DCM</span>
+<span class="co">## 6         3       代理主席                   DEPUTY PRESIDENT   LC    DPSD</span>
+<span class="co">##   FirstName LastName</span>
+<span class="co">## 1                   </span>
+<span class="co">## 2                   </span>
+<span class="co">## 3                   </span>
+<span class="co">## 4                   </span>
+<span class="co">## 5                   </span>
+<span class="co">## 6</span></code></pre>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch a list of all speakers who are LegCo members</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"MB"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   SpeakerID NameChi          NameEng Type Initial   FirstName LastName</span>
+<span class="co">## 1       108  梁志祥 LEUNG CHE-CHEUNG   MB     LCC  Che-cheung    LEUNG</span>
+<span class="co">## 2       138  林卓廷   LAM CHEUK-TING   MB     LCT  Cheuk-ting      LAM</span>
+<span class="co">## 3        35  李卓人    LEE CHEUK-YAN   MB     LCY   Cheuk-yan      LEE</span>
+<span class="co">## 4       120  廖長江      MARTIN LIAO   MB      ML Cheung-kong     LIAO</span>
+<span class="co">## 5       104  陳志全   CHAN CHI-CHUEN   MB     CCC   Chi-chuen     CHAN</span>
+<span class="co">## 6       148  許智峯     HUI CHI-FUNG   MB     HCF    Chi-fung      HUI</span></code></pre>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Look up the details of a speaker with the id 6</span>
+<span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##   SpeakerID  NameChi         NameEng Type Initial FirstName LastName</span>
+<span class="co">## 1         6 行政長官 CHIEF EXECUTIVE   PO      CE</span></code></pre>
+<p>Every single paragraph in the hansard files (excluding section titles
+and summoning of bells) is marked with the unique Speaker ID to indicate
+the speaker of the text.</p>
 </div>
-<div id="rundown" class="section level2">
-<h2 class="hasAnchor">
-<a href="#rundown" class="anchor"></a>rundown()</h2>
-<p><code><a href="../reference/rundown.html">rundown()</a></code> fetches the paragraph text in hansard files. Note that the result is not in any specific order so it is necessary to reorder if needed.</p>
-<div class="sourceCode" id="cb15"><html><body><pre class="r"><span class="co"># Fetch records of proceedings of the second reading of Smoking (Public Health) (Amendment) Bill 2019</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/rundown.html">rundown</a></span>(<span class="kw">rundown_id</span> <span class="kw">=</span> <span class="fl">899628</span>:<span class="fl">899649</span>)
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="no">v</span>[<span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span>(<span class="no">v</span>$<span class="no">RundownID</span>), ]
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span>(<span class="no">v</span>) <span class="kw">&lt;-</span> <span class="fl">1</span>:<span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(<span class="no">v</span>)
-<span class="no">v</span>[<span class="fl">3</span>:<span class="fl">5</span>, ]</pre></body></html></div>
-<pre><code>##   RundownID         MeetingDate
-## 3    899630 2019-02-20 00:00:00
-## 4    899631 2019-02-20 00:00:00
-## 5    899632 2019-02-20 00:00:00
-##                                                                                                     Content
-## 3 DEPUTY PRESIDENT (in Cantonese): Secretary, please hold on.  Mr SHIU Ka-fai, what is your point of order?
-## 4              MR SHIU KA-FAI (in Cantonese): Deputy President, I think a quorum is lacking in the Chamber.
-## 5                                          DEPUTY PRESIDENT (in Cantonese): Are you requesting a headcount?
-##       BookmarkName SpeakerID HansardID
-## 3 SP_LC_DPSD_00206         3      2714
-## 4  SP_MB_SKF_00207       140      2714
-## 5 SP_LC_DPSD_00208         3      2714
-##                                                                                                   HansardFileURL
-## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00206
-## 4  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_MB_SKF_00207
-## 5 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00208</code></pre>
-<p>Though of little use, BookmarkName can be a useful parameter to search for the necessary data. The BookmarkName of the starting Rundown of a subject is a combination of section code and the sequence number. For instance, the two bills that were under the process of second reading have a BookmarkName of “b2r01” and “b2r02” respectively. Therefore, it is possible to directly fetch the starting RundownID of the first bill under second reading on February 20, 2019, i.e. <em>Smoking (Public Health) (Amendment) Bill 2019</em>, by specifying the BookmarkName:</p>
-<div class="sourceCode" id="cb17"><html><body><pre class="r"><span class="co"># Fetch the first bill under second reading on February 20, 2019</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/rundown.html">rundown</a></span>(<span class="kw">bookmark_name</span> <span class="kw">=</span> <span class="st">"b2r01"</span>, <span class="kw">from</span> <span class="kw">=</span> <span class="st">"2019-02-20"</span>, <span class="kw">to</span> <span class="kw">=</span> <span class="st">"2019-02-20"</span>)
-<span class="no">v</span></pre></body></html></div>
-<pre><code>##   RundownID         MeetingDate                                       Content
-## 1    899628 2019-02-20 00:00:00 Smoking (Public Health) (Amendment) Bill 2019
-##   BookmarkName SpeakerID HansardID
-## 1        b2r01        NA      2714
-##                                                                                        HansardFileURL
-## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01</code></pre>
-<p>Similarly, it can be applicable on other SectionCode as well, such as “pop01” and “pop02”.</p>
+<div class="section level2">
+<h2 id="rundown">rundown()<a class="anchor" aria-label="anchor" href="#rundown"></a>
+</h2>
+<p><code><a href="../reference/rundown.html">rundown()</a></code> fetches the paragraph text in hansard files.
+Note that the result is not in any specific order so it is necessary to
+reorder if needed.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch records of proceedings of the second reading of Smoking (Public Health) (Amendment) Bill 2019</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rundown.html">rundown</a></span><span class="op">(</span>rundown_id <span class="op">=</span> <span class="fl">899628</span><span class="op">:</span><span class="fl">899649</span><span class="op">)</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="va">v</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">v</span><span class="op">$</span><span class="va">RundownID</span><span class="op">)</span>, <span class="op">]</span>
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span>
+<span class="va">v</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">5</span>, <span class="op">]</span></code></pre></div>
+<pre><code><span class="co">##   RundownID         MeetingDate</span>
+<span class="co">## 3    899630 2019-02-20 00:00:00</span>
+<span class="co">## 4    899631 2019-02-20 00:00:00</span>
+<span class="co">## 5    899632 2019-02-20 00:00:00</span>
+<span class="co">##                                                                                                     Content</span>
+<span class="co">## 3 DEPUTY PRESIDENT (in Cantonese): Secretary, please hold on.  Mr SHIU Ka-fai, what is your point of order?</span>
+<span class="co">## 4              MR SHIU KA-FAI (in Cantonese): Deputy President, I think a quorum is lacking in the Chamber.</span>
+<span class="co">## 5                                          DEPUTY PRESIDENT (in Cantonese): Are you requesting a headcount?</span>
+<span class="co">##       BookmarkName SpeakerID HansardID</span>
+<span class="co">## 3 SP_LC_DPSD_00206         3      2714</span>
+<span class="co">## 4  SP_MB_SKF_00207       140      2714</span>
+<span class="co">## 5 SP_LC_DPSD_00208         3      2714</span>
+<span class="co">##                                                                                                   HansardFileURL</span>
+<span class="co">## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00206</span>
+<span class="co">## 4  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_MB_SKF_00207</span>
+<span class="co">## 5 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=SP_LC_DPSD_00208</span></code></pre>
+<p>Though of little use, BookmarkName can be a useful parameter to
+search for the necessary data. The BookmarkName of the starting Rundown
+of a subject is a combination of section code and the sequence number.
+For instance, the two bills that were under the process of second
+reading have a BookmarkName of “b2r01” and “b2r02” respectively.
+Therefore, it is possible to directly fetch the starting RundownID of
+the first bill under second reading on February 20, 2019,
+i.e. <em>Smoking (Public Health) (Amendment) Bill 2019</em>, by
+specifying the BookmarkName:</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch the first bill under second reading on February 20, 2019</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rundown.html">rundown</a></span><span class="op">(</span>bookmark_name <span class="op">=</span> <span class="st">"b2r01"</span>, from <span class="op">=</span> <span class="st">"2019-02-20"</span>, to <span class="op">=</span> <span class="st">"2019-02-20"</span><span class="op">)</span>
+<span class="va">v</span></code></pre></div>
+<pre><code><span class="co">##   RundownID         MeetingDate                                       Content</span>
+<span class="co">## 1    899628 2019-02-20 00:00:00 Smoking (Public Health) (Amendment) Bill 2019</span>
+<span class="co">##   BookmarkName SpeakerID HansardID</span>
+<span class="co">## 1        b2r01        NA      2714</span>
+<span class="co">##                                                                                        HansardFileURL</span>
+<span class="co">## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01</span></code></pre>
+<p>Similarly, it can be applicable on other SectionCode as well, such as
+“pop01” and “pop02”.</p>
 </div>
-<div id="questions" class="section level2">
-<h2 class="hasAnchor">
-<a href="#questions" class="anchor"></a>questions()</h2>
-<p><code><a href="../reference/questions.html">questions()</a></code> fetches the question put on the government by LegCo members. Note that this function does not take HansardID as a filtering parameter.</p>
-<div class="sourceCode" id="cb19"><html><body><pre class="r"><span class="co"># Fetch questions being put on the government during the Council meeting on February 20, 2019</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/questions.html">questions</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="st">"2019-02-20"</span>, <span class="kw">to</span> <span class="kw">=</span> <span class="st">"2019-02-20"</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##           MeetingDate QuestionType
-## 1 2019-02-20 00:00:00         Oral
-## 2 2019-02-20 00:00:00         Oral
-## 3 2019-02-20 00:00:00         Oral
-## 4 2019-02-20 00:00:00         Oral
-## 5 2019-02-20 00:00:00         Oral
-## 6 2019-02-20 00:00:00         Oral
-##                                                            Subject
-## 1                                    Following up marine incidents
-## 2                         The overloaded public health care system
-## 3     Alleviating the pressure on the services of public hospitals
-## 4    Medical and nursing manpower in the public health care system
-## 5                                    Regulation of e-sports venues
-## 6 Construction documentation of the Shatin to Central Link project
-##          Speaker SpeakerID RundownID
-## 1      STEVEN HO        97    899439
-## 2      WILSON OR       143    899457
-## 3   CHAN HOI-YAN       161    899479
-## 4    HELENA WONG       117    899496
-## 5     JEREMY TAM       157    899514
-## 6 LAM CHEUK-TING       138    899529
-##                                                                                        HansardFileURL
-## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq01
-## 2 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq02
-## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq03
-## 4 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq04
-## 5 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq05
-## 6 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq06</code></pre>
-<p>Similar to the output of <code><a href="../reference/subjects.html">subjects()</a></code>, RundownID here refers to the starting RundownID, which can be used to determine the range of the full question text.</p>
+<div class="section level2">
+<h2 id="questions">questions()<a class="anchor" aria-label="anchor" href="#questions"></a>
+</h2>
+<p><code><a href="../reference/questions.html">questions()</a></code> fetches the question put on the government
+by LegCo members. Note that this function does not take HansardID as a
+filtering parameter.</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch questions being put on the government during the Council meeting on February 20, 2019</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/questions.html">questions</a></span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2019-02-20"</span>, to <span class="op">=</span> <span class="st">"2019-02-20"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##           MeetingDate QuestionType</span>
+<span class="co">## 1 2019-02-20 00:00:00         Oral</span>
+<span class="co">## 2 2019-02-20 00:00:00         Oral</span>
+<span class="co">## 3 2019-02-20 00:00:00         Oral</span>
+<span class="co">## 4 2019-02-20 00:00:00         Oral</span>
+<span class="co">## 5 2019-02-20 00:00:00         Oral</span>
+<span class="co">## 6 2019-02-20 00:00:00         Oral</span>
+<span class="co">##                                                            Subject</span>
+<span class="co">## 1                                    Following up marine incidents</span>
+<span class="co">## 2                         The overloaded public health care system</span>
+<span class="co">## 3     Alleviating the pressure on the services of public hospitals</span>
+<span class="co">## 4    Medical and nursing manpower in the public health care system</span>
+<span class="co">## 5                                    Regulation of e-sports venues</span>
+<span class="co">## 6 Construction documentation of the Shatin to Central Link project</span>
+<span class="co">##          Speaker SpeakerID RundownID</span>
+<span class="co">## 1      STEVEN HO        97    899439</span>
+<span class="co">## 2      WILSON OR       143    899457</span>
+<span class="co">## 3   CHAN HOI-YAN       161    899479</span>
+<span class="co">## 4    HELENA WONG       117    899496</span>
+<span class="co">## 5     JEREMY TAM       157    899514</span>
+<span class="co">## 6 LAM CHEUK-TING       138    899529</span>
+<span class="co">##                                                                                        HansardFileURL</span>
+<span class="co">## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq01</span>
+<span class="co">## 2 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq02</span>
+<span class="co">## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq03</span>
+<span class="co">## 4 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq04</span>
+<span class="co">## 5 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq05</span>
+<span class="co">## 6 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=orq06</span></code></pre>
+<p>Similar to the output of <code><a href="../reference/subjects.html">subjects()</a></code>, RundownID here
+refers to the starting RundownID, which can be used to determine the
+range of the full question text.</p>
 </div>
-<div id="bills" class="section level2">
-<h2 class="hasAnchor">
-<a href="#bills" class="anchor"></a>bills()</h2>
-<p><code><a href="../reference/bills.html">bills()</a></code> fetches bills being debated in LegCo Council meetings.</p>
-<div class="sourceCode" id="cb21"><html><body><pre class="r"><span class="co"># Fetch bills debated during the Council meeting on February 20, 2019</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/bills.html">bills</a></span>(<span class="kw">hansard_id</span> <span class="kw">=</span> <span class="fl">2714</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##           MeetingDate
-## 1 2019-02-20 00:00:00
-## 2 2019-02-20 00:00:00
-## 3 2019-02-20 00:00:00
-## 4 2019-02-20 00:00:00
-## 5 2019-02-20 00:00:00
-## 6 2019-02-20 00:00:00
-##                                                                  Subject
-## 1                          Smoking (Public Health) (Amendment) Bill 2019
-## 2                                      Trade Marks (Amendment) Bill 2019
-## 3 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018
-## 4                           Inland Revenue (Amendment) (No. 7) Bill 2018
-## 5                          Smoking (Public Health) (Amendment) Bill 2019
-## 6                          Smoking (Public Health) (Amendment) Bill 2019
-##                                                   Section SectionCode RundownID
-## 1                       First Reading of Government Bills         b1r    899623
-## 2                       First Reading of Government Bills         b1r    899624
-## 3 Resumption of Second Reading Debate on Government Bills         b2d    899655
-## 4 Resumption of Second Reading Debate on Government Bills         b2d    899698
-## 5                      Second Reading of Government Bills         b2r    899628
-## 6                                  Withdrawal of the Bill         b2r    899628
-##   HansardID
-## 1      2714
-## 2      2714
-## 3      2714
-## 4      2714
-## 5      2714
-## 6      2714
-##                                                                                         HansardFileURL
-## 1  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b1r01
-## 2  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b1r02
-## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2d01a
-## 4 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2d02a
-## 5  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01
-## 6  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01</code></pre>
-<p>Note that the name of a bill may appear more than once like above, since the bill went through first and second reading in the same meeting. To fetch more detailed information and key dates of a particular bill, use <code><a href="../reference/all_bills.html">all_bills()</a></code> instead.</p>
+<div class="section level2">
+<h2 id="bills">bills()<a class="anchor" aria-label="anchor" href="#bills"></a>
+</h2>
+<p><code><a href="../reference/bills.html">bills()</a></code> fetches bills being debated in LegCo Council
+meetings.</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch bills debated during the Council meeting on February 20, 2019</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bills.html">bills</a></span><span class="op">(</span>hansard_id <span class="op">=</span> <span class="fl">2714</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##           MeetingDate</span>
+<span class="co">## 1 2019-02-20 00:00:00</span>
+<span class="co">## 2 2019-02-20 00:00:00</span>
+<span class="co">## 3 2019-02-20 00:00:00</span>
+<span class="co">## 4 2019-02-20 00:00:00</span>
+<span class="co">## 5 2019-02-20 00:00:00</span>
+<span class="co">## 6 2019-02-20 00:00:00</span>
+<span class="co">##                                                                  Subject</span>
+<span class="co">## 1                          Smoking (Public Health) (Amendment) Bill 2019</span>
+<span class="co">## 2                                      Trade Marks (Amendment) Bill 2019</span>
+<span class="co">## 3 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018</span>
+<span class="co">## 4                           Inland Revenue (Amendment) (No. 7) Bill 2018</span>
+<span class="co">## 5                          Smoking (Public Health) (Amendment) Bill 2019</span>
+<span class="co">## 6                          Smoking (Public Health) (Amendment) Bill 2019</span>
+<span class="co">##                                                   Section SectionCode RundownID</span>
+<span class="co">## 1                       First Reading of Government Bills         b1r    899623</span>
+<span class="co">## 2                       First Reading of Government Bills         b1r    899624</span>
+<span class="co">## 3 Resumption of Second Reading Debate on Government Bills         b2d    899655</span>
+<span class="co">## 4 Resumption of Second Reading Debate on Government Bills         b2d    899698</span>
+<span class="co">## 5                      Second Reading of Government Bills         b2r    899628</span>
+<span class="co">## 6                                  Withdrawal of the Bill         b2r    899628</span>
+<span class="co">##   HansardID</span>
+<span class="co">## 1      2714</span>
+<span class="co">## 2      2714</span>
+<span class="co">## 3      2714</span>
+<span class="co">## 4      2714</span>
+<span class="co">## 5      2714</span>
+<span class="co">## 6      2714</span>
+<span class="co">##                                                                                         HansardFileURL</span>
+<span class="co">## 1  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b1r01</span>
+<span class="co">## 2  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b1r02</span>
+<span class="co">## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2d01a</span>
+<span class="co">## 4 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2d02a</span>
+<span class="co">## 5  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01</span>
+<span class="co">## 6  https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=b2r01</span></code></pre>
+<p>Note that the name of a bill may appear more than once like above,
+since the bill went through first and second reading in the same
+meeting. To fetch more detailed information and key dates of a
+particular bill, use <code><a href="../reference/all_bills.html">all_bills()</a></code> instead.</p>
 </div>
-<div id="motions" class="section level2">
-<h2 class="hasAnchor">
-<a href="#motions" class="anchor"></a>motions()</h2>
-<p><code><a href="../reference/motions.html">motions()</a></code> fetches the motions discussed in Council meetings.</p>
-<div class="sourceCode" id="cb23"><html><body><pre class="r"><span class="co"># Fetch motions discussed during the Council meeting on February 20, 2019</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/motions.html">motions</a></span>(<span class="kw">hansard_id</span> <span class="kw">=</span> <span class="fl">2714</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##           MeetingDate
-## 1 2019-02-20 00:00:00
-## 2 2019-02-20 00:00:00
-## 3 2019-02-20 00:00:00
-##                                                                                                                                  Subject
-## 1                                            Proposed resolution under section 34(4) of the Interpretation and General Clauses Ordinance
-## 2 Proposed resolution under Article 75 of the Basic Law of the Hong Kong Special Administrative Region of the People's Republic of China
-## 3                                                                 Motion under the Legislative Council (Powers and Privileges) Ordinance
-##            Section SectionCode RundownID HansardID
-## 1 Members' motions         mbm    899758      2714
-## 2 Members' motions         mbm    899768      2714
-## 3 Members' motions         mbm    899812      2714
-##                                                                                        HansardFileURL
-## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=mbm01
-## 2 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=mbm02
-## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=mbm03</code></pre>
-<p>Similar to the output of <code><a href="../reference/subjects.html">subjects()</a></code> and <code><a href="../reference/questions.html">questions()</a></code>, RundownID here refers to the starting RundownID, which can be used to determine the range of the full question text.</p>
+<div class="section level2">
+<h2 id="motions">motions()<a class="anchor" aria-label="anchor" href="#motions"></a>
+</h2>
+<p><code><a href="../reference/motions.html">motions()</a></code> fetches the motions discussed in Council
+meetings.</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch motions discussed during the Council meeting on February 20, 2019</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/motions.html">motions</a></span><span class="op">(</span>hansard_id <span class="op">=</span> <span class="fl">2714</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##           MeetingDate</span>
+<span class="co">## 1 2019-02-20 00:00:00</span>
+<span class="co">## 2 2019-02-20 00:00:00</span>
+<span class="co">## 3 2019-02-20 00:00:00</span>
+<span class="co">##                                                                                                                                  Subject</span>
+<span class="co">## 1                                            Proposed resolution under section 34(4) of the Interpretation and General Clauses Ordinance</span>
+<span class="co">## 2 Proposed resolution under Article 75 of the Basic Law of the Hong Kong Special Administrative Region of the People's Republic of China</span>
+<span class="co">## 3                                                                 Motion under the Legislative Council (Powers and Privileges) Ordinance</span>
+<span class="co">##            Section SectionCode RundownID HansardID</span>
+<span class="co">## 1 Members' motions         mbm    899758      2714</span>
+<span class="co">## 2 Members' motions         mbm    899768      2714</span>
+<span class="co">## 3 Members' motions         mbm    899812      2714</span>
+<span class="co">##                                                                                        HansardFileURL</span>
+<span class="co">## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=mbm01</span>
+<span class="co">## 2 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=mbm02</span>
+<span class="co">## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=mbm03</span></code></pre>
+<p>Similar to the output of <code><a href="../reference/subjects.html">subjects()</a></code> and
+<code><a href="../reference/questions.html">questions()</a></code>, RundownID here refers to the starting
+RundownID, which can be used to determine the range of the full question
+text.</p>
 </div>
-<div id="petitions" class="section level2">
-<h2 class="hasAnchor">
-<a href="#petitions" class="anchor"></a>petitions()</h2>
-<p><code><a href="../reference/petitions.html">petitions()</a></code> fetches the petitions raised by LegCo members in Council meetings.</p>
-<div class="sourceCode" id="cb25"><html><body><pre class="r"><span class="co"># Fetch petition laid during the Council meeting on January 19, 2018</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/petitions.html">petitions</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="st">"2018-01-10"</span>)
-<span class="no">v</span></pre></body></html></div>
-<pre><code>##           MeetingDate
-## 1 2018-01-10 00:00:00
-##                                                                                       Subject
-## 1 Mr Charles Peter MOK, with the other three Members, will present a petition to this Council
-##            Speakers RundownID HansardID
-## 1 CHARLES PETER MOK    781135      2278
-##                                                                                        HansardFileURL
-## 1 https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180110-translate-e.pdf#nameddest=pop01</code></pre>
+<div class="section level2">
+<h2 id="petitions">petitions()<a class="anchor" aria-label="anchor" href="#petitions"></a>
+</h2>
+<p><code><a href="../reference/petitions.html">petitions()</a></code> fetches the petitions raised by LegCo
+members in Council meetings.</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch petition laid during the Council meeting on January 19, 2018</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/petitions.html">petitions</a></span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2018-01-10"</span><span class="op">)</span>
+<span class="va">v</span></code></pre></div>
+<pre><code><span class="co">##           MeetingDate</span>
+<span class="co">## 1 2018-01-10 00:00:00</span>
+<span class="co">##                                                                                       Subject</span>
+<span class="co">## 1 Mr Charles Peter MOK, with the other three Members, will present a petition to this Council</span>
+<span class="co">##            Speakers RundownID HansardID</span>
+<span class="co">## 1 CHARLES PETER MOK    781135      2278</span>
+<span class="co">##                                                                                        HansardFileURL</span>
+<span class="co">## 1 https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180110-translate-e.pdf#nameddest=pop01</span></code></pre>
 </div>
-<div id="addresses" class="section level2">
-<h2 class="hasAnchor">
-<a href="#addresses" class="anchor"></a>addresses()</h2>
-<p><code><a href="../reference/addresses.html">addresses()</a></code> fetches fetches addresses made by members or government officials while presenting papers to the Council.</p>
-<div class="sourceCode" id="cb27"><html><body><pre class="r"><span class="co"># Fetch addresses given during the Council meeting on February 20, 2019</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/addresses.html">addresses</a></span>(<span class="kw">hansard_id</span> <span class="kw">=</span> <span class="fl">2714</span>)
-<span class="no">v</span></pre></body></html></div>
-<pre><code>##           MeetingDate
-## 1 2019-02-20 00:00:00
-##                                                                                                                                                                                                                                                       Subject
-## 1 Report of the Public Accounts Committee on the Reports of the Director of Audit on the Accounts of the Government of the Hong Kong Special Administrative Region for the year ended 31 March 2018 and the Results of Value for Money Audits (Report No. 71)
-##        Speaker RundownID HansardID
-## 1 ABRAHAM SHEK    899435      2714
-##                                                                                        HansardFileURL
-## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=add01</code></pre>
+<div class="section level2">
+<h2 id="addresses">addresses()<a class="anchor" aria-label="anchor" href="#addresses"></a>
+</h2>
+<p><code><a href="../reference/addresses.html">addresses()</a></code> fetches fetches addresses made by members or
+government officials while presenting papers to the Council.</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch addresses given during the Council meeting on February 20, 2019</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/addresses.html">addresses</a></span><span class="op">(</span>hansard_id <span class="op">=</span> <span class="fl">2714</span><span class="op">)</span>
+<span class="va">v</span></code></pre></div>
+<pre><code><span class="co">##           MeetingDate</span>
+<span class="co">## 1 2019-02-20 00:00:00</span>
+<span class="co">##                                                                                                                                                                                                                                                       Subject</span>
+<span class="co">## 1 Report of the Public Accounts Committee on the Reports of the Director of Audit on the Accounts of the Government of the Hong Kong Special Administrative Region for the year ended 31 March 2018 and the Results of Value for Money Audits (Report No. 71)</span>
+<span class="co">##        Speaker RundownID HansardID</span>
+<span class="co">## 1 ABRAHAM SHEK    899435      2714</span>
+<span class="co">##                                                                                        HansardFileURL</span>
+<span class="co">## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=add01</span></code></pre>
 </div>
-<div id="statements" class="section level2">
-<h2 class="hasAnchor">
-<a href="#statements" class="anchor"></a>statements()</h2>
-<p><code><a href="../reference/statements.html">statements()</a></code> fetches statements made by government officials in Council meetings.</p>
-<div class="sourceCode" id="cb29"><html><body><pre class="r"><span class="co"># Fetch statements made by government officials during the Council meeting on April 22, 2015</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/statements.html">statements</a></span>(<span class="kw">from</span> <span class="kw">=</span> <span class="st">"2015-04-22"</span>)
-<span class="no">v</span></pre></body></html></div>
-<pre><code>##           MeetingDate
-## 1 2015-04-22 00:00:00
-##                                                                                                   Subject
-## 1 Consultation Report and Proposals on the Method for Selecting the Chief Executive by Universal Suffrage
-##                              Speaker RundownID HansardID
-## 1 CHIEF SECRETARY FOR ADMINISTRATION    408564       997
-##                                                                                        HansardFileURL
-## 1 https://www.legco.gov.hk/yr14-15/english/counmtg/hansard/cm20150422-translate-e.pdf#nameddest=sta01</code></pre>
+<div class="section level2">
+<h2 id="statements">statements()<a class="anchor" aria-label="anchor" href="#statements"></a>
+</h2>
+<p><code><a href="../reference/statements.html">statements()</a></code> fetches statements made by government
+officials in Council meetings.</p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch statements made by government officials during the Council meeting on April 22, 2015</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/statements.html">statements</a></span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2015-04-22"</span><span class="op">)</span>
+<span class="va">v</span></code></pre></div>
+<pre><code><span class="co">##           MeetingDate</span>
+<span class="co">## 1 2015-04-22 00:00:00</span>
+<span class="co">##                                                                                                   Subject</span>
+<span class="co">## 1 Consultation Report and Proposals on the Method for Selecting the Chief Executive by Universal Suffrage</span>
+<span class="co">##                              Speaker RundownID HansardID</span>
+<span class="co">## 1 CHIEF SECRETARY FOR ADMINISTRATION    408564       997</span>
+<span class="co">##                                                                                        HansardFileURL</span>
+<span class="co">## 1 https://www.legco.gov.hk/yr14-15/english/counmtg/hansard/cm20150422-translate-e.pdf#nameddest=sta01</span></code></pre>
 </div>
-<div id="voting_results" class="section level2">
-<h2 class="hasAnchor">
-<a href="#voting_results" class="anchor"></a>voting_results()</h2>
-<p><code><a href="../reference/voting_results.html">voting_results()</a></code> fetches the results of votes conducted in Council meetings.</p>
-<div class="sourceCode" id="cb31"><html><body><pre class="r"><span class="co"># Fetch results of votes conducted during the Council meeting on January 19, 2018</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/voting_results.html">voting_results</a></span>(<span class="kw">hansard_id</span> <span class="kw">=</span> <span class="fl">2714</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##           MeetingDate
-## 1 2019-02-20 00:00:00
-## 2 2019-02-20 00:00:00
-## 3 2019-02-20 00:00:00
-## 4 2019-02-20 00:00:00
-## 5 2019-02-20 00:00:00
-## 6 2019-02-20 00:00:00
-##                                                                  Subject
-## 1 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018
-## 2 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018
-## 3 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018
-## 4 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018
-## 5                           Inland Revenue (Amendment) (No. 7) Bill 2018
-## 6                           Inland Revenue (Amendment) (No. 7) Bill 2018
-##   VoteResult SectionCode RundownID HansardID
-## 1     Passed         b2d    899665      2714
-## 2     Passed         cwc    899677      2714
-## 3     Passed         cwc    899685      2714
-## 4     Passed         b3r    899695      2714
-## 5     Passed         b2d    899709      2714
-## 6     Passed         cwc    899720      2714
-##                                                                                                 HansardFileURL
-## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00241
-## 2 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00253
-## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00261
-## 4 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00271
-## 5 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00286
-## 6 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00298</code></pre>
-<p><code><a href="../reference/voting_results.html">voting_results()</a></code> only returns the overall result of the vote. To fetch the voting record of individual members, use <code><a href="../reference/voting_record.html">voting_record()</a></code> instead.</p>
+<div class="section level2">
+<h2 id="voting_results">voting_results()<a class="anchor" aria-label="anchor" href="#voting_results"></a>
+</h2>
+<p><code><a href="../reference/voting_results.html">voting_results()</a></code> fetches the results of votes conducted
+in Council meetings.</p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch results of votes conducted during the Council meeting on January 19, 2018</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/voting_results.html">voting_results</a></span><span class="op">(</span>hansard_id <span class="op">=</span> <span class="fl">2714</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##           MeetingDate</span>
+<span class="co">## 1 2019-02-20 00:00:00</span>
+<span class="co">## 2 2019-02-20 00:00:00</span>
+<span class="co">## 3 2019-02-20 00:00:00</span>
+<span class="co">## 4 2019-02-20 00:00:00</span>
+<span class="co">## 5 2019-02-20 00:00:00</span>
+<span class="co">## 6 2019-02-20 00:00:00</span>
+<span class="co">##                                                                  Subject</span>
+<span class="co">## 1 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018</span>
+<span class="co">## 2 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018</span>
+<span class="co">## 3 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018</span>
+<span class="co">## 4 Inland Revenue (Profits Tax Exemption for Funds) (Amendment) Bill 2018</span>
+<span class="co">## 5                           Inland Revenue (Amendment) (No. 7) Bill 2018</span>
+<span class="co">## 6                           Inland Revenue (Amendment) (No. 7) Bill 2018</span>
+<span class="co">##   VoteResult SectionCode RundownID HansardID</span>
+<span class="co">## 1     Passed         b2d    899665      2714</span>
+<span class="co">## 2     Passed         cwc    899677      2714</span>
+<span class="co">## 3     Passed         cwc    899685      2714</span>
+<span class="co">## 4     Passed         b3r    899695      2714</span>
+<span class="co">## 5     Passed         b2d    899709      2714</span>
+<span class="co">## 6     Passed         cwc    899720      2714</span>
+<span class="co">##                                                                                                 HansardFileURL</span>
+<span class="co">## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00241</span>
+<span class="co">## 2 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00253</span>
+<span class="co">## 3 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00261</span>
+<span class="co">## 4 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00271</span>
+<span class="co">## 5 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00286</span>
+<span class="co">## 6 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_VOTED_00298</span></code></pre>
+<p><code><a href="../reference/voting_results.html">voting_results()</a></code> only returns the overall result of the
+vote. To fetch the voting record of individual members, use
+<code><a href="../reference/voting_record.html">voting_record()</a></code> instead.</p>
 </div>
-<div id="summoning_bells" class="section level2">
-<h2 class="hasAnchor">
-<a href="#summoning_bells" class="anchor"></a>summoning_bells()</h2>
-<p><code><a href="../reference/summoning_bells.html">summoning_bells()</a></code> fetches instances in which the summoning bell have been rung in LegCo Council meetings.</p>
-<div class="sourceCode" id="cb33"><html><body><pre class="r"><span class="co"># Fetch instances of summoning bell during the Council meeting on January 19, 2018</span>
-<span class="no">v</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/summoning_bells.html">summoning_bells</a></span>(<span class="kw">hansard_id</span> <span class="kw">=</span> <span class="fl">2714</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">v</span>)</pre></body></html></div>
-<pre><code>##           MeetingDate SectionCode RundownID HansardID
-## 1 2019-02-20 00:00:00         b2r    899635      2714
-## 2 2019-02-20 00:00:00         mbm    899775      2714
-##                                                                                                HansardFileURL
-## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_BELL_00211
-## 2 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_BELL_00354</code></pre>
+<div class="section level2">
+<h2 id="summoning_bells">summoning_bells()<a class="anchor" aria-label="anchor" href="#summoning_bells"></a>
+</h2>
+<p><code><a href="../reference/summoning_bells.html">summoning_bells()</a></code> fetches instances in which the
+summoning bell have been rung in LegCo Council meetings.</p>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Fetch instances of summoning bell during the Council meeting on January 19, 2018</span>
+<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/summoning_bells.html">summoning_bells</a></span><span class="op">(</span>hansard_id <span class="op">=</span> <span class="fl">2714</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">##           MeetingDate SectionCode RundownID HansardID</span>
+<span class="co">## 1 2019-02-20 00:00:00         b2r    899635      2714</span>
+<span class="co">## 2 2019-02-20 00:00:00         mbm    899775      2714</span>
+<span class="co">##                                                                                                HansardFileURL</span>
+<span class="co">## 1 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_BELL_00211</span>
+<span class="co">## 2 https://www.legco.gov.hk/yr18-19/english/counmtg/hansard/cm20190220-translate-e.pdf#nameddest=EV_BELL_00354</span></code></pre>
 </div>
   </div>
 
@@ -500,11 +585,14 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://elgarteo.ga">Elgar Teo</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://elgarteo.ga" class="external-link">Elgar Teo</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.2.</p>
 </div>
 
       </footer>
@@ -512,6 +600,8 @@
 
   
 
+
+  
 
   </body>
 </html>

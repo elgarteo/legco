@@ -11,6 +11,12 @@
 #' @inheritParams questions
 #' @inherit comp-fun
 #'
+#' @examples
+#' \donttest{
+#' # Fetch all written questions asked by MemberID 273 from January to April 2019 in Chinese
+#' x <- search_question(member_id = 273, from = "2019-01-01", to ="2019-04-30", type = "written", lang = "zh")
+#' }
+#'
 #' @export
 #' 
 search_question <- function(speaker_id = NULL, member_id = NULL, rundown_id = NULL,
