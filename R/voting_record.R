@@ -163,7 +163,7 @@ voting_record <- function(committee = NULL, term_id = NULL, result = "all",
     names(df)[names(df) == "TermNo"] <- "TermID"
     names(df)[names(df) == "Type"] <- "Committee"
     df$TermID <- sapply(df$TermID, .convert_term_no)
-    df <- df[, c(1, 2:4, 6:36)]
+    #df <- df[, c(1, 2:4, 6:36)]
   }
   
   df

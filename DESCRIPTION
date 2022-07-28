@@ -1,7 +1,7 @@
 Package: legco
 Type: Package
 Title: R Bindings for the Hong Kong Legislative Council API
-Version: 0.1.4
+Version: 0.1.4.9999
 Authors@R: c(
     person("Elgar", "Teo", , "elgarteo@connect.hku.hk", role = c("aut", "cre"),
       comment = c(ORCID = "0000-0003-2523-3612")
