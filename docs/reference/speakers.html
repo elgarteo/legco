@@ -24,7 +24,7 @@ LegCo members, government officials and Secretariat staff."><!-- mathjax --><scr
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -39,7 +39,7 @@ LegCo members, government officials and Secretariat staff."><!-- mathjax --><scr
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -65,9 +65,6 @@ LegCo members, government officials and Secretariat staff."><!-- mathjax --><scr
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
-</li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/elgarteo/legco" class="external-link">
@@ -95,21 +92,21 @@ LegCo members, government officials and Secretariat staff.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">speakers</span><span class="op">(</span>
-  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,
-  type <span class="op">=</span> <span class="st">"all"</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-
-<span class="fu">legco_speakers</span><span class="op">(</span>
-  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,
-  type <span class="op">=</span> <span class="st">"all"</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">speakers</span><span class="op">(</span></span>
+<span>  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  type <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">legco_speakers</span><span class="op">(</span></span>
+<span>  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  type <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -117,20 +114,29 @@ LegCo members, government officials and Secretariat staff.</p>
     <dl><dt>speaker_id</dt>
 <dd><p>the id of a speaker at the Legislative Council, or a vector
 of ids. If <code>NULL</code>, returns all speakers. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>type</dt>
 <dd><p>the position of a speaker. <code>"all"</code> returns all speakers.
 <code>"PO"</code> returns public officers. <code>"LC"</code> returns key appointment
 holders and staff at LegCo, such as President, Chairman and clerk.
 <code>"MB"</code> returns LegCo members. Default to <code>"all"</code>.</p></dd>
+
+
 <dt>extra_param</dt>
 <dd><p>additional query parameters defined in LegCo API. Must
 begin with <code>"&amp;"</code>.</p></dd>
+
+
 <dt>count</dt>
 <dd><p>logical: Whether to return only the total count of records that
 matches the parameter(s) instead of the result. Defaults to <code>FALSE</code>.</p></dd>
+
+
 <dt>verbose</dt>
 <dd><p>logical: Whether to display progress messages when fetching
 data? Defaults to <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -161,26 +167,26 @@ Database.</p>
     <div id="see-also">
     <h2>See also</h2>
     <div class="dont-index"><p>LegCo API documentation for the Hansard database:
-  <a href="https://www.legco.gov.hk/odata/english/hansard-db.html" class="external-link">https://www.legco.gov.hk/odata/english/hansard-db.html</a></p></div>
+  <a href="https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html" class="external-link">https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html</a></p></div>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="co"># Fetch a list of all speakers in LegCo council meetings</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">speakers</span><span class="op">(</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Fetch a list of all speakers in LegCo council meetings</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">speakers</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 218 record(s). 218 record(s) available in total.</span>
-<span class="r-in"><span class="co"># Fetch a list of all speakers who are LegCo members</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">speakers</span><span class="op">(</span>type <span class="op">=</span> <span class="st">"MB"</span><span class="op">)</span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 232 record(s). 232 record(s) available in total.</span>
+<span class="r-in"><span><span class="co"># Fetch a list of all speakers who are LegCo members</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">speakers</span><span class="op">(</span>type <span class="op">=</span> <span class="st">"MB"</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 182 record(s). 182 record(s) available in total.</span>
-<span class="r-in"><span class="co"># Look up the details of a speaker with the id 6</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">speakers</span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="co"># Look up the details of a speaker with the id 6</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">speakers</span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 1 record(s). 1 record(s) available in total.</span>
-<span class="r-in"><span class="co"># }</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -195,8 +201,7 @@ Database.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

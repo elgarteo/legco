@@ -24,7 +24,7 @@ given meeting slot(s)."><!-- mathjax --><script src="https://cdnjs.cloudflare.co
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -39,7 +39,7 @@ given meeting slot(s)."><!-- mathjax --><script src="https://cdnjs.cloudflare.co
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -65,9 +65,6 @@ given meeting slot(s)."><!-- mathjax --><script src="https://cdnjs.cloudflare.co
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
-</li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/elgarteo/legco" class="external-link">
@@ -95,23 +92,23 @@ given meeting slot(s).</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">meeting_committee</span><span class="op">(</span>
-  slot_id <span class="op">=</span> <span class="cn">NULL</span>,
-  meet_id <span class="op">=</span> <span class="cn">NULL</span>,
-  committee_id <span class="op">=</span> <span class="cn">NULL</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-
-<span class="fu">legco_meeting_committee</span><span class="op">(</span>
-  slot_id <span class="op">=</span> <span class="cn">NULL</span>,
-  meet_id <span class="op">=</span> <span class="cn">NULL</span>,
-  committee_id <span class="op">=</span> <span class="cn">NULL</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">meeting_committee</span><span class="op">(</span></span>
+<span>  slot_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  meet_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  committee_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">legco_meeting_committee</span><span class="op">(</span></span>
+<span>  slot_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  meet_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  committee_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -119,22 +116,33 @@ given meeting slot(s).</p>
     <dl><dt>slot_id</dt>
 <dd><p>the id of a meeting slot, or a vector of ids. If <code>NULL</code>,
 returns all meetings. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>meet_id</dt>
 <dd><p>the id of a meeting, or a vector of ids. If <code>NULL</code>,
 returns all meetings. Useful for matching meeting with records from the
 Attendance Database. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>committee_id</dt>
 <dd><p>the id of a committee, or a vector of ids. If
 <code>NULL</code>, returns results of all committees. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>extra_param</dt>
 <dd><p>additional query parameters defined in LegCo API. Must
 begin with <code>"&amp;"</code>.</p></dd>
+
+
 <dt>count</dt>
 <dd><p>logical: Whether to return only the total count of records that
 matches the parameter(s) instead of the result. Defaults to <code>FALSE</code>.</p></dd>
+
+
 <dt>verbose</dt>
 <dd><p>logical: Whether to display progress messages when fetching
 data? Defaults to <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -164,13 +172,13 @@ the Meeting Schedule Database.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="co"># Fetch all meetings of Subcommittee on Issues Relating to Bazaars</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">meeting_committee</span><span class="op">(</span>committee_id <span class="op">=</span> <span class="fl">2704</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Fetch all meetings of Subcommittee on Issues Relating to Bazaars</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">meeting_committee</span><span class="op">(</span>committee_id <span class="op">=</span> <span class="fl">2704</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 15 record(s). 15 record(s) available in total.</span>
-<span class="r-in"><span class="co"># }</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -185,8 +193,7 @@ the Meeting Schedule Database.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

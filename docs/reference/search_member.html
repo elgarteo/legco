@@ -24,7 +24,7 @@ Chinese name."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/li
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -39,7 +39,7 @@ Chinese name."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/li
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -65,9 +65,6 @@ Chinese name."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/li
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
-</li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/elgarteo/legco" class="external-link">
@@ -95,21 +92,21 @@ Chinese name.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">search_member</span><span class="op">(</span>
-  search_string <span class="op">=</span> <span class="cn">NULL</span>,
-  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,
-  member_id <span class="op">=</span> <span class="cn">NULL</span>,
-  exact <span class="op">=</span> <span class="cn">TRUE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-
-<span class="fu">legco_search_member</span><span class="op">(</span>
-  search_string <span class="op">=</span> <span class="cn">NULL</span>,
-  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,
-  member_id <span class="op">=</span> <span class="cn">NULL</span>,
-  exact <span class="op">=</span> <span class="cn">TRUE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">search_member</span><span class="op">(</span></span>
+<span>  search_string <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  member_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  exact <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">legco_search_member</span><span class="op">(</span></span>
+<span>  search_string <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  member_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  exact <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -117,18 +114,27 @@ Chinese name.</p>
     <dl><dt>search_string</dt>
 <dd><p>search string of member's name. Accepts Chinese or
 English full or partial name. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>speaker_id</dt>
 <dd><p>the id of a speaker at the Legislative Council, or a vector
 of ids. If <code>NULL</code>, returns all speakers. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>member_id</dt>
 <dd><p>the id of a LegCo member, or a vector of ids. If
 <code>NULL</code>, returns results of all LegCo members. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>exact</dt>
 <dd><p>logical: Whether to look for exact match of the search term.
 Defaults to <code>TRUE</code>.</p></dd>
+
+
 <dt>verbose</dt>
 <dd><p>logical: Whether to display progress messages when fetching
 data? Defaults to <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -153,36 +159,36 @@ data? Defaults to <code>TRUE</code>.</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="co"># Lookup LegCo member of SpeakerID 63</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">search_member</span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="fl">63</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Lookup LegCo member of SpeakerID 63</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">search_member</span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="fl">63</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 218 record(s). 218 record(s) available in total.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 117 record(s). 117 record(s) available in total.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 161 record(s). 161 record(s) available in total.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> 2 record(s) match(es) your parameters.</span>
-<span class="r-in"><span class="co"># Lookup LegCo member of MemberID 273</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">search_member</span><span class="op">(</span>member_id <span class="op">=</span> <span class="fl">273</span><span class="op">)</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 218 record(s). 218 record(s) available in total.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 232 record(s). 232 record(s) available in total.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 117 record(s). 117 record(s) available in total.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 161 record(s). 161 record(s) available in total.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 2 record(s) match(es) your parameters.</span>
-<span class="r-in"><span class="co"># Lookup members with "ting" in their names</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">search_member</span><span class="op">(</span>search_string <span class="op">=</span> <span class="st">"ting"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="co"># Lookup LegCo member of MemberID 273</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">search_member</span><span class="op">(</span>member_id <span class="op">=</span> <span class="fl">273</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 218 record(s). 218 record(s) available in total.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 232 record(s). 232 record(s) available in total.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 117 record(s). 117 record(s) available in total.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 161 record(s). 161 record(s) available in total.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 2 record(s) match(es) your parameters.</span>
-<span class="r-in"><span class="co"># }</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="co"># Lookup members with "ting" in their names</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">search_member</span><span class="op">(</span>search_string <span class="op">=</span> <span class="st">"ting"</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 232 record(s). 232 record(s) available in total.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 117 record(s). 117 record(s) available in total.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 161 record(s). 161 record(s) available in total.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> 2 record(s) match(es) your parameters.</span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -197,8 +203,7 @@ data? Defaults to <code>TRUE</code>.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

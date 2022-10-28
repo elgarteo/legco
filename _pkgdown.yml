@@ -29,8 +29,6 @@ navbar:
       href: reference/index.html
     - text: "Changelog"
       href: news/index.html
-    - text: "Add-on: legcoplus"
-      href: https://elgarteo.github.io/legcoplus/
 
   right:
     - icon: fa-github fa-lg
@@ -48,6 +46,7 @@ reference:
   - title: "Hansard Database"
     desc: "Functions to access the hansard data of LegCo Council meetings"
     contents:
+      - '`hansard-db`'
       - '`hansard`' 
       - '`legco_section_type`'
       - '`subjects`'
@@ -68,6 +67,7 @@ reference:
   - title: "Meeting Schedule Database"
     desc: "Functions to access the data of LegCo Council and committee meetings"
     contents:
+      - '`meeting_schedule-db`'
       - '`term`'
       - '`session`'
       - '`committee`'
@@ -83,6 +83,7 @@ reference:
   - title: "Complementary Functions"
     desc: "Complementary functions that facilitate the use of the LegCo API"
     contents:
+      - '`comp-fun`'
       - '`search_committee`'
       - '`search_member`'
       - '`search_voting_record`'

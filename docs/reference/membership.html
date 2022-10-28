@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -38,7 +38,7 @@
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -65,9 +65,6 @@
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
-</li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/elgarteo/legco" class="external-link">
     <span class="fa fa-github fa-lg"></span>
@@ -93,27 +90,27 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">membership</span><span class="op">(</span>
-  member_id <span class="op">=</span> <span class="cn">NULL</span>,
-  committee_id <span class="op">=</span> <span class="cn">NULL</span>,
-  term_id <span class="op">=</span> <span class="cn">NULL</span>,
-  post <span class="op">=</span> <span class="cn">NULL</span>,
-  n <span class="op">=</span> <span class="fl">10000</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-
-<span class="fu">legco_membership</span><span class="op">(</span>
-  member_id <span class="op">=</span> <span class="cn">NULL</span>,
-  committee_id <span class="op">=</span> <span class="cn">NULL</span>,
-  term_id <span class="op">=</span> <span class="cn">NULL</span>,
-  post <span class="op">=</span> <span class="cn">NULL</span>,
-  n <span class="op">=</span> <span class="fl">10000</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">membership</span><span class="op">(</span></span>
+<span>  member_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  committee_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  term_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  post <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">10000</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">legco_membership</span><span class="op">(</span></span>
+<span>  member_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  committee_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  term_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  post <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">10000</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -121,29 +118,44 @@
     <dl><dt>member_id</dt>
 <dd><p>the id of a LegCo member, or a vector of ids. If
 <code>NULL</code>, returns results of all LegCo members. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>committee_id</dt>
 <dd><p>the id of a committee, or a vector of ids. If
 <code>NULL</code>, returns results of all committees. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>term_id</dt>
 <dd><p>the id of a term, or a vector of ids. If <code>NULL</code>, returns
 results of all terms. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>post</dt>
 <dd><p>the post of a member in the committee, or a vector of posts.
 <code>"President"</code>, <code>"Chairman"</code>, <code>"Deputy Chairman"</code>,
 <code>"Member"</code> and <code>"Convenor"</code> return members of the respective
 post. If <code>NULL</code>, returns members of all posts. Defaults to
 <code>NULL</code>.</p></dd>
+
+
 <dt>n</dt>
 <dd><p>the number of record to fetch. Defaults to <code>1000</code>.</p></dd>
+
+
 <dt>extra_param</dt>
 <dd><p>additional query parameters defined in LegCo API. Must
 begin with <code>"&amp;"</code>.</p></dd>
+
+
 <dt>count</dt>
 <dd><p>logical: Whether to return only the total count of records that
 matches the parameter(s) instead of the result. Defaults to <code>FALSE</code>.</p></dd>
+
+
 <dt>verbose</dt>
 <dd><p>logical: Whether to display progress messages when fetching
 data? Defaults to <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -173,13 +185,13 @@ Meeting Schedule Database.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="co"># Fetch members of the Subcommittee on Issues Relating to Bazaars</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">membership</span><span class="op">(</span>committee_id <span class="op">=</span> <span class="fl">2704</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Fetch members of the Subcommittee on Issues Relating to Bazaars</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">membership</span><span class="op">(</span>committee_id <span class="op">=</span> <span class="fl">2704</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> The request did not return any data: Invalid search parameters or rate limit exceeded.</span>
-<span class="r-in"><span class="co"># }</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -194,8 +206,7 @@ Meeting Schedule Database.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

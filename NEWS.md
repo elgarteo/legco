@@ -1,3 +1,9 @@
+# legco 0.1.5
+
+## Bug Fixes
+* Fixed missing columns due to API changes in `voting_record()`
+* Updated LegCo API documentation URLs
+
 # legco 0.1.4
 
 ## Changes

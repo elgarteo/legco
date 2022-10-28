@@ -39,7 +39,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -55,7 +55,7 @@
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -84,9 +84,6 @@
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
-</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -110,7 +107,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Meeting Attendance Database</h1>
             
-            <h4 data-toc-skip class="date">2022-01-27</h4>
+            <h4 data-toc-skip class="date">2022-10-28</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/HEAD/vignettes/attn.Rmd" class="external-link"><code>vignettes/attn.Rmd</code></a></small>
       <div class="hidden name"><code>attn.Rmd</code></div>
@@ -151,9 +148,9 @@ count of the records matching the specified parameters instead of
 returning the data frame containing the result. To activate this option,
 specify <code>count = TRUE</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Fetch the total number of members absent from the Council meeting on May 22, 2019</span>
-<span class="fu"><a href="../reference/attendance.html">attendance</a></span><span class="op">(</span>meet_id <span class="op">=</span> <span class="fl">136897</span>, from <span class="op">=</span> <span class="st">"2019-05-22"</span>, to <span class="op">=</span> <span class="st">"2019-05-22"</span>, attn <span class="op">=</span> <span class="st">"a"</span>, count <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## [1] "2"</span></code></pre>
+<code class="sourceCode R"><span><span class="co"># Fetch the total number of members absent from the Council meeting on May 22, 2019</span></span>
+<span><span class="fu"><a href="../reference/attendance.html">attendance</a></span><span class="op">(</span>meet_id <span class="op">=</span> <span class="fl">136897</span>, from <span class="op">=</span> <span class="st">"2019-05-22"</span>, to <span class="op">=</span> <span class="st">"2019-05-22"</span>, attn <span class="op">=</span> <span class="st">"a"</span>, count <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] "2"</span></span></code></pre>
 <hr>
 <p>This database is accessible with the following function:</p>
 </div>
@@ -165,51 +162,51 @@ specify <code>count = TRUE</code>:</p>
 more LegCo meeting(s), or the attendance record of one of more LegCo
 member(s), or both.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017</span>
-<span class="fu"><a href="../reference/attendance.html">attendance</a></span><span class="op">(</span>committee_id <span class="op">=</span> <span class="fl">2704</span>, from <span class="op">=</span> <span class="st">"2017-10-13"</span>, to <span class="op">=</span> <span class="st">"2017-10-13"</span>, attn <span class="op">=</span> <span class="st">"a"</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">##   CommitteeID MeetID                                    MeetingNameEnglish</span>
-<span class="co">## 1        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span>
-<span class="co">## 2        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span>
-<span class="co">## 3        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span>
-<span class="co">## 4        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span>
-<span class="co">## 5        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span>
-<span class="co">##       MeetingNameChinese MeetingStartDateTime MemberID      MemberNameEnglish</span>
-<span class="co">## 1 墟市事宜小組委員會會議  2017-10-13 08:30:00      750 Hon Steven HO Chun-yin</span>
-<span class="co">## 2 墟市事宜小組委員會會議  2017-10-13 08:30:00      759      Hon Kenneth LEUNG</span>
-<span class="co">## 3 墟市事宜小組委員會會議  2017-10-13 08:30:00      776       Hon CHU Hoi-dick</span>
-<span class="co">## 4 墟市事宜小組委員會會議  2017-10-13 08:30:00      779        Hon HO Kai-ming</span>
-<span class="co">## 5 墟市事宜小組委員會會議  2017-10-13 08:30:00      791     Hon LUK Chung-hung</span>
-<span class="co">##   MemberNameChinese PresentAbsent</span>
-<span class="co">## 1        何俊賢議員        Absent</span>
-<span class="co">## 2        梁繼昌議員        Absent</span>
-<span class="co">## 3        朱凱廸議員        Absent</span>
-<span class="co">## 4        何啟明議員        Absent</span>
-<span class="co">## 5        陸頌雄議員        Absent</span></code></pre>
+<code class="sourceCode R"><span><span class="co"># Fetch members who were absent from the Subcommittee on Issues Relating to Bazaars meetings on October 13, 2017</span></span>
+<span><span class="fu"><a href="../reference/attendance.html">attendance</a></span><span class="op">(</span>committee_id <span class="op">=</span> <span class="fl">2704</span>, from <span class="op">=</span> <span class="st">"2017-10-13"</span>, to <span class="op">=</span> <span class="st">"2017-10-13"</span>, attn <span class="op">=</span> <span class="st">"a"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##   CommitteeID MeetID                                    MeetingNameEnglish</span></span>
+<span><span class="co">## 1        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span></span>
+<span><span class="co">## 2        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span></span>
+<span><span class="co">## 3        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span></span>
+<span><span class="co">## 4        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span></span>
+<span><span class="co">## 5        2704 127931 Meeting of Subcommittee on Issues Relating to Bazaars</span></span>
+<span><span class="co">##       MeetingNameChinese MeetingStartDateTime MemberID      MemberNameEnglish</span></span>
+<span><span class="co">## 1 墟市事宜小組委員會會議  2017-10-13 08:30:00      750 Hon Steven HO Chun-yin</span></span>
+<span><span class="co">## 2 墟市事宜小組委員會會議  2017-10-13 08:30:00      759      Hon Kenneth LEUNG</span></span>
+<span><span class="co">## 3 墟市事宜小組委員會會議  2017-10-13 08:30:00      776       Hon CHU Hoi-dick</span></span>
+<span><span class="co">## 4 墟市事宜小組委員會會議  2017-10-13 08:30:00      779        Hon HO Kai-ming</span></span>
+<span><span class="co">## 5 墟市事宜小組委員會會議  2017-10-13 08:30:00      791     Hon LUK Chung-hung</span></span>
+<span><span class="co">##   MemberNameChinese PresentAbsent</span></span>
+<span><span class="co">## 1        何俊賢議員        Absent</span></span>
+<span><span class="co">## 2        梁繼昌議員        Absent</span></span>
+<span><span class="co">## 3        朱凱廸議員        Absent</span></span>
+<span><span class="co">## 4        何啟明議員        Absent</span></span>
+<span><span class="co">## 5        陸頌雄議員        Absent</span></span></code></pre>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Fetch the meetings that Hon Chu Hoi-dick was absent from</span>
-<span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/attendance.html">attendance</a></span><span class="op">(</span>member_id <span class="op">=</span> <span class="fl">776</span>, attn <span class="op">=</span> <span class="st">"a"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">##   CommitteeID MeetID              MeetingNameEnglish MeetingNameChinese</span>
-<span class="co">## 1        2548 120628 Regular House Committee Meeting     內務委員會例會</span>
-<span class="co">## 2        2548 120629      Meeting of House Committee     內務委員會會議</span>
-<span class="co">## 3        2548 120630      Meeting of House Committee     內務委員會會議</span>
-<span class="co">## 4        2548 120631      Meeting of House Committee     內務委員會會議</span>
-<span class="co">## 5        2548 120632      Meeting of House Committee     內務委員會會議</span>
-<span class="co">## 6        2548 120639      Meeting of House Committee     內務委員會會議</span>
-<span class="co">##   MeetingStartDateTime MemberID MemberNameEnglish MemberNameChinese</span>
-<span class="co">## 1  2017-01-06 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span>
-<span class="co">## 2  2017-01-13 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span>
-<span class="co">## 3  2017-01-20 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span>
-<span class="co">## 4  2017-02-03 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span>
-<span class="co">## 5  2017-02-10 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span>
-<span class="co">## 6  2017-05-12 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span>
-<span class="co">##   PresentAbsent</span>
-<span class="co">## 1        Absent</span>
-<span class="co">## 2        Absent</span>
-<span class="co">## 3        Absent</span>
-<span class="co">## 4        Absent</span>
-<span class="co">## 5        Absent</span>
-<span class="co">## 6        Absent</span></code></pre>
+<code class="sourceCode R"><span><span class="co"># Fetch the meetings that Hon Chu Hoi-dick was absent from</span></span>
+<span><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/attendance.html">attendance</a></span><span class="op">(</span>member_id <span class="op">=</span> <span class="fl">776</span>, attn <span class="op">=</span> <span class="st">"a"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">v</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##   CommitteeID MeetID              MeetingNameEnglish MeetingNameChinese</span></span>
+<span><span class="co">## 1        2548 120628 Regular House Committee Meeting     內務委員會例會</span></span>
+<span><span class="co">## 2        2548 120629      Meeting of House Committee     內務委員會會議</span></span>
+<span><span class="co">## 3        2548 120630      Meeting of House Committee     內務委員會會議</span></span>
+<span><span class="co">## 4        2548 120631      Meeting of House Committee     內務委員會會議</span></span>
+<span><span class="co">## 5        2548 120632      Meeting of House Committee     內務委員會會議</span></span>
+<span><span class="co">## 6        2548 120639      Meeting of House Committee     內務委員會會議</span></span>
+<span><span class="co">##   MeetingStartDateTime MemberID MemberNameEnglish MemberNameChinese</span></span>
+<span><span class="co">## 1  2017-01-06 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span></span>
+<span><span class="co">## 2  2017-01-13 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span></span>
+<span><span class="co">## 3  2017-01-20 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span></span>
+<span><span class="co">## 4  2017-02-03 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span></span>
+<span><span class="co">## 5  2017-02-10 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span></span>
+<span><span class="co">## 6  2017-05-12 14:30:00      776  Hon CHU Hoi-dick        朱凱廸議員</span></span>
+<span><span class="co">##   PresentAbsent</span></span>
+<span><span class="co">## 1        Absent</span></span>
+<span><span class="co">## 2        Absent</span></span>
+<span><span class="co">## 3        Absent</span></span>
+<span><span class="co">## 4        Absent</span></span>
+<span><span class="co">## 5        Absent</span></span>
+<span><span class="co">## 6        Absent</span></span></code></pre>
 </div>
   </div>
 
@@ -230,8 +227,7 @@ member(s), or both.</p>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>

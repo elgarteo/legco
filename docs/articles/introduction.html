@@ -39,7 +39,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -55,7 +55,7 @@
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -84,9 +84,6 @@
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
-</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -110,7 +107,7 @@
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Introduction to legco</h1>
             
-            <h4 data-toc-skip class="date">2022-01-27</h4>
+            <h4 data-toc-skip class="date">2022-10-28</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/elgarteo/legco/blob/HEAD/vignettes/introduction.Rmd" class="external-link"><code>vignettes/introduction.Rmd</code></a></small>
       <div class="hidden name"><code>introduction.Rmd</code></div>
@@ -129,11 +126,11 @@ in a dataframe.</p>
 <h2 id="installing-legco">Installing legco<a class="anchor" aria-label="anchor" href="#installing-legco"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"elgarteo/legco"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"elgarteo/legco"</span><span class="op">)</span></span></code></pre></div>
 <p>And to load it before every use:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/elgarteo/legco" class="external-link">legco</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/elgarteo/legco" class="external-link">legco</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="understanding-the-legco-api">Understanding the LegCo API<a class="anchor" aria-label="anchor" href="#understanding-the-legco-api"></a>
@@ -300,7 +297,7 @@ hour. Once the limit is reached, you will not be able to retrieve any
 data for awhile. If you run into the following error message while
 pretty sure you have entered the correct parameters, you have probably
 reached the limit:</p>
-<pre><code><span class="co">## Error: The request did not return any data: Invalid search parameters or rate limit exceeded.</span></code></pre>
+<pre><code><span><span class="co">## Error: The request did not return any data: Invalid search parameters or rate limit exceeded.</span></span></code></pre>
 </div>
 <div class="section level3">
 <h3 id="node-count-limit">Node Count Limit<a class="anchor" aria-label="anchor" href="#node-count-limit"></a>
@@ -310,16 +307,16 @@ setting of the LegCo API server. The limit is at most 100 nodes per
 request, or approximately 20 filtering conditions in most cases. For
 instance, the following code contains 21 filtering conditions and thus
 reach the node count limit:</p>
-<pre><code><span class="co">## Error: Parameters too long. Please shorten your parameters and break down into multiple requests.</span></code></pre>
+<pre><code><span><span class="co">## Error: Parameters too long. Please shorten your parameters and break down into multiple requests.</span></span></code></pre>
 <p>If you run into the error message above, you need to break it down to
 multiple smaller requests, like <a href="#examples">one of the examples
 below</a>.</p>
 <p>Note that numeric filtering conditions that are sequential are not
 subjected to this limit:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># A request with sequential numeric filtering conditions</span>
-<span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">50</span><span class="op">)</span>
-<span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="va">x</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># A request with sequential numeric filtering conditions</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">50</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="va">x</span><span class="op">)</span></span></code></pre></div>
 <p>The code above will execute just fine without reaching the node count
 limit even though it effectively contains 50 filtering conditions.</p>
 </div>
@@ -331,9 +328,9 @@ error from time to time, especially during repeated requests. This can
 usually be resolved simply by retrying. This package automatically
 retries the request once when an SSL error occurs with the following
 messages:</p>
-<pre><code><span class="co">## Encountered Error in open.connection(con, "rb"): LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to app.legco.gov.hk:443</span></code></pre>
-<pre><code><span class="co">## Possible common connection problem resolvable by retrying.</span></code></pre>
-<pre><code><span class="co">## Retrying...</span></code></pre>
+<pre><code><span><span class="co">## Encountered Error in open.connection(con, "rb"): LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to app.legco.gov.hk:443</span></span></code></pre>
+<pre><code><span><span class="co">## Possible common connection problem resolvable by retrying.</span></span></code></pre>
+<pre><code><span><span class="co">## Retrying...</span></span></code></pre>
 <p>If the same error happens again after retrying, the process will be
 terminated with an error message. In this case, the cause of the problem
 is likely to be a genuine SSL error.</p>
@@ -355,156 +352,156 @@ be invalid search parameters or that you have exceeded the rate limit
 <p>The following code shows all the Council meetings held from May 1,
 2018 to May 31, 2018.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/hansard.html">hansard</a></span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2018-05-01"</span>, to <span class="op">=</span> <span class="st">"2018-05-31"</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">##    HansardID         MeetingDate          AgendaDate isCEQandA isCEQT</span>
-<span class="co">## 1       2407 2018-05-02 00:00:00 2018-05-02 00:00:00         0      0</span>
-<span class="co">## 2       2526 2018-05-03 00:00:00 2018-05-02 00:00:00         0      0</span>
-<span class="co">## 3       2405 2018-05-03 00:00:00 2018-05-03 00:00:00         1      0</span>
-<span class="co">## 4       2418 2018-05-09 00:00:00 2018-05-09 00:00:00         0      0</span>
-<span class="co">## 5       2419 2018-05-10 00:00:00 2018-05-09 00:00:00         0      0</span>
-<span class="co">## 6       2425 2018-05-16 00:00:00 2018-05-16 00:00:00         0      0</span>
-<span class="co">## 7       2434 2018-05-17 00:00:00 2018-05-16 00:00:00         0      0</span>
-<span class="co">## 8       2443 2018-05-23 00:00:00 2018-05-23 00:00:00         0      1</span>
-<span class="co">## 9       2451 2018-05-23 00:00:00 2018-05-23 00:00:00         0      0</span>
-<span class="co">## 10      2450 2018-05-24 00:00:00 2018-05-23 00:00:00         0      0</span>
-<span class="co">## 11      2541 2018-05-30 00:00:00 2018-05-30 00:00:00         0      0</span>
-<span class="co">## 12      2462 2018-05-31 00:00:00 2018-05-30 00:00:00         0      0</span>
-<span class="co">##                                                                          HansardFileURL</span>
-<span class="co">## 1   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180502-translate-e.pdf</span>
-<span class="co">## 2   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180503-translate-e.pdf</span>
-<span class="co">## 3  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180503a-translate-e.pdf</span>
-<span class="co">## 4   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180509-translate-e.pdf</span>
-<span class="co">## 5   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180510-translate-e.pdf</span>
-<span class="co">## 6   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180516-translate-e.pdf</span>
-<span class="co">## 7   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180517-translate-e.pdf</span>
-<span class="co">## 8  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523q-translate-e.pdf</span>
-<span class="co">## 9   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf</span>
-<span class="co">## 10  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180524-translate-e.pdf</span>
-<span class="co">## 11  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180530-translate-e.pdf</span>
-<span class="co">## 12  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180531-translate-e.pdf</span></code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/hansard.html">hansard</a></span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2018-05-01"</span>, to <span class="op">=</span> <span class="st">"2018-05-31"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##    HansardID         MeetingDate          AgendaDate isCEQandA isCEQT</span></span>
+<span><span class="co">## 1       2407 2018-05-02 00:00:00 2018-05-02 00:00:00         0      0</span></span>
+<span><span class="co">## 2       2526 2018-05-03 00:00:00 2018-05-02 00:00:00         0      0</span></span>
+<span><span class="co">## 3       2405 2018-05-03 00:00:00 2018-05-03 00:00:00         1      0</span></span>
+<span><span class="co">## 4       2418 2018-05-09 00:00:00 2018-05-09 00:00:00         0      0</span></span>
+<span><span class="co">## 5       2419 2018-05-10 00:00:00 2018-05-09 00:00:00         0      0</span></span>
+<span><span class="co">## 6       2425 2018-05-16 00:00:00 2018-05-16 00:00:00         0      0</span></span>
+<span><span class="co">## 7       2434 2018-05-17 00:00:00 2018-05-16 00:00:00         0      0</span></span>
+<span><span class="co">## 8       2443 2018-05-23 00:00:00 2018-05-23 00:00:00         0      1</span></span>
+<span><span class="co">## 9       2451 2018-05-23 00:00:00 2018-05-23 00:00:00         0      0</span></span>
+<span><span class="co">## 10      2450 2018-05-24 00:00:00 2018-05-23 00:00:00         0      0</span></span>
+<span><span class="co">## 11      2541 2018-05-30 00:00:00 2018-05-30 00:00:00         0      0</span></span>
+<span><span class="co">## 12      2462 2018-05-31 00:00:00 2018-05-30 00:00:00         0      0</span></span>
+<span><span class="co">##                                                                          HansardFileURL</span></span>
+<span><span class="co">## 1   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180502-translate-e.pdf</span></span>
+<span><span class="co">## 2   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180503-translate-e.pdf</span></span>
+<span><span class="co">## 3  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180503a-translate-e.pdf</span></span>
+<span><span class="co">## 4   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180509-translate-e.pdf</span></span>
+<span><span class="co">## 5   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180510-translate-e.pdf</span></span>
+<span><span class="co">## 6   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180516-translate-e.pdf</span></span>
+<span><span class="co">## 7   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180517-translate-e.pdf</span></span>
+<span><span class="co">## 8  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523q-translate-e.pdf</span></span>
+<span><span class="co">## 9   https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf</span></span>
+<span><span class="co">## 10  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180524-translate-e.pdf</span></span>
+<span><span class="co">## 11  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180530-translate-e.pdf</span></span>
+<span><span class="co">## 12  https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180531-translate-e.pdf</span></span></code></pre>
 <p>To fetch the items on the agenda of the meeting on May 23, 2018:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/subjects.html">subjects</a></span><span class="op">(</span>hansard_id <span class="op">=</span> <span class="fl">2451</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">##            MeetingDate</span>
-<span class="co">## 1  2018-05-23 00:00:00</span>
-<span class="co">## 2  2018-05-23 00:00:00</span>
-<span class="co">## 3  2018-05-23 00:00:00</span>
-<span class="co">## 4  2018-05-23 00:00:00</span>
-<span class="co">## 5  2018-05-23 00:00:00</span>
-<span class="co">## 6  2018-05-23 00:00:00</span>
-<span class="co">## 7  2018-05-23 00:00:00</span>
-<span class="co">## 8  2018-05-23 00:00:00</span>
-<span class="co">## 9  2018-05-23 00:00:00</span>
-<span class="co">## 10 2018-05-23 00:00:00</span>
-<span class="co">## 11 2018-05-23 00:00:00</span>
-<span class="co">## 12 2018-05-23 00:00:00</span>
-<span class="co">## 13 2018-05-23 00:00:00</span>
-<span class="co">## 14 2018-05-23 00:00:00</span>
-<span class="co">## 15 2018-05-23 00:00:00</span>
-<span class="co">## 16 2018-05-23 00:00:00</span>
-<span class="co">## 17 2018-05-23 00:00:00</span>
-<span class="co">## 18 2018-05-23 00:00:00</span>
-<span class="co">## 19 2018-05-23 00:00:00</span>
-<span class="co">## 20 2018-05-23 00:00:00</span>
-<span class="co">## 21 2018-05-23 00:00:00</span>
-<span class="co">## 22 2018-05-23 00:00:00</span>
-<span class="co">## 23 2018-05-23 00:00:00</span>
-<span class="co">## 24 2018-05-23 00:00:00</span>
-<span class="co">## 25 2018-05-23 00:00:00</span>
-<span class="co">## 26 2018-05-23 00:00:00</span>
-<span class="co">## 27 2018-05-23 00:00:00</span>
-<span class="co">## 28 2018-05-23 00:00:00</span>
-<span class="co">## 29 2018-05-23 00:00:00</span>
-<span class="co">## 30 2018-05-23 00:00:00</span>
-<span class="co">## 31 2018-05-23 00:00:00</span>
-<span class="co">## 32 2018-05-23 00:00:00</span>
-<span class="co">## 33 2018-05-23 00:00:00</span>
-<span class="co">## 34 2018-05-23 00:00:00</span>
-<span class="co">## 35 2018-05-23 00:00:00</span>
-<span class="co">## 36 2018-05-23 00:00:00</span>
-<span class="co">##                                                                                        Subject</span>
-<span class="co">## 1                                                                            MEETING COMMENCED</span>
-<span class="co">## 2                                                                    ORAL ANSWERS TO QUESTIONS</span>
-<span class="co">## 3                        Collection of handling charges from persons purchasing tickets online</span>
-<span class="co">## 4                                   Measures to improve the reception of visitors to Hong Kong</span>
-<span class="co">## 5                       Foreign domestic helpers congregating in public places during holidays</span>
-<span class="co">## 6                            Pressure on road traffic brought about by cross-boundary vehicles</span>
-<span class="co">## 7                       Assisting local residents in acquiring properties by levying new taxes</span>
-<span class="co">## 8                                                    Maternity protection for female employees</span>
-<span class="co">## 9                                                                 WRITTEN ANSWERS TO QUESTIONS</span>
-<span class="co">## 10                       Lack of berthing spaces at typhoon shelters for small fishing vessels</span>
-<span class="co">## 11                                                                Sponsored Visitors Programme</span>
-<span class="co">## 12       A large number of Mainland tourists staying overnight in local camp sites and beaches</span>
-<span class="co">## 13                  Combating traffic contraventions in New Territories North and Kowloon East</span>
-<span class="co">## 14                                  Helping ethnic minority women integrate into the community</span>
-<span class="co">## 15                                 Employment of academic staff by post-secondary institutions</span>
-<span class="co">## 16                                   Assessments to rates for properties on agricultural lands</span>
-<span class="co">## 17                                         Child health assessment and rehabilitation services</span>
-<span class="co">## 18                                            Measures to boost the supply of industrial lands</span>
-<span class="co">## 19               Development of high-tier data centres and cross-boundary transmission of data</span>
-<span class="co">## 20                                 Bogus marriage-related offences involving human trafficking</span>
-<span class="co">## 21  Provision of community support services for residents of new public rental housing estates</span>
-<span class="co">## 22                                                          Support for single-parent families</span>
-<span class="co">## 23                                                                       Trading of shark fins</span>
-<span class="co">## 24                                                               Management of water resources</span>
-<span class="co">## 25                                              Supply of first-hand private residential units</span>
-<span class="co">## 26                                                                             GOVERNMENT BILL</span>
-<span class="co">## 27                                                            FIRST READING OF GOVERNMENT BILL</span>
-<span class="co">## 28                                                Inland Revenue (Amendment) (No. 4) Bill 2018</span>
-<span class="co">## 29                                                           SECOND READING OF GOVERNMENT BILL</span>
-<span class="co">## 30                                                Inland Revenue (Amendment) (No. 4) Bill 2018</span>
-<span class="co">## 31                                                                            MEMBERS' MOTIONS</span>
-<span class="co">## 32 Proposed resolution under section 34(4) of the Interpretation and General Clauses Ordinance</span>
-<span class="co">## 33                                         Motion under Rule 49B(1A) of the Rules of Procedure</span>
-<span class="co">## 34                                   Report of the Joint Subcommittee on Long-term Care Policy</span>
-<span class="co">## 35                                                          Not forgetting the 4 June incident</span>
-<span class="co">## 36                                                                       SUSPENSION OF MEETING</span>
-<span class="co">##    ResumptionOf SectionCode RundownID HansardID</span>
-<span class="co">## 1            NA         mtc    828481      2451</span>
-<span class="co">## 2            NA         orq    828485      2451</span>
-<span class="co">## 3            NA         orq    828487      2451</span>
-<span class="co">## 4            NA         orq    828511      2451</span>
-<span class="co">## 5            NA         orq    828541      2451</span>
-<span class="co">## 6            NA         orq    828581      2451</span>
-<span class="co">## 7            NA         orq    828603      2451</span>
-<span class="co">## 8            NA         orq    828643      2451</span>
-<span class="co">## 9            NA         wrq    828673      2451</span>
-<span class="co">## 10           NA         wrq    828674      2451</span>
-<span class="co">## 11           NA         wrq    828677      2451</span>
-<span class="co">## 12           NA         wrq    828680      2451</span>
-<span class="co">## 13           NA         wrq    828683      2451</span>
-<span class="co">## 14           NA         wrq    828686      2451</span>
-<span class="co">## 15           NA         wrq    828689      2451</span>
-<span class="co">## 16           NA         wrq    828692      2451</span>
-<span class="co">## 17           NA         wrq    828695      2451</span>
-<span class="co">## 18           NA         wrq    828698      2451</span>
-<span class="co">## 19           NA         wrq    828701      2451</span>
-<span class="co">## 20           NA         wrq    828704      2451</span>
-<span class="co">## 21           NA         wrq    828707      2451</span>
-<span class="co">## 22           NA         wrq    828710      2451</span>
-<span class="co">## 23           NA         wrq    828713      2451</span>
-<span class="co">## 24           NA         wrq    828716      2451</span>
-<span class="co">## 25           NA         wrq    828719      2451</span>
-<span class="co">## 26           NA         bil    828722      2451</span>
-<span class="co">## 27           NA         b1r    828723      2451</span>
-<span class="co">## 28           NA         b1r    828725      2451</span>
-<span class="co">## 29           NA         b2r    828727      2451</span>
-<span class="co">## 30           NA         b2r    828729      2451</span>
-<span class="co">## 31           NA         mbm    828732      2451</span>
-<span class="co">## 32           NA         mbm    828734      2451</span>
-<span class="co">## 33           NA         mbm    828743      2451</span>
-<span class="co">## 34           NA         mbm    828747      2451</span>
-<span class="co">## 35           NA         mbm    828783      2451</span>
-<span class="co">## 36           NA         som    828827      2451</span></code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/subjects.html">subjects</a></span><span class="op">(</span>hansard_id <span class="op">=</span> <span class="fl">2451</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##            MeetingDate</span></span>
+<span><span class="co">## 1  2018-05-23 00:00:00</span></span>
+<span><span class="co">## 2  2018-05-23 00:00:00</span></span>
+<span><span class="co">## 3  2018-05-23 00:00:00</span></span>
+<span><span class="co">## 4  2018-05-23 00:00:00</span></span>
+<span><span class="co">## 5  2018-05-23 00:00:00</span></span>
+<span><span class="co">## 6  2018-05-23 00:00:00</span></span>
+<span><span class="co">## 7  2018-05-23 00:00:00</span></span>
+<span><span class="co">## 8  2018-05-23 00:00:00</span></span>
+<span><span class="co">## 9  2018-05-23 00:00:00</span></span>
+<span><span class="co">## 10 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 11 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 12 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 13 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 14 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 15 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 16 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 17 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 18 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 19 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 20 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 21 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 22 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 23 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 24 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 25 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 26 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 27 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 28 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 29 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 30 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 31 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 32 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 33 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 34 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 35 2018-05-23 00:00:00</span></span>
+<span><span class="co">## 36 2018-05-23 00:00:00</span></span>
+<span><span class="co">##                                                                                        Subject</span></span>
+<span><span class="co">## 1                                                                            MEETING COMMENCED</span></span>
+<span><span class="co">## 2                                                                    ORAL ANSWERS TO QUESTIONS</span></span>
+<span><span class="co">## 3                        Collection of handling charges from persons purchasing tickets online</span></span>
+<span><span class="co">## 4                                   Measures to improve the reception of visitors to Hong Kong</span></span>
+<span><span class="co">## 5                       Foreign domestic helpers congregating in public places during holidays</span></span>
+<span><span class="co">## 6                            Pressure on road traffic brought about by cross-boundary vehicles</span></span>
+<span><span class="co">## 7                       Assisting local residents in acquiring properties by levying new taxes</span></span>
+<span><span class="co">## 8                                                    Maternity protection for female employees</span></span>
+<span><span class="co">## 9                                                                 WRITTEN ANSWERS TO QUESTIONS</span></span>
+<span><span class="co">## 10                       Lack of berthing spaces at typhoon shelters for small fishing vessels</span></span>
+<span><span class="co">## 11                                                                Sponsored Visitors Programme</span></span>
+<span><span class="co">## 12       A large number of Mainland tourists staying overnight in local camp sites and beaches</span></span>
+<span><span class="co">## 13                  Combating traffic contraventions in New Territories North and Kowloon East</span></span>
+<span><span class="co">## 14                                  Helping ethnic minority women integrate into the community</span></span>
+<span><span class="co">## 15                                 Employment of academic staff by post-secondary institutions</span></span>
+<span><span class="co">## 16                                   Assessments to rates for properties on agricultural lands</span></span>
+<span><span class="co">## 17                                         Child health assessment and rehabilitation services</span></span>
+<span><span class="co">## 18                                            Measures to boost the supply of industrial lands</span></span>
+<span><span class="co">## 19               Development of high-tier data centres and cross-boundary transmission of data</span></span>
+<span><span class="co">## 20                                 Bogus marriage-related offences involving human trafficking</span></span>
+<span><span class="co">## 21  Provision of community support services for residents of new public rental housing estates</span></span>
+<span><span class="co">## 22                                                          Support for single-parent families</span></span>
+<span><span class="co">## 23                                                                       Trading of shark fins</span></span>
+<span><span class="co">## 24                                                               Management of water resources</span></span>
+<span><span class="co">## 25                                              Supply of first-hand private residential units</span></span>
+<span><span class="co">## 26                                                                             GOVERNMENT BILL</span></span>
+<span><span class="co">## 27                                                            FIRST READING OF GOVERNMENT BILL</span></span>
+<span><span class="co">## 28                                                Inland Revenue (Amendment) (No. 4) Bill 2018</span></span>
+<span><span class="co">## 29                                                           SECOND READING OF GOVERNMENT BILL</span></span>
+<span><span class="co">## 30                                                Inland Revenue (Amendment) (No. 4) Bill 2018</span></span>
+<span><span class="co">## 31                                                                            MEMBERS' MOTIONS</span></span>
+<span><span class="co">## 32 Proposed resolution under section 34(4) of the Interpretation and General Clauses Ordinance</span></span>
+<span><span class="co">## 33                                         Motion under Rule 49B(1A) of the Rules of Procedure</span></span>
+<span><span class="co">## 34                                   Report of the Joint Subcommittee on Long-term Care Policy</span></span>
+<span><span class="co">## 35                                                          Not forgetting the 4 June incident</span></span>
+<span><span class="co">## 36                                                                       SUSPENSION OF MEETING</span></span>
+<span><span class="co">##    ResumptionOf SectionCode RundownID HansardID</span></span>
+<span><span class="co">## 1            NA         mtc    828481      2451</span></span>
+<span><span class="co">## 2            NA         orq    828485      2451</span></span>
+<span><span class="co">## 3            NA         orq    828487      2451</span></span>
+<span><span class="co">## 4            NA         orq    828511      2451</span></span>
+<span><span class="co">## 5            NA         orq    828541      2451</span></span>
+<span><span class="co">## 6            NA         orq    828581      2451</span></span>
+<span><span class="co">## 7            NA         orq    828603      2451</span></span>
+<span><span class="co">## 8            NA         orq    828643      2451</span></span>
+<span><span class="co">## 9            NA         wrq    828673      2451</span></span>
+<span><span class="co">## 10           NA         wrq    828674      2451</span></span>
+<span><span class="co">## 11           NA         wrq    828677      2451</span></span>
+<span><span class="co">## 12           NA         wrq    828680      2451</span></span>
+<span><span class="co">## 13           NA         wrq    828683      2451</span></span>
+<span><span class="co">## 14           NA         wrq    828686      2451</span></span>
+<span><span class="co">## 15           NA         wrq    828689      2451</span></span>
+<span><span class="co">## 16           NA         wrq    828692      2451</span></span>
+<span><span class="co">## 17           NA         wrq    828695      2451</span></span>
+<span><span class="co">## 18           NA         wrq    828698      2451</span></span>
+<span><span class="co">## 19           NA         wrq    828701      2451</span></span>
+<span><span class="co">## 20           NA         wrq    828704      2451</span></span>
+<span><span class="co">## 21           NA         wrq    828707      2451</span></span>
+<span><span class="co">## 22           NA         wrq    828710      2451</span></span>
+<span><span class="co">## 23           NA         wrq    828713      2451</span></span>
+<span><span class="co">## 24           NA         wrq    828716      2451</span></span>
+<span><span class="co">## 25           NA         wrq    828719      2451</span></span>
+<span><span class="co">## 26           NA         bil    828722      2451</span></span>
+<span><span class="co">## 27           NA         b1r    828723      2451</span></span>
+<span><span class="co">## 28           NA         b1r    828725      2451</span></span>
+<span><span class="co">## 29           NA         b2r    828727      2451</span></span>
+<span><span class="co">## 30           NA         b2r    828729      2451</span></span>
+<span><span class="co">## 31           NA         mbm    828732      2451</span></span>
+<span><span class="co">## 32           NA         mbm    828734      2451</span></span>
+<span><span class="co">## 33           NA         mbm    828743      2451</span></span>
+<span><span class="co">## 34           NA         mbm    828747      2451</span></span>
+<span><span class="co">## 35           NA         mbm    828783      2451</span></span>
+<span><span class="co">## 36           NA         som    828827      2451</span></span></code></pre>
 <p>In this example, we will look into the motion <em>Not forgetting the
 4 June incident</em>.</p>
 <p>The section codes indicate the type of the business. For example, the
 section code “mbm” of the <em>Not forgetting the 4 June incident</em>
 means that it is a member’s motion:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">legco_section_type</span><span class="op">[</span><span class="va">legco_section_type</span><span class="op">$</span><span class="va">SectionCode</span> <span class="op">==</span> <span class="st">"mbm"</span>, <span class="op">]</span></code></pre></div>
-<pre><code><span class="co">##    SectionCode          NameEng  NameChi</span>
-<span class="co">## 44         mbm Members' motions 議員議案</span></code></pre>
+<code class="sourceCode R"><span><span class="va">legco_section_type</span><span class="op">[</span><span class="va">legco_section_type</span><span class="op">$</span><span class="va">SectionCode</span> <span class="op">==</span> <span class="st">"mbm"</span>, <span class="op">]</span></span></code></pre></div>
+<pre><code><span><span class="co">##    SectionCode          NameEng  NameChi</span></span>
+<span><span class="co">## 44         mbm Members' motions 議員議案</span></span></code></pre>
 <p>The RundownID indicates the location of the first paragraph of the
 matter concerned in the hansard file. In other words, paragraphs of
 RundownID between 828783 and 828826 (one RundownID prior to the next
@@ -512,193 +509,193 @@ item on the agenda) are the records of the matter the <em>Not forgetting
 the 4 June incident</em> during the meeting. The full text of these
 paragraphs can be fetched by:</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">w</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rundown.html">rundown</a></span><span class="op">(</span>rundown_id <span class="op">=</span> <span class="fl">828783</span><span class="op">:</span><span class="fl">828826</span><span class="op">)</span>
-<span class="co"># Order by RundownID, i.e. chronological order</span>
-<span class="va">w</span> <span class="op">&lt;-</span> <span class="va">w</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">w</span><span class="op">$</span><span class="va">RundownID</span><span class="op">)</span>, <span class="op">]</span>
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">w</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">w</span><span class="op">)</span>
-<span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span>
-<span class="va">w</span><span class="op">$</span><span class="va">Content</span><span class="op">[</span><span class="fl">41</span><span class="op">:</span><span class="fl">42</span><span class="op">]</span></code></pre></div>
-<pre><code><span class="co">## [1] "PRESIDENT (in Cantonese): Will Members please proceed to vote."                                                  </span>
-<span class="co">## [2] "PRESIDENT (in Cantonese): Mr Abraham SHEK, do you wish to cast your vote?(Mr Abraham SHEK did not cast any vote)"</span></code></pre>
+<code class="sourceCode R"><span><span class="va">w</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rundown.html">rundown</a></span><span class="op">(</span>rundown_id <span class="op">=</span> <span class="fl">828783</span><span class="op">:</span><span class="fl">828826</span><span class="op">)</span></span>
+<span><span class="co"># Order by RundownID, i.e. chronological order</span></span>
+<span><span class="va">w</span> <span class="op">&lt;-</span> <span class="va">w</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">w</span><span class="op">$</span><span class="va">RundownID</span><span class="op">)</span>, <span class="op">]</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">w</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">w</span><span class="op">)</span></span>
+<span><span class="co"># Some two paragraphs of the hansard relevant to the discussion of the motion</span></span>
+<span><span class="va">w</span><span class="op">$</span><span class="va">Content</span><span class="op">[</span><span class="fl">41</span><span class="op">:</span><span class="fl">42</span><span class="op">]</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] "PRESIDENT (in Cantonese): Will Members please proceed to vote."                                                  </span></span>
+<span><span class="co">## [2] "PRESIDENT (in Cantonese): Mr Abraham SHEK, do you wish to cast your vote?(Mr Abraham SHEK did not cast any vote)"</span></span></code></pre>
 <p>To check which members have spoken about the motion and to look up
 some of their names:</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">w</span><span class="op">$</span><span class="va">SpeakerID</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">w</span><span class="op">$</span><span class="va">SpeakerID</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>
-<span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="va">x</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## Error: Parameters too long. Please shorten your parameters and break down into multiple requests.</span></code></pre>
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">w</span><span class="op">$</span><span class="va">SpeakerID</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">w</span><span class="op">$</span><span class="va">SpeakerID</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="va">x</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## Error: Parameters too long. Please shorten your parameters and break down into multiple requests.</span></span></code></pre>
 <p>The code above produces 27 filtering conditions which exceed the node
 count limit. If you need have parameters longer than that, break them
 down into multiple requests:</p>
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">y1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="va">x</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">19</span><span class="op">]</span><span class="op">)</span>
-<span class="va">y2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="va">x</span><span class="op">[</span><span class="fl">20</span><span class="op">:</span><span class="fl">27</span><span class="op">]</span><span class="op">)</span>
-<span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">y1</span>, <span class="va">y2</span><span class="op">)</span>
-<span class="co"># Show members who have spoken about this motion</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">y</span><span class="op">[</span><span class="va">y</span><span class="op">$</span><span class="va">Type</span> <span class="op">==</span> <span class="st">"MB"</span>, <span class="op">]</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">##   SpeakerID NameChi         NameEng Type Initial  FirstName LastName</span>
-<span class="co">## 2       138  林卓廷  LAM CHEUK-TING   MB     LCT Cheuk-ting      LAM</span>
-<span class="co">## 3       148  許智峯    HUI CHI-FUNG   MB     HCF   Chi-fung      HUI</span>
-<span class="co">## 4       115  張超雄 FERNANDO CHEUNG   MB     CCH  Chiu-hung   CHEUNG</span>
-<span class="co">## 5        99  胡志偉      WU CHI-WAI   MB     WCW    Chi-wai       WU</span>
-<span class="co">## 6       141  邵家臻    SHIU KA-CHUN   MB     SKC    Ka-chun     SHIU</span>
-<span class="co">## 7       109  梁繼昌   KENNETH LEUNG   MB      KL Kai-cheong    LEUNG</span></code></pre>
+<code class="sourceCode R"><span><span class="va">y1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="va">x</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">19</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">y2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/speakers.html">speakers</a></span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="va">x</span><span class="op">[</span><span class="fl">20</span><span class="op">:</span><span class="fl">27</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">y1</span>, <span class="va">y2</span><span class="op">)</span></span>
+<span><span class="co"># Show members who have spoken about this motion</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">y</span><span class="op">[</span><span class="va">y</span><span class="op">$</span><span class="va">Type</span> <span class="op">==</span> <span class="st">"MB"</span>, <span class="op">]</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##   SpeakerID NameChi         NameEng Type Initial  FirstName LastName</span></span>
+<span><span class="co">## 2       138  林卓廷  LAM CHEUK-TING   MB     LCT Cheuk-ting      LAM</span></span>
+<span><span class="co">## 3       148  許智峯    HUI CHI-FUNG   MB     HCF   Chi-fung      HUI</span></span>
+<span><span class="co">## 4       115  張超雄 FERNANDO CHEUNG   MB     CCH  Chiu-hung   CHEUNG</span></span>
+<span><span class="co">## 5        99  胡志偉      WU CHI-WAI   MB     WCW    Chi-wai       WU</span></span>
+<span><span class="co">## 6       141  邵家臻    SHIU KA-CHUN   MB     SKC    Ka-chun     SHIU</span></span>
+<span><span class="co">## 7       109  梁繼昌   KENNETH LEUNG   MB      KL Kai-cheong    LEUNG</span></span></code></pre>
 <p>To find out the voting results of the motion:</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/voting_results.html">voting_results</a></span><span class="op">(</span>from <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, to <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, section_code <span class="op">=</span> <span class="st">"mbm"</span><span class="op">)</span>
-<span class="va">v</span><span class="op">[</span><span class="va">v</span><span class="op">$</span><span class="va">Subject</span> <span class="op">==</span> <span class="st">"Not forgetting the 4 June incident"</span>, <span class="op">]</span></code></pre></div>
-<pre><code><span class="co">##           MeetingDate                            Subject VoteResult SectionCode</span>
-<span class="co">## 3 2018-05-23 00:00:00 Not forgetting the 4 June incident  Negatived         mbm</span>
-<span class="co">##   RundownID HansardID</span>
-<span class="co">## 3    828826      2451</span>
-<span class="co">##                                                                                                 HansardFileURL</span>
-<span class="co">## 3 https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00349</span></code></pre>
+<code class="sourceCode R"><span><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/voting_results.html">voting_results</a></span><span class="op">(</span>from <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, to <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, section_code <span class="op">=</span> <span class="st">"mbm"</span><span class="op">)</span></span>
+<span><span class="va">v</span><span class="op">[</span><span class="va">v</span><span class="op">$</span><span class="va">Subject</span> <span class="op">==</span> <span class="st">"Not forgetting the 4 June incident"</span>, <span class="op">]</span></span></code></pre></div>
+<pre><code><span><span class="co">##           MeetingDate                            Subject VoteResult SectionCode</span></span>
+<span><span class="co">## 3 2018-05-23 00:00:00 Not forgetting the 4 June incident  Negatived         mbm</span></span>
+<span><span class="co">##   RundownID HansardID</span></span>
+<span><span class="co">## 3    828826      2451</span></span>
+<span><span class="co">##                                                                                                 HansardFileURL</span></span>
+<span><span class="co">## 3 https://www.legco.gov.hk/yr17-18/english/counmtg/hansard/cm20180523-translate-e.pdf#nameddest=EV_VOTED_00349</span></span></code></pre>
 <p>It is possible to fetch the detailed voting record of each member on
 this motion. To get a list of members who voted yes:</p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/voting_record.html">voting_record</a></span><span class="op">(</span>from <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, to <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span>
-<span class="va">v</span><span class="op">[</span><span class="va">v</span><span class="op">$</span><span class="va">Vote</span> <span class="op">==</span> <span class="st">"Yes"</span>, <span class="fl">32</span><span class="op">:</span><span class="fl">33</span><span class="op">]</span></code></pre></div>
-<pre><code><span class="co">##                NameEn Constituency</span>
-<span class="co">## 2            James TO   Functional</span>
-<span class="co">## 3     LEUNG Yiu-chung   Functional</span>
-<span class="co">## 6     Prof Joseph LEE   Functional</span>
-<span class="co">## 16         Claudia MO Geographical</span>
-<span class="co">## 20         WU Chi-wai Geographical</span>
-<span class="co">## 23  Charles Peter MOK   Functional</span>
-<span class="co">## 24     CHAN Chi-chuen Geographical</span>
-<span class="co">## 27      Kenneth LEUNG   Functional</span>
-<span class="co">## 29      Dr KWOK Ka-ki Geographical</span>
-<span class="co">## 31        Dennis KWOK   Functional</span>
-<span class="co">## 33 Dr Fernando CHEUNG Geographical</span>
-<span class="co">## 34     Dr Helena WONG Geographical</span>
-<span class="co">## 35        IP Kin-yuen   Functional</span>
-<span class="co">## 42        Alvin YEUNG Geographical</span>
-<span class="co">## 43         Andrew WAN Geographical</span>
-<span class="co">## 44       CHU Hoi-dick Geographical</span>
-<span class="co">## 48     LAM Cheuk-ting Geographical</span>
-<span class="co">## 51       SHIU Ka-chun   Functional</span>
-<span class="co">## 56         Tanya CHAN Geographical</span>
-<span class="co">## 58       HUI Chi-fung Geographical</span>
-<span class="co">## 63      KWONG Chun-yu   Functional</span>
-<span class="co">## 64         Jeremy TAM Geographical</span>
-<span class="co">## 65           Gary FAN Geographical</span>
-<span class="co">## 66         AU Nok-hin Geographical</span></code></pre>
+<code class="sourceCode R"><span><span class="va">v</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/voting_record.html">voting_record</a></span><span class="op">(</span>from <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, to <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">v</span><span class="op">[</span><span class="va">v</span><span class="op">$</span><span class="va">Vote</span> <span class="op">==</span> <span class="st">"Yes"</span>, <span class="fl">32</span><span class="op">:</span><span class="fl">33</span><span class="op">]</span></span></code></pre></div>
+<pre><code><span><span class="co">##    NameCh             NameEn</span></span>
+<span><span class="co">## 2  涂謹申           James TO</span></span>
+<span><span class="co">## 3  梁耀忠    LEUNG Yiu-chung</span></span>
+<span><span class="co">## 6  李國麟    Prof Joseph LEE</span></span>
+<span><span class="co">## 16 毛孟靜         Claudia MO</span></span>
+<span><span class="co">## 20 胡志偉         WU Chi-wai</span></span>
+<span><span class="co">## 23 莫乃光  Charles Peter MOK</span></span>
+<span><span class="co">## 24 陳志全     CHAN Chi-chuen</span></span>
+<span><span class="co">## 27 梁繼昌      Kenneth LEUNG</span></span>
+<span><span class="co">## 29 郭家麒      Dr KWOK Ka-ki</span></span>
+<span><span class="co">## 31 郭榮鏗        Dennis KWOK</span></span>
+<span><span class="co">## 33 張超雄 Dr Fernando CHEUNG</span></span>
+<span><span class="co">## 34 黃碧雲     Dr Helena WONG</span></span>
+<span><span class="co">## 35 葉建源        IP Kin-yuen</span></span>
+<span><span class="co">## 42 楊岳橋        Alvin YEUNG</span></span>
+<span><span class="co">## 43 尹兆堅         Andrew WAN</span></span>
+<span><span class="co">## 44 朱凱廸       CHU Hoi-dick</span></span>
+<span><span class="co">## 48 林卓廷     LAM Cheuk-ting</span></span>
+<span><span class="co">## 51 邵家臻       SHIU Ka-chun</span></span>
+<span><span class="co">## 56 陳淑莊         Tanya CHAN</span></span>
+<span><span class="co">## 58 許智峯       HUI Chi-fung</span></span>
+<span><span class="co">## 63 鄺俊宇      KWONG Chun-yu</span></span>
+<span><span class="co">## 64 譚文豪         Jeremy TAM</span></span>
+<span><span class="co">## 65 范國威           Gary FAN</span></span>
+<span><span class="co">## 66 區諾軒         AU Nok-hin</span></span></code></pre>
 <p>To check the attendance of this meeting:</p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span>
-<span class="fu"><a href="../reference/meeting.html">meeting</a></span><span class="op">(</span>from <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, to <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">##   SlotID MeetID</span>
-<span class="co">## 1 174096 131473</span>
-<span class="co">## 2 169121 126590</span>
-<span class="co">## 3 172136 129529</span>
-<span class="co">## 4 169842 127310</span>
-<span class="co">## 5 174121 131498</span>
-<span class="co">##                                                                                                             SubjectEng</span>
-<span class="co">## 1                                            Meeting of Bills Committee on Inland Revenue (Amendment)(No. 6) Bill 2017</span>
-<span class="co">## 2 Council meeting (Regular meeting)\n(or to be held immediately after the meeting for Chief Executive’s Question Time)</span>
-<span class="co">## 3                                                                Council meeting (The Chief Executive's Question Time)</span>
-<span class="co">## 4                                                                                 Meeting of Public Works Subcommittee</span>
-<span class="co">## 5                      Meeting of Subcommittee on Medical Council (Election and Appointment of Lay Members) Regulation</span>
-<span class="co">##                                                    SubjectChi</span>
-<span class="co">## 1               《2017年稅務(修訂)(第6號)條例草案》委員會會議</span>
-<span class="co">## 2 立法會會議 (例行會議)\n(或緊接行政長官質詢時間的會議後開始)</span>
-<span class="co">## 3                               立法會會議 (行政長官質詢時間)</span>
-<span class="co">## 4                                          工務小組委員會會議</span>
-<span class="co">## 5        《醫務委員會(選舉和委任業外委員)規例》小組委員會會議</span>
-<span class="co">##         StartDateTime MeetingTypeEng MeetingTypeChi VenueCode      VenueNameEng</span>
-<span class="co">## 1 2018-05-23 08:30:00           Open       公開會議      Rm 3 Conference Room 3</span>
-<span class="co">## 2 2018-05-23 11:30:00           Open       公開會議   Chamber           Chamber</span>
-<span class="co">## 3 2018-05-23 11:00:00           Open       公開會議   Chamber           Chamber</span>
-<span class="co">## 4 2018-05-23 08:30:00           Open       公開會議      Rm 1 Conference Room 1</span>
-<span class="co">## 5 2018-05-23 08:30:00           Open       公開會議      Rm 2 Conference Room 2</span>
-<span class="co">##   VenueNameChi TermID</span>
-<span class="co">## 1      會議室3      5</span>
-<span class="co">## 2       會議廳      5</span>
-<span class="co">## 3       會議廳      5</span>
-<span class="co">## 4      會議室1      5</span>
-<span class="co">## 5      會議室2      5</span>
-<span class="co">##                                                                      AgendaUrlEng</span>
-<span class="co">## 1         http://www.legco.gov.hk/yr17-18/english/bc/bc02/agenda/bc0220180523.htm</span>
-<span class="co">## 2           http://www.legco.gov.hk/yr17-18/english/counmtg/agenda/cm20180523.htm</span>
-<span class="co">## 3          http://www.legco.gov.hk/yr17-18/english/counmtg/agenda/cm20180523q.htm</span>
-<span class="co">## 4         http://www.legco.gov.hk/yr17-18/english/fc/pwsc/agenda/pwsc20180523.htm</span>
-<span class="co">## 5 http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc58/agenda/sc5820180523.htm</span>
-<span class="co">##                                                                      AgendaUrlChi</span>
-<span class="co">## 1         http://www.legco.gov.hk/yr17-18/chinese/bc/bc02/agenda/bc0220180523.htm</span>
-<span class="co">## 2           http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523.htm</span>
-<span class="co">## 3          http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523q.htm</span>
-<span class="co">## 4         http://www.legco.gov.hk/yr17-18/chinese/fc/pwsc/agenda/pwsc20180523.htm</span>
-<span class="co">## 5 http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc58/agenda/sc5820180523.htm</span></code></pre>
+<code class="sourceCode R"><span><span class="co"># Find out MeetID of the Council meeting on May 23, 2018</span></span>
+<span><span class="fu"><a href="../reference/meeting.html">meeting</a></span><span class="op">(</span>from <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, to <span class="op">=</span> <span class="va">w</span><span class="op">$</span><span class="va">MeetingDate</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##   SlotID MeetID</span></span>
+<span><span class="co">## 1 174096 131473</span></span>
+<span><span class="co">## 2 169121 126590</span></span>
+<span><span class="co">## 3 172136 129529</span></span>
+<span><span class="co">## 4 169842 127310</span></span>
+<span><span class="co">## 5 174121 131498</span></span>
+<span><span class="co">##                                                                                                             SubjectEng</span></span>
+<span><span class="co">## 1                                            Meeting of Bills Committee on Inland Revenue (Amendment)(No. 6) Bill 2017</span></span>
+<span><span class="co">## 2 Council meeting (Regular meeting)\n(or to be held immediately after the meeting for Chief Executive’s Question Time)</span></span>
+<span><span class="co">## 3                                                                Council meeting (The Chief Executive's Question Time)</span></span>
+<span><span class="co">## 4                                                                                 Meeting of Public Works Subcommittee</span></span>
+<span><span class="co">## 5                      Meeting of Subcommittee on Medical Council (Election and Appointment of Lay Members) Regulation</span></span>
+<span><span class="co">##                                                    SubjectChi</span></span>
+<span><span class="co">## 1               《2017年稅務(修訂)(第6號)條例草案》委員會會議</span></span>
+<span><span class="co">## 2 立法會會議 (例行會議)\n(或緊接行政長官質詢時間的會議後開始)</span></span>
+<span><span class="co">## 3                               立法會會議 (行政長官質詢時間)</span></span>
+<span><span class="co">## 4                                          工務小組委員會會議</span></span>
+<span><span class="co">## 5        《醫務委員會(選舉和委任業外委員)規例》小組委員會會議</span></span>
+<span><span class="co">##         StartDateTime MeetingTypeEng MeetingTypeChi VenueCode      VenueNameEng</span></span>
+<span><span class="co">## 1 2018-05-23 08:30:00           Open       公開會議      Rm 3 Conference Room 3</span></span>
+<span><span class="co">## 2 2018-05-23 11:30:00           Open       公開會議   Chamber           Chamber</span></span>
+<span><span class="co">## 3 2018-05-23 11:00:00           Open       公開會議   Chamber           Chamber</span></span>
+<span><span class="co">## 4 2018-05-23 08:30:00           Open       公開會議      Rm 1 Conference Room 1</span></span>
+<span><span class="co">## 5 2018-05-23 08:30:00           Open       公開會議      Rm 2 Conference Room 2</span></span>
+<span><span class="co">##   VenueNameChi TermID</span></span>
+<span><span class="co">## 1      會議室3      5</span></span>
+<span><span class="co">## 2       會議廳      5</span></span>
+<span><span class="co">## 3       會議廳      5</span></span>
+<span><span class="co">## 4      會議室1      5</span></span>
+<span><span class="co">## 5      會議室2      5</span></span>
+<span><span class="co">##                                                                      AgendaUrlEng</span></span>
+<span><span class="co">## 1         http://www.legco.gov.hk/yr17-18/english/bc/bc02/agenda/bc0220180523.htm</span></span>
+<span><span class="co">## 2           http://www.legco.gov.hk/yr17-18/english/counmtg/agenda/cm20180523.htm</span></span>
+<span><span class="co">## 3          http://www.legco.gov.hk/yr17-18/english/counmtg/agenda/cm20180523q.htm</span></span>
+<span><span class="co">## 4         http://www.legco.gov.hk/yr17-18/english/fc/pwsc/agenda/pwsc20180523.htm</span></span>
+<span><span class="co">## 5 http://www.legco.gov.hk/yr17-18/english/hc/sub_leg/sc58/agenda/sc5820180523.htm</span></span>
+<span><span class="co">##                                                                      AgendaUrlChi</span></span>
+<span><span class="co">## 1         http://www.legco.gov.hk/yr17-18/chinese/bc/bc02/agenda/bc0220180523.htm</span></span>
+<span><span class="co">## 2           http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523.htm</span></span>
+<span><span class="co">## 3          http://www.legco.gov.hk/yr17-18/chinese/counmtg/agenda/cm20180523q.htm</span></span>
+<span><span class="co">## 4         http://www.legco.gov.hk/yr17-18/chinese/fc/pwsc/agenda/pwsc20180523.htm</span></span>
+<span><span class="co">## 5 http://www.legco.gov.hk/yr17-18/chinese/hc/sub_leg/sc58/agenda/sc5820180523.htm</span></span></code></pre>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/attendance.html">attendance</a></span><span class="op">(</span>meet_id <span class="op">=</span> <span class="fl">126590</span><span class="op">)</span>
-<span class="co"># Show members who were present</span>
-<span class="va">z</span><span class="op">[</span><span class="va">z</span><span class="op">$</span><span class="va">PresentAbsent</span> <span class="op">==</span> <span class="st">"Present"</span>, <span class="fl">7</span><span class="op">:</span><span class="fl">9</span><span class="op">]</span> </code></pre></div>
-<pre><code><span class="co">##                         MemberNameEnglish MemberNameChinese PresentAbsent</span>
-<span class="co">## 1  Hon Andrew LEUNG Kwan-yuen (President) 梁君彥議員 (主席)       Present</span>
-<span class="co">## 2                    Hon James TO Kun-sun        涂謹申議員       Present</span>
-<span class="co">## 3                     Hon LEUNG Yiu-chung        梁耀忠議員       Present</span>
-<span class="co">## 4                Hon Abraham SHEK Lai-him        石禮謙議員       Present</span>
-<span class="co">## 5                 Hon Tommy CHEUNG Yu-yan        張宇人議員       Present</span>
-<span class="co">## 6            Prof Hon Joseph LEE Kok-long        李國麟議員       Present</span>
-<span class="co">## 7                Hon Jeffrey LAM Kin-fung        林健鋒議員       Present</span>
-<span class="co">## 8                     Hon WONG Ting-kwong        黃定光議員       Present</span>
-<span class="co">## 9                 Hon Starry LEE Wai-king        李慧琼議員       Present</span>
-<span class="co">## 10                       Hon CHAN Hak-kan        陳克勤議員       Present</span>
-<span class="co">## 11                       Hon CHAN Kin-por        陳健波議員       Present</span>
-<span class="co">## 12         Dr Hon Priscilla LEUNG Mei-fun        梁美芬議員       Present</span>
-<span class="co">## 13                      Hon WONG Kwok-kin        黃國健議員       Present</span>
-<span class="co">## 14          Hon Mrs Regina IP LAU Suk-yee      葉劉淑儀議員       Present</span>
-<span class="co">## 15                  Hon Paul TSE Wai-chun        謝偉俊議員       Present</span>
-<span class="co">## 16                         Hon Claudia MO        毛孟靜議員       Present</span>
-<span class="co">## 17               Hon Michael TIEN Puk-sun        田北辰議員       Present</span>
-<span class="co">## 18                 Hon Steven HO Chun-yin        何俊賢議員       Present</span>
-<span class="co">## 19              Hon Frankie YICK Chi-ming        易志明議員       Present</span>
-<span class="co">## 20                         Hon WU Chi-wai        胡志偉議員       Present</span>
-<span class="co">## 21                        Hon YIU Si-wing        姚思榮議員       Present</span>
-<span class="co">## 22                       Hon MA Fung-kwok        馬逢國議員       Present</span>
-<span class="co">## 23                  Hon Charles Peter MOK        莫乃光議員       Present</span>
-<span class="co">## 24                     Hon CHAN Chi-chuen        陳志全議員       Present</span>
-<span class="co">## 25                       Hon CHAN Han-pan        陳恒鑌議員       Present</span>
-<span class="co">## 26                   Hon LEUNG Che-cheung        梁志祥議員       Present</span>
-<span class="co">## 27                      Hon Kenneth LEUNG        梁繼昌議員       Present</span>
-<span class="co">## 28                 Hon Alice MAK Mei-kuen        麥美娟議員       Present</span>
-<span class="co">## 29                      Dr Hon KWOK Ka-ki        郭家麒議員       Present</span>
-<span class="co">## 30                     Hon KWOK Wai-keung        郭偉强議員       Present</span>
-<span class="co">## 31              Hon Dennis KWOK Wing-hang        郭榮鏗議員       Present</span>
-<span class="co">## 32        Hon Christopher CHEUNG Wah-fung        張華峰議員       Present</span>
-<span class="co">## 33       Dr Hon Fernando CHEUNG Chiu-hung        張超雄議員       Present</span>
-<span class="co">## 34             Dr Hon Helena WONG Pik-wan        黃碧雲議員       Present</span>
-<span class="co">## 35                        Hon IP Kin-yuen        葉建源議員       Present</span>
-<span class="co">## 36                     Hon Elizabeth QUAT        葛珮帆議員       Present</span>
-<span class="co">## 37            Hon Martin LIAO Cheung-kong        廖長江議員       Present</span>
-<span class="co">## 38                      Hon POON Siu-ping        潘兆平議員       Present</span>
-<span class="co">## 39                  Dr Hon CHIANG Lai-wan        蔣麗芸議員       Present</span>
-<span class="co">## 40                  Ir Dr Hon LO Wai-kwok        盧偉國議員       Present</span>
-<span class="co">## 41                     Hon CHUNG Kwok-pan        鍾國斌議員       Present</span>
-<span class="co">## 42                        Hon Alvin YEUNG        楊岳橋議員       Present</span>
-<span class="co">## 43                 Hon Andrew WAN Siu-kin        尹兆堅議員       Present</span>
-<span class="co">## 44                       Hon CHU Hoi-dick        朱凱廸議員       Present</span>
-<span class="co">## 45                   Hon Jimmy NG Wing-ka        吳永嘉議員       Present</span>
-<span class="co">## 46              Dr Hon Junius HO Kwan-yiu        何君堯議員       Present</span>
-<span class="co">## 47                        Hon HO Kai-ming        何啟明議員       Present</span>
-<span class="co">## 48                     Hon LAM Cheuk-ting        林卓廷議員       Present</span>
-<span class="co">## 49                Hon Holden CHOW Ho-ding        周浩鼎議員       Present</span>
-<span class="co">## 50                        Hon SHIU Ka-fai        邵家輝議員       Present</span>
-<span class="co">## 51                       Hon SHIU Ka-chun        邵家臻議員       Present</span>
-<span class="co">## 52              Hon Wilson OR Chong-shing        柯創盛議員       Present</span>
-<span class="co">## 53                       Hon YUNG Hoi-yan        容海恩議員       Present</span>
-<span class="co">## 54                     Dr Hon Pierre CHAN        陳沛然議員       Present</span>
-<span class="co">## 55                     Hon CHAN Chun-ying        陳振英議員       Present</span>
-<span class="co">## 56                         Hon Tanya CHAN        陳淑莊議員       Present</span>
-<span class="co">## 57                   Hon CHEUNG Kwok-kwan        張國鈞議員       Present</span>
-<span class="co">## 58                       Hon HUI Chi-fung        許智峯議員       Present</span>
-<span class="co">## 59                     Hon LUK Chung-hung        陸頌雄議員       Present</span>
-<span class="co">## 60                       Hon LAU Kwok-fan        劉國勳議員       Present</span>
-<span class="co">## 61               Hon Kenneth LAU Ip-keung        劉業強議員       Present</span>
-<span class="co">## 62                 Dr Hon CHENG Chung-tai        鄭松泰議員       Present</span>
-<span class="co">## 63                      Hon KWONG Chun-yu        鄺俊宇議員       Present</span>
-<span class="co">## 64                  Hon Jeremy TAM Man-ho        譚文豪議員       Present</span>
-<span class="co">## 65            Hon Vincent CHENG Wing-shun        鄭泳舜議員       Present</span>
-<span class="co">## 66                 Hon Tony TSE Wai-chuen        謝偉銓議員       Present</span></code></pre>
+<code class="sourceCode R"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/attendance.html">attendance</a></span><span class="op">(</span>meet_id <span class="op">=</span> <span class="fl">126590</span><span class="op">)</span></span>
+<span><span class="co"># Show members who were present</span></span>
+<span><span class="va">z</span><span class="op">[</span><span class="va">z</span><span class="op">$</span><span class="va">PresentAbsent</span> <span class="op">==</span> <span class="st">"Present"</span>, <span class="fl">7</span><span class="op">:</span><span class="fl">9</span><span class="op">]</span> </span></code></pre></div>
+<pre><code><span><span class="co">##                         MemberNameEnglish MemberNameChinese PresentAbsent</span></span>
+<span><span class="co">## 1  Hon Andrew LEUNG Kwan-yuen (President) 梁君彥議員 (主席)       Present</span></span>
+<span><span class="co">## 2                    Hon James TO Kun-sun        涂謹申議員       Present</span></span>
+<span><span class="co">## 3                     Hon LEUNG Yiu-chung        梁耀忠議員       Present</span></span>
+<span><span class="co">## 4                Hon Abraham SHEK Lai-him        石禮謙議員       Present</span></span>
+<span><span class="co">## 5                 Hon Tommy CHEUNG Yu-yan        張宇人議員       Present</span></span>
+<span><span class="co">## 6            Prof Hon Joseph LEE Kok-long        李國麟議員       Present</span></span>
+<span><span class="co">## 7                Hon Jeffrey LAM Kin-fung        林健鋒議員       Present</span></span>
+<span><span class="co">## 8                     Hon WONG Ting-kwong        黃定光議員       Present</span></span>
+<span><span class="co">## 9                 Hon Starry LEE Wai-king        李慧琼議員       Present</span></span>
+<span><span class="co">## 10                       Hon CHAN Hak-kan        陳克勤議員       Present</span></span>
+<span><span class="co">## 11                       Hon CHAN Kin-por        陳健波議員       Present</span></span>
+<span><span class="co">## 12         Dr Hon Priscilla LEUNG Mei-fun        梁美芬議員       Present</span></span>
+<span><span class="co">## 13                      Hon WONG Kwok-kin        黃國健議員       Present</span></span>
+<span><span class="co">## 14          Hon Mrs Regina IP LAU Suk-yee      葉劉淑儀議員       Present</span></span>
+<span><span class="co">## 15                  Hon Paul TSE Wai-chun        謝偉俊議員       Present</span></span>
+<span><span class="co">## 16                         Hon Claudia MO        毛孟靜議員       Present</span></span>
+<span><span class="co">## 17               Hon Michael TIEN Puk-sun        田北辰議員       Present</span></span>
+<span><span class="co">## 18                 Hon Steven HO Chun-yin        何俊賢議員       Present</span></span>
+<span><span class="co">## 19              Hon Frankie YICK Chi-ming        易志明議員       Present</span></span>
+<span><span class="co">## 20                         Hon WU Chi-wai        胡志偉議員       Present</span></span>
+<span><span class="co">## 21                        Hon YIU Si-wing        姚思榮議員       Present</span></span>
+<span><span class="co">## 22                       Hon MA Fung-kwok        馬逢國議員       Present</span></span>
+<span><span class="co">## 23                  Hon Charles Peter MOK        莫乃光議員       Present</span></span>
+<span><span class="co">## 24                     Hon CHAN Chi-chuen        陳志全議員       Present</span></span>
+<span><span class="co">## 25                       Hon CHAN Han-pan        陳恒鑌議員       Present</span></span>
+<span><span class="co">## 26                   Hon LEUNG Che-cheung        梁志祥議員       Present</span></span>
+<span><span class="co">## 27                      Hon Kenneth LEUNG        梁繼昌議員       Present</span></span>
+<span><span class="co">## 28                 Hon Alice MAK Mei-kuen        麥美娟議員       Present</span></span>
+<span><span class="co">## 29                      Dr Hon KWOK Ka-ki        郭家麒議員       Present</span></span>
+<span><span class="co">## 30                     Hon KWOK Wai-keung        郭偉强議員       Present</span></span>
+<span><span class="co">## 31              Hon Dennis KWOK Wing-hang        郭榮鏗議員       Present</span></span>
+<span><span class="co">## 32        Hon Christopher CHEUNG Wah-fung        張華峰議員       Present</span></span>
+<span><span class="co">## 33       Dr Hon Fernando CHEUNG Chiu-hung        張超雄議員       Present</span></span>
+<span><span class="co">## 34             Dr Hon Helena WONG Pik-wan        黃碧雲議員       Present</span></span>
+<span><span class="co">## 35                        Hon IP Kin-yuen        葉建源議員       Present</span></span>
+<span><span class="co">## 36                     Hon Elizabeth QUAT        葛珮帆議員       Present</span></span>
+<span><span class="co">## 37            Hon Martin LIAO Cheung-kong        廖長江議員       Present</span></span>
+<span><span class="co">## 38                      Hon POON Siu-ping        潘兆平議員       Present</span></span>
+<span><span class="co">## 39                  Dr Hon CHIANG Lai-wan        蔣麗芸議員       Present</span></span>
+<span><span class="co">## 40                  Ir Dr Hon LO Wai-kwok        盧偉國議員       Present</span></span>
+<span><span class="co">## 41                     Hon CHUNG Kwok-pan        鍾國斌議員       Present</span></span>
+<span><span class="co">## 42                        Hon Alvin YEUNG        楊岳橋議員       Present</span></span>
+<span><span class="co">## 43                 Hon Andrew WAN Siu-kin        尹兆堅議員       Present</span></span>
+<span><span class="co">## 44                       Hon CHU Hoi-dick        朱凱廸議員       Present</span></span>
+<span><span class="co">## 45                   Hon Jimmy NG Wing-ka        吳永嘉議員       Present</span></span>
+<span><span class="co">## 46              Dr Hon Junius HO Kwan-yiu        何君堯議員       Present</span></span>
+<span><span class="co">## 47                        Hon HO Kai-ming        何啟明議員       Present</span></span>
+<span><span class="co">## 48                     Hon LAM Cheuk-ting        林卓廷議員       Present</span></span>
+<span><span class="co">## 49                Hon Holden CHOW Ho-ding        周浩鼎議員       Present</span></span>
+<span><span class="co">## 50                        Hon SHIU Ka-fai        邵家輝議員       Present</span></span>
+<span><span class="co">## 51                       Hon SHIU Ka-chun        邵家臻議員       Present</span></span>
+<span><span class="co">## 52              Hon Wilson OR Chong-shing        柯創盛議員       Present</span></span>
+<span><span class="co">## 53                       Hon YUNG Hoi-yan        容海恩議員       Present</span></span>
+<span><span class="co">## 54                     Dr Hon Pierre CHAN        陳沛然議員       Present</span></span>
+<span><span class="co">## 55                     Hon CHAN Chun-ying        陳振英議員       Present</span></span>
+<span><span class="co">## 56                         Hon Tanya CHAN        陳淑莊議員       Present</span></span>
+<span><span class="co">## 57                   Hon CHEUNG Kwok-kwan        張國鈞議員       Present</span></span>
+<span><span class="co">## 58                       Hon HUI Chi-fung        許智峯議員       Present</span></span>
+<span><span class="co">## 59                     Hon LUK Chung-hung        陸頌雄議員       Present</span></span>
+<span><span class="co">## 60                       Hon LAU Kwok-fan        劉國勳議員       Present</span></span>
+<span><span class="co">## 61               Hon Kenneth LAU Ip-keung        劉業強議員       Present</span></span>
+<span><span class="co">## 62                 Dr Hon CHENG Chung-tai        鄭松泰議員       Present</span></span>
+<span><span class="co">## 63                      Hon KWONG Chun-yu        鄺俊宇議員       Present</span></span>
+<span><span class="co">## 64                  Hon Jeremy TAM Man-ho        譚文豪議員       Present</span></span>
+<span><span class="co">## 65            Hon Vincent CHENG Wing-shun        鄭泳舜議員       Present</span></span>
+<span><span class="co">## 66                 Hon Tony TSE Wai-chuen        謝偉銓議員       Present</span></span></code></pre>
 </div>
   </div>
 
@@ -719,8 +716,7 @@ this motion. To get a list of members who voted yes:</p>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>

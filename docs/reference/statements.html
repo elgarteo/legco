@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -38,7 +38,7 @@
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -65,9 +65,6 @@
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
-</li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/elgarteo/legco" class="external-link">
     <span class="fa fa-github fa-lg"></span>
@@ -93,31 +90,31 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">statements</span><span class="op">(</span>
-  hansard_id <span class="op">=</span> <span class="cn">NULL</span>,
-  rundown_id <span class="op">=</span> <span class="cn">NULL</span>,
-  lang <span class="op">=</span> <span class="st">"en"</span>,
-  from <span class="op">=</span> <span class="st">"1900-01-01"</span>,
-  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.Date</a></span><span class="op">(</span><span class="op">)</span>,
-  floor <span class="op">=</span> <span class="cn">FALSE</span>,
-  n <span class="op">=</span> <span class="fl">1000</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-
-<span class="fu">legco_statements</span><span class="op">(</span>
-  hansard_id <span class="op">=</span> <span class="cn">NULL</span>,
-  rundown_id <span class="op">=</span> <span class="cn">NULL</span>,
-  lang <span class="op">=</span> <span class="st">"en"</span>,
-  from <span class="op">=</span> <span class="st">"1900-01-01"</span>,
-  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.Date</a></span><span class="op">(</span><span class="op">)</span>,
-  floor <span class="op">=</span> <span class="cn">FALSE</span>,
-  n <span class="op">=</span> <span class="fl">1000</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">statements</span><span class="op">(</span></span>
+<span>  hansard_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  rundown_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  lang <span class="op">=</span> <span class="st">"en"</span>,</span>
+<span>  from <span class="op">=</span> <span class="st">"1900-01-01"</span>,</span>
+<span>  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.Date</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  floor <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">1000</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">legco_statements</span><span class="op">(</span></span>
+<span>  hansard_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  rundown_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  lang <span class="op">=</span> <span class="st">"en"</span>,</span>
+<span>  from <span class="op">=</span> <span class="st">"1900-01-01"</span>,</span>
+<span>  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.Date</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  floor <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">1000</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -125,41 +122,60 @@
     <dl><dt>hansard_id</dt>
 <dd><p>the id of a hansard file, or a vector of ids. If
 <code>NULL</code>, returns results of all hansard files. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>rundown_id</dt>
 <dd><p>the id of a rundown, or a vector of ids. If <code>NULL</code>,
 returns results of all rundowns. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>lang</dt>
 <dd><p>the language of hansard files to search from. <code>"en"</code> returns
 the English version. <code>"zh"</code> returns the Traditional Chinese version.
 Defaults to <code>"en"</code>.</p></dd>
+
+
 <dt>from</dt>
 <dd><p>only fetch results of meetings on or after this date. Accepts
 character values in <code>"YYYY-MM-DD"</code> format, and objects of class
 <code>Date</code>, <code>POSIXt</code>, <code>POSIXct</code>, <code>POSIXlt</code> or anything else
 that can be coerced to a date with <code><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date()</a></code>. Defaults to
 <code>"1900-01-01"</code>.</p></dd>
+
+
 <dt>to</dt>
 <dd><p>only fetch results of meetings on or before this date. Accepts
 character values in <code>"YYYY-MM-DD"</code> format, and objects of class
 <code>Date</code>, <code>POSIXt</code>, <code>POSIXct</code>, <code>POSIXlt</code> or anything else
 that can be coerced to a date with <code><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date()</a></code>. Defaults to the
 current system date.</p></dd>
+
+
 <dt>floor</dt>
 <dd><p>logical: whether to fetch results from the floor version of the
 hansard files? The floor version is the first presented version of hansard
 file in the original language delivered by the speakers in LegCo. If
 <code>TRUE</code>, the language option is ignored. Defaults to <code>FALSE</code>.</p></dd>
+
+
 <dt>n</dt>
 <dd><p>the number of record to fetch. Defaults to <code>1000</code>.</p></dd>
+
+
 <dt>extra_param</dt>
 <dd><p>additional query parameters defined in LegCo API. Must
 begin with <code>"&amp;"</code>.</p></dd>
+
+
 <dt>count</dt>
 <dd><p>logical: Whether to return only the total count of records that
 matches the parameter(s) instead of the result. Defaults to <code>FALSE</code>.</p></dd>
+
+
 <dt>verbose</dt>
 <dd><p>logical: Whether to display progress messages when fetching
 data? Defaults to <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -190,18 +206,18 @@ Hansard Database.</p>
     <div id="see-also">
     <h2>See also</h2>
     <div class="dont-index"><p>LegCo API documentation for the Hansard database:
-  <a href="https://www.legco.gov.hk/odata/english/hansard-db.html" class="external-link">https://www.legco.gov.hk/odata/english/hansard-db.html</a></p></div>
+  <a href="https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html" class="external-link">https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html</a></p></div>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="co"># Fetch statements made by government officials during the Council meeting on April 22, 2015</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">statements</span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2015-04-22"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Fetch statements made by government officials during the Council meeting on April 22, 2015</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">statements</span><span class="op">(</span>from <span class="op">=</span> <span class="st">"2015-04-22"</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 1 record(s). 1 record(s) available in total.</span>
-<span class="r-in"><span class="co"># }</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -216,8 +232,7 @@ Hansard Database.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

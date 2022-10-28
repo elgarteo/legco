@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -38,7 +38,7 @@
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -65,9 +65,6 @@
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
-</li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/elgarteo/legco" class="external-link">
     <span class="fa fa-github fa-lg"></span>
@@ -93,59 +90,67 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">all_bills</span><span class="op">(</span>
-  id <span class="op">=</span> <span class="cn">NULL</span>,
-  ordinance <span class="op">=</span> <span class="cn">NULL</span>,
-  title <span class="op">=</span> <span class="cn">NULL</span>,
-  proposer <span class="op">=</span> <span class="cn">NULL</span>,
-  gazette_from <span class="op">=</span> <span class="st">"all"</span>,
-  gazette_to <span class="op">=</span> <span class="st">"all"</span>,
-  first_from <span class="op">=</span> <span class="st">"all"</span>,
-  first_to <span class="op">=</span> <span class="st">"all"</span>,
-  second_from <span class="op">=</span> <span class="st">"all"</span>,
-  second_to <span class="op">=</span> <span class="st">"all"</span>,
-  third_from <span class="op">=</span> <span class="st">"all"</span>,
-  third_to <span class="op">=</span> <span class="st">"all"</span>,
-  n <span class="op">=</span> <span class="fl">10000</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-
-<span class="fu">legco_all_bills</span><span class="op">(</span>
-  id <span class="op">=</span> <span class="cn">NULL</span>,
-  ordinance <span class="op">=</span> <span class="cn">NULL</span>,
-  title <span class="op">=</span> <span class="cn">NULL</span>,
-  proposer <span class="op">=</span> <span class="cn">NULL</span>,
-  gazette_from <span class="op">=</span> <span class="st">"all"</span>,
-  gazette_to <span class="op">=</span> <span class="st">"all"</span>,
-  first_from <span class="op">=</span> <span class="st">"all"</span>,
-  first_to <span class="op">=</span> <span class="st">"all"</span>,
-  second_from <span class="op">=</span> <span class="st">"all"</span>,
-  second_to <span class="op">=</span> <span class="st">"all"</span>,
-  third_from <span class="op">=</span> <span class="st">"all"</span>,
-  third_to <span class="op">=</span> <span class="st">"all"</span>,
-  n <span class="op">=</span> <span class="fl">10000</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">all_bills</span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ordinance <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  title <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  proposer <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  gazette_from <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  gazette_to <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  first_from <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  first_to <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  second_from <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  second_to <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  third_from <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  third_to <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">10000</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">legco_all_bills</span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ordinance <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  title <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  proposer <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  gazette_from <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  gazette_to <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  first_from <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  first_to <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  second_from <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  second_to <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  third_from <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  third_to <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">10000</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>id</dt>
 <dd><p>the id of a bill, or a vector of ids. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>ordinance</dt>
 <dd><p>the ordinance associated with the bill. Takes the full
 English name of the ordinance, e.g. <code>"Buildings Ordinanace"</code>. Defaults
 to <code>NULL</code>.</p></dd>
+
+
 <dt>title</dt>
 <dd><p>the title of the bill. Takes the full English name of the bill,
 e.g. <code>"National Anthem Bill"</code>. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>proposer</dt>
 <dd><p>the proposer of the bill. Takes the full English title of the
 proposer, e.g. <code>"Secretary for Security"</code>. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>gazette_from</dt>
 <dd><p>only fetch bills gazetted on or after this date. Accepts
 <code>"all"</code>, <code>NULL</code> or character values in <code>"YYYY-MM-DD"</code>
@@ -158,6 +163,8 @@ been gazetted before being tabled in LegCo (mainly older bills as newer
 ones required to be gazetted before tabling as required by the Rules of
 Procedure) and overrides the <code>gazette_to</code> parameter. Defaults to
 <code>"all"</code>.</p></dd>
+
+
 <dt>gazette_to</dt>
 <dd><p>only fetch bills gazetted on or before this date. Accepts
 <code>"all"</code>, <code>NULL</code> or character values in <code>"YYYY-MM-DD"</code>
@@ -170,6 +177,8 @@ been gazetted before being tabled in LegCo (mainly older bills as newer
 ones required to be gazetted before tabling as required by the Rules of
 Procedure) and overrides the <code>gazette_from</code> parameter. Defaults to
 <code>"all"</code>.</p></dd>
+
+
 <dt>first_from</dt>
 <dd><p>only fetch bills that have gone through first reading on or
 after this date. Accepts <code>"all"</code>, <code>NULL</code> or character values in
@@ -180,6 +189,8 @@ that have and have not gone through first reading and overrides the
 <code>first_to</code> parameter. If <code>NULL</code>, returns bills that have not gone
 through first reading and overrides the <code>first_to</code> parameter. Defaults
 to <code>"all"</code>.</p></dd>
+
+
 <dt>first_to</dt>
 <dd><p>only fetch bills that have gone through first reading on or
 before this date. Accepts <code>"all"</code>, <code>NULL</code> or character values in
@@ -190,6 +201,8 @@ that have and have not gone through first reading and overrides the
 <code>first_from</code> parameter. If <code>NULL</code>, returns bills that have not
 gone through first reading and overrides the <code>first_from</code> parameter.
 Defaults to <code>"all"</code>.</p></dd>
+
+
 <dt>second_from</dt>
 <dd><p>only fetch bills that have gone through second reading on
 or after this date. Accepts <code>"all"</code>, <code>NULL</code> or character values
@@ -200,6 +213,8 @@ that have and have not gone through second reading and overrides the
 <code>second_to</code> parameter. If <code>NULL</code>, returns bills that have not
 gone through second reading and overrides the <code>second_to</code> parameter.
 Defaults to <code>"all"</code>.</p></dd>
+
+
 <dt>second_to</dt>
 <dd><p>only fetch bills that have gone through second reading on or
 before this date. Accepts <code>"all"</code>, <code>NULL</code> or character values in
@@ -210,6 +225,8 @@ that have and have not gone through second reading and overrides the
 <code>second_from</code> parameter. If <code>NULL</code>, returns bills that have not
 gone through second reading and overrides the <code>second_from</code> parameter.
 Defaults to <code>"all"</code>.</p></dd>
+
+
 <dt>third_from</dt>
 <dd><p>only fetch bills that have gone through third reading on or
 after this date. Accepts <code>"all"</code>, <code>NULL</code> or character values in
@@ -220,6 +237,8 @@ that have and have not gone through third reading and overrides the
 <code>third_to</code> parameter. If <code>NULL</code>, returns bills that have not gone
 through third reading and overrides the <code>third_to</code> parameter. Defaults
 to <code>"all"</code>.</p></dd>
+
+
 <dt>third_to</dt>
 <dd><p>only fetch bills that have gone through third reading on or
 before this date. Accepts <code>"all"</code>, <code>NULL</code> or character values in
@@ -230,17 +249,26 @@ that have and have not gone through third reading and overrides the
 <code>third_from</code> parameter. If <code>NULL</code>, returns bills that have not
 gone through third reading and overrides the <code>third_from</code> parameter.
 Defaults to <code>"all"</code>.</p></dd>
+
+
 <dt>n</dt>
 <dd><p>the number of record to fetch. Defaults to <code>1000</code>.</p></dd>
+
+
 <dt>extra_param</dt>
 <dd><p>additional query parameters defined in LegCo API. Must
 begin with <code>"&amp;"</code>.</p></dd>
+
+
 <dt>count</dt>
 <dd><p>logical: Whether to return only the total count of records that
 matches the parameter(s) instead of the result. Defaults to <code>FALSE</code>.</p></dd>
+
+
 <dt>verbose</dt>
 <dd><p>logical: Whether to display progress messages when fetching
 data? Defaults to <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -250,18 +278,18 @@ Database.</p>
     <div id="see-also">
     <h2>See also</h2>
     <div class="dont-index"><p>LegCo API documentation for the Meeting Schedule database:
-  <a href="https://www.legco.gov.hk/odata/english/billsdb.html" class="external-link">https://www.legco.gov.hk/odata/english/billsdb.html</a></p></div>
+  <a href="https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html" class="external-link">https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html</a></p></div>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="co"># Fetch bills that passed third reading on February 20, 2019</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">all_bills</span><span class="op">(</span>third_from <span class="op">=</span> <span class="st">"2019-02-20"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Fetch bills that passed third reading on February 20, 2019</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">all_bills</span><span class="op">(</span>third_from <span class="op">=</span> <span class="st">"2019-02-20"</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 75 record(s). 75 record(s) available in total.</span>
-<span class="r-in"><span class="co"># }</span></span>
-<span class="r-in"></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 86 record(s). 86 record(s) available in total.</span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -276,8 +304,7 @@ Database.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

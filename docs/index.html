@@ -15,11 +15,11 @@
 <meta property="og:description" content="Fetching data from Hong Kong Legislative Council's open data API in R. 
     Functions correspond to the data endpoints of the API. 
     Documentations of supported API databases:
-    &lt;https://www.legco.gov.hk/odata/english/billsdb.html&gt;, 
-    &lt;https://www.legco.gov.hk/odata/english/hansard-db.html&gt;,
-    &lt;https://www.legco.gov.hk/odata/english/attendance-db.html&gt;,
-    &lt;https://www.legco.gov.hk/odata/english/schedule-db.html&gt; and
-    &lt;https://www.legco.gov.hk/odata/english/vrdb.html&gt;.">
+    &lt;https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html&gt;, 
+    &lt;https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html&gt;,
+    &lt;https://www.legco.gov.hk/en/open-legco/open-data/meeting-attendance.html&gt;,
+    &lt;https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html&gt; and
+    &lt;https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html&gt;.">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -46,7 +46,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -62,7 +62,7 @@
   <a href="articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -90,9 +90,6 @@
 </li>
 <li>
   <a href="news/index.html">Changelog</a>
-</li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -123,49 +120,38 @@
 <p>本套件提供能在R中直接透過香港立法會開放數據應用程式介面擷取數據的函數。</p>
 <p>To install this package, run:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"legco"</span><span class="op">)</span>
-
-<span class="co"># To install the development version:</span>
-<span class="co">#install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"elgarteo/legco"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"legco"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># To install the development version:</span></span>
+<span><span class="co">#install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"elgarteo/legco"</span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="what-it-does">What it does<a class="anchor" aria-label="anchor" href="#what-it-does"></a>
 </h2>
-<p>This R package provides access to the LegCo open data API in R. The
-functions in this package correspond to the data endpoints of the
-API.</p>
+<p>This R package provides access to the LegCo open data API in R. The functions in this package correspond to the data endpoints of the API.</p>
 </div>
 <div class="section level2">
 <h2 id="how-it-works">How it works<a class="anchor" aria-label="anchor" href="#how-it-works"></a>
 </h2>
-<p>This package compiles the correct query and requests data from the
-following databases of the LegCo API:</p>
+<p>This package compiles the correct query and requests data from the following databases of the LegCo API:</p>
 <ul>
-<li><a href="https://www.legco.gov.hk/odata/english/billsdb.html" class="external-link">Bills
-Database</a></li>
-<li><a href="https://www.legco.gov.hk/odata/english/hansard-db.html" class="external-link">Hansard
-Database</a></li>
-<li><a href="https://www.legco.gov.hk/odata/english/attendance-db.html" class="external-link">Meeting
-Attendance Database</a></li>
-<li><a href="https://www.legco.gov.hk/odata/english/schedule-db.html" class="external-link">Meeting
-Schedule Database</a></li>
-<li><a href="https://www.legco.gov.hk/odata/english/vrdb.html" class="external-link">Voting
-Result Database</a></li>
+<li><a href="https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html" class="external-link">Bills Database</a></li>
+<li><a href="https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html" class="external-link">Hansard Database</a></li>
+<li><a href="https://www.legco.gov.hk/en/open-legco/open-data/meeting-attendance.html" class="external-link">Meeting Attendance Database</a></li>
+<li><a href="https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html" class="external-link">Meeting Schedule Database</a></li>
+<li><a href="https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html" class="external-link">Voting Result Database</a></li>
 </ul>
 </div>
 <div class="section level2">
 <h2 id="how-to-use">How to use<a class="anchor" aria-label="anchor" href="#how-to-use"></a>
 </h2>
-<p>Read the <a href="https://elgarteo.github.io/legco/" class="external-link">vignettes</a>
-for details.</p>
+<p>Read the <a href="https://elgarteo.github.io/legco/" class="external-link">vignettes</a> for details.</p>
 </div>
 <div class="section level2">
 <h2 id="disclaimer">Disclaimer<a class="anchor" aria-label="anchor" href="#disclaimer"></a>
 </h2>
-<p>This package is not affiliated or endorsed by the Legislative Council
-of Hong Kong.</p>
-<p>The Legislative Council of Hong Kong is the copyright owner of data
-retrieved from its open data API.</p>
+<p>This package is not affiliated or endorsed by the Legislative Council of Hong Kong.</p>
+<p>The Legislative Council of Hong Kong is the copyright owner of data retrieved from its open data API.</p>
 </div>
 </div>
   </div>
@@ -223,8 +209,7 @@ retrieved from its open data API.</p>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>

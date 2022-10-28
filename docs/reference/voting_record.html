@@ -24,7 +24,7 @@ subcommittees and the House Committee meetings."><!-- mathjax --><script src="ht
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -39,7 +39,7 @@ subcommittees and the House Committee meetings."><!-- mathjax --><script src="ht
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -65,9 +65,6 @@ subcommittees and the House Committee meetings."><!-- mathjax --><script src="ht
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
-</li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/elgarteo/legco" class="external-link">
@@ -95,39 +92,39 @@ subcommittees and the House Committee meetings.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">voting_record</span><span class="op">(</span>
-  committee <span class="op">=</span> <span class="cn">NULL</span>,
-  term_id <span class="op">=</span> <span class="cn">NULL</span>,
-  result <span class="op">=</span> <span class="st">"all"</span>,
-  vote <span class="op">=</span> <span class="st">"all"</span>,
-  name_ch <span class="op">=</span> <span class="cn">NULL</span>,
-  name_en <span class="op">=</span> <span class="cn">NULL</span>,
-  separate_mechanism <span class="op">=</span> <span class="cn">NULL</span>,
-  mover_type <span class="op">=</span> <span class="st">"all"</span>,
-  from <span class="op">=</span> <span class="st">"1900-01-01 00:00:00"</span>,
-  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span>,
-  n <span class="op">=</span> <span class="fl">10000</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span>
-
-<span class="fu">legco_voting_record</span><span class="op">(</span>
-  committee <span class="op">=</span> <span class="cn">NULL</span>,
-  term_id <span class="op">=</span> <span class="cn">NULL</span>,
-  result <span class="op">=</span> <span class="st">"all"</span>,
-  vote <span class="op">=</span> <span class="st">"all"</span>,
-  name_ch <span class="op">=</span> <span class="cn">NULL</span>,
-  name_en <span class="op">=</span> <span class="cn">NULL</span>,
-  separate_mechanism <span class="op">=</span> <span class="cn">NULL</span>,
-  mover_type <span class="op">=</span> <span class="st">"all"</span>,
-  from <span class="op">=</span> <span class="st">"1900-01-01 00:00:00"</span>,
-  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span>,
-  n <span class="op">=</span> <span class="fl">10000</span>,
-  extra_param <span class="op">=</span> <span class="cn">NULL</span>,
-  count <span class="op">=</span> <span class="cn">FALSE</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">voting_record</span><span class="op">(</span></span>
+<span>  committee <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  term_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  result <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  vote <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  name_ch <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  name_en <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  separate_mechanism <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  mover_type <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  from <span class="op">=</span> <span class="st">"1900-01-01 00:00:00"</span>,</span>
+<span>  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">10000</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">legco_voting_record</span><span class="op">(</span></span>
+<span>  committee <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  term_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  result <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  vote <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  name_ch <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  name_en <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  separate_mechanism <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  mover_type <span class="op">=</span> <span class="st">"all"</span>,</span>
+<span>  from <span class="op">=</span> <span class="st">"1900-01-01 00:00:00"</span>,</span>
+<span>  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">10000</span>,</span>
+<span>  extra_param <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -135,14 +132,20 @@ subcommittees and the House Committee meetings.</p>
     <dl><dt>committee</dt>
 <dd><p>the name of the committee or subcommittee. Defaults to
 <code>NULL</code>.</p></dd>
+
+
 <dt>term_id</dt>
 <dd><p>the id of a term, or a vector of ids. If <code>NULL</code>, returns
 results of all terms. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>result</dt>
 <dd><p>the voting result. If <code>"passed"</code>, returns motions that
 have been passed. If <code>"vetoed"</code>, returns motions that have been
 vetoed.If <code>"all"</code>, returns all motions that has been voted in LegCo.
 Defaults to <code>all</code>.</p></dd>
+
+
 <dt>vote</dt>
 <dd><p>the vote cast. If <code>"yes"</code>, returns only members who cast
 affirmative votes. If <code>"no"</code>, returns only members who cast negative
@@ -151,10 +154,14 @@ If <code>"absent"</code>, returns only members who were absent. If
 <code>"present"</code>, returns only members who were present and did not vote
 (e.g. President). If <code>"all"</code>, returns all votes. Defaults to
 <code>"all"</code>.</p></dd>
+
+
 <dt>name_ch</dt>
 <dd><p>the name of a LegCo member in Traditional Chinese, or a vector
 of names. If <code>NULL</code>, returns voting records of all members. Defaults
 to <code>NULL</code>.</p></dd>
+
+
 <dt>name_en</dt>
 <dd><p>the name of a LegCo member in English, or a vector of names.
 If the member has an English name, the English name should go first
@@ -164,39 +171,56 @@ should go first followed by the translated first name with a hyphen
 separating the different syllable, e.g. <code>"CHAN Tai-man"</code>. Check the
 names of the members with <code><a href="member.html">member</a>()</code>. If <code>NULL</code>, returns
 voting records of all members. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>separate_mechanism</dt>
 <dd><p>only fetch votes that were counted with the vote
 separate mechanism, i.e. requiring majority in both geographical and
 functional constituencies to pass. If <code>NULL</code>, returns all votes
 regardless of the vote counting mechanism used. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>mover_type</dt>
 <dd><p>the type of motion being put on vote. If <code>"PO"</code>,
 returns votes on government motions only. If <code>"MB"</code>, returns votes on
 members' motions only. If <code>"all"</code>, returns votes on all motions.
 Defaults to <code>"all"</code>.</p></dd>
+
+
 <dt>from</dt>
 <dd><p>only fetch results of meetings on or after this date and time.
 Accepts character values in <code>"YYYY-MM-DD"</code> or <code>"YYYY-MM-DD
 HH:MM:SS"</code> format, and objects of class <code>Date</code>, <code>POSIXt</code>,
 <code>POSIXct</code>, <code>POSIXlt</code> or anything else that can be coerced to a
 date with <code><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date()</a></code>. Defaults to <code>"1900-01-01 00:00:00"</code>.</p></dd>
+
+
 <dt>to</dt>
 <dd><p>only fetch results of meetings on or before this date and time.
 Accepts character values in <code>"YYYY-MM-DD"</code> or <code>"YYYY-MM-DD
 HH:MM:SS"</code> format, and objects of class <code>Date</code>, <code>POSIXt</code>,
 <code>POSIXct</code>, <code>POSIXlt</code> or anything else that can be coerced to a
 date with <code><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date()</a></code>. Defaults to the current system time.</p></dd>
+
+
 <dt>n</dt>
 <dd><p>the number of record to fetch. Defaults to <code>1000</code>.</p></dd>
+
+
 <dt>extra_param</dt>
 <dd><p>additional query parameters defined in LegCo API. Must
 begin with <code>"&amp;"</code>.</p></dd>
+
+
 <dt>count</dt>
 <dd><p>logical: Whether to return only the total count of records that
 matches the parameter(s) instead of the result. Defaults to <code>FALSE</code>.</p></dd>
+
+
 <dt>verbose</dt>
 <dd><p>logical: Whether to display progress messages when fetching
 data? Defaults to <code>TRUE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -206,21 +230,21 @@ Voting Result Database.</p>
     <div id="see-also">
     <h2>See also</h2>
     <div class="dont-index"><p>LegCo API documentation for the Voting Record database:
-  <a href="https://www.legco.gov.hk/odata/english/vrdb.html" class="external-link">https://www.legco.gov.hk/odata/english/vrdb.html</a></p></div>
+  <a href="https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html" class="external-link">https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html</a></p></div>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="co"># Fetch how members voted the motion on</span></span>
-<span class="r-in"><span class="co"># Abolishing the MPF Offsetting Mechanism on November 11, 2016</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">voting_record</span><span class="op">(</span>committee <span class="op">=</span> <span class="st">"Council Meeting"</span>,</span>
-<span class="r-in">                   from <span class="op">=</span> <span class="st">"2016-11-16 13:51:53"</span>,</span>
-<span class="r-in">                   to <span class="op">=</span> <span class="st">"2016-11-16 13:51:53"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Fetch how members voted the motion on</span></span></span>
+<span class="r-in"><span><span class="co"># Abolishing the MPF Offsetting Mechanism on November 11, 2016</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">voting_record</span><span class="op">(</span>committee <span class="op">=</span> <span class="st">"Council Meeting"</span>,</span></span>
+<span class="r-in"><span>                   from <span class="op">=</span> <span class="st">"2016-11-16 13:51:53"</span>,</span></span>
+<span class="r-in"><span>                   to <span class="op">=</span> <span class="st">"2016-11-16 13:51:53"</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 68 record(s). 68 record(s) available in total.</span>
-<span class="r-in"><span class="co"># }</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -235,8 +259,7 @@ Voting Result Database.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

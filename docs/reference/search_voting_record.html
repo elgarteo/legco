@@ -25,7 +25,7 @@ Finance Committee and its subcommittees are available."><!-- mathjax --><script 
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">legco</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.5</span>
       </span>
     </div>
 
@@ -40,7 +40,7 @@ Finance Committee and its subcommittees are available."><!-- mathjax --><script 
   <a href="../articles/introduction.html">Introduction</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Functions
      
     <span class="caret"></span>
@@ -66,9 +66,6 @@ Finance Committee and its subcommittees are available."><!-- mathjax --><script 
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
-</li>
-<li>
-  <a href="https://elgarteo.github.io/legcoplus/" class="external-link">Add-on: legcoplus</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/elgarteo/legco" class="external-link">
@@ -97,27 +94,27 @@ Finance Committee and its subcommittees are available.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">search_voting_record</span><span class="op">(</span>
-  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,
-  member_id <span class="op">=</span> <span class="cn">NULL</span>,
-  committee_id <span class="op">=</span> <span class="cn">NULL</span>,
-  slot_id <span class="op">=</span> <span class="cn">NULL</span>,
-  from <span class="op">=</span> <span class="st">"1900-01-01 00:00:00"</span>,
-  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>,
-  <span class="va">...</span>
-<span class="op">)</span>
-
-<span class="fu">legco_search_voting_record</span><span class="op">(</span>
-  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,
-  member_id <span class="op">=</span> <span class="cn">NULL</span>,
-  committee_id <span class="op">=</span> <span class="cn">NULL</span>,
-  slot_id <span class="op">=</span> <span class="cn">NULL</span>,
-  from <span class="op">=</span> <span class="st">"1900-01-01 00:00:00"</span>,
-  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span>,
-  verbose <span class="op">=</span> <span class="cn">TRUE</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">search_voting_record</span><span class="op">(</span></span>
+<span>  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  member_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  committee_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  slot_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  from <span class="op">=</span> <span class="st">"1900-01-01 00:00:00"</span>,</span>
+<span>  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">legco_search_voting_record</span><span class="op">(</span></span>
+<span>  speaker_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  member_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  committee_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  slot_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  from <span class="op">=</span> <span class="st">"1900-01-01 00:00:00"</span>,</span>
+<span>  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  verbose <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -125,32 +122,47 @@ Finance Committee and its subcommittees are available.</p>
     <dl><dt>speaker_id</dt>
 <dd><p>the id of a speaker at the Legislative Council, or a vector
 of ids. If <code>NULL</code>, returns all speakers. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>member_id</dt>
 <dd><p>the id of a LegCo member, or a vector of ids. If
 <code>NULL</code>, returns results of all LegCo members. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>committee_id</dt>
 <dd><p>the id of a committee, or a vector of ids. If
 <code>NULL</code>, returns results of all committees. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>slot_id</dt>
 <dd><p>the id of a meeting slot, or a vector of ids. If <code>NULL</code>,
 returns all meetings. Defaults to <code>NULL</code>.</p></dd>
+
+
 <dt>from</dt>
 <dd><p>only fetch results of meetings on or after this date and time.
 Accepts character values in <code>"YYYY-MM-DD"</code> or <code>"YYYY-MM-DD
 HH:MM:SS"</code> format, and objects of class <code>Date</code>, <code>POSIXt</code>,
 <code>POSIXct</code>, <code>POSIXlt</code> or anything else that can be coerced to a
 date with <code><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date()</a></code>. Defaults to <code>"1900-01-01 00:00:00"</code>.</p></dd>
+
+
 <dt>to</dt>
 <dd><p>only fetch results of meetings on or before this date and time.
 Accepts character values in <code>"YYYY-MM-DD"</code> or <code>"YYYY-MM-DD
 HH:MM:SS"</code> format, and objects of class <code>Date</code>, <code>POSIXt</code>,
 <code>POSIXct</code>, <code>POSIXlt</code> or anything else that can be coerced to a
 date with <code><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date()</a></code>. Defaults to the current system time.</p></dd>
+
+
 <dt>verbose</dt>
 <dd><p>logical: Whether to display progress messages when fetching
 data? Defaults to <code>TRUE</code>.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>optional arguments passed to <code><a href="voting_record.html">voting_record</a>()</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -174,9 +186,9 @@ data? Defaults to <code>TRUE</code>.</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="co"># Search the voting records of SpeakerID 102 in CommitteeID 2567 since June 15, 2019.</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">search_voting_record</span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="fl">102</span>, committee_id <span class="op">=</span> <span class="fl">2567</span>, from <span class="op">=</span> <span class="st">"2019-06-15"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Search the voting records of SpeakerID 102 in CommitteeID 2567 since June 15, 2019.</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu">search_voting_record</span><span class="op">(</span>speaker_id <span class="op">=</span> <span class="fl">102</span>, committee_id <span class="op">=</span> <span class="fl">2567</span>, from <span class="op">=</span> <span class="st">"2019-06-15"</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 1 record(s). 1 record(s) available in total.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
@@ -184,8 +196,8 @@ data? Defaults to <code>TRUE</code>.</p></dd>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieving records...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Retrieved 237 record(s). 237 record(s) available in total.</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> 237 record(s) match(es) your parameters.</span>
-<span class="r-in"><span class="co"># }</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -200,8 +212,7 @@ data? Defaults to <code>TRUE</code>.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
-2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>
