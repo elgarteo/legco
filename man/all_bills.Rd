@@ -167,5 +167,5 @@ x <- all_bills(third_from = "2019-02-20")
 }
 \seealso{
 LegCo API documentation for the Meeting Schedule database:
-  \url{https://www.legco.gov.hk/odata/english/billsdb.html}
+  \url{https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html}
 }

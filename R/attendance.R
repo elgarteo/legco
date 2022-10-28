@@ -13,7 +13,7 @@
 #' @inheritParams meeting_schedule-db
 #'
 #' @seealso LegCo API documentation for the Attendance database:
-#'   \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
+#'   \url{https://www.legco.gov.hk/en/open-legco/open-data/meeting-attendance.html}
 #'
 #' @examples
 #' \donttest{

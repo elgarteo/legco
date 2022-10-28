@@ -86,5 +86,5 @@ x <- attendance(committee_id = 2704, from = "2017-10-13", to = "2017-10-13", att
 }
 \seealso{
 LegCo API documentation for the Attendance database:
-  \url{https://www.legco.gov.hk/odata/english/attendance-db.html}
+  \url{https://www.legco.gov.hk/en/open-legco/open-data/meeting-attendance.html}
 }

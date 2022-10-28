@@ -109,5 +109,5 @@ x <- questions(from = "2019-02-20", to = "2019-02-20")
 }
 \seealso{
 LegCo API documentation for the Hansard database:
-  \url{https://www.legco.gov.hk/odata/english/hansard-db.html}
+  \url{https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html}
 }

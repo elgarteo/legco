@@ -125,5 +125,5 @@ x <- voting_record(committee = "Council Meeting",
 }
 \seealso{
 LegCo API documentation for the Voting Record database:
-  \url{https://www.legco.gov.hk/odata/english/vrdb.html}
+  \url{https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html}
 }

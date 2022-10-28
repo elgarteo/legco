@@ -81,5 +81,5 @@ hansard files, the data endpoints retrieve data from the files directly.
 
 \seealso{
 LegCo API documentation for the Hansard database:
-  \url{https://www.legco.gov.hk/odata/english/hansard-db.html}
+  \url{https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html}
 }

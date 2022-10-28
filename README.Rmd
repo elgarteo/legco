@@ -43,11 +43,11 @@ correspond to the data endpoints of the API.
 
 This package compiles the correct query and requests data from the following databases of the LegCo API:
 
-* [Bills Database](https://www.legco.gov.hk/odata/english/billsdb.html)
-* [Hansard Database](https://www.legco.gov.hk/odata/english/hansard-db.html)
-* [Meeting Attendance Database](https://www.legco.gov.hk/odata/english/attendance-db.html)
-* [Meeting Schedule Database](https://www.legco.gov.hk/odata/english/schedule-db.html)
-* [Voting Result Database](https://www.legco.gov.hk/odata/english/vrdb.html)
+* [Bills Database](https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html)
+* [Hansard Database](https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html)
+* [Meeting Attendance Database](https://www.legco.gov.hk/en/open-legco/open-data/meeting-attendance.html)
+* [Meeting Schedule Database](https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html)
+* [Voting Result Database](https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html)
 
 ## How to use
 
